@@ -1,0 +1,6 @@
+--type-add
+html=.jade,.haml
+--type-add
+css=.styl,.sass,.scss
+--type-add
+js=.coffee

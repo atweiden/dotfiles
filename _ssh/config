@@ -1,0 +1,25 @@
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/github.rsa
+    User githubusername
+
+Host accountname.host.tld
+    Hostname accountname.host.tld
+    IdentityFile /path/to/id_rsa
+    User hg
+
+Host 555.555.555.555
+    #Port 443
+    #User oodles
+    #IdentityFile /path/to/id_rsa
+    ProxyCommand socat STDIO SOCKS4A:localhost:%h:%p,socksport=9150
+
+# Speed up ssh login times by maintaining a persistent ssh connection
+# to each host once the first is created.
+# Any subsequent ssh commands will be sent over the existing channel,
+# skipping the time-consuming handshake process.
+# You may need to `mkdir ~/.ssh/auth` first.
+#Host *
+    #ControlMaster auto
+    #ControlPath ~/.ssh/auth/%r@%h:%p
+    #ControlPersist yes

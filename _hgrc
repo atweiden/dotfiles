@@ -1,0 +1,11 @@
+[ui]
+username = Firstname Lastname <email@address.com>
+editor = vim
+ssh = ssh -C
+ignore = ~/.hgignore
+
+[bookmarks]
+track.current = True
+
+[extensions]
+fetch = 

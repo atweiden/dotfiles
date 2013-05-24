@@ -1,0 +1,57 @@
+*filter
+
+# set default to drop
+-P INPUT DROP
+-P OUTPUT DROP
+-P FORWARD DROP
+
+# only accept packets from established inbound connections
+-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+# filters
+# web browsing
+-A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+-A OUTPUT -p udp -m udp --dport 443 -j ACCEPT
+-A OUTPUT -p udp -m udp --dport 53 -j ACCEPT
+
+# bitcoin
+-A INPUT -p tcp -m conntrack --ctstate NEW --dport 8333 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --dport 8333 -j ACCEPT
+-A OUTPUT -p udp -m udp --dport 8333 -j ACCEPT
+-A INPUT -p tcp -m conntrack --ctstate NEW --dport 50001 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --dport 50001 -j ACCEPT
+-A OUTPUT -p udp -m udp --dport 50001 -j ACCEPT
+
+# Allow HTTP and HTTPS connections from private LAN
+-A INPUT -p tcp -s 192.168.0.0/24 --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp -s 192.168.0.0/24 --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+
+# Allow SSH connections from private LAN
+-A INPUT -p tcp -s 192.168.0.0/24 --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -p tcp -s 192.168.0.0/24 --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+
+# Allow UDP port 123 for NTP
+-I INPUT -p udp --dport 123 -j ACCEPT
+-I OUTPUT -p udp --sport 123 -j ACCEPT
+
+# Reject pings
+-I INPUT -j DROP -p icmp --icmp-type echo-request
+
+# Drop ident server - allows a remote host to determine the local username associated with any TCP connection involving that remote host
+-A INPUT -p tcp --dport ident -j DROP
+
+# Log iptables denied calls
+-A INPUT -m limit --limit 15/minute -j LOG --log-prefix "[IPT]Dropped input: " --log-level 7
+-A OUTPUT -m limit --limit 15/minute -j LOG --log-prefix "[IPT]Dropped output: " --log-level 7
+
+# Don't log anything from internal addresses
+-A INPUT -m iprange --src-range 192.168.1.2-192.168.1.255 -j DROP
+-A OUTPUT -m iprange --src-range 192.168.1.2-192.168.1.255 -j DROP
+-A INPUT -s 127.0.0.1 -j DROP
+-A OUTPUT -s 127.0.0.1 -j DROP
+
+# Reject all other inbound - default deny unless explicitly allowed policy
+-A INPUT -j REJECT
+-A FORWARD -j REJECT
+COMMIT

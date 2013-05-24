@@ -1,0 +1,51 @@
+#	$OpenBSD: ssh_config,v 1.26 2010/01/11 01:39:46 dtucker Exp $
+
+# This is the ssh client system-wide configuration file.  See
+# ssh_config(5) for more information.  This file provides defaults for
+# users, and the values can be changed in per-user configuration files
+# or on the command line.
+
+# Configuration data is parsed as follows:
+#  1. command line options
+#  2. user-specific file
+#  3. system-wide file
+# Any configuration value is only changed the first time it is set.
+# Thus, host-specific definitions should be at the beginning of the
+# configuration file, and defaults at the end.
+
+# Site-wide defaults for some commonly used options.  For a comprehensive
+# list of available options, their meanings and defaults, please see the
+# ssh_config(5) man page.
+
+Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   RhostsRSAAuthentication no
+#   RSAAuthentication yes
+#   PasswordAuthentication no
+#   HostbasedAuthentication no
+    HashKnownHosts yes
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+    TCPKeepAlive yes
+#   StrictHostKeyChecking ask
+#   IdentityFile ~/.ssh/identity
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentityFile ~/.ssh/id_dsa
+#   Port 22
+    Protocol 2
+#   Cipher 3des
+    Ciphers aes256-cbc,aes256-ctr,aes192-cbc,aes192-ctr,blowfish-cbc,aes128-cbc,aes128-ctr,arcfour256,arcfour128,arcfour,3des-cbc,cast128-cbc
+    MACs hmac-sha2-512,hmac-sha2-256,hmac-ripemd160,hmac-sha1,hmac-md5,hmac-sha1-96,hmac-md5-96,umac-64@openssh.com
+    HostKeyAlgorithms ssh-rsa-cert-v01@openssh.com,ssh-rsa-cert-v00@openssh.com,ssh-rsa,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ssh-dss-cert-v01@openssh.com,ssh-dss-cert-v00@openssh.com,ssh-dss
+    KexAlgorithms diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+#   EscapeChar ~
+#   Tunnel no
+#   TunnelDevice any:any
+#   PermitLocalCommand no
+#   VisualHostKey no
+#   ProxyCommand ssh -q -W %h:%p gateway.example.com

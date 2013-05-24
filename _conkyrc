@@ -1,0 +1,77 @@
+background yes
+use_xft yes
+xftfont monospace:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_colour black
+double_buffer yes
+minimum_size 1 1
+maximum_width 240
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color gray
+default_shade_color 000000
+default_outline_color d9d7d6
+alignment tl
+gap_x 12
+gap_y 12
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+color1 red
+color2 gray
+##############################################
+#  Output
+##############################################
+TEXT
+CPU: $alignr${cpu cpu0}%
+${cpubar cpu0}
+RAM: $alignr$mem/$memmax 
+$membar
+
+${font sans-serif:bold:size=8}SYSTEM ${hr 2}
+${font sans-serif:normal:size=8}$sysname $kernel $alignr $machine
+Uptime:$alignr$uptime
+
+${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2}
+${font sans-serif:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
+${top_mem name 2}${alignr}${top mem 2} %
+$font${top_mem name 3}${alignr}${top mem 3} %
+$font${top_mem name 4}${alignr}${top mem 4} %
+
+${font sans-serif:bold:size=8}SHORTCUT KEYS ${hr 2}
+${font sans-serif:normal:size=8}Alt+F2$alignr Run Dialog
+Alt+F3$alignr Dmenu
+Super+space$alignr Main Menu
+Super+t$alignr Terminal
+Super+f$alignr File Manager
+Super+e$alignr Editor
+Super+m$alignr Media Player
+Super+w$alignr Web Browser
+Super+q$alignr Force Quit
+Super+g$alignr gVim
+Super+l$alignr Lock
+Super+r$alignr Read the DOC
+Super+x$alignr Tiling Keybinds
+
+${font sans-serif:bold:size=8}NETWORK ${hr 2}
+${font sans-serif:normal:size=8}Host:$alignr$nodename
+${font sans-serif:normal:size=8}MAC: ${alignr}${wireless_ap wlan0}
+${font sans-serif:normal:size=8}ESSID: ${alignr}${wireless_essid wlan0}
+${font sans-serif:normal:size=8}Local IP: ${alignr}${addr wlan0}
+${font sans-serif:normal:size=8}Public IP: ${alignr}${execi 2000 curl 'http://ifconfig.me/'}
+${font sans-serif:normal:size=8}Mode: ${alignr}${wireless_mode wlan0}
+${font sans-serif:normal:size=8}Connection quality: ${alignr}${wireless_link_qual_perc wlan0}%
+
+Up: ${upspeed wlan0} k/s
+${alignc}${upspeedgraph wlan0 20,170 000000 ffffff}
+Down: ${downspeed wlan0} k/s
+${alignc}${downspeedgraph wlan0 20,170 000000 ffffff}

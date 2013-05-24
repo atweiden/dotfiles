@@ -1,0 +1,5 @@
+#!/bin/bash
+export BROWSER=firefox
+export DE=openbox
+#VBoxClient-all &
+exec dbus-launch openbox-session

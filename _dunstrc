@@ -1,0 +1,43 @@
+[global]
+    font = Monospace 9
+
+    # The format of the message. Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    format = "%s %b %p"
+
+    sort = yes
+    indicate_hidden = yes
+    alignment = left
+
+    show_age_threshold = 60
+    idle_threshold = 120
+    sticky_history = yes
+
+    geometry = "0x1+0+0"
+    monitor = 1
+    follow = none
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#3f3f3f"
+    foreground = "#94bff3"
+    timeout = 10
+
+[urgency_normal]
+    background = "#94bff3"
+    foreground = "#3f3f3f"
+    timeout = 10
+
+[urgency_critical]
+    background = "#dca3a3"
+    foreground = "#3f3f3f"
+    timeout = 0

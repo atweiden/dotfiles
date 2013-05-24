@@ -1,0 +1,108 @@
+#                                                                           
+# ~/.bashrc
+#
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[ ! "$UID" = "0" ] && archey -c white
+[  "$UID" = "0" ] && archey -c red
+
+# Defaults
+export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
+# Perl
+PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
+# Python
+PATH=$HOME/.virtualenvs:$PATH
+# Ruby
+PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
+
+export TERM=xterm-256color
+
+#PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;32m\]]:\w$\[\e[01;31m\]\n\[\e[01;31m\]└──\[\e[01;36m\]>>\[\e[0m\]"
+
+alias ls='ls -F --color=auto --group-directories-first'
+alias l='ls -1F --color=auto --group-directories-first'
+alias la='ls -aF --color=auto'
+alias ll='ls -laihF --color=auto'
+alias lld='ls -laihFd --color=auto'
+alias lsd='ls -ltrF --color=auto | grep ^d'
+alias cp='cp -i'
+alias cps='cp_p'
+alias mv='mv -i'
+alias rm='rm -i'
+alias zip='zip -9'
+alias gzip='gzip -9'
+alias bzip2='bzip2 -9'
+alias grep='grep --ignore-case'
+alias locate='locate --ignore-case'
+alias ..='cd ..'
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+alias :o='pcmanfm $PWD &' # open current working directory in pcmanfm file manager
+alias :q='exit'
+alias slam='quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp && sudo shutdown now'
+alias slur='quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp && sudo reboot'
+alias sg='subgit'
+alias shg='subhg'
+free='free -m'
+# set -o noclobber
+set -o vi # use Bash vi line editing mode http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
+export EDITOR=vim
+alias wgetpage='wget --html-extension --recursive --convert-links --page-requisites --no-parent $1'
+#
+## view date in all date formats
+## http://www.commandlinefu.com/commands/view/5423/view-all-date-formats-quick-reference-help-alias
+#
+alias dateh='date --help|sed "/^ *%a/,/^ *%Z/!d;y/_/!/;s/^ *%\([:a-z]\+\) \+/\1_/gI;s/%/#/g;s/^\([a-y]\|[z:]\+\)_/%%\1_%\1_/I"|while read L;do date "+${L}"|sed y/!#/%%/;done|column -ts_'
+#
+## view IP addresses
+## https://github.com/Aqua-Ye/dotfiles
+#
+# alias ipv="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias ipv="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+#
+## view HTTP traffic
+#
+alias sniff="sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+#
+## show all listening TCP/UDP ports
+#
+alias all_tcp_udp="lsof -Pan -i tcp -i udp"
+
+
+# Useful functions
+#
+## mkdir then cd
+#
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+#
+## copy with progress
+#
+function cp_p () {
+  rsync -WavP --human-readable --progress $1 $2
+}
+#
+## create and display QR code
+## https://news.ycombinator.com/item?id=5332843
+#
+function qrshow(){ qrencode -s 10 "$1" -o - | display - ; }
+#
+## go to current git repo toplevel directory
+## https://github.com/harleypig/dotfiles
+#
+function gtl() { cd $(git rev-parse --show-toplevel); }
+#
+## count number of files
+## "lc /dir" will count the number of files in /dir and "lc /dir/*" will count the files in subdirectories of /dir.
+## https://news.ycombinator.com/item?id=5023277
+#
+function lc () { if [[ "$#" -gt 1 ]]; then for DIR in "$@"; do echo -n "$DIR - " ; ls -AU1 $DIR | wc -l ; done ; else ls -AU1 "$@" | wc -l ; fi; }
+# 
+## tail a file with timestamps
+## http://www.commandlinefu.com/commands/view/7156/monitor-a-file-with-tail-with-timestamps-added
+#
+function tailfile () { tail -f $1 | xargs -IX printf "$(date -u)\t%s\n" X; }

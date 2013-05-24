@@ -1,0 +1,28 @@
+#
+# /etc/rc.conf - configuration file for initscripts
+#
+# Most of rc.conf has been replaced by various other configuration
+# files. See archlinux(7) for details.
+#
+# For more details on rc.conf see rc.conf(5).
+#
+
+DAEMONS=(dbus networkmanager !network !dhcdbd ntpd !hwclock syslog-ng crond @alsa vboxservice)
+
+# A reasonable DAEMONS array when using sysvinit is:
+# DAEMONS=(syslog-ng network crond)
+#
+# When using systemd, it is recommended to only enable daemons that
+# do not have native systemd service files.
+
+# Storage
+#
+# USEDMRAID="no"
+USELVM="yes"
+
+# Network
+#
+interface=wlan0
+# address=
+# netmask=
+# gateway=

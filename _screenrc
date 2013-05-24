@@ -1,0 +1,18 @@
+vbell off
+startup_message off
+defshell $SHELL
+caption always '%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%d/%m %{G}%C%A]'
+
+# Set the default scrollback to 1000
+defscrollback 1000
+
+# Doesn't fix scrollback problem on xterm because if you scroll back
+# all you see is the other terminals history.
+# termcapinfo xterm|xterms|xs|rxvt ti@:te@
+
+# Set default encoding to UTF-8
+encoding UTF-8
+defencoding UTF-8
+defutf8 on

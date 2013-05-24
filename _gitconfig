@@ -1,0 +1,38 @@
+[user]
+  name = "First Last"
+  email = you@email.tld
+
+[github]
+  user = yourgithubacct
+
+[core]
+  editor = vim
+  excludesfile = "~/.gitignore"
+
+[alias]
+  st = status
+  br = branch
+  ci = commit
+  co = checkout
+  df = diff
+
+[mergetool]
+  keepBackup = true
+
+[difftool]
+  prompt = false
+
+[diff]
+  tool = vimdiff
+
+[diff "exif"]
+  textconv = exiftool
+
+[rerere]
+  enabled = 1
+
+[format]
+  pretty = oneline
+
+[color]
+  ui = true

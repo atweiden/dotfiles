@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# /etc/rc.local: Local multi-user startup script.
+#
+
+mkdir -p /var/lib/pacman/sync
+cd /var/lib/pacman/sync
+touch core.db extra.db community.db
+
+{ ntpd -qg; hwclock -w; } &
+
+amixer sset 'Master Mono' 90% unmute &> /dev/null
+amixer sset 'Master' 90% unmute &> /dev/null
+amixer sset 'PCM' 90% unmute &> /dev/null

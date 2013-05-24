@@ -1,0 +1,227 @@
+#
+# ----------------------------------------------------------
+# General Options
+# ----------------------------------------------------------
+#
+
+# Start a new session on tmux att if no existing session is running
+new
+
+# time after which the -r (repeat) in bind -r expires. keep it short.
+set -g repeat-time 300
+
+# Screen prefix key
+unbind-key C-b
+set-option -g prefix C-a
+bind-key a send-prefix
+
+# Swap on C-a C-a
+bind-key C-a last-window
+bind-key k confirm-before kill-window
+bind-key r source-file ~/.tmux.conf \; display "Reloaded!"
+bind-key v split-window -h #similar to vim's vsplit
+bind-key h split-window
+bind / list-keys -t vi-copy
+bind C-o show-options -g
+
+# Set default terminal to Bash
+set-option -g default-shell /bin/bash
+set -g default-command "/bin/bash"
+
+# Inform programs of 256 colour support.
+# set-option -g default-terminal "screen-256color-bce"
+set -g default-terminal "screen-256color"
+
+# Open new windows with Mac OS X pasteboard support.
+# set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# Enable mouse.
+set-window-option -g mode-mouse on
+
+# List activity on all windows.
+set-option -g bell-action any
+
+# Set window notifications.
+set-window-option -g monitor-activity on
+set-window-option -g window-status-activity-attr none
+set-option -g visual-activity on
+
+# Scroll back buffer n lines.
+set-option -g history-limit 100000
+
+# For vim
+setw -g xterm-keys on
+set-window-option -g mode-keys vi
+set -sg escape-time 500 # like 'timeout' for vim. Just the default.
+
+# Enable terminal window titles.
+set-option -g set-titles on
+
+# Don't automatically rename terminal title.
+set-window-option -g automatic-rename off
+set-window-option -g aggressive-resize on
+
+# Set terminal title format (uses status bar variables).
+set-option -g set-titles-string "TMUX.#I.#W"
+
+# Start window indexing at one instead of zero.
+set-option -g base-index 1
+setw -g pane-base-index 1
+
+#
+# ----------------------------------------------------------
+# Status Bar
+# ----------------------------------------------------------
+#
+
+# Use UTF-8 in status bar.
+set-option -g status-utf8 on
+
+# Use key map for the status bar.
+set-option -g status-keys vi
+
+# The position of the window list (left, centre, or right).
+set-option -g status-justify centre
+
+# Update the status bar every n seconds.
+set-option -g status-interval 5
+
+# The maximum length of the left component of the status bar.
+# set-option -g status-left-length 20
+
+# The maximum length of the right component of the status bar.
+# set-option -g status-right-length 20
+
+# Status bar format.
+# set-option -g status-left ''
+# set-option -g status-right '#[fg=green] ###S#[default]'
+# load average, battery, and date + time
+set-option -g status-right "#[fg=magenta] #(cat /proc/loadavg|awk '{print
+$1 \" \"  $2 \" \"  $3}') #(acpi|awk '{print $4;}') #[fg=cyan]%d-%m #[fg=green]%H:%M"
+
+# On-screen time for display-panes in ms.
+set-option -g display-time 2000
+
+# Default status bar colours.
+# set-option -g status-fg white
+# set-option -g status-bg black
+# set-option -g status-attr bright
+
+# Default window title colours.
+# set-window-option -g window-status-fg white
+# set-window-option -g window-status-bg default
+# set-window-option -g window-status-attr dim
+
+# Active window title colours.
+# set-window-option -g window-status-current-fg green
+# set-window-option -g window-status-current-bg default
+# set-window-option -g window-status-current-attr bright
+
+# Command/message line colours.
+# set-option -g message-fg white
+# set-option -g message-bg black
+# set-option -g message-attr bright
+
+# Colors
+#set-option -g message-bg colour18
+#set-option -g message-fg colour231
+#set-option -g pane-active-border-fg colour237
+#set-option -g pane-border-fg colour237
+#set-option -g status-bg colour237
+#set-option -g status-fg colour248
+#set-window-option -g mode-bg colour18
+#set-window-option -g mode-fg colour231
+#set-window-option -g window-status-attr none
+#set-window-option -g window-status-fg colour16
+#set-window-option -g window-status-current-attr none
+#set-window-option -g window-status-current-fg colour231
+#set-window-option -g window-status-bell-attr none
+#set-window-option -g window-status-bell-bg colour9
+
+# colors {{{
+# status bar (51=light blue 233=very dark grey)
+set -g status-fg colour51
+set -g status-bg colour233
+# windows listing in the status bar
+setw -g window-status-fg cyan
+setw -g window-status-bg default
+setw -g window-status-attr dim
+setw -g window-status-current-fg white
+setw -g window-status-current-bg colour18
+setw -g window-status-current-attr bright
+set -g window-status-activity-fg cyan
+set -g window-status-activity-bg colour235
+set -g window-status-activity-attr dim
+# highlighting of pane borders
+set -g pane-active-border-fg white
+set -g pane-active-border-bg colour17
+set -g pane-border-fg white
+# messages
+set -g message-bg colour135
+# }}}
+
+#
+# ----------------------------------------------------------
+# Panes
+# ----------------------------------------------------------
+#
+
+# Display time.
+set-option -g display-panes-time 2000
+
+# Pane borders.
+# set-option -g pane-border-fg white
+# set-option -g pane-active-border-fg blue
+
+# Vim-like pane switching
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# Vim-like pane resize
+bind-key -r '+' resize-pane -U 5
+bind-key -r '-' resize-pane -D 5
+bind-key -r '<' resize-pane -L 5
+bind-key -r '>' resize-pane -R 5
+
+# Join and break panes
+bind-key J choose-window "join-pane -h -s '%%'"
+bind-key B break-pane -d
+
+# Allow repeats for next/prev window
+bind-key -r n next-window
+bind-key -r p previous-window
+
+#
+# ----------------------------------------------------------
+# Integration with clipboard and primary selection
+# ----------------------------------------------------------
+#
+
+# Vim-like select/yank
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+bind-key -t vi-copy Escape cancel
+
+# C-c: save into system clipboard (+). With preselection.
+bind-key C-c choose-buffer "run \"tmux save-buffer -b %% - | xclip -i -sel clipboard\" \; run \" tmux display \\\"Clipboard \(+\) filled with: $(tmux save-buffer -b %1 - | dd ibs=1 obs=1 status=noxfer count=80 2> /dev/null)... \\\" \" "
+# C-v: copy from + clipboard.
+bind-key C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer" \; run "tmux display \"Copied from \(+\) $(xclip -o -sel clipboard | dd ibs=1 obs=1 status=noxfer count=80 2> /dev/null)... \""
+
+# C-d: save into selection clipboard (*). With preselection.
+bind-key C-d choose-buffer "run \"tmux save-buffer -b %% - | xclip -i\" \; run \" tmux display \\\"Clipboard \(*\) filled with: $(tmux save-buffer -b %1 - | dd ibs=1 obs=1 status=noxfer count=80 2> /dev/null)... \\\" \" "
+# C-f: copy from * clipboard.
+bind-key C-f run "tmux set-buffer \"$(xclip -o)\"; tmux paste-buffer" \; run "tmux display \"Copied from \(*\) $(xclip -o | dd ibs=1 obs=1 status=noxfer count=80 2> /dev/null)... \""
+
+set-option -g set-clipboard off
+
+#
+# ----------------------------------------------------------
+# Clock
+# ----------------------------------------------------------
+#
+
+# Clock settings.
+set-window-option -g clock-mode-colour cyan
+set-window-option -g clock-mode-style 24

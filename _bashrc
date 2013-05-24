@@ -1,0 +1,242 @@
+#                                                                           
+# ~/.bashrc
+#
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[ ! "$UID" = "0" ] && archey -c white
+[  "$UID" = "0" ] && archey -c red
+
+# Defaults
+export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
+# Perl
+PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
+# Python
+PATH=$HOME/.virtualenvs:$PATH
+# Ruby
+PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
+
+export TERM=xterm-256color
+
+# PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;32m\]]:\w$\[\e[01;31m\]\n\[\e[01;31m\]└──\[\e[01;36m\]>>\[\e[0m\]"
+
+#  Customize BASH PS1 prompt to show current GIT repository and branch.
+#  by Mike Stewart - http://MediaDoneRight.com
+
+#  SETUP CONSTANTS
+#  Bunch-o-predefined colors.  Makes reading code easier than escape sequences.
+#  I don't remember where I found this.  o_O
+
+# Reset
+Color_Off="\[\033[0m\]"       # Text Reset
+
+# Regular Colors
+Black="\[\033[0;30m\]"        # Black
+Red="\[\033[0;31m\]"          # Red
+Green="\[\033[0;32m\]"        # Green
+Yellow="\[\033[0;33m\]"       # Yellow
+Blue="\[\033[0;34m\]"         # Blue
+Purple="\[\033[0;35m\]"       # Purple
+Cyan="\[\033[0;36m\]"         # Cyan
+White="\[\033[0;37m\]"        # White
+
+# Bold
+BBlack="\[\033[1;30m\]"       # Black
+BRed="\[\033[1;31m\]"         # Red
+BGreen="\[\033[1;32m\]"       # Green
+BYellow="\[\033[1;33m\]"      # Yellow
+BBlue="\[\033[1;34m\]"        # Blue
+BPurple="\[\033[1;35m\]"      # Purple
+BCyan="\[\033[1;36m\]"        # Cyan
+BWhite="\[\033[1;37m\]"       # White
+
+# Underline
+UBlack="\[\033[4;30m\]"       # Black
+URed="\[\033[4;31m\]"         # Red
+UGreen="\[\033[4;32m\]"       # Green
+UYellow="\[\033[4;33m\]"      # Yellow
+UBlue="\[\033[4;34m\]"        # Blue
+UPurple="\[\033[4;35m\]"      # Purple
+UCyan="\[\033[4;36m\]"        # Cyan
+UWhite="\[\033[4;37m\]"       # White
+
+# Background
+On_Black="\[\033[40m\]"       # Black
+On_Red="\[\033[41m\]"         # Red
+On_Green="\[\033[42m\]"       # Green
+On_Yellow="\[\033[43m\]"      # Yellow
+On_Blue="\[\033[44m\]"        # Blue
+On_Purple="\[\033[45m\]"      # Purple
+On_Cyan="\[\033[46m\]"        # Cyan
+On_White="\[\033[47m\]"       # White
+
+# High Intensty
+IBlack="\[\033[0;90m\]"       # Black
+IRed="\[\033[0;91m\]"         # Red
+IGreen="\[\033[0;92m\]"       # Green
+IYellow="\[\033[0;93m\]"      # Yellow
+IBlue="\[\033[0;94m\]"        # Blue
+IPurple="\[\033[0;95m\]"      # Purple
+ICyan="\[\033[0;96m\]"        # Cyan
+IWhite="\[\033[0;97m\]"       # White
+
+# Bold High Intensty
+BIBlack="\[\033[1;90m\]"      # Black
+BIRed="\[\033[1;91m\]"        # Red
+BIGreen="\[\033[1;92m\]"      # Green
+BIYellow="\[\033[1;93m\]"     # Yellow
+BIBlue="\[\033[1;94m\]"       # Blue
+BIPurple="\[\033[1;95m\]"     # Purple
+BICyan="\[\033[1;96m\]"       # Cyan
+BIWhite="\[\033[1;97m\]"      # White
+
+# High Intensty backgrounds
+On_IBlack="\[\033[0;100m\]"   # Black
+On_IRed="\[\033[0;101m\]"     # Red
+On_IGreen="\[\033[0;102m\]"   # Green
+On_IYellow="\[\033[0;103m\]"  # Yellow
+On_IBlue="\[\033[0;104m\]"    # Blue
+On_IPurple="\[\033[10;95m\]"  # Purple
+On_ICyan="\[\033[0;106m\]"    # Cyan
+On_IWhite="\[\033[0;107m\]"   # White
+
+# Various variables you might want for your PS1 prompt instead
+Time12h="\T"
+Time12a="\@"
+PathShort="\w"
+PathFull="\W"
+NewLine="\n"
+Jobs="\j"
+
+# This PS1 snippet was adopted from code for MAC/BSD I saw from: http://allancraig.net/index.php?option=com_content&view=article&id=108:ps1-export-command-for-git&catid=45:general&Itemid=96
+# I tweaked it to work on UBUNTU 11.04 & 11.10 plus made it mo' better
+
+export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
+if [ $? -eq 0 ]; then \
+  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+  if [ "$?" -eq "0" ]; then \
+    # @4 - Clean repository - nothing to commit
+    echo "'$Green'"$(__git_ps1 " (%s)"); \
+  else \
+    # @5 - Changes to working tree
+    echo "'$IRed'"$(__git_ps1 " {%s}"); \
+  fi) '$BYellow$PathShort$Color_Off'\$ "; \
+else \
+  # @2 - Prompt when not in GIT repo
+  echo " '$Yellow$PathShort$Color_Off'\$ "; \
+fi)'
+
+# don't put duplicate lines in the history. See bash(1) for more 
+# options
+# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
+HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+alias ls='ls -F --color=auto --group-directories-first'
+alias l='ls -1F --color=auto --group-directories-first'
+alias la='ls -aF --color=auto'
+alias ll='ls -laihF --color=auto'
+alias lld='ls -laihFd --color=auto'
+alias lsd='ls -ltrF --color=auto | grep ^d'
+alias cp='cp -i'
+alias cps='cp_p'
+alias mv='mv -i'
+alias rm='rm -i'
+alias cdd='cd $HOME/Downloads'
+alias cdp='cd $HOME/Projects'
+alias cds='cd $HOME/.src'
+alias ebrc='gvim ~/.bashrc'
+alias evrc='gvim ~/.vimrc'
+alias view='gvim -R'
+alias zip='zip -9'
+alias gzip='gzip -9'
+alias bzip2='bzip2 -9'
+alias grep='grep --ignore-case'
+alias locate='locate --ignore-case'
+alias ..='cd ..'
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+alias :o='pcmanfm $PWD &' # open current working directory in pcmanfm file manager
+alias :q='exit'
+alias slam='quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp && sudo shutdown now'
+alias slur='quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp && sudo reboot'
+alias sg='subgit'
+alias shg='subhg'
+free='free -m'
+# set -o noclobber
+set -o vi # use Bash vi line editing mode http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
+export EDITOR=vim
+alias wgetpage='wget --html-extension --recursive --convert-links --page-requisites --no-parent $1'
+#
+## view date in all date formats
+## http://www.commandlinefu.com/commands/view/5423/view-all-date-formats-quick-reference-help-alias
+#
+alias dateh='date --help|sed "/^ *%a/,/^ *%Z/!d;y/_/!/;s/^ *%\([:a-z]\+\) \+/\1_/gI;s/%/#/g;s/^\([a-y]\|[z:]\+\)_/%%\1_%\1_/I"|while read L;do date "+${L}"|sed y/!#/%%/;done|column -ts_'
+#
+## view IP addresses
+## https://github.com/Aqua-Ye/dotfiles
+#
+# alias ipv="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias ipv="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+#
+## view HTTP traffic
+#
+alias sniff="sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+#
+## show all listening TCP/UDP ports
+#
+alias all_tcp_udp="lsof -Pan -i tcp -i udp"
+
+
+# Useful functions
+#
+## mkdir then cd
+#
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+#
+## copy with progress
+#
+function cp_p () {
+  rsync -WavP --human-readable --progress $1 $2
+}
+#
+## create and display QR code
+## https://news.ycombinator.com/item?id=5332843
+#
+function qrshow(){ qrencode -s 10 "$1" -o - | display - ; }
+#
+## go to current git repo toplevel directory
+## https://github.com/harleypig/dotfiles
+#
+function gtl() { cd $(git rev-parse --show-toplevel); }
+#
+## count number of files
+## "lc /dir" will count the number of files in /dir and "lc /dir/*" will count the files in subdirectories of /dir.
+## https://news.ycombinator.com/item?id=5023277
+#
+function lc () { if [[ "$#" -gt 1 ]]; then for DIR in "$@"; do echo -n "$DIR - " ; ls -AU1 $DIR | wc -l ; done ; else ls -AU1 "$@" | wc -l ; fi; }
+# 
+## tail a file with timestamps
+## http://www.commandlinefu.com/commands/view/7156/monitor-a-file-with-tail-with-timestamps-added
+#
+function tailfile () { tail -f $1 | xargs -IX printf "$(date -u)\t%s\n" X; }
