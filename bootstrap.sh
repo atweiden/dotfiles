@@ -24,6 +24,7 @@ mv $HOME/.screenrc $HOME/.screenrc.bak
 mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
 mv $HOME/.vim $HOME/.vim.bak
 mv $HOME/.vimrc $HOME/.vimrc.bak
+mv $HOME/.vimencrypt $HOME/.vimencrypt.bak
 mv $HOME/.Xdefaults $HOME/.Xdefaults.bak
 mv $HOME/.xinitrc $HOME/.xinitrc.bak
 mv $HOME/.xsession $HOME/.xsession.bak
@@ -48,6 +49,7 @@ ln -s $HOME/.src/dotfiles/_screenrc $HOME/.screenrc
 ln -s $HOME/.src/dotfiles/_tmuxconf $HOME/.tmux.conf
 ln -s $HOME/.src/dotfiles/_vim $HOME/.vim
 ln -s $HOME/.src/dotfiles/_vimrc $HOME/.vimrc
+ln -s $HOME/.src/dotfiles/_vimencrypt $HOME/.vimencrypt
 ln -s $HOME/.src/dotfiles/_Xdefaults $HOME/.Xdefaults
 ln -s $HOME/.src/dotfiles/_xinitrc $HOME/.xinitrc
 chmod +x $HOME/.xinitrc
