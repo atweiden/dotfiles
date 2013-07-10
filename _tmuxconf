@@ -15,6 +15,9 @@ unbind-key C-b
 set-option -g prefix C-a
 bind-key a send-prefix
 
+# Sane scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
 # Swap on C-a C-a
 bind-key C-a last-window
 bind-key k confirm-before kill-window
