@@ -197,6 +197,16 @@ alias dateh='date --help|sed "/^ *%a/,/^ *%Z/!d;y/_/!/;s/^ *%\([:a-z]\+\) \+/\1_
 #
 alias tcal='cal | sed "s/^/ /;s/$/ /;s/ $(date +%e) / $(date +%e | sed '''s/./#/g''') /"'
 #
+## display directories ranked by size (GB), descending order
+## https://raymii.org/s/snippets/Arch-bash-pacman-bashrc-tips.html
+#
+alias dug='du -h | grep ^[0-9.]*G | sort -rn | head -n 20'
+#
+## display directories ranked by size (MB), descending order
+## https://raymii.org/s/snippets/Arch-bash-pacman-bashrc-tips.html
+#
+alias dum='du -h | grep ^[0-9.]*M | sort -rn | head -n 20'
+#
 ## view IP addresses
 ## https://github.com/Aqua-Ye/dotfiles
 #
