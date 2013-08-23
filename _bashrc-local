@@ -87,6 +87,11 @@ alias wgetpage='wget --html-extension --recursive --convert-links --page-requisi
 #
 alias dateh='date --help|sed "/^ *%a/,/^ *%Z/!d;y/_/!/;s/^ *%\([:a-z]\+\) \+/\1_/gI;s/%/#/g;s/^\([a-y]\|[z:]\+\)_/%%\1_%\1_/I"|while read L;do date "+${L}"|sed y/!#/%%/;done|column -ts_'
 #
+## display simple calendar with today marked as ##
+## https://raymii.org/s/snippets/Arch-bash-pacman-bashrc-tips.html
+#
+alias tcal='cal | sed "s/^/ /;s/$/ /;s/ $(date +%e) / $(date +%e | sed '''s/./#/g''') /"'
+#
 ## view IP addresses
 ## https://github.com/Aqua-Ye/dotfiles
 #
