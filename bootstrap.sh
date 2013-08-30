@@ -19,6 +19,7 @@ mv $HOME/.gitattributes $HOME/.gitattributes.bak
 mv $HOME/.gnupg $HOME/.gnupg.bak
 mv $HOME/.hgignore $HOME/.hgignore.bak
 mv $HOME/.hgrc $HOME/.hgrc.bak
+mv $HOME/.iex $HOME/.iex.bak
 mv $HOME/.jshintrc $HOME/.jshintrc.bak
 mv $HOME/.screenrc $HOME/.screenrc.bak
 mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
@@ -44,6 +45,7 @@ ln -s $HOME/.src/dotfiles/_gitattributes $HOME/.gitattributes
 ln -s $HOME/.src/dotfiles/_gnupg $HOME/.gnupg
 ln -s $HOME/.src/dotfiles/_hgignore $HOME/.hgignore
 ln -s $HOME/.src/dotfiles/_hgrc $HOME/.hgrc
+ln -s $HOME/.src/dotfiles/_iex $HOME/.iex
 ln -s $HOME/.src/dotfiles/_jshintrc $HOME/.jshintrc
 ln -s $HOME/.src/dotfiles/_screenrc $HOME/.screenrc
 ln -s $HOME/.src/dotfiles/_tmuxconf $HOME/.tmux.conf
