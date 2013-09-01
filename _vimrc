@@ -69,6 +69,13 @@ if has("gui_running")
     set background=light       " (??) Set gvim background to light
 endif
 
+" Cursor
+highlight Cursor guifg=black guibg=gray
+highlight iCursor guifg=white guibg=white
+set guicursor+=n-v-c:blinkon0-block-Cursor
+set guicursor+=i:blinkon0-ver25-Cursor/lCursor
+
+
 " Moving Around/Editing
 set nostartofline              " (??) avoid moving cursor to BOL when jumping around
 set virtualedit=block          " (??) let cursor move past the last char in <C-v> mode
@@ -690,6 +697,7 @@ Bundle 'vim-scripts/ZoomWin'
 " https://github.com/cooldaemon/myhome/
 " https://github.com/gf3/dotfiles
 " https://github.com/gmarik/vimfiles/
+" https://github.com/jeroenjanssens/dotfiles/
 " https://github.com/Floby/vim-config
 " https://github.com/nvie/vimrc/
 " https://github.com/sjl/dotfiles/
