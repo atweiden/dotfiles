@@ -171,6 +171,7 @@ alias gzip='gzip -9'
 alias bzip2='bzip2 -9'
 alias grep='grep --ignore-case'
 alias locate='locate --ignore-case'
+alias j='jump'
 bind -x '"\C-h":"cd ../;ls"' # use control-h to move a directory upwards: https://news.ycombinator.com/item?id=6309639
 alias ..='cd ..'
 alias ..2='cd ../..'
@@ -233,13 +234,13 @@ alias all_tcp_udp="lsof -Pan -i tcp -i udp"
 #
 export MARKPATH=$HOME/.marks
 function jump { 
-  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+  mkdir -p "$MARKPATH"; cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
 function mark { 
   mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
 }
 function unmark { 
-  rm -i "$MARKPATH/$1"
+  mkdir -p "$MARKPATH"; rm -i "$MARKPATH/$1"
 }
 function marks {
   ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
