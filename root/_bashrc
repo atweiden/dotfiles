@@ -21,6 +21,13 @@ export TERM=xterm-256color
 
 #PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;32m\]]:\w$\[\e[01;31m\]\n\[\e[01;31m\]└──\[\e[01;36m\]>>\[\e[0m\]"
 
+# don't put duplicate lines in the history. See bash(1) for more 
+# options
+# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
+HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoreboth
+
 alias ls='ls -F --color=auto --group-directories-first'
 alias l='ls -1F --color=auto --group-directories-first'
 alias la='ls -aF --color=auto'
