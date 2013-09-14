@@ -61,6 +61,8 @@ free='free -m'
 # set -o noclobber
 set -o vi # use Bash vi line editing mode http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
 export EDITOR=vim
+alias schromium='secure_chromium'
+alias google-chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 alias wgetpage='wget --html-extension --recursive --convert-links --page-requisites --no-parent $1'
 #
 ## view date in all date formats
@@ -106,16 +108,16 @@ alias all_tcp_udp="lsof -Pan -i tcp -i udp"
 ## http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 #
 export MARKPATH=$HOME/.marks
-function jump { 
+function jump() { 
   mkdir -p "$MARKPATH"; cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
-function mark { 
+function mark() { 
   mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
 }
-function unmark { 
+function unmark() { 
   mkdir -p "$MARKPATH"; rm -i "$MARKPATH/$1"
 }
-function marks {
+function marks() {
   ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 _completemarks() {
@@ -128,18 +130,29 @@ complete -F _completemarks jump unmark
 #
 ## mkdir then cd
 #
-function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
 #
 ## copy with progress
 #
-function cp_p () {
+function cp_p() {
   rsync -WavP --human-readable --progress $1 $2
 }
 #
 ## create and display QR code
 ## https://news.ycombinator.com/item?id=5332843
 #
-function qrshow(){ qrencode -s 10 "$1" -o - | display - ; }
+function qrshow() { qrencode -s 10 "$1" -o - | display - ; }
+#
+## start Chromium with SOCKS5 proxy
+## https://wiki.archlinux.org/index.php/Secure_Shell
+#
+function secure_chromium() {
+  port=4711
+  export SOCKS_SERVER=localhost:$port
+  export SOCKS_VERSION=5
+  chromium &
+  exit
+}
 #
 ## go to current git repo toplevel directory
 ## https://github.com/harleypig/dotfiles
@@ -150,9 +163,9 @@ function gtl() { cd $(git rev-parse --show-toplevel); }
 ## "lc /dir" will count the number of files in /dir and "lc /dir/*" will count the files in subdirectories of /dir.
 ## https://news.ycombinator.com/item?id=5023277
 #
-function lc () { if [[ "$#" -gt 1 ]]; then for DIR in "$@"; do echo -n "$DIR - " ; ls -AU1 $DIR | wc -l ; done ; else ls -AU1 "$@" | wc -l ; fi; }
+function lc() { if [[ "$#" -gt 1 ]]; then for DIR in "$@"; do echo -n "$DIR - " ; ls -AU1 $DIR | wc -l ; done ; else ls -AU1 "$@" | wc -l ; fi; }
 # 
 ## tail a file with timestamps
 ## http://www.commandlinefu.com/commands/view/7156/monitor-a-file-with-tail-with-timestamps-added
 #
-function tailfile () { tail -f $1 | xargs -IX printf "$(date -u)\t%s\n" X; }
+function tailfile() { tail -f $1 | xargs -IX printf "$(date -u)\t%s\n" X; }
