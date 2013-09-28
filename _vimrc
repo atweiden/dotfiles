@@ -516,6 +516,9 @@ let g:neocomplcache_snippets_dir = $HOME . '/.vim/snippets'
 " CompView
 let MRU_Max_Entries = 400
 
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+
 " mojo.vim
 let mojo_highlight_data = 1
 
