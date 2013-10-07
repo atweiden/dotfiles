@@ -98,6 +98,7 @@ set foldlevel=99               " (fdl) don't fold by default. When file is opene
 " Line Settings
 set wrap                       " (??) stop text from scrolling off the window
 set number                     " (nu) show line numbers
+set relativenumber             " (??) show relative line numbers (in unison with number for hybrid mode)
 set numberwidth=1              " (??)
 set textwidth=70               " (tw) number of columns before an automatic line break is inserted
 set linespace=1                " (??) add slightly more space between lines
