@@ -27,6 +27,12 @@ set mousemodel=popup_setpos     " (??) Show popup on right-click
 set encoding=utf-8              " (??) Set encoding to UTF-8
 set nofsync                     " (??) Let OS decide when to flush disk
 set grepprg=ack                 " (??) Replace the default grep program with ack. Ack is betterthangrep.com
+nnoremap    v   <C-V>
+nnoremap <C-V>     v
+vnoremap    v   <C-V>
+vnoremap <C-V>     v
+nnoremap  ;  :
+nnoremap  :  ;
 
 
 " ==========================================================
@@ -75,7 +81,6 @@ highlight iCursor guifg=white guibg=white
 set guicursor+=n-v-c:blinkon0-block-Cursor
 set guicursor+=i:blinkon0-ver25-Cursor/lCursor
 
-
 " Moving Around/Editing
 set nostartofline              " (??) avoid moving cursor to BOL when jumping around
 set virtualedit=block          " (??) let cursor move past the last char in <C-v> mode
@@ -111,6 +116,8 @@ set formatoptions+=n           "      +recognize numbered lists
 set formatoptions+=2           "      +use indent from 2nd line of a paragraph
 set formatoptions+=l           "      +don't break lines that are already long
 set formatoptions+=1           "      +break before 1-letter words
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
 " Reading/Writing
 set noautowrite                " (??) Never write a file unless I request it
@@ -133,6 +140,18 @@ set hlsearch                   " (hls) highlights all instances of the last sear
 set ignorecase                 " (ic) ignores case in search patterns
 set smartcase                  " (scs) don't ignore case when the search pattern has uppercase
 set infercase                  " (inf) during keyword completion, fix case of new word (when ignore case is on)
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>
+function! HLNext (blinktime)
+    let [bufnum, lnum, col, off] = getpos('.')
+    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+    let target_pat = '\c\%#'.@/
+    let ring = matchadd('WhiteOnRed', target_pat, 101)
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+    call matchdelete(ring)
+    redraw
+endfunction
 
 " Other Settings
 set cursorline                 " (??) have a line indicate the cursor location
@@ -196,23 +215,9 @@ imap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 "map k gk
 " map jw to ESC
 inoremap jw <Esc>
-" scroll the viewport faster (auto scroll by 2 line)
-nnoremap <C-e> 2<C-e>
-nnoremap <C-y> 2<C-y>
-" Control+Up/Down move lines & selections up and down. (Based on http://vim.wikia.com/wiki/VimTip646)
-" Define maps for Normal and Visual modes, then re-use them for Insert and Select modes.
-nnoremap <silent> <C-Up> :move -2<CR>
-nnoremap <silent> <C-Down> :move +<CR>
-xnoremap <silent> <C-Up> :move '<-2<CR>gv
-xnoremap <silent> <C-Down> :move '>+<CR>gv
-imap <silent> <C-Up> <C-O><C-Up>
-imap <silent> <C-Down> <C-O><C-Down>
-smap <silent> <C-Up> <C-G><C-Up><C-G>
-smap <silent> <C-Down> <C-G><C-Down><C-G>
-" quick alignment of text
-nmap <leader>al :left<CR>
-nmap <leader>ar :right<CR>
-nmap <leader>ac :center<CR>
+" scroll the viewport faster (auto scroll by 3 lines)
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
 " ~~~~~~~~~~~
@@ -404,8 +409,9 @@ set modelines=0
 " Turn 'list' off by default, since it interferes with 'linebreak' and
 " 'breakat' formatting, but define characters to use when it's turned on:
 set nolist
-set listchars =tab:>-           " Start and body of tabs
-set listchars+=trail:.          " Trailing spaces
+set listchars =tab:\uBB\uBB     " Start and body of tabs
+set listchars+=trail:\uB7       " Trailing spaces
+set listchars+=nbsp:~           " Non-breaking spaces
 set listchars+=extends:>        " Last column when line extends off right
 set listchars+=precedes:<       " First column when line extends off left
 set listchars+=eol:$            " End of line
@@ -450,6 +456,22 @@ let g:ackprg="ack -H --type-set jade=.jade --type-set stylus=.styl --type-set co
 
 " YankRing
 let g:yankring_history_dir = '$HOME/.vim/.tmp'
+
+" dragvisuals.vim
+runtime plugin/dragvisuals.vim
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+let g:DVB_TrimWS = 1
+
+" vmath.vim
+vmap <expr>  ++  VMATH_YankAndAnalyse()
+nmap         ++  vip++
+
+" hudigraphs.vim
+inoremap <expr>  <C-K>   HUDG_GetDigraph()
 
 " NrrwRegion
 let g:nrrw_rgn_vert = 1
