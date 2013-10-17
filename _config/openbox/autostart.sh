@@ -5,6 +5,7 @@ volumeicon &
 batti &
 nitrogen --restore &
 xautolock -time 7 -locker "/usr/bin/xlock -mode pacman"
+xflux -z 97210 &
 pcmanfm -d &
 #(sleep 3 && /usr/bin/nm-applet --sm-disable) &
 #xcompmgr &
