@@ -57,3 +57,9 @@ ln -s $HOME/.src/dotfiles/_xinitrc $HOME/.xinitrc
 chmod +x $HOME/.xinitrc
 ln -s $HOME/.src/dotfiles/_xsession $HOME/.xsession
 chmod +x $HOME/.xsession
+
+# Configure f.lux
+echo "f.lux needs your zipcode for screen warmth timing"
+echo -n "Enter your zipcode: "
+read zipcode
+sed -i "s#97210#$zipcode#" _config/openbox/autostart.sh
