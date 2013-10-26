@@ -443,12 +443,16 @@ nmap         ++  vip++
 " hudigraphs.vim
 inoremap <expr>  <C-K>   HUDG_GetDigraph()
 
-" NrrwRegion
-let g:nrrw_rgn_vert = 1
-let g:nrrw_rgn_nohl = 1
+" vim-clam
+nnoremap ! :Clam<space>
+vnoremap ! :ClamVisual<space>
 
 " pipe2eval
 let g:pipe2eval_map_key = '<leader>p2e'
+
+" NrrwRegion
+let g:nrrw_rgn_vert = 1
+let g:nrrw_rgn_nohl = 1
 
 " Tagbar
 "let g:tagbar_type_javascript = {
@@ -465,92 +469,20 @@ let g:easytags_auto_update = 0
 let g:easytags_auto_highlight = 0
 let g:easytags_resolve_links = 1
 
-" NeoComplCache
-" " Toggle NeoComplCache
-function! s:toggle_neocomplcache() "{{{
-    if !exists(':NeoComplCacheDisable')
-        NeoComplCacheEnable
-        echo 'neocomplcache enabled.'
-    else
-        NeoComplCacheDisable
-        echo 'neocomplcache disabled.'
-    endif
-endfunction "}}}
-nnoremap <Leader>neo :<C-u>call <SID>toggle_neocomplcache()<CR>
-imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_plugin_completion_length = {
-  \ 'buffer_complete'   : 2,
-  \ 'include_complete'  : 2,
-  \ 'syntax_complete'   : 2,
-  \ 'filename_complete' : 2,
-  \ 'keyword_complete'  : 2,
-  \ 'omni_complete'     : 1
-  \ }
-let g:neocomplcache_min_keyword_length = 3
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_dictionary_filetype_lists = {
-  \ 'default'    : '',
-  \ 'erlang'     : $HOME . '/.vim/dict/erlang.dict',
-  \ 'objc'       : $HOME . '/.vim/dict/objc.dict',
-  \ 'javascript' : $HOME . '/.vim/dict/javascript.dict',
-  \ 'mxml'       : $HOME . '/.vim/dict/mxml.dict',
-  \ 'ruby'       : $HOME . '/.vim/dict/ruby.dict',
-  \ 'perl'       : $HOME . '/.vim/dict/perl.dict',
-  \ 'scheme'     : $HOME . '/.vim/dict/gauche.dict',
-  \ 'scala'      : $HOME . '/.vim/dict/scala.dict',
-  \ 'int-erl'    : $HOME . '/.vim/dict/erlang.dict',
-  \ 'int-irb'    : $HOME . '/.vim/dict/ruby.dict',
-  \ 'int-perlsh' : $HOME . '/.vim/dict/perl.dict'
-  \ }
-let g:neocomplcache_same_filetype_lists = {
-  \ 'c'          : 'ref-man,ref-erlang',
-  \ 'perl'       : 'ref-perldoc',
-  \ 'ruby'       : 'ref-refe',
-  \ 'erlang'     : 'ref-erlang',
-  \ 'objc'       : 'c',
-  \ 'tt2html'    : 'html,perl',
-  \ 'int-erl'    : 'erlang,ref-erlang',
-  \ 'int-perlsh' : 'perl,ref-perldoc',
-  \ 'int-irb'    : 'ruby,ref-refe'
-  \ }
-let g:neocomplcache_snippets_dir = $HOME . '/.vim/snippets'
-
-" CompView
+" vim-mru
 let MRU_Max_Entries = 400
-
-" vim-markdown
-let g:vim_markdown_folding_disabled = 1
-
-" mojo.vim
-let mojo_highlight_data = 1
 
 " vim-gitgutter
 let g:gitgutter_enabled = 0
 
-" vim-coffee-script
-let coffee_compile_vert = 1
-"vmap <leader>cc <esc>:'<,'>:CoffeeCompile<CR>
-"map <leader>cc :CoffeeCompile<CR>
-" command -nargs=1 C CoffeeCompile | :<args>
-" And then try typing :C<number>. Whoah! This takes you to the given line 
-" number in the compiled Javascript of the CoffeeScript file you are editing. 
-" source: http://esa-matti.suuronen.org/blog/2011/11/28/how-to-write-coffeescript-efficiently/
-" map <silent> <leader>cm :CoffeeMake<cr> <cr>
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+
+" vim-mojo
+let mojo_highlight_data = 1
 
 " vim-clojure-static
 let g:clojure_align_multiline_strings = 1
-
-" VimClojure
-let g:vimclojure#ParenRainbow = 1 " Enable rainbow parens
-let g:vimclojure#HighlightBuiltins = 1 " Highlight builtin functions
-"let g:vimclojure#DynamicHighlighting = 1 " Enable dynamic highlighting
-let g:vimclojure#FuzzyIndent = 1 " Names beginning in 'def' or 'with' to be indented as if they were included in the 'lispwords' option
 
 " vim-rainbow-parentheses
 let g:rbpt_colorpairs = [
@@ -735,23 +667,3 @@ Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'Valloric/YouCompleteMe'
 " Bundle 'mattn/zencoding-vim'
 Bundle 'vim-scripts/ZoomWin'
-
-
-" ==========================================================
-" Credits
-" ==========================================================
-" http://apaulodesign.com/vimrc.html
-" http://dotfiles.github.com/
-" https://github.com/alessioalex/dotfiles/
-" https://github.com/cooldaemon/myhome/
-" https://github.com/gf3/dotfiles
-" https://github.com/gmarik/vimfiles/
-" https://github.com/jeroenjanssens/dotfiles/
-" https://github.com/Floby/vim-config
-" https://github.com/nvie/vimrc/
-" https://github.com/sjl/dotfiles/
-" https://github.com/smith/vim-config/
-" https://github.com/sontek/dotfiles/
-" https://github.com/spf13/spf13-vim/
-" https://github.com/wavded/dotfiles/
-" https://github.com/wnodom/wnodom-vim-environment/
