@@ -445,7 +445,7 @@ inoremap <expr>  <C-K>   HUDG_GetDigraph()
 
 " vim-clam
 nnoremap ! :Clam<space>
-vnoremap ! :ClamVisual<space>
+"vnoremap ! :ClamVisual<space>
 
 " pipe2eval
 let g:pipe2eval_map_key = '<leader>p2e'
