@@ -148,6 +148,10 @@ function! HLNext (blinktime)
     call matchdelete(ring)
     redraw
 endfunction
+function! FindLongerLines()
+    let @/ = '^.\{' . col('$') . '}'
+    silent! norm n$
+endfunction
 
 " Other Settings
 set cursorline                 " (??) have a line indicate the cursor location
