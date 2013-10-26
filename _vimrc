@@ -27,10 +27,6 @@ set mousemodel=popup_setpos     " (??) Show popup on right-click
 set encoding=utf-8              " (??) Set encoding to UTF-8
 set nofsync                     " (??) Let OS decide when to flush disk
 set grepprg=ack                 " (??) Replace the default grep program with ack. Ack is betterthangrep.com
-nnoremap    v   <C-V>
-nnoremap <C-V>     v
-vnoremap    v   <C-V>
-vnoremap <C-V>     v
 nnoremap  ;  :
 nnoremap  :  ;
 
@@ -233,16 +229,6 @@ nnoremap <leader>W :%s/\s\+$//e<CR><silent>:noh<CR>
 " ~~~~~~~~~~~
 " " toggle Tagbar:
 nmap <F6> :TagbarToggle<CR>
-" " CoffeeScript
-"vmap <leader>cc <esc>:'<,'>:CoffeeCompile<CR>
-"map <leader>cc :CoffeeCompile<CR>
-" command -nargs=1 C CoffeeCompile | :<args>
-" And then try typing :C<number>. Whoah! This takes you to the given line 
-" number in the compiled Javascript of the CoffeeScript file you are editing. 
-" source: http://esa-matti.suuronen.org/blog/2011/11/28/how-to-write-coffeescript-efficiently/
-" map <silent> <leader>cm :CoffeeMake<cr> <cr>
-" " VimClojure rainbow parenthesis
-"nnoremap <leader>rp :RainbowParenthesesToggle<CR>
 " " Remove whitespace
 function! StripWhitespace ()
     exec ':%s/ \+$//gc'
@@ -250,17 +236,6 @@ endfunction
 map <leader>rmw :call StripWhitespace ()<CR>
 " " Remove the Windows ^M - for when encodings get messy
 noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-" " Toggle NeoComplCache
-function! s:toggle_neocomplcache() "{{{
-    if !exists(':NeoComplCacheDisable')
-        NeoComplCacheEnable
-        echo 'neocomplcache enabled.'
-    else
-        NeoComplCacheDisable
-        echo 'neocomplcache disabled.'
-    endif
-endfunction "}}}
-nnoremap <Leader>neo :<C-u>call <SID>toggle_neocomplcache()<CR>
 " ~~~~~~~~~~~
 " @Merging
 " ~~~~~~~~~~~
@@ -422,15 +397,6 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
-" Vim on the iPad
-if &term == "xterm-ipad"
-    nnoremap <Tab> <Esc>
-    vnoremap <Tab> <Esc>gV
-    onoremap <Tab> <Esc>
-    inoremap <Tab> <Esc>`^
-    inoremap <Leader><Tab> <Tab>
-endif
-
 
 " ==========================================================
 " Plugin Settings
@@ -477,6 +443,9 @@ inoremap <expr>  <C-K>   HUDG_GetDigraph()
 let g:nrrw_rgn_vert = 1
 let g:nrrw_rgn_nohl = 1
 
+" pipe2eval
+let g:pipe2eval_map_key = '<leader>p2e'
+
 " Tagbar
 "let g:tagbar_type_javascript = {
     "\ 'ctagsbin' : '/usr/lib/jsctags'
@@ -493,6 +462,17 @@ let g:easytags_auto_highlight = 0
 let g:easytags_resolve_links = 1
 
 " NeoComplCache
+" " Toggle NeoComplCache
+function! s:toggle_neocomplcache() "{{{
+    if !exists(':NeoComplCacheDisable')
+        NeoComplCacheEnable
+        echo 'neocomplcache enabled.'
+    else
+        NeoComplCacheDisable
+        echo 'neocomplcache disabled.'
+    endif
+endfunction "}}}
+nnoremap <Leader>neo :<C-u>call <SID>toggle_neocomplcache()<CR>
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:acp_enableAtStartup = 0
@@ -551,11 +531,49 @@ let g:gitgutter_enabled = 0
 
 " vim-coffee-script
 let coffee_compile_vert = 1
+"vmap <leader>cc <esc>:'<,'>:CoffeeCompile<CR>
+"map <leader>cc :CoffeeCompile<CR>
+" command -nargs=1 C CoffeeCompile | :<args>
+" And then try typing :C<number>. Whoah! This takes you to the given line 
+" number in the compiled Javascript of the CoffeeScript file you are editing. 
+" source: http://esa-matti.suuronen.org/blog/2011/11/28/how-to-write-coffeescript-efficiently/
+" map <silent> <leader>cm :CoffeeMake<cr> <cr>
+
+" vim-clojure-static
+let g:clojure_align_multiline_strings = 1
 
 " VimClojure
-"let g:vimclojure#ParenRainbow = 1 " Enable rainbow parens
+let g:vimclojure#ParenRainbow = 1 " Enable rainbow parens
+let g:vimclojure#HighlightBuiltins = 1 " Highlight builtin functions
 "let g:vimclojure#DynamicHighlighting = 1 " Enable dynamic highlighting
-"let g:vimclojure#FuzzyIndent = 1 " Names beginning in 'def' or 'with' to be indented as if they were included in the 'lispwords' option
+let g:vimclojure#FuzzyIndent = 1 " Names beginning in 'def' or 'with' to be indented as if they were included in the 'lispwords' option
+
+" vim-rainbow-parentheses
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+nnoremap <leader>rp :RainbowParenthesesToggleAll<CR>
+nnoremap <leader>rpr :RainbowParenthesesLoadRound<CR>
+nnoremap <leader>rps :RainbowParenthesesLoadSquare<CR>
+nnoremap <leader>rpb :RainbowParenthesesLoadBraces<CR>
+nnoremap <leader>rpc :RainbowParenthesesLoadChevrons<CR>
 
 
 " ==========================================================
