@@ -187,6 +187,7 @@ alias slam='quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.vimi
 alias slur='quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp && sudo reboot'
 alias sg='subgit'
 alias shg='subhg'
+alias h?="history | ack -i"
 free='free -m'
 # set -o noclobber
 set -o vi # use Bash vi line editing mode http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
