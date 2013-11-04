@@ -254,11 +254,12 @@ map <silent> <C-tab> :buffer #<CR>
 " }}}
 " ---windows {{{
 
-" map alt-[h,j,k,l] to resizing a window split
+" map alt-[h,j,k,l,=] to resizing a window split
 map <silent> <A-h> <C-w><
 map <silent> <A-j> <C-W>-
 map <silent> <A-k> <C-W>+
 map <silent> <A-l> <C-w>>
+map <silent> <A-=> <C-w>=
 " map alt-[s,v] to horizontal and vertical split respectively
 map <silent> <A-s> :split<CR>
 map <silent> <A-v> :vsplit<CR>
