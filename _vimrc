@@ -16,6 +16,7 @@ set nofsync                     " (??) Let OS decide when to flush disk
 nnoremap  ;  :
 nnoremap  :  ;
 
+
 " -----------------------------------------------------------------------------
 " Vundle
 
@@ -23,12 +24,14 @@ if filereadable(expand("~/.vim/vundles.vim"))
   source ~/.vim/vundles.vim
 endif
 
+
 " -----------------------------------------------------------------------------
 " Functions
 
 if filereadable(expand("~/.vim/functions.vim"))
   source ~/.vim/functions.vim
 endif
+
 
 " -----------------------------------------------------------------------------
 " Basics
@@ -47,6 +50,7 @@ set ttimeout
 set ttimeoutlen=10
 " Defend against modelines exploit:
 set modelines=0
+
 
 " -----------------------------------------------------------------------------
 " Display
@@ -84,6 +88,7 @@ set guicursor+=n-v-c:blinkon0-block-Cursor
 set guicursor+=i:blinkon0-ver25-Cursor/lCursor
 
 " }}}
+
 
 " -----------------------------------------------------------------------------
 " Editing
@@ -246,9 +251,9 @@ nmap <silent> <leader><leader>c /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 " Navigation
 " --- buffers {{{
 
-" create new empty buffer:
+" create new empty buffer
 nmap <C-N> :enew<CR>
-" " cycle between buffers:
+" cycle between buffers
 map <silent> <C-tab> :buffer #<CR>
 
 " }}}
@@ -270,6 +275,7 @@ map <silent> <A-p> <C-w><S-w>
 nmap <leader>sb :call SplitScroll()<CR>
 
 " }}}
+
 
 " -----------------------------------------------------------------------------
 " Filetype Settings
