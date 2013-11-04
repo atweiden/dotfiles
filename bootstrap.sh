@@ -58,12 +58,8 @@ chmod +x $HOME/.xinitrc
 ln -s $HOME/.src/dotfiles/_xsession $HOME/.xsession
 chmod +x $HOME/.xsession
 
-# Configure Redshift
-echo "Redshift needs your latitude and longitude for screen warmth calculations"
-echo "See http://www.lat-long.com/"
-echo -n "Enter your latitude: "
-read latitude
-echo -n "Enter your longitude: "
-read latitude
-sed -i "s#45.5778946#$latitude#" _config/openbox/autostart.sh
-sed -i "s#-122.779266#$latitude#" _config/openbox/autostart.sh
+# Configure f.lux
+echo "f.lux needs your zipcode for screen warmth timing"
+echo -n "Enter your zipcode: "
+read zipcode
+sed -i "s#97210#$zipcode#" _config/openbox/autostart.sh
