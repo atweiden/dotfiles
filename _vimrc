@@ -24,6 +24,13 @@ if filereadable(expand("~/.vim/vundles.vim"))
 endif
 
 " -----------------------------------------------------------------------------
+" Functions
+
+if filereadable(expand("~/.vim/functions.vim"))
+  source ~/.vim/functions.vim
+endif
+
+" -----------------------------------------------------------------------------
 " Basics
 
 syntax on                      " (??) Turn syntax highlighting on
@@ -150,20 +157,6 @@ set smartcase                  " (scs) don't ignore case when the search pattern
 set infercase                  " (inf) during keyword completion, fix case of new word (when ignore case is on)
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
-function! HLNext (blinktime)
-    let [bufnum, lnum, col, off] = getpos('.')
-    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
-    let target_pat = '\c\%#'.@/
-    let ring = matchadd('WhiteOnRed', target_pat, 101)
-    redraw
-    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-    call matchdelete(ring)
-    redraw
-endfunction
-function! FindLongerLines()
-    let @/ = '^.\{' . col('$') . '}'
-    silent! norm n$
-endfunction
 
 
 " -----------------------------------------------------------------------------
@@ -197,9 +190,6 @@ nnoremap <leader>w :/\s\+$<CR>
 " remove whitespace
 nnoremap <leader>W :%s/\s\+$//e<CR><silent>:noh<CR>
 " strip whitespace
-function! StripWhitespace ()
-    exec ':%s/ \+$//gc'
-endfunction
 map <leader>rmw :call StripWhitespace ()<CR>
 " fix windoooos ^M
 noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
@@ -277,14 +267,6 @@ if bufwinnr(1)
   map - <C-W>-
 endif
 " simultaneously scroll split windows
-fu! SplitScroll()
-    :wincmd v
-    :wincmd w
-    execute "normal! \<C-d>"
-    :set scrollbind
-    :wincmd w
-    :set scrollbind
-endfu
 nmap <leader>sb :call SplitScroll()<CR>
 
 " }}}
