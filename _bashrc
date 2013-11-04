@@ -300,3 +300,7 @@ function lc() { if [[ "$#" -gt 1 ]]; then for DIR in "$@"; do echo -n "$DIR - " 
 ## http://www.commandlinefu.com/commands/view/7156/monitor-a-file-with-tail-with-timestamps-added
 #
 function tailfile() { tail -f $1 | xargs -IX printf "$(date -u)\t%s\n" X; }
+#
+## install ruby gems locally
+#
+function localgem() { export GEM_HOME=$PWD/.gems; export PATH=$GEM_HOME/bin:$PWD/bin:$PATH; export RUBYLIB=$PWD/lib:$RUBYLIB; gem install --no-user-install "$@"; }
