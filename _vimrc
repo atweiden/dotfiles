@@ -254,13 +254,17 @@ map <silent> <C-tab> :buffer #<CR>
 " }}}
 " ---windows {{{
 
-" faster split resizing
-if bufwinnr(1)
-  map > <C-W>>
-  map < <C-W><
-  map + <C-W>+
-  map - <C-W>-
-endif
+" map alt-[h,j,k,l] to resizing a window split
+map <silent> <A-h> <C-w><
+map <silent> <A-j> <C-W>-
+map <silent> <A-k> <C-W>+
+map <silent> <A-l> <C-w>>
+" map alt-[s,v] to horizontal and vertical split respectively
+map <silent> <A-s> :split<CR>
+map <silent> <A-v> :vsplit<CR>
+" map alt-[n,p] to moving to next and previous window respectively
+map <silent> <A-n> <C-w><C-w>
+map <silent> <A-p> <C-w><S-w>
 " simultaneously scroll split windows
 nmap <leader>sb :call SplitScroll()<CR>
 
