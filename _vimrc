@@ -254,15 +254,10 @@ map <silent> <C-tab> :buffer #<CR>
 " }}}
 " ---windows {{{
 
-" ctrl-jklm changes to that split
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-" make these all work in insert mode too (<C-O> makes next cmd happen as if in command mode)
-imap <C-W> <C-O><C-W>
-" faster split resizing (+,-)
+" faster split resizing
 if bufwinnr(1)
+  map > <C-W>>
+  map < <C-W><
   map + <C-W>+
   map - <C-W>-
 endif
