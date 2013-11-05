@@ -48,7 +48,7 @@ endif
 set notimeout
 set ttimeout
 set ttimeoutlen=10
-" Defend against modelines exploit:
+" Defend against modelines exploit
 set modelines=0
 
 
@@ -98,7 +98,7 @@ set noautowriteall             " (??) NEVER!
 set noautoread                 " (??) Don't automatically re-read changed files
 set ffs=unix,dos,mac           " (??) Try recognizing dos, unix, and mac line endings
 set nostartofline              " (??) avoid moving cursor to BOL when jumping around
-set virtualedit=block          " (??) let cursor move past the last char in <C-v> mode
+set virtualedit=block          " (??) let cursor move past the last char in <C-V> mode
 set noerrorbells               " (??) Don't bell or blink
 set vb t_vb=                   " (??) Disable all bells
 set confirm                    " (??) Show Y-N-C prompt if closing with unsaved changes
@@ -171,7 +171,7 @@ nnoremap <silent> N   N:call HLNext(0.4)<cr>
 " --- selecting {{{
 
 " select all
-map <c-a> ggVG
+map <C-A> ggVG
 " escape
 inoremap jw <Esc>
 
@@ -227,15 +227,15 @@ imap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 " --- scrolling {{{
 
 " scroll four lines at a time
-nnoremap <C-e> 4<C-e>
-nnoremap <C-y> 4<C-y>
+nnoremap <C-E> 4<C-E>
+nnoremap <C-Y> 4<C-Y>
 
 " }}}
 
 " Programming
 " --- autocompletion {{{
 
-" customize autocomplete menu color:
+" customize autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
 " }}}
@@ -260,17 +260,17 @@ map <silent> <C-tab> :buffer #<CR>
 " ---windows {{{
 
 " map alt-[h,j,k,l,=] to resizing a window split
-map <silent> <A-h> <C-w><
+map <silent> <A-h> <C-W><
 map <silent> <A-j> <C-W>-
 map <silent> <A-k> <C-W>+
-map <silent> <A-l> <C-w>>
-map <silent> <A-=> <C-w>=
+map <silent> <A-l> <C-W>>
+map <silent> <A-=> <C-W>=
 " map alt-[s,v] to horizontal and vertical split respectively
 map <silent> <A-s> :split<CR>
 map <silent> <A-v> :vsplit<CR>
 " map alt-[n,p] to moving to next and previous window respectively
-map <silent> <A-n> <C-w><C-w>
-map <silent> <A-p> <C-w><S-w>
+map <silent> <A-n> <C-W><C-W>
+map <silent> <A-p> <C-W><S-W>
 " simultaneously scroll split windows
 nmap <leader>sb :call SplitScroll()<CR>
 
@@ -339,4 +339,4 @@ endif
 " -----------------------------------------------------------------------------
 " Plugin Settings
 
-so ~/.vim/settings.vim
+source ~/.vim/settings.vim
