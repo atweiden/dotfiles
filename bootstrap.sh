@@ -13,6 +13,7 @@ mv $HOME/.config $HOME/.config.bak
 mv $HOME/.conkyrc $HOME/.conkyrc.bak
 mv $HOME/.conkyrc1 $HOME/.conkyrc1.bak
 mv $HOME/.dunstrc $HOME/.dunstrc.bak
+mv $HOME/.functions.d $HOME/.functions.d.bak
 mv $HOME/.gitconfig $HOME/.gitconfig.bak
 mv $HOME/.gitignore $HOME/.gitignore.bak
 mv $HOME/.gitattributes $HOME/.gitattributes.bak
@@ -39,6 +40,7 @@ ln -s $HOME/.src/dotfiles/_config $HOME/.config
 ln -s $HOME/.src/dotfiles/_conkyrc $HOME/.conkyrc
 ln -s $HOME/.src/dotfiles/_conkyrc1 $HOME/.conkyrc1
 ln -s $HOME/.src/dotfiles/_dunstrc $HOME/.dunstrc
+ln -s $HOME/.src/dotfiles/_functions.d $HOME/.functions.d
 ln -s $HOME/.src/dotfiles/_gitignore $HOME/.gitignore
 ln -s $HOME/.src/dotfiles/_gitconfig $HOME/.gitconfig
 ln -s $HOME/.src/dotfiles/_gitattributes $HOME/.gitattributes

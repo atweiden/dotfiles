@@ -231,3 +231,9 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 ## show all listening TCP/UDP ports
 #
 alias all_tcp_udp="lsof -Pan -i tcp -i udp"
+
+
+# -----------------------------------------------------------------------------
+# Functions
+
+[[ -f "~/.functions.d/functions.sh" ]] && ~/.functions.d/functions.sh
