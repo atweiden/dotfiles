@@ -33,6 +33,7 @@ vim $HOME/.gitconfig $HOME/.hgrc
 - https://github.com/gf3/dotfiles
 - https://github.com/gmarik/vimfiles/
 - https://github.com/jeroenjanssens/dotfiles/
+- https://github.com/kernelsmith/env-customization
 - https://github.com/nvie/vimrc/
 - https://github.com/sjl/dotfiles/
 - https://github.com/smith/vim-config/
