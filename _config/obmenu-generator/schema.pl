@@ -90,7 +90,7 @@ our $SCHEMA = [
     {obgenmenu => 'Openbox Settings'},
     {sep       => undef},
 
-    {item => ['slimlock', 'Lock', 'lock']},
+    {item => ['xlockmore', 'Lock', 'lock']},
 
     # This options uses the default OpenBox action "Exit"
     {exit => ['Exit', 'exit']},
