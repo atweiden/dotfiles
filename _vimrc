@@ -142,6 +142,13 @@ set relativenumber             " (??) show relative line numbers (in unison with
 set numberwidth=1              " (??)
 set textwidth=70               " (tw) number of columns before an automatic line break is inserted
 set linespace=1                " (??) add slightly more space between lines
+set smarttab                   " (sta) 'shiftwidth' used in front of a line, but 'tabstop' used otherwise
+set nowrapscan                 " (ws) prevents search from wrapping to top of document when the bottom has been hit
+set incsearch                  " (is) highlights what you are searching for as you type
+set hlsearch                   " (hls) highlights all instances of the last searched string
+set ignorecase                 " (ic) ignores case in search patterns
+set smartcase                  " (scs) don't ignore case when the search pattern has uppercase
+set infercase                  " (inf) during keyword completion, fix case of new word (when ignore case is on)
 set formatoptions=             " (fo) influences how vim automatically formats text
 set formatoptions+=c           "      +format comments
 set formatoptions+=r           "      +continue comments by default
@@ -151,17 +158,10 @@ set formatoptions+=n           "      +recognize numbered lists
 set formatoptions+=2           "      +use indent from 2nd line of a paragraph
 set formatoptions+=l           "      +don't break lines that are already long
 set formatoptions+=1           "      +break before 1-letter words
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-set smarttab                   " (sta) 'shiftwidth' used in front of a line, but 'tabstop' used otherwise
-set nowrapscan                 " (ws) prevents search from wrapping to top of document when the bottom has been hit
-set incsearch                  " (is) highlights what you are searching for as you type
-set hlsearch                   " (hls) highlights all instances of the last searched string
-set ignorecase                 " (ic) ignores case in search patterns
-set smartcase                  " (scs) don't ignore case when the search pattern has uppercase
-set infercase                  " (inf) during keyword completion, fix case of new word (when ignore case is on)
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
 
 " -----------------------------------------------------------------------------
