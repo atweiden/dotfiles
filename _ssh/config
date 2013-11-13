@@ -8,10 +8,11 @@ Host accountname.host.tld
     IdentityFile /path/to/id_rsa
     User hg
 
-Host 555.555.555.555
+Host *.onion
     #Port 443
     #User oodles
     #IdentityFile /path/to/id_rsa
+    Compression yes
     ProxyCommand socat STDIO SOCKS4A:localhost:%h:%p,socksport=9150
 
 # Speed up ssh login times by maintaining a persistent ssh connection
