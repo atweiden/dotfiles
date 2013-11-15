@@ -15,6 +15,8 @@ set encoding=utf-8              " (??) Set encoding to UTF-8
 set nofsync                     " (??) Let OS decide when to flush disk
 nnoremap  ;  :
 nnoremap  :  ;
+vnoremap  ;  :
+vnoremap  :  ;
 
 
 " -----------------------------------------------------------------------------
