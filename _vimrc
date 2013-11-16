@@ -67,7 +67,7 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
   set t_Co=256
   colorscheme neverland2
 else
-  colorscheme railscasts
+  colorscheme kolor
 endif
 
 " }}}
