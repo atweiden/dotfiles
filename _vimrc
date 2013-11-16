@@ -52,6 +52,9 @@ set ttimeout
 set ttimeoutlen=10
 " Defend against modelines exploit
 set modelines=0
+" viminfo options: http://vimdoc.sourceforge.net/htmldoc/usr_21.html#21.3
+set viminfo='100,<50,s10,h,!
+rviminfo
 
 
 " -----------------------------------------------------------------------------
@@ -62,7 +65,7 @@ set modelines=0
 set background=dark
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
-  colorscheme neverland-vim-theme/colors/neverland2
+  colorscheme neverland2
 else
   colorscheme railscasts
 endif
