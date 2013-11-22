@@ -1,0 +1,13 @@
+-- don't rollback the entire transaction if you typo a sql command,
+-- but only in interactive mode
+\set ON_ERROR_ROLLBACK interactive
+
+-- automatically switch between extended and normal depending on how
+-- wide the output is
+\x auto
+
+-- always show how long a query takes
+\timing
+
+-- a prompt wtih transaction information
+\set PROMPT1 '%[%033[33;1m%]%x%[%033[0m%]%[%033[1m%]%/%[%033[0m%]%R%# '

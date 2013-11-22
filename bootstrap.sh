@@ -22,6 +22,7 @@ mv $HOME/.hgignore $HOME/.hgignore.bak
 mv $HOME/.hgrc $HOME/.hgrc.bak
 mv $HOME/.iex $HOME/.iex.bak
 mv $HOME/.jshintrc $HOME/.jshintrc.bak
+mv $HOME/.psqlrc $HOME/.psqlrc.bak
 mv $HOME/.screenrc $HOME/.screenrc.bak
 mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
 mv $HOME/.vim $HOME/.vim.bak
@@ -49,6 +50,7 @@ ln -s $HOME/.src/dotfiles/_hgignore $HOME/.hgignore
 ln -s $HOME/.src/dotfiles/_hgrc $HOME/.hgrc
 ln -s $HOME/.src/dotfiles/_iex $HOME/.iex
 ln -s $HOME/.src/dotfiles/_jshintrc $HOME/.jshintrc
+ln -s $HOME/.src/dotfiles/_psqlrc $HOME/.psqlrc
 ln -s $HOME/.src/dotfiles/_screenrc $HOME/.screenrc
 ln -s $HOME/.src/dotfiles/_tmuxconf $HOME/.tmux.conf
 ln -s $HOME/.src/dotfiles/_vim $HOME/.vim
