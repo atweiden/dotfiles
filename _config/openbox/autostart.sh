@@ -4,7 +4,7 @@ conky -q &
 volumeicon &
 batti &
 nitrogen --restore &
-xautolock -time 7 -locker "/usr/bin/xlock -mode pacman" &
+xautolock -time 7 -locker "/usr/bin/xlock -mode pacman"  -detectsleep &
 xflux -z 97210 > /dev/null 2>&1 &
 pcmanfm -d &
 #(sleep 3 && /usr/bin/nm-applet --sm-disable) &
