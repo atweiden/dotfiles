@@ -6,7 +6,8 @@
 
 function lafsify() {
 echo -n 'Enter your Tahoe-LAFS writecap: '; read WRITECAP
-SEED=$(echo $WRITECAP | xxd -p)
+#SEED=$(echo $WRITECAP | xxd -p)
+SEED=$(hURL -s --no-color --HEX $WRITECAP)
 expect <<EOF
   spawn electrum -w electrum-lafs.dat restore -o -C
   expect "Password*" {
@@ -48,7 +49,8 @@ expect <<EOF
   expect eof
 EOF
 SEED=$(electrum -w electrum-lafs.dat getseed -o | jq -M '.seed')
-WRITECAP=$(echo $SEED | xxd -r -p -)
+#WRITECAP=$(echo $SEED | xxd -r -p -)
+WRITECAP=$(hURL -s --no-color --hex $SEED)
 echo "Your starting Electrum wallet mnemonic: $MNEMONIC"
 echo "Your starting Electrum wallet seed: $SEED"
 echo "Your resulting Tahoe-LAFS writecap: $WRITECAP"
