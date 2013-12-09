@@ -16,8 +16,9 @@ PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
 # Python
 PATH=$HOME/.virtualenvs:$PATH
 # Ruby
-#PATH=$(ruby -rubygems -e "p Gem.path" | jq -M .[1] | perl -pe 's/"//g')/bin:$PATH
-PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
+PATH=$(gem env gempath | awk -F: '{ print $2 }')/bin:$PATH
+PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
+PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
 export GEM_HOME=$(ruby -rubygems -e "puts Gem.user_dir")
 
 export TERM=xterm-256color
