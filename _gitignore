@@ -2,7 +2,7 @@
 *.diff
 *.err
 *.orig
-*.log
+#*.log
 *.rej
 *.bak
 
