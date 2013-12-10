@@ -1,0 +1,34 @@
+snippet #! "shebang line" b!
+#!/usr/bin/env lua
+$0
+endsnippet
+
+snippet function "function name(arguments) ... end" b!
+function ${1:name}(${2:args})
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet forp "for name, value in pairs(table) do ... end" b!
+for ${1:name},${2:value} in pairs(${3:table}) do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet fori "for name, value in ipairs(table) do ... end" b!
+for ${1:idx},${2:val} in ipairs(${3:table_name}) do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet for "for first, last, [step] do ... end" b!
+for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet local "local var = value"
+local ${1:x} = ${0:1}
+endsnippet
+
+# vim:set ft=snippets:

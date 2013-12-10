@@ -13,10 +13,6 @@ set mouse=a                     " (??) Enable mouse support in console
 set mousemodel=popup_setpos     " (??) Show popup on right-click
 set encoding=utf-8              " (??) Set encoding to UTF-8
 set nofsync                     " (??) Let OS decide when to flush disk
-nnoremap  ;  :
-nnoremap  :  ;
-vnoremap  ;  :
-vnoremap  :  ;
 
 
 " -----------------------------------------------------------------------------
@@ -66,8 +62,10 @@ set background=dark
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
   colorscheme neverland2
+  colorscheme custom
 else
-  colorscheme kolor
+  colorscheme inkpot
+  colorscheme custom
 endif
 
 " }}}
@@ -91,6 +89,17 @@ highlight Cursor guifg=black guibg=gray
 highlight iCursor guifg=white guibg=white
 set guicursor+=n-v-c:blinkon0-block-Cursor
 set guicursor+=i:blinkon0-ver25-Cursor/lCursor
+
+" }}}
+
+" listchars {{{
+
+set nolist
+set listchars =tab:▷⋅          " right triangle and middle dot for tab chars
+set listchars+=extends:›       " right single angle for chars right of the screen
+set listchars+=precedes:‹      " left single angle for chars left of the screen
+set listchars+=nbsp:·          " middle dot for non-breaking spaces
+set listchars+=trail:·         " middle dot for trailing spaces
 
 " }}}
 
@@ -179,6 +188,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 map <C-A> ggVG
 " escape
 inoremap jw <Esc>
+" yank to end of line
+noremap Y y$
 
 " }}}
 " --- pasting {{{
@@ -189,6 +200,18 @@ map <leader>y "+yy
 map <leader>p "+p     
 " toggle paste mode
 set pastetoggle=<F2>
+
+" }}}
+" --- proofreading {{{
+
+" find lines longer than 78 characters
+nmap <leader>fl /^.\{-}\zs.\%>79v<cr>
+" find two spaces after a period
+nmap <leader>f. /\.\s\s\+\w/s+1<cr>
+" find things like 'why ?' and 'now !'
+nmap <leader>f! /\w\s\+[\?\!\;\.\,]/s+1<cr>
+" find multiple newlines together
+nmap <leader>fn /\n\{3,\}/s+1<cr>
 
 " }}}
 " --- writing {{{
@@ -236,12 +259,22 @@ nnoremap <C-E> 4<C-E>
 nnoremap <C-Y> 4<C-Y>
 
 " }}}
+" --- alignment {{{
+
+nmap <silent> ;al :left<cr>
+nmap <silent> ;ac :center<cr>
+nmap <silent> ;ar :right<cr>
+nmap <silent> ;rr :AlignRight<cr>
+
+" }}}
 
 " Programming
 " --- autocompletion {{{
 
 " customize autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
+" change to directory of file
+nmap <silent> ,. :cd%:h<cr>
 
 " }}}
 " --- merging {{{

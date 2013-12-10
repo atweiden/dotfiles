@@ -1,0 +1,58 @@
+extends text
+
+snippet * "italics" !b
+*${1:${VISUAL}}*
+endsnippet
+
+snippet ** "bold" !b
+**${1:${VISUAL}}**
+endsnippet
+
+snippet h "heading" !b
+${1:Heading}
+`!p snip.rv = len(t[1]) * '='`
+$0
+endsnippet
+
+snippet hh "sub heading" !b
+${1:Sub Heading}
+`!p snip.rv = len(t[1]) * '-'`
+$0
+endsnippet
+
+snippet s "section" b!
+# ${1:Section Name} #
+$0
+endsnippet
+
+snippet ss "sub section" b!
+## ${1:Section Name} ##
+$0
+endsnippet
+
+snippet sss "subsub section" b!
+### ${1:Section Name} ###
+$0
+endsnippet
+
+snippet par "paragraph" b!
+#### ${1:Paragraph Name} ####
+$0
+endsnippet
+
+snippet spar "paragraph" b!
+##### ${1:Paragraph Name} #####
+$0
+endsnippet
+
+snippet link "link" w!
+[${1:${VISUAL:Title}}](${3:http://${2:example.com}})
+endsnippet
+
+snippet img "image" w!
+![${1:alt}](${2:path}${3/.+/ "/}${3:title}${3/.+/"/})
+endsnippet
+
+snippet cb "checkbox" w!
+* [ ] ${1:Be sure to do that thing.}$0
+endsnippet

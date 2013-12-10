@@ -1,0 +1,89 @@
+extends html
+
+snippet def "<%def name={}> ... </%def>" b!
+<%def name="${1:name}">
+	${0:${VISUAL}}
+</%def>
+endsnippet
+
+snippet call "<%call expr={}> ... </%call>" b!
+<%call expr="${1:name}">
+	${0:${VISUAL}}
+</%call>
+endsnippet
+
+snippet doc "<%doc> ... </%doc>" b!
+<%doc>
+	${0:${VISUAL}}
+</%doc>
+endsnippet
+
+snippet text "<%text> ... </%text>" b!
+<%text>
+	${0:${VISUAL}}
+</%text>
+endsnippet
+
+snippet for "% for item in items: ... % endfor" b!
+% for ${1:i} in ${2:iter}:
+	${0:${VISUAL}}
+% endfor
+endsnippet
+
+snippet if "% if condition: ... % endif" b!
+% if ${1:condition}:
+	${0:${VISUAL}}
+% endif
+endsnippet
+
+snippet elif "% elif condition: ..." b!
+% elif ${1:condition}:
+	${0:${VISUAL}}
+endsnippet
+
+snippet else "% else: ..." b!
+% else:
+	${0:${VISUAL}}
+endsnippet
+
+snippet try "% try: ... % except: ... % endtry" b!
+% try:
+	$1
+% except$2:
+	${3:pass}
+% endtry
+endsnippet
+
+snippet while "% while condition: ... % endwhile" b!
+% while ${1:condition}:
+	${0:${VISUAL}}
+% endwhile
+endsnippet
+
+snippet $ "${ ... }" w!
+${ ${0:${VISUAL}} }
+endsnippet
+
+snippet <% "<% ... %>" b!
+<% ${0:${VISUAL}} %>
+endsnippet
+
+snippet <!% "<!% ... %>" b!
+<!% ${0:${VISUAL}} %>
+endsnippet
+
+snippet inherit "<%inherit file={} />" b!
+<%inherit file="${1:filename}" />
+endsnippet
+
+snippet include "<%include file={} />" b!
+<%include file="${1:filename}" />
+endsnippet
+
+snippet namespace "<%namespace file={} />" b!
+<%namespace file="${1:name}" />
+endsnippet
+
+snippet page "<%page args={} />" b!
+<%page args="$0" />
+endsnippet

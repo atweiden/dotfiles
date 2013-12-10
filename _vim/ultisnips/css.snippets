@@ -1,6 +1,392 @@
-# Credit: https://github.com/mklabs/snipmate-css3-please
+# Credit: https://github.com/jmcantrell/dotfiles/blob/master/.vim/UltiSnips/css.snippets
 
-clearsnippets
+snippet / "/* ... */" b!
+/* $1 */
+endsnippet
+
+snippet // "/* ... */ (multiline)" b!
+/*
+
+${0:${VISUAL}}
+
+*/
+endsnippet
+
+snippet { "properties { }" b!
+${1:selector} {
+	$0
+}
+endsnippet
+
+snippet ! "!important css" b!
+${1:!important}
+endsnippet
+
+snippet bg "background-attachment: scroll:fixed" b!
+background-attachment: ${1:scroll/fixed};
+endsnippet
+
+snippet bg "background-color: color-hex" b!
+background-color: #${1:DDD};
+endsnippet
+
+snippet bg "background-color: color-name" b!
+background-color: ${1:red};
+endsnippet
+
+snippet bg "background-color: color-rgb" b!
+background-color: rgb(${1:255},${2:255},${3:255});
+endsnippet
+
+snippet bg "background-color: transparent" b!
+background-color: transparent;
+endsnippet
+
+snippet bg "background-image: none" b!
+background-image: none;
+endsnippet
+
+snippet bg "background-image: url" b!
+background-image: url($1);
+endsnippet
+
+snippet bg "background-position: position" b!
+background-position: ${1:top left/top center/top right/center left/center center/center right/bottom left/bottom center/bottom right/x-% y-%/x-pos y-pos};
+endsnippet
+
+snippet bg "background-repeat: r:r-x:r-y:n-r" b!
+background-repeat: ${1:repeat/repeat-x/repeat-y/no-repeat};
+endsnippet
+
+snippet bg "background: color image repeat attachment position" b!
+background:${6: #${1:DDD}} url($2) ${3:repeat/repeat-x/repeat-y/no-repeat} ${4:scroll/fixed} ${5:top left/top center/top right/center left/center center/center right/bottom left/bottom center/bottom right/x-% y-%/x-pos y-pos};
+endsnippet
+
+snippet border "border-bottom-color: size style color" b!
+border-bottom-color: #${1:999};
+endsnippet
+
+snippet border "border-bottom-style: size style color" b!
+border-bottom-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};
+endsnippet
+
+snippet border "border-bottom-width: size style color" b!
+border-bottom-width: ${1:1}px ${2:solid} #${3:999};
+endsnippet
+
+snippet border "border-bottom: size style color" b!
+border-bottom: ${1:1}px ${2:solid} #${3:999};
+endsnippet
+
+snippet border "border-color: color" b!
+border-color: ${1:999};
+endsnippet
+
+snippet border "border-left-color: color" b!
+border-right-color: #${1:999};
+endsnippet
+
+snippet border "border-left-style: style" b!
+border-left-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};
+endsnippet
+
+snippet border "border-left-width: size" b!
+border-left-width: ${1:1}px
+endsnippet
+
+snippet border "border-left: size style color" b!
+border-left: ${1:1}px ${2:solid} #${3:999};
+endsnippet
+
+snippet border "border-right-color: color" b!
+border-right-color: #${1:999};
+endsnippet
+
+snippet border "border-right-style: style" b!
+border-right-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};
+endsnippet
+
+snippet border "border-right-width: size" b!
+border-right-width: ${1:1}px
+endsnippet
+
+snippet border "border-right: size style color" b!
+border-right: ${1:1}px ${2:solid} #${3:999};
+endsnippet
+
+snippet border "border-style: style" b!
+border-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};
+endsnippet
+
+snippet border "border-top-color: color" b!
+border-top-color: #${1:999};
+endsnippet
+
+snippet border "border-top-style: style" b!
+border-top-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};
+endsnippet
+
+snippet border "border-top-width: size" b!
+border-top-width: ${1:1}px
+endsnippet
+
+snippet border "border-top: size style color" b!
+border-top: ${1:1}px ${2:solid} #${3:999};
+endsnippet
+
+snippet border "border-width: width" b!
+border-width: ${1:1px};
+endsnippet
+
+snippet border "border: size style color" b!
+border: ${1:1px} ${2:solid} #${3:999};
+endsnippet
+
+snippet clear "clear: value" b!
+clear: ${1:left/right/both/none};
+endsnippet
+
+snippet color "color: color-hex" b!
+color: #${1:DDD};
+endsnippet
+
+snippet color "color: color-name" b!
+color: ${1:red};
+endsnippet
+
+snippet color "color: color-rgb" b!
+color: rgb(${1:255},${2:255},${3:255});
+endsnippet
+
+snippet cursor "cursor: type" b!
+cursor: ${1:default/auto/crosshair/pointer/move/*-resize/text/wait/help};
+endsnippet
+
+snippet cursor "cursor: url" b!
+cursor: url($1);
+endsnippet
+
+snippet direction "direction: ltr|rtl" b!
+direction: ${1:ltr|rtl};
+endsnippet
+
+snippet display "display: block" b!
+display: block;
+endsnippet
+
+snippet display "display: common-types" b!
+display: ${1:none/inline/block/list-item/run-in/compact/marker};
+endsnippet
+
+snippet display "display: inline" b!
+display: inline;
+endsnippet
+
+snippet display "display: table-types" b!
+display: ${1:table/inline-table/table-row-group/table-header-group/table-footer-group/table-row/table-column-group/table-column/table-cell/table-caption};
+endsnippet
+
+snippet float "float: left:right:none" b!
+float: ${1:left/right/none};
+endsnippet
+
+snippet font "font-family: family" b!
+font-family: ${1:Arial, "MS Trebuchet"}, ${2:sans-}serif;
+endsnippet
+
+snippet font "font-size: size" b!
+font-size: ${1:100%};
+endsnippet
+
+snippet font "font-style: normal:italic:oblique" b!
+font-style: ${1:normal/italic/oblique};
+endsnippet
+
+snippet font "font-variant: normal:small-caps" b!
+font-variant: ${1:normal/small-caps};
+endsnippet
+
+snippet font "font-weight: weight" b!
+font-weight: ${1:normal/bold};
+endsnippet
+
+snippet font "font: style variant weight size:line-height font -family" b!
+font: ${1:normal/italic/oblique} ${2:normal/small-caps} ${3:normal/bold} ${4:1em/1.5em} ${5:Arial}, ${6:sans-}serif;
+endsnippet
+
+snippet font "font: size font" b!
+font: ${1:75%} ${2:"Lucida Grande", "Trebuchet MS", Verdana,} ${3:sans-}serif;
+endsnippet
+
+snippet letter "letter-spacing: length-em" b!
+letter-spacing: $1em;
+endsnippet
+
+snippet letter "letter-spacing: length-px" b!
+letter-spacing: $1px;
+endsnippet
+
+snippet list "list-style-image: url" b!
+list-style-image: url($1);
+endsnippet
+
+snippet list "list-style-position: pos" b!
+list-style-position: ${1:inside/outside};
+endsnippet
+
+snippet list "list-style-type: asian" b!
+list-style-type: ${1:cjk-ideographic/hiragana/katakana/hiragana-iroha/katakana-iroha};
+endsnippet
+
+snippet list "list-style-type: marker(list)" b!
+list-style-type: ${1:none/disc/circle/square};
+endsnippet
+
+snippet list "list-style-type: numeric" b!
+list-style-type: ${1:decimal/decimal-leading-zero/zero};
+endsnippet
+
+snippet list "list-style-type: other" b!
+list-style-type: ${1:hebrew/armenian/georgian};
+endsnippet
+
+snippet list "list-style-type: roman-alpha-greek" b!
+list-style-type: ${1:lower-roman/upper-roman/lower-alpha/upper-alpha/lower-greek/lower-latin/upper-latin};
+endsnippet
+
+snippet list "list-style: type position image" b!
+list-style: ${1:none/disc/circle/square/decimal/zero} ${2:inside/outside} url($3);
+endsnippet
+
+snippet margin "margin-bottom: length" b!
+margin-bottom: ${1:20px};
+endsnippet
+
+snippet margin "margin-left: length" b!
+margin-left: ${1:20px};
+endsnippet
+
+snippet margin "margin-right: length" b!
+margin-right: ${1:20px};
+endsnippet
+
+snippet margin "margin-top: length" b!
+margin-top: ${1:20px};
+endsnippet
+
+snippet margin "margin: all" b!
+margin: ${1:20px};
+endsnippet
+
+snippet margin "margin: T R B L" b!
+margin: ${1:20px} ${2:0px} ${3:40px} ${4:0px};
+endsnippet
+
+snippet margin "margin: V H" b!
+margin: ${1:20px} ${2:0px};
+endsnippet
+
+snippet marker "marker-offset: auto" b!
+marker-offset: auto;
+endsnippet
+
+snippet marker "marker-offset: length" b!
+marker-offset: ${1:10px};
+endsnippet
+
+snippet overflow "overflow: type" b!
+overflow: ${1:visible/hidden/scroll/auto};
+endsnippet
+
+snippet padding "padding-bottom: length" b!
+padding-bottom: ${1:20px};
+endsnippet
+
+snippet padding "padding-left: length" b!
+padding-left: ${1:20px};
+endsnippet
+
+snippet padding "padding-right: length" b!
+padding-right: ${1:20px};
+endsnippet
+
+snippet padding "padding-top: length" b!
+padding-top: ${1:20px};
+endsnippet
+
+snippet padding "padding: T R B L" b!
+padding: ${1:20px} ${2:0px} ${3:40px} ${4:0px};
+endsnippet
+
+snippet padding "padding: V H" b!
+padding: ${1:20px} ${2:0px};
+endsnippet
+
+snippet padding "padding: all" b!
+padding: ${1:20px};
+endsnippet
+
+snippet position "position: type" b!
+position: ${1:static/relative/absolute/fixed};
+endsnippet
+
+snippet text "text-align: left:center:right" b!
+text-align: ${1:left/right/center/justify};
+endsnippet
+
+snippet text "text-decoration: none:underline:overline:line-through:blink" b!
+text-decoration: ${1:none/underline/overline/line-through/blink};
+endsnippet
+
+snippet text "text-indent: length" b!
+text-indent: ${1:10}px;
+endsnippet
+
+snippet text "text-shadow: color-hex x y blur" b!
+text-shadow: #${1:DDD} ${2:10px} ${3:10px} ${4:2px};
+endsnippet
+
+snippet text "text-shadow: color-rgb x y blur" b!
+text-shadow: rgb(${1:255},${2:255},${3:255}) ${4:10px} ${5:10px} ${6:2px};
+endsnippet
+
+snippet text "text-shadow: none" b!
+text-shadow: none;
+endsnippet
+
+snippet text "text-transform: capitalize:upper:lower" b!
+text-transform: ${1:capitalize/uppercase/lowercase};
+endsnippet
+
+snippet text "text-transform: none" b!
+text-transform: none;
+endsnippet
+
+snippet vert "vertical-align: type" b!
+vertical-align: ${1:baseline/sub/super/top/text-top/middle/bottom/text-bottom/length/%};
+endsnippet
+
+snippet vis "visibility: type" b!
+visibility: ${1:visible/hidden/collapse};
+endsnippet
+
+snippet white "white-space: normal:pre:nowrap" b!
+white-space: ${1:normal/pre/nowrap};
+endsnippet
+
+snippet word "word-spacing: length" b!
+word-spacing: ${1:10px};
+endsnippet
+
+snippet word "word-spacing: normal" b!
+word-spacing: normal;
+endsnippet
+
+snippet z "z-index: index" b!
+z-index: $1;
+endsnippet
+
+# Credit: https://github.com/mklabs/snipmate-css3-please
 
 snippet clearfix "clearfix"
 .clearfix {

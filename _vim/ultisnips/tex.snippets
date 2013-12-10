@@ -1,0 +1,139 @@
+snippet r "\ref{}" i
+\ref{$1}
+endsnippet
+
+snippet "b(egin)?" "begin{} / end{}" br
+\begin{${1:something}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet tab
+\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
+$0${2/((?<=.)c|l|r)|./(?1: & )/g}
+\end{$1${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
+endsnippet
+
+snippet enum "enumerate" b
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet item "itemize" b
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet desc "description" b
+\begin{description}
+	\item[$1] $0
+\end{description}
+endsnippet
+
+snippet eq "equation" b
+\begin{equation}
+	${0:${VISUAL}}
+\end{equation}
+endsnippet
+
+snippet eqnn "equation without number" b
+\begin{equation*}
+	${0:${VISUAL}}
+\end{equation*}
+endsnippet
+
+snippet eqa "equation array" b
+\begin{eqnarray}
+	$1 & $2 & $0
+\end{eqnarray}
+endsnippet
+
+snippet eqann "equation array without numbers" b
+\begin{eqnarray*}
+	$1 & $2 & $0
+\end{eqnarray*}
+endsnippet
+
+snippet frac "fraction"
+\frac{${1:nom}}{${2:denom}}
+endsnippet
+
+snippet mat "smart matrix"
+\begin{${1:p/b/v/V/B/small}matrix}
+	${0:${VISUAL}}
+\end{$1matrix}
+endsnippet
+
+snippet lr( "left( right)" i
+\left( ${0:${VISUAL}} \right)
+endsnippet
+
+snippet lr| "left| right|" i
+\left| ${0:${VISUAL}} \right|
+endsnippet
+
+snippet part "part" b
+\part{${1:part name}}
+\label{prt:${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}}
+
+${0:${VISUAL}}
+
+% part $2 (end)
+endsnippet
+
+snippet cha "chapter" b
+\chapter{${1:chapter name}}
+\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
+
+${0:${VISUAL}}
+
+% chapter $2 (end)
+endsnippet
+
+snippet sec "section" b
+\section{${1:section name}} 
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
+
+${0:${VISUAL}}
+
+% section $2 (end)
+endsnippet
+
+snippet sub "subsection" b
+\subsection{${1:subsection name}}
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
+
+${0:${VISUAL}}
+
+% subsection $2 (end)
+endsnippet
+
+snippet ssub "subsubsection" b
+\subsubsection{${1:subsubsection name}}
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
+
+${0:${VISUAL}}
+
+% subsubsection $2 (end)
+
+endsnippet
+
+snippet par "paragraph" b
+\paragraph{${1:paragraph name}}
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
+
+${0:${VISUAL}}
+
+% paragraph $2 (end)
+endsnippet
+
+snippet subp "subparagraph" b
+\subparagraph{${1:subparagraph name}}
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
+
+${0:${VISUAL}}
+
+% subparagraph $2 (end)
+endsnippet

@@ -1,0 +1,122 @@
+global !p
+from snippets import *
+endglobal
+
+snippet echo "debug variables" b!
+echo printf("$2`!p snip.rv = echo(t, '%s')`", $1)
+endsnippet
+
+snippet guard "plugin guard" b!
+if exists('${1:g:`!p snip.rv = snip.basename or 'plugin'`_loaded}') || &cp
+	finish
+endif
+
+let $1 = 1
+
+$0
+endsnippet
+
+snippet cpo "save 'cpo' guard" b!
+let s:save_cpo = &cpo
+set cpo&vim
+
+${0:${VISUAL}}
+
+let &cpo = s:save_cpo
+endsnippet
+
+snippet init "initialize variable" b!
+if !exists('$1')
+	let ${1:g:`!p snip.rv = snip.basename or 'plugin'`_${2:var}} = ${3:1}
+endif
+endsnippet
+
+snippet f "function! name(arguments) ... endfunction" b!
+function! ${1:SomeFunction}(${2:...})
+	${0:${VISUAL}}
+endfunction
+endsnippet
+
+snippet for "for item in items ... endfor" b!
+for ${1:item} in ${2:items}
+	${0:${VISUAL}}
+endfor
+endsnippet
+
+snippet while "while condition ... endwhile" b!
+while ${1:condition}
+	${0:${VISUAL}}
+endwhile
+endsnippet
+
+snippet if "if condition ... endif" b!
+if ${1:condition}
+	${0:${VISUAL}}
+endif
+endsnippet
+
+snippet elif "elseif condition ..." b!
+elseif ${1:condition}
+	${0:${VISUAL}}
+endsnippet
+
+snippet else "else ..." b!
+else
+	${0:${VISUAL}}
+endsnippet
+
+snippet try "try ... catch /error/ ... endtry" b!
+try
+	${0:${VISUAL}}
+catch /$1/
+	$2
+endtry
+endsnippet
+
+snippet get "get variable" b!
+function! s:Get(name, default)
+	if exists(a:name)
+		return {a:name}
+	endif
+	return a:default
+endfunction
+endsnippet
+
+snippet getany "get (any) variable" b!
+function! s:GetAny(name, default)
+	for pre in ['w', 'b', 't', 'g']
+		let var = pre.':'.a:name
+		if exists(var)
+			return {var}
+		endif
+	endfor
+	return default
+endfunction
+endsnippet
+
+snippet exist "variable exists" b!
+function! s:Exists(name)
+	if len(s:Get(name, ''))
+		return 1
+	endif
+	return 0
+endfunction
+endsnippet
+
+snippet existany "variable (any) exists" b!
+function! s:ExistsAny(name)
+	if len(s:GetAny(name, ''))
+		return 1
+	endif
+	return 0
+endfunction
+endsnippet
+
+snippet set "set variable" b!
+function! s:Set(name, default)
+	if !exists(a:name)
+		let {a:name} = a:default
+	endif
+	return {a:name}
+endfunction
+endsnippet

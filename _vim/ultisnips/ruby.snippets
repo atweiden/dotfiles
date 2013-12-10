@@ -1,0 +1,289 @@
+global !p
+from snippets import *
+endglobal
+
+snippet #! "shebang line" b!
+#!/usr/bin/env ruby
+$0
+endsnippet
+
+snippet echo "debug variables" b!
+puts "$2`!p snip.rv = echo(t, '%s')`" % [$1]
+endsnippet
+
+snippet If "command if expression" b!
+${1:command} if ${2:expression}
+endsnippet
+
+snippet Unless "command unless expression" b!
+${1:command} unless ${2:expression}
+endsnippet
+
+snippet if "if condition ... end" b!
+if ${1:condition}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet elif "elsif condition" b!
+elsif ${1:condition}
+	${0:${VISUAL}}
+endsnippet
+
+snippet unless "unless condition ... end" b!
+unless ${1:condition}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet def "def name arguments ... end" b!
+def ${1:function_name}${2: ${3:*args}}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet defi "def initialize arguments ... end" b!
+def initialize${1: ${2:*args}}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet rescue "rescue ..." b!
+rescue
+	${0:${VISUAL}}
+endsnippet
+
+snippet For "(from..to).each { |i| ... }" b!
+(${1:from}..${2:to}).each { |${3:i}| ${0:${VISUAL}} }
+endsnippet
+
+snippet for "(from..to).each do |i| ... end" b!
+(${1:from}..${2:to}).each do |${3:i}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Merge "hash.merge!(other) { |key,oldval,newval| ... }" b!
+${1:hash}.merge!(${2:other}) { |${3:key},${4:oldval},${5:newval}| ${0:${VISUAL}} }
+endsnippet
+
+snippet merge "hash.merge!(other) do |key,oldval,newval| ... end" b!
+${1:hash}.merge!(${2:other}) do |${3:key},${4:oldval},${5:newval}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Delete "hash.delete_if { |key,value| ... }" b!
+${1:hash}.delete_if { |${2:key},${3:value}| ${0:${VISUAL}} }
+endsnippet
+
+snippet delete "hash.delete_if do |key,value| ... end" b!
+${1:hash}.delete_if do |${2:key},${3:value}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Keep "hash.keep_if { |key,value| ... }" b!
+${1:hash}.keep_if { |${2:key},${3:value}| ${0:${VISUAL}} }
+endsnippet
+
+snippet keep "hash.keep_if do |key,value| ... end" b!
+${1:hash}.keep_if do |${2:key},${3:value}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Reject "hash.reject { |key,value| ... }" b!
+${1:hash}.reject { |${2:key},${3:value}| ${0:${VISUAL}} }
+endsnippet
+
+snippet reject "hash.reject do |key,value| ... end" b!
+${1:hash}.reject do |${2:key},${3:value}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Select "array.select { |item| ... }" b!
+${1:array}.select { |${2:item}| ${0:${VISUAL}} }
+endsnippet
+
+snippet select "array.select do |item| ... end" b!
+${1:array}.select do |${2:item}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Sort "array.sort { |a,b| ... }" b!
+${1:array}.sort { |${2:a},${3:b}| ${0:${VISUAL}} }
+endsnippet
+
+snippet sort "array.sort do |a,b| ... end" b!
+${1:array}.sort do |${2:a},${3:b}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Eachkey "hash.each_key { |key| ... }" b!
+${1:hash}.each_key { |${2:key}| ${0:${VISUAL}} }
+endsnippet
+
+snippet eachkey "hash.each_key do |key| ... end" b!
+${1:hash}.each_key do |${2:key}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Eachval "hash.each_value { |value| ... }" b!
+${1:hash}.each_value { |${2:value}| ${0:${VISUAL}} }
+endsnippet
+
+snippet eachval "hash.each_value do |value| ... end" b!
+${1:hash}.each_value do |${2:value}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Each "array.each { |item| ... }" b!
+${1:array}.each { |${2:${1/s$//}}| ${0:${VISUAL}} }
+endsnippet
+
+snippet each "array.each do |item| ... end" b!
+${1:array}.each do |${2:${1/s$//}}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Map "array.map { |item| ... }" b!
+${1:array}.map { |${2:${1/s$//}}| ${0:${VISUAL}} }
+endsnippet
+
+snippet map "array.map do |item| ... end" b!
+${1:array}.map do |${2:${1/s$//}}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Reveach "array.reverse_each { |item| ... }" b!
+${1:array}.reverse_each { |${2:${1/s$//}}| ${0:${VISUAL}} }
+endsnippet
+
+snippet reveach "array.reverse_each do |item| ... end" b!
+${1:array}.reverse_each do |${2:${1/s$//}}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Eachidx "array.each_index { |index| ... }" b!
+${1:array}.each_index { |${2:index}| ${0:${VISUAL}} }
+endsnippet
+
+snippet eachidx "array.each_index do |index| ... end" b!
+${1:array}.each_index do |${2:index}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Eachpair "hash.each_pair { |key,value| ... }" b!
+${1:hash}.each_pair { |${2:key},${3:value}| ${0:${VISUAL}} }
+endsnippet
+
+snippet eachpair "hash.each_pair do |key,value| ... end" b!
+${1:hash}.each_pair do |${2:key},${3:value}|
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet sub "variable.sub(expression) { ... }" b!
+${1:var}.sub(${2:expression}) { ${3:"replacement"} }
+endsnippet
+
+snippet gsub "variable.gsub(expression) { ... }" b!
+${1:var}.gsub(${2:expression}) { ${3:"replacement"} }
+endsnippet
+
+snippet do "do |key| ... end" i!
+do ${1:|${2:key}|}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Do "do ... end" i!
+do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet until "until expression ... end" b!
+until ${1:expression}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet Until "begin ... end until expression" b!
+begin
+	${0:${VISUAL}}
+end until ${1:expression}
+endsnippet
+
+snippet while "while expression ... end" b!
+while ${1:expression}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet While "begin ... end while expression" b!
+begin
+	${0:${VISUAL}}
+end while ${1:expression}
+endsnippet
+
+snippet r "attr_reader :attr_names" b!
+attr_reader :${1:attr_names}
+endsnippet
+
+snippet w "attr_writer :attr_names" b!
+attr_writer :${1:attr_names}
+endsnippet
+
+snippet rw "attr_accessor :attr_names" b!
+attr_accessor :${1:attr_names}
+endsnippet
+
+snippet begin "begin ... end" b!
+begin
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet rescue "rescue exception => e ..." b!
+rescue ${1:Exception} => e
+	puts e.message
+	puts e.backtrace.inspect
+	${0:${VISUAL}}
+endsnippet
+
+snippet case "case variable ... end" b!
+case ${1:variable}
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet when "when expression ..." b!
+when ${1:expression}
+	${0:${VISUAL}}
+endsnippet
+
+snippet alias "alias :new_name :old_name" b!
+alias :${1:new_name} :${2:old_name}
+endsnippet
+
+snippet class "class name ... end" b!
+class ${1:class_name}
+	${2:def initialize ${3:*args}
+		${4}
+	end}
+
+	${0:${VISUAL}}
+
+end
+endsnippet

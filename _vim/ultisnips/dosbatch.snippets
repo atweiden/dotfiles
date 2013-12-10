@@ -1,0 +1,113 @@
+snippet % "%variable%" w!
+%${1:VARIABLE}%
+endsnippet
+
+snippet set "set variable=value" w!
+set ${1:VARIABLE}=${2}
+endsnippet
+
+snippet path "add to path" b!
+set PATH=${1:c:\bin};%PATH%
+endsnippet
+
+snippet : ":label" b!
+:${1:end}
+$0
+endsnippet
+
+snippet goto "goto label" b!
+goto ${1:end}
+$0
+endsnippet
+
+snippet forl "for each line in file" b!
+for /f "tokens=*" %%L in (${1:%FILE%}) do ${2:echo %%L}
+endsnippet
+
+snippet forl "for each line in file (no comments)" b!
+for /f "eol=${1:#} tokens=*" %%L in (${2:%FILE%}) do ${3:echo %%L}
+endsnippet
+
+snippet forl "for each line in command" b!
+for /f "usebackq tokens=*" %%L in (`${1:dir}`) do ${2:echo %%L}
+endsnippet
+
+snippet ford "for each directory" b!
+for /d %%D in (${1:%ROOT%}) do ${2:echo %%D}
+endsnippet
+
+snippet forr "recursive for loop" b!
+for /r ${1:c:\} %%F in (${2:%FILES%}) do ${3:echo %%F}
+endsnippet
+
+snippet fori "counting for loop" b!
+for /l %%I in (${1:1},${2:1},${3:%END%}) do ${4:echo %%I}
+endsnippet
+
+snippet sudo "run command as administrator" w!
+runas /user:%COMPUTERNAME%\Administrator "$0"
+endsnippet
+
+snippet iferr "if [not] errorlevel num" b!
+if ${1:not} errorlevel ${2:1} $0
+endsnippet
+
+snippet if "if lhs op rhs" w!
+if /i ${1:%LHS%} ${2:EQU} ${3:%RHS%} $0
+endsnippet
+
+snippet ifdef "if [not] defined variable" w!
+if ${1:not} defined ${2:%VARIABLE%} $0
+endsnippet
+
+snippet ifex "if [not] exist file" w!
+if ${1:not} exist ${2:%FILE%} $0
+endsnippet
+
+snippet exit "exit number" w!
+exit /b ${1:1}
+endsnippet
+
+snippet local "setlocal ... endlocal" b!
+setlocal
+${VISUAL}$0
+endlocal
+endsnippet
+
+snippet blat "email using blat (file)" w!
+blat ${1:%FILE%} -to "${2:%EMAIL%}" -subject "${3:%SUBJECT%}"
+endsnippet
+
+snippet blat "email using blat (text)" w!
+blat -body "${1:%BODY%}" -to "${2:%EMAIL%}" -subject "${3:%SUBJECT%}"
+endsnippet
+
+snippet map "map network drive" w!
+net use ${1:x}: \\${2:HOST}\${3:SHARE}
+endsnippet
+
+snippet unmap "unmap network drive" w!
+net use ${1:x}: /delete
+endsnippet
+
+snippet sftp "run sftp script (password)" w!
+psftp -P ${1:%PORT%} -L ${2:%USER%} -pw ${3:%PASS%} -batch -bc -b ${4:%SCRIPT%} ${5:%SERVER%}
+endsnippet
+
+snippet sftp "run sftp script (key)" w!
+psftp -P ${1:%PORT%} -L ${2:%USER%} -i ${3:%KEY%} -batch -bc -b ${4:%SCRIPT%} ${5:%SERVER%}
+endsnippet
+
+snippet timestamp "timestamp" b!
+set t=%TIME%
+set d=%DATE%
+set MONTH=%d:~4,2%
+set DAY=%d:~7,2%
+set YEAR=%d:~10,4%
+set HOUR=%t:~0,2%
+if "%HOUR:~0,1%"==" " set HOUR=0%t:~1,1%
+set MINUTE=%t:~3,2%
+set SECOND=%t:~6,2%
+set TS=%YEAR%%MONTH%%DAY%%HOUR%%MINUTE%%SECOND%
+$0
+endsnippet

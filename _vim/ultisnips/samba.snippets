@@ -1,0 +1,7 @@
+snippet share "samba share" b!
+[${1:Name}]
+	path = ${2:/mnt/$1}
+	browsable = yes
+	guest ok = yes
+	create mask = 0755
+endsnippet

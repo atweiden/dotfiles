@@ -1,0 +1,87 @@
+extends text
+
+snippet * "italics" !b
+*${1:${VISUAL}}*
+endsnippet
+
+snippet ** "bold" !b
+**${1:${VISUAL}}**
+endsnippet
+
+snippet c "literal" b!
+\`\`${1:${VISUAL}}\`\`
+endsnippet
+
+snippet : "preformatted text" b!
+$1::
+	${2:This is the text.}
+endsnippet
+
+snippet title "title" b!
+`!p snip.rv = (len(t[1]) + 2) * '='`
+ ${1:Document Title}
+`!p snip.rv = (len(t[1]) + 2) * '='`
+
+$0
+endsnippet
+
+snippet stitle "subtitle" b!
+`!p snip.rv = (len(t[1]) + 2) * '-'`
+ ${1:Subtitle}
+`!p snip.rv = (len(t[1]) + 2) * '-'`
+
+$0
+endsnippet
+
+snippet part "part" b!
+`!p snip.rv = len(t[1]) * '*'`
+${1:Name}
+`!p snip.rv = len(t[1]) * '*'`
+
+$0
+endsnippet
+
+snippet sec "section" b!
+${1:Name}
+`!p snip.rv = len(t[1])* '='`
+
+$0
+endsnippet
+
+snippet ssec "subsection" b!
+${1:Name}
+`!p snip.rv = len(t[1])* '-'`
+
+$0
+endsnippet
+
+snippet sssec "subsubsection" b!
+${1:Name}
+`!p snip.rv = len(t[1])* '^'`
+
+$0
+endsnippet
+
+snippet code "code block" b!
+.. code-block:: ${1:python}
+
+	$2
+
+$0
+endsnippet
+
+snippet def "definition" b!
+${1:Name}
+  ${2:${VISUAL:This is the definition.}}
+endsnippet
+
+snippet img "image" w!
+.. image:: ${1:image.png}
+endsnippet
+
+snippet Img "image (detailed)" w!
+.. image:: ${1:image.png}
+   :width: ${2:400}
+   :height: ${3:300}
+   :alt: ${4:This is some image}
+endsnippet

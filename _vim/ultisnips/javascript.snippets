@@ -1,0 +1,90 @@
+global !p
+from snippets import *
+endglobal
+
+snippet #! "shebang line" b!
+#!/usr/bin/env node
+endsnippet
+
+snippet f "function(arguments) { ... }" w!
+function($1) {${2:${VISUAL}}}
+endsnippet
+
+snippet ff "function(arguments) { ... } (multiline)" w!
+function($1) {
+	${2:${VISUAL}}
+}
+endsnippet
+
+snippet proto "class.prototype.name = function(arguments) { ... }" b!
+${1:class}.prototype.${2:method} = function($3) {
+	${4:${VISUAL}}
+};
+endsnippet
+
+snippet for "for (init; condition; incr) { ... }" b!
+for (var ${2:i} = 0; $2 < ${1:items}.length; ${3:$2++}) {
+	${4:$1[$2]}
+}
+endsnippet
+
+snippet fore "for (item in items) { ... }" b!
+for (var ${1:i} in ${2:items}) {
+	${3:${VISUAL:$2[$1]}}
+}
+endsnippet
+
+snippet if "if (condition) { ... }" b!
+if (${1:true}) {
+	${2:${VISUAL}}
+}
+endsnippet
+
+snippet elif "} else if (condition) { ..." b!
+} else if (${1:true}) {
+	${2:${VISUAL}}
+endsnippet
+
+snippet else "} else { ..." b!
+} else {
+	${1:${VISUAL}}
+endsnippet
+
+snippet timeout "setTimeout(...)" w!
+setTimeout(function() {${1:${VISUAL}}}, ${2:10})
+endsnippet
+
+snippet interval "setInterval(...)" w!
+setInterval(function() {${1:${VISUAL}}}, ${2:1000})
+endsnippet
+
+snippet ? "condition ? true : false" w!
+${1:condition} ? ${2:true} : ${3:false}
+endsnippet
+
+snippet switch "switch(expression) { ... }" b!
+switch(${1:expression}) {
+	$3
+	default:
+		$2
+}
+endsnippet
+
+snippet case "case value: ..." b!
+case '${1:value}':
+	$2
+	break;
+$0
+endsnippet
+
+snippet while "while (condition) { ... }" b!
+while (${1:condition}) {
+	${2:${VISUAL}}
+}
+endsnippet
+
+snippet do "do { ... } while (condition)" b!
+do {
+	${2:${VISUAL}}
+} while (${1:condition});
+endsnippet

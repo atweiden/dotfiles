@@ -1,0 +1,134 @@
+global !p
+from snippets import *
+endglobal
+
+snippet echo "debug variables" b!
+System.out.printf("$2`!p snip.rv = echo(t, '%s')`\n", $1);
+endsnippet
+
+snippet assert "assert test message" b!
+assert ${1:test}${2/(.+)/(?1: \: ")/}${2:Failure message}${2/(.+)/(?1:")/};
+endsnippet
+
+snippet switch "switch (value) { ... }" b!
+switch ($1) {
+	$0
+}
+endsnippet
+
+snippet case "case value" b!
+case $1:
+	$2
+	break;
+$0
+endsnippet
+
+snippet try "try { ... }" b!
+try {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet catch "catch (type name) { ... }" w!
+catch (${1:Exception} ${2:e}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet class "class name { ... }" b!
+class ${1:`!p
+snip.rv = snip.basename or "SomeClass"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
+
+	$0
+
+}
+endsnippet
+
+snippet const "static public final type var = value" b!
+static public final ${1:String} ${2:var} = $3;
+endsnippet
+
+snippet elif "else if (condition) { ... }" w!
+else if ($1) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet else "else { ... }" w!
+else {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet fore "for (item : items) { ... }" b!
+for ($1 : $2) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet for "for (init; condition; incr) { ... }" b!
+for ($1; $2; $3) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet if "if (condition) { ... }" b!
+if ($1) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet junit "import junit" b!
+import junit.framework.TestCase;
+$0
+endsnippet
+
+snippet interface "interface name { ... }" b!
+interface ${1:`!p snip.rv = snip.basename or "ISomeInterface"`} ${2:extends ${3:Parent} }{
+
+	${0:${VISUAL}}
+
+}
+endsnippet
+
+snippet main "main() { ... }" b!
+public static void main(String[] args) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet m "name() { ... }" b!
+${1:void} ${2:method}($3) ${4:throws $5 }{
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet p "print()" b!
+System.out.print(${1:${VISUAL}});$0
+endsnippet
+
+snippet pl "println()" b!
+System.out.println(${1:${VISUAL}});$0
+endsnippet
+
+snippet testc "test case" b!
+public class ${1:`!p snip.rv = snip.basename or "untitled"`} extends ${2:TestCase} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet test "test" b
+public void test${1:Name}() throws Exception {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet v "type var = value" b
+${1:String} ${2:var}${3: = ${0:null}};
+endsnippet
+
+snippet while "while (condition) { ... }" b
+while ($1) {
+	${0:${VISUAL}}
+}
+endsnippet

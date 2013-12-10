@@ -1,0 +1,81 @@
+global !p
+from snippets import *
+endglobal
+
+snippet echo "debug variables" b!
+printf("${2}\n`!p snip.rv = echo(t, '%s')`", ${1});
+endsnippet
+
+snippet def "#ifndef ... #define ... #endif" b!
+#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:SYMBOL} ${2:value}
+#endif
+endsnippet
+
+snippet inc "#include local header" b!
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+endsnippet
+
+snippet main "int main()" b!
+int main(int argc, char const *argv[]) {
+	${VISUAL}$0
+	return 0;
+}
+endsnippet
+
+snippet for "for (init; condition; incr)" b!
+for (${4:size_t} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet enum "enum name" b!
+enum ${1:name} {$0};
+endsnippet
+
+snippet once "include guard" b!
+#ifndef ${1:`!p
+if not snip.c:
+    import random, string
+    name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+    rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+    snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+    snip.rv = snip.c`}
+#define $1
+
+${VISUAL}$0
+
+#endif /* end of include guard: $1 */
+
+endsnippet
+
+snippet typedef "typedef type name" b!
+typedef ${1:int} ${2:MyCustomType};
+endsnippet
+
+snippet do "do ... while (condition)" b!
+do {
+	${VISUAL}$0
+} while(${1:1 == 1});
+endsnippet
+
+snippet fprintf "fprintf()" b!
+fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet if "if (condition)" b!
+if (${1:1 == 1}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet printf "printf()"
+printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet struct "struct name" b!
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
+	${VISUAL}$0
+};
+endsnippet

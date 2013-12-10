@@ -1,0 +1,305 @@
+# Credit: https://github.com/mklabs/snipmate-css3-please
+
+clearsnippets
+
+snippet clearfix "clearfix"
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+endsnippet
+
+snippet round "round"
+-webkit-border-radius: ${1:12px};
+        border-radius: $1;
+
+/* useful if you don't want a bg color from leaking outside the border: */
+-webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+        background-clip: padding-box;
+endsnippet
+
+snippet rgba "rgba"
+background-color: transparent;
+background-color: rgba(${1:180}, ${2:180}, ${3:144}, ${4:0.6});
+            zoom: 1;
+endsnippet
+
+snippet animation "animation"
+.${1:anim}:hover {
+  -webkit-animation: $1 ${2:5s} ${3:infinite};
+     -moz-animation: $1 $2 $3;
+      -ms-animation: $1 $2 $3;
+       -o-animation: $1 $2 $3;
+}
+
+@-webkit-keyframes $1 {
+  ${4:0}%   { opacity: ${7:0.0}; }
+  ${5:50}%  { opacity: ${8:0.5}; }
+  ${6:100}% { opacity: ${9:1.0}; }
+}
+@-moz-keyframes $1 {
+  $4%    {  opacity: $7;  }
+  $5%    {  opacity: $8;  }
+  $6%    {  opacity: $9;  }
+}
+@-ms-keyframes $1 {
+  $4%   { opacity: $7; }
+  $5%   { opacity: $8; }
+  $6%   { opacity: $9; }
+}
+@-o-keyframes $1 {
+  $4%   { opacity: $7; }
+  $5%   { opacity: $8; }
+  $6%   { opacity: $9; }
+}
+endsnippet
+
+snippet rotate "rotate"
+-webkit-transform: rotate(${1:7.5}deg);
+   -moz-transform: rotate($1deg);
+    -ms-transform: rotate($1deg);
+     -o-transform: rotate($1deg);
+        transform: rotate($1deg);
+             zoom: 1;
+endsnippet
+
+snippet 3dtransforms "3dtransforms"
+-webkit-perspective: ${1:300};
+   -moz-perspective: $1;
+    -ms-perspective: $1;
+        perspective: $1;
+-webkit-transform: rotateY(${2:180}deg);
+   -moz-transform: rotateY($2deg);
+    -ms-transform: rotateY($2deg);
+        transform: rotateY($2deg);
+-webkit-transform-style: ${3:preserve-3d};
+   -moz-transform-style: $3;
+    -ms-transform-style: $3;
+        transform-style: $3;
+endsnippet
+
+snippet textshadow "textshadow"
+text-shadow: ${1:0}px ${2:0}px ${3:0}px ${4:0}px #${5:ffffff};
+endsnippet
+
+snippet gradient "gradient"
+background-color: #${1:444444};
+background-image: -webkit-gradient(linear, left top, left bottom, from(#$1), to(#${2:999999}));
+background-image: -webkit-linear-gradient(top, #$1, #$2);
+background-image:    -moz-linear-gradient(top, #$1, #$2);
+background-image:     -ms-linear-gradient(top, #$1, #$2);
+background-image:      -o-linear-gradient(top, #$1, #$2);
+background-image:         linear-gradient(to bottom, #$1, #$2);
+endsnippet
+
+snippet repeatgradient "repeatgradient"
+-webkit-repeating-linear-gradient Safari 5.1, Chrome
+-moz-repeating-linear-gradient(to top left, blue, red);
+-moz-repeating-linear-gradient Firefox
+-o-repeating-linear-gradient Opera
+repeating-linear-gradient
+
+snippet radial "radial"
+background-color: #${1:1e5799}; /* Old browsers */
+background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#${1:1e5799}), color-stop(50%,#${2:2989d8}), color-stop(51%,#${3:207cca}), color-stop(100%,#${4:7db9e8})); /* Chrome,Safari4+ */
+background-image: -webkit-radial-gradient(center, ellipse cover, #${1:1e5799} 0%,#${2:2989d8} 50%,#${3:207cca} 51%,#${4:7db9e8} 100%); /* Chrome10+,Safari5.1+ */
+background-image:    -moz-radial-gradient(center, ellipse cover, #${1:1e5799} 0%,#${2:2989d8} 50%,#${3:207cca} 51%,#${4:7db9e8} 100%); /* FF3.6+ */
+background-image:     -ms-radial-gradient(center, ellipse cover, #${1:1e5799} 0%,#${2:2989d8} 50%,#${3:207cca} 51%,#${4:7db9e8} 100%); /* IE10+ */
+background-image:      -o-radial-gradient(center, ellipse cover, #${1:1e5799} 0%,#${2:2989d8} 50%,#${3:207cca} 51%,#${4:7db9e8} 100%); /* Opera 12+ */
+background-image:         radial-gradient(center, ellipse cover, #${1:1e5799} 0%,#${2:2989d8} 50%,#${3:207cca} 51%,#${4:7db9e8} 100%); /* W3C */
+
+snippet tabsize "tabsize"
+-moz-tab-size: ${1:2};
+  -o-tab-size: $1;
+     tab-size: $1;
+endsnippet
+
+snippet fontface "fontface"
+@font-face {
+  font-family: '${1:FontName}';
+  src: url('${2:../fonts/FontName}.eot') format('eot'),
+  src: url('$2.eot?iefix:../fonts/FontName.eot?iefix') format('eot'),
+       url('$2:../fonts/FontName.svg#webfontZam02nTh') format('svg'),
+       url('$2.ttf') format('truetype'),
+       url('$2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+endsnippet
+
+snippet columns "columns"
+-webkit-column-count: ${1:2};
+   -moz-column-count: $1;
+        column-count: $1;
+-webkit-column-gap: ${2:15px};
+   -moz-column-gap: $2;
+        column-gap: $2;
+endsnippet
+
+snippet opacity "opacity"
+opacity: ${1:0.9};
+filter: alpha(opacity=${2:90});
+endsnippet
+
+snippet bgsize "bgsize"
+-webkit-background-size: ${1:100%} $1;
+        background-size: $1 $1;
+endsnippet
+
+snippet scale "scale"
+-webkit-transform: scale(${1:0.8});
+   -moz-transform: scale($1);
+    -ms-transform: scale($1);
+     -o-transform: scale($1);
+        transform: scale($1);
+endsnippet
+
+snippet transition "transition"
+-webkit-transition: ${1:all} ${2:0.3s} ${3:ease-out};
+   -moz-transition: $1 $2 $3;
+    -ms-transition: $1 $2 $3;
+     -o-transition: $1 $2 $3;
+        transition: $1 $2 $3;
+endsnippet
+
+snippet boxshadow "boxshadow"
+-webkit-box-shadow: ${1:0}px ${2:0}px ${3:0}px ${4:0}px #${5:ffffff};
+        box-shadow: $1px $2px $3px $4px #$5;
+endsnippet
+
+# Font stacks from http://www.awayback.com/revised-font-stack/ and modified by Akiva Levy <akiva@sixthirteendesign.com>
+# Serif font-stacks
+## GARAMOND (23.84% on Mac, 86.24% on Windows)
+snippet garamond "garamond"
+font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+endsnippet
+
+## LUCIDA BRIGHT (64.90% on Mac, 33.84% on Windows) Huge x-height
+snippet lucidabright "lucidabright"
+font-family: "Lucida Bright", Georgia, serif;
+endsnippet
+
+## PALATINO (79.71% on Mac, 98.04% on Windows)
+snippet palatino "palatino"
+font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+endsnippet
+
+## BIG CASLON (85.10% on Mac)
+snippet bigcaslon "bigcaslon"
+font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+endsnippet
+
+## DIDOT (87.72% on Mac)
+snippet didot "didot"
+font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+endsnippet
+
+## BASKERVILLE (88.60% on Mac, 49.10% on Windows)
+snippet baskerville "baskerville"
+font-family: Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif;
+endsnippet
+
+## HOEFLER TEXT (88.70% on Mac, 1.16% on Windows)
+snippet hoefler "hoefler"
+font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+endsnippet
+
+## BODONI (47.89% on Windows)
+snippet bodoni "bodoni"
+font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+endsnippet
+
+## GOUDY OLD STYLE (51.30% on Windows)
+snippet goudy "goudy"
+font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+endsnippet
+
+## CONSTANTIA (53.81% on Windows)
+snippet constantia "constantia"
+font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+endsnippet
+
+## CAMBRIA (54.51% on Windows)
+snippet cambria "cambria"
+font-family: Cambria, Georgia, serif;
+endsnippet
+
+## BOOK ANTIQUA (86.09% on Mac)
+snippet bookantiqua "bookantiqua"
+font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+endsnippet
+
+# Sans-serif font-stacks
+
+## OPTIMA (90.14% on Mac)
+snippet optima "optima"
+font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+endsnippet
+
+## FUTURA (91.01% on Mac)
+snippet futura "futura"
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+endsnippet
+
+## GILL SANS (91.52% on Mac, 51.74% on Windows)
+snippet gillsans "gillsans"
+font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+endsnippet
+
+## TREBUCHET (94.20% on Mac, 99% on Windows)
+snippet trebuchet "trebuchet"
+font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+endsnippet
+
+## HELVETICA NEUE (94.74% on Mac)
+snippet helvetica "helvetica"
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+endsnippet
+
+## VERDANA (96.81% on Mac, 99.40% on Windows)
+snippet verdana "verdana"
+font-family: Verdana, Geneva, sans-serif;
+endsnippet
+
+## LUCIDA GRANDE (99.13% on Mac, 98.25% on Windows)
+snippet lucidagrande "lucidagrande"
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+endsnippet
+
+## GENEVA (98.84% on Mac)
+snippet geneva "geneva"
+font-family: Geneva, Tahoma, Verdana, sans-serif;
+endsnippet
+
+## SEGOE (45.04% on Windows)
+snippet segoe "segoe"
+font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+endsnippet
+
+## CANDARA (54.31% on Windows)
+snippet candara "candara"
+font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+endsnippet
+
+## CALIBRI (54.76% on Windows)
+snippet calibri "calibri"
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+endsnippet
+
+## FRANKLIN GOTHIC MEDIUM (97.89% on Windows)
+snippet franklingothic "franklingothic"
+font-family: "Franklin Gothic Medium", Arial, sans-serif;
+endsnippet
+
+## TAHOMA(99.30% on Windows) 
+snippet tahoma "tahoma"
+font-family: Tahoma, Geneva, Verdana, sans-serif;
+endsnippet

@@ -1,0 +1,140 @@
+extends html
+
+snippet x "{{ ... }}" b!
+{{ ${1:value} }}
+endsnippet
+
+snippet # "{# ... #}" b!
+{# ${1:text} #}
+endsnippet
+
+snippet % "{% ... %}" b!
+{% ${1:name} %}
+endsnippet
+
+snippet for "{% for item in items %} ... {% endfor %}" b!
+{% for ${1:item} in ${2:items} %}
+	${0:${VISUAL}}
+{% endfor %}
+endsnippet
+
+snippet if "{% if condition %} ... {% endif %}" b!
+{% if ${1:expr} %}
+	${0:${VISUAL}}
+{% endif %}
+endsnippet
+
+snippet elif "{% elif condition %}" b!
+{% elif ${1:expr} %}
+	${0:${VISUAL}}
+endsnippet
+
+snippet else "{% else %}" b!
+{% else %}
+	${0:${VISUAL}}
+endsnippet
+
+snippet block "{% block name %} ... {% endblock %}" b!
+{% block ${1:name} %}
+	${0:${VISUAL}}
+{% endblock %}
+endsnippet
+
+snippet autoescape "{% autoescape <on|off> %} ... {% endautoescape %}" b!
+{% autoescape ${1:on} %}
+	${0:${VISUAL}}
+{% endautoescape %}
+endsnippet
+
+snippet %% "{% name %} ... {% endname %}" b!
+{% ${1:name} %}
+	${0:${VISUAL}}
+{% end$1 %}
+endsnippet
+
+snippet ## "{% comment %} ... {% endcomment %}" b!
+{% comment %}
+	${0:${VISUAL}}
+{% endcomment %}
+endsnippet
+
+snippet cycle "{% cycle value1 value2 %}" b!
+{% cycle ${1:value1} ${2:value2} ${3:as ${4}} %}
+endsnippet
+
+snippet debug "{% debug %}" b!
+{% debug %}
+endsnippet
+
+snippet empty "{% empty %}" b!
+{% empty %}
+	${0:${VISUAL}}
+endsnippet
+
+snippet extends "{% extends file %}" b!
+{% extends "${1:base.html}" %}
+endsnippet
+
+snippet filter "{% filter %} ... {% endfilter %}" b!
+{% filter ${1} %}
+	${0:${VISUAL}}
+{% endfilter %}
+endsnippet
+
+snippet firstof "{% firstof variables %}" b!
+{% firstof $1 %}
+endsnippet
+
+snippet ifchanged "{% ifchanged %} ... {% endifchanged %}" b!
+{% ifchanged %}${0:${VISUAL}}{% endifchanged %}
+endsnippet
+
+snippet ifequal "{% ifequal value1 value2 %} ... {% endifequal %}" b!
+{% ifequal ${1:value1} ${2:value2} %}
+	${0:${VISUAL}}
+{% endifequal %}
+endsnippet
+
+snippet ifnotequal "{% ifnotequal value1 value2 %} ... {% endifnotequal %}" b!
+{% ifnotequal ${1:value1} ${2:value2} %}
+	${0:${VISUAL}}
+{% endifnotequal %}
+endsnippet
+
+snippet include "{% include file %}" b!
+{% include "${1}" %}
+endsnippet
+
+snippet load "{% load file %}" b!
+{% load ${1} %}
+endsnippet
+
+snippet now "{% now format %}" b!
+{% now "${1:jS F Y H:i}" %}
+endsnippet
+
+snippet regroup "{% regroup variable by attr as newvariable %}" b!
+{% regroup ${1} by ${2} as ${3} %}
+endsnippet
+
+snippet spaceless "{% spaceless %} ... {% endspaceless %}" b!
+{% spaceless %}${1}{% endspaceless %}
+endsnippet
+
+snippet ssi "{% ssi file %}" b!
+{% ssi ${1} %}
+endsnippet
+
+snippet url "{% url view as variable %}" b!
+{% url ${1} as ${2} %}
+endsnippet
+
+snippet widthratio "{% widthratio this max 100 %}" b!
+{% widthratio ${1:this_value} ${2:max_value} ${3:100} %}
+endsnippet
+
+snippet with "{% with variable=value %} ... {% endwith %}" b!
+{% with ${1:${2:var}=${3:value}} %}
+	${0:${VISUAL}}
+{% endwith %}
+endsnippet

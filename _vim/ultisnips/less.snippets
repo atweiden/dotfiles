@@ -1,0 +1,147 @@
+extends css
+
+snippet @ "variable" b!
+@${1:name}: ${2:value};
+endsnippet
+
+snippet . ".mixin { ... }" b!
+.${1:name} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet .( ".mixin (...) { ... }" b!
+.${1:name} ($2) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet .w ".mixin (...) when (...) { ... }" b!
+.${1:name} ($2) when ($3) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet # "#bundle { ... }" b!
+#${1:name} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet import "@import file;" b!
+@import "${1:styles.less}";
+endsnippet
+
+# Tests
+
+snippet isc "iscolor(...)" w!
+iscolor($1)
+endsnippet
+
+snippet isn "isnumber(...)" w!
+isnumber($1)
+endsnippet
+
+snippet iss "isstring(...)" w!
+isstring($1)
+endsnippet
+
+snippet isk "iskeyword(...)" w!
+iskeyword($1)
+endsnippet
+
+snippet isu "isurl(...)" w!
+isurl($1)
+endsnippet
+
+snippet ispx "ispixel(...)" w!
+ispixel($1)
+endsnippet
+
+snippet isp "ispercentage(...)" w!
+ispercentage($1)
+endsnippet
+
+snippet ise "isem(...)" w!
+isem($1)
+endsnippet
+
+# colors
+
+snippet color "color(@s)" b!
+color($1)
+endsnippet
+
+snippet lighten "lighten(@color, n%)" w!
+lighten(${1:@color}, ${2:10%})
+endsnippet
+
+snippet darken "darken(@color, n%)" w!
+darken(${1:@color}, ${2:10%})
+endsnippet
+
+snippet sat "saturate(@color, n%)" w!
+saturate(${1:@color}, ${2:10%})
+endsnippet
+
+snippet desat "desaturate(@color, n%)" w!
+desaturate(${1:@color}, ${2:10%})
+endsnippet
+
+snippet fadein "fadein(@color, n%)" w!
+fadein(${1:@color}, ${2:10%})
+endsnippet
+
+snippet fadeout "fadeout(@color, n%)" w!
+fadeout(${1:@color}, ${2:10%})
+endsnippet
+
+snippet fade "fade(@color, n%)" w!
+fade(${1:@color}, ${2:10%})
+endsnippet
+
+snippet spin "spin(@color, n)" w!
+spin(${1:@color}, ${2:10})
+endsnippet
+
+snippet mix "mix(@color1, @color2)" w!
+mix(${1:@color1}, ${2:@color2})
+endsnippet
+
+snippet hue "hue(@color)" w!
+hue(${1:@color})
+endsnippet
+
+snippet satn "saturation(@color)" w!
+saturation(${1:@color})
+endsnippet
+
+snippet light "lightness(@color)" w!
+lightness(${1:@color})
+endsnippet
+
+snippet alpha "alpha(@color)" b!
+alpha(${1:@color})
+endsnippet
+
+snippet hsl "hsl(hue, sat, light)" b!
+hsl(${1:hue(@color)}, ${2:45%}, ${3:90%})
+endsnippet
+
+# math
+
+snippet round "round(n)" b!
+round(${1:n})
+endsnippet
+
+snippet ceil "ceil(n)" b!
+ceil(${1:n})
+endsnippet
+
+snippet floor "floor(n)" b!
+floor(${1:n})
+endsnippet
+
+snippet perc "percentage(n)" b!
+percentage(${1:n})
+endsnippet

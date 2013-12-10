@@ -1,0 +1,19 @@
+snippet snip "snippet definition" b!
+`!p snip.rv = "snippet"` ${1:trigger} "${2:Description}" ${3:b!}
+${0:${VISUAL}}
+`!p snip.rv = "endsnippet"`
+endsnippet
+
+snippet global "global definition" b!
+global !p
+${0:${VISUAL}}
+endglobal
+endsnippet
+
+snippet visual "visual placeholder" i!
+\$\{VISUAL${1:${2:default}${3:/transform/}}\}
+endsnippet
+
+snippet $ "placeholder" i!
+\$\{${1:1}:${2:default}\}
+endsnippet

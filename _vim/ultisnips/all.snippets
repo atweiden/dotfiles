@@ -1,0 +1,72 @@
+global !p
+from snippets import *
+endglobal
+
+# these snippets require the reporoot vim plugin
+# https://github.com/jmcantrell/vim-reporoot
+
+snippet gh "github project url" w!
+https://github.com/`!v $USER`/`!v GetRepoName('%')`
+endsnippet
+
+snippet bb "bitbucket project url" w!
+https://bitbucket.org/`!v $USER`/`!v GetRepoName('%')`
+endsnippet
+
+snippet modeline "modeline (filetype)" b!
+`!p snip.rv = comment_start()`vim:set ${1:ft=`!v &ft`}:`!p snip.rv = comment_end()`
+endsnippet
+
+snippet sep "horizonal separator" b!
+`!p snip.rv = comment_start()`${1:Title} ${3:-}`!p
+n = tw() - 6 \
+  - len(comment_start()) \
+  - len(comment_end())   \
+  - len(t[1])
+snip.rv = (n * t[3]) + '{{{'
+`${2:1}`!p snip.rv = comment_end()`
+$0
+endsnippet
+
+snippet sec "section" b!
+`!p snip.rv = comment_start()`${1} {{{${2:1}
+
+${0:${VISUAL}}
+
+endsnippet
+
+snippet uuid "random uuid" w!
+`!p if not snip.c: import uuid; snip.rv = str(uuid.uuid4())`
+endsnippet
+
+snippet lorem "lorem ipsum" w!
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+endsnippet
+
+snippet time "time (h:m:s)" w!
+`!v strftime('%H:%M:%S')`
+endsnippet
+
+snippet date "date (y-m-d)" w!
+`!v strftime("%Y-%m-%d")`
+endsnippet
+
+snippet Date "date (pretty)" w!
+`!v strftime('%A, %d %B %Y')`
+endsnippet
+
+snippet lic "Apache License, Version 2.0" b!
+Copyright `!v strftime('%Y')` ${1:-Name}
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+endsnippet

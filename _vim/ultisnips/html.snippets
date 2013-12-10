@@ -1,0 +1,273 @@
+global !p
+from snippets import *
+
+def page_title(snip):
+    snip.rv = title(snip.basename) or 'Page Title'
+endglobal
+
+snippet dt "html5 doctype" b!
+<!DOCTYPE html>
+endsnippet
+
+snippet html "<html> ... </html>" b!
+<html lang="en">
+	${0:${VISUAL}}
+</html>
+endsnippet
+
+snippet body "<body> ... </body>" b!
+<body>
+	${0:${VISUAL}}
+</body>
+endsnippet
+
+snippet head "<head> ... </head>" b!
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="${2:This is the page description}">
+	<title>${1:`!p page_title(snip)`}</title>
+</head>
+endsnippet
+
+snippet meta "<meta>" b!
+<meta name="${1:name}" content="${2:content}">
+endsnippet
+
+snippet title "<title> ... </title>" b!
+<title>${1:`!p page_title(snip)`}</title>
+endsnippet
+
+snippet js "<script> ... </script>" b!
+<script type="text/javascript">
+	${0:${VISUAL}}
+</script>
+endsnippet
+
+snippet sj "<script src=file></script> (include)" b!
+<script src="js/${1:name}.js"></script>
+endsnippet
+
+snippet style "<style> ... </style>" b!
+<style type="text/css">
+	${0:${VISUAL}}
+</style>
+endsnippet
+
+snippet a "<a href=url> ... </a>" b!
+<a href="${1:#}"}>${2:name}</a>
+endsnippet
+
+snippet ul "<ul> ... </ul>" b!
+<ul$1>
+	$0
+</ul>
+endsnippet
+
+snippet ol "<ol> ... </ol>" b!
+<ol$1>
+	$0
+</ol>
+endsnippet
+
+snippet li "<li> ... </li>" b!
+<li>${1:${VISUAL}}</li>
+endsnippet
+
+snippet p "<p> ... </p>" b!
+<p$1>
+	${0:${VISUAL}}
+</p>
+endsnippet
+
+snippet pre "<pre> ... </pre>" b!
+<pre$1>
+	${0:${VISUAL}}
+</pre>
+endsnippet
+
+snippet div "<div> ... </div>" b!
+<div$1>
+	${0:${VISUAL}}
+</div>
+endsnippet
+
+snippet span "<span> ... </span>" b!
+<span$1>${2:${VISUAL}}</span>$0
+endsnippet
+
+snippet fieldset "<fieldset> ... </fieldset> (with <legend>)" b!
+<fieldset$1>
+	<legend>${2:Some Fields}</legend>
+	${0:${VISUAL}}
+</fieldset>
+endsnippet
+
+snippet form "<form> ... </form>" b!
+<form action="${1:`!p snip.rv = snake(snip.basename)+'_submit'`}" method="${2:post}" accept-charset="utf-8">
+	${0:${VISUAL}}
+	<input type="submit" value="Submit">
+</form>
+endsnippet
+
+snippet h "<hN> ... </hN>" b!
+<h${1:1}${2: ${3:id}="${4:heading}"}>${VISUAL}$0</h1>
+endsnippet
+
+snippet input "<input>" b!
+<input type="${1:text/submit/hidden/button}" name="${2:name}" value="$3">
+endsnippet
+
+snippet label "<input> (with <label>)" b!
+<label for="${2:`!p snip.rv = snake(t[1])`}">${1:My Input}</label>
+<input type="${3:text/submit/hidden/button}" name="${4:$2}" value="$5"${6: id="${7:$2}"}>
+endsnippet
+
+snippet link "<link>" b!
+<link rel="${1:stylesheet}" href="css/${2:site}.css">
+endsnippet
+
+snippet mailto "<a href=mailto> ... </a>" b!
+<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
+endsnippet
+
+snippet opt "<option value=name> ... </option>" b!
+<option value="${1:option}">${2:${VISUAL}}</option>
+endsnippet
+
+snippet optt "<option> ... </option>" b!
+<option>${1:option}</option>
+endsnippet
+
+snippet select "<select> ... </select>" b!
+<select$1>
+	${0:${VISUAL}}
+</select>
+endsnippet
+
+snippet table "<table> ... </table>" b!
+<table$1${2: cellpadding="${3:0}" cellspacing="$3"}>
+	${0:${VISUAL}}
+</table>
+endsnippet
+
+snippet textarea "<textarea> ... </textarea>" b!
+<textarea$1 rows="${2:8}" cols="${3:40}">$4</textarea>
+endsnippet
+
+snippet < "<tag> ... </tag>" b!
+<${1:span}$2>${0:${VISUAL}}</$1>
+endsnippet
+
+snippet << "<tag> ... </tag> (multiline)" b!
+<${1:div}$2>
+	${0:${VISUAL}}
+</$1>
+endsnippet
+
+snippet img "<img>" b!
+<img src="images/${1:image.png}" alt="$1">
+endsnippet
+
+snippet v "attr=value" w!
+${1:id}="$value"
+endsnippet
+
+# entities
+
+snippet nbsp "Non-Breaking Space" w!
+&nbsp;
+endsnippet
+
+snippet left "←" w!
+&#x2190;
+endsnippet
+
+snippet right "→" w!
+&#x2192;
+endsnippet
+
+snippet up "↑" w!
+&#x2191;
+endsnippet
+
+snippet down "↓" w!
+&#x2193;
+endsnippet
+
+snippet return "↩" w!
+&#x21A9;
+endsnippet
+
+snippet backtab "⇤" w!
+&#x21E4;
+endsnippet
+
+snippet tab "⇥" w!
+&#x21E5;
+endsnippet
+
+snippet shift "⇧" w!
+&#x21E7;
+endsnippet
+
+snippet control "⌃" w!
+&#x2303;
+endsnippet
+
+snippet enter "⌅" w!
+&#x2305;
+endsnippet
+
+snippet command "⌘" w!
+&#x2318;
+endsnippet
+
+snippet option "⌥" w!
+&#x2325;
+endsnippet
+
+snippet delete "⌦" w!
+&#x2326;
+endsnippet
+
+snippet backspace "⌫" w!
+&#x232B;
+endsnippet
+
+snippet escape "⎋" w!
+&#x238B;
+endsnippet
+
+# common cdn includes
+
+snippet jquery "jQuery CDN" b!
+<script src="http://code.jquery.com/jquery.min.js"></script>
+endsnippet
+
+snippet jquery "jQuery" b!
+<script src="js/jquery.js"></script>
+endsnippet
+
+snippet underscore "Underscore CDN" b!
+<script src="http://underscorejs.org/underscore-min.js"></script>
+endsnippet
+
+snippet underscore "Underscore" b!
+<script src="js/underscore.js"></script>
+endsnippet
+
+snippet backbone "Backbone CDN" b!
+<script src="http://backbonejs.org/backbone-min.js"></script>
+endsnippet
+
+snippet backbone "Backbone" b!
+<script src="js/backbone.js"></script>
+endsnippet
+
+snippet highcharts "Highcharts CDN" b!
+<script src="http://code.highcharts.com/highcharts.js"></script>
+endsnippet
+
+snippet highcharts "highcharts" b!
+<script src="js/highcharts.js"></script>
+endsnippet

@@ -1,0 +1,143 @@
+snippet x "{{ ... }}" b!
+{{ ${0:${VISUAL}} }}
+endsnippet
+
+snippet # "{# ... #}" b!
+{# ${0:${VISUAL}} #}
+endsnippet
+
+snippet % "{% ... %}" b!
+{% ${1:name} %}
+endsnippet
+
+snippet for "{% for item in items %} ... {% endfor %}" b!
+{% for ${1:item} in ${2:items} %}
+	${0:${VISUAL}}
+{% endfor %}
+endsnippet
+
+snippet if "{% if condition %} ... {% endif %}" b!
+{% if ${1:expr} %}
+	${0:${VISUAL}}
+{% endif %}
+endsnippet
+
+snippet elif "{% elif condition %}" b!
+{% elif ${1:expr} %}
+	${0:${VISUAL}}
+endsnippet
+
+snippet else "{% else %}" b!
+{% else %}
+	${0:${VISUAL}}
+endsnippet
+
+snippet block "{% block name %} ... {% endblock %}" b!
+{% block ${1:name} %}
+	${0:${VISUAL}}
+{% endblock $1 %}
+endsnippet
+
+snippet autoescape "{% autoescape <true|false> %} ... {% endautoescape %}" b!
+{% autoescape ${1:true} %}
+	${0:${VISUAL}}
+{% endautoescape %}
+endsnippet
+
+snippet %% "{% name %} ... {% endname %}" b!
+{% ${1:name} %}
+	${0:${VISUAL}}
+{% end$1 %}
+endsnippet
+
+snippet raw "{% raw %} ... {% endraw %}" b!
+{% raw %}
+	${0:${VISUAL}}
+{% endraw %}
+endsnippet
+
+snippet extends "{% extends file %}" b!
+{% extends "${1:template}" %}
+endsnippet
+
+snippet include "{% include file %}" b!
+{% include "${1:template}" %}
+endsnippet
+
+snippet import "{% import file %}" b!
+{% import "${1:template}" %}
+endsnippet
+
+snippet from "{% from file import name as var %}" b!
+{% from "${1:template}" import ${2:name}${3: as ${4:$2}} %}
+endsnippet
+
+snippet filter "{% filter name %} ... {% endfilter %}" b!
+{% filter ${1:filter} %}
+	${0:${VISUAL}}
+{% endfilter %}
+endsnippet
+
+snippet macro "{% macro name(arguments) %} ... {% endmacro %}" b!
+{% macro ${1:name}(${2:args}) %}
+	${0:${VISUAL}}
+{% endmacro %}
+endsnippet
+
+snippet call "{% call name(arguments) %} ... {% endcall %}" b!
+{% call ${1:name}(${2:args}) %}
+	${0:${VISUAL}}
+{% endcall %}
+endsnippet
+
+snippet set "{% set name = value %}" b!
+{% set ${1:name} = ${2:'value'} %}
+endsnippet
+
+snippet trans "{% trans %} ... {% endtrans %}" b!
+{% trans %}
+	${0:${VISUAL}}
+{% endtrans %}
+endsnippet
+
+snippet with "{% with %} ... {% endwith %}" b!
+{% with %}
+	${0:${VISUAL}}
+{% endwith %}
+endsnippet
+
+snippet batch "batch items" w!
+batch(linecount=$1, fill_with=${2:None})
+endsnippet
+
+snippet dictsort "sort and yield (key, value) pairs" w!
+dictsort(case_sensitive=${1:False}, by=${2:'key'})
+endsnippet
+
+snippet round "round number" w!
+round(precision=${1:0}, method=${2:'common|ceil|floor'})
+endsnippet
+
+snippet urlize "convert plain-text url to <a/>" w!
+urlize(trim_url_limit=${1:None}, nofollow=${2:False})
+endsnippet
+
+snippet wordwrap "word wrap" w!
+wordwrap(width=${1:79}, break_long_words=${2:True})
+endsnippet
+
+snippet truncate "truncate" w!
+truncate(lenght=${1:79}, killwords=${2:False}, end=${3:'...''})
+endsnippet
+
+snippet sum "sum of sequence of numbers + start" w!
+sum(attribute=${1:None}, start=${2:0})
+endsnippet
+
+snippet sort "sort an iterable" w!
+sort(reverse=${1:False}, case_sensitive=${2:False}, attribute=${3:None})
+endsnippet
+
+snippet indent "indent" w!
+indent(width=${1:4}, indentfirst=${2:False})
+endsnippet

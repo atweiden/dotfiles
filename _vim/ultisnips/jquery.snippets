@@ -1,0 +1,105 @@
+extends javascript
+
+snippet when "$.when(deferred).done|then( ... )" b!
+$.when(${1:deferred}).${2:done/then}(
+	function(args) { /* args is ["success", statusText, jqXHR] */
+		${2:alert(args[1]);}
+	}
+);
+endsnippet
+
+snippet ajaxs "$.ajaxSetup( ... )" b!
+$.ajaxSetup({
+	url: "${1:url}",
+	type: "${2:POST}",
+	dataType: "${3:xml/html/script/json}",
+	data: $.param($("${4:selector}")),
+	complete: function() {
+		$5
+	},
+	success: function() {
+		$6
+	},
+	error: function() {
+		$7
+	},
+});
+endsnippet
+
+snippet ajax "$.ajax(...)" b!
+$.ajax({
+	url: "${1:url}",
+	type: "${2:POST}",
+	dataType: "${3:xml/html/script/json}",
+	data: $.param($("${4:selector}")),
+	complete: function() {
+		$5
+	},
+	success: function() {
+		$6
+	},
+	error: function() {
+		$7
+	},
+});
+endsnippet
+
+snippet empty "jQuery.isEmptyObject()" w!
+jQuery.isEmptyObject(${1:obj})
+endsnippet
+
+snippet hover ".hover(on, off)" w!
+.hover(function() {
+	$1
+}, function() {
+	$2
+});
+endsnippet
+
+snippet noop "jQuery.noop()" w!
+jQuery.noop()
+endsnippet
+
+snippet plain "jQuery.isPlainObject()" w!
+jQuery.isPlainObject(${1:obj})
+endsnippet
+
+snippet proxy "jQuery.proxy()" w!
+jQuery.proxy(${1:obj}, '${2:method}')
+endsnippet
+
+snippet ready "$(document).ready(function() { ... })" b!
+$(document).ready(function() {
+	${0:${VISUAL}}
+});
+endsnippet
+
+snippet this "$(this)" w!
+$(this)
+endsnippet
+
+snippet toggle ".toggle(on, off)" w!
+.toggle(function() {
+	$1
+}, function() {
+	$2
+});
+endsnippet
+
+snippet trim "$.trim()" w!
+$.trim('${1:string}')
+endsnippet
+
+snippet . ".name( ... )" w!
+.${1:name}($1)
+endsnippet
+
+snippet .. ".name( ... ) (multiline)" w!
+.${1:name}(
+	${0:${VISUAL}}
+)
+endsnippet
+
+snippet $ "$(css)" w!
+$('${1:css}')
+endsnippet
