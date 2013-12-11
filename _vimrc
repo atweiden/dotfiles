@@ -188,12 +188,12 @@ call matchadd('ColorColumn', '\%81v', 100)
 map <C-A> ggVG
 " escape
 inoremap jw <Esc>
-" yank to end of line
-noremap Y y$
 
 " }}}
 " --- pasting {{{
 
+" yank to end of line
+noremap Y y$
 " copy to clipboard
 map <leader>y "+yy
 " paste from clipboard
