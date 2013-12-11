@@ -23,6 +23,11 @@ vim
 vim $HOME/.gitconfig $HOME/.hgrc
 ```
 
+## Licensing
+
+This is free and unencumbered public domain software. For more
+information, see http://unlicense.org/ or the accompanying UNLICENSE file
+
 ## Credits
 
 - http://apaulodesign.com/vimrc.html
