@@ -119,6 +119,7 @@ set confirm                    " (??) Show Y-N-C prompt if closing with unsaved 
 set showcmd                    " (??) Show incomplete normal mode commands as you type
 set report=0                   " (??) : commands always print changed line count
 set cursorline                 " (??) have a line indicate the cursor location
+set cuc cul                    " (??) highlight active column
 set undofile                   " (??)
 set undolevels=500             " (ul) keep a lot of undo levels
 set history=500                " (hi) keep 500 lines of command history
@@ -188,6 +189,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 map <C-A> ggVG
 " escape
 inoremap jw <Esc>
+" remove highlights
+nmap <Leader><CR> :nohlsearch<cr>
 
 " }}}
 " --- pasting {{{
@@ -328,6 +331,11 @@ au BufRead,BufNewFile,BufWrite {*.json} set ft=javascript
 au BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
 au BufRead,BufNewFile,BufWrite {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.god,.irbrc,irb_tempfile*} set ft=ruby
 au BufRead,BufNewFile,BufWrite {Tupfile,*.tup} setf tup
+
+augroup markdown
+    au!
+    au BufRead,BufNewFile *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
 
 " }}}
 
