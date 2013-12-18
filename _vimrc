@@ -61,7 +61,7 @@ rviminfo
 set background=dark
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
-  colorscheme neverland2
+  colorscheme neverland2-darker
   colorscheme custom
 else
   colorscheme inkpot
