@@ -1,4 +1,4 @@
 let g:yankring_history_dir = '$HOME/.vim/.tmp'
-let g:yankring_replace_n_pkey = '<Char-172>'
-let g:yankring_replace_n_nkey = '<Char-174>'
-nmap <leader>r :YRShow<CR>
+let g:yankring_replace_n_pkey = '<A-P>'
+let g:yankring_replace_n_nkey = '<A-N>'
+nmap <F8> :YRShow<CR>
