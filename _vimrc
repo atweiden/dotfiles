@@ -290,14 +290,6 @@ nmap <silent> <leader><leader>c /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 " }}}
 
 " Navigation
-" --- buffers {{{
-
-" create new empty buffer
-nmap <C-N> :enew<CR>
-" cycle between buffers
-map <silent> <C-tab> :buffer #<CR>
-
-" }}}
 " ---windows {{{
 
 " map alt-[h,j,k,l,=] to resizing a window split
