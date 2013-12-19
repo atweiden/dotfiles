@@ -5,32 +5,7 @@ mkdir -p $HOME/.src/dotfiles/_vim{/.backups,/.swaps,/.tmp,}
 git clone https://github.com/gmarik/vundle $HOME/.src/dotfiles/_vim/bundle/vundle
 
 # Backup important dotfiles
-mv $HOME/.ackrc $HOME/.ackrc.bak
-mv $HOME/.bashrc $HOME/.bashrc.bak
-mv $HOME/.bash_logout $HOME/.bash_logout.bak
-mv $HOME/.bash_profile $HOME/.bash_profile.bak
-mv $HOME/.config $HOME/.config.bak
-mv $HOME/.conkyrc $HOME/.conkyrc.bak
-mv $HOME/.conkyrc1 $HOME/.conkyrc1.bak
-mv $HOME/.dunstrc $HOME/.dunstrc.bak
-mv $HOME/.functions.d $HOME/.functions.d.bak
-mv $HOME/.gitconfig $HOME/.gitconfig.bak
-mv $HOME/.gitignore $HOME/.gitignore.bak
-mv $HOME/.gitattributes $HOME/.gitattributes.bak
-mv $HOME/.gnupg $HOME/.gnupg.bak
-mv $HOME/.hgignore $HOME/.hgignore.bak
-mv $HOME/.hgrc $HOME/.hgrc.bak
-mv $HOME/.iex $HOME/.iex.bak
-mv $HOME/.jshintrc $HOME/.jshintrc.bak
-mv $HOME/.psqlrc $HOME/.psqlrc.bak
-mv $HOME/.screenrc $HOME/.screenrc.bak
-mv $HOME/.tmux.conf $HOME/.tmux.conf.bak
-mv $HOME/.vim $HOME/.vim.bak
-mv $HOME/.vimrc $HOME/.vimrc.bak
-mv $HOME/.vimencrypt $HOME/.vimencrypt.bak
-mv $HOME/.Xdefaults $HOME/.Xdefaults.bak
-mv $HOME/.xinitrc $HOME/.xinitrc.bak
-mv $HOME/.xsession $HOME/.xsession.bak
+for dotfile in $HOME/.ackrc $HOME/.bashrc $HOME/.bash_logout $HOME/.bash_profile $HOME/.config $HOME/.conkyrc $HOME/.conkyrc1 $HOME/.dunstrc $HOME/.functions $HOME/.gitconfig $HOME/.gitignore $HOME/.gitattributes $HOME/.gnupg $HOME/.hgignore $HOME/.hgrc $HOME/.iex $HOME/.jshintrc $HOME/.psqlrc $HOME/.screenrc $HOME/.tmux $HOME/.vim $HOME/.vimrc $HOME/.vimencrypt $HOME/.Xdefaults $HOME/.xinitrc $HOME/.xsession; do mv $dotfile ${dotfile}.bak
 
 # Setup symbolic links
 ln -s $HOME/.src/dotfiles/_ackrc $HOME/.ackrc

@@ -1,4 +1,4 @@
-# Dotfiles for Arch Linux
+# Dotfiles for Arch
 
 ## Installation
 
