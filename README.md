@@ -3,6 +3,8 @@
 ## Installation
 
 ```bash
+git clone https://github.com/atweiden/dotfiles
+cd dotfiles
 chmod u+x bootstrap.sh
 ./bootstrap.sh
 ```
