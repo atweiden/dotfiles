@@ -5,7 +5,33 @@ mkdir -p $HOME/.src/dotfiles/_vim{/.backups,/.swaps,/.tmp,}
 git clone https://github.com/gmarik/vundle $HOME/.src/dotfiles/_vim/bundle/vundle
 
 # Backup important dotfiles
-for dotfile in $HOME/.ackrc $HOME/.bashrc $HOME/.bash_logout $HOME/.bash_profile $HOME/.config $HOME/.conkyrc $HOME/.conkyrc1 $HOME/.dunstrc $HOME/.functions $HOME/.gitconfig $HOME/.gitignore $HOME/.gitattributes $HOME/.gnupg $HOME/.hgignore $HOME/.hgrc $HOME/.iex $HOME/.jshintrc $HOME/.psqlrc $HOME/.screenrc $HOME/.tmux $HOME/.vim $HOME/.vimrc $HOME/.vimencrypt $HOME/.Xdefaults $HOME/.xinitrc $HOME/.xsession; do mv $dotfile ${dotfile}.bak
+for dotfile in $HOME/.ackrc \
+               $HOME/.bashrc \
+               $HOME/.bash_logout \
+               $HOME/.bash_profile \
+               $HOME/.config \
+               $HOME/.conkyrc \
+               $HOME/.conkyrc1 \
+               $HOME/.dunstrc \
+               $HOME/.functions \
+               $HOME/.gitconfig \
+               $HOME/.gitignore \
+               $HOME/.gitattributes \
+               $HOME/.gnupg \
+               $HOME/.hgignore \
+               $HOME/.hgrc \
+               $HOME/.iex \
+               $HOME/.jshintrc \
+               $HOME/.psqlrc \
+               $HOME/.screenrc \
+               $HOME/.tmux \
+               $HOME/.vim \
+               $HOME/.vimrc \
+               $HOME/.vimencrypt \
+               $HOME/.Xdefaults \
+               $HOME/.xinitrc \
+               $HOME/.xsession; do mv $dotfile ${dotfile}.bak;
+done
 
 # Setup symbolic links
 ln -s $HOME/.src/dotfiles/_ackrc $HOME/.ackrc
