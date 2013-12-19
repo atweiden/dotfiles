@@ -41,7 +41,7 @@ for dotfile in $HOME/.ackrc \
                $HOME/.Xdefaults \
                $HOME/.xinitrc \
                $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
-                                   mv $dotfile ${dotfile}.bak 2&>/dev/null;
+                                   mv $dotfile ${dotfile}.bak 2>/dev/null;
 done
 
 
