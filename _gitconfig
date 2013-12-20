@@ -1,6 +1,6 @@
 [user]
-  name = "First Last"
-  email = you@email.tld
+  name = "yourname"
+  email = youremail
 
 [github]
   user = yourgithubacct

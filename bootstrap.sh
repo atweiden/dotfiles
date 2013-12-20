@@ -4,12 +4,13 @@
 # bootstrap: quick and easy dotfiles setup
 # -----------------------------------------------------------------------------
 
-
 # -----------------------------------------------------------------------------
-# basics
+# settings
 
-mkdir -p $HOME/.vim/{.backups,.swaps,.tmp,}
-git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle
+name="Andy Weidenbaum"     # Name    (GitHub)
+email="archbaum@gmail.com" # Email   (GitHub)
+github="atweiden"          # Account (GitHub)
+zipcode=97210              # Zipcode (f.lux)
 
 
 # -----------------------------------------------------------------------------
@@ -46,15 +47,6 @@ done
 
 
 # -----------------------------------------------------------------------------
-# f.lux
-
-echo "f.lux requests your zipcode for screen warmth timing"
-echo -n "Enter your zipcode: "
-read zipcode
-sed -i "s#97210#$zipcode#" _config/openbox/autostart.sh
-
-
-# -----------------------------------------------------------------------------
 # links
 
 for dotfile in _ackrc \
@@ -86,3 +78,26 @@ for dotfile in _ackrc \
                                   DEST=\"$HOME/.${SRC##*_}\"
                                           ln -s $SRC $DEST;
 done
+
+
+# -----------------------------------------------------------------------------
+# vim
+
+mkdir -p $HOME/.vim/{.backups,.swaps,.tmp,}
+git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle
+
+
+# -----------------------------------------------------------------------------
+# github
+
+sed -i "s#yourname#$name#"         $HOME/.gitconfig
+sed -i "s#youremail#$email#"       $HOME/.gitconfig
+sed -i "s#yourgithubacct#$github#" $HOME/.gitconfig
+sed -i "s#yourname#$name#"         $HOME/.hgrc
+sed -i "s#youremail#$email#"       $HOME/.hgrc
+
+
+# -----------------------------------------------------------------------------
+# f.lux
+
+sed -i "s#97210#$zipcode#"         $HOME/.config/openbox/autostart.sh

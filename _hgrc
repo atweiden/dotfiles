@@ -1,5 +1,5 @@
 [ui]
-username = Firstname Lastname <email@address.com>
+username = yourname <youremail>
 editor = vim
 ssh = ssh -C
 ignore = ~/.hgignore
