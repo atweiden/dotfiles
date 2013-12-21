@@ -7,5 +7,5 @@ declare all_packages=$(pacman -Q)
 declare quixand_regex="\s+quixand\s+"
 if [[ " $all_packages " =~ $quixand_regex ]]
     then
-        quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp
+        quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp ~/.vim/.undo
 fi
