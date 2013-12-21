@@ -16,31 +16,31 @@ zipcode=97210              # Zipcode (f.lux)
 # -----------------------------------------------------------------------------
 # backup
 
-for dotfile in $HOME/.ackrc \
-               $HOME/.bashrc \
-               $HOME/.bash_logout \
-               $HOME/.bash_profile \
-               $HOME/.config \
-               $HOME/.conkyrc \
-               $HOME/.conkyrc1 \
-               $HOME/.dunstrc \
-               $HOME/.functions \
-               $HOME/.gitconfig \
-               $HOME/.gitignore \
-               $HOME/.gitattributes \
-               $HOME/.gnupg \
-               $HOME/.hgignore \
-               $HOME/.hgrc \
-               $HOME/.iex \
-               $HOME/.jshintrc \
-               $HOME/.psqlrc \
-               $HOME/.screenrc \
-               $HOME/.tmux \
-               $HOME/.vim \
-               $HOME/.vimrc \
-               $HOME/.vimencrypt \
-               $HOME/.Xdefaults \
-               $HOME/.xinitrc \
+for dotfile in $HOME/.ackrc                                                \
+               $HOME/.bashrc                                               \
+               $HOME/.bash_logout                                          \
+               $HOME/.bash_profile                                         \
+               $HOME/.config                                               \
+               $HOME/.conkyrc                                              \
+               $HOME/.conkyrc1                                             \
+               $HOME/.dunstrc                                              \
+               $HOME/.functions                                            \
+               $HOME/.gitconfig                                            \
+               $HOME/.gitignore                                            \
+               $HOME/.gitattributes                                        \
+               $HOME/.gnupg                                                \
+               $HOME/.hgignore                                             \
+               $HOME/.hgrc                                                 \
+               $HOME/.iex                                                  \
+               $HOME/.jshintrc                                             \
+               $HOME/.psqlrc                                               \
+               $HOME/.screenrc                                             \
+               $HOME/.tmux                                                 \
+               $HOME/.vim                                                  \
+               $HOME/.vimrc                                                \
+               $HOME/.vimencrypt                                           \
+               $HOME/.Xdefaults                                            \
+               $HOME/.xinitrc                                              \
                $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
                                    mv $dotfile ${dotfile}.bak 2>/dev/null;
 done
@@ -49,31 +49,31 @@ done
 # -----------------------------------------------------------------------------
 # links
 
-for dotfile in _ackrc \
-               _bashrc-local \
-               _bash_logout \
-               _bash_profile \
-               _config \
-               _conkyrc \
-               _conkyrc1 \
-               _dunstrc \
-               _functions.d \
-               _gitignore \
-               _gitconfig \
-               _gitattributes \
-               _gnupg \
-               _hgignore \
-               _hgrc \
-               _iex \
-               _jshintrc \
-               _psqlrc \
-               _screenrc \
-               _tmux \
-               _vim \
-               _vimrc \
-               _vimencrypt \
-               _Xdefaults \
-               _xinitrc \
+for dotfile in _ackrc                                      \
+               _bashrc-local                               \
+               _bash_logout                                \
+               _bash_profile                               \
+               _config                                     \
+               _conkyrc                                    \
+               _conkyrc1                                   \
+               _dunstrc                                    \
+               _functions.d                                \
+               _gitignore                                  \
+               _gitconfig                                  \
+               _gitattributes                              \
+               _gnupg                                      \
+               _hgignore                                   \
+               _hgrc                                       \
+               _iex                                        \
+               _jshintrc                                   \
+               _psqlrc                                     \
+               _screenrc                                   \
+               _tmux                                       \
+               _vim                                        \
+               _vimrc                                      \
+               _vimencrypt                                 \
+               _Xdefaults                                  \
+               _xinitrc                                    \
                _xsession; do SRC=\"$(readlink -f $dotfile)\"
                                   DEST=\"$HOME/.${SRC##*_}\"
                                           ln -s $SRC $DEST;
