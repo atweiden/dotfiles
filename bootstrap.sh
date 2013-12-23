@@ -50,7 +50,7 @@ done
 # links
 
 for dotfile in _ackrc                                      \
-               _bashrc-local                               \
+               _bashrc                                     \
                _bash_logout                                \
                _bash_profile                               \
                _config                                     \
