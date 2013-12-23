@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# -----------------------------------------------------------------------------
+# slam: safe shut down
+# -----------------------------------------------------------------------------
+
+function slam() {
+quixand -p ~/.bash_history ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp ~/.vim/.undo && sudo shutdown now
+}

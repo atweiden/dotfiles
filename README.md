@@ -33,6 +33,7 @@ information, see http://unlicense.org/ or the accompanying UNLICENSE file
 ## Credits
 
 - http://apaulodesign.com/vimrc.html
+- http://static.askapache.com/askapache-bash-profile.txt
 - http://dotfiles.github.com/
 - https://github.com/alessioalex/dotfiles/
 - https://github.com/cooldaemon/myhome/
