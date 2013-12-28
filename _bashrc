@@ -4,7 +4,7 @@
 
 
 # -----------------------------------------------------------------------------
-# setup
+# Setup
 
 # if not running interactively, do nothing
 [[ $- != *i* ]] && return
@@ -30,7 +30,7 @@ PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME
 
 
 # -----------------------------------------------------------------------------
-# path
+# Path
 
 # default
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
@@ -48,7 +48,7 @@ export GEM_HOME=$(ruby -rubygems -e "puts Gem.user_dir")
 
 
 # -----------------------------------------------------------------------------
-# history
+# History
 
 # don't put duplicate lines in the history. See bash(1) for more 
 # options
@@ -62,7 +62,7 @@ shopt -s histappend
 
 
 # -----------------------------------------------------------------------------
-# ux
+# UX
 
 # check the window size after each command and, if necessary, update
 # the values of LINES and COLUMNS
@@ -77,7 +77,7 @@ shopt -s cdspell
 
 
 # -----------------------------------------------------------------------------
-# aliases
+# Aliases
 
 alias ls='ls -F --color=auto --group-directories-first'
 alias l='ls -1F --color=auto --group-directories-first'
