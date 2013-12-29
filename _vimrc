@@ -318,11 +318,6 @@ au BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
 au BufRead,BufNewFile,BufWrite {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.god,.irbrc,irb_tempfile*} set ft=ruby
 au BufRead,BufNewFile,BufWrite {Tupfile,*.tup} setf tup
 
-augroup markdown
-    au!
-    au BufRead,BufNewFile *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
-
 " }}}
 
 " omnicompletion {{{
