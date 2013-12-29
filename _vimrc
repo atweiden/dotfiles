@@ -323,6 +323,7 @@ au BufRead,BufNewFile,BufWrite {*.json} set ft=javascript
 au BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
 au BufRead,BufNewFile,BufWrite {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.god,.irbrc,irb_tempfile*} set ft=ruby
 au BufRead,BufNewFile,BufWrite {Tupfile,*.tup} setf tup
+au BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 
 " }}}
 
