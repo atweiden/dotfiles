@@ -282,6 +282,12 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 nmap <silent> ;c /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 
 " }}}
+" --- hex {{{
+
+" toggle between hex and binary, after opening file with `vim -b`
+noremap <F9> :call HexMe()<CR>
+
+" }}}
 
 " Navigation
 " ---windows {{{
