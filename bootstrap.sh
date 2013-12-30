@@ -20,6 +20,7 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.bashrc                                               \
                $HOME/.bash_logout                                          \
                $HOME/.bash_profile                                         \
+               $HOME/.bin                                                  \
                $HOME/.config                                               \
                $HOME/.conkyrc                                              \
                $HOME/.conkyrc1                                             \
@@ -53,6 +54,7 @@ for dotfile in _ackrc                                      \
                _bashrc                                     \
                _bash_logout                                \
                _bash_profile                               \
+               _bin                                        \
                _config                                     \
                _conkyrc                                    \
                _conkyrc1                                   \

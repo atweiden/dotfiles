@@ -34,6 +34,8 @@ PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME
 
 # default
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
+# dotfiles
+PATH=$HOME/.bin:$PATH
 # go
 PATH=/usr/lib/go/site/bin:$PATH
 # perl
