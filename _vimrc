@@ -75,6 +75,10 @@ if has("gui_running")
     set guifont=Monaco\ 16
 endif
 
+if has('autocmd')
+  autocmd GUIEnter * set vb t_vb=
+endif
+
 " }}}
 
 " cursor {{{
