@@ -14,6 +14,8 @@ export TERM=xterm-256color
 
 # editor
 export EDITOR=vim
+export FCEDIT=vim
+export VISUAL=vim
 
 # mode
 set -o vi
