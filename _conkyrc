@@ -34,7 +34,7 @@ color2 gray
 TEXT
 CPU: $alignr${cpu cpu0}%
 ${cpubar cpu0}
-RAM: $alignr$mem/$memmax 
+RAM: $alignr$mem/$memmax
 $membar
 
 ${font sans-serif:bold:size=8}SYSTEM ${hr 2}

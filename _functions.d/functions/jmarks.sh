@@ -6,13 +6,13 @@
 # -----------------------------------------------------------------------------
 
 export MARKPATH=$HOME/.marks
-function jump() { 
+function jump() {
   mkdir -p "$MARKPATH"; cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
-function mark() { 
+function mark() {
   mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
 }
-function unmark() { 
+function unmark() {
   mkdir -p "$MARKPATH"; rm -i "$MARKPATH/$1"
 }
 function marks() {

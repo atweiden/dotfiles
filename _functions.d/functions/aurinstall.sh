@@ -8,7 +8,7 @@ function aurinstall() {
 ORIGIN=$PWD
 aurpkgs=$(< /dev/stdin)
 mkdir -p ~/.src
-for aurpkg in "$@" "$aurpkgs"; do 
+for aurpkg in "$@" "$aurpkgs"; do
   cd ~/.src
   rm -rf ${aurpkg} ${aurpkg}.tar.gz*
   wget https://aur.archlinux.org/packages/${aurpkg:0:2}/${aurpkg}/${aurpkg}.tar.gz

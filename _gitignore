@@ -12,7 +12,7 @@
 *~
 
 # Windows
-Thumbs.db 
+Thumbs.db
 Desktop.ini
 
 # Mac
@@ -89,7 +89,7 @@ ipch/
 # ReSharper is a .NET coding add-in
 _ReSharper*
 
-# Installshield output folder 
+# Installshield output folder
 [Ee]xpress
 
 # DocProject is a documentation generator add-in

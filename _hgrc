@@ -8,4 +8,4 @@ ignore = ~/.hgignore
 track.current = True
 
 [extensions]
-fetch = 
+fetch =

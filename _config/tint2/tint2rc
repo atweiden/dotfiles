@@ -56,7 +56,7 @@ systray_background_id = 1
 #---------------------------------------------
 # CLOCK
 #---------------------------------------------
-time1_format = %a, %b %d, %r 
+time1_format = %a, %b %d, %r
 time1_font =  sans 10
 #time1_font = droid sans 8
 #time2_format = %A %d %B
