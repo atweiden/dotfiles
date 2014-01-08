@@ -219,12 +219,6 @@ nmap ;fn /\n\{3,\}/s+1<cr>
 
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
-" highlight whitespace
-nnoremap <leader>w :/\s\+$<CR>
-" remove whitespace
-nnoremap <leader>W :%s/\s\+$//e<CR><silent>:noh<CR>
-" strip whitespace
-map <leader>rmw :call StripWhitespace ()<CR>
 " fix windoze ^M
 noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
