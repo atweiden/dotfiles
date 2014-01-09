@@ -350,7 +350,7 @@
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
-        <command>xlock -mode pacman</command>
+        <command>xlock -mode blank</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>lock</name>
