@@ -1,3 +1,0 @@
-[submodule "_bin"]
-	path = _bin
-	url = git://github.com/atweiden/sysadmin-util.git
