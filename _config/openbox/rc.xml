@@ -430,7 +430,7 @@
     </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
-        <command>slimlock</command>
+        <command>xlock -mode blank</command>
       </action>
     </keybind>
     <keybind key="XF86Sleep">
