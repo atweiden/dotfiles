@@ -314,7 +314,7 @@ nmap <leader>sb :call SplitScroll()<CR>
 " languages {{{
 
 au BufRead,BufNewFile,BufWrite {*.ejs} set ft=html
-au BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mdk} set ft=markdown
+au BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mdk,*.ronn} set ft=markdown
 au BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
 au BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl sw=4 ts=4
 au BufRead,BufNewFile,BufWrite {*.json} set ft=javascript
