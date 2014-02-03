@@ -350,7 +350,7 @@
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
-        <command>xlock -logoutButton 1 -logoutCmd slam -logoutButtonLabel 'Slam' -mode blank</command>
+        <command>xlock -mode blank</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>lock</name>
@@ -430,7 +430,7 @@
     </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
-        <command>xlock -logoutButton 1 -logoutCmd slam -logoutButtonLabel 'Slam' -mode blank</command>
+        <command>xlock -mode blank</command>
       </action>
     </keybind>
     <keybind key="XF86Sleep">
