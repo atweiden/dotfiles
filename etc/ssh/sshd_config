@@ -1,4 +1,4 @@
-#	$OpenBSD: sshd_config,v 1.89 2013/02/06 00:20:42 dtucker Exp $
+#	$OpenBSD: sshd_config,v 1.93 2014/01/10 05:59:19 djm Exp $
 
 # This is the sshd server system-wide configuration file.  See
 # sshd_config(5) for more information.
@@ -24,10 +24,14 @@ Protocol 2
 HostKey /etc/ssh/ssh_host_rsa_key
 HostKey /etc/ssh/ssh_host_dsa_key
 HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
 
 # Lifetime and size of ephemeral version 1 server key
 KeyRegenerationInterval 1h
 ServerKeyBits 4096
+
+# Ciphers and keying
+#RekeyLimit default none
 
 # Logging
 # obsoletes QuietMode and FascistLogging
@@ -98,6 +102,7 @@ UsePAM no
 X11Forwarding no
 X11DisplayOffset 10
 #X11UseLocalhost yes
+#PermitTTY yes
 PrintMotd no # pam does that
 PrintLastLog yes
 TCPKeepAlive yes
@@ -124,6 +129,7 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 #Match User anoncvs
 #	X11Forwarding no
 #	AllowTcpForwarding no
+#	PermitTTY no
 #	ForceCommand cvs server
 
 AllowUsers variable
