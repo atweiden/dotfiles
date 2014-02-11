@@ -14,6 +14,18 @@ zipcode=97210              # Zipcode (f.lux)
 
 
 # -----------------------------------------------------------------------------
+# dirs
+
+mkdir -p $HOME/.src                          \
+         $HOME/Desktop                       \
+         $HOME/Documents                     \
+         $HOME/Downloads                     \
+         $HOME/Graphics                      \
+         $HOME/Music                         \
+         $HOME/Projects
+
+
+# -----------------------------------------------------------------------------
 # backup
 
 for dotfile in $HOME/.ackrc                                                \
