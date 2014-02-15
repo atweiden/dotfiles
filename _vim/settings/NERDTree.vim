@@ -7,4 +7,4 @@ let NERDTreeMouseMode=2              " Use a single click to fold/unfold directo
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 30
-map <leader>n :NERDTreeToggle<CR>
+nmap <F12> :NERDTreeToggle<CR>
