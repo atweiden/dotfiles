@@ -1,0 +1,10 @@
+[Unit]
+Description=Kill all ssh sessions before system turns off
+Before=network.target
+
+[Service]
+Type=simple
+ExecStart=-/usr/lib/systemd/scripts/kill-ssh-sessions
+
+[Install]
+WantedBy=halt.target poweroff.target reboot.target shutdown.target sleep.target
