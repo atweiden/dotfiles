@@ -104,6 +104,29 @@ Example:
 
 
 
+graphite_send
+-------------
+
+A simple script to send a consistent set of metrics & values to a remote
+graphite instance.
+
+The metrics may be extended via small "plugins", which are nothing more
+than shell/perl/ruby/python scripts in a particular directory.
+
+Example:
+
+     graphite_send -v
+
+**NOTE** Some metrics will only be sent if the invoking user is root.
+
+Alternatives
+
+* [collectd](http://collectd.org/)
+* [diamond](https://github.com/BrightcoveOS/Diamond)
+* ..
+
+
+
 maybe
 -----
 
@@ -182,6 +205,24 @@ Requirements:
 
 
 
+pyhttpd
+-------
+
+A simple Python HTTP server, which has been updated to allow it to bind
+to arbitrary IP addresses, specifically to allow you to bind to localhost.
+
+Example:
+
+     $ ./pyhttpd 127.0.0.1:8080
+     Serving HTTP on 0.0.0.0 port 8080 ...
+
+or
+
+     $ ./pyhttpd 8080
+     Serving HTTP on 127.0.0.1 port 8080 ...
+
+
+
 randpass
 --------
 
@@ -222,6 +263,20 @@ Example:
        $ ./since /var/log/messages
        Apr 20 11:24:37 precious skx: testing the log
 
+
+
+ssh-auth-types
+--------------
+
+Show the authentication types presented by a remote SSH server.
+
+Example:
+
+     $ ./ssh-auth-types precious
+     publickey password
+
+     $ ./ssh-auth-types ssh.example.com
+     publickey
 
 
 splay
