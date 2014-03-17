@@ -98,7 +98,7 @@ done
 # vim
 
 mkdir -p $HOME/.vim/{.backups,.swaps,.tmp,.undo,}
-git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle
+#git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle
 
 
 # -----------------------------------------------------------------------------
