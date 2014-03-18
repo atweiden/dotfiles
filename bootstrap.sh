@@ -45,10 +45,11 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.hgignore                                             \
                $HOME/.hgrc                                                 \
                $HOME/.iex                                                  \
+               $HOME/.jshintignore                                         \
                $HOME/.jshintrc                                             \
                $HOME/.psqlrc                                               \
                $HOME/.screenrc                                             \
-               $HOME/.tmux                                                 \
+               $HOME/.tmux.conf                                            \
                $HOME/.vim                                                  \
                $HOME/.vimrc                                                \
                $HOME/.vimencrypt                                           \
@@ -62,35 +63,36 @@ done
 # -----------------------------------------------------------------------------
 # links
 
-for dotfile in _ackrc                                      \
-               _bashrc                                     \
-               _bash_logout                                \
-               _bash_profile                               \
-               _bin                                        \
-               _config                                     \
-               _conkyrc                                    \
-               _conkyrc1                                   \
-               _dunstrc                                    \
-               _functions.d                                \
-               _gitignore                                  \
-               _gitconfig                                  \
-               _gitattributes                              \
-               _gnupg                                      \
-               _hgignore                                   \
-               _hgrc                                       \
-               _iex                                        \
-               _jshintrc                                   \
-               _psqlrc                                     \
-               _screenrc                                   \
-               _tmux                                       \
-               _vim                                        \
-               _vimrc                                      \
-               _vimencrypt                                 \
-               _Xdefaults                                  \
-               _xinitrc                                    \
-               _xsession; do SRC=\"$(readlink -f $dotfile)\"
-                                  DEST=\"$HOME/.${SRC##*_}\"
-                                          ln -s $SRC $DEST;
+for dotfolder in bin         \
+                 config      \
+                 functions.d \
+                 gnupg       \
+                 ssh         \
+                 vim; do cp -R _${dotfolder} ~/.${dotfolder}; done
+
+for dotfile in ackrc         \
+               bash_logout   \
+               bash_profile  \
+               bashrc        \
+               conkyrc       \
+               conkyrc1      \
+               dunstrc       \
+               gitattributes \
+               gitconfig     \
+               gitignore     \
+               hgignore      \
+               hgrc          \
+               iex           \
+               jshintignore  \
+               jshintrc      \
+               psqlrc        \
+               screenrc      \
+               tmux.conf     \
+               vimencrypt    \
+               vimrc         \
+               Xdefaults     \
+               xinitrc       \
+               xsession; do rm ~/.${dotfile}; cp _${dotfile} ~/.${dotfile}; done
 done
 
 
