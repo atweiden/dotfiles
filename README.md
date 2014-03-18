@@ -1,36 +1,25 @@
-# Dotfiles for Arch
+Dotfiles for Arch
+=================
 
-## Installation
+Installation
+------------
 
 ```bash
 git clone https://github.com/atweiden/dotfiles
 cd dotfiles
-chmod u+x bootstrap.sh
 ./bootstrap.sh
 ```
 
-## Usage
 
-### Vim
-
-```bash
-vim
-:BundleInstall
-:Matrix
-```
-
-### Git, Mercurial
-
-```bash
-vim $HOME/.gitconfig $HOME/.hgrc
-```
-
-## Licensing
+Licensing
+---------
 
 This is free and unencumbered public domain software. For more
 information, see http://unlicense.org/ or the accompanying UNLICENSE file.
 
-## Credits
+
+Credits
+-------
 
 - http://apaulodesign.com/vimrc.html
 - http://static.askapache.com/askapache-bash-profile.txt
