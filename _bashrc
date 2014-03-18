@@ -130,4 +130,4 @@ alias google-chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 # -----------------------------------------------------------------------------
 # Functions
 
-[[ -f "~/.functions.d/functions.sh" ]] && ~/.functions.d/functions.sh
+for _fn in `find ~/.functions.d -type f -name "*.sh"`; do . ${_fn}; done
