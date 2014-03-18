@@ -1,12 +1,15 @@
 sysadmin-utils
 ==============
 
-A small collection of scripts that might be useful to sysadmins.
+This repository contains a small collection of scripts that might be
+useful to sysadmins.
 
 Contributions of new scripts are very welcome, as are suggestions for
-things to install.
+things to add or include:
 
-I have a preference for Perl, but that does not rule out code that
+* Distribution-specific tools for modifying Debian Packages, RPMs, or similar are probably best avoided.
+* Scripts with lots of dependencies should be avoided, unless they degrade or fail gracefully.
+* I have a preference for Perl, but that does not not rule out code that
 needs to be compiled, or code in other scripting languages (Python,
 Ruby, etc).
 
@@ -125,6 +128,32 @@ Alternatives
 * [diamond](https://github.com/BrightcoveOS/Diamond)
 * ..
 
+
+ipaddr
+------
+
+Get IP addresses easily, either all IPs, all those which are IPv4/IPv6, or
+those for a device.  Designed primarily for scripting.
+
+Example:
+
+      $ ./ips -4
+      lo 127.0.0.1
+      eth0 80.68.84.102
+      eth0 80.68.84.104
+
+Or to see all IPv6 addreses on eth0:
+
+      $ ipaddr -6 -d eth0
+      eth0 2001:41c8:10b:102::10
+      eth0 fe80::216:3eff:fe08:16a4
+
+**NOTE** Requires compilation via `make build`.
+
+Alternatives:
+
+* `ip -[46] addr  show`
+* `ifconfig -a`
 
 
 maybe
@@ -349,7 +378,7 @@ Trivial (ba)sh alternatives:
 
 
 when-up
-----------
+-------
 
 Waits until a given host is online (determined by ping until executing a given command
 
@@ -397,8 +426,8 @@ be executed and the current User-ID.
 
 Existing alternatives:
 
- * lckdo - Requires you to build your own lockfile name
- * flock - Requires you to build your own lockfile name
+ * lckdo - Requires you to build your own lockfile name.
+ * flock - Requires you to build your own lockfile name.
 
 
 
