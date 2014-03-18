@@ -93,14 +93,12 @@ for dotfile in ackrc         \
                Xdefaults     \
                xinitrc       \
                xsession; do rm ~/.${dotfile}; cp _${dotfile} ~/.${dotfile}; done
-done
 
 
 # -----------------------------------------------------------------------------
 # vim
 
 mkdir -p $HOME/.vim/{.backups,.swaps,.tmp,.undo,}
-#git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle
 
 
 # -----------------------------------------------------------------------------

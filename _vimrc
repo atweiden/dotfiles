@@ -16,14 +16,6 @@ set nofsync
 
 
 " -----------------------------------------------------------------------------
-" Vundle
-
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
-endif
-
-
-" -----------------------------------------------------------------------------
 " Functions
 
 if filereadable(expand("~/.vim/functions.vim"))
