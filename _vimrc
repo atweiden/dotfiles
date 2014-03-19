@@ -163,10 +163,6 @@ set formatoptions+=n
 set formatoptions+=2
 set formatoptions+=l
 set formatoptions+=1
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
 
 
 " -----------------------------------------------------------------------------
