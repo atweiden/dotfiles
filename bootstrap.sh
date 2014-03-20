@@ -56,7 +56,9 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.Xdefaults                                            \
                $HOME/.xinitrc                                              \
                $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
-                                   mv $dotfile ${dotfile}.bak 2>/dev/null;
+                                   if [[ -f $dotfile ]]; then
+                                     mv $dotfile ${dotfile}.bak
+                                   fi
 done
 
 
@@ -68,7 +70,8 @@ for dotfolder in bin         \
                  functions.d \
                  gnupg       \
                  ssh         \
-                 vim; do cp -R _${dotfolder} ~/.${dotfolder}; done
+                 vim; do cp -R _${dotfolder} $HOME/.${dotfolder}
+done
 
 for dotfile in ackrc         \
                bash_logout   \
@@ -92,7 +95,8 @@ for dotfile in ackrc         \
                vimrc         \
                Xdefaults     \
                xinitrc       \
-               xsession; do rm ~/.${dotfile}; cp _${dotfile} ~/.${dotfile}; done
+               xsession; do cp _${dotfile} $HOME/.${dotfile}
+done
 
 
 # -----------------------------------------------------------------------------
