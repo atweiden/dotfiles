@@ -299,6 +299,15 @@ nmap <leader>sb :call SplitScroll()<CR>
 " -----------------------------------------------------------------------------
 " Filetype Settings
 
+" return to last edit position {{{
+
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+" }}}
+
 " languages {{{
 
 au BufRead,BufNewFile,BufWrite {*.ejs} set ft=html
