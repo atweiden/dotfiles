@@ -122,7 +122,8 @@ alias :o='pcmanfm "$PWD" &'
 alias :q='exit'
 alias sg='subgit'
 alias shg='subhg'
-alias h?="history | ack -i"
+alias h?="history | ack -i $@"
+alias p?="ps aux | ack -i $@"
 free='free -m'
 alias google-chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 
