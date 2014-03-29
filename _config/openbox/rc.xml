@@ -359,10 +359,10 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>firefox /usr/share/ab/DOC.html</command>
+        <command>galculator</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>DOC</name>
+          <name>calculator</name>
         </startupnotify>
       </action>
     </keybind>

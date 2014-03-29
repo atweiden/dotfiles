@@ -59,7 +59,7 @@ Super+w$alignr Web Browser
 Super+q$alignr Force Quit
 Super+g$alignr gVim
 Super+l$alignr Lock
-Super+r$alignr Read the DOC
+Super+r$alignr Calculator
 Super+x$alignr Tiling Keybinds
 
 ${font sans-serif:bold:size=8}NETWORK ${hr 2}
