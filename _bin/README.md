@@ -31,6 +31,17 @@ Alternatives:
 
 
 
+archinfo
+--------
+
+Display system information.
+
+Example:
+
+     $ ./archinfo -c yellow
+
+
+
 botg
 ----
 
