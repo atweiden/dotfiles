@@ -1,4 +1,4 @@
-fu! SplitScroll()
+function! SplitScroll()
     :wincmd v
     :wincmd w
     execute "normal! \<C-d>"
