@@ -48,7 +48,7 @@ result = []
 if __name__=='__main__':
  parser = OptionParser(usage='%prog [-c COLOR] [-s, --screenshot]', description='To customize the info displayed on archey, edit "/usr/bin/archey" directly and look for the display array. Note: Archey can only allow up to 15 fields.', version="%prog 0.1.11")
  parser.add_option('-c',
-  action='store', default='yellow', type='choice', dest='color', choices=('black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'), help='choose a color: black, red, green, yellow, blue, magenta, cyan, white [Default: blue]')
+  action='store', default='blue', type='choice', dest='color', choices=('black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'), help='choose a color: black, red, green, yellow, blue, magenta, cyan, white [Default: blue]')
  parser.add_option('-s', '--screenshot',
   action='store_true', dest='screenshot', help='take a screenshot')
  (options, args) = parser.parse_args()
