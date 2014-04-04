@@ -46,8 +46,8 @@ echo "done"
 
 if [[ -d "${1}_old" ]]; then
   echo -n "Copying original files into new directory '$1'... "
-  for _file in `find "${1}_old" -mindepth 1 -maxdepth 1`; do
-    cp -R "$_file" "$1"
+  for _file in `find "${1}_old" -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
+    cp -R "${1}_old""$_file" "$1"
   done
   echo "done"
 fi
