@@ -9,3 +9,4 @@ track.current = True
 
 [extensions]
 fetch =
+color =
