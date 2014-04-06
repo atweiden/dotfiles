@@ -110,8 +110,8 @@ TCPKeepAlive yes
 UsePrivilegeSeparation sandbox		# Default for new installations.
 #PermitUserEnvironment no
 #Compression delayed
-#ClientAliveInterval 0
-#ClientAliveCountMax 3
+ClientAliveInterval 60
+ClientAliveCountMax 3
 UseDNS no
 #PidFile /run/sshd.pid
 #MaxStartups 10:30:100

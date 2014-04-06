@@ -43,6 +43,8 @@ Host *
     MACs hmac-sha2-512,hmac-sha2-256,hmac-ripemd160,hmac-sha1,hmac-md5,hmac-sha1-96,hmac-md5-96,umac-64@openssh.com
     HostKeyAlgorithms ssh-rsa-cert-v01@openssh.com,ssh-rsa-cert-v00@openssh.com,ssh-rsa,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ssh-dss-cert-v01@openssh.com,ssh-dss-cert-v00@openssh.com,ssh-dss
     KexAlgorithms diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
     EscapeChar ~
 #   Tunnel no
 #   TunnelDevice any:any
