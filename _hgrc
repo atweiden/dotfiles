@@ -2,7 +2,7 @@
 username = yourname <youremail>
 editor = vim
 ssh = ssh -C
-ignore = ~/.hgignore
+ignore = $HOME/.hgignore
 
 [web]
 cacerts = /etc/ssl/certs/ca-certificates.crt
@@ -27,26 +27,26 @@ hgext.extdiff =
 hgext.hbisect=
 hgext.mq =
 hgext.record =
-hgext.crecord = ~/.hgext/crecord/
-hgext.remotebranches = ~/.hgext/hg_remotebranches.py
-rdiff = ~/.hgext/hg_rdiff.py
+hgext.crecord = $HOME/.hgext/crecord/
+hgext.remotebranches = $HOME/.hgext/hg_remotebranches.py
+rdiff = $HOME/.hgext/hg_rdiff.py
 
 [alias]
 show = log --stat --color=always -vpr
-slog = log --style=~/.hgmap/map-cmdline.slog
-nlog = log --style=~/.hgmap/map-cmdline.nlog
-sglog = glog --style=~/.hgmap/map-cmdline.sglog
+slog = log --style=$HOME/.hgmap/map-cmdline.slog
+nlog = log --style=$HOME/.hgmap/map-cmdline.nlog
+sglog = glog --style=$HOME/.hgmap/map-cmdline.sglog
 gslog = sglog
-lga = glog --style=~/.hgmap/map-cmdline.lg
+lga = glog --style=$HOME/.hgmap/map-cmdline.lg
 lg = lga --rev 'ancestors(.)'
-dlog = log --style=~/.hgmap/map-cmdline.dlog
+dlog = log --style=$HOME/.hgmap/map-cmdline.dlog
 st = st -S
 og = outgoing -r .
 
 # what did I do
 today = !hg log --template '{rev} {desc|firstline|strip}\n' -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')') and date(-1), -date)"
 lastweek = !hg log --template '{rev} {date|shortdate} {desc|firstline|strip}\n' -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')') and date(-8), -date)"
-changelog = !hg log --style=~/.hgmap/map-cmdline.changelog -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')'), -date)"
+changelog = !hg log --style=$HOME/.hgmap/map-cmdline.changelog -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')'), -date)"
 
 # what points can I update to
 points = !echo '---- Branches' && hg branches; echo '---- Tags' && hg tags; echo '---- Bookmarks' && hg book
