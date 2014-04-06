@@ -33,6 +33,7 @@ Credits
 - https://github.com/jeroenjanssens/dotfiles
 - https://github.com/kernelsmith/env-customization
 - https://github.com/nvie/vimrc
+- https://github.com/phleet/dotfiles
 - https://github.com/sjl/dotfiles
 - https://github.com/smith/vim-config
 - https://github.com/sontek/dotfiles

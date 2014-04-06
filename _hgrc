@@ -4,12 +4,61 @@ editor = vim
 ssh = ssh -C
 ignore = ~/.hgignore
 
+[web]
+cacerts = /etc/ssl/certs/ca-certificates.crt
+
+[diff]
+git = True
+
 [bookmarks]
 track.current = True
 
 [extensions]
-fetch =
 color =
+fetch =
+graphlog =
+pager =
+progress =
+purge =
+rebase =
+shelve =
+hgext.churn =
+hgext.extdiff =
+hgext.hbisect=
+hgext.mq =
+hgext.record =
+hgext.crecord = ~/.hgext/crecord/
+hgext.remotebranches = ~/.hgext/hg_remotebranches.py
+rdiff = ~/.hgext/hg_rdiff.py
+
+[alias]
+show = log --stat --color=always -vpr
+slog = log --style=~/.hgmap/map-cmdline.slog
+nlog = log --style=~/.hgmap/map-cmdline.nlog
+sglog = glog --style=~/.hgmap/map-cmdline.sglog
+gslog = sglog
+lga = glog --style=~/.hgmap/map-cmdline.lg
+lg = lga --rev 'ancestors(.)'
+dlog = log --style=~/.hgmap/map-cmdline.dlog
+st = st -S
+og = outgoing -r .
+
+# what did I do
+today = !hg log --template '{rev} {desc|firstline|strip}\n' -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')') and date(-1), -date)"
+lastweek = !hg log --template '{rev} {date|shortdate} {desc|firstline|strip}\n' -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')') and date(-8), -date)"
+changelog = !hg log --style=~/.hgmap/map-cmdline.changelog -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')'), -date)"
+
+# what points can I update to
+points = !echo '---- Branches' && hg branches; echo '---- Tags' && hg tags; echo '---- Bookmarks' && hg book
+
+# nuke everything in the working copy
+nuke = !hg up -C . && hg clean
+
+# safer push
+nudge = push --rev .
+
+# note: if `hg commit --amend` fails, using retry-commit won't amend
+retry-commit = !EDITOR="vim -c 'r $(hg root)/.hg/last-message.txt'" hg commit
 
 [color]
 status.modified = magenta bold
@@ -18,3 +67,11 @@ status.removed = red bold
 status.deleted = cyan bold
 status.unknown = blue bold
 status.ignored = black bold
+
+[pager]
+pager = LESS='FSRX' less
+attend = annotate, cat, diff, dlog, export, glog, gslog, lg, lga, log, nlog, outgoing, qdiff, sglog, show, slog
+# note: this can be temporarily disabled with `--pager=off`
+
+[progress]
+delay = 1.5

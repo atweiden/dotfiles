@@ -42,7 +42,9 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.gitignore                                            \
                $HOME/.gitattributes                                        \
                $HOME/.gnupg                                                \
+               $HOME/.hgext                                                \
                $HOME/.hgignore                                             \
+               $HOME/.hgmap                                                \
                $HOME/.hgrc                                                 \
                $HOME/.iex                                                  \
                $HOME/.jshintignore                                         \
@@ -69,6 +71,8 @@ for dotfolder in bin         \
                  config      \
                  functions.d \
                  gnupg       \
+                 hgext       \
+                 hgmap       \
                  ssh         \
                  vim; do cp -R _${dotfolder} $HOME/.${dotfolder}
 done
