@@ -58,7 +58,7 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.Xdefaults                                            \
                $HOME/.xinitrc                                              \
                $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
-                                   if [[ -f $dotfile ]]; then
+                                   if [[ -f $dotfile || -d $dotfile ]]; then
                                      mv $dotfile ${dotfile}.bak
                                    fi
 done
