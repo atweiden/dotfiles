@@ -11,13 +11,6 @@ cd dotfiles
 ```
 
 
-Licensing
----------
-
-This is free and unencumbered public domain software. For more
-information, see http://unlicense.org/ or the accompanying UNLICENSE file.
-
-
 Credits
 -------
 
@@ -40,3 +33,10 @@ Credits
 - https://github.com/spf13/spf13-vim
 - https://github.com/wavded/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment
+
+
+Licensing
+---------
+
+This is free and unencumbered public domain software. For more
+information, see http://unlicense.org/ or the accompanying UNLICENSE file.
