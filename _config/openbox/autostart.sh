@@ -2,7 +2,7 @@
 tint2 &
 conky -q &
 volumeicon &
-batti &
+valabattery &
 nitrogen --restore &
 xautolock -secure -time 7 -locker "/usr/bin/xlock -mode blank"  -detectsleep &
 xflux -z 97210 > /dev/null 2>&1 &
