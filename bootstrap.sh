@@ -5,6 +5,12 @@
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
+# constants
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+# -----------------------------------------------------------------------------
 # settings
 
 name="Andy Weidenbaum"     # Name    (GitHub)
@@ -57,10 +63,9 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.vimencrypt                                           \
                $HOME/.Xdefaults                                            \
                $HOME/.xinitrc                                              \
-               $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
-                                   if [[ -f $dotfile || -d $dotfile ]]; then
-                                     mv $dotfile ${dotfile}.bak
-                                   fi
+               $HOME/.xsession; do if [[ -f "$dotfile" || -d "$dotfile" ]]; then
+                                     echo "backing up ${dotfile}"
+                                     mv   "$dotfile" "${dotfile}".bak fi
 done
 
 
@@ -74,7 +79,7 @@ for dotfolder in bin         \
                  hgext       \
                  hgmap       \
                  ssh         \
-                 vim; do cp -R _${dotfolder} $HOME/.${dotfolder}
+                 vim; do cp -R "${DIR}/_${dotfolder}" "$HOME/.${dotfolder}"
 done
 
 for dotfile in ackrc         \
@@ -99,7 +104,7 @@ for dotfile in ackrc         \
                vimrc         \
                Xdefaults     \
                xinitrc       \
-               xsession; do cp _${dotfile} $HOME/.${dotfile}
+               xsession; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
 done
 
 
