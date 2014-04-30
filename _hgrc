@@ -17,6 +17,7 @@ track.current = True
 color =
 fetch =
 graphlog =
+largefiles =
 pager =
 progress =
 purge =
