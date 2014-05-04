@@ -36,6 +36,8 @@ export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$HOME/.bin:$PATH
 # go
 PATH=/usr/lib/go/site/bin:$PATH
+# nimrod
+PATH=$HOME/.babel/bin:$PATH
 # perl
 PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
 # python
