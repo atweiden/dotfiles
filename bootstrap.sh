@@ -42,6 +42,7 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.config                                               \
                $HOME/.conkyrc                                              \
                $HOME/.conkyrc1                                             \
+               $HOME/.curlrc                                               \
                $HOME/.dunstrc                                              \
                $HOME/.functions                                            \
                $HOME/.gitconfig                                            \
@@ -53,6 +54,7 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.hgmap                                                \
                $HOME/.hgrc                                                 \
                $HOME/.iex                                                  \
+               $HOME/.inputrc                                              \
                $HOME/.jshintignore                                         \
                $HOME/.jshintrc                                             \
                $HOME/.psqlrc                                               \
@@ -88,6 +90,7 @@ for dotfile in ackrc         \
                bashrc        \
                conkyrc       \
                conkyrc1      \
+               curlrc        \
                dunstrc       \
                gitattributes \
                gitconfig     \
@@ -95,6 +98,7 @@ for dotfile in ackrc         \
                hgignore      \
                hgrc          \
                iex           \
+               inputrc       \
                jshintignore  \
                jshintrc      \
                psqlrc        \

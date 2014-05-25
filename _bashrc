@@ -17,6 +17,9 @@ export EDITOR=vim
 export FCEDIT=vim
 export VISUAL=vim
 
+# man pages
+export MANPAGER="less -X"
+
 # mode
 set -o vi
 
@@ -61,6 +64,7 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 
 # -----------------------------------------------------------------------------
