@@ -67,7 +67,7 @@ ${font sans-serif:normal:size=8}Host:$alignr$nodename
 ${font sans-serif:normal:size=8}MAC: ${alignr}${wireless_ap wlan0}
 ${font sans-serif:normal:size=8}ESSID: ${alignr}${wireless_essid wlan0}
 ${font sans-serif:normal:size=8}Local IP: ${alignr}${addr wlan0}
-${font sans-serif:normal:size=8}Public IP: ${alignr}${execi 2000 curl 'http://ifconfig.me/'}
+${font sans-serif:normal:size=8}Public IP: ${alignr}${execi 2000 dig +short myip.opendns.com @resolver1.opendns.com}
 ${font sans-serif:normal:size=8}Mode: ${alignr}${wireless_mode wlan0}
 ${font sans-serif:normal:size=8}Connection quality: ${alignr}${wireless_link_qual_perc wlan0}%
 
