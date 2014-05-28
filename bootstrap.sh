@@ -53,7 +53,7 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.hgignore                                             \
                $HOME/.hgmap                                                \
                $HOME/.hgrc                                                 \
-               $HOME/.iex                                                  \
+               $HOME/.iex.exs                                              \
                $HOME/.inputrc                                              \
                $HOME/.jshintignore                                         \
                $HOME/.jshintrc                                             \
@@ -97,7 +97,7 @@ for dotfile in ackrc         \
                gitignore     \
                hgignore      \
                hgrc          \
-               iex           \
+               iex.exs       \
                inputrc       \
                jshintignore  \
                jshintrc      \
