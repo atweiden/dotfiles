@@ -1,19 +1,24 @@
-snippet s "string" b!
-"${1:key}": "${2:value}",
+priority -50
+
+###########################################################################
+# 													JSON UltiSnips																#
+###########################################################################
+
+snippet s "String" b
+"${1:key}": "${0:value}",
 endsnippet
 
-snippet n "number" b!
-"${1:key}": ${2:value},
+snippet n "number" b
+"${1:key}": ${0:value},
 endsnippet
 
-snippet a "array" b!
+snippet a "Array" b
 [
-	${1:${VISUAL}}
+	${VISUAL}$0
 ],
 endsnippet
-
-snippet o "object" b!
+snippet o "Object" b
 {
-	${1:${VISUAL}}
+	${VISUAL}$0
 },
 endsnippet

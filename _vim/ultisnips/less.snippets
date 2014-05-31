@@ -1,3 +1,9 @@
+priority -50
+
+###########################################################################
+# 													LESS UltiSnips																#
+###########################################################################
+
 extends css
 
 snippet @ "variable" b!
@@ -32,8 +38,9 @@ snippet import "@import file;" b!
 @import "${1:styles.less}";
 endsnippet
 
-# Tests
-
+#########
+# Tests #
+#########
 snippet isc "iscolor(...)" w!
 iscolor($1)
 endsnippet
@@ -66,8 +73,9 @@ snippet ise "isem(...)" w!
 isem($1)
 endsnippet
 
-# colors
-
+##########
+# Colors #
+##########
 snippet color "color(@s)" b!
 color($1)
 endsnippet
@@ -127,8 +135,6 @@ endsnippet
 snippet hsl "hsl(hue, sat, light)" b!
 hsl(${1:hue(@color)}, ${2:45%}, ${3:90%})
 endsnippet
-
-# math
 
 snippet round "round(n)" b!
 round(${1:n})

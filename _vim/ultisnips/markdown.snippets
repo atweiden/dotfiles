@@ -1,13 +1,14 @@
+priority -50
+
+###########################################################################
+# 												Markdown UltiSnips															#
+###########################################################################
+
 extends text
 
-snippet * "italics" !b
-*${1:${VISUAL}}*
-endsnippet
-
-snippet ** "bold" !b
-**${1:${VISUAL}}**
-endsnippet
-
+############
+# Headings #
+############
 snippet h "heading" !b
 ${1:Heading}
 `!p snip.rv = len(t[1]) * '='`
@@ -20,39 +21,69 @@ ${1:Sub Heading}
 $0
 endsnippet
 
-snippet s "section" b!
+###########################
+# Sections and Paragraphs #
+###########################
+snippet sec "Section" b
 # ${1:Section Name} #
 $0
 endsnippet
 
-snippet ss "sub section" b!
+snippet ssec "Sub Section" b
 ## ${1:Section Name} ##
 $0
 endsnippet
 
-snippet sss "subsub section" b!
+snippet sssec "SubSub Section" b
 ### ${1:Section Name} ###
 $0
 endsnippet
 
-snippet par "paragraph" b!
+snippet par "Paragraph" b
 #### ${1:Paragraph Name} ####
 $0
 endsnippet
 
-snippet spar "paragraph" b!
+snippet spar "Paragraph" b
 ##### ${1:Paragraph Name} #####
 $0
 endsnippet
 
-snippet link "link" w!
-[${1:${VISUAL:Title}}](${3:http://${2:example.com}})
+##############
+# Formatting #
+##############
+snippet * "italics" !b
+*${1:${VISUAL}}*
 endsnippet
 
-snippet img "image" w!
-![${1:alt}](${2:path}${3/.+/ "/}${3:title}${3/.+/"/})
+snippet ** "bold" !b
+**${1:${VISUAL}}**
+endsnippet
+
+##########
+# Common #
+##########
+snippet link "Link to something"
+[${1:${VISUAL:Text}}](${3:http://${2:www.url.com}})$0
+endsnippet
+
+snippet img "Image"
+![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
 endsnippet
 
 snippet cb "checkbox" w!
 * [ ] ${1:Be sure to do that thing.}$0
 endsnippet
+
+snippet ilc "Inline Code" i
+\`$1\`$0
+endsnippet
+
+snippet cbl "Codeblock" b
+\`\`\`
+$1
+\`\`\`
+$0
+endsnippet
+
+# vim:ft=snippets:

@@ -1,81 +1,155 @@
-global !p
-from snippets import *
-endglobal
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
 
-snippet echo "debug variables" b!
-printf("${2}\n`!p snip.rv = echo(t, '%s')`", ${1});
+priority -50
+
+snippet def "#define ..."
+#define ${1}
 endsnippet
 
-snippet def "#ifndef ... #define ... #endif" b!
+snippet ifndef "#ifndef ... #define ... #endif"
 #ifndef ${1/([A-Za-z0-9_]+).*/$1/}
 #define ${1:SYMBOL} ${2:value}
 #endif
 endsnippet
 
-snippet inc "#include local header" b!
+snippet #if "#if #endif" b
+#if ${1:0}
+${VISUAL}${0}
+#endif
+endsnippet
+
+snippet inc "#include local header (inc)"
 #include "${1:`!p snip.rv = snip.basename + '.h'`}"
 endsnippet
 
-snippet main "int main()" b!
-int main(int argc, char const *argv[]) {
-	${VISUAL}$0
+snippet Inc "#include <> (Inc)"
+#include <${1:.h}>
+endsnippet
+
+snippet mark "#pragma mark (mark)"
+#if 0
+${1:#pragma mark -
+}#pragma mark $2
+#endif
+
+$0
+endsnippet
+
+snippet main "main() (main)"
+int main(int argc, char *argv[])
+{
+	${VISUAL}${0}
 	return 0;
 }
 endsnippet
 
-snippet for "for (init; condition; incr)" b!
-for (${4:size_t} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
-	${VISUAL}$0
+snippet for "for loop (for)"
+for (${2:i} = 0; $2 < ${1:count}; ${3:++$2})
+{
+	${VISUAL}${0}
 }
 endsnippet
 
-snippet enum "enum name" b!
-enum ${1:name} {$0};
+snippet fori "for int loop (fori)"
+for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2})
+{
+	${VISUAL}${0}
+}
 endsnippet
 
-snippet once "include guard" b!
+snippet enum "Enumeration"
+enum ${1:name} { $0 };
+endsnippet
+
+snippet once "Include header once only guard"
 #ifndef ${1:`!p
 if not snip.c:
-    import random, string
-    name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
-    rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
-    snip.rv = ('%s_%s' % (name,rand)).upper()
+	import random, string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+	snip.rv = ('%s_%s' % (name,rand)).upper()
 else:
-    snip.rv = snip.c`}
+	snip.rv = snip.c`}
 #define $1
 
-${VISUAL}$0
+${0}
 
 #endif /* end of include guard: $1 */
 
 endsnippet
 
-snippet typedef "typedef type name" b!
+snippet td "Typedef"
 typedef ${1:int} ${2:MyCustomType};
 endsnippet
 
-snippet do "do ... while (condition)" b!
-do {
-	${VISUAL}$0
-} while(${1:1 == 1});
-endsnippet
-
-snippet fprintf "fprintf()" b!
-fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
-endsnippet
-
-snippet if "if (condition)" b!
-if (${1:1 == 1}) {
-	${VISUAL}$0
+snippet wh "while loop"
+while(${1:/* condition */}) {
+	${VISUAL}${0}
 }
 endsnippet
 
-snippet printf "printf()"
+snippet do "do...while loop (do)"
+do {
+	${VISUAL}${0}
+} while(${1:/* condition */});
+endsnippet
+
+snippet fprintf "fprintf ..."
+fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet if "if .. (if)"
+if (${1:/* condition */})
+{
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet el "else .. (else)"
+else {
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet eli "else if .. (eli)"
+else if (${1:/* condition */}) {
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet ife "if .. else (ife)"
+if (${1:/* condition */})
+{
+	${2}
+}
+else
+{
+	${3:/* else */}
+}
+endsnippet
+
+snippet printf "printf .. (printf)"
 printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
-snippet struct "struct name" b!
-struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
-	${VISUAL}$0
+snippet st "struct"
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`}
+{
+	${0:/* data */}
 };
 endsnippet
+
+snippet fun "function" b
+${1:void} ${2:function_name}(${3})
+{
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet fund "function declaration" b
+${1:void} ${2:function_name}(${3});
+endsnippet
+
+# vim:ft=snippets:

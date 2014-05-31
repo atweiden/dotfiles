@@ -1,3 +1,11 @@
+priority -50
+
+###########################################################################
+# 													TeX UltiSnips																	#
+###########################################################################
+
+extends texmath
+
 snippet r "\ref{}" i
 \ref{$1}
 endsnippet
@@ -8,25 +16,34 @@ snippet "b(egin)?" "begin{} / end{}" br
 \end{$1}
 endsnippet
 
-snippet tab
+snippet tab "tabular / array environment" b
 \begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
 $0${2/((?<=.)c|l|r)|./(?1: & )/g}
 \end{$1${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
 endsnippet
 
-snippet enum "enumerate" b
+snippet fig "Figure environment" b
+\begin{figure}${2:[htpb]}
+	\centering
+	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+	\caption{${4/(\w+)\.\w+/\u$1/}$0}
+	\label{fig:${4/(\w+)\.\w+/$1/}}
+\end{figure}
+endsnippet
+
+snippet enum "Enumerate" b
 \begin{enumerate}
 	\item $0
 \end{enumerate}
 endsnippet
 
-snippet item "itemize" b
+snippet item "Itemize" b
 \begin{itemize}
 	\item $0
 \end{itemize}
 endsnippet
 
-snippet desc "description" b
+snippet desc "Description" b
 \begin{description}
 	\item[$1] $0
 \end{description}
@@ -66,6 +83,73 @@ snippet mat "smart matrix"
 \end{$1matrix}
 endsnippet
 
+snippet it "Individual item" b
+\item ${1}
+$0
+endsnippet
+
+snippet part "Part" b
+\part{${1:part name}}
+\label{prt:${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/ga}}}
+
+${0}
+endsnippet
+
+snippet cha "Chapter" b
+\chapter{${1:chapter name}}
+\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet sec "Section" b
+\section{${1:section name}}
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet sub "Subsection" b
+\subsection{${1:subsection name}}
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet ssub "Subsubsection" b
+\subsubsection{${1:subsubsection name}}
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet par "Paragraph" b
+\paragraph{${1:paragraph name}}
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet subp "Subparagraph" b
+\subparagraph{${1:subparagraph name}}
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet ni "Non-indented paragraph" b
+\noindent
+${0}
+endsnippet
+
+snippet pac "Package" b
+\usepackage[${1:options}]{${2:package}}$0
+endsnippet
+
+snippet lp "Long parenthesis"
+\left(${1:${VISUAL:contents}}\right)$0
+endsnippet
+
 snippet lr( "left( right)" i
 \left( ${0:${VISUAL}} \right)
 endsnippet
@@ -74,66 +158,4 @@ snippet lr| "left| right|" i
 \left| ${0:${VISUAL}} \right|
 endsnippet
 
-snippet part "part" b
-\part{${1:part name}}
-\label{prt:${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}}
-
-${0:${VISUAL}}
-
-% part $2 (end)
-endsnippet
-
-snippet cha "chapter" b
-\chapter{${1:chapter name}}
-\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
-
-${0:${VISUAL}}
-
-% chapter $2 (end)
-endsnippet
-
-snippet sec "section" b
-\section{${1:section name}}
-\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
-
-${0:${VISUAL}}
-
-% section $2 (end)
-endsnippet
-
-snippet sub "subsection" b
-\subsection{${1:subsection name}}
-\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
-
-${0:${VISUAL}}
-
-% subsection $2 (end)
-endsnippet
-
-snippet ssub "subsubsection" b
-\subsubsection{${1:subsubsection name}}
-\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
-
-${0:${VISUAL}}
-
-% subsubsection $2 (end)
-
-endsnippet
-
-snippet par "paragraph" b
-\paragraph{${1:paragraph name}}
-\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
-
-${0:${VISUAL}}
-
-% paragraph $2 (end)
-endsnippet
-
-snippet subp "subparagraph" b
-\subparagraph{${1:subparagraph name}}
-\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/g}}}
-
-${0:${VISUAL}}
-
-% subparagraph $2 (end)
-endsnippet
+# vim:ft=snippets:

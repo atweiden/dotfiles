@@ -1,41 +1,70 @@
+priority -50
+
+###########################################################################
+# 												 Shell UltiSnips															  #
+###########################################################################
+
 global !p
-from snippets import *
+import vim
+
+# Tests for the existence of a variable declared by Vim's filetype detection
+# suggesting the type of shell script of the current file
+def testShell(scope, shell):
+	return vim.eval("exists('" + scope + ":is_" + shell + "')")
+
+# Loops over the possible variables, checking for global variables
+# first since they indicate an override by the user.
+def getShell():
+	for scope in ["g", "b"]:
+		for shell in ["bash", "posix", "sh", "kornshell"]:
+			if testShell(scope, shell) == "1":
+				if shell == "kornshell":
+					return "ksh"
+				if shell == "posix":
+					return "sh"
+				return shell
+	return "sh"
 endglobal
 
-snippet #! "shebang line" b!
-#!/usr/bin/env ${1:`!p snip.rv = snip.ft`}
-$0
+snippet #!
+`!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
 endsnippet
 
-snippet echo "debug variables" b!
-printf "$2`!p snip.rv = echo(t, '%s', ' ')`" $1
+snippet !env "#!/usr/bin/env (!env)"
+`!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n\n" `
 endsnippet
 
-snippet main "main" b!
-usage() {
-	echo "${1:does some neat stuff}" >&2
-	echo "usage: $(basename "\$0")"
-	exit \${1:-0}
-}
+snippet temp "Tempfile"
+${1:TMPFILE}="$(mktemp -t ${2:`!p
+snip.rv = re.sub(r'[^a-zA-Z]', '_', snip.fn) or "untitled"
+`})"
+${3:${4/(.+)/trap "/}${4:rm -f '$${1/.*\s//}'}${4/(.+)/" 0               # EXIT\n/}${5/(.+)/trap "/}${5:rm -f '$${1/.*\s//}'; exit 1}${5/(.+)/" 2       # INT\n/}${6/(.+)/trap "/}${6:rm -f '$${1/.*\s//}'; exit 1}${6/(.+)/" 1 15    # HUP TERM\n/}}
 
-unset OPTIND
-while getopts ":h$2" option; do
-	case $option in$3
-		h) usage 0 ;;
-		*) usage 1 ;;
-	esac
-done && shift $(($OPTIND - 1))
-$0
 endsnippet
 
-snippet f "function" b!
-${1:name}() {
-	${0:${VISUAL}}
-}
+snippet case "case .. esac (case)"
+case ${1:word} in
+	${2:pattern} )
+		$0;;
+esac
 endsnippet
 
-snippet $ "${variable}" i!
-$${1:{}$2`!p snip.rv = pair(t[1])`
+snippet for "for ... done (for)"
+for (( i = 0; i < ${1:10}; i++ )); do
+	${0:#statements}
+done
+endsnippet
+
+snippet forin "for ... in ... done (forin)"
+for ${1:i}${2/.+/ in /}${2:words}; do
+	${0:#statements}
+done
+endsnippet
+
+snippet here "here document (here)"
+<<-${2:'${1:TOKEN}'}
+	$0
+${1/['"`](.+)['"`]/$1/}
 endsnippet
 
 snippet [[ "[[ condition ]]" w!
@@ -46,15 +75,15 @@ snippet (( "(( condition ))" w!
 (( ${1:condition} ))
 endsnippet
 
-snippet if "if [[ condition ]]; then ... fi" b!
-if [[ ${1:condition} ]]; then
-	${0:${VISUAL}}
+snippet if "if ... then (if)"
+if ${2:[[ ${1:condition} ]]}; then
+	${0:#statements}
 fi
 endsnippet
 
-snippet elif "elif [[ condition ]]; then ..." b!
-elif [[ ${1:condition} ]]; then
-	${0:${VISUAL}}
+snippet elif "elif .. (elif)"
+elif ${2:[[ ${1:condition} ]]}; then
+	${0:#statements}
 endsnippet
 
 snippet else "else ..." b!
@@ -62,36 +91,125 @@ else
 	${0:${VISUAL}}
 endsnippet
 
-snippet for "for (( init; condition; incr )); do ... done" b!
-for (( ${2:i}=0; $2<${1:count}; $2++ )); do
-	${0:${VISUAL}}
+snippet until "until ... (done)"
+until ${2:[[ ${1:condition} ]]}; do
+	${0:#statements}
 done
 endsnippet
 
-snippet each "for item in array; do ... done" b!
-for ${1:item} in ${2:"$@"}; do
-	${0:${VISUAL}}
+snippet while "while ... (done)"
+while ${2:[[ ${1:condition} ]]}; do
+	${0:#statements}
 done
 endsnippet
 
-snippet while "while [[ condition ]]; do ... done" b!
-while [[ ${1:condition} ]]; do
-	${0:${VISUAL}}
-done
+snippet echo "debug variables" b!
+printf "$2`!p snip.rv = echo(t, '%s', ' ')`" $1
 endsnippet
 
-snippet until "until [[ condition ]]; do ... done" b!
-until [[ ${1:condition} ]]; do
-	${0:${VISUAL}}
-done
-endsnippet
+snippet main "main" b!
+usage() {
+	cat <<- EOF
+	usage: $PROGNAME options
 
-snippet case "case variable in ... esac" b!
-case ${1:word} in
-	${0:${VISUAL}}
-esac
+	${1:Program deletes files from filesystems to release space.
+	It gets config file that define fileystem paths to work on, and whitelist rules to
+	keep certain files.}
+
+	OPTIONS:
+	   -c --config              configuration file containing the rules. use --help-config to see the syntax.
+	   -n --pretend             do not really delete, just how what you are going to do.
+	   -t --test                run unit test to check the program
+	   -v --verbose             Verbose. You can specify more then one -v to have more verbose
+	   -x --debug               debug
+	   -h --help                show this help
+	      --help-config         configuration help
+
+
+	Examples:
+	   Run all tests:
+	   $PROGNAME --test all
+
+	   Run specific test:
+	   $PROGNAME --test test_string.sh
+
+	   Run:
+	   $PROGNAME --config /path/to/config/$PROGNAME.conf
+
+	   Just show what you are going to do:
+	   $PROGNAME -vn -c /path/to/config/$PROGNAME.conf
+	EOF
+}
+
+cmdline() {
+    # got this idea from here:
+    # http://kirk.webfinish.com/2009/10/bash-shell-script-to-use-getopts-with-gnu-style-long-positional-parameters/
+    local arg=
+    for arg
+    do
+        local delim=""
+        case "$arg" in
+            #translate --gnu-long-options to -g (short options)
+            --config)         args="${args}-c ";;
+            --pretend)        args="${args}-n ";;
+            --test)           args="${args}-t ";;
+            --help-config)    usage_config && exit 0;;
+            --help)           args="${args}-h ";;
+            --verbose)        args="${args}-v ";;
+            --debug)          args="${args}-x ";;
+            #pass through anything else
+            *) [[ "${arg:0:1}" == "-" ]] || delim="\""
+                args="${args}${delim}${arg}${delim} ";;
+        esac
+    done
+
+    #Reset the positional parameters to the short options
+    eval set -- $args
+
+    unset OPTIND
+    while getopts "nvhxt:c:" OPTION
+    do
+         case $OPTION in
+         v)
+             readonly VERBOSE=1
+             ;;
+         h)
+             usage
+             exit 0
+             ;;
+         x)
+             readonly DEBUG='-x'
+             set -x
+             ;;
+         t)
+             RUN_TESTS=$OPTARG
+             verbose VINFO "Running tests"
+             ;;
+         c)
+             readonly CONFIG_FILE=$OPTARG
+             ;;
+         n)
+             readonly PRETEND=1
+             ;;
+        esac
+    done && shift $(($OPTIND - 1))
+
+    if [[ $recursive_testing || -z $RUN_TESTS ]]; then
+        [[ ! -f $CONFIG_FILE ]] \
+            && eexit "You must provide --config file"
+    fi
+    return 0
+}
+
+main() {
+    cmdline $ARGS
+}
+main
+$0
 endsnippet
 
 snippet trap "trap" b!
 trap ${1:cleanup} INT TERM EXIT
 endsnippet
+
+# vim:ft=snippets:

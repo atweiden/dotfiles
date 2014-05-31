@@ -1,34 +1,40 @@
-snippet #! "shebang line" b!
+priority -50
+
+###########################################################################
+# 													Lua UltiSnips																	#
+###########################################################################
+
+snippet #! "Shebang header" b
 #!/usr/bin/env lua
 $0
 endsnippet
 
-snippet function "function name(arguments) ... end" b!
-function ${1:name}(${2:args})
-	${0:${VISUAL}}
+snippet !fun(ction)?! "New function" br
+function ${1:new_function}(${2:args})
+	$0
 end
 endsnippet
 
-snippet forp "for name, value in pairs(table) do ... end" b!
-for ${1:name},${2:value} in pairs(${3:table}) do
-	${0:${VISUAL}}
+snippet forp "pair for loop" b
+for ${1:name},${2:val} in pairs(${3:table_name}) do
+	$0
 end
 endsnippet
 
-snippet fori "for name, value in ipairs(table) do ... end" b!
+snippet fori "ipair for foop" b
 for ${1:idx},${2:val} in ipairs(${3:table_name}) do
-	${0:${VISUAL}}
+	$0
 end
 endsnippet
 
-snippet for "for first, last, [step] do ... end" b!
+snippet for "numeric for loop" b
 for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
-	${0:${VISUAL}}
+	$0
 end
 endsnippet
 
-snippet local "local var = value"
+snippet local "local x = 1"
 local ${1:x} = ${0:1}
 endsnippet
 
-# vim:set ft=snippets:
+# vim:ft=snippets:
