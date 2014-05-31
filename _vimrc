@@ -8,6 +8,7 @@
 
 set nocompatible
 let mapleader=","
+nnoremap Q <nop>
 set shortmess=aIoO
 set mouse=a
 set mousemodel=popup_setpos
