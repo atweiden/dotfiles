@@ -8,15 +8,15 @@ priority -50
 
 snippet clearfix "clearfix"
 .clearfix
-  zoom: 1
+	zoom: 1
 
 .clearfix:before
 .clearfix:after
-  content: ""
-  display: table
+	content: ""
+	display: table
 
 .clearfix:after
-  clear: both
+	clear: both
 endsnippet
 
 snippet round "round"
@@ -37,30 +37,30 @@ endsnippet
 
 snippet animation "animation"
 .${1:anim}:hover
-  -webkit-animation: $1 ${2:5s} ${3:infinite}
-  -moz-animation: $1 $2 $3
-  -ms-animation: $1 $2 $3
-  -o-animation: $1 $2 $3
+	-webkit-animation: $1 ${2:5s} ${3:infinite}
+	-moz-animation: $1 $2 $3
+	-ms-animation: $1 $2 $3
+	-o-animation: $1 $2 $3
 
 @-webkit-keyframes $1
-  ${4:0}%   { opacity: ${7:0.0} }
-  ${5:50}%  { opacity: ${8:0.5} }
-  ${6:100}% { opacity: ${9:1.0} }
+	${4:0}%   { opacity: ${7:0.0} }
+	${5:50}%  { opacity: ${8:0.5} }
+	${6:100}% { opacity: ${9:1.0} }
 
 @-moz-keyframes $1
-  $4%    { opacity: $7 }
-  $5%    { opacity: $8 }
-  $6%    { opacity: $9 }
+	$4%    { opacity: $7 }
+	$5%    { opacity: $8 }
+	$6%    { opacity: $9 }
 
 @-ms-keyframes $1
-  $4%   { opacity: $7 }
-  $5%   { opacity: $8 }
-  $6%   { opacity: $9 }
+	$4%   { opacity: $7 }
+	$5%   { opacity: $8 }
+	$6%   { opacity: $9 }
 
 @-o-keyframes $1
-  $4%   { opacity: $7 }
-  $5%   { opacity: $8 }
-  $6%   { opacity: $9 }
+	$4%   { opacity: $7 }
+	$5%   { opacity: $8 }
+	$6%   { opacity: $9 }
 endsnippet
 
 snippet rotate "rotate"
@@ -118,14 +118,14 @@ endsnippet
 
 snippet fontface "fontface"
 @font-face
-  font-family: '${1:FontName}'
-  src: url('${2:../fonts/FontName}.eot') format('eot'),
-  src: url('$2.eot?iefix:../fonts/FontName.eot?iefix') format('eot'),
-       url('$2:../fonts/FontName.svg#webfontZam02nTh') format('svg'),
-       url('$2.ttf') format('truetype'),
-       url('$2.woff') format('woff')
-  font-weight: normal
-  font-style: normal
+	font-family: '${1:FontName}'
+	src: url('${2:../fonts/FontName}.eot') format('eot'),
+	src: url('$2.eot?iefix:../fonts/FontName.eot?iefix') format('eot'),
+			 url('$2:../fonts/FontName.svg#webfontZam02nTh') format('svg'),
+			 url('$2.ttf') format('truetype'),
+			 url('$2.woff') format('woff')
+	font-weight: normal
+	font-style: normal
 endsnippet
 
 snippet columns "columns"

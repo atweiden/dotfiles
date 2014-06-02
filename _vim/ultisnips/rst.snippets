@@ -153,7 +153,7 @@ endsnippet
 
 snippet title "title" b!
 `!p snip.rv = (len(t[1]) + 2) * '='`
- ${1:Document Title}
+${1:Document Title}
 `!p snip.rv = (len(t[1]) + 2) * '='`
 
 $0
@@ -161,7 +161,7 @@ endsnippet
 
 snippet stitle "subtitle" b!
 `!p snip.rv = (len(t[1]) + 2) * '-'`
- ${1:Subtitle}
+${1:Subtitle}
 `!p snip.rv = (len(t[1]) + 2) * '-'`
 
 $0
@@ -262,7 +262,7 @@ endsnippet
 
 snippet def "definition" b!
 ${1:Name}
-  ${2:${VISUAL:This is the definition.}}
+	${2:${VISUAL:This is the definition.}}
 endsnippet
 
 snippet img "image" w!
@@ -271,9 +271,9 @@ endsnippet
 
 snippet img "image (detailed)" w!
 .. image:: ${1:image.png}
-   :width: ${2:400}
-   :height: ${3:300}
-   :alt: ${4:This is some image}
+	 :width: ${2:400}
+	 :height: ${3:300}
+	 :alt: ${4:This is some image}
 endsnippet
 
 # match snippets :

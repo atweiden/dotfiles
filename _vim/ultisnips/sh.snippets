@@ -39,7 +39,6 @@ ${1:TMPFILE}="$(mktemp -t ${2:`!p
 snip.rv = re.sub(r'[^a-zA-Z]', '_', snip.fn) or "untitled"
 `})"
 ${3:${4/(.+)/trap "/}${4:rm -f '$${1/.*\s//}'}${4/(.+)/" 0               # EXIT\n/}${5/(.+)/trap "/}${5:rm -f '$${1/.*\s//}'; exit 1}${5/(.+)/" 2       # INT\n/}${6/(.+)/trap "/}${6:rm -f '$${1/.*\s//}'; exit 1}${6/(.+)/" 1 15    # HUP TERM\n/}}
-
 endsnippet
 
 snippet case "case .. esac (case)"
@@ -138,71 +137,71 @@ usage() {
 
 	   Just show what you are going to do:
 	   $PROGNAME -vn -c /path/to/config/$PROGNAME.conf
-	EOF
+EOF
 }
 
 cmdline() {
-    # got this idea from here:
-    # http://kirk.webfinish.com/2009/10/bash-shell-script-to-use-getopts-with-gnu-style-long-positional-parameters/
-    local arg=
-    for arg
-    do
-        local delim=""
-        case "$arg" in
-            #translate --gnu-long-options to -g (short options)
-            --config)         args="${args}-c ";;
-            --pretend)        args="${args}-n ";;
-            --test)           args="${args}-t ";;
-            --help-config)    usage_config && exit 0;;
-            --help)           args="${args}-h ";;
-            --verbose)        args="${args}-v ";;
-            --debug)          args="${args}-x ";;
-            #pass through anything else
-            *) [[ "${arg:0:1}" == "-" ]] || delim="\""
-                args="${args}${delim}${arg}${delim} ";;
-        esac
-    done
+		# got this idea from here:
+		# http://kirk.webfinish.com/2009/10/bash-shell-script-to-use-getopts-with-gnu-style-long-positional-parameters/
+		local arg=
+		for arg
+		do
+				local delim=""
+				case "$arg" in
+						#translate --gnu-long-options to -g (short options)
+						--config)         args="${args}-c ";;
+						--pretend)        args="${args}-n ";;
+						--test)           args="${args}-t ";;
+						--help-config)    usage_config && exit 0;;
+						--help)           args="${args}-h ";;
+						--verbose)        args="${args}-v ";;
+						--debug)          args="${args}-x ";;
+						#pass through anything else
+						*) [[ "${arg:0:1}" == "-" ]] || delim="\""
+								args="${args}${delim}${arg}${delim} ";;
+				esac
+		done
 
-    #Reset the positional parameters to the short options
-    eval set -- $args
+		#Reset the positional parameters to the short options
+		eval set -- $args
 
-    unset OPTIND
-    while getopts "nvhxt:c:" OPTION
-    do
-         case $OPTION in
-         v)
-             readonly VERBOSE=1
-             ;;
-         h)
-             usage
-             exit 0
-             ;;
-         x)
-             readonly DEBUG='-x'
-             set -x
-             ;;
-         t)
-             RUN_TESTS=$OPTARG
-             verbose VINFO "Running tests"
-             ;;
-         c)
-             readonly CONFIG_FILE=$OPTARG
-             ;;
-         n)
-             readonly PRETEND=1
-             ;;
-        esac
-    done && shift $(($OPTIND - 1))
+		unset OPTIND
+		while getopts "nvhxt:c:" OPTION
+		do
+				case $OPTION in
+				v)
+						readonly VERBOSE=1
+						;;
+				h)
+						usage
+						exit 0
+						;;
+				x)
+						readonly DEBUG='-x'
+						set -x
+						;;
+				t)
+						RUN_TESTS=$OPTARG
+						verbose VINFO "Running tests"
+						;;
+				c)
+						readonly CONFIG_FILE=$OPTARG
+						;;
+				n)
+						readonly PRETEND=1
+						;;
+				esac
+		done && shift $(($OPTIND - 1))
 
-    if [[ $recursive_testing || -z $RUN_TESTS ]]; then
-        [[ ! -f $CONFIG_FILE ]] \
-            && eexit "You must provide --config file"
-    fi
-    return 0
+		if [[ $recursive_testing || -z $RUN_TESTS ]]; then
+				[[ ! -f $CONFIG_FILE ]] \
+						&& exit "You must provide --config file"
+		fi
+		return 0
 }
 
 main() {
-    cmdline $ARGS
+		cmdline $ARGS
 }
 main
 $0

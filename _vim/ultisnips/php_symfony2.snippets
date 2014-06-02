@@ -19,8 +19,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * ${1:@author `whoami`}
- */
+	* ${1:@author `whoami`}
+	*/
 class `!p
 snip.rv = re.match(r'.*(?=\.)', fn).group()
 ` extends Controller
@@ -30,10 +30,10 @@ endsnippet
 
 snippet act "Symfony2 action" b
 /**
- * @Route("${3}", name="${4}")
- * @Method({${5:"POST"}})
- * @Template()
- */
+	* @Route("${3}", name="${4}")
+	* @Method({${5:"POST"}})
+	* @Template()
+	*/
 public function ${1}Action(${2})
 {
 	${6}
@@ -42,10 +42,10 @@ endsnippet
 
 snippet actt "Symfony2 action and template" b
 /**
- * @Route("${3}", name="${4}")
- * @Method({${5:"GET"}})
- * @Template()
- */
+	* @Route("${3}", name="${4}")
+	* @Method({${5:"GET"}})
+	* @Template()
+	*/
 public function ${1}Action(${2})
 {
 	${6}
@@ -81,8 +81,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * ${3:@author `whoami`}
- */
+	* ${3:@author `whoami`}
+	*/
 class `!p
 snip.rv = re.match(r'.*(?=\.)', fn).group()
 ` extends ContainerAwareCommand
@@ -114,8 +114,8 @@ if m:
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * ${1:@author `whoami`}
- */
+	* ${1:@author `whoami`}
+	*/
 class `!p
 snip.rv = re.match(r'.*(?=\.)', fn).group()
 ` implements EventSubscriberInterface
@@ -146,8 +146,8 @@ use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 
 /**
- * ${3:@author `whoami`}
- */
+	* ${3:@author `whoami`}
+	*/
 class `!p
 snip.rv = re.match(r'.*(?=\.)', fn).group()
 ` implements DataTransformerInterface
@@ -179,15 +179,15 @@ if m:
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ${3:@author `whoami`}
- *
- * @ORM\Entity()
- * @ORM\Table(name="`!p
+	* ${3:@author `whoami`}
+	*
+	* @ORM\Entity()
+	* @ORM\Table(name="`!p
 tmp = re.match(r'.*(?=\.)', fn).group()
 tmp = re.sub(r'\B([A-Z])', r'_\1', tmp)
 snip.rv = tmp.lower()
 `")
- */
+	*/
 `!p
 m = re.search(r'Abstract', path)
 if m:
@@ -218,8 +218,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * ${2:@author `whoami`}
- */
+	* ${2:@author `whoami`}
+	*/
 class `!p
 snip.rv = re.match(r'.*(?=\.)', fn).group()
 ` extends AbstractType
@@ -260,8 +260,8 @@ if m:
 use Symfony\Component\EventDispatcher\Event;
 
 /**
- * ${2:@author `whoami`}
- */
+	* ${2:@author `whoami`}
+	*/
 class `!p
 snip.rv = re.match(r'.*(?=\.)', fn).group()
 ` extends Event
