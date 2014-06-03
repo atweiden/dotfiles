@@ -65,9 +65,10 @@ for dotfile in $HOME/.ackrc                                                \
                $HOME/.vimencrypt                                           \
                $HOME/.Xdefaults                                            \
                $HOME/.xinitrc                                              \
-               $HOME/.xsession; do if [[ -f "$dotfile" || -d "$dotfile" ]]; then
-                                     echo "backing up ${dotfile}"
-                                     mv   "$dotfile" "${dotfile}".bak fi
+               $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
+                                   if [[ -f $dotfile || -d $dotfile ]]; then
+                                     mv $dotfile ${dotfile}.bak
+                                   fi
 done
 
 
