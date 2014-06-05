@@ -22,52 +22,53 @@ zipcode=97210              # Zipcode (f.lux)
 # -----------------------------------------------------------------------------
 # dirs
 
-mkdir -p $HOME/.src                          \
-         $HOME/Desktop                       \
-         $HOME/Documents                     \
-         $HOME/Downloads                     \
-         $HOME/Graphics                      \
-         $HOME/Music                         \
+mkdir -p $HOME/.src                 \
+         $HOME/Desktop              \
+         $HOME/Documents            \
+         $HOME/Downloads            \
+         $HOME/Graphics             \
+         $HOME/Music                \
          $HOME/Projects
 
 
 # -----------------------------------------------------------------------------
 # backup
 
-for dotfile in $HOME/.ackrc                                                \
-               $HOME/.bashrc                                               \
-               $HOME/.bash_logout                                          \
-               $HOME/.bash_profile                                         \
-               $HOME/.bin                                                  \
-               $HOME/.config                                               \
-               $HOME/.conkyrc                                              \
-               $HOME/.conkyrc1                                             \
-               $HOME/.curlrc                                               \
-               $HOME/.dunstrc                                              \
-               $HOME/.functions                                            \
-               $HOME/.gitconfig                                            \
-               $HOME/.gitignore                                            \
-               $HOME/.gitattributes                                        \
-               $HOME/.gnupg                                                \
-               $HOME/.hgext                                                \
-               $HOME/.hgignore                                             \
-               $HOME/.hgmap                                                \
-               $HOME/.hgrc                                                 \
-               $HOME/.iex.exs                                              \
-               $HOME/.inputrc                                              \
-               $HOME/.jshintignore                                         \
-               $HOME/.jshintrc                                             \
-               $HOME/.psqlrc                                               \
-               $HOME/.screenrc                                             \
-               $HOME/.tmux.conf                                            \
-               $HOME/.vim                                                  \
-               $HOME/.vimrc                                                \
-               $HOME/.vimencrypt                                           \
-               $HOME/.Xdefaults                                            \
-               $HOME/.xinitrc                                              \
-               $HOME/.xsession; do echo "backing up $dotfile (if it exists)"
-                                   if [[ -f $dotfile || -d $dotfile ]]; then
-                                     mv $dotfile ${dotfile}.bak
+for dotfile in $HOME/.ackrc         \
+               $HOME/.bashrc        \
+               $HOME/.bash_logout   \
+               $HOME/.bash_profile  \
+               $HOME/.bin           \
+               $HOME/.config        \
+               $HOME/.conkyrc       \
+               $HOME/.conkyrc1      \
+               $HOME/.curlrc        \
+               $HOME/.dunstrc       \
+               $HOME/.functions     \
+               $HOME/.gitconfig     \
+               $HOME/.gitignore     \
+               $HOME/.gitattributes \
+               $HOME/.gnupg         \
+               $HOME/.hgext         \
+               $HOME/.hgignore      \
+               $HOME/.hgmap         \
+               $HOME/.hgrc          \
+               $HOME/.iex.exs       \
+               $HOME/.inputrc       \
+               $HOME/.jshintignore  \
+               $HOME/.jshintrc      \
+               $HOME/.psqlrc        \
+               $HOME/.screenrc      \
+               $HOME/.tmux.conf     \
+               $HOME/.vim           \
+               $HOME/.vimrc         \
+               $HOME/.vimrc.lite    \
+               $HOME/.vimencrypt    \
+               $HOME/.Xdefaults     \
+               $HOME/.xinitrc       \
+               $HOME/.xsession; do echo "backing up ${dotfile} (if it exists)"
+                                   if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
+                                     mv "${dotfile}" "${dotfile}".bak
                                    fi
 done
 
@@ -107,6 +108,7 @@ for dotfile in ackrc         \
                tmux.conf     \
                vimencrypt    \
                vimrc         \
+               vimrc.lite    \
                Xdefaults     \
                xinitrc       \
                xsession; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
