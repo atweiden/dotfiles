@@ -37,6 +37,7 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 set modelines=0
+set nrformats=
 set viminfo='100,<50,s10,h,!
 rviminfo
 
