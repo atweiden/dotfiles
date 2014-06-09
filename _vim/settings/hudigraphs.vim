@@ -1,1 +1,2 @@
-inoremap <expr>  <C-K>   HUDG_GetDigraph()
+" Uncomment to use vim-hudigraphs
+"inoremap <expr>  <C-K>   HUDG_GetDigraph()
