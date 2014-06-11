@@ -206,6 +206,8 @@ nmap ;fn /\n\{3,\}/s+1<cr>
 
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
+" expand %% to the path of the current buffer
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " fix windoze ^M
 noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
