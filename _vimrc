@@ -8,6 +8,7 @@
 
 set nocompatible
 let mapleader=","
+noremap \ ,
 nnoremap Q <nop>
 set shortmess=aIoO
 set mouse=a
@@ -193,13 +194,13 @@ set pastetoggle=<F2>
 " --- proofreading {{{
 
 " find lines longer than 78 characters
-nmap ;fl /^.\{-}\zs.\%>79v<cr>
+nmap <leader><leader>l /^.\{-}\zs.\%>79v<cr>
 " find two spaces after a period
-nmap ;f. /\.\s\s\+\w/s+1<cr>
+nmap <leader><leader>. /\.\s\s\+\w/s+1<cr>
 " find things like 'why ?' and 'now !'
-nmap ;f! /\w\s\+[\?\!\;\.\,]/s+1<cr>
+nmap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<cr>
 " find multiple newlines together
-nmap ;fn /\n\{3,\}/s+1<cr>
+nmap <leader><leader>r /\n\{3,\}/s+1<cr>
 
 " }}}
 " --- writing {{{
@@ -216,6 +217,9 @@ noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " maintain location in document while redoing
 nmap . .`[
+" repeat last substitution with flags preserved
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
 
 " }}}
 
@@ -245,10 +249,10 @@ nnoremap <C-Y> 4<C-Y>
 " }}}
 " --- alignment {{{
 
-nmap <silent> ;al :left<cr>
-nmap <silent> ;ac :center<cr>
-nmap <silent> ;ar :right<cr>
-nmap <silent> ;rr :AlignRight<cr>
+nmap <silent> <leader>al :left<cr>
+nmap <silent> <leader>ac :center<cr>
+nmap <silent> <leader>ar :right<cr>
+nmap <silent> <leader>rr :AlignRight<cr>
 
 " }}}
 
@@ -266,7 +270,7 @@ nmap <silent> ,. :cd%:h<cr>
 " highlight conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 " jump to next conflict marker
-nmap <silent> ;c /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
+nmap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 
 " }}}
 " --- hex {{{
