@@ -17,9 +17,9 @@ Credits
 - http://apaulodesign.com/vimrc.html
 - http://static.askapache.com/askapache-bash-profile.txt
 - http://dotfiles.github.com
-- https://github.com/Floby/vim-config
 - https://github.com/alessioalex/dotfiles
 - https://github.com/cooldaemon/myhome
+- https://github.com/Floby/vim-config
 - https://github.com/gf3/dotfiles
 - https://github.com/gmarik/vimfiles
 - https://github.com/ifschleife/dotfiles
@@ -29,13 +29,13 @@ Credits
 - https://github.com/nvie/vimrc
 - https://github.com/phleet/dotfiles
 - https://github.com/pjan/osx-dotfiles
+- https://github.com/saimn/dotfiles
 - https://github.com/sjl/dotfiles
 - https://github.com/smith/vim-config
 - https://github.com/sontek/dotfiles
 - https://github.com/spf13/spf13-vim
 - https://github.com/wavded/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment
-
 
 Licensing
 ---------

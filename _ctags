@@ -1,0 +1,5 @@
+--exclude=.git
+--exclude=.hg
+--exclude=*.min.js
+--exclude=*.pyc
+--exclude=*.pyo

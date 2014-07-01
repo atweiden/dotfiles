@@ -42,6 +42,16 @@ set nrformats=
 set viminfo='100,<50,s10,h,!
 rviminfo
 
+if !isdirectory(expand(&undodir))
+  call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+  call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+  call mkdir(expand(&directory), "p")
+endif
+
 
 " -----------------------------------------------------------------------------
 " Display
@@ -90,6 +100,14 @@ set listchars+=extends:›
 set listchars+=precedes:‹
 set listchars+=nbsp:·
 set listchars+=trail:·
+
+" }}}
+
+" screen {{{
+
+set synmaxcol=800
+nnoremap <leader>u :syntax sync fromstart<cr>:redraw!<cr>
+au VimResized * :wincmd =
 
 " }}}
 
@@ -209,6 +227,8 @@ nmap <leader><leader>r /\n\{3,\}/s+1<cr>
 cnoremap w!! w !sudo tee % >/dev/null
 " expand %% to the path of the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" change directory to the file being edited
+nnoremap <leader>C :cd %:p:h<CR>:pwd<CR>
 " fix windoze ^M
 noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
@@ -217,9 +237,6 @@ noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " maintain location in document while redoing
 nmap . .`[
-" repeat last substitution with flags preserved
-nnoremap & :&&<CR>
-xnoremap & :&&<CR>
 
 " }}}
 

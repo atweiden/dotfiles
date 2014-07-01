@@ -102,6 +102,9 @@ alias lt='command ls -lAtr --color=auto' # sort by date
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+alias du='du -h --max-depth=1'
+alias dusort='du -x --block-size=1048576 | sort -nr'
+alias df='df -h'
 alias cdd='cd $HOME/Downloads'
 alias cdg='cd $(git rev-parse --show-cdup)'
 alias cdp='cd $HOME/Projects'
@@ -110,7 +113,7 @@ alias cds='cd $HOME/.src'
 [[ -x /usr/bin/vim ]] && alias vime='vim -u ~/.vimencrypt -x'
 [[ -x /usr/bin/gvim ]] && alias gview='gvim -R'
 [[ -x /usr/bin/gvim ]] && alias gvime='gvim -u ~/.vimencrypt -x'
-alias zip='zip -9'
+[[ -x /usr/bin/zip ]] && alias zip='zip -9'
 alias gzip='gzip -9'
 alias bzip2='bzip2 -9'
 alias grep='grep --ignore-case --color=auto'
@@ -137,6 +140,12 @@ free='free -m'
 # Functions
 
 for _fn in `find ~/.functions.d -type f -name "*.sh"`; do . ${_fn}; done
+
+
+# -----------------------------------------------------------------------------
+# Host-specific config
+
+[[ -f ~/.bashrc.$HOSTNAME ]] && . ~/.bashrc.$HOSTNAME
 
 
 # -----------------------------------------------------------------------------

@@ -42,6 +42,7 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.config        \
                $HOME/.conkyrc       \
                $HOME/.conkyrc1      \
+               $HOME/.ctags         \
                $HOME/.curlrc        \
                $HOME/.dunstrc       \
                $HOME/.functions     \
@@ -57,7 +58,10 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.inputrc       \
                $HOME/.jshintignore  \
                $HOME/.jshintrc      \
+               $HOME/.npmrc         \
+               $HOME/.pdbrc         \
                $HOME/.psqlrc        \
+               $HOME/.pythonrc      \
                $HOME/.screenrc      \
                $HOME/.tmux.conf     \
                $HOME/.vim           \
@@ -66,10 +70,12 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.vimencrypt    \
                $HOME/.Xdefaults     \
                $HOME/.xinitrc       \
-               $HOME/.xsession; do echo "backing up ${dotfile} (if it exists)"
-                                   if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
-                                     mv "${dotfile}" "${dotfile}".bak
-                                   fi
+               $HOME/.xsession      \
+               $HOME/.ycm_extra_conf.py; do
+                                    echo "backing up ${dotfile} (if it exists)"
+                                    if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
+                                      mv "${dotfile}" "${dotfile}".bak
+                                    fi
 done
 
 
@@ -92,6 +98,7 @@ for dotfile in ackrc         \
                bashrc        \
                conkyrc       \
                conkyrc1      \
+               ctags         \
                curlrc        \
                dunstrc       \
                gitattributes \
@@ -103,7 +110,10 @@ for dotfile in ackrc         \
                inputrc       \
                jshintignore  \
                jshintrc      \
+               npmrc         \
+               pdbrc         \
                psqlrc        \
+               pythonrc      \
                screenrc      \
                tmux.conf     \
                vimencrypt    \
@@ -111,14 +121,9 @@ for dotfile in ackrc         \
                vimrc.lite    \
                Xdefaults     \
                xinitrc       \
-               xsession; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
+               xsession      \
+               ycm_extra_conf.py; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
 done
-
-
-# -----------------------------------------------------------------------------
-# vim
-
-mkdir -p $HOME/.vim/{.backups,.swaps,.tmp,.undo,}
 
 
 # -----------------------------------------------------------------------------
