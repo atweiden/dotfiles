@@ -24,6 +24,7 @@ export MANPAGER="less -X"
 set -o vi
 
 # prompt
+export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
 PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;32m\]]:\w$\[\e[01;31m\]\n\[\e[01;31m\]└──\[\e[01;36m\]>>\[\e[0m\]"
 
 # overwrite
@@ -130,8 +131,8 @@ alias ..5='cd ../../../../..'
 alias :q='exit'
 [[ -x /usr/bin/subgit ]] && alias sg='subgit'
 [[ -x /usr/bin/subhg ]] && alias shg='subhg'
-alias h?='history | grep "$@"'
-alias p?='ps aux | grep "$@"'
+alias h?='history | grep "$@" -i --color=auto'
+alias p?='ps auxf | grep -v grep | grep "$@" -i --color=auto'
 free='free -m'
 [[ -x /usr/bin/google-chrome ]] && alias google-chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 
