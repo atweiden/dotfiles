@@ -190,7 +190,7 @@ set formatoptions+=1
 " --- selecting {{{
 
 " select all
-map <C-A> ggVG
+"map <C-A> ggVG
 " escape
 inoremap jw <Esc>
 " remove highlights
@@ -327,6 +327,18 @@ autocmd BufReadPost *
   \ if line("'\"") > 1 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
+
+" }}}
+
+" autoload sessions created by tpope's vim-obsession when starting vim {{{
+
+augroup sourcesession
+        autocmd!
+        autocmd VimEnter * nested
+        \ if !argc() && empty(v:this_session) && filereadable('Session.vim') |
+        \   source Session.vim |
+        \ endif
+augroup END
 
 " }}}
 

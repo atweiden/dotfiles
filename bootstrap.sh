@@ -63,6 +63,7 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.psqlrc        \
                $HOME/.pythonrc      \
                $HOME/.screenrc      \
+               $HOME/.tmux          \
                $HOME/.tmux.conf     \
                $HOME/.vim           \
                $HOME/.vimrc         \
@@ -89,6 +90,7 @@ for dotfolder in bin         \
                  hgext       \
                  hgmap       \
                  ssh         \
+                 tmux        \
                  vim; do cp -R "${DIR}/_${dotfolder}" "$HOME/.${dotfolder}"
 done
 
@@ -124,6 +126,18 @@ for dotfile in ackrc         \
                xsession      \
                ycm_extra_conf.py; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
 done
+
+
+# -----------------------------------------------------------------------------
+# tmux
+[[ -x /usr/bin/git ]] \
+  && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm \
+  && git clone https://github.com/tmux-plugins/tmux-pain-control ~/.tmux/plugins/tmux-pain-control \
+  && git clone https://github.com/tmux-plugins/tmux-copycat ~/.tmux/plugins/tmux-copycat \
+  && git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yank \
+  && git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/plugins/tmux-logging \
+  && git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect \
+  && git clone https://github.com/tmux-plugins/tmux-sessionist ~/.tmux/plugins/tmux-sessionist
 
 
 # -----------------------------------------------------------------------------
