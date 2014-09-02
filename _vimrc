@@ -237,6 +237,8 @@ noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " maintain location in document while redoing
 nmap . .`[
+" qq to record, Q to replay
+nnoremap Q @q
 
 " }}}
 

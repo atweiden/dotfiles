@@ -155,3 +155,12 @@ for _fn in `find ~/.functions.d -type f -name "*.sh"`; do . ${_fn}; done
 if [[ -x $HOME/.bin/archinfo && -x /usr/bin/python2 ]]; then
   if ! [[ "$UID" == '0' ]]; then archinfo; else archinfo -c red; fi
 fi
+
+
+# -----------------------------------------------------------------------------
+# fzf
+
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+# Getting key bindings
+. /etc/profile.d/fzf.sh
