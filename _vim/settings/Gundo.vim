@@ -1,1 +1,1 @@
-map <leader>g :GundoToggle<CR>
+"map <leader>g :GundoToggle<CR>

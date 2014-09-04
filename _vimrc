@@ -33,6 +33,10 @@ filetype plugin indent on
 set title
 set backupdir=~/.vim/.backups
 set directory=~/.vim/.swaps
+if has("persistent_undo")
+  set undodir='~/.vim/.undo/'
+  set undofile
+endif
 set undodir=~/.vim/.undo
 set notimeout
 set ttimeout
@@ -364,6 +368,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,xhtml set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType lisp,racket,scheme setlocal equalprg=scmindent
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
