@@ -20,7 +20,7 @@ set nofsync
 " -----------------------------------------------------------------------------
 " Functions
 
-if filereadable(expand("~/.vim/functions.vim"))
+if filereadable(expand('~/.vim/functions.vim'))
   source ~/.vim/functions.vim
 endif
 
@@ -31,13 +31,9 @@ endif
 syntax on
 filetype plugin indent on
 set title
-set backupdir=~/.vim/.backups
-set directory=~/.vim/.swaps
-if has("persistent_undo")
-  set undodir='~/.vim/.undo/'
-  set undofile
-endif
-set undodir=~/.vim/.undo
+set backupdir='~/.vim/.backups'
+set directory='~/.vim/.swaps'
+set undodir='~/.vim/.undo'
 set notimeout
 set ttimeout
 set ttimeoutlen=10
@@ -46,14 +42,14 @@ set nrformats=
 set viminfo='100,<50,s10,h,!
 rviminfo
 
-if !isdirectory(expand(&undodir))
-  call mkdir(expand(&undodir), "p")
-endif
 if !isdirectory(expand(&backupdir))
   call mkdir(expand(&backupdir), "p")
 endif
 if !isdirectory(expand(&directory))
   call mkdir(expand(&directory), "p")
+endif
+if !isdirectory(expand(&undodir))
+  call mkdir(expand(&undodir), "p")
 endif
 
 
@@ -110,7 +106,7 @@ set listchars+=trail:·
 " screen {{{
 
 set synmaxcol=800
-nnoremap <leader>u :syntax sync fromstart<cr>:redraw!<cr>
+nnoremap <leader>u :syntax sync fromstart<CR>:redraw!<CR>
 au VimResized * :wincmd =
 
 " }}}
@@ -198,7 +194,7 @@ set formatoptions+=1
 " escape
 inoremap jw <Esc>
 " remove highlights
-nmap <Leader><CR> :nohlsearch<cr>
+nmap <Leader><CR> :nohlsearch<CR>
 
 " }}}
 " --- pasting {{{
@@ -216,13 +212,13 @@ set pastetoggle=<F2>
 " --- proofreading {{{
 
 " find lines longer than 78 characters
-nmap <leader><leader>l /^.\{-}\zs.\%>79v<cr>
+nmap <leader><leader>l /^.\{-}\zs.\%>79v<CR>
 " find two spaces after a period
-nmap <leader><leader>. /\.\s\s\+\w/s+1<cr>
+nmap <leader><leader>. /\.\s\s\+\w/s+1<CR>
 " find things like 'why ?' and 'now !'
-nmap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<cr>
+nmap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<CR>
 " find multiple newlines together
-nmap <leader><leader>r /\n\{3,\}/s+1<cr>
+nmap <leader><leader>r /\n\{3,\}/s+1<CR>
 
 " }}}
 " --- writing {{{
@@ -234,7 +230,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " change directory to the file being edited
 nnoremap <leader>C :cd %:p:h<CR>:pwd<CR>
 " fix windoze ^M
-noremap <Leader>rmm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+noremap <Leader>rmm mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
 
 " }}}
 " --- redoing {{{
@@ -272,10 +268,10 @@ nnoremap <C-Y> 4<C-Y>
 " }}}
 " --- alignment {{{
 
-nmap <silent> <leader>al :left<cr>
-nmap <silent> <leader>ac :center<cr>
-nmap <silent> <leader>ar :right<cr>
-nmap <silent> <leader>rr :AlignRight<cr>
+nmap <silent> <leader>al :left<CR>
+nmap <silent> <leader>ac :center<CR>
+nmap <silent> <leader>ar :right<CR>
+nmap <silent> <leader>rr :AlignRight<CR>
 
 " }}}
 
@@ -285,7 +281,7 @@ nmap <silent> <leader>rr :AlignRight<cr>
 " customize autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 " change to directory of file
-nmap <silent> ,. :cd%:h<cr>
+nmap <silent> ,. :cd%:h<CR>
 
 " }}}
 " --- merging {{{
