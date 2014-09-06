@@ -6,7 +6,7 @@ multi-ping - Multi-protocol ping wrapper
 
 =head1 SYNOPSIS
 
-  multi-ping hostname1 hostname2 .. hostnameN
+  multi-ping [--loop|--forever] [--sleep=N]  hostname1 hostname2 .. hostnameN
 
 =cut
 
@@ -40,12 +40,20 @@ The LICENSE file contains the full text of the license.
 use strict;
 use warnings;
 
+use Getopt::Long;
+use Pod::Usage;
 
 
 #
 #  Check the dependencies.
 #
 checkSystem();
+
+#
+#  Parse the command-line.
+#
+my %config = parsedOptions();
+
 
 #
 #  We could parse arguments here, for the moment we will hard-wire
@@ -55,23 +63,30 @@ my $timeout = 5;
 
 
 #
-# Process each hostname specified upon the command-line.
-#
-my $count = 0;
-while ( my $host = shift )
-{
-    pingHost($host);
-    $count += 1;
-}
-
-#
 # If we didn't get any arguments then we should complain.
 #
-if ( $count eq 0 )
+if ( scalar @ARGV < 1 )
 {
     print "Usage: multi-ping hostname1 hostname2 .. hostnameN\n";
     exit(1);
 }
+
+
+#
+# Process each hostname specified upon the command-line.
+#
+# Looping if applicable.
+#
+do
+{
+    foreach my $host (@ARGV)
+    {
+        pingHost($host);
+    }
+
+    sleep( $config{ 'sleep' } );
+
+} until ( !$config{ 'loop' } );
 
 
 
@@ -90,51 +105,61 @@ sub pingHost
     my ($hostname) = (@_);
 
     #
+    #  If we've been given an URI then we'll remove the leading-scheme
+    # and use the hostname only.
+    #
+    if ( $hostname =~ m!^([a-z]+:\/\/)([^/]+)/?!i )
+    {
+        $hostname = $2;
+
+        #
+        #  Port might be specified too, drop that if present.
+        #
+        if ( $hostname =~ /^(.*):([0-9]+)$/ )
+        {
+            $hostname = $1;
+        }
+    }
+
+    #
     #  Lookup the IP for the name specified
     #
     my $res = Net::DNS::Resolver->new;
-    my $query = $res->query( $hostname, "ANY" );
 
-    if ($query)
+    #
+    #  The two types we'll lookup.
+    #
+    #  NOTE: This shouldn't be required but my laptop resolver seems to
+    # struggle with lookups of the type "ANY".  Sigh.
+    #
+    #
+    foreach my $type (qw! A AAAA !)
     {
-        foreach my $rr ( $query->answer )
-        {
+        my $query = $res->query( $hostname, $type );
 
-            if ( $rr->type eq "A" )
+        if ($query)
+        {
+            foreach my $rr ( $query->answer )
             {
-                if (
-                    system(
-                        "ping -c1 -w$timeout -W$timeout $hostname >/dev/null 2>/dev/null"
-                    ) == 0
-                   )
+                my $ping_binary =
+                  $rr->type eq "A"    ? "ping" :
+                  $rr->type eq "AAAA" ? "ping6" :
+                                        "";
+                if ($ping_binary)
                 {
-                    print "Host $hostname - " . $rr->address() . " alive\n";
-                }
-                else
-                {
-                    print "Host $hostname - " . $rr->address() . " FAILED\n";
-                }
-            }
-            elsif ( $rr->type eq "AAAA" )
-            {
-                if (
-                    system(
-                        "ping6 -c1 -w$timeout -W$timeout $hostname >/dev/null 2>/dev/null"
-                    ) == 0
-                   )
-                {
-                    print "Host $hostname - " . $rr->address() . " alive\n";
-                }
-                else
-                {
-                    print "Host $hostname - " . $rr->address() . " FAILED\n";
+                    my $result = system(
+                        "$ping_binary -c1 -w$timeout -W$timeout $hostname >/dev/null 2>/dev/null"
+                    );
+
+                    print "Host $hostname - " . $rr->address() .
+                      ( ( $result == 0 ) ? " - alive" : " - FAILED"  ) . "\n";
                 }
             }
         }
-    }
-    else
-    {
-        print "WARNING: Failed to resolve $hostname\n";
+        else
+        {
+            print "WARNING: Failed to resolve $hostname [$type]\n";
+        }
     }
 }
 
@@ -164,5 +189,40 @@ sub checkSystem
         print "The required Net::DNS module is missing.  Aborting.\n";
         exit(1);
     }
+
+}
+
+
+
+=begin doc
+
+Parse the options and return suitable values.
+
+=end doc
+
+=cut
+
+sub parsedOptions
+{
+    my %vars;
+
+    #
+    # Defaults
+    #
+    $vars{ 'loop' }  = 0;
+    $vars{ 'sleep' } = 1;
+
+    exit
+      if (
+           !GetOptions( "help"    => \$vars{ 'help' },
+                        "verbose" => \$vars{ 'verbose' },
+                        "forever" => \$vars{ 'loop' },
+                        "loop"    => \$vars{ 'loop' },
+                        "sleep=i" => \$vars{ 'sleep' },
+                      ) );
+
+    pod2usage(1) if ( $vars{ 'help' } );
+
+    return (%vars);
 
 }

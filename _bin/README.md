@@ -68,6 +68,22 @@ Alternatives:
 
 
 
+chronic
+-------
+
+Run a command, hiding STDOUT and STDERR if it completes successfully.
+
+Example:
+
+     ./chronic cp /etc/passwd /tmp/not/found
+
+This is designed to be used for cron-jobs, where output is generally
+ignored in the case of success.
+
+This was written by Joey Hess and is part of [moreutils](https://joeyh.name/code/moreutils/).
+
+
+
 cidr2ip
 -------
 
@@ -192,6 +208,12 @@ Ping a host, regardless of whether it is an IPv6 or IPv4 host.
 Example:
 
      $ multi-ping steve.org.uk
+     Host steve.org.uk - 80.68.85.46 alive
+     Host steve.org.uk - 2001:41c8:125:46:0:0:0:10 alive
+
+As a convienence you may also specify URIs as arguments, for example:
+
+     $ multi-ping http://steve.org.uk/foo/bar
      Host steve.org.uk - 80.68.85.46 alive
      Host steve.org.uk - 2001:41c8:125:46:0:0:0:10 alive
 
