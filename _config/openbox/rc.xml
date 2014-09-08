@@ -413,6 +413,11 @@
     <keybind key="W-c">
       <action name="MoveToCenter"/>
     </keybind>
+    <keybind key="F11">
+      <action name="Execute">
+        <command>wmctrl -r :ACTIVE: -b toggle,fullscreen</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer set Master 5%+ unmute</command>
