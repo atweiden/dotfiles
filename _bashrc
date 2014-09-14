@@ -24,7 +24,6 @@ export MANPAGER="less -X"
 set -o vi
 
 # prompt
-export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
 PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;32m\]]:\w$\[\e[01;31m\]\n\[\e[01;31m\]└──\[\e[01;36m\]>>\[\e[0m\]"
 
 # overwrite
@@ -164,4 +163,4 @@ fi
 # Setting ag as the default source for fzf
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
 # Getting key bindings
-. /etc/profile.d/fzf.sh
+[[ -e "/etc/profile.d/fzf.sh" ]] && . /etc/profile.d/fzf.sh
