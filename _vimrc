@@ -251,9 +251,9 @@ imap <silent> <F3> <C-O>:set nowrap!<CR>
 " toggle line numbers
 map <silent> <F4> :set nonu!<CR>
 imap <silent> <F4> <C-O>:set nonu!<CR>
-" toggle line endings
-map <silent> <F5> :set nolist!<CR>
-imap <silent> <F5> <C-O>:set nolist!<CR>
+" toggle line and column highlighting
+map <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
+imap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
 " toggle spell checking
 map <silent> <F7> :set spell! spelllang=en_us<CR>
 imap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
