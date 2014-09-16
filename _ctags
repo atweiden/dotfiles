@@ -3,3 +3,41 @@
 --exclude=*.min.js
 --exclude=*.pyc
 --exclude=*.pyo
+
+--langdef=asciidoc
+--langmap=asciidoc:.ad.adoc.asciidoc
+--regex-asciidoc=/^=[ \t]+(.*)/# \1/s,Section_L0/
+--regex-asciidoc=/^==[ \t]+(.*)/. \1/s,Section_L1/
+--regex-asciidoc=/^===[ \t]+(.*)/. . \1/s,Section_L2/
+--regex-asciidoc=/^====[ \t]+(.*)/. . . \1/s,Section_L3/
+--regex-asciidoc=/^=====[ \t]+(.*)/. . . . \1/s,Section_L4/
+
+--langmap=Lisp:+.clj
+
+--langdef=groovy
+--langmap=groovy:.groovy
+--regex-groovy=/^[ \t][(private|public|protected) ( \t)][A-Za-z0-9<>]+[ \t]+([A-Za-z0-9]+)[ \t](.)[ \t]{/\1/f,function,functions/
+--regex-groovy=/^[ \t]*def[ \t]+([A-Za-z0-9_]+)[ \t]\=[ \t]{/\1/f,function,functions/
+--regex-groovy=/^[ \t]*private def[ \t]+([A-Za-z0-9_]+)[ \t]/\1/v,private,private variables/
+--regex-groovy=/^[ \t]def[ \t]+([A-Za-z0-9_]+)[ \t]/\1/u,public,public variables/
+--regex-groovy=/^[ \t][abstract ( \t)][(private|public) ( \t)]class[ \t]+([A-Za-z0-9_]+)[ \t]/\1/c,class,classes/
+--regex-groovy=/^[ \t][abstract ( \t)][(private|public) ( \t)]enum[ \t]+([A-Za-z0-9_]+)[ \t]/\1/c,class,classes/
+
+--regex-make=/^\s*([^#][^:]*):/\1/t,target/
+
+--langdef=puppet
+--langmap=puppet:.pp
+--regex-puppet=/^class[ \t]*([:a-zA-Z0-9_\-]+)[ \t]*/\1/c,class/
+--regex-puppet=/^site[ \t]*([a-zA-Z0-9_\-]+)[ \t]*/\1/s,site/
+--regex-puppet=/^node[ \t]*([a-zA-Z0-9_\-]+)[ \t]*/\1/n,node/
+--regex-puppet=/^define[ \t]*([:a-zA-Z0-9_\-]+)[ \t]*/\1/d,definition/
+
+--langdef=R
+--langmap=r:.R.r
+--regex-R=/^[ \t]*"?([.A-Za-z][.A-Za-z0-9_]*)"?[ \t]*<-[ \t]function/\1/f,Functions/
+--regex-R=/^"?([.A-Za-z][.A-Za-z0-9_]*)"?[ \t]*<-[ \t][^f][^u][^n][^c][^t][^i][^o][^n]/\1/g,GlobalVars/
+--regex-R=/[ \t]"?([.A-Za-z][.A-Za-z0-9_]*)"?[ \t]*<-[ \t][^f][^u][^n][^c][^t][^i][^o][^n]/\1/v,FunctionVariables/
+
+--langdef=snippets
+--langmap=snippets:.snippets
+--regex-snippets=/^snippet (.*)/\1/s,snippet/
