@@ -31,9 +31,9 @@ endif
 syntax on
 filetype plugin indent on
 set title
-set backupdir='~/.vim/.backups'
-set directory='~/.vim/.swaps'
-set undodir='~/.vim/.undo'
+set backupdir=~/.vim/.backups
+set directory=~/.vim/.swaps
+set undodir=~/.vim/.undo
 set notimeout
 set ttimeout
 set ttimeoutlen=10
@@ -135,6 +135,7 @@ set laststatus=2
 set noshowmatch
 set wildmenu
 set wildmode=list:longest
+set wildignore=*.o,*~,*.pyc,.git\*,.hg\*,.svn\*,*/.DS_Store
 set hidden
 set splitright
 set splitbelow
@@ -298,6 +299,12 @@ nmap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 noremap <F9> :call HexMe()<CR>
 
 " }}}
+" --- conceal {{{
+
+" toggle concealed characters
+noremap <leader>cl :call ConcealToggle()<CR>
+
+" }}}
 
 " Navigation
 " ---windows {{{
@@ -362,6 +369,7 @@ au BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType html,xhtml set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType lisp,racket,scheme setlocal equalprg=scmindent
@@ -382,7 +390,7 @@ au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
 
 " }}}
 
-" spelling {{{
+" spelling, grammar, punctuation {{{
 
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
 highlight clear SpellBad
@@ -394,9 +402,31 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 if version >= 700
-set spl=en spell
-set nospell
+    set spl=en spell
+    set nospell
 endif
+augroup lexical
+    autocmd!
+    autocmd FileType markdown,mkd call lexical#init({ 'spell': 0 })
+    autocmd FileType textile call lexical#init({ 'spell': 0 })
+    autocmd FileType text call lexical#init({ 'spell': 0 })
+augroup END
+augroup litecorrect
+    autocmd!
+    autocmd FileType markdown,mkd call litecorrect#init()
+    autocmd FileType textile call litecorrect#init()
+augroup END
+augroup textobj_quote
+    autocmd!
+    autocmd FileType markdown call textobj#quote#init()
+    autocmd FileType textile call textobj#quote#init()
+    autocmd FileType text call textobj#quote#init({'educate': 0})
+augroup END
+augroup textobj_sentence
+    autocmd!
+    autocmd FileType markdown call textobj#sentence#init()
+    autocmd FileType textile call textobj#sentence#init()
+augroup END
 
 " }}}
 

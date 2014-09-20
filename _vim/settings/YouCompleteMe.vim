@@ -7,3 +7,6 @@ let g:ycm_seed_identifiers_with_syntax = 1
 
 nnoremap <leader>] :YcmCompleter GoToDefinitionElseDeclaration<CR>mzzMzvzz15<c-e>`z:Pulse<cr>
 " nnoremap <leader>] :YcmCompleter GoToDeclaration<CR>mzzMzvzz15<c-e>`z:Pulse<cr>
+
+" for vim-neco-ghc
+let g:ycm_semantic_triggers = {'haskell' : ['.']}

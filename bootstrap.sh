@@ -39,6 +39,7 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.bash_logout   \
                $HOME/.bash_profile  \
                $HOME/.bin           \
+               $HOME/.codex         \
                $HOME/.config        \
                $HOME/.conkyrc       \
                $HOME/.conkyrc1      \
@@ -98,6 +99,7 @@ for dotfile in ackrc         \
                bash_logout   \
                bash_profile  \
                bashrc        \
+               codex         \
                conkyrc       \
                conkyrc1      \
                ctags         \

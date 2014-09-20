@@ -134,6 +134,17 @@ Example:
 
 
 
+git-hscope
+----------
+
+Generates haskell tags from Git repo.
+
+Example from `vimrc`:
+
+    map <leader>tg :!codex update<CR>:call system("git hscope")<CR><CR>:call LoadHscope()<CR>
+
+
+
 graphite_send
 -------------
 

@@ -39,6 +39,8 @@ export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 PATH=$HOME/.bin:$PATH
 # go
 PATH=/usr/lib/go/site/bin:$PATH
+# haskell
+PATH=$HOME/.cabal/bin:$PATH
 # nimrod
 PATH=$HOME/.babel/bin:$PATH
 # perl
@@ -48,7 +50,7 @@ PATH=$HOME/.virtualenvs:$PATH
 # ruby
 PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
 if [[ -x /usr/bin/ruby ]]; then
-  PATH=$(gem env gempath | awk -F: '{ print $2 }')/bin:$PATH
+  PATH=$(gem env gempath | awk -F: '{print $2}')/bin:$PATH
   PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
   export GEM_HOME=$(ruby -rubygems -e "puts Gem.user_dir")
 fi
