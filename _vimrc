@@ -302,7 +302,7 @@ noremap <F9> :call HexMe()<CR>
 " --- conceal {{{
 
 " toggle concealed characters
-noremap <leader>cl :call ConcealToggle()<CR>
+noremap <leader><leader>cl :call ConcealToggle()<CR>
 
 " }}}
 
