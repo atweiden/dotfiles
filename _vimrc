@@ -330,8 +330,12 @@ nmap <leader>sb :call SplitScroll()<CR>
 " -----------------------------------------------------------------------------
 " Filetype Settings
 
-" return to last edit position {{{
+" Don't move back the cursor one position when exiting insert mode
+autocmd InsertEnter * let CursorColumnI = col('.')
+autocmd CursorMovedI * let CursorColumnI = col('.')
+autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
 
+" return to last edit position {{{
 autocmd BufReadPost *
   \ if line("'\"") > 1 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
@@ -340,7 +344,6 @@ autocmd BufReadPost *
 " }}}
 
 " autoload sessions created by tpope's vim-obsession when starting vim {{{
-
 augroup sourcesession
         autocmd!
         autocmd VimEnter * nested
