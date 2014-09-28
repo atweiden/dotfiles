@@ -32,7 +32,7 @@ URxvt.keysym.M-s            : perl:keyboard-select:search
 URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
 
 #font
-URxvt*font        : xft:Monaco-24
+URxvt*font        : xft:Monaco-16
 URxvt.letterSpace : -1
 
 #tab colors
