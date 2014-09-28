@@ -196,6 +196,8 @@ set formatoptions+=1
 inoremap jw <Esc>
 " remove highlights
 nmap <Leader><CR> :nohlsearch<CR>
+" search within visual block
+vnoremap / <esc>/\v%V
 
 " }}}
 " --- pasting {{{

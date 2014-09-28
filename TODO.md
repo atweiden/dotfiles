@@ -4,4 +4,5 @@
 - Revamp many files
   - [sshconfig](https://github.com/trapd00r/configs/blob/master/ssh/config)
   - [vimrc](https://github.com/bling/dotvim)
+    - https://github.com/haya14busa/dotfiles
 - Add public key for gpg

@@ -24,6 +24,7 @@ Credits
 - https://github.com/gf3/dotfiles
 - https://github.com/gmarik/vimfiles
 - https://github.com/guns/haus
+- https://github.com/haya14busa/dotfiles
 - https://github.com/ifschleife/dotfiles
 - https://github.com/jeroenjanssens/dotfiles
 - https://github.com/kernelsmith/env-customization
