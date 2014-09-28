@@ -37,6 +37,7 @@ Credits
 - https://github.com/sontek/dotfiles
 - https://github.com/spf13/spf13-vim
 - https://github.com/wavded/dotfiles
+- https://github.com/whatyouhide/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment
 
 Licensing
