@@ -29,7 +29,7 @@ URxvt.keysym.M-u            : perl:url-select:select_next
 URxvt.keysym.M-Escape       : perl:keyboard-select:activate
 URxvt.keysym.M-s            : perl:keyboard-select:search
 
-# Enabling Ctrl/Alt + arro keys for vim
+# Enabling Ctrl/Alt + arrow keys for Vim
 URxvt.keysym.M-Up           : \033[1;3A
 URxvt.keysym.M-Down         : \033[1;3B
 URxvt.keysym.M-Right        : \033[1;3C
