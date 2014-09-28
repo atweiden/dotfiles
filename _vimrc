@@ -59,7 +59,7 @@ endif
 " vim {{{
 
 set background=dark
-if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
