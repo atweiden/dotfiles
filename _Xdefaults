@@ -28,8 +28,12 @@ URxvt.keysym.M-u            : perl:url-select:select_next
 URxvt.keysym.M-Escape       : perl:keyboard-select:activate
 URxvt.keysym.M-s            : perl:keyboard-select:search
 
+#icon
+URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
+
 #font
-URxvt*font:xft:Monaco-24
+URxvt*font        : xft:Monaco-24
+URxvt.letterSpace : -1
 
 #tab colors
 URxvt.tabbed.tabbar-fg : 4
