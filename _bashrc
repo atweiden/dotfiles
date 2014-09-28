@@ -24,7 +24,7 @@ export MANPAGER="less -X"
 set -o vi
 
 # prompt
-export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a;history -c;history -r"
 PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;32m\]]:\w$\[\e[01;31m\]\n\[\e[01;31m\]└──\[\e[01;36m\]>>\[\e[0m\]"
 
 # overwrite
