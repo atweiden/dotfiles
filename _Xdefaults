@@ -93,6 +93,7 @@ URxvt*tabbed.tab-fg      : 9
 URxvt*tabbed.tab-bg      : 0
 
 #scrollbar
+URxvt*scrollBar          : false
 URxvt*scrollBar_right    : true
 URxvt*scrollstyle        : plain
 URxvt*scrollColor        : #a8a8a8
