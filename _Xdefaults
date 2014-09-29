@@ -13,7 +13,7 @@ Xft.hintstyle  : hintslight
 !
 
 URxvt*geometry              : 80x25
-URxvt*borderLess            : false
+URxvt*borderLess            : true
 URxvt*depth                 : 32
 URxvt.saveLines             : 65535
 URxvt*cursorBlink           : false
@@ -28,6 +28,22 @@ URxvt.url-select.underline  : true
 URxvt.keysym.M-u            : perl:url-select:select_next
 URxvt.keysym.M-Escape       : perl:keyboard-select:activate
 URxvt.keysym.M-s            : perl:keyboard-select:search
+
+# IO
+! True: specify that jump scrolling should be used. When receiving lots of lines, urxvt will only scroll once a whole screen height of lines has been read, resulting in fewer updates while still displaying every received line; option -j.
+! False: specify that smooth scrolling should be used. urxvt will force a screen refresh on each new line it received
+URxvt*jumpScroll: True
+! True: (the default) specify that skip scrolling should be used. When receiving lots of lines, urxvt will only scroll once in a while (around 60 times per second), resulting in far fewer updates. This can result in urxvt not ever displaying some of the lines it receives; option -ss.
+URxvt*skipScroll: True
+! True: set the urgency hint for the wm on receipt of a bell character. False: do not set the urgency hint [default] urxvt resets the urgency hint on every focus change.
+URxvt*urgentOnBell: False
+URxvt*visualBell: False
+! True: scroll to bottom when tty receives output; option -si. False: do not scroll to bottom when tty receives output; option +si.
+URxvt*scrollTtyOutput: False
+! True: scroll with scrollback buffer when tty receives new lines (i.e. try to show the same lines) and scrollTtyOutput is False; option -sw. False: do not scroll with scrollback buffer when tty receives new lines; option +sw.
+URxvt*scrollWithBuffer: False
+! True: scroll to bottom when a non-special key is pressed. Special keys are those which are intercepted by rxvt-unicode for special handling and are not passed onto the shell; option -sk. False: do not scroll to bottom when a non-special key is pressed; option +sk.
+URxvt*scrollTtyKeypress: True
 
 # Enabling Ctrl/Alt/Shift + arrow keys for Vim
 URxvt.keysym.M-Up             : \033[1;3A
@@ -49,6 +65,12 @@ URxvt.keysym.C-Home           : \033[1;5H
 URxvt.keysym.C-Tab            : \033[27;5;9~
 URxvt.keysym.C-S-Tab          : \033[27;6;9~
 URxvt.keysym.C-S-ISO_Left_Tab : \033[27;6;9~
+URxvt.keysym.Home             : \033OH
+URxvt.keysym.End              : \033OF
+URxvt.keysym.F1               : \033OP
+URxvt.keysym.F2               : \033OQ
+URxvt.keysym.F3               : \033OR
+URxvt.keysym.F4               : \033OS
 
 #icon
 URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
