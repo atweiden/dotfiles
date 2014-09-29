@@ -135,7 +135,7 @@ set laststatus=2
 set noshowmatch
 set wildmenu
 set wildmode=list:longest
-set wildignore=*.o,*~,*.pyc,.git\*,.hg\*,.svn\*,*/.DS_Store
+set wildignore=*.o,*~,*.pyc,.git/*,.hg/*,.svn/*,*.DS_Store
 set hidden
 set splitright
 set splitbelow
@@ -312,17 +312,29 @@ noremap <leader><leader>cl :call ConcealToggle()<CR>
 " ---windows {{{
 
 " map alt-[h,j,k,l,=] to resizing a window split
-map <silent> <A-h> <C-W><
-map <silent> <A-j> <C-W>-
-map <silent> <A-k> <C-W>+
-map <silent> <A-l> <C-W>>
-map <silent> <A-=> <C-W>=
 " map alt-[s,v] to horizontal and vertical split respectively
-map <silent> <A-s> :split<CR>
-map <silent> <A-v> :vsplit<CR>
 " map alt-[n,p] to moving to next and previous window respectively
-map <silent> <A-n> <C-W><C-W>
-map <silent> <A-p> <C-W><S-W>
+if has('unix')
+  nnoremap h <C-w>>
+  nnoremap j <C-w>-
+  nnoremap k <C-w>+
+  nnoremap l <C-w><
+  nnoremap = <C-W>=
+  nnoremap s :split<CR>
+  nnoremap v :vsplit<CR>
+  nnoremap n <C-W><C-W>
+  nnoremap p <C-W><S-W>
+else
+  nnoremap <M-h> <C-w>>
+  nnoremap <M-j> <C-w>-
+  nnoremap <M-k> <C-w>+
+  nnoremap <M-l> <C-w><
+  nnoremap <M-=> <C-W>=
+  nnoremap <M-s> :split<CR>
+  nnoremap <M-v> :vsplit<CR>
+  nnoremap <M-n> <C-W><C-W>
+  nnoremap <M-p> <C-W><S-W>
+endif
 " simultaneously scroll split windows
 nmap <leader>sb :call SplitScroll()<CR>
 
