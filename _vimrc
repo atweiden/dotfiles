@@ -332,12 +332,16 @@ nmap <leader>sb :call SplitScroll()<CR>
 " -----------------------------------------------------------------------------
 " Filetype Settings
 
-" Don't move back the cursor one position when exiting insert mode
+" don't move back the cursor one position when exiting insert mode {{{
+
 autocmd InsertEnter * let CursorColumnI = col('.')
 autocmd CursorMovedI * let CursorColumnI = col('.')
 autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
 
+" }}}
+
 " return to last edit position {{{
+
 autocmd BufReadPost *
   \ if line("'\"") > 1 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
@@ -346,6 +350,7 @@ autocmd BufReadPost *
 " }}}
 
 " autoload sessions created by tpope's vim-obsession when starting vim {{{
+
 augroup sourcesession
         autocmd!
         autocmd VimEnter * nested
@@ -373,6 +378,7 @@ au BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 " omnicompletion {{{
 
 autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType clojure set omnifunc=clojurecomplete#Complete
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType html,xhtml set omnifunc=htmlcomplete#CompleteTags
@@ -384,6 +390,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType sql set omnifunc=sqlcomplete#Complete
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 " }}}
@@ -395,9 +402,9 @@ au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
 
 " }}}
 
-" spelling, grammar, punctuation {{{
+" spelling {{{
 
-let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
+let g:spellfile_URL = '/usr/share/vim/vimfiles/spell'
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
 highlight clear SpellCap
@@ -410,28 +417,6 @@ if version >= 700
     set spl=en spell
     set nospell
 endif
-augroup lexical
-    autocmd!
-    autocmd FileType markdown,mkd call lexical#init({ 'spell': 0 })
-    autocmd FileType textile call lexical#init({ 'spell': 0 })
-    autocmd FileType text call lexical#init({ 'spell': 0 })
-augroup END
-augroup litecorrect
-    autocmd!
-    autocmd FileType markdown,mkd call litecorrect#init()
-    autocmd FileType textile call litecorrect#init()
-augroup END
-augroup textobj_quote
-    autocmd!
-    autocmd FileType markdown call textobj#quote#init()
-    autocmd FileType textile call textobj#quote#init()
-    autocmd FileType text call textobj#quote#init({'educate': 0})
-augroup END
-augroup textobj_sentence
-    autocmd!
-    autocmd FileType markdown call textobj#sentence#init()
-    autocmd FileType textile call textobj#sentence#init()
-augroup END
 
 " }}}
 
