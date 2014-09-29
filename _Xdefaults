@@ -15,19 +15,19 @@ Xft.hintstyle  : hintslight
 URxvt*geometry              : 80x25
 URxvt*borderLess            : true
 URxvt*depth                 : 32
-URxvt.saveLines             : 65535
+URxvt*saveLines             : 65535
 URxvt*cursorBlink           : false
 URxvt*cursorUnderline       : true
-URxvt*perl-ext-common       : default,clipboard,tabbed,url-select,keyboard-select
-URxvt.iso14755              : false
-URxvt.keysym.C-C            : perl:clipboard:copy
-URxvt.keysym.C-V            : perl:clipboard:paste
-URxvt.keysym.C-A-V          : perl:clipboard:paste_escaped
-URxvt.url-select.launcher   : firefox
-URxvt.url-select.underline  : true
-URxvt.keysym.M-u            : perl:url-select:select_next
-URxvt.keysym.M-Escape       : perl:keyboard-select:activate
-URxvt.keysym.M-s            : perl:keyboard-select:search
+URxvt*perl-ext-common       : default,clipboard,tabbedex,url-select,keyboard-select
+URxvt*iso14755              : false
+URxvt*keysym.C-C            : perl:clipboard:copy
+URxvt*keysym.C-V            : perl:clipboard:paste
+URxvt*keysym.C-A-V          : perl:clipboard:paste_escaped
+URxvt*url-select.launcher   : firefox
+URxvt*url-select.underline  : true
+URxvt*keysym.M-u            : perl:url-select:select_next
+URxvt*keysym.M-Escape       : perl:keyboard-select:activate
+URxvt*keysym.M-s            : perl:keyboard-select:search
 
 # IO
 ! True: specify that jump scrolling should be used. When receiving lots of lines, urxvt will only scroll once a whole screen height of lines has been read, resulting in fewer updates while still displaying every received line; option -j.
@@ -45,7 +45,7 @@ URxvt*scrollWithBuffer: False
 ! True: scroll to bottom when a non-special key is pressed. Special keys are those which are intercepted by rxvt-unicode for special handling and are not passed onto the shell; option -sk. False: do not scroll to bottom when a non-special key is pressed; option +sk.
 URxvt*scrollTtyKeypress: True
 
-# Enabling Ctrl/Alt/Shift + arrow keys for Vim
+# Enabling Ctrl/Alt/Shift, function keys and arrows for Vim
 URxvt.keysym.M-Up             : \033[1;3A
 URxvt.keysym.M-Down           : \033[1;3B
 URxvt.keysym.M-Right          : \033[1;3C
@@ -56,8 +56,8 @@ URxvt.keysym.M-End            : \033[1;3F
 URxvt.keysym.M-Home           : \033[1;3H
 URxvt.keysym.C-Up             : \033[1;5A
 URxvt.keysym.C-Down           : \033[1;5B
-URxvt.keysym.C-Right          : \033[1;5C
-URxvt.keysym.C-Left           : \033[1;5D
+!URxvt.keysym.C-Right         : \033[1;5C
+!URxvt.keysym.C-Left          : \033[1;5D
 URxvt.keysym.C-Prior          : \033[5;5~
 URxvt.keysym.C-Next           : \033[6;5~
 URxvt.keysym.C-End            : \033[1;5F
@@ -76,19 +76,26 @@ URxvt.keysym.F4               : \033OS
 URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
 
 #font
-URxvt*font        : xft:Monaco-16
-URxvt.letterSpace : -1
+URxvt*font        : xft:Monaco-24
+URxvt*letterSpace : -1
 
-#tab colors
-URxvt.tabbed.tabbar-fg : 4
-URxvt.tabbed.tabbar-bg : 0
-URxvt.tabbed.tab-fg    : 9
-URxvt.tabbed.tab-bg    : 0
+#tabs
+! no: disable tab new button
+URxvt*tabbed.new-button  : no
+! yes: disable the tab bar if only one tab is present
+URxvt*tabbed.autohide    : no
+! no: disable urxvt default title
+URxvt.tabbed.title       : no
+! colors
+URxvt*tabbed.tabbar-fg   : 4
+URxvt*tabbed.tabbar-bg   : 0
+URxvt*tabbed.tab-fg      : 9
+URxvt*tabbed.tab-bg      : 0
 
 #scrollbar
-URxvt*scrollBar_right  : true
-URxvt*scrollstyle      : plain
-URxvt*scrollColor      : #a8a8a8
+URxvt*scrollBar_right    : true
+URxvt*scrollstyle        : plain
+URxvt*scrollColor        : #a8a8a8
 
 #bubblegum colorscheme, based on bloom's vim theme and xoria----------------------
 !black.normal     : xoria256.LineNr.guibg
