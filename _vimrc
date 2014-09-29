@@ -34,6 +34,7 @@ set title
 set backupdir=~/.vim/.backups
 set directory=~/.vim/.swaps
 set undodir=~/.vim/.undo
+set autochdir
 set notimeout
 set ttimeout
 set ttimeoutlen=10
@@ -315,20 +316,20 @@ noremap <leader><leader>cl :call ConcealToggle()<CR>
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[n,p] to moving to next and previous window respectively
 if has('unix')
-  nnoremap h <C-w>>
+  nnoremap h <C-w><
   nnoremap j <C-w>-
   nnoremap k <C-w>+
-  nnoremap l <C-w><
+  nnoremap l <C-w>>
   nnoremap = <C-W>=
   nnoremap s :split<CR>
   nnoremap v :vsplit<CR>
   nnoremap n <C-W><C-W>
   nnoremap p <C-W><S-W>
 else
-  nnoremap <M-h> <C-w>>
+  nnoremap <M-h> <C-w><
   nnoremap <M-j> <C-w>-
   nnoremap <M-k> <C-w>+
-  nnoremap <M-l> <C-w><
+  nnoremap <M-l> <C-w>>
   nnoremap <M-=> <C-W>=
   nnoremap <M-s> :split<CR>
   nnoremap <M-v> :vsplit<CR>
