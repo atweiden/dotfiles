@@ -76,8 +76,9 @@ URxvt.keysym.F4               : \033OS
 URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
 
 #font
-URxvt*font        : xft:Monaco-24
-URxvt*letterSpace : -1
+URxvt*font               : xft:Monaco-24
+URxvt*letterSpace        : -1
+URxvt*skipBuiltinGlyphs  : true
 
 #tabs
 ! no: disable tab new button
