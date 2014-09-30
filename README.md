@@ -27,6 +27,7 @@ Credits
 - https://github.com/haya14busa/dotfiles
 - https://github.com/ifschleife/dotfiles
 - https://github.com/jeroenjanssens/dotfiles
+- https://github.com/junegunn/dotfiles
 - https://github.com/kernelsmith/env-customization
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/nvie/vimrc

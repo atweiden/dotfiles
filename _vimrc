@@ -18,6 +18,15 @@ set nofsync
 
 
 " -----------------------------------------------------------------------------
+" Plugins
+
+silent! if plug#begin('~/.vim/plugged')
+Plug 'reedes/vim-wordy'
+call plug#end()
+endif
+
+
+" -----------------------------------------------------------------------------
 " Functions
 
 if filereadable(expand('~/.vim/functions.vim'))
@@ -76,6 +85,9 @@ if has("gui_running")
     set guioptions-=r
     set guioptions+=c
     set guifont=Monaco\ 16
+    set t_Co=256
+    let g:jellyx_show_whitespace = 1
+    colorscheme jellyx
 endif
 
 if has('autocmd')
