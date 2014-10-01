@@ -21,7 +21,50 @@ set nofsync
 " Plugins
 
 silent! if plug#begin('~/.vim/plugged')
+" buffers
+Plug 'moll/vim-bbye'
+
+" writing
 Plug 'reedes/vim-wordy'
+
+" crypto
+Plug 'vim-scripts/openssl.vim'
+
+" search
+Plug 'junegunn/fzf'
+Plug 'haya14busa/incsearch.vim'
+
+" macros
+Plug 'vim-scripts/marvim'
+
+" vcs
+Plug 'ludovicchabant/vim-lawrencium'
+
+" languages
+Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'vim-scripts/paredit.vim', { 'for': 'lisp, racket, scheme' }
+Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
+Plug 'moll/vim-node', { 'for': 'javascript' }
+
+" colors
+Plug 'vim-scripts/CSApprox'
+Plug 'vim-scripts/AutumnLeaf'
+Plug 'vim-scripts/baycomb'
+Plug 'vim-scripts/candyman.vim'
+Plug 'vim-scripts/lettuce.vim'
+Plug 'vim-scripts/Liquid-Carbon'
+Plug 'vim-scripts/matrix.vim', { 'tag': '1.0' }
+Plug 'vim-scripts/mayansmoke'
+Plug 'vim-scripts/mimicpak'
+Plug 'jeetsukumaran/vim-nefertiti'
+Plug 'vim-scripts/oceanlight'
+Plug 'vim-scripts/print_bw.zip'
+Plug 'vim-scripts/Sorcerer'
+Plug 'vim-scripts/stackoverflow.vim'
+Plug 'vim-scripts/summerfruit256.vim'
+Plug 'vim-scripts/TaQua'
+Plug 'vim-scripts/zenesque.vim'
 call plug#end()
 endif
 
