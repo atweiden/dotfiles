@@ -30,6 +30,9 @@ Plug 'ton/vim-bufsurf'
 
 " splits
 Plug 'mattboehm/vim-accordion', { 'on': 'Accordion' }
+Plug 'mattboehm/vim-unstack', { 'on': [ 'UnstackFromClipboard',
+                                      \ 'UnstackFromSelection',
+                                      \ 'UnstackFromText' ] }
 
 " filesystem
 Plug 'dockyard/vim-easydir'
@@ -39,18 +42,54 @@ Plug 'bogado/file-line'
 
 " search
 Plug 'dyng/ctrlsf.vim', { 'on': [ 'CtrlSF',
-                                \ '<Plug>CtrlSFPrompt',
-                                \ '<Plug>CtrlSFVwordExec',
-                                \ '<Plug>CtrlSFVwordPath',
                                 \ '<Plug>CtrlSFCwordPath',
-                                \ '<Plug>CtrlSFPwordPath' ] }
+                                \ '<Plug>CtrlSFPrompt',
+                                \ '<Plug>CtrlSFPwordPath',
+                                \ '<Plug>CtrlSFVwordExec',
+                                \ '<Plug>CtrlSFVwordPath' ] }
 Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
+Plug 'dahu/SearchParty', { 'on': [ 'P',
+                                 \ 'RSearch',
+                                 \ '<Plug>MashFOWDisable',
+                                 \ '<Plug>MashFOWEnable',
+                                 \ '<Plug>SearchPartyDeleteMatch',
+                                 \ '<Plug>SearchPartyFindLiteral',
+                                 \ '<Plug>SearchPartyFindLiteralBkwd',
+                                 \ '<Plug>SearchPartyFindLiteralFwd',
+                                 \ '<Plug>SearchPartyHighlightClear',
+                                 \ '<Plug>SearchPartyHighlightToggle',
+                                 \ '<Plug>SearchPartyHighlightWord',
+                                 \ '<Plug>SearchPartyHighlightWORD',
+                                 \ '<Plug>SearchPartyMashFOWToggle',
+                                 \ '<Plug>SearchPartyMashShadow',
+                                 \ '<Plug>SearchPartyMultipleReplace',
+                                 \ '<Plug>SearchPartySearchHighlightReplace',
+                                 \ '<Plug>SearchPartySetMatch',
+                                 \ '<Plug>SearchPartySetSearch',
+                                 \ '<Plug>SearchPartyToggleAutoHighlightWord',
+                                 \ '<Plug>SearchPartyVisualFindNext',
+                                 \ '<Plug>SearchPartyVisualFindPrev',
+                                 \ '<Plug>SearchPartyVisualFindPrior',
+                                 \ '<Plug>SearchPartyVisualFindSubstitute',
+                                 \ '<Plug>SearchPartyVisualSubstitute' ] }
 
 " movement
 Plug 'rhysd/clever-f.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'bruno-/vim-vertical-move'
+
+" repeat
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/visualrepeat'
+
+" undo
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+
+" sessions
+Plug 'tpope/vim-projectionist'
 
 " align
 Plug 'JLimperg/Align'
@@ -60,13 +99,33 @@ Plug 'atweiden/vim-dragvisuals'
 " textobj
 Plug 'tommcdo/vim-centaur'
 Plug 'terryma/vim-expand-region'
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-submode'
+Plug 'wellle/targets.vim'
+Plug 'reedes/vim-textobj-quote'
+Plug 'reedes/vim-textobj-sentence'
+Plug 'kana/vim-textobj-user'
 
 " bookmarks
 Plug 'tommcdo/vim-kangaroo'
+Plug 'jeetsukumaran/vim-markology', { 'on': [ '<Plug>MarkologyClearAll',
+                                            \ '<Plug>MarkologyClearMark',
+                                            \ '<Plug>MarkologyDisable',
+                                            \ '<Plug>MarkologyEnable',
+                                            \ '<Plug>MarkologyLocationList',
+                                            \ '<Plug>MarkologyNextLocalMarkByAlpha',
+                                            \ '<Plug>MarkologyNextLocalMarkPos',
+                                            \ '<Plug>MarkologyPlaceMark',
+                                            \ '<Plug>MarkologyPlaceMarkToggle',
+                                            \ '<Plug>MarkologyPrevLocalMarkByAlpha',
+                                            \ '<Plug>MarkologyPrevLocalMarkPos',
+                                            \ '<Plug>MarkologyQuickFix',
+                                            \ '<Plug>MarkologyToggle' ] }
 
 " macros
 Plug 'dahu/VimLocalMacros'
 Plug 'vim-scripts/marvim'
+Plug 'naquad/Partial.vim', { 'on': 'Partial' }
 
 " auto-close
 Plug 'jiangmiao/auto-pairs'
@@ -74,13 +133,17 @@ Plug 'jiangmiao/auto-pairs'
 " vcs
 Plug 'rhysd/committia.vim'
 Plug 'ludovicchabant/vim-lawrencium'
+Plug 'jmcantrell/vim-reporoot', { 'on': 'RepoRoot' }
 
 " writing
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'reedes/vim-lexical', { 'for': [ 'markdown', 'textile' ] }
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
 Plug 'reedes/vim-litecorrect', { 'for': [ 'markdown', 'textile' ] }
-Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy',
+                                 \ 'NoWordy',
+                                 \ 'PrevWordy',
+                                 \ 'Wordy' ] }
 
 " crypto
 Plug 'vim-scripts/openssl.vim'
@@ -92,8 +155,107 @@ Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'FocusDispatch',
                                    \ 'Make',
                                    \ 'Start' ] }
+Plug 'jpalardy/vim-slime', { 'on': [ 'SlimeConfig',
+                                   \ 'SlimeSend',
+                                   \ 'SlimeSend1',
+                                   \ '<Plug>SlimeConfig',
+                                   \ '<Plug>SlimeLineSend',
+                                   \ '<Plug>SlimeMotionSend',
+                                   \ '<Plug>SlimeParagraphSend',
+                                   \ '<Plug>SlimeRegionSend' ] }
+Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
+                               \ 'VimuxCloseRunner',
+                               \ 'VimuxInspectRunner',
+                               \ 'VimuxInterruptRunner',
+                               \ 'VimuxOpenPane',
+                               \ 'VimuxPromptCommand',
+                               \ 'VimuxRunCommand',
+                               \ 'VimuxRunLastCommand',
+                               \ 'VimuxSendKeys',
+                               \ 'VimuxSendText',
+                               \ 'VimuxZoomRunner' ] }
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
+Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
+                                     \ 'SCChooseInterpreter',
+                                     \ 'SCCompile',
+                                     \ 'SCCompileAF',
+                                     \ 'SCCompileRun',
+                                     \ 'SCCompileRunAF',
+                                     \ 'SCCompileRunAsync',
+                                     \ 'SCCompileRunAsyncAF',
+                                     \ 'SCIsRunningAsync',
+                                     \ 'SCTerminateAsync',
+                                     \ 'SCViewResult',
+                                     \ 'SCViewResultAsync',
+                                     \ 'SingleCompile',
+                                     \ 'SingleCompileRun' ] }
+Plug 'Shougo/unite.vim', { 'on': [ 'Unite',
+                                 \ 'UniteBookmarkAdd',
+                                 \ 'UniteClose',
+                                 \ 'UniteFirst',
+                                 \ 'UniteLast',
+                                 \ 'UniteNext',
+                                 \ 'UnitePrevious',
+                                 \ 'UniteResume',
+                                 \ 'UniteWithBufferDir',
+                                 \ 'UniteWithCurrentDir',
+                                 \ 'UniteWithCursorWord',
+                                 \ 'UniteWithInput',
+                                 \ 'UniteWithInputDirectory',
+                                 \ 'UniteWithProjectDir',
+                                 \ '<Plug>(unite_all_exit)',
+                                 \ '<Plug>(unite_append_end)',
+                                 \ '<Plug>(unite_append_enter)',
+                                 \ '<Plug>(unite_choose_action)',
+                                 \ '<Plug>(unite_complete)',
+                                 \ '<Plug>(unite_cursor_bottom)',
+                                 \ '<Plug>(unite_cursor_top)',
+                                 \ '<Plug>(unite_delete_backward_char)',
+                                 \ '<Plug>(unite_delete_backward_line)',
+                                 \ '<Plug>(unite_delete_backward_path)',
+                                 \ '<Plug>(unite_delete_backward_word)',
+                                 \ '<Plug>(unite_disable_max_candidates)',
+                                 \ '<Plug>(unite_disable_max_candidates)',
+                                 \ '<Plug>(unite_do_default_action)',
+                                 \ '<Plug>(unite_exit)',
+                                 \ '<Plug>(unite_input_directory)',
+                                 \ '<Plug>(unite_input_directory)',
+                                 \ '<Plug>(unite_insert_enter)',
+                                 \ '<Plug>(unite_insert_head)',
+                                 \ '<Plug>(unite_insert_leave)',
+                                 \ '<Plug>(unite_loop_cursor_down)',
+                                 \ '<Plug>(unite_loop_cursor_up)',
+                                 \ '<Plug>(unite_move_head)',
+                                 \ '<Plug>(unite_narrowing_dot)',
+                                 \ '<Plug>(unite_narrowing_input_history)',
+                                 \ '<Plug>(unite_narrowing_path)',
+                                 \ '<Plug>(unite_new_candidate)',
+                                 \ '<Plug>(unite_print_candidate)',
+                                 \ '<Plug>(unite_print_message_log)',
+                                 \ '<Plug>(unite_quick_help)',
+                                 \ '<Plug>(unite_quick_match_choose_action)',
+                                 \ '<Plug>(unite_quick_match_default_action)',
+                                 \ '<Plug>(unite_redraw)',
+                                 \ '<Plug>(unite_redraw)',
+                                 \ '<Plug>(unite_restart)',
+                                 \ '<Plug>(unite_rotate_next_source)',
+                                 \ '<Plug>(unite_rotate_previous_source)',
+                                 \ '<Plug>(unite_select_next_line)',
+                                 \ '<Plug>(unite_select_next_page)',
+                                 \ '<Plug>(unite_select_previous_line)',
+                                 \ '<Plug>(unite_select_previous_page)',
+                                 \ '<Plug>(unite_skip_cursor_down)',
+                                 \ '<Plug>(unite_skip_cursor_up)',
+                                 \ '<Plug>(unite_skip_next_line)',
+                                 \ '<Plug>(unite_skip_previous_line)',
+                                 \ '<Plug>(unite_toggle_auto_preview)',
+                                 \ '<Plug>(unite_toggle_mark_all_candidates)',
+                                 \ '<Plug>(unite_toggle_mark_current_candidate)',
+                                 \ '<Plug>(unite_toggle_mark_current_candidate_up)',
+                                 \ '<Plug>(unite_toggle_mark_selected_candidates)',
+                                 \ '<Plug>(unite_toggle_selected_candidates)',
+                                 \ '<Plug>(unite_toggle_transpose_window)' ] }
 
 " languages
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
@@ -102,13 +264,34 @@ Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
 Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
 Plug 'vim-jp/cpp-vim', { 'for': [ 'c', 'cpp' ] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
+Plug 'b4winckler/vim-objc', { 'for': 'objc' }
+Plug 'tpope/vim-classpath', { 'for': [ 'clojure', 'java' ] }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'vim-scripts/csv.vim', { 'for': 'csv' }
 Plug 'tshirtman/vim-cython', { 'for': 'cython' }
 Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.0' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'mattreduce/vim-mix', { 'on': [ 'Mclean',
+                                   \ 'Mcompile',
+                                   \ 'Mdeps',
+                                   \ 'Mix',
+                                   \ 'Mtest' ] }
+Plug 'spiegela/vimix', { 'on': [ 'VimixClean',
+                               \ 'VimixCompile',
+                               \ 'VimixDepsCompile',
+                               \ 'VimixDepsGet',
+                               \ 'VimixDepsStatus',
+                               \ 'VimixDepsUpdate',
+                               \ 'VimixLocal',
+                               \ 'VimixPromptRun',
+                               \ 'VimixTestAll',
+                               \ 'VimixTestCurrentFile',
+                               \ 'VimuxRunLastCommand' ] }
 Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
-Plug 'unc0/vim-egs', { 'for': 'egs' }
-Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-haml', { 'for': [ 'haml', 'sass', 'scss' ] }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
@@ -116,26 +299,45 @@ Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
 Plug 'Twinside/vim-haskellFold', { 'for': 'haskell' }
 Plug 'travitch/hasksyn', { 'for': 'haskell' }
 Plug 'wting/lhaskell.vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': [ 'cassius',
+                                                 \ 'hamlet',
+                                                 \ 'julius',
+                                                 \ 'lucius' ] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
+Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
+Plug 'unc0/vim-egs', { 'for': 'egs' }
 Plug 'ajford/vimkivy', { 'for': 'kivy' }
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
 Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
-Plug 'tpope/vim-classpath', { 'for': [ 'clojure', 'java' ] }
-Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
-Plug 'kien/rainbow_parentheses.vim', { 'on': [ 'RainbowParenthesesToggle',
-                                             \ 'RainbowParenthesesToggleAll',
-                                             \ 'RainbowParenthesesLoadRound',
-                                             \ 'RainbowParenthesesLoadSquare',
-                                             \ 'RainbowParenthesesLoadBraces',
-                                             \ 'RainbowParenthesesLoadChevrons' ] }
+Plug 'leafo/moonscript-vim', { 'for': 'moon' }
+Plug 'tpope/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
+Plug 'mattly/vim-markdown-enhancements', { 'for': [ 'markdown', 'mkd' ] }
+Plug 'nelstrom/vim-markdown-folding', { 'for': [ 'markdown', 'mkd' ] }
+Plug 'zah/nimrod.vim', { 'for': [ 'nim', 'nimrod' ] }
+Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
+Plug 'yko/mojo.vim', { 'for': 'html.epl' }
+Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
+Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
+Plug '2072/vim-syntax-for-PHP', { 'for': 'php' }
+Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plug 'vim-scripts/paredit.vim', { 'for': [ 'lisp', 'racket', 'scheme' ] }
+Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
+Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
+Plug 'saltstack/salt-vim', { 'for': 'sls' }
+Plug 'vim-scripts/SQLUtilities', { 'on': [ 'SQLUCreateColumnList',
+                                         \ 'SQLUCreateProcedure',
+                                         \ 'SQLUFormatter',
+                                         \ 'SQLUGetColumnDataType',
+                                         \ 'SQLUGetColumnDef' ] }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'whatyouhide/vim-tmux-syntax', { 'for': 'tmux-conf' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " colors
 Plug 'vim-scripts/AutumnLeaf'
@@ -172,6 +374,21 @@ Plug 'vim-scripts/zenesque.vim'
 " color utilities
 Plug 'vim-scripts/CSApprox'
 Plug 'mhinz/vim-hugefile'
+Plug 'kien/rainbow_parentheses.vim', { 'on': [ 'RainbowParenthesesLoadBraces',
+                                             \ 'RainbowParenthesesLoadChevrons',
+                                             \ 'RainbowParenthesesLoadRound',
+                                             \ 'RainbowParenthesesLoadSquare',
+                                             \ 'RainbowParenthesesToggle',
+                                             \ 'RainbowParenthesesToggleAll' ] }
+Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore',
+                                        \ 'SyntaxInclude' ] }
+Plug 'reedes/vim-thematic', { 'on': [ 'ThematicFirst',
+                                    \ 'ThematicNarrow',
+                                    \ 'ThematicNext',
+                                    \ 'ThematicOriginal',
+                                    \ 'ThematicPrevious',
+                                    \ 'ThematicRandom',
+                                    \ 'ThematicWiden' ] }
 Plug 'whatyouhide/vim-lengthmatters'
 call plug#end()
 endif
