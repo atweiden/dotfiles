@@ -36,8 +36,7 @@ Plug 'mattboehm/vim-unstack', { 'on': [ 'UnstackFromClipboard',
 
 " filesystem
 Plug 'dockyard/vim-easydir'
-Plug 'jeetsukumaran/vim-filebeagle', { 'on': [ 'FileBeagle',
-                                             \ 'FileBeagleBufferDir' ] }
+Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'bogado/file-line'
 
 " search
@@ -51,30 +50,8 @@ Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
-Plug 'dahu/SearchParty', { 'on': [ 'P',
-                                 \ 'RSearch',
-                                 \ '<Plug>MashFOWDisable',
-                                 \ '<Plug>MashFOWEnable',
-                                 \ '<Plug>SearchPartyDeleteMatch',
-                                 \ '<Plug>SearchPartyFindLiteral',
-                                 \ '<Plug>SearchPartyFindLiteralBkwd',
-                                 \ '<Plug>SearchPartyFindLiteralFwd',
-                                 \ '<Plug>SearchPartyHighlightClear',
-                                 \ '<Plug>SearchPartyHighlightToggle',
-                                 \ '<Plug>SearchPartyHighlightWord',
-                                 \ '<Plug>SearchPartyHighlightWORD',
-                                 \ '<Plug>SearchPartyMashFOWToggle',
-                                 \ '<Plug>SearchPartyMashShadow',
-                                 \ '<Plug>SearchPartyMultipleReplace',
-                                 \ '<Plug>SearchPartySearchHighlightReplace',
-                                 \ '<Plug>SearchPartySetMatch',
-                                 \ '<Plug>SearchPartySetSearch',
-                                 \ '<Plug>SearchPartyToggleAutoHighlightWord',
-                                 \ '<Plug>SearchPartyVisualFindNext',
-                                 \ '<Plug>SearchPartyVisualFindPrev',
-                                 \ '<Plug>SearchPartyVisualFindPrior',
-                                 \ '<Plug>SearchPartyVisualFindSubstitute',
-                                 \ '<Plug>SearchPartyVisualSubstitute' ] }
+Plug 'dahu/SearchParty'
+Plug 'Shougo/unite.vim'
 
 " movement
 Plug 'rhysd/clever-f.vim'
@@ -108,19 +85,7 @@ Plug 'kana/vim-textobj-user'
 
 " bookmarks
 Plug 'tommcdo/vim-kangaroo'
-Plug 'jeetsukumaran/vim-markology', { 'on': [ '<Plug>MarkologyClearAll',
-                                            \ '<Plug>MarkologyClearMark',
-                                            \ '<Plug>MarkologyDisable',
-                                            \ '<Plug>MarkologyEnable',
-                                            \ '<Plug>MarkologyLocationList',
-                                            \ '<Plug>MarkologyNextLocalMarkByAlpha',
-                                            \ '<Plug>MarkologyNextLocalMarkPos',
-                                            \ '<Plug>MarkologyPlaceMark',
-                                            \ '<Plug>MarkologyPlaceMarkToggle',
-                                            \ '<Plug>MarkologyPrevLocalMarkByAlpha',
-                                            \ '<Plug>MarkologyPrevLocalMarkPos',
-                                            \ '<Plug>MarkologyQuickFix',
-                                            \ '<Plug>MarkologyToggle' ] }
+Plug 'jeetsukumaran/vim-markology'
 
 " macros
 Plug 'dahu/VimLocalMacros'
@@ -131,8 +96,56 @@ Plug 'naquad/Partial.vim', { 'on': 'Partial' }
 Plug 'jiangmiao/auto-pairs'
 
 " vcs
-Plug 'rhysd/committia.vim'
-Plug 'ludovicchabant/vim-lawrencium'
+Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
+Plug 'ludovicchabant/vim-lawrencium', { 'on': [ 'Hg',
+                                              \ 'Hgannotate',
+                                              \ 'Hgannotatediffsum',
+                                              \ 'Hgcd',
+                                              \ 'Hgcommit',
+                                              \ 'Hgdiff',
+                                              \ 'Hgdiffsum',
+                                              \ 'Hgdiffsumsplit',
+                                              \ 'Hgedit',
+                                              \ 'Hglcd',
+                                              \ 'Hglog',
+                                              \ 'Hglogdiff',
+                                              \ 'Hglogdiffsum',
+                                              \ 'Hglogexport',
+                                              \ 'Hglogrevedit',
+                                              \ 'Hglogtabdiff',
+                                              \ 'Hglogtabdiffsum',
+                                              \ 'Hglogthis',
+                                              \ 'Hglogvdiff',
+                                              \ 'Hglogvdiffsum',
+                                              \ 'Hgqseries',
+                                              \ 'Hgqserieseditmessage',
+                                              \ 'Hgqseriesgoto',
+                                              \ 'Hgqseriesrename',
+                                              \ 'Hgrecord',
+                                              \ 'Hgrecordabort',
+                                              \ 'Hgrecordcommit',
+                                              \ 'Hgrevert',
+                                              \ 'Hgstatus',
+                                              \ 'Hgstatusaddremove',
+                                              \ 'Hgstatuscommit',
+                                              \ 'Hgstatusdiff',
+                                              \ 'Hgstatusdiffsum',
+                                              \ 'Hgstatusedit',
+                                              \ 'Hgstatusqnew',
+                                              \ 'Hgstatusqrefresh',
+                                              \ 'Hgstatusrefresh',
+                                              \ 'Hgstatustabdiff',
+                                              \ 'Hgstatustabdiffsum',
+                                              \ 'Hgstatusvcommit',
+                                              \ 'Hgstatusvdiff',
+                                              \ 'Hgstatusvdiffsum',
+                                              \ 'Hgtabdiff',
+                                              \ 'Hgtabdiffsumsplit',
+                                              \ 'Hgvcommit',
+                                              \ 'Hgvdiff',
+                                              \ 'Hgvdiffsumsplit',
+                                              \ 'Hgvimgrep',
+                                              \ 'Hgwannotate' ] }
 Plug 'jmcantrell/vim-reporoot', { 'on': 'RepoRoot' }
 
 " writing
@@ -148,7 +161,7 @@ Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy',
 " crypto
 Plug 'vim-scripts/openssl.vim'
 
-" async
+" command runners
 Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'Dispatch',
                                    \ 'Focus',
@@ -174,8 +187,6 @@ Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxSendKeys',
                                \ 'VimuxSendText',
                                \ 'VimuxZoomRunner' ] }
-Plug 'xolox/vim-misc'
-Plug 'Shougo/vimproc.vim'
 Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCChooseInterpreter',
                                      \ 'SCCompile',
@@ -190,72 +201,6 @@ Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCViewResultAsync',
                                      \ 'SingleCompile',
                                      \ 'SingleCompileRun' ] }
-Plug 'Shougo/unite.vim', { 'on': [ 'Unite',
-                                 \ 'UniteBookmarkAdd',
-                                 \ 'UniteClose',
-                                 \ 'UniteFirst',
-                                 \ 'UniteLast',
-                                 \ 'UniteNext',
-                                 \ 'UnitePrevious',
-                                 \ 'UniteResume',
-                                 \ 'UniteWithBufferDir',
-                                 \ 'UniteWithCurrentDir',
-                                 \ 'UniteWithCursorWord',
-                                 \ 'UniteWithInput',
-                                 \ 'UniteWithInputDirectory',
-                                 \ 'UniteWithProjectDir',
-                                 \ '<Plug>(unite_all_exit)',
-                                 \ '<Plug>(unite_append_end)',
-                                 \ '<Plug>(unite_append_enter)',
-                                 \ '<Plug>(unite_choose_action)',
-                                 \ '<Plug>(unite_complete)',
-                                 \ '<Plug>(unite_cursor_bottom)',
-                                 \ '<Plug>(unite_cursor_top)',
-                                 \ '<Plug>(unite_delete_backward_char)',
-                                 \ '<Plug>(unite_delete_backward_line)',
-                                 \ '<Plug>(unite_delete_backward_path)',
-                                 \ '<Plug>(unite_delete_backward_word)',
-                                 \ '<Plug>(unite_disable_max_candidates)',
-                                 \ '<Plug>(unite_disable_max_candidates)',
-                                 \ '<Plug>(unite_do_default_action)',
-                                 \ '<Plug>(unite_exit)',
-                                 \ '<Plug>(unite_input_directory)',
-                                 \ '<Plug>(unite_input_directory)',
-                                 \ '<Plug>(unite_insert_enter)',
-                                 \ '<Plug>(unite_insert_head)',
-                                 \ '<Plug>(unite_insert_leave)',
-                                 \ '<Plug>(unite_loop_cursor_down)',
-                                 \ '<Plug>(unite_loop_cursor_up)',
-                                 \ '<Plug>(unite_move_head)',
-                                 \ '<Plug>(unite_narrowing_dot)',
-                                 \ '<Plug>(unite_narrowing_input_history)',
-                                 \ '<Plug>(unite_narrowing_path)',
-                                 \ '<Plug>(unite_new_candidate)',
-                                 \ '<Plug>(unite_print_candidate)',
-                                 \ '<Plug>(unite_print_message_log)',
-                                 \ '<Plug>(unite_quick_help)',
-                                 \ '<Plug>(unite_quick_match_choose_action)',
-                                 \ '<Plug>(unite_quick_match_default_action)',
-                                 \ '<Plug>(unite_redraw)',
-                                 \ '<Plug>(unite_redraw)',
-                                 \ '<Plug>(unite_restart)',
-                                 \ '<Plug>(unite_rotate_next_source)',
-                                 \ '<Plug>(unite_rotate_previous_source)',
-                                 \ '<Plug>(unite_select_next_line)',
-                                 \ '<Plug>(unite_select_next_page)',
-                                 \ '<Plug>(unite_select_previous_line)',
-                                 \ '<Plug>(unite_select_previous_page)',
-                                 \ '<Plug>(unite_skip_cursor_down)',
-                                 \ '<Plug>(unite_skip_cursor_up)',
-                                 \ '<Plug>(unite_skip_next_line)',
-                                 \ '<Plug>(unite_skip_previous_line)',
-                                 \ '<Plug>(unite_toggle_auto_preview)',
-                                 \ '<Plug>(unite_toggle_mark_all_candidates)',
-                                 \ '<Plug>(unite_toggle_mark_current_candidate)',
-                                 \ '<Plug>(unite_toggle_mark_current_candidate_up)',
-                                 \ '<Plug>(unite_toggle_mark_selected_candidates)',
-                                 \ '<Plug>(unite_toggle_selected_candidates)',
-                                 \ '<Plug>(unite_toggle_transpose_window)' ] }
 
 " languages
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
@@ -390,6 +335,10 @@ Plug 'reedes/vim-thematic', { 'on': [ 'ThematicFirst',
                                     \ 'ThematicRandom',
                                     \ 'ThematicWiden' ] }
 Plug 'whatyouhide/vim-lengthmatters'
+
+" utilities
+Plug 'xolox/vim-misc'
+Plug 'Shougo/vimproc.vim'
 call plug#end()
 endif
 
