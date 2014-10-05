@@ -21,50 +21,158 @@ set nofsync
 " Plugins
 
 silent! if plug#begin('~/.vim/plugged')
+" status
+Plug 'itchyny/lightline.vim'
+
 " buffers
-Plug 'moll/vim-bbye'
+Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
+Plug 'ton/vim-bufsurf'
+
+" splits
+Plug 'mattboehm/vim-accordion', { 'on': 'Accordion' }
+
+" filesystem
+Plug 'dockyard/vim-easydir'
+Plug 'jeetsukumaran/vim-filebeagle', { 'on': [ 'FileBeagle',
+                                             \ 'FileBeagleBufferDir' ] }
+Plug 'bogado/file-line'
+
+" search
+Plug 'dyng/ctrlsf.vim', { 'on': [ 'CtrlSF',
+                                \ '<Plug>CtrlSFPrompt',
+                                \ '<Plug>CtrlSFVwordExec',
+                                \ '<Plug>CtrlSFVwordPath',
+                                \ '<Plug>CtrlSFCwordPath',
+                                \ '<Plug>CtrlSFPwordPath' ] }
+Plug 'junegunn/fzf', { 'on': 'FZF' }
+Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
+                                         \ '<Plug>(incsearch-forward)',
+                                         \ '<Plug>(incsearch-stay)' ] }
+
+" movement
+Plug 'rhysd/clever-f.vim'
+
+" align
+Plug 'JLimperg/Align'
+Plug 'vim-scripts/vis'
+Plug 'atweiden/vim-dragvisuals'
+
+" textobj
+Plug 'tommcdo/vim-centaur'
+Plug 'terryma/vim-expand-region'
+
+" bookmarks
+Plug 'tommcdo/vim-kangaroo'
+
+" macros
+Plug 'dahu/VimLocalMacros'
+Plug 'vim-scripts/marvim'
+
+" auto-close
+Plug 'jiangmiao/auto-pairs'
+
+" vcs
+Plug 'rhysd/committia.vim'
+Plug 'ludovicchabant/vim-lawrencium'
 
 " writing
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
+Plug 'reedes/vim-lexical', { 'for': [ 'markdown', 'textile' ] }
+Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
+Plug 'reedes/vim-litecorrect', { 'for': [ 'markdown', 'textile' ] }
 Plug 'reedes/vim-wordy'
 
 " crypto
 Plug 'vim-scripts/openssl.vim'
 
-" search
-Plug 'junegunn/fzf'
-Plug 'haya14busa/incsearch.vim'
-
-" macros
-Plug 'vim-scripts/marvim'
-
-" vcs
-Plug 'ludovicchabant/vim-lawrencium'
+" async
+Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
+                                   \ 'Dispatch',
+                                   \ 'Focus',
+                                   \ 'FocusDispatch',
+                                   \ 'Make',
+                                   \ 'Start' ] }
+Plug 'xolox/vim-misc'
+Plug 'Shougo/vimproc.vim'
 
 " languages
+Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
+Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
+Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
 Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
+Plug 'vim-jp/cpp-vim', { 'for': [ 'c', 'cpp' ] }
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
+Plug 'vim-scripts/csv.vim', { 'for': 'csv' }
+Plug 'tshirtman/vim-cython', { 'for': 'cython' }
+Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.0' }
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
+Plug 'unc0/vim-egs', { 'for': 'egs' }
+Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'tpope/vim-haml', { 'for': [ 'haml', 'sass', 'scss' ] }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-Plug 'vim-scripts/paredit.vim', { 'for': 'lisp, racket, scheme' }
+Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+Plug 'Twinside/vim-haskellFold', { 'for': 'haskell' }
+Plug 'travitch/hasksyn', { 'for': 'haskell' }
+Plug 'wting/lhaskell.vim', { 'for': 'haskell' }
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'ajford/vimkivy', { 'for': 'kivy' }
+Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
+Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
+Plug 'tpope/vim-classpath', { 'for': [ 'clojure', 'java' ] }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
+Plug 'kien/rainbow_parentheses.vim', { 'on': [ 'RainbowParenthesesToggle',
+                                             \ 'RainbowParenthesesToggleAll',
+                                             \ 'RainbowParenthesesLoadRound',
+                                             \ 'RainbowParenthesesLoadSquare',
+                                             \ 'RainbowParenthesesLoadBraces',
+                                             \ 'RainbowParenthesesLoadChevrons' ] }
+Plug 'vim-scripts/paredit.vim', { 'for': [ 'lisp', 'racket', 'scheme' ] }
 Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 
 " colors
-Plug 'vim-scripts/CSApprox'
 Plug 'vim-scripts/AutumnLeaf'
 Plug 'vim-scripts/baycomb'
+Plug 'baskerville/bubblegum'
 Plug 'vim-scripts/candyman.vim'
+Plug 'mattsacks/vim-eddie'
+Plug 'endel/vim-github-colorscheme'
+Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
+Plug 'guns/jellyx.vim'
 Plug 'vim-scripts/lettuce.vim'
 Plug 'vim-scripts/Liquid-Carbon'
+Plug 'jonathanfilip/vim-lucius'
 Plug 'vim-scripts/matrix.vim', { 'tag': '1.0' }
 Plug 'vim-scripts/mayansmoke'
 Plug 'vim-scripts/mimicpak'
+Plug 'djjcast/mirodark'
 Plug 'jeetsukumaran/vim-nefertiti'
+Plug 'yuratomo/neon.vim'
+Plug 'trapd00r/neverland-vim-theme'
 Plug 'vim-scripts/oceanlight'
+Plug 'reedes/vim-colors-pencil'
 Plug 'vim-scripts/print_bw.zip'
+Plug 'junegunn/seoul256.vim'
 Plug 'vim-scripts/Sorcerer'
 Plug 'vim-scripts/stackoverflow.vim'
 Plug 'vim-scripts/summerfruit256.vim'
 Plug 'vim-scripts/TaQua'
+Plug 'octol/vombatidae-vim'
+Plug 'rhysd/wallaby.vim'
 Plug 'vim-scripts/zenesque.vim'
+
+" color utilities
+Plug 'vim-scripts/CSApprox'
+Plug 'mhinz/vim-hugefile'
+Plug 'whatyouhide/vim-lengthmatters'
 call plug#end()
 endif
 

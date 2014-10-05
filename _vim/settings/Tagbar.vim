@@ -29,6 +29,21 @@ let g:tagbar_type_asciidoc = {
     "\ 'ctagsbin' : '/usr/lib/jsctags'
 "\ }
 
+let g:tagbar_type_gorilla = {
+  \ 'ctagstype' : 'gorilla',
+  \ 'kinds' : [
+  \   'C:constant',
+  \   'e:module',
+  \   'f:function',
+  \   'c:class',
+  \   'a:array',
+  \   'o:object',
+  \   'r:regex',
+  \   's:string'
+  \ ],
+  \ 'sro' : ".",
+\ }
+
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
