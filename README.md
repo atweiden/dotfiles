@@ -36,6 +36,7 @@ Credits
 - https://github.com/rafi/.config
 - https://github.com/saimn/dotfiles
 - https://github.com/sjl/dotfiles
+- https://github.com/sjn/dotfiles
 - https://github.com/smith/vim-config
 - https://github.com/sontek/dotfiles
 - https://github.com/spf13/spf13-vim
