@@ -77,7 +77,7 @@ URxvt.keysym.F4               : \033OS
 URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
 
 #font
-URxvt*font               : xft:Monaco-24
+URxvt*font               : xft:Monaco\ for\ Powerline-16
 URxvt*letterSpace        : -1
 URxvt*skipBuiltinGlyphs  : true
 

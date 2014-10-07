@@ -15,6 +15,7 @@ set mouse=a
 set mousemodel=popup_setpos
 set encoding=utf-8
 set nofsync
+set noshowmode
 
 
 " -----------------------------------------------------------------------------
