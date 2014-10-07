@@ -84,7 +84,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions+=c
-    set guifont=Monaco\ \for\ Powerline\ 16
+    set guifont=Monaco\ for\ Powerline\ 16
     set t_Co=256
     let g:jellyx_show_whitespace = 1
     colorscheme jellyx
