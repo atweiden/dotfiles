@@ -28,12 +28,30 @@ Plug 'itchyny/lightline.vim'
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'ton/vim-bufsurf'
 Plug 'sjbach/lusty'
+Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR',
+                                 \ 'NRL',
+                                 \ 'NRM',
+                                 \ 'NRN',
+                                 \ 'NRP',
+                                 \ 'NRS',
+                                 \ 'NRV',
+                                 \ 'NUD',
+                                 \ 'NW',
+                                 \ 'WidenRegion',
+                                 \ '<Plug>NrrwrgnBangDo',
+                                 \ '<Plug>NrrwrgnDo',
+                                 \ '<Plug>NrrwrgnWinIncr' ] }
 
 " splits
 Plug 'mattboehm/vim-accordion', { 'on': 'Accordion' }
 Plug 'mattboehm/vim-unstack', { 'on': [ 'UnstackFromClipboard',
                                       \ 'UnstackFromSelection',
                                       \ 'UnstackFromText' ] }
+
+" tabs
+Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
+                               \ 'TabooRename',
+                               \ 'TabooReset' ] }
 
 " filesystem
 Plug 'dockyard/vim-easydir'
@@ -79,6 +97,7 @@ Plug 'Shougo/unite.vim'
 
 " movement
 Plug 'rhysd/clever-f.vim'
+Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bruno-/vim-vertical-move'
@@ -102,7 +121,20 @@ Plug 'tpope/vim-commentary', { 'on': [ 'Commentary',
 
 
 " sessions
-Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-obsession', { 'on': 'Obsession' }
+Plug 'tpope/vim-projectionist', { 'on': [ 'A',
+                                        \ 'AD',
+                                        \ 'AS',
+                                        \ 'AT',
+                                        \ 'AV',
+                                        \ 'Cd',
+                                        \ 'D',
+                                        \ 'E',
+                                        \ 'Lcd',
+                                        \ 'ProjectDo',
+                                        \ 'S',
+                                        \ 'T',
+                                        \ 'V' ] }
 
 " align
 Plug 'JLimperg/Align'
@@ -153,6 +185,7 @@ Plug 'majutsushi/tagbar', { 'on': [ 'Tagbar',
                                   \ 'TagbarShowTag',
                                   \ 'TagbarToggle',
                                   \ 'TagbarTogglePause' ] }
+Plug 'h1mesuke/unite-outline', { 'on': 'Unite' }
 
 " vcs
 Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
@@ -245,6 +278,9 @@ Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy',
                                  \ 'PrevWordy',
                                  \ 'Wordy' ] }
 
+" math
+Plug 'jmcantrell/vim-numbered', { 'on': 'Numbered' }
+
 " crypto
 Plug 'jamessan/vim-gnupg'
 Plug 'vim-scripts/openssl.vim'
@@ -264,6 +300,11 @@ Plug 'jpalardy/vim-slime', { 'on': [ 'SlimeConfig',
                                    \ '<Plug>SlimeMotionSend',
                                    \ '<Plug>SlimeParagraphSend',
                                    \ '<Plug>SlimeRegionSend' ] }
+Plug 'tpope/vim-tbone', { 'on': [ 'Tattach',
+                                \ 'Tmux',
+                                \ 'Tput',
+                                \ 'Twrite',
+                                \ 'Tyank' ] }
 Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxCloseRunner',
                                \ 'VimuxInspectRunner',
@@ -297,6 +338,7 @@ Plug 'Valloric/YouCompleteMe'
 " languages
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
+Plug 'Shirk/vim-gas', { 'for': 'gas' }
 Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
 Plug 'vim-jp/cpp-vim', { 'for': [ 'c', 'cpp' ] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
@@ -309,9 +351,13 @@ Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'vim-scripts/JavaDecompiler.vim', { 'for': 'java' }
+Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'scss' ] }
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'vim-scripts/csv.vim', { 'for': 'csv' }
 Plug 'tshirtman/vim-cython', { 'for': 'cython' }
 Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.0' }
+Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'mattreduce/vim-mix', { 'on': [ 'Mclean',
                                    \ 'Mcompile',
@@ -343,6 +389,8 @@ Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': [ 'cassius',
                                                  \ 'julius',
                                                  \ 'lucius' ] }
 Plug 'othree/html5.vim', { 'for': [ 'html', 'javascript' ] }
+Plug 'mustache/vim-mustache-handlebars', { 'for': [ 'html.handlebars',
+                                                  \ 'html.mustache' ] }
 Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
@@ -351,6 +399,7 @@ Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
 Plug 'unc0/vim-egs', { 'for': 'egs' }
+Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
 Plug 'ajford/vimkivy', { 'for': 'kivy' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
@@ -375,12 +424,14 @@ Plug 'jmcantrell/vim-virtualenv', { 'on': [ 'VirtualEnvActivate',
                                           \ 'VirtualEnvDeactivate',
                                           \ 'VirtualEnvList' ] }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'vim-scripts/paredit.vim', { 'for': [ 'clojure',
                                          \ 'lisp',
                                          \ 'racket',
                                          \ 'scheme' ] }
 Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
@@ -431,7 +482,6 @@ Plug 'vim-scripts/dbext.vim', { 'on': [ '<Plug>DBDescribeProcedure',
                                       \ '<Plug>DBSelectFromTableWithWhere',
                                       \ '<Plug>DBSelectFromTopXTable',
                                       \ '<Plug>DBSelectFromTopXTable' ] }
-Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
 Plug 'whatyouhide/vim-tmux-syntax', { 'for': 'tmux-conf' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
@@ -668,6 +718,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set infercase
+set sessionoptions+=tabpages,globals
 set formatoptions=
 set formatoptions+=c
 set formatoptions+=r
