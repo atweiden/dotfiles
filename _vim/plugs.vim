@@ -310,6 +310,7 @@ Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SingleCompileRun' ] }
 
 " code completion
+Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 
