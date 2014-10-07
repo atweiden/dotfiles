@@ -469,6 +469,7 @@ Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors
 Plug 'vim-scripts/AutumnLeaf'
+Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/baycomb'
 Plug 'baskerville/bubblegum'
 Plug 'vim-scripts/candyman.vim'
@@ -476,6 +477,7 @@ Plug 'mattsacks/vim-eddie'
 Plug 'endel/vim-github-colorscheme'
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
+Plug 'ciaranm/inkpot'
 Plug 'nanotech/jellybeans.vim'
 Plug 'guns/jellyx.vim'
 Plug 'zeis/vim-kolor'
@@ -500,6 +502,7 @@ Plug 'vim-scripts/stackoverflow.vim'
 Plug 'vim-scripts/summerfruit256.vim'
 Plug 'vim-scripts/TaQua'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'danpal/VibrantInk-for-Vim'
 Plug 'octol/vombatidae-vim'
 Plug 'rhysd/wallaby.vim'
 Plug 'vim-scripts/xoria256.vim'
@@ -533,5 +536,6 @@ Plug 'whatyouhide/vim-lengthmatters'
 " utilities
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
+Plug 'tpope/vim-scriptease'
 call plug#end()
 endif
