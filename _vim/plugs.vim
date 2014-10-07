@@ -330,6 +330,7 @@ Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'vim-scripts/JavaDecompiler.vim', { 'for': 'java' }
+Plug 'OrangeT/vim-csharp', { 'for': 'cs' }
 Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'scss' ] }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
