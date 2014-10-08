@@ -37,8 +37,6 @@ endif
 " -----------------------------------------------------------------------------
 " Basics
 
-syntax on
-filetype plugin indent on
 set title
 set backupdir=~/.vim/.backups
 set directory=~/.vim/.swaps
@@ -394,15 +392,49 @@ augroup END
 
 " languages {{{
 
-au BufRead,BufNewFile,BufWrite {*.ejs} set ft=html
-au BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.ronn} set ft=markdown conceallevel=0
-au BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
-au BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl sw=4 ts=4
-au BufRead,BufNewFile,BufWrite {*.json} set ft=javascript
-au BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
-au BufRead,BufNewFile,BufWrite {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,*.god,.irbrc,irb_tempfile*} set ft=ruby
-au BufRead,BufNewFile,BufWrite {Tupfile,*.tup} setf tup
-au BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
+au BufEnter,BufRead,BufNewFile,BufWrite {*.clj} set ft=clojure
+au BufEnter,BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
+au BufEnter,BufRead,BufNewFile,BufWrite {*.cpp,*.hpp} set ft=cpp
+au BufEnter,BufRead,BufNewFile,BufWrite {*.cs} set ft=cs
+au BufEnter,BufRead,BufNewFile,BufWrite {*.css} set ft=css
+au BufEnter,BufRead,BufNewFile,BufWrite {*.csv,*.psv,*.tsv} set ft=csv
+au BufEnter,BufRead,BufNewFile,BufWrite {*.d} set ft=d
+au BufEnter,BufRead,BufNewFile,BufWrite {*.dart} set ft=dart
+au BufEnter,BufRead,BufNewFile,BufWrite {*.eex} set ft=eelixir
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ex,*.exs} set ft=elixir
+au BufEnter,BufRead,BufNewFile,BufWrite {*.erl} set ft=erlang
+au BufEnter,BufRead,BufNewFile,BufWrite {*.egs} set ft=egs
+au BufEnter,BufRead,BufNewFile,BufWrite {*.gs} set ft=gorilla
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ejs,*.htm,*.html} set ft=html
+au BufEnter,BufRead,BufNewFile,BufWrite {*.html.ep,*.html.epl} set ft=html.epl
+au BufEnter,BufRead,BufNewFile,BufWrite {*.go} set ft=go
+au BufEnter,BufRead,BufNewFile,BufWrite {*.haml} set ft=haml
+au BufEnter,BufRead,BufNewFile,BufWrite {*.hs} set ft=haskell
+au BufEnter,BufRead,BufNewFile,BufWrite {*.jade} set ft=jade
+au BufEnter,BufRead,BufNewFile,BufWrite {*.js,*.json} set ft=javascript
+au BufEnter,BufRead,BufNewFile,BufWrite {*.j2,*.jinja,*.jinja2} set ft=jinja
+au BufEnter,BufRead,BufNewFile,BufWrite {*.jl} set ft=julia
+au BufEnter,BufRead,BufNewFile,BufWrite {*.kv} set ft=kivy
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ledger} set ft=ledger
+au BufEnter,BufRead,BufNewFile,BufWrite {*.less} set ft=less
+au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
+au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.ronn} set ft=markdown conceallevel=0
+au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
+au BufEnter,BufRead,BufNewFile,BufWrite {*.php} set ft=php
+au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl sw=4 ts=4
+au BufEnter,BufRead,BufNewFile,BufWrite {*.py} set ft=python
+au BufEnter,BufRead,BufNewFile,BufWrite {*.god,*.rabl,*.rb,.caprc,.irbrc,Capfile,Gemfile,Rakefile,Thorfile,config.ru,irb_tempfile*} set ft=ruby
+au BufEnter,BufRead,BufNewFile,BufWrite {*.rs} set ft=rust
+au BufEnter,BufRead,BufNewFile,BufWrite {*.sass} set ft=sass
+au BufEnter,BufRead,BufNewFile,BufWrite {*.scss} set ft=scss
+au BufEnter,BufRead,BufNewFile,BufWrite {*.sls} set ft=sls
+au BufEnter,BufRead,BufNewFile,BufWrite {*.styl} set ft=stylus
+au BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
+au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
+au BufEnter,BufRead,BufNewFile,BufWrite {Tupfile,*.tup} set ft=tup
+au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
+au BufEnter,BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 
 " }}}
 
