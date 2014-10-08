@@ -2,7 +2,7 @@ let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'filename', 'fugitive' ] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
       \ },
       \ 'component_function': {
       \   'modified': 'MyModified',
