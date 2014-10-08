@@ -326,7 +326,7 @@ noremap <leader><leader>cl :call ConcealToggle()<CR>
 " Navigation
 " ---windows {{{
 
-" map alt-[h,j,k,l,=] to resizing a window split
+" map alt-[h,j,k,l,=,_,|] to resizing a window split
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[n,p] to moving to next and previous window respectively
 if has('unix')
@@ -335,6 +335,8 @@ if has('unix')
   nnoremap k <C-w>+
   nnoremap l <C-w>>
   nnoremap = <C-W>=
+  nnoremap _ <C-W>_
+  nnoremap <bar> <C-W><bar>
   nnoremap s :split<CR>
   nnoremap v :vsplit<CR>
   nnoremap n <C-W><C-W>
@@ -345,6 +347,8 @@ else
   nnoremap <M-k> <C-w>+
   nnoremap <M-l> <C-w>>
   nnoremap <M-=> <C-W>=
+  nnoremap <M-_> <C-W>_
+  nnoremap <M-<bar>> <C-W><bar>
   nnoremap <M-s> :split<CR>
   nnoremap <M-v> :vsplit<CR>
   nnoremap <M-n> <C-W><C-W>
