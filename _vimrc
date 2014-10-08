@@ -439,6 +439,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.sls} set ft=sls
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sql,.psqlrc} set ft=sql
 au BufEnter,BufRead,BufNewFile,BufWrite {*.styl} set ft=stylus
 au BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
+au BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux-conf
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
 au BufEnter,BufRead,BufNewFile,BufWrite {Tupfile,*.tup} set ft=tup
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
