@@ -299,7 +299,7 @@ nmap <silent> <leader>rr :AlignRight<CR>
 " customize autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 " change to directory of file
-nmap <silent> ,. :cd%:h<CR>
+nmap <silent> <leader>. :cd%:h<CR>
 
 " }}}
 " --- merging {{{
