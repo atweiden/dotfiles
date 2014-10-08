@@ -38,7 +38,7 @@ endfunction
 function! MyFugitive()
   if &ft !~? 'vimfiler\|undotree' && exists("*fugitive#head")
     let _ = fugitive#head()
-    return strlen(_) ? 'ⱡ '._ : ''
+    return strlen(_) ? ' '._ : ''
   endif
   return ''
 endfunction
