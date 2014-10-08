@@ -442,6 +442,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
 au BufEnter,BufRead,BufNewFile,BufWrite {Tupfile,*.tup} set ft=tup
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
+au BufEnter,BufRead,BufNewFile,BufWrite {.wgetrc} set ft=wget
 au BufEnter,BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh} set ft=zsh
 
