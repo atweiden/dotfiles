@@ -1,1 +1,1 @@
-call lengthmatters#highlight_link_to('CursorLine')
+"call lengthmatters#highlight_link_to('CursorLine')
