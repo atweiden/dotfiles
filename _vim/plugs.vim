@@ -487,6 +487,7 @@ Plug 'vim-scripts/guicolorscheme.vim', { 'on': 'GuiColorScheme' }
 Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT',
                                      \ 'HLTm' ] }
 Plug 'mhinz/vim-hugefile'
+Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
 Plug 'edkolev/promptline.vim', { 'on': 'PromptlineSnapshot' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'Tmuxline' }
 Plug 'kien/rainbow_parentheses.vim', { 'on': [ 'RainbowParenthesesLoadBraces',
@@ -504,7 +505,7 @@ Plug 'reedes/vim-thematic', { 'on': [ 'ThematicFirst',
                                     \ 'ThematicPrevious',
                                     \ 'ThematicRandom',
                                     \ 'ThematicWiden' ] }
-Plug 'whatyouhide/vim-lengthmatters'
+"Plug 'whatyouhide/vim-lengthmatters'
 
 " utilities
 Plug 'xolox/vim-misc'
