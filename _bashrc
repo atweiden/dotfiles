@@ -109,8 +109,9 @@ alias ls='ls -F --color=auto --group-directories-first'
 alias l='ls -1F --color=auto --group-directories-first'
 alias la='ls -aF --color=auto'
 alias ll='ls -laihF --color=auto'
-alias lld='ls -laihFd --color=auto'
-alias lsd='ls -ltrF --color=auto | grep ^d'
+alias lld='getdirs'
+alias llda='getadirs'
+alias lsd='ls -ltrF --color=auto | grep --color=never ^d'
 alias lx='command ls -lAXB --color=auto' # sort by extension
 alias lk='command ls -lASr --color=auto' # sort by size
 alias lc='command ls -lAcr --color=auto' # sort by change time
