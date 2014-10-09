@@ -444,6 +444,7 @@ Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 Plug 'vim-scripts/AutumnLeaf'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/baycomb'
+Plug 'vim-scripts/Briofita'
 Plug 'baskerville/bubblegum'
 Plug 'vim-scripts/candyman.vim'
 Plug 'mattsacks/vim-eddie'
