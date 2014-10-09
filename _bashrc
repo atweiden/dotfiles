@@ -111,6 +111,7 @@ alias la='ls -aF --color=auto'
 alias ll='ls -laihF --color=auto'
 alias lld='getdirs'
 alias llda='getadirs'
+alias lldao='getadirso'
 alias lsd='ls -ltrF --color=auto | grep --color=never ^d'
 alias lx='command ls -lAXB --color=auto' # sort by extension
 alias lk='command ls -lASr --color=auto' # sort by size
