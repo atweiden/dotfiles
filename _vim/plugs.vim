@@ -85,7 +85,6 @@ Plug 'yonchu/accelerated-smooth-scroll', { 'on': [ '<Plug>(ac-smooth-scroll-c-b)
 Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
-Plug 'vimtaku/hl_matchit.vim', { 'for': [ 'ruby', 'sh', 'vim' ] }
 Plug 'myusuf3/numbers.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bruno-/vim-vertical-move'
@@ -396,7 +395,6 @@ Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
-Plug 'todesking/ruby_hl_lvar.vim', { 'for': 'ruby' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'saltstack/salt-vim', { 'for': 'sls' }
