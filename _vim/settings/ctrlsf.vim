@@ -1,3 +1,3 @@
-nnoremap <C-F>f :CtrlSF<Space>
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>c :CtrlSFClose<CR>
+nnoremap F :CtrlSF<Space>
+nnoremap O :CtrlSFOpen<CR>
+nnoremap C :CtrlSFClose<CR>
