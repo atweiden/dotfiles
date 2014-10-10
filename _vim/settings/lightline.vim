@@ -19,24 +19,23 @@ let g:lightline = {
       \ }
 
 function! MyModified()
-  return &ft =~ 'help\|vimfiler\|undotree' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+  return &ft =~ 'help\|filebeagle\|undotree' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|undotree' && &readonly ? '' : ''
+  return &ft !~? 'help\|filebeagle\|undotree' && &readonly ? '' : ''
 endfunction
 
 function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+        \ (&ft == 'filebeagle' ? filebeagle#FileBeagleStatusLineCurrentDirInfo() :
         \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
 function! MyFugitive()
-  if &ft !~? 'vimfiler\|undotree' && exists("*fugitive#head")
+  if &ft !~? 'filebeagle\|undotree' && exists("*fugitive#head")
     let _ = fugitive#head()
     return strlen(_) ? ' '._ : ''
   endif
