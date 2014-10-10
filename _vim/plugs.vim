@@ -33,6 +33,7 @@ Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
 
 " filesystem
 Plug 'dockyard/vim-easydir'
+Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'bogado/file-line'
 Plug 'scrooloose/nerdtree', { 'on': [ 'Bookmark',
                                     \ 'BookmarkToRoot',
