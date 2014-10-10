@@ -206,8 +206,8 @@ set formatoptions+=1
 
 " escape
 call arpeggio#load()
-Arpeggio inoremap jk <Esc>
-Arpeggio inoremap jw <Esc>
+Arpeggio inoremap jk <ESC>
+Arpeggio inoremap jw <ESC>
 " remove highlights
 nmap <Leader><CR> :nohlsearch<CR>
 " search within visual block
