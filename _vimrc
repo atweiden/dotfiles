@@ -9,7 +9,6 @@
 set nocompatible
 let mapleader=","
 noremap \ ,
-nnoremap Q <nop>
 set shortmess=aIoO
 set mouse=a
 set mousemodel=popup_setpos
@@ -244,8 +243,8 @@ nmap <leader><leader>r /\n\{3,\}/s+1<CR>
 cnoremap w!! w !sudo tee % >/dev/null
 " expand %% to the path of the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-" change directory to the file being edited
-nnoremap <leader>C :cd %:p:h<CR>:pwd<CR>
+" change to directory of file
+nnoremap <silent> <leader>. :cd%:h<CR>
 " fix windoze ^M
 " alternative to `dos2unix file`
 noremap <Leader>rmm :%s///g<CR>
@@ -300,8 +299,6 @@ nmap <silent> <leader>rr :AlignRight<CR>
 
 " customize autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
-" change to directory of file
-nmap <silent> <leader>. :cd%:h<CR>
 
 " }}}
 " --- merging {{{
