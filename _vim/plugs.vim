@@ -33,7 +33,6 @@ Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
 
 " filesystem
 Plug 'dockyard/vim-easydir'
-Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'bogado/file-line'
 Plug 'scrooloose/nerdtree', { 'on': [ 'Bookmark',
                                     \ 'BookmarkToRoot',
@@ -59,7 +58,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsOpen',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
 
-" search
+" search and replace
 Plug 'dyng/ctrlsf.vim', { 'on': [ 'CtrlSF',
                                 \ '<Plug>CtrlSFCwordPath',
                                 \ '<Plug>CtrlSFPrompt',
@@ -70,13 +69,24 @@ Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
+Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 
 " movement
+Plug 'yonchu/accelerated-smooth-scroll', { 'on': [ '<Plug>(ac-smooth-scroll-c-b)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-b_v)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-d)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-d_v)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-f)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-f_v)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-u)',
+                                                 \ '<Plug>(ac-smooth-scroll-c-u_v)' ] }
 Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
+Plug 'vimtaku/hl_matchit.vim', { 'for': [ 'ruby', 'sh', 'vim' ] }
+Plug 'myusuf3/numbers.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bruno-/vim-vertical-move'
 
@@ -168,6 +178,7 @@ Plug 'h1mesuke/unite-outline', { 'on': 'Unite' }
 " vcs
 Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
 Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 Plug 'ludovicchabant/vim-lawrencium', { 'on': [ 'Hg',
                                               \ 'Hgannotate',
                                               \ 'Hgannotatediffsum',
@@ -237,12 +248,27 @@ Plug 'jamessan/vim-gnupg'
 Plug 'vim-scripts/openssl.vim'
 
 " command runners
+Plug 'tyru/capture.vim', { 'on': 'Capture' }
 Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'Dispatch',
                                    \ 'Focus',
                                    \ 'FocusDispatch',
                                    \ 'Make',
                                    \ 'Start' ] }
+Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
+                                     \ 'SCChooseInterpreter',
+                                     \ 'SCCompile',
+                                     \ 'SCCompileAF',
+                                     \ 'SCCompileRun',
+                                     \ 'SCCompileRunAF',
+                                     \ 'SCCompileRunAsync',
+                                     \ 'SCCompileRunAsyncAF',
+                                     \ 'SCIsRunningAsync',
+                                     \ 'SCTerminateAsync',
+                                     \ 'SCViewResult',
+                                     \ 'SCViewResultAsync',
+                                     \ 'SingleCompile',
+                                     \ 'SingleCompileRun' ] }
 Plug 'jpalardy/vim-slime', { 'on': [ 'SlimeConfig',
                                    \ 'SlimeSend',
                                    \ 'SlimeSend1',
@@ -267,20 +293,6 @@ Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxSendKeys',
                                \ 'VimuxSendText',
                                \ 'VimuxZoomRunner' ] }
-Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
-                                     \ 'SCChooseInterpreter',
-                                     \ 'SCCompile',
-                                     \ 'SCCompileAF',
-                                     \ 'SCCompileRun',
-                                     \ 'SCCompileRunAF',
-                                     \ 'SCCompileRunAsync',
-                                     \ 'SCCompileRunAsyncAF',
-                                     \ 'SCIsRunningAsync',
-                                     \ 'SCTerminateAsync',
-                                     \ 'SCViewResult',
-                                     \ 'SCViewResultAsync',
-                                     \ 'SingleCompile',
-                                     \ 'SingleCompileRun' ] }
 
 " code completion
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
@@ -330,6 +342,7 @@ Plug 'spiegela/vimix', { 'on': [ 'VimixClean',
                                \ 'VimuxRunLastCommand' ] }
 Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'vim-jp/vim-go-extra', { 'for': 'go' }
 Plug 'tpope/vim-haml', { 'for': [ 'haml', 'sass', 'scss' ] }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
@@ -348,6 +361,7 @@ Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
@@ -386,6 +400,7 @@ Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
+Plug 'todesking/ruby_hl_lvar.vim', { 'for': 'ruby' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'saltstack/salt-vim', { 'for': 'sls' }
@@ -509,6 +524,7 @@ Plug 'reedes/vim-thematic', { 'on': [ 'ThematicFirst',
 "Plug 'whatyouhide/vim-lengthmatters'
 
 " utilities
+Plug 'kana/vim-arpeggio'
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-scriptease'

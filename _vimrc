@@ -84,6 +84,7 @@ if has("gui_running")
     set guioptions+=c
     set guifont=Monaco\ for\ Powerline\ 16
     set t_Co=256
+    set guiheadroom=0
     let g:jellyx_show_whitespace = 1
     colorscheme jellyx
 endif
@@ -174,7 +175,7 @@ set foldmethod=indent
 set foldlevel=99
 set wrap
 set number
-set relativenumber
+"set relativenumber
 set numberwidth=1
 set textwidth=70
 set linespace=1
@@ -203,14 +204,14 @@ set formatoptions+=1
 " Editing
 " --- selecting {{{
 
-" select all
-"map <C-A> ggVG
 " escape
-inoremap jw <Esc>
+call arpeggio#load()
+Arpeggio map <silent>jk <ESC>
+Arpeggio map <silent>jw <ESC>
 " remove highlights
 nmap <Leader><CR> :nohlsearch<CR>
 " search within visual block
-vnoremap / <esc>/\v%V
+vnoremap / <ESC>/\v%V
 
 " }}}
 " --- pasting {{{
@@ -246,7 +247,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " change directory to the file being edited
 nnoremap <leader>C :cd %:p:h<CR>:pwd<CR>
 " fix windoze ^M
-noremap <Leader>rmm mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
+" alternative to `dos2unix file`
+noremap <Leader>rmm :%s///g<CR>
 
 " }}}
 " --- redoing {{{
@@ -265,8 +267,10 @@ nnoremap Q @q
 map <silent> <F3> :set nowrap!<CR>
 imap <silent> <F3> <C-O>:set nowrap!<CR>
 " toggle line numbers
-map <silent> <F4> :set nonu!<CR>
-imap <silent> <F4> <C-O>:set nonu!<CR>
+"map <silent> <F4> :set nonu!<CR>
+"imap <silent> <F4> <C-O>:set nonu!<CR>
+"nmap <F4> :NumbersOnOff<CR>
+nmap <F4> :NumbersToggle<CR>
 " toggle line and column highlighting
 map <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
 imap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
@@ -439,7 +443,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.sass} set ft=sass
 au BufEnter,BufRead,BufNewFile,BufWrite {*.scss} set ft=scss
 au BufEnter,BufRead,BufNewFile,BufWrite {*.scm} set ft=scheme
 au BufEnter,BufRead,BufNewFile,BufWrite {.screenrc} set ft=screen
-au BufEnter,BufRead,BufNewFile,BufWrite {*.sh,.bashrc,.bash_logout,.bash_profile,.Xdefaults,.xinitrc,.xsession} set ft=sh
+au BufEnter,BufRead,BufNewFile,BufWrite {*.sh,.bashrc,.bash_logout,.bash_profile,.xinitrc,.xsession} set ft=sh
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sls} set ft=sls
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sql,.psqlrc} set ft=sql
 au BufEnter,BufRead,BufNewFile,BufWrite {*.styl} set ft=stylus
@@ -449,6 +453,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
 au BufEnter,BufRead,BufNewFile,BufWrite {Tupfile,*.tup} set ft=tup
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
 au BufEnter,BufRead,BufNewFile,BufWrite {.wgetrc} set ft=wget
+au BufEnter,BufRead,BufNewFile,BufWrite {.Xdefaults,.Xresources} set ft=xdefaults
 au BufEnter,BufRead,BufNewFile,BufWrite {*.xml} set ft=xml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh} set ft=zsh
