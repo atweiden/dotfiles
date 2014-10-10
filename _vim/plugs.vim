@@ -101,11 +101,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'tpope/vim-surround'
 
 " comments
-Plug 'tpope/vim-commentary', { 'on': [ 'Commentary',
-                                     \ '<Plug>ChangeCommentary',
-                                     \ '<Plug>Commentary',
-                                     \ '<Plug>CommentaryLine',
-                                     \ '<Plug>CommentaryUndo' ] }
+Plug 'tpope/vim-commentary'
 
 
 " sessions
