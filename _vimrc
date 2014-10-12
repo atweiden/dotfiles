@@ -6,7 +6,7 @@
 " -----------------------------------------------------------------------------
 " Constants
 
-let g:isnix = has('unix')
+let s:isnix = has('unix')
 let s:iswin = has('win32') || has('win64') || has('win32unix')
 let s:ismac = has('mac')
 
