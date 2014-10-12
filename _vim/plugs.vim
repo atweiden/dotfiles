@@ -60,12 +60,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
 
 " search and replace
-Plug 'dyng/ctrlsf.vim', { 'on': [ 'CtrlSF',
-                                \ '<Plug>CtrlSFCwordPath',
-                                \ '<Plug>CtrlSFPrompt',
-                                \ '<Plug>CtrlSFPwordPath',
-                                \ '<Plug>CtrlSFVwordExec',
-                                \ '<Plug>CtrlSFVwordPath' ] }
+Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
@@ -141,7 +136,8 @@ Plug 'kana/vim-textobj-user'
 
 " bookmarks
 Plug 'tommcdo/vim-kangaroo'
-Plug 'jeetsukumaran/vim-markology'
+Plug 'kshenoy/vim-signature', { 'on': [ 'SignatureRefresh',
+                                      \ 'SignatureToggleSigns' ] }
 
 " macros
 Plug 'dahu/VimLocalMacros'
@@ -460,11 +456,13 @@ Plug 'vim-scripts/candyman.vim'
 Plug 'mattsacks/vim-eddie'
 Plug 'endel/vim-github-colorscheme'
 Plug 'morhetz/gruvbox'
+Plug 'w0ng/vim-hybrid'
 Plug 'cocopon/iceberg.vim'
 Plug 'ciaranm/inkpot'
 Plug 'nanotech/jellybeans.vim'
 Plug 'guns/jellyx.vim'
 Plug 'zeis/vim-kolor'
+Plug 'sk1418/last256'
 Plug 'vim-scripts/lettuce.vim'
 Plug 'vim-scripts/Liquid-Carbon'
 Plug 'jonathanfilip/vim-lucius'
