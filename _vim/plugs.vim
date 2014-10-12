@@ -5,6 +5,8 @@ Plug 'itchyny/lightline.vim'
 " buffers
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'ton/vim-bufsurf'
+Plug 'vim-scripts/clone', { 'on': [ 'CloneAs',
+                                  \ 'SCloneAs' ] }
 Plug 'sjbach/lusty'
 Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR',
                                  \ 'NRL',
@@ -19,12 +21,15 @@ Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR',
                                  \ '<Plug>NrrwrgnBangDo',
                                  \ '<Plug>NrrwrgnDo',
                                  \ '<Plug>NrrwrgnWinIncr' ] }
+Plug 'chrisbra/Recover.vim'
+Plug 'itchyny/thumbnail.vim', { 'on': 'Thumbnail' }
 
 " splits
 Plug 'mattboehm/vim-accordion', { 'on': 'Accordion' }
 Plug 'mattboehm/vim-unstack', { 'on': [ 'UnstackFromClipboard',
                                       \ 'UnstackFromSelection',
                                       \ 'UnstackFromText' ] }
+Plug 'vim-scripts/VerticalHelp', { 'on': 'H' }
 
 " tabs
 Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
@@ -58,6 +63,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsFind',
                                         \ '<Plug>NERDTreeTabsOpen',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
+Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
 
 " search and replace
 Plug 'dyng/ctrlsf.vim'
@@ -86,6 +92,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'bruno-/vim-vertical-move'
 
 " repeat
+Plug 'daisuzu/autorepeat.vim', { 'on': '<Plug>(autorepeat)' }
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/visualrepeat'
 
@@ -114,14 +121,38 @@ Plug 'tpope/vim-projectionist', { 'on': [ 'A',
                                         \ 'S',
                                         \ 'T',
                                         \ 'V' ] }
+Plug 'dhruvasagar/vim-prosession', { 'on': 'Prosession' }
 
 " align
 Plug 'JLimperg/Align'
-Plug 'vim-scripts/vis'
+Plug 'sk1418/blockit'
 Plug 'atweiden/vim-dragvisuals'
 Plug 'junegunn/vim-easy-align'
+Plug 'dhruvasagar/vim-table-mode', { 'on': [ 'TableAddFormula',
+                                           \ 'TableEvalFormulaLine',
+                                           \ 'Tableize',
+                                           \ 'TableModeDisable',
+                                           \ 'TableModeEnable',
+                                           \ 'TableModeRealign',
+                                           \ 'TableModeToggle',
+                                           \ '<Plug>(table-mode-add-formula)',
+                                           \ '<Plug>(table-mode-cell-text-object-a)',
+                                           \ '<Plug>(table-mode-cell-text-object-i)',
+                                           \ '<Plug>(table-mode-delete-column)',
+                                           \ '<Plug>(table-mode-delete-row)',
+                                           \ '<Plug>(table-mode-echo-cell)',
+                                           \ '<Plug>(table-mode-eval-formula)',
+                                           \ '<Plug>(table-mode-motion-down)',
+                                           \ '<Plug>(table-mode-motion-left)',
+                                           \ '<Plug>(table-mode-motion-right)',
+                                           \ '<Plug>(table-mode-motion-up)',
+                                           \ '<Plug>(table-mode-realign)',
+                                           \ '<Plug>(table-mode-sort)',
+                                           \ '<Plug>(table-mode-tableize)',
+                                           \ '<Plug>(table-mode-tableize-delimiter)' ] }
 Plug 'godlygeek/tabular'
 Plug 'atsepkov/vim-tabularity'
+Plug 'vim-scripts/vis'
 
 " textobj
 Plug 'tommcdo/vim-centaur'
@@ -233,6 +264,7 @@ Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy',
                                  \ 'Wordy' ] }
 
 " math
+Plug 'arecarn/crunch.vim'
 Plug 'jmcantrell/vim-numbered', { 'on': 'Numbered' }
 
 " crypto
@@ -514,6 +546,20 @@ Plug 'reedes/vim-thematic', { 'on': [ 'ThematicFirst',
                                     \ 'ThematicPrevious',
                                     \ 'ThematicRandom',
                                     \ 'ThematicWiden' ] }
+Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
+                                      \ 'Hex2Lit',
+                                      \ 'Hex2Rgb',
+                                      \ 'Hex2RgbPerc',
+                                      \ 'Hsl2Hex',
+                                      \ 'Hsl2Rgb',
+                                      \ 'Rgb2Hex',
+                                      \ 'Rgb2Hsl',
+                                      \ 'Rgb2RgbPerc',
+                                      \ 'RgbPerc2Hex',
+                                      \ 'RgbPerc2Rgb',
+                                      \ 'VCase',
+                                      \ 'VCoolIns',
+                                      \ 'VCoolor' ] }
 "Plug 'whatyouhide/vim-lengthmatters'
 
 " utilities
