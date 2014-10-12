@@ -4,6 +4,14 @@
 
 
 " -----------------------------------------------------------------------------
+" Constants
+
+let g:isnix = has('unix')
+let s:iswin = has('win32') || has('win64') || has('win32unix')
+let s:ismac = has('mac')
+
+
+" -----------------------------------------------------------------------------
 " General
 
 set nocompatible
@@ -430,7 +438,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
 au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.ronn} set ft=markdown conceallevel=0
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
-au BufEnter,BufRead,BufNewFile,BufWrite {*.php} set ft=php
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ctp,*.php} set ft=php
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl sw=4 ts=4
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
 au BufEnter,BufRead,BufNewFile,BufWrite {*.god,*.rabl,*.rb,.caprc,.irbrc,Capfile,Gemfile,Rakefile,Thorfile,config.ru,irb_tempfile*} set ft=ruby
