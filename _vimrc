@@ -439,7 +439,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.ronn} set ft=ma
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ctp,*.php} set ft=php
-au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl sw=4 ts=4
+au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
 au BufEnter,BufRead,BufNewFile,BufWrite {*.god,*.rabl,*.rb,.caprc,.irbrc,Capfile,Gemfile,Rakefile,Thorfile,config.ru,irb_tempfile*} set ft=ruby
 au BufEnter,BufRead,BufNewFile,BufWrite {*.rkt} set ft=racket
@@ -455,7 +455,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.styl} set ft=stylus
 au BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux-conf
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
-au BufEnter,BufRead,BufNewFile,BufWrite {Tupfile,*.tup} set ft=tup
+au BufEnter,BufRead,BufNewFile,BufWrite {*.tup,Tupfile} set ft=tup
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
 au BufEnter,BufRead,BufNewFile,BufWrite {.wgetrc} set ft=wget
 au BufEnter,BufRead,BufNewFile,BufWrite {.Xdefaults,.Xresources} set ft=xdefaults
