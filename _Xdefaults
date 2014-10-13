@@ -187,5 +187,6 @@ XTerm*faceName    : Monaco for Powerline
 XTerm*faceSize    : 16
 
 ! paste from clipboard by default
-XTerm*VT100.translations: #override \
-        <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+XTerm*VT100.*translations: #override \
+        Shift Ctrl C: select-end(CLIPBOARD, CUT_BUFFER0) \n\
+        Shift Ctrl V: insert-selection(CLIPBOARD, CUT_BUFFER0)
