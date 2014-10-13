@@ -152,3 +152,28 @@ URxvt.cursorColor : #d787af
 !underline        : xoria256.htmlValue.guifg
 URxvt.colorBD     : #5fafd7
 URxvt.colorUL     : #00afd7
+
+! bubblegum colorscheme for XTerm
+XTerm*color0      : #121212
+XTerm*color1      : #d75f5f
+XTerm*color2      : #00af87
+XTerm*color3      : #afd75f
+XTerm*color4      : #5fafd7
+XTerm*color5      : #8787af
+XTerm*color6      : #00afd7
+XTerm*color7      : #ffffff
+XTerm*color8      : #0a0a0a
+XTerm*color9      : #d787af
+XTerm*color10     : #5faf5f
+XTerm*color11     : #d7af5f
+XTerm*color12     : #87afd7
+XTerm*color13     : #8787d7
+XTerm*color14     : #87afff
+XTerm*color15     : #ffffff
+XTerm*foreground  : #a8a8a8
+XTerm*background  : #262626
+XTerm*cursorColor : #d787af
+XTerm*colorBD     : #5fafd7
+XTerm*colorUL     : #00afd7
+XTerm*faceName    : Monaco for Powerline
+XTerm*faceSize    : 16
