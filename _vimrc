@@ -336,6 +336,7 @@ noremap <leader><leader>cl :call ConcealToggle()<CR>
 " map alt-[h,j,k,l,=,_,|] to resizing a window split
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[n,p] to moving to next and previous window respectively
+" map alt-[H,J,K,L] to repositioning a window split
 if has('unix')
   nnoremap h <C-W><
   nnoremap j <C-W>-
@@ -348,6 +349,10 @@ if has('unix')
   nnoremap v :vsplit<CR>
   nnoremap n <C-W><C-W>
   nnoremap p <C-W><S-W>
+  nnoremap H <C-W>H
+  nnoremap J <C-W>J
+  nnoremap K <C-W>K
+  nnoremap L <C-W>L
 else
   nnoremap <M-h> <C-W><
   nnoremap <M-j> <C-W>-
@@ -360,6 +365,10 @@ else
   nnoremap <M-v> :vsplit<CR>
   nnoremap <M-n> <C-W><C-W>
   nnoremap <M-p> <C-W><S-W>
+  nnoremap <M-H> <C-W>H
+  nnoremap <M-J> <C-W>J
+  nnoremap <M-K> <C-W>K
+  nnoremap <M-L> <C-W>L
 endif
 " simultaneously scroll split windows
 nmap <leader>sb :call SplitScroll()<CR>
