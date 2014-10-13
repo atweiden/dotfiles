@@ -564,6 +564,7 @@ Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
 
 " utilities
 Plug 'kana/vim-arpeggio'
+Plug 'vim-scripts/ingo-library'
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-scriptease'
