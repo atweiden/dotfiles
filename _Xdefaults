@@ -159,6 +159,11 @@ URxvt.colorUL     : #00afd7
 !	X T E R M - Settings
 !
 
+XTerm*locale      : true
+xterm*borderWidth : 0
+Xterm*jumpScroll  : false
+Xterm*saveLines   : 65535
+
 ! bubblegum colorscheme
 XTerm*color0      : #121212
 XTerm*color1      : #d75f5f
@@ -186,7 +191,9 @@ XTerm*colorUL     : #00afd7
 XTerm*faceName    : Monaco for Powerline
 XTerm*faceSize    : 16
 
-! paste from clipboard by default
-XTerm*VT100.*translations: #override \
-        Shift Ctrl C: select-end(CLIPBOARD, CUT_BUFFER0) \n\
-        Shift Ctrl V: insert-selection(CLIPBOARD, CUT_BUFFER0)
+! clipboard
+XTerm*VT100.translations: #override \
+        <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+! alt bindings
+XTerm*metaSendsEscape: true
