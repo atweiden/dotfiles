@@ -153,7 +153,13 @@ URxvt.cursorColor : #d787af
 URxvt.colorBD     : #5fafd7
 URxvt.colorUL     : #00afd7
 
-! bubblegum colorscheme for XTerm
+
+!-------------------------------------------------------------------------------
+!
+!	X T E R M - Settings
+!
+
+! bubblegum colorscheme
 XTerm*color0      : #121212
 XTerm*color1      : #d75f5f
 XTerm*color2      : #00af87
@@ -175,5 +181,11 @@ XTerm*background  : #262626
 XTerm*cursorColor : #d787af
 XTerm*colorBD     : #5fafd7
 XTerm*colorUL     : #00afd7
+
+! font
 XTerm*faceName    : Monaco for Powerline
 XTerm*faceSize    : 16
+
+! paste from clipboard by default
+XTerm*VT100.translations: #override \
+        <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
