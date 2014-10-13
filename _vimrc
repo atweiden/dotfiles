@@ -337,10 +337,10 @@ noremap <leader><leader>cl :call ConcealToggle()<CR>
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[n,p] to moving to next and previous window respectively
 if has('unix')
-  nnoremap h <C-w><
-  nnoremap j <C-w>-
-  nnoremap k <C-w>+
-  nnoremap l <C-w>>
+  nnoremap h <C-W><
+  nnoremap j <C-W>-
+  nnoremap k <C-W>+
+  nnoremap l <C-W>>
   nnoremap = <C-W>=
   nnoremap _ <C-W>_
   nnoremap <bar> <C-W><bar>
@@ -349,10 +349,10 @@ if has('unix')
   nnoremap n <C-W><C-W>
   nnoremap p <C-W><S-W>
 else
-  nnoremap <M-h> <C-w><
-  nnoremap <M-j> <C-w>-
-  nnoremap <M-k> <C-w>+
-  nnoremap <M-l> <C-w>>
+  nnoremap <M-h> <C-W><
+  nnoremap <M-j> <C-W>-
+  nnoremap <M-k> <C-W>+
+  nnoremap <M-l> <C-W>>
   nnoremap <M-=> <C-W>=
   nnoremap <M-_> <C-W>_
   nnoremap <M-<bar>> <C-W><bar>
