@@ -388,6 +388,7 @@ Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
