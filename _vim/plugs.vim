@@ -344,6 +344,7 @@ Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'vim-scripts/JavaDecompiler.vim', { 'for': 'java' }
 Plug 'OrangeT/vim-csharp', { 'for': 'cs' }
 Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'scss' ] }
+Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'vim-scripts/csv.vim', { 'for': 'csv' }

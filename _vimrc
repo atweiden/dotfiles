@@ -487,7 +487,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh} set ft=zsh
 
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType clojure set omnifunc=clojurecomplete#Complete
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType html,xhtml set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=js#CompleteJS
