@@ -1,5 +1,13 @@
+# Vim keys
 set editing-mode vi
 set keymap vi
+# Remap ESC to use 'jk' keypress to toggle insert or movement mode
+$if mode=vi
+    set keymap vi-command
+    "jk": vi-insertion-mode
+    set keymap vi-insert
+    "jk": vi-movement-mode
+$endif
 
 # List all matches in case multiple possible completions are possible
 set show-all-if-ambiguous on
