@@ -2,6 +2,9 @@ silent! if plug#begin('~/.vim/plugged')
 " status
 Plug 'itchyny/lightline.vim'
 
+" windows
+Plug 'talek/obvious-resize'
+
 " buffers
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'ton/vim-bufsurf'
