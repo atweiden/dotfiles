@@ -330,47 +330,25 @@ noremap <leader><leader>cl :call ConcealToggle()<CR>
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[n,p] to moving to next and previous window respectively
 " map alt-[H,J,K,L] to repositioning a window split
-if has('unix')
-  "nnoremap h <C-W><
-  nnoremap h :ObviousResizeLeft<CR>
-  "nnoremap j <C-W>-
-  nnoremap j :ObviousResizeDown<CR>
-  "nnoremap k <C-W>+
-  nnoremap k :ObviousResizeUp<CR>
-  "nnoremap l <C-W>>
-  nnoremap l :ObviousResizeRight<CR>
-  nnoremap = <C-W>=
-  nnoremap _ <C-W>_
-  nnoremap <bar> <C-W><bar>
-  nnoremap s :split<CR>
-  nnoremap v :vsplit<CR>
-  nnoremap n <C-W><C-W>
-  nnoremap p <C-W><S-W>
-  nnoremap H <C-W>H
-  nnoremap J <C-W>J
-  nnoremap K <C-W>K
-  nnoremap L <C-W>L
-else
-  "nnoremap <M-h> <C-W><
-  nnoremap <M-h> :ObviousResizeLeft<CR>
-  "nnoremap <M-j> <C-W>-
-  nnoremap <M-j> :ObviousResizeDown<CR>
-  "nnoremap <M-k> <C-W>+
-  nnoremap <M-k> :ObviousResizeUp<CR>
-  "nnoremap <M-l> <C-W>>
-  nnoremap <M-l> :ObviousResizeRight<CR>
-  nnoremap <M-=> <C-W>=
-  nnoremap <M-_> <C-W>_
-  nnoremap <M-<bar>> <C-W><bar>
-  nnoremap <M-s> :split<CR>
-  nnoremap <M-v> :vsplit<CR>
-  nnoremap <M-n> <C-W><C-W>
-  nnoremap <M-p> <C-W><S-W>
-  nnoremap <M-H> <C-W>H
-  nnoremap <M-J> <C-W>J
-  nnoremap <M-K> <C-W>K
-  nnoremap <M-L> <C-W>L
-endif
+"nnoremap <M-h> <C-W><
+nnoremap <M-h> :ObviousResizeLeft<CR>
+"nnoremap <M-j> <C-W>-
+nnoremap <M-j> :ObviousResizeDown<CR>
+"nnoremap <M-k> <C-W>+
+nnoremap <M-k> :ObviousResizeUp<CR>
+"nnoremap <M-l> <C-W>>
+nnoremap <M-l> :ObviousResizeRight<CR>
+nnoremap <M-=> <C-W>=
+nnoremap <M-_> <C-W>_
+nnoremap <M-<bar>> <C-W><bar>
+nnoremap <M-s> :split<CR>
+nnoremap <M-v> :vsplit<CR>
+nnoremap <M-n> <C-W><C-W>
+nnoremap <M-p> <C-W><S-W>
+nnoremap <M-H> <C-W>H
+nnoremap <M-J> <C-W>J
+nnoremap <M-K> <C-W>K
+nnoremap <M-L> <C-W>L
 " simultaneously scroll split windows
 nmap <leader>sb :call SplitScroll()<CR>
 

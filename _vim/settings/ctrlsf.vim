@@ -1,2 +1,2 @@
-nnoremap / :CtrlSF<space>
-nnoremap ? :call ToggleCtrlSF()<CR>
+nnoremap <M-/> :CtrlSF<space>
+nnoremap <M-?> :call ToggleCtrlSF()<CR>
