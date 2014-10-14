@@ -74,6 +74,7 @@ Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
+Plug 'vim-scripts/IndexedSearch'
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
@@ -389,6 +390,7 @@ Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': [ 'cassius',
 Plug 'othree/html5.vim', { 'for': [ 'html', 'javascript' ] }
 Plug 'mustache/vim-mustache-handlebars', { 'for': [ 'html.handlebars',
                                                   \ 'html.mustache' ] }
+Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
 Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
@@ -493,13 +495,17 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/baycomb'
 Plug 'vim-scripts/Briofita'
 Plug 'baskerville/bubblegum'
+Plug 'vim-scripts/buttercream.vim'
 Plug 'vim-scripts/candyman.vim'
 Plug 'mattsacks/vim-eddie'
 Plug 'endel/vim-github-colorscheme'
+Plug 'johnantoni/grb256'
 Plug 'morhetz/gruvbox'
+Plug 'PotatoesMaster/vim-colors-harold'
 Plug 'w0ng/vim-hybrid'
 Plug 'cocopon/iceberg.vim'
 Plug 'ciaranm/inkpot'
+Plug 'twerth/ir_black'
 Plug 'nanotech/jellybeans.vim'
 Plug 'guns/jellyx.vim'
 Plug 'zeis/vim-kolor'
@@ -512,6 +518,7 @@ Plug 'vim-scripts/mayansmoke'
 Plug 'vim-scripts/mimicpak'
 Plug 'djjcast/mirodark'
 Plug 'tomasr/molokai'
+Plug 'mrkn/mrkn256.vim'
 Plug 'jeetsukumaran/vim-nefertiti'
 Plug 'yuratomo/neon.vim'
 Plug 'trapd00r/neverland-vim-theme'
@@ -527,6 +534,7 @@ Plug 'vim-scripts/TaQua'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'danpal/VibrantInk-for-Vim'
 Plug 'octol/vombatidae-vim'
+Plug 'molok/vim-vombato-colorscheme'
 Plug 'rhysd/wallaby.vim'
 Plug 'vim-scripts/xoria256.vim'
 Plug 'vim-scripts/zenesque.vim'
@@ -573,6 +581,7 @@ Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
 
 " utilities
 Plug 'kana/vim-arpeggio'
+Plug 'drmikehenry/vim-fixkey'
 Plug 'vim-scripts/ingo-library'
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
