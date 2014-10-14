@@ -88,6 +88,7 @@ if has("gui_running")
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
+    set guioptions-=L
     set guioptions+=c
     set guifont=Monaco\ for\ Powerline\ 16
     set t_Co=256
