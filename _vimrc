@@ -294,14 +294,6 @@ nnoremap <C-E> 4<C-E>
 nnoremap <C-Y> 4<C-Y>
 
 " }}}
-" --- alignment {{{
-
-nmap <silent> <leader>al :left<CR>
-nmap <silent> <leader>ac :center<CR>
-nmap <silent> <leader>ar :right<CR>
-nmap <silent> <leader>rr :AlignRight<CR>
-
-" }}}
 
 " Programming
 " --- autocompletion {{{
