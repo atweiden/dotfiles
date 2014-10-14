@@ -192,8 +192,11 @@ XTerm*faceName    : Monaco for Powerline
 XTerm*faceSize    : 16
 
 ! clipboard
-XTerm*VT100.translations: #override \
-        <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 
 ! alt bindings
-XTerm*metaSendsEscape: true
+XTerm*metaSendsEscape   : true
+
+! console vim fixes
+XTerm*fullscreen        : never
+XTerm.omitTranslation   : fullscreen
