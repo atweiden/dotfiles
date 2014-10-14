@@ -162,12 +162,14 @@ Plug 'tommcdo/vim-centaur'
 Plug 'terryma/vim-expand-region'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
+Plug 'vim-scripts/LineJugglerCommands', { 'on': [ 'Replace', 'Swap' ] }
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-submode'
 Plug 'wellle/targets.vim'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'kana/vim-textobj-user'
+Plug 'coderifous/textobj-word-column.vim'
 
 " bookmarks
 Plug 'tommcdo/vim-kangaroo'
@@ -323,6 +325,7 @@ Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxZoomRunner' ] }
 
 " code completion
+Plug 'mattn/emmet-vim'
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
