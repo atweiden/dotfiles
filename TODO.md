@@ -6,3 +6,6 @@
   - [vimrc](https://github.com/bling/dotvim)
     - https://github.com/haya14busa/dotfiles
 - Add public key for gpg
+- vim-fixkeys `|`, `_`, `=`, for bindings: `alt-shift-|`, `alt-shift-_`, `alt-=`
+- vim-fixkeys `+`, `-`, for drmikehenry/vim-fontsize bindings: `<C-+>`, `<C-->`
+- vim-obvious-resize is laggy and buggy
