@@ -50,8 +50,8 @@ set directory=~/.vim/.swaps
 set undodir=~/.vim/.undo
 "set autochdir
 set notimeout
-set ttimeout
-set ttimeoutlen=10
+set timeout timeoutlen=3000
+set ttimeout ttimeoutlen=5
 set modelines=0
 set nrformats=
 set viminfo='100,<50,s10,h,!
