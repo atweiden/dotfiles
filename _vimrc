@@ -99,7 +99,7 @@ if has("gui_running")
 
     " resize font
     noremap <M--> :Smaller<CR>
-    noremap <M-=> :Bigger<CR>
+    noremap <M-+> :Bigger<CR>
     " paste selection with <S-Ins>
     inoremap <S-Insert> <MiddleMouse>
     cnoremap <S-Insert> <MiddleMouse>
