@@ -38,12 +38,14 @@ Credits
 - https://github.com/rafi/.config
 - https://github.com/saimn/dotfiles
 - https://github.com/Schnouki/dotfiles
+- https://github.com/sickill/dotfiles
 - https://github.com/sjl/dotfiles
 - https://github.com/sjn/dotfiles
 - https://github.com/smith/vim-config
 - https://github.com/sontek/dotfiles
 - https://github.com/spf13/spf13-vim
 - https://github.com/square/maximum-awesome
+- https://github.com/ton/dotfiles
 - https://github.com/wavded/dotfiles
 - https://github.com/whatyouhide/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment

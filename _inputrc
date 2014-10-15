@@ -35,6 +35,9 @@ set completion-query-items 200
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
 
+# Disable beep
+set bell-style none
+
 # Be more intelligent when autocompleting by also looking at the text
 # after the cursor. For example, when the current line is "cd
 # ~/src/mozil", and the cursor is on the "z", pressing Tab will not

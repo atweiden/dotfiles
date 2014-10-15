@@ -355,6 +355,7 @@ Plug 'vim-scripts/csv.vim', { 'for': 'csv' }
 Plug 'tshirtman/vim-cython', { 'for': 'cython' }
 Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.0' }
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
+Plug 'honza/dockerfile.vim', { 'for': 'dockerfile' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'mattreduce/vim-mix', { 'on': [ 'Mclean',
                                    \ 'Mcompile',
@@ -400,6 +401,8 @@ Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
 Plug 'unc0/vim-egs', { 'for': 'egs' }
+Plug 'mitsuhiko/vim-json', { 'for': 'json' }
+Plug 'GutenYe/json5.vim', { 'for': 'json5' }
 Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
 Plug 'ajford/vimkivy', { 'for': 'kivy' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }

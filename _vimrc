@@ -48,7 +48,6 @@ set title
 set backupdir=~/.vim/.backups
 set directory=~/.vim/.swaps
 set undodir=~/.vim/.undo
-"set autochdir
 set notimeout
 set timeout timeoutlen=3000
 set ttimeout ttimeoutlen=5
@@ -78,7 +77,7 @@ if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "sc
   set t_Co=256
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
-else
+elseif (&term == "linux")
   colorscheme harold
 endif
 
@@ -93,10 +92,17 @@ if has("gui_running")
     set guioptions-=L
     set guioptions+=c
     set guifont=Monaco\ for\ Powerline\ 16
-    set t_Co=256
     set guiheadroom=0
+    set t_Co=256
     let g:jellyx_show_whitespace = 1
     colorscheme jellyx
+
+    " resize font
+    noremap <M--> :Smaller<CR>
+    noremap <M-=> :Bigger<CR>
+    " paste selection with <S-Ins>
+    inoremap <S-Insert> <MiddleMouse>
+    cnoremap <S-Insert> <MiddleMouse>
 endif
 
 if has('autocmd')
@@ -167,7 +173,7 @@ set winminwidth=0
 set updatecount=20
 set lazyredraw
 set ttyfast
-set ttymouse=xterm
+set ttymouse=xterm2
 set backspace=2
 set scrolloff=8
 set sidescrolloff=8
@@ -218,10 +224,17 @@ set formatoptions+=1
 call arpeggio#load()
 Arpeggio inoremap jk <ESC>
 Arpeggio xnoremap jk <ESC>
-" remove highlights
-nmap <Leader><CR> :nohlsearch<CR>
+" preserve selection when indenting
+vmap > >gv
+vmap < <gv
+
+" }}}
+" --- searching {{{
+
 " search within visual block
 vnoremap / <ESC>/\v%V
+" remove highlights
+nmap <Leader><CR> :nohlsearch<CR>
 
 " }}}
 " --- pasting {{{
@@ -229,9 +242,9 @@ vnoremap / <ESC>/\v%V
 " yank to end of line
 noremap Y y$
 " copy to clipboard
-map <leader>y "+yy
+vnoremap <leader>y "+yy
 " paste from clipboard
-map <leader>p "+p
+noremap <leader>p "+p
 " toggle paste mode
 set pastetoggle=<F2>
 
@@ -403,6 +416,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.css} set ft=css
 au BufEnter,BufRead,BufNewFile,BufWrite {*.csv,*.psv,*.tsv} set ft=csv
 au BufEnter,BufRead,BufNewFile,BufWrite {*.d} set ft=d
 au BufEnter,BufRead,BufNewFile,BufWrite {*.dart} set ft=dart
+au BufEnter,BufRead,BufNewFile,BufWrite {*.dock,Dockerfile*} set ft=dockerfile
 au BufEnter,BufRead,BufNewFile,BufWrite {*.eex} set ft=eelixir
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ex,*.exs} set ft=elixir
 au BufEnter,BufRead,BufNewFile,BufWrite {*.erl} set ft=erlang
@@ -417,7 +431,9 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.haml} set ft=haml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.hs} set ft=haskell
 au BufEnter,BufRead,BufNewFile,BufWrite {.inputrc} set ft=readline
 au BufEnter,BufRead,BufNewFile,BufWrite {*.jade} set ft=jade
-au BufEnter,BufRead,BufNewFile,BufWrite {*.js,*.json,.jshintrc} set ft=javascript
+au BufEnter,BufRead,BufNewFile,BufWrite {*.js,.jshintrc} set ft=javascript
+au BufEnter,BufRead,BufNewFile,BufWrite {*.json} set ft=json
+au BufEnter,BufRead,BufNewFile,BufWrite {*.json5} set ft=json5
 au BufEnter,BufRead,BufNewFile,BufWrite {*.j2,*.jinja,*.jinja2} set ft=jinja
 au BufEnter,BufRead,BufNewFile,BufWrite {*.jl} set ft=julia
 au BufEnter,BufRead,BufNewFile,BufWrite {*.kv} set ft=kivy
@@ -430,10 +446,12 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ctp,*.php} set ft=php
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl
+au BufEnter,BufRead,BufNewFile,BufWrite {*.pro} set ft=pro
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
 au BufEnter,BufRead,BufNewFile,BufWrite {*.god,*.rabl,*.rb,.caprc,.irbrc,Capfile,Gemfile,Rakefile,Thorfile,config.ru,irb_tempfile*} set ft=ruby
 au BufEnter,BufRead,BufNewFile,BufWrite {*.rkt} set ft=racket
 au BufEnter,BufRead,BufNewFile,BufWrite {*.rs} set ft=rust
+au BufEnter,BufRead,BufNewFile,BufWrite {*.rst} set ft=rst
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sass} set ft=sass
 au BufEnter,BufRead,BufNewFile,BufWrite {*.scss} set ft=scss
 au BufEnter,BufRead,BufNewFile,BufWrite {*.scm} set ft=scheme
