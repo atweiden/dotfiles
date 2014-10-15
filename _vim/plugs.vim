@@ -436,6 +436,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
+Plug 'slim-template/vim-slim', { 'for': 'slim' }
 Plug 'saltstack/salt-vim', { 'for': 'sls' }
 Plug 'vim-scripts/SQLUtilities', { 'on': [ 'SQLUCreateColumnList',
                                          \ 'SQLUCreateProcedure',

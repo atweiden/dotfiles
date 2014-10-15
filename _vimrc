@@ -439,6 +439,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.scss} set ft=scss
 au BufEnter,BufRead,BufNewFile,BufWrite {*.scm} set ft=scheme
 au BufEnter,BufRead,BufNewFile,BufWrite {.screenrc} set ft=screen
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sh,.bashrc,.bash_logout,.bash_profile,.xinitrc,.xsession,PKGBUILD} set ft=sh
+au BufEnter,BufRead,BufNewFile,BufWrite {*.slim} set ft=slim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sls} set ft=sls
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sql,.psqlrc} set ft=sql
 au BufEnter,BufRead,BufNewFile,BufWrite {*.styl} set ft=stylus
