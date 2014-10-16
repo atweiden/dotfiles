@@ -77,7 +77,7 @@ if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "sc
   set t_Co=256
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
-elseif (&term == "linux")
+elseif $TERM == "linux"
   colorscheme harold
 endif
 
