@@ -355,7 +355,7 @@ nnoremap <M-k> :ObviousResizeUp<CR>
 nnoremap <M-l> :ObviousResizeRight<CR>
 nnoremap <M-=> <C-W>=
 nnoremap <M-_> <C-W>_
-nnoremap <M-<bar>> <C-W><bar>
+nnoremap <M-\|> <C-W>\|
 nnoremap <M-s> :split<CR>
 nnoremap <M-v> :vsplit<CR>
 nnoremap <M-n> <C-W><C-W>
