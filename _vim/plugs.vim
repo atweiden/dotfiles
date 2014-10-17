@@ -325,7 +325,13 @@ Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxZoomRunner' ] }
 
 " code completion
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': [ 'css',
+                                 \ 'haml',
+                                 \ 'html',
+                                 \ 'less',
+                                 \ 'sass',
+                                 \ 'scss',
+                                 \ 'slim' ] }
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
