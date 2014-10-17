@@ -441,7 +441,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.ledger} set ft=ledger
 au BufEnter,BufRead,BufNewFile,BufWrite {*.less} set ft=less
 au BufEnter,BufRead,BufNewFile,BufWrite {*.lisp} set ft=lisp
 au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
-au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.ronn} set ft=markdown conceallevel=0
+au BufEnter,BufRead,BufNewFile,BufWrite {*.cpt,*.markdown,*.md,*.mkd,*.ronn} set ft=markdown conceallevel=0
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ctp,*.php} set ft=php
