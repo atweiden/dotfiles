@@ -33,12 +33,7 @@ export FCEDIT=vim
 export VISUAL=vim
 
 # man pages
-if [[ -x /usr/bin/vimpager ]]; then
-  export PAGER=vimpager
-  export MANPAGER=vimpager
-else
-  export MANPAGER="less -X"
-fi
+export MANPAGER="less -X"
 
 # mode
 set -o vi
