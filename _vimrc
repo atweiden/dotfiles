@@ -78,7 +78,7 @@ if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "sc
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
 elseif $TERM == "linux"
-  colorscheme harold
+  colorscheme miro8
 endif
 
 " }}}
