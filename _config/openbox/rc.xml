@@ -268,19 +268,16 @@
     <keybind key="A-Tab">
       <action name="NextWindow">
         <dialog>icons</dialog>
-        <linear>yes</linear>
       </action>
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <dialog>icons</dialog>
-        <linear>yes</linear>
       </action>
     </keybind>
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <dialog>icons</dialog>
-        <linear>yes</linear>
         <panels>yes</panels>
         <desktop>yes</desktop>
       </action>
