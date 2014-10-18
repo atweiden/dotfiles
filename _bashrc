@@ -33,7 +33,12 @@ export FCEDIT=vim
 export VISUAL=vim
 
 # man pages
-export MANPAGER="less -X"
+if [[ -x /usr/bin/vimpager ]]; then
+  export PAGER=vimpager
+  export MANPAGER=vimpager
+else
+  export MANPAGER="less -X"
+fi
 
 # mode
 set -o vi
@@ -129,10 +134,15 @@ alias cdd='cd $HOME/Downloads'
 alias cdg='cd $(git rev-parse --show-cdup)'
 alias cdp='cd $HOME/Projects'
 alias cds='cd $HOME/.src'
+[[ "$DISPLAY" == "" ]] && alias vim='vim -X' # if not in X, tell vim not to attempt connection w/ X server
 [[ -x /usr/bin/vim ]] && alias view='vim -R'
 [[ -x /usr/bin/vim ]] && alias vime='vim -u ~/.vimencrypt -x'
+[[ -x /usr/bin/vim ]] && alias viml='vim -u ~/.vimrc.lite'
+[[ -x /usr/bin/vim ]] && alias vimmin='vim -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
 [[ -x /usr/bin/gvim ]] && alias gview='gvim -R'
 [[ -x /usr/bin/gvim ]] && alias gvime='gvim -u ~/.vimencrypt -x'
+[[ -x /usr/bin/gvim ]] && alias gviml='gvim -u ~/.vimrc.lite'
+[[ -x /usr/bin/gvim ]] && alias gvimmin='gvim -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
 [[ -x /usr/bin/zip ]] && alias zip='zip -9'
 alias gzip='gzip -9'
 alias bzip2='bzip2 -9'

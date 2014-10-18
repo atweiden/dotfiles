@@ -24,7 +24,7 @@ URxvt*clipboard.autocopy    : true
 URxvt*keysym.C-C            : perl:clipboard:copy
 URxvt*keysym.C-V            : perl:clipboard:paste
 URxvt*keysym.C-A-V          : perl:clipboard:paste_escaped
-URxvt*url-select.launcher   : firefox
+URxvt*url-select.launcher   : xdg-open
 URxvt*url-select.underline  : false
 URxvt*keysym.M-u            : perl:url-select:select_next
 URxvt*keysym.M-Escape       : perl:keyboard-select:activate

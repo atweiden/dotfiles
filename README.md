@@ -21,6 +21,7 @@ Credits
 - https://github.com/begriffs/haskell-vim-now
 - https://github.com/cooldaemon/myhome
 - https://github.com/drmikehenry/vimfiles
+- https://github.com/ervandew/dotfiles
 - https://github.com/Floby/vim-config
 - https://github.com/gf3/dotfiles
 - https://github.com/gmarik/vimfiles
@@ -49,6 +50,7 @@ Credits
 - https://github.com/wavded/dotfiles
 - https://github.com/whatyouhide/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment
+
 
 Licensing
 ---------

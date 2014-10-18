@@ -182,7 +182,7 @@ Plug 'vim-scripts/marvim'
 Plug 'naquad/Partial.vim', { 'on': 'Partial' }
 
 " auto-close
-Plug 'jiangmiao/auto-pairs'
+Plug 'ervandew/matchem'
 
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
@@ -285,6 +285,12 @@ Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'FocusDispatch',
                                    \ 'Make',
                                    \ 'Start' ] }
+Plug 'ervandew/screen', { 'on': [ 'IPython',
+                                \ 'ScreenQuit',
+                                \ 'ScreenSend',
+                                \ 'ScreenShell',
+                                \ 'ScreenShellAttach',
+                                \ 'ScreenShellReopen' ] }
 Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCChooseInterpreter',
                                      \ 'SCCompile',
@@ -587,7 +593,12 @@ Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
                                       \ 'VCase',
                                       \ 'VCoolIns',
                                       \ 'VCoolor' ] }
-"Plug 'whatyouhide/vim-lengthmatters'
+Plug 'guns/xterm-color-table.vim', { 'on': [ 'EXtermColorTable',
+                                           \ 'OXtermColorTable',
+                                           \ 'SXtermColorTable',
+                                           \ 'TXtermColorTable',
+                                           \ 'VXtermColorTable',
+                                           \ 'XtermColorTable' ] }
 
 " utilities
 Plug 'kana/vim-arpeggio'
