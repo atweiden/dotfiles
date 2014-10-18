@@ -182,7 +182,7 @@ Plug 'vim-scripts/marvim'
 Plug 'naquad/Partial.vim', { 'on': 'Partial' }
 
 " auto-close
-Plug 'ervandew/matchem'
+Plug 'jiangmiao/auto-pairs'
 
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
