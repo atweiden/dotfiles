@@ -285,12 +285,7 @@ Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'FocusDispatch',
                                    \ 'Make',
                                    \ 'Start' ] }
-Plug 'ervandew/screen', { 'on': [ 'IPython',
-                                \ 'ScreenQuit',
-                                \ 'ScreenSend',
-                                \ 'ScreenShell',
-                                \ 'ScreenShellAttach',
-                                \ 'ScreenShellReopen' ] }
+Plug 'ervandew/screen'
 Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCChooseInterpreter',
                                      \ 'SCCompile',
