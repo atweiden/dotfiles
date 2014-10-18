@@ -527,6 +527,7 @@ Plug 'jonathanfilip/vim-lucius'
 Plug 'vim-scripts/matrix.vim', { 'tag': '1.0' }
 Plug 'vim-scripts/mayansmoke'
 Plug 'vim-scripts/mimicpak'
+Plug 'atweiden/vim-colors-miro8'
 Plug 'djjcast/mirodark'
 Plug 'tomasr/molokai'
 Plug 'mrkn/mrkn256.vim'
