@@ -4,7 +4,7 @@
 [[ -x /usr/bin/volumeicon ]] && volumeicon &
 [[ -x /usr/bin/nitrogen ]] && nitrogen --restore &
 [[ -x /usr/bin/xautolock && -x /usr/bin/xlock ]] \
-  && xautolock -secure -time 7 -locker "/usr/bin/xlock -mode blank"  -detectsleep &
+  && xautolock -secure -time 7 -locker "/usr/bin/xlock -mode blank" -detectsleep &
 [[ -x /usr/bin/xflux ]] && xflux -z 97210 > /dev/null 2>&1 &
 [[ -x /usr/bin/pcmanfm ]] && pcmanfm -d &
 [[ -x /usr/bin/valabattery ]] && (sleep 3 && valabattery) &
