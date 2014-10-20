@@ -27,7 +27,7 @@ if [ "$TERM" = "screen" ] && [ "$HAS_256_COLORS" = "yes" ]; then
   export TERM=screen-256color
 fi
 
-# Linux console colors (jwr dark)
+# linux console colors (miro8)
 if [ "$TERM" = "linux" ]; then
    echo -en "\e]P0000000" #black
    echo -en "\e]P83d3d3d" #darkgrey
@@ -209,9 +209,9 @@ fi
 
 
 # -----------------------------------------------------------------------------
-# fzf
+# FZF
 
-# Setting ag as the default source for fzf
-export FZF_DEFAULT_COMMAND='ag -l -g ""'
-# Getting key bindings
+# use ag as the default source for fzf
+[[ -x /usr/bin/ag ]] && export FZF_DEFAULT_COMMAND='ag -l -g ""'
+# create fzf key bindings
 [[ -e "/etc/profile.d/fzf.sh" ]] && . /etc/profile.d/fzf.sh
