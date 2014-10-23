@@ -234,7 +234,7 @@ vmap < <gv
 " search within visual block
 vnoremap / <ESC>/\v%V
 " remove highlights
-nmap <Leader><CR> :nohlsearch<CR>
+nmap <silent> <Leader><CR> :nohlsearch<CR>
 
 " }}}
 " --- pasting {{{
