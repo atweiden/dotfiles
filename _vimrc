@@ -414,6 +414,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.cpp,*.hpp} set ft=cpp
 au BufEnter,BufRead,BufNewFile,BufWrite {*.cs} set ft=cs
 au BufEnter,BufRead,BufNewFile,BufWrite {*.css} set ft=css
 au BufEnter,BufRead,BufNewFile,BufWrite {*.csv,*.psv,*.tsv} set ft=csv
+au BufEnter,BufRead,BufNewFile,BufWrite {*.pxd,*.pxi,*.pyx} set ft=cython
 au BufEnter,BufRead,BufNewFile,BufWrite {*.d} set ft=d
 au BufEnter,BufRead,BufNewFile,BufWrite {*.dart} set ft=dart
 au BufEnter,BufRead,BufNewFile,BufWrite {*.dock,Dockerfile*} set ft=dockerfile
