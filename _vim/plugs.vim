@@ -70,7 +70,7 @@ Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
 
 " search and replace
 Plug 'dyng/ctrlsf.vim'
-Plug 'junegunn/fzf', { 'on': 'FZF' }
+Plug 'junegunn/fzf'
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
