@@ -16,7 +16,6 @@ let s:ismac = has('mac')
 
 set nocompatible
 let mapleader=","
-noremap \ ,
 set shortmess=aIoO
 set mouse=a
 set mousemodel=popup_setpos
@@ -137,6 +136,11 @@ set synmaxcol=800
 nnoremap <leader>u :syntax sync fromstart<CR>:redraw!<CR>
 au VimResized * :wincmd =
 
+" fix background color bleed in tmux / screen
+" http://snk.tuxfamily.org/log/vim-256color-bce.html
+" http://sunaku.github.io/vim-256color-bce.html
+set t_ut=""
+
 " }}}
 
 
@@ -225,8 +229,8 @@ call arpeggio#load()
 Arpeggio inoremap jk <ESC>
 Arpeggio xnoremap jk <ESC>
 " preserve selection when indenting
-vmap > >gv
-vmap < <gv
+vnoremap > >gv
+vnoremap < <gv
 
 " }}}
 " --- searching {{{
@@ -234,7 +238,7 @@ vmap < <gv
 " search within visual block
 vnoremap / <ESC>/\v%V
 " remove highlights
-nmap <silent> <Leader><CR> :nohlsearch<CR>
+nnoremap <silent> <leader><CR> :nohlsearch<CR>
 
 " }}}
 " --- pasting {{{
@@ -252,13 +256,13 @@ set pastetoggle=<F2>
 " --- proofreading {{{
 
 " find lines longer than 78 characters
-nmap <leader><leader>l /^.\{-}\zs.\%>79v<CR>
+nnoremap <leader><leader>l /^.\{-}\zs.\%>79v<CR>
 " find two spaces after a period
-nmap <leader><leader>. /\.\s\s\+\w/s+1<CR>
+nnoremap <leader><leader>. /\.\s\s\+\w/s+1<CR>
 " find things like 'why ?' and 'now !'
-nmap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<CR>
+nnoremap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<CR>
 " find multiple newlines together
-nmap <leader><leader>r /\n\{3,\}/s+1<CR>
+nnoremap <leader><leader>r /\n\{3,\}/s+1<CR>
 
 " }}}
 " --- writing {{{
@@ -271,13 +275,13 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap <silent> <leader>. :cd%:h<CR>
 " fix windoze ^M
 " alternative to `dos2unix file`
-noremap <Leader>rmm :%s///g<CR>
+noremap <leader>rmm :%s///g<CR>
 
 " }}}
 " --- redoing {{{
 
 " maintain location in document while redoing
-nmap . .`[
+nnoremap . .`[
 " qq to record, Q to replay
 nnoremap Q @q
 
@@ -287,19 +291,19 @@ nnoremap Q @q
 " --- toggle {{{
 
 " toggle line wrap
-map <silent> <F3> :set nowrap!<CR>
-imap <silent> <F3> <C-O>:set nowrap!<CR>
+noremap <silent> <F3> :set nowrap!<CR>
+inoremap <silent> <F3> <C-O>:set nowrap!<CR>
 " toggle line numbers
-"map <silent> <F4> :set nonu!<CR>
-"imap <silent> <F4> <C-O>:set nonu!<CR>
-"nmap <F4> :NumbersOnOff<CR>
-nmap <F4> :NumbersToggle<CR>
+"noremap <silent> <F4> :set nonu!<CR>
+"inoremap <silent> <F4> <C-O>:set nonu!<CR>
+"nnoremap <F4> :NumbersOnOff<CR>
+nnoremap <F4> :NumbersToggle<CR>
 " toggle line and column highlighting
-map <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
-imap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
+noremap <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
+inoremap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
 " toggle spell checking
-map <silent> <F7> :set spell! spelllang=en_us<CR>
-imap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
+noremap <silent> <F7> :set spell! spelllang=en_us<CR>
+inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 
 " }}}
 " --- scrolling {{{
@@ -311,6 +315,17 @@ nnoremap <C-Y> 4<C-Y>
 " }}}
 
 " Programming
+" --- tabs {{{
+
+noremap <leader>tn :tabnew<CR>
+noremap <leader>to :tabonly<CR>
+noremap <leader>tc :tabclose<CR>
+noremap <leader>tm :tabmove
+" open a new tab with the current buffer's path
+" useful when editing files in the same directory
+noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
+
+" }}}
 " --- autocompletion {{{
 
 " customize autocomplete menu color
@@ -322,7 +337,7 @@ highlight Pmenu ctermbg=238 gui=bold
 " highlight conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 " jump to next conflict marker
-nmap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
+nnoremap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 
 " }}}
 " --- hex {{{
@@ -365,7 +380,7 @@ nnoremap <M-J> <C-W>J
 nnoremap <M-K> <C-W>K
 nnoremap <M-L> <C-W>L
 " simultaneously scroll split windows
-nmap <leader>sb :call SplitScroll()<CR>
+nnoremap <leader>sb :call SplitScroll()<CR>
 
 " }}}
 
