@@ -58,7 +58,7 @@ command! FZFMru call fzf#run({
 """"""""""""""""""""""""""""""
 "  Fuzzy cmdline completion  "
 """"""""""""""""""""""""""""""
-cnoremap <silent> <c-l> <c-\>eGetCompletions()<cr>
+cnoremap <silent> <C-L> <C-\>eGetCompletions()<CR>
 "add an extra <cr> at the end of this line to automatically accept the fzf-selected completions.
 
 function! Lister()
