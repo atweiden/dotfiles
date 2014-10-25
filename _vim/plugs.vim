@@ -74,7 +74,7 @@ Plug 'junegunn/fzf'
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
-Plug 'vim-scripts/IndexedSearch'
+Plug 'henrik/vim-indexed-search'
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
@@ -300,14 +300,16 @@ Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCViewResultAsync',
                                      \ 'SingleCompile',
                                      \ 'SingleCompileRun' ] }
-Plug 'jpalardy/vim-slime', { 'on': [ 'SlimeConfig',
-                                   \ 'SlimeSend',
-                                   \ 'SlimeSend1',
-                                   \ '<Plug>SlimeConfig',
-                                   \ '<Plug>SlimeLineSend',
-                                   \ '<Plug>SlimeMotionSend',
-                                   \ '<Plug>SlimeParagraphSend',
-                                   \ '<Plug>SlimeRegionSend' ] }
+Plug 'epeli/slimux', { 'on': [ 'SlimuxREPLConfigure',
+                             \ 'SlimuxREPLSendLine',
+                             \ 'SlimuxREPLSendSelection',
+                             \ 'SlimuxSendKeysConfigure',
+                             \ 'SlimuxSendKeysLast',
+                             \ 'SlimuxSendKeysPrompt',
+                             \ 'SlimuxShellConfigure',
+                             \ 'SlimuxShellLast',
+                             \ 'SlimuxShellPrompt',
+                             \ 'SlimuxShellRun' ] }
 Plug 'tpope/vim-tbone', { 'on': [ 'Tattach',
                                 \ 'Tmux',
                                 \ 'Tput',
