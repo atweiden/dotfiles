@@ -735,24 +735,6 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind action="Click" button="Up">
-        <action name="DesktopPrevious"/>
-      </mousebind>
-      <mousebind action="Click" button="Down">
-        <action name="DesktopNext"/>
-      </mousebind>
-      <mousebind action="Click" button="A-Up">
-        <action name="DesktopPrevious"/>
-      </mousebind>
-      <mousebind action="Click" button="A-Down">
-        <action name="DesktopNext"/>
-      </mousebind>
-      <mousebind action="Click" button="C-A-Up">
-        <action name="DesktopPrevious"/>
-      </mousebind>
-      <mousebind action="Click" button="C-A-Down">
-        <action name="DesktopNext"/>
-      </mousebind>
       <mousebind action="Press" button="Left">
         <action name="Focus"/>
         <action name="Raise"/>
