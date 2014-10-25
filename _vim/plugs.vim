@@ -361,7 +361,7 @@ Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'scss' ] }
 Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
-Plug 'vim-scripts/csv.vim', { 'for': 'csv' }
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'tshirtman/vim-cython', { 'for': 'cython' }
 Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.0' }
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
