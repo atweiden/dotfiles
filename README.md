@@ -27,10 +27,12 @@ Credits
 - https://github.com/gmarik/vimfiles
 - https://github.com/guns/haus
 - https://github.com/haya14busa/dotfiles
+- https://github.com/henrik/dotfiles
 - https://github.com/ifschleife/dotfiles
 - https://github.com/jeroenjanssens/dotfiles
 - https://github.com/junegunn/dotfiles
 - https://github.com/kernelsmith/env-customization
+- https://github.com/khughitt/dotfiles
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/nvie/vimrc
 - https://github.com/phleet/dotfiles
