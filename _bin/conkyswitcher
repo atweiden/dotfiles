@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# check for conky
+if ! [[ -x /usr/bin/conky ]]; then
+  echo "Install conky first"
+  exit 1
+fi
+
+# check for conky configs
+if ! [[ -f $HOME/.conkyrc && -f $HOME/.conkyrc1 ]]; then
+  echo "Missing ~/.conkyrc or ~/.conkyrc1"
+  exit 1
+fi
+
+# turn off running conky instance
+killall conky
+
+# switch conky configs
+mv $HOME/.conkyrc $HOME/.conkyrc.conkyswitcher
+mv $HOME/.conkyrc1 $HOME/.conkyrc
+mv $HOME/.conkyrc.conkyswitcher $HOME/.conkyrc1
+
+# turn on conky
+conky -qd &

@@ -101,6 +101,17 @@ Example:
 
 
 
+conkyswitcher
+-------------
+
+Switch between a pair of conky configs (~/.conkyrc and ~/.conkyrc1).
+
+Example:
+
+     $ ./conkyswitcher
+
+
+
 dupes
 -----
 

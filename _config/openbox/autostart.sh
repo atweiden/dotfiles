@@ -1,6 +1,6 @@
 #!/bin/bash
 [[ -x /usr/bin/tint2 ]] && tint2 &
-[[ -x /usr/bin/conky ]] && conky -q &
+[[ -x /usr/bin/conky ]] && conky -qd &
 [[ -x /usr/bin/volumeicon ]] && volumeicon &
 [[ -x /usr/bin/nitrogen ]] && nitrogen --restore &
 [[ -x /usr/bin/xautolock && -x /usr/bin/xlock ]] \
