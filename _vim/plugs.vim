@@ -10,20 +10,8 @@ Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'ton/vim-bufsurf'
 Plug 'vim-scripts/clone', { 'on': [ 'CloneAs',
                                   \ 'SCloneAs' ] }
+Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
 Plug 'sjbach/lusty'
-Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR',
-                                 \ 'NRL',
-                                 \ 'NRM',
-                                 \ 'NRN',
-                                 \ 'NRP',
-                                 \ 'NRS',
-                                 \ 'NRV',
-                                 \ 'NUD',
-                                 \ 'NW',
-                                 \ 'WidenRegion',
-                                 \ '<Plug>NrrwrgnBangDo',
-                                 \ '<Plug>NrrwrgnDo',
-                                 \ '<Plug>NrrwrgnWinIncr' ] }
 Plug 'chrisbra/Recover.vim'
 Plug 'henrik/rename.vim', { 'on': 'Rename' }
 Plug 'itchyny/thumbnail.vim', { 'on': 'Thumbnail' }
@@ -178,6 +166,10 @@ Plug 'coderifous/textobj-word-column.vim'
 Plug 'tommcdo/vim-kangaroo'
 Plug 'kshenoy/vim-signature', { 'on': [ 'SignatureRefresh',
                                       \ 'SignatureToggleSigns' ] }
+Plug 'AndrewRadev/simple_bookmarks.vim', { 'on': [ 'Bookmark',
+                                                 \ 'CopenBookmarks',
+                                                 \ 'DelBookmark',
+                                                 \ 'GotoBookmark' ] }
 
 " macros
 Plug 'dahu/VimLocalMacros'
@@ -206,6 +198,9 @@ Plug 'majutsushi/tagbar', { 'on': [ 'Tagbar',
                                   \ 'TagbarToggle',
                                   \ 'TagbarTogglePause' ] }
 Plug 'h1mesuke/unite-outline', { 'on': 'Unite' }
+
+" diffs
+Plug 'AndrewRadev/linediff.vim'
 
 " vcs
 Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
