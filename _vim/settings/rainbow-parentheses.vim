@@ -18,8 +18,8 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
-nnoremap <leader>rp :RainbowParenthesesToggleAll<CR>
-nnoremap <leader>rpr :RainbowParenthesesLoadRound<CR>
-nnoremap <leader>rps :RainbowParenthesesLoadSquare<CR>
-nnoremap <leader>rpb :RainbowParenthesesLoadBraces<CR>
-nnoremap <leader>rpc :RainbowParenthesesLoadChevrons<CR>
+nnoremap <leader><leader>rp :RainbowParenthesesToggleAll<CR>
+nnoremap <leader><leader>rpr :RainbowParenthesesLoadRound<CR>
+nnoremap <leader><leader>rps :RainbowParenthesesLoadSquare<CR>
+nnoremap <leader><leader>rpb :RainbowParenthesesLoadBraces<CR>
+nnoremap <leader><leader>rpc :RainbowParenthesesLoadChevrons<CR>
