@@ -1,14 +1,14 @@
 " Prompt for a command to run
-map <leader>rp :PromptVimTmuxCommand
+noremap <leader>rp :PromptVimTmuxCommand<space>
 
 " Run last command executed by RunVimTmuxCommand
-map <leader>rl :RunLastVimTmuxCommand
+noremap <leader>rl :RunLastVimTmuxCommand
 
 " Inspect runner pane
-map <leader>ri :InspectVimTmuxRunner
+noremap <leader>ri :InspectVimTmuxRunner
 
 " Close all other tmux panes in current window
-map <leader>rx :CloseVimTmuxPanes
+noremap <leader>rx :CloseVimTmuxPanes
 
 " Interrupt any command running in the runner pane
-map <leader>rs :InterruptVimTmuxRunner
+noremap <leader>rs :InterruptVimTmuxRunner

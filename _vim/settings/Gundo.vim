@@ -1,1 +1,1 @@
-"map <leader>g :GundoToggle<CR>
+"noremap <leader>g :GundoToggle<CR>

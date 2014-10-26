@@ -15,6 +15,6 @@ augroup incsearch-keymap
 augroup END
 
 function! s:incsearch_keymap()
-    IncSearchNoreMap <C-f> <Right>
-    IncSearchNoreMap <C-b> <Left>
+    IncSearchNoreMap <C-F> <Right>
+    IncSearchNoreMap <C-B> <Left>
 endfunction

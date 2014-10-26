@@ -7,7 +7,7 @@ let g:easytags_auto_update = 0
 let g:easytags_auto_highlight = 0
 let g:easytags_on_cursorhold = 0
 " Generate tags manually
-nmap <leader>tu :UpdateTags<CR>
+nnoremap <leader>tu :UpdateTags<CR>
 " Scan recursively, not just current file
 let g:easytags_autorecurse = 1
 " Follow symbolic links

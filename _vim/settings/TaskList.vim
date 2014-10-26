@@ -1,1 +1,1 @@
-map <leader>td <Plug>TaskList
+noremap <leader>td <Plug>TaskList
