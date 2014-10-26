@@ -25,6 +25,7 @@ Plug 'chrisbra/NrrwRgn', { 'on': [ 'NR',
                                  \ '<Plug>NrrwrgnDo',
                                  \ '<Plug>NrrwrgnWinIncr' ] }
 Plug 'chrisbra/Recover.vim'
+Plug 'henrik/rename.vim', { 'on': 'Rename' }
 Plug 'itchyny/thumbnail.vim', { 'on': 'Thumbnail' }
 
 " splits
@@ -160,10 +161,12 @@ Plug 'vim-scripts/vis'
 " textobj
 Plug 'tommcdo/vim-centaur'
 Plug 'terryma/vim-expand-region'
+Plug 'tek/vim-fieldtrip'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
 Plug 'vim-scripts/LineJugglerCommands', { 'on': [ 'Replace', 'Swap' ] }
 Plug 'kana/vim-operator-user'
+Plug 'AndrewRadev/sideways.vim'
 Plug 'kana/vim-submode'
 Plug 'wellle/targets.vim'
 Plug 'reedes/vim-textobj-quote'
