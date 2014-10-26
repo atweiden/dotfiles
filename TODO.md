@@ -8,4 +8,5 @@
 - Add public key for gpg
 - vim-fixkeys `|`, `_`, `=`, for bindings: `alt-shift-|`, `alt-shift-_`, `alt-=`
 - vim-fixkeys `+`, `-`, for drmikehenry/vim-fontsize bindings: `<C-+>`, `<C-->`
+- inputrc: <ctrl-j>, <ctrl-k> bindings conflict with vim-tmux-navigator but work when not in tmux
 - vim-obvious-resize is laggy and buggy
