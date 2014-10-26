@@ -58,6 +58,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
 Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
 
 " search and replace
+Plug 'tpope/vim-abolish'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf'
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
