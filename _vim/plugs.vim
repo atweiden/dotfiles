@@ -347,6 +347,7 @@ Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
 Plug 'vim-jp/cpp-vim', { 'for': [ 'c', 'cpp' ] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
 Plug 'vim-scripts/ifdef-highlighting', { 'for': [ 'c', 'cpp' ] }
+Plug 'vim-scripts/Conque-GDB', { 'for': [ 'c', 'cpp' ] }
 Plug 'b4winckler/vim-objc', { 'for': 'objc' }
 Plug 'tpope/vim-classpath', { 'for': [ 'clojure', 'java' ] }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
