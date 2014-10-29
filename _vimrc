@@ -225,7 +225,7 @@ set formatoptions+=1
 nnoremap <C-Q> :q<CR>
 cnoremap <C-Q> <C-C>:q<CR>
 inoremap <C-Q> <C-O>:q<CR>
-xnoremap <C-Q> <ESC>:q<CR>
+vnoremap <C-Q> <ESC>:q<CR>
 
 " Editing
 " --- selecting {{{
