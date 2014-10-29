@@ -67,6 +67,9 @@ PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME
 # Use `>|` to override this setting
 set -o noclobber
 
+# fix for terminal vim ctrl-q keybindings
+stty start undef
+
 
 # -----------------------------------------------------------------------------
 # Path
