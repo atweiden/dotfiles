@@ -233,6 +233,7 @@ vnoremap <C-Q> <ESC>:q<CR>
 " escape
 call arpeggio#load()
 Arpeggio inoremap jk <ESC>
+Arpeggio cnoremap jk <C-C>
 Arpeggio xnoremap jk <ESC>
 " preserve selection when indenting
 vnoremap > >gv
