@@ -2,6 +2,7 @@
 # ~/.bash_profile
 #
 
+[[ -f ~/.keymap ]] && sudo loadkeys ~/.keymap
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 [[ -x /usr/bin/quixand ]] && quixand ~/.bash_history ~/.lesshst ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp ~/.vim/.undo
 if [[ -x /usr/bin/perlbrew ]]; then
