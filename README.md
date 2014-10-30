@@ -11,6 +11,52 @@ cd dotfiles
 ```
 
 
+Recommended color themes for Vim
+--------------------------------
+
+#### Full support for Vim and Gvim
+
+*These colors work well with Vim and Gvim, without any additional
+configuration.*
+
+- iceberg
+- jellyx
+- lucius
+- mirodark
+- neverland
+- pencil
+- seoul256
+- sorcerer
+- wallaby
+
+#### Gvim only
+
+*Certain Gvim-only colors can work well in terminal Vim, but only if
+you modify your terminal's colors to match. Others may not work in
+terminal Vim no matter what you do.*
+
+- base16
+- briofita
+- liquidcarbon
+- nefertiti
+- oceanlight
+- scame (from vim-mimicpak)
+- solarized
+
+#### 8-color terminal only
+
+*Only works if you modify your terminal's colors to match.*
+
+- miro8
+
+#### Custom
+
+- Entering the command `:colorscheme custom` will black out the
+  background, which is helpful if you prefer solid black backgrounds
+  to the dark gray colors that are present in some themes. Thanks to
+  [@jmcantrell](https://github.com/jmcantrell).
+
+
 Credits
 -------
 
