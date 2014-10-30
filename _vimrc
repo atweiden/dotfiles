@@ -489,6 +489,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} s
 au BufEnter,BufRead,BufNewFile,BufWrite {.wgetrc} set ft=wget
 au BufEnter,BufRead,BufNewFile,BufWrite {.Xdefaults,.Xresources} set ft=xdefaults
 au BufEnter,BufRead,BufNewFile,BufWrite {*.xml} set ft=xml
+au BufEnter,BufRead,BufNewFile,BufWrite {.Xmodmap} set ft=xmodmap
 au BufEnter,BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
 au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh} set ft=zsh
 
