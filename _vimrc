@@ -241,8 +241,6 @@ vnoremap < <gv
 " }}}
 " --- searching {{{
 
-" search within visual block
-vnoremap / <ESC>/\v%V
 " remove highlights
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
 
