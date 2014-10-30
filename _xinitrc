@@ -1,5 +1,5 @@
 #!/bin/bash
 export BROWSER=firefox
 export DE=openbox
-#VBoxClient-all &
+[[ -s ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exec dbus-launch openbox-session
