@@ -97,8 +97,8 @@ if has("gui_running")
     colorscheme jellyx
 
     " resize font
-    noremap <M--> :Smaller<CR>
-    noremap <M-+> :Bigger<CR>
+    noremap <silent> <M--> :Smaller<CR>
+    noremap <silent> <M-+> :Bigger<CR>
     " paste selection with <S-Ins>
     inoremap <S-Insert> <MiddleMouse>
     cnoremap <S-Insert> <MiddleMouse>
@@ -133,7 +133,7 @@ set listchars+=trail:·
 " screen {{{
 
 set synmaxcol=800
-nnoremap <leader>u :syntax sync fromstart<CR>:redraw!<CR>
+nnoremap <silent> <leader>u :syntax sync fromstart<CR>:redraw!<CR>
 au VimResized * :wincmd =
 
 " fix background color bleed in tmux / screen
@@ -301,8 +301,10 @@ inoremap <silent> <F3> <C-O>:set nowrap!<CR>
 " toggle line numbers
 "noremap <silent> <F4> :set nonu!<CR>
 "inoremap <silent> <F4> <C-O>:set nonu!<CR>
-"nnoremap <F4> :NumbersOnOff<CR>
-nnoremap <F4> :NumbersToggle<CR>
+"nnoremap <silent> <F4> :NumbersOnOff<CR>
+"inoremap <silent> <F4> <C-O>:NumbersOnOff<CR>
+nnoremap <silent> <F4> :NumbersToggle<CR>
+inoremap <silent> <F4> <C-O>:NumbersToggle<CR>
 " toggle line and column highlighting
 noremap <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
 inoremap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
@@ -322,10 +324,12 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- tabs {{{
 
-noremap <leader>tn :tabnew<CR>
-noremap <leader>to :tabonly<CR>
-noremap <leader>tc :tabclose<CR>
-noremap <leader>tm :tabmove
+noremap <silent> <leader>tN :tabnext<CR>
+noremap <silent> <leader>tP :tabprevious<CR>
+noremap <silent> <leader>tn :tabnew<CR>
+noremap <silent> <leader>to :tabonly<CR>
+noremap <silent> <leader>tc :tabclose<CR>
+noremap <leader>tm :tabmove<space>
 " open a new tab with the current buffer's path
 " useful when editing files in the same directory
 noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
@@ -348,7 +352,7 @@ nnoremap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 " --- hex {{{
 
 " toggle between hex and binary, after opening file with `vim -b`
-noremap <F9> :call HexMe()<CR>
+noremap <silent> <F9> :call HexMe()<CR>
 
 " }}}
 " --- conceal {{{
@@ -365,25 +369,25 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[n,p] to moving to next and previous window respectively
 " map alt-[H,J,K,L] to repositioning a window split
-"nnoremap <M-h> <C-W><
+"nnoremap <silent> <M-h> <C-W><
 nnoremap <silent> <M-h> :ObviousResizeLeft<CR>
-"nnoremap <M-j> <C-W>-
+"nnoremap <silent> <M-j> <C-W>-
 nnoremap <silent> <M-j> :ObviousResizeDown<CR>
-"nnoremap <M-k> <C-W>+
+"nnoremap <silent> <M-k> <C-W>+
 nnoremap <silent> <M-k> :ObviousResizeUp<CR>
-"nnoremap <M-l> <C-W>>
+"nnoremap <silent> <M-l> <C-W>>
 nnoremap <silent> <M-l> :ObviousResizeRight<CR>
-nnoremap <M-=> <C-W>=
-nnoremap <M-_> <C-W>_
-nnoremap <M-\|> <C-W>\|
+nnoremap <silent> <M-=> <C-W>=
+nnoremap <silent> <M-_> <C-W>_
+nnoremap <silent> <M-\|> <C-W>\|
 nnoremap <silent> <M-s> :split<CR>
 nnoremap <silent> <M-v> :vsplit<CR>
-nnoremap <M-N> <C-W><C-W>
-nnoremap <M-P> <C-W><S-W>
-nnoremap <M-H> <C-W>H
-nnoremap <M-J> <C-W>J
-nnoremap <M-K> <C-W>K
-nnoremap <M-L> <C-W>L
+nnoremap <silent> <M-N> <C-W><C-W>
+nnoremap <silent> <M-P> <C-W><S-W>
+nnoremap <silent> <M-H> <C-W>H
+nnoremap <silent> <M-J> <C-W>J
+nnoremap <silent> <M-K> <C-W>K
+nnoremap <silent> <M-L> <C-W>L
 " simultaneously scroll split windows
 nnoremap <silent> <leader>sb :call SplitScroll()<CR>
 

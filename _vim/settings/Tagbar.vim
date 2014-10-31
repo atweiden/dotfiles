@@ -1,4 +1,4 @@
-nnoremap <F6> :TagbarToggle<CR>
+nnoremap <silent> <F6> :TagbarToggle<CR>
 let g:tagbar_left = 0
 let g:tagbar_width = 40
 let g:tagbar_sort = 0
