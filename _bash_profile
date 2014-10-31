@@ -3,8 +3,23 @@
 #
 
 [[ -f ~/.keymap ]] && sudo loadkeys ~/.keymap
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-[[ -x /usr/bin/quixand ]] && quixand ~/.bash_history ~/.lesshst ~/.local/share/recently-used.xbel ~/.viminfo ~/.vim_mru_files -d ~/Sandbox ~/.cache ~/.thumbnails ~/.vim/.backups ~/.vim/.swaps ~/.vim/.tmp ~/.vim/.undo
+
+[[ -x /usr/bin/quixand ]] \
+  && quixand ~/.bash_history \
+             ~/.lesshst \
+             ~/.local/share/recently-used.xbel \
+             ~/.viminfo \
+             ~/.vim_mru_files \
+             -d ~/Sandbox \
+                ~/.cache \
+                ~/.thumbnails \
+                ~/.vim/.backups \
+                ~/.vim/.swaps \
+                ~/.vim/.tmp \
+                ~/.vim/.undo
+
 if [[ -x /usr/bin/perlbrew ]]; then
   export PERLBREW_ROOT=~/.perlbrew_root
   if ! [[ -d "${PERLBREW_ROOT}" ]]; then perlbrew init; fi
