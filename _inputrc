@@ -17,26 +17,15 @@ $endif
 Control-j: menu-complete
 Control-k: menu-complete-backward
 
-# Don't take case into consideration when completing
-set completion-ignore-case on
-
-# Display completions immediately after pressing <Tab> once
-set show-all-if-ambiguous on
-set show-all-if-unmodified on
-
-# Treat underscores and hyphens equally when completing
-set completion-map-case on
-
-# Focus on what you need to type to finish a completion
-set completion-prefix-display-length 2
-
 # Add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
 
 # Use the text that has already been typed as the prefix for searching
 # through commands (i.e. more intelligent Up/Down behavior)
-"\e[B": history-search-forward
 "\e[A": history-search-backward
+"\eOA": history-search-backward
+"\e[B": history-search-forward
+"\eOB": history-search-forward
 
 # Do not autocomplete hidden files unless the pattern explicitly begins
 # with a dot
