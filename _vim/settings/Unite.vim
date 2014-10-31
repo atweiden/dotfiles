@@ -1,2 +1,2 @@
 " yank history
-nnoremap <leader><leader>y :Unite history/yank<CR>
+nnoremap <silent> <leader><leader>y :Unite history/yank<CR>

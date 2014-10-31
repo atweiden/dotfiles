@@ -1,4 +1,4 @@
-nnoremap <M-S> :ScreenShell tmux select-layout main-horizontal<CR>
+nnoremap <silent> <M-S> :ScreenShell tmux select-layout main-horizontal<CR>
 let g:ScreenImpl = 'Tmux'
 let g:ScreenShellHeight = 0
 let g:ScreenShellTerminal = 'urxvt'

@@ -10,7 +10,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 let g:NERDTreeWinSize = 30
 let NERDTreeMapJumpFirstChild = 'gK'
-nnoremap <F12> :NERDTreeToggle<CR>
+nnoremap <silent> <F12> :NERDTreeToggle<CR>
 
 " If nerd tree is closed, find current file, if open, close it
 nnoremap <silent> <leader>nf <ESC>:call ToggleFindNerd()<CR>
