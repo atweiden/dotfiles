@@ -1,0 +1,64 @@
+quit   q
+close  x
+
+zoom_in       f  equal
+zoom_out      a  minus
+zoom_default  d  0
+zoom_fit      s
+
+size_to_image w
+
+next_img  J  space
+prev_img  K  BackSpace
+
+jump_first  g  1    Home
+jump_last   G  0    End
+jump_back   H  C-b  Page_Up
+jump_fwd    L  C-f  Page_Down
+
+jump_random z
+
+scroll_up     k  Up
+scroll_down   j  Down
+scroll_left   h  Left
+scroll_right  l  Right
+
+scroll_up_page     C-K  C-Up
+scroll_down_page   C-J  C-Down
+scroll_left_page   C-H  C-Left
+scroll_right_page  C-L  C-Right
+
+render  R
+
+mirror  bar
+flip    underscore
+
+reload_image  r
+reload_minus  leftanglebracket
+reload_plus   rightanglebracket
+
+save_image     C-s
+save_filelist  C-l
+
+remove  Delete
+delete  C-Delete
+
+toggle_menu  m Menu
+menu_parent  h
+menu_child   l
+menu_down    j
+menu_up      k
+menu_close   C-c Escape
+menu_select  o  space  Return
+
+toggle_fullscreen v
+toggle_filenames  F
+toggle_actions    A
+toggle_exif       E
+toggle_caption    C
+toggle_aliasing   A
+toggle_info       I
+
+toggle_keep_vp
+toggle_pause
+toggle_pointer

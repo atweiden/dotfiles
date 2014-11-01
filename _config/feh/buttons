@@ -1,0 +1,10 @@
+pan   1
+zoom  2
+menu  3
+prev  4
+next  5
+
+blur      C-1
+rotate    C-2
+zoom_in   C-4
+zoom_out  C-5
