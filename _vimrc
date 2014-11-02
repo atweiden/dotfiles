@@ -324,9 +324,9 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- tabs {{{
 
-noremap <silent> <leader>tN :tabnext<CR>
-noremap <silent> <leader>tP :tabprevious<CR>
-noremap <silent> <leader>tn :tabnew<CR>
+noremap <silent> <leader>tn :tabnext<CR>
+noremap <silent> <leader>tp :tabprevious<CR>
+noremap <silent> <C-T> :tabnew<CR>
 noremap <silent> <leader>to :tabonly<CR>
 noremap <silent> <leader>tc :tabclose<CR>
 noremap <leader>tm :tabmove<space>
