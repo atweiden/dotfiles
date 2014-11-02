@@ -575,13 +575,7 @@ Plug 'kien/rainbow_parentheses.vim', { 'on': [ 'RainbowParenthesesLoadBraces',
                                              \ 'RainbowParenthesesToggleAll' ] }
 Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore',
                                         \ 'SyntaxInclude' ] }
-Plug 'reedes/vim-thematic', { 'on': [ 'ThematicFirst',
-                                    \ 'ThematicNarrow',
-                                    \ 'ThematicNext',
-                                    \ 'ThematicOriginal',
-                                    \ 'ThematicPrevious',
-                                    \ 'ThematicRandom',
-                                    \ 'ThematicWiden' ] }
+Plug 'reedes/vim-thematic'
 Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
                                       \ 'Hex2Lit',
                                       \ 'Hex2Rgb',
