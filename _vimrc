@@ -441,7 +441,7 @@ augroup END
 " languages {{{
 
 au BufEnter,BufRead,BufNewFile,BufWrite {*.cfg,.ackrc,.ctags,.dunstrc,.hgrc,.npmrc} set ft=cfg
-au BufEnter,BufRead,BufNewFile,BufWrite {*.clj,*.edn} set ft=clojure
+au BufEnter,BufRead,BufNewFile,BufWrite {*.clj,*.cljs,*.edn} set ft=clojure
 au BufEnter,BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
 au BufEnter,BufRead,BufNewFile,BufWrite {.curlrc,.gitignore,.gitattributes,.hgignore,.jshintignore} set ft=conf
 au BufEnter,BufRead,BufNewFile,BufWrite {.conkyrc*} set ft=conkyrc
