@@ -22,7 +22,8 @@ zipcode=97210              # Zipcode (f.lux)
 # -----------------------------------------------------------------------------
 # dirs
 
-mkdir -p $HOME/.src                 \
+mkdir -p $HOME/.marks               \
+         $HOME/.src                 \
          $HOME/Desktop              \
          $HOME/Documents            \
          $HOME/Downloads            \
