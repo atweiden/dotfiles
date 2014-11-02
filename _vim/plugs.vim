@@ -555,6 +555,7 @@ Plug 'octol/vombatidae-vim'
 Plug 'molok/vim-vombato-colorscheme'
 Plug 'rhysd/wallaby.vim'
 Plug 'vim-scripts/xoria256.vim'
+Plug 'jnurmine/Zenburn'
 Plug 'vim-scripts/zenesque.vim'
 
 " color utilities

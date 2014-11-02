@@ -28,6 +28,7 @@ configuration.*
 - seoul256
 - sorcerer
 - wallaby
+- zenburn
 
 #### Gvim only
 
