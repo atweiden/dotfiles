@@ -567,12 +567,7 @@ Plug 'mhinz/vim-hugefile'
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
 Plug 'edkolev/promptline.vim', { 'on': 'PromptlineSnapshot' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'Tmuxline' }
-Plug 'kien/rainbow_parentheses.vim', { 'on': [ 'RainbowParenthesesLoadBraces',
-                                             \ 'RainbowParenthesesLoadChevrons',
-                                             \ 'RainbowParenthesesLoadRound',
-                                             \ 'RainbowParenthesesLoadSquare',
-                                             \ 'RainbowParenthesesToggle',
-                                             \ 'RainbowParenthesesToggleAll' ] }
+Plug 'junegunn/rainbow_parentheses.vim', { 'on': [ 'RainbowParentheses' ] }
 Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore',
                                         \ 'SyntaxInclude' ] }
 Plug 'reedes/vim-thematic'
