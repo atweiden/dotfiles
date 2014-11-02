@@ -324,11 +324,11 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- tabs {{{
 
-noremap <silent> <leader>tn :tabnext<CR>
-noremap <silent> <leader>tp :tabprevious<CR>
-noremap <silent> <C-T> :tabnew<CR>
+noremap <silent> g<C-T> :tabnew<CR>
+noremap <silent> g<C-N> :tabnext<CR>
+noremap <silent> g<C-P> :tabprevious<CR>
+noremap <silent> g<C-W> :tabclose<CR>
 noremap <silent> <leader>to :tabonly<CR>
-noremap <silent> <leader>tc :tabclose<CR>
 noremap <leader>tm :tabmove<space>
 " open a new tab with the current buffer's path
 " useful when editing files in the same directory
