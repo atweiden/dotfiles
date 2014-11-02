@@ -19,12 +19,15 @@ Recommended color themes for Vim
 *These colors work well with Vim and Gvim, without any additional
 configuration.*
 
+- eddie
+- gruvbox
 - iceberg
 - jellyx
 - lucius
 - mirodark
 - neverland
 - pencil
+- scame (from vim-mimicpak)
 - seoul256
 - sorcerer
 - wallaby
@@ -37,12 +40,15 @@ you modify your terminal's colors to match. Others may not work in
 terminal Vim no matter what you do.*
 
 - base16
+- baycomb
 - briofita
 - liquidcarbon
 - nefertiti
 - oceanlight
-- scame (from vim-mimicpak)
+- psclone (from vim-mimicpak)
 - solarized
+- vibrantink
+- vimhut (from vim-mimicpak)
 
 #### 8-color terminal only
 
