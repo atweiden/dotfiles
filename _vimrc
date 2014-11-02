@@ -342,8 +342,6 @@ noremap <silent> g<C-P> :tabprevious<CR>
 noremap <silent> g<C-W> :tabclose<CR>
 noremap <silent> <leader>to :tabonly<CR>
 noremap <leader>tm :tabmove<space>
-" open a new tab with the current buffer's path
-" useful when editing files in the same directory
 noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
 
 " }}}
