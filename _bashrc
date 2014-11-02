@@ -10,25 +10,25 @@
 [[ $- != *i* ]] && return
 
 # term
-if [ "x$DISPLAY" != "x" ]; then
+if [[ "x$DISPLAY" != "x" ]]; then
   export HAS_256_COLORS=yes
   alias tmux="tmux -2"
-  if [ "$TERM" = "xterm" ]; then
+  if [[ "$TERM" = "xterm" ]]; then
     export TERM=xterm-256color
   fi
 else
-  if [ "$TERM" == "xterm" ] || [ "$TERM" == "xterm-256color" ]; then
+  if [[ "$TERM" == "xterm" ]] || [[ "$TERM" == "xterm-256color" ]]; then
     export HAS_256_COLORS=yes
     alias tmux="tmux -2"
   fi
 fi
 
-if [ "$TERM" = "screen" ] && [ "$HAS_256_COLORS" = "yes" ]; then
+if [[ "$TERM" = "screen" ]] && [[ "$HAS_256_COLORS" = "yes" ]]; then
   export TERM=screen-256color
 fi
 
 # linux console colors (miro8)
-if [ "$TERM" = "linux" ]; then
+if [[ "$TERM" = "linux" ]] || [[ "$TERM" = "vt100" ]] || [[ "$TERM" = "vt220" ]]; then
    echo -en "\e]P0000000" #black
    echo -en "\e]P83d3d3d" #darkgrey
    echo -en "\e]P18c4665" #darkred
@@ -215,7 +215,13 @@ fi
 # -----------------------------------------------------------------------------
 # FZF
 
-# use ag as the default source for fzf
-[[ -x /usr/bin/ag ]] && export FZF_DEFAULT_COMMAND='ag -l -g ""'
+# use ag/pt/ack as the default source for fzf
+if [[ -x /usr/bin/ag ]]; then
+  export FZF_DEFAULT_COMMAND='ag -l -g ""'
+elif [[ -x /usr/bin/pt ]]; then
+  export FZF_DEFAULT_COMMAND='pt -l -g ""'
+elif [[ -x /usr/bin/ack ]]; then
+  export FZF_DEFAULT_COMMAND='ack -l -g ""'
+fi
 # create fzf key bindings
 [[ -e "/etc/profile.d/fzf.sh" ]] && . /etc/profile.d/fzf.sh
