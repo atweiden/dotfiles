@@ -3,7 +3,7 @@ let g:lightline = {
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
-      \   'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'wordcount' ], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \   'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
       \   'modified': 'MyModified',
@@ -74,7 +74,7 @@ function! MyWordCount()
       let l:old_position = getpos('.')
       let l:old_status = v:statusmsg
       execute "silent normal g\<C-G>"
-      if v:statusmsg == "--No lines in buffer--"
+      if v:statusmsg == "--No lines in buffer--" || (bufwinnr('LustyExplorer--Buffers') == 1)
         let b:wordcount = 0
       else
         let s:split_wc = split(v:statusmsg)
