@@ -219,6 +219,18 @@ set formatoptions+=1
 
 
 " -----------------------------------------------------------------------------
+" Searching
+
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+elseif executable('pt')
+  set grepprg=pt\ --nogroup\ --nocolor
+elseif executable('ack')
+  set grepprg=ack\ --nogroup\ --nocolor
+endif
+
+
+" -----------------------------------------------------------------------------
 " Shortcuts
 
 " Ctrl-Q to quit

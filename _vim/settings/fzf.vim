@@ -1,3 +1,4 @@
+nnoremap <silent> <M-F> :FZF<CR>
 let g:fzf_launcher = 'urxvt -geometry 120x30 -e sh -c %s'
 
 """"""""""""""""""""""""""""""""
@@ -22,6 +23,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""
 " Search lines in all open vim buffers "
 """"""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <M-f> :FZFLines<CR>
 command! FZFLines call fzf#run({
   \ 'source':  BuffersLines(),
   \ 'sink':    function('LineHandler'),
@@ -48,6 +50,7 @@ endfunction
 """""""""""""""""""""
 " Simple mru search "
 """""""""""""""""""""
+nnoremap <silent> <M-m> :FZFMru<CR>
 command! FZFMru call fzf#run({
             \'source': v:oldfiles,
             \'sink' : 'e ',
