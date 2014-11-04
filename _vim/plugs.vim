@@ -166,8 +166,7 @@ Plug 'coderifous/textobj-word-column.vim'
 
 " bookmarks
 Plug 'tommcdo/vim-kangaroo'
-Plug 'kshenoy/vim-signature', { 'on': [ 'SignatureRefresh',
-                                      \ 'SignatureToggleSigns' ] }
+Plug 'kshenoy/vim-signature'
 Plug 'AndrewRadev/simple_bookmarks.vim', { 'on': [ 'Bookmark',
                                                  \ 'CopenBookmarks',
                                                  \ 'DelBookmark',
