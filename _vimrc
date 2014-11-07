@@ -250,6 +250,8 @@ Arpeggio xnoremap jk <ESC>
 " preserve selection when indenting
 vnoremap > >gv
 vnoremap < <gv
+nnoremap > >>
+nnoremap < <<
 
 " }}}
 " --- searching {{{
