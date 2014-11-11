@@ -281,7 +281,7 @@ nnoremap <leader><leader>. /\.\s\s\+\w/s+1<CR>
 " find things like 'why ?' and 'now !'
 nnoremap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<CR>
 " find multiple newlines together
-nnoremap <leader><leader>r /\n\{3,\}/s+1<CR>
+nnoremap <leader><leader>cr /\n\{3,\}/s+1<CR>
 
 " }}}
 " --- writing {{{
