@@ -272,6 +272,12 @@ noremap <leader>p "+p
 set pastetoggle=<F2>
 
 " }}}
+" --- formatting {{{
+
+" format visual selection with spacebar
+vnoremap <space> :!fmt<CR>
+
+" }}}
 " --- proofreading {{{
 
 " find lines longer than 78 characters
