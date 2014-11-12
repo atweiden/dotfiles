@@ -366,7 +366,7 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'tshirtman/vim-cython', { 'for': 'cython' }
-Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.0' }
+Plug 'idanarye/vim-dutyl', { 'for': 'd', 'tag': 'v1.4.2' }
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 Plug 'honza/dockerfile.vim', { 'for': 'dockerfile' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
