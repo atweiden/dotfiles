@@ -117,7 +117,7 @@ def output(key, value):
 def ram_display():
  raminfo = Popen(['free', '-m'], stdout=PIPE).communicate()[0].split('\n')
  ram = ''.join(filter(re.compile('M').search, raminfo)).split()
- used = int(ram[2]) - int(ram[5]) - int(ram[6])
+ used = int(ram[1]) - int(ram[6])
  output ('RAM', '%s MB / %s MB' % (used, ram[1]))
 
 # Screenshot Function
