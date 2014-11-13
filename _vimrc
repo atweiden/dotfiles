@@ -483,6 +483,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.jl} set ft=julia
 au BufEnter,BufRead,BufNewFile,BufWrite {*.kv} set ft=kivy
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ledger} set ft=ledger
 au BufEnter,BufRead,BufNewFile,BufWrite {*.less} set ft=less
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ly,*.ily} set ft=lilypond
 au BufEnter,BufRead,BufNewFile,BufWrite {*.lisp} set ft=lisp
 au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
 au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set ft=markdown conceallevel=0

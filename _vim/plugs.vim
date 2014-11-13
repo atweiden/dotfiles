@@ -419,6 +419,7 @@ Plug 'GutenYe/json5.vim', { 'for': 'json5' }
 Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
 Plug 'ajford/vimkivy', { 'for': 'kivy' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }
+Plug 'lfairy/lilyvim', { 'for': 'lilypond' }
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
 Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
 Plug 'leafo/moonscript-vim', { 'for': 'moon' }
