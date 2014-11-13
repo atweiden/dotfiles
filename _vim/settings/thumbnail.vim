@@ -1,1 +1,1 @@
-nnoremap <silent> <M-t> :Thumbnail<CR>
+nnoremap <silent> <leader><leader>lb :Thumbnail<CR>
