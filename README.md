@@ -76,6 +76,7 @@ Credits
 - https://github.com/drmikehenry/vimfiles
 - https://github.com/ervandew/dotfiles
 - https://github.com/Floby/vim-config
+- https://github.com/gabrielelana/dotfiles
 - https://github.com/gf3/dotfiles
 - https://github.com/gmarik/vimfiles
 - https://github.com/guns/haus
