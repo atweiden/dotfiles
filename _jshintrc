@@ -21,18 +21,18 @@
 
     // Extra globals.
     "predef"        : [
-		    "after",
-		    "afterEach",
-    		"before",
-    		"beforeEach",
-    		"db",
-    		"describe",
-    		"Ext",
-    		"io",
-    		"it",
-    		"should",
-    		"unescape",
-    		"_"
+        "after",
+        "afterEach",
+        "before",
+        "beforeEach",
+        "db",
+        "describe",
+        "Ext",
+        "io",
+        "it",
+        "should",
+        "unescape",
+        "_"
     ],
 
     // Development.
