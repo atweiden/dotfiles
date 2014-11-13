@@ -47,6 +47,7 @@ set title
 set backupdir=~/.vim/.backups
 set directory=~/.vim/.swaps
 set undodir=~/.vim/.undo
+set t_ti= t_te=
 set notimeout
 set timeout timeoutlen=3000
 set ttimeout ttimeoutlen=5

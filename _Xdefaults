@@ -9,7 +9,7 @@ Xft.hintstyle  : hintslight
 
 !-------------------------------------------------------------------------------
 !
-!	U R X V T - Settings
+! U R X V T - Settings
 !
 
 URxvt*geometry              : 80x25
@@ -45,6 +45,8 @@ URxvt*scrollTtyOutput: False
 URxvt*scrollWithBuffer: True
 ! True: scroll to bottom when a non-special key is pressed. Special keys are those which are intercepted by rxvt-unicode for special handling and are not passed onto the shell; option -sk. False: do not scroll to bottom when a non-special key is pressed; option +sk.
 URxvt*scrollTtyKeypress: True
+! False: don't clear the screen after exiting Vim
+URxvt*secondaryScreen: False
 
 # Enabling Ctrl/Alt/Shift, function keys and arrows for Vim
 !URxvt.keysym.M-Up             : \033[1;3A
@@ -156,13 +158,14 @@ URxvt.colorUL     : #00afd7
 
 !-------------------------------------------------------------------------------
 !
-!	X T E R M - Settings
+! X T E R M - Settings
 !
 
 XTerm*locale      : true
 xterm*borderWidth : 0
 Xterm*jumpScroll  : false
 Xterm*saveLines   : 65535
+XTerm*titeInhibit : true
 
 ! bubblegum colorscheme
 XTerm*color0      : #121212
