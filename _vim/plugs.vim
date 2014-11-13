@@ -260,9 +260,9 @@ Plug 'jmcantrell/vim-reporoot', { 'on': 'RepoRoot' }
 
 " writing
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'reedes/vim-lexical', { 'for': [ 'markdown', 'textile' ] }
+Plug 'reedes/vim-lexical', { 'for': [ 'markdown', 'mkd', 'textile' ] }
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
-Plug 'reedes/vim-litecorrect', { 'for': [ 'markdown', 'textile' ] }
+Plug 'reedes/vim-litecorrect', { 'for': [ 'markdown', 'mkd', 'textile' ] }
 Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy',
                                  \ 'NoWordy',
                                  \ 'PrevWordy',
@@ -422,10 +422,10 @@ Plug 'ledger/vim-ledger', { 'for': 'ledger' }
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
 Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
 Plug 'leafo/moonscript-vim', { 'for': 'moon' }
-Plug 'tpope/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
+Plug 'plasticboy/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'mattly/vim-markdown-enhancements', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'nelstrom/vim-markdown-folding', { 'for': [ 'markdown', 'mkd' ] }
-Plug 'zah/nimrod.vim', { 'for': [ 'nim', 'nimrod' ] }
+Plug 'zah/nimrod.vim', { 'for': [ 'nim' ] }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
