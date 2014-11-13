@@ -1,6 +1,14 @@
 Dotfiles for Arch
 =================
 
+Screenshots
+-----------
+
+![Desktop](https://i.imgur.com/bEGxhbP.png)
+
+![URxvt](https://i.imgur.com/ElJRxPs.png)
+
+
 Installation
 ------------
 
