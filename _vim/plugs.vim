@@ -3,13 +3,17 @@ silent! if plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 
 " windows
+Plug 'spolu/dwm.vim', { 'on': [ '<Plug>DWMClose',
+                              \ '<Plug>DWMFocus',
+                              \ '<Plug>DWMNew',
+                              \ '<Plug>DWMRotateClockwise',
+                              \ '<Plug>DWMRotateCounterclockwise' ] }
 Plug 'talek/obvious-resize'
 
 " buffers
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'ton/vim-bufsurf'
-Plug 'vim-scripts/clone', { 'on': [ 'CloneAs',
-                                  \ 'SCloneAs' ] }
+Plug 'vim-scripts/clone', { 'on': [ 'CloneAs', 'SCloneAs' ] }
 Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
 Plug 'sjbach/lusty'
 Plug 'chrisbra/Recover.vim'
@@ -184,8 +188,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 
 " tags
-Plug 'xolox/vim-easytags', { 'on': [ 'HighlightTags',
-                                   \ 'UpdateTags' ] }
+Plug 'xolox/vim-easytags', { 'on': [ 'HighlightTags', 'UpdateTags' ] }
 Plug 'majutsushi/tagbar', { 'on': [ 'Tagbar',
                                   \ 'TagbarClose',
                                   \ 'TagbarCurrentTag',
@@ -263,10 +266,7 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'reedes/vim-lexical', { 'for': [ 'markdown', 'mkd', 'textile' ] }
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
 Plug 'reedes/vim-litecorrect', { 'for': [ 'markdown', 'mkd', 'textile' ] }
-Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy',
-                                 \ 'NoWordy',
-                                 \ 'PrevWordy',
-                                 \ 'Wordy' ] }
+Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy', 'NoWordy', 'PrevWordy', 'Wordy' ] }
 
 " calendar
 Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
@@ -561,15 +561,13 @@ Plug 'vim-scripts/zenesque.vim'
 " color utilities
 Plug 'vim-scripts/CSApprox'
 Plug 'vim-scripts/guicolorscheme.vim', { 'on': 'GuiColorScheme' }
-Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT',
-                                     \ 'HLTm' ] }
+Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT', 'HLTm' ] }
 Plug 'mhinz/vim-hugefile'
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
 Plug 'edkolev/promptline.vim', { 'on': 'PromptlineSnapshot' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'Tmuxline' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'on': [ 'RainbowParentheses' ] }
-Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore',
-                                        \ 'SyntaxInclude' ] }
+Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore', 'SyntaxInclude' ] }
 Plug 'reedes/vim-thematic'
 Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
                                       \ 'Hex2Lit',
