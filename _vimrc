@@ -235,10 +235,10 @@ endif
 " Shortcuts
 
 " Ctrl-Q to quit
-nnoremap <C-Q> :q<CR>
-cnoremap <C-Q> <C-C>:q<CR>
-inoremap <C-Q> <C-O>:q<CR>
-vnoremap <C-Q> <ESC>:q<CR>
+nnoremap <C-Q> :qall<CR>
+cnoremap <C-Q> <C-C>:qall<CR>
+inoremap <C-Q> <C-O>:qall<CR>
+vnoremap <C-Q> <ESC>:qall<CR>
 
 " Editing
 " --- selecting {{{
