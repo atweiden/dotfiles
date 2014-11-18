@@ -77,7 +77,7 @@ if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "sc
   set t_Co=256
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
-elsif $TERM == "linux" || $TERM = "vt100" || $TERM = "vt220"
+elseif $TERM == "linux" || $TERM = "vt100" || $TERM = "vt220"
   colorscheme miro8
 endif
 
