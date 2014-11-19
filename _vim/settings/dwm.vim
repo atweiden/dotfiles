@@ -1,8 +1,17 @@
+" disable by default
+let g:dwm_is_active = 0
+
 " disable default keybindings
 let g:dwm_map_keys = 0
 
 " set master pane width to 66% of editor width
 let g:dwm_master_pane_width = "66%"
+
+" toggle
+nnoremap <silent> <M-T> :call ToggleDWM()<CR>
+
+" new user-specified window
+nnoremap <silent> <M-t> :DWMNewSpecified<space>
 
 " new window
 nmap <M-w> <Plug>DWMNew

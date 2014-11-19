@@ -3,11 +3,7 @@ silent! if plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 
 " windows
-Plug 'spolu/dwm.vim', { 'on': [ '<Plug>DWMClose',
-                              \ '<Plug>DWMFocus',
-                              \ '<Plug>DWMNew',
-                              \ '<Plug>DWMRotateClockwise',
-                              \ '<Plug>DWMRotateCounterclockwise' ] }
+Plug 'spolu/dwm.vim'
 Plug 'talek/obvious-resize'
 
 " buffers
