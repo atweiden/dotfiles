@@ -341,8 +341,10 @@ inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 " --- movement {{{
 
 " move between beginning and end of line
-noremap H ^
-noremap L g_
+nnoremap H ^
+vnoremap H ^
+nnoremap L g_
+vnoremap H ^
 
 " scroll four lines at a time
 nnoremap <C-E> 4<C-E>
