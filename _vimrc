@@ -255,7 +255,11 @@ nnoremap > >>
 nnoremap < <<
 
 " }}}
-" --- searching {{{
+" --- search and replace {{{
+
+" replace word under cursor
+nnoremap <leader><leader>r :'{,'}s/\<<C-R>=expand('<cword>')<CR>\>/
+nnoremap <leader><leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
 
 " remove highlights
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
@@ -334,7 +338,11 @@ noremap <silent> <F7> :set spell! spelllang=en_us<CR>
 inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 
 " }}}
-" --- scrolling {{{
+" --- movement {{{
+
+" move between beginning and end of line
+noremap H ^
+noremap L g_
 
 " scroll four lines at a time
 nnoremap <C-E> 4<C-E>

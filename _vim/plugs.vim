@@ -406,6 +406,7 @@ Plug 'mitsuhiko/vim-json', { 'for': 'json' }
 Plug 'GutenYe/json5.vim', { 'for': 'json5' }
 Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
 Plug 'ajford/vimkivy', { 'for': 'kivy' }
+Plug 'lervag/vim-latex', { 'for': 'tex' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }
 Plug 'lfairy/lilyvim', { 'for': 'lilypond' }
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
