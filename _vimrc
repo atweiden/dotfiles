@@ -344,7 +344,7 @@ inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 nnoremap H ^
 vnoremap H ^
 nnoremap L g_
-vnoremap H ^
+vnoremap L g_
 
 " scroll four lines at a time
 nnoremap <C-E> 4<C-E>
