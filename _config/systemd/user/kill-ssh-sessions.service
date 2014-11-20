@@ -4,7 +4,7 @@ Before=network.target
 
 [Service]
 Type=simple
-ExecStart=-/usr/lib/systemd/scripts/kill-ssh-sessions
+ExecStart=-/usr/bin/sh %h/.config/systemd/user/scripts/kill-ssh-sessions
 
 [Install]
 WantedBy=halt.target poweroff.target reboot.target shutdown.target sleep.target
