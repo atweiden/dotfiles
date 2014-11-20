@@ -70,14 +70,6 @@ Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 
 " movement
-Plug 'yonchu/accelerated-smooth-scroll', { 'on': [ '<Plug>(ac-smooth-scroll-c-b)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-b_v)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-d)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-d_v)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-f)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-f_v)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-u)',
-                                                 \ '<Plug>(ac-smooth-scroll-c-u_v)' ] }
 Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
