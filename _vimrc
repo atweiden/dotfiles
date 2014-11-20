@@ -497,7 +497,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
 au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set ft=markdown conceallevel=0
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
-au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.ctp} set ft=php
+au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.ctp,*.hh,*.hhi} set ft=php
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pro} set ft=pro
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
