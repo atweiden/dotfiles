@@ -514,6 +514,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.slim} set ft=slim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sls} set ft=sls
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sql,.psqlrc} set ft=sql
 au BufEnter,BufRead,BufNewFile,BufWrite {*.styl} set ft=stylus
+au BufEnter,BufRead,BufNewFile,BufWrite {*.tex} set ft=tex
 au BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux-conf
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
