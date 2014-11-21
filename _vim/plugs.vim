@@ -147,6 +147,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
 Plug 'vim-scripts/LineJugglerCommands', { 'on': [ 'Replace', 'Swap' ] }
 Plug 'kana/vim-operator-user'
+Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'kana/vim-submode'
 Plug 'wellle/targets.vim'
@@ -193,6 +194,9 @@ Plug 'h1mesuke/unite-outline', { 'on': 'Unite' }
 
 " diffs
 Plug 'AndrewRadev/linediff.vim'
+Plug 'junkblocker/patchreview-vim', { 'on': [ 'DiffReview',
+                                            \ 'PatchReview',
+                                            \ 'ReversePatchReview' ] }
 
 " vcs
 Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
@@ -444,6 +448,8 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'derekwyatt/vim-sbt', { 'for': 'sbt' }
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
 Plug 'saltstack/salt-vim', { 'for': 'sls' }
 Plug 'vim-scripts/SQLUtilities', { 'on': [ 'SQLUCreateColumnList',
@@ -492,6 +498,7 @@ Plug 'vim-scripts/dbext.vim', { 'on': [ '<Plug>DBDescribeProcedure',
                                       \ '<Plug>DBSelectFromTableWithWhere',
                                       \ '<Plug>DBSelectFromTopXTable',
                                       \ '<Plug>DBSelectFromTopXTable' ] }
+Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
 Plug 'whatyouhide/vim-tmux-syntax', { 'for': 'tmux-conf' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
