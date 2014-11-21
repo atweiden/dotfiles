@@ -336,6 +336,10 @@ inoremap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
 " toggle spell checking
 noremap <silent> <F7> :set spell! spelllang=en_us<CR>
 inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
+" convert all tabs into spaces and continue session with spaces
+nnoremap <silent><expr> g<M-t> ':set expandtab<CR>:retab!<CR>:echo "Tabs have been converted to spaces"<CR>'
+" convert all spaces into tabs and continue session with tabs
+nnoremap <silent><expr> g<M-T> ':set noexpandtab<CR>:%retab!<CR>:echo "Spaces have been converted to tabs"<CR>'
 
 " }}}
 " --- movement {{{

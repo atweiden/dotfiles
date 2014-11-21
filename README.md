@@ -101,6 +101,7 @@ Credits
 - https://github.com/phleet/dotfiles
 - https://github.com/pjan/osx-dotfiles
 - https://github.com/pocke/dotfiles
+- https://github.com/prurigro/darkcloud-vimconfig
 - https://github.com/rafi/.config
 - https://github.com/saimn/dotfiles
 - https://github.com/Schnouki/dotfiles
