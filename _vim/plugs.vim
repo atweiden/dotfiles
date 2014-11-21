@@ -335,6 +335,7 @@ Plug 'Valloric/YouCompleteMe'
 
 " languages
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
+Plug 'prurigro/vim-archversion', { 'for': 'archversion' }
 Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
 Plug 'Shirk/vim-gas', { 'for': 'gas' }
 Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
