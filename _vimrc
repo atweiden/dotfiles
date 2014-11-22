@@ -258,7 +258,7 @@ nnoremap < <<
 " --- search and replace {{{
 
 " highlight all occurrences of current word
-nnoremap <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+nnoremap <silent> <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
 " replace word under cursor
 nnoremap <leader><leader>r :'{,'}s/\<<C-R>=expand('<cword>')<CR>\>/
