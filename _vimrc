@@ -482,6 +482,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.egs} set ft=egs
 au BufEnter,BufRead,BufNewFile,BufWrite {*.erb} set ft=eruby
 au BufEnter,BufRead,BufNewFile,BufWrite {.gitconfig} set ft=gitconfig
 au BufEnter,BufRead,BufNewFile,BufWrite {*.go} set ft=go
+au BufEnter,BufRead,BufNewFile,BufWrite {*.groovy,*.gradle} set ft=groovy
 au BufEnter,BufRead,BufNewFile,BufWrite {*.gs} set ft=gorilla
 au BufEnter,BufRead,BufNewFile,BufWrite {*.html,*.htm,*.ejs} set ft=html
 au BufEnter,BufRead,BufNewFile,BufWrite {*.html.ep,*.html.epl} set ft=html.epl

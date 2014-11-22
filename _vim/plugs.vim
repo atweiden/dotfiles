@@ -382,6 +382,7 @@ Plug 'spiegela/vimix', { 'on': [ 'VimixClean',
 Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-jp/vim-go-extra', { 'for': 'go' }
+Plug 'Alotor/groovim', { 'for': 'groovy' }
 Plug 'tpope/vim-haml', { 'for': [ 'haml', 'sass', 'scss' ] }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
