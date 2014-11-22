@@ -92,6 +92,7 @@ Credits
 - https://github.com/henrik/dotfiles
 - https://github.com/ifschleife/dotfiles
 - https://github.com/jeroenjanssens/dotfiles
+- https://github.com/jgors/configs
 - https://github.com/junegunn/dotfiles
 - https://github.com/kernelsmith/env-customization
 - https://github.com/khughitt/dotfiles
