@@ -423,7 +423,7 @@ Plug 'plasticboy/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'mattly/vim-markdown-enhancements', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'nelstrom/vim-markdown-folding', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'zah/nimrod.vim', { 'for': 'nim' }
-Plug 'atweiden/merlin', { 'for': 'ocaml', 'branch': 'vim' }
+Plug 'atweiden/merlin.vim', { 'for': 'ocaml', 'branch': 'vim' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
