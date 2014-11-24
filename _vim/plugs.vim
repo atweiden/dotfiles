@@ -422,7 +422,8 @@ Plug 'leafo/moonscript-vim', { 'for': 'moon' }
 Plug 'plasticboy/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'mattly/vim-markdown-enhancements', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'nelstrom/vim-markdown-folding', { 'for': [ 'markdown', 'mkd' ] }
-Plug 'zah/nimrod.vim', { 'for': [ 'nim' ] }
+Plug 'zah/nimrod.vim', { 'for': 'nim' }
+Plug 'atweiden/merlin', { 'for': 'ocaml', 'branch': 'vim' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
@@ -439,6 +440,7 @@ Plug 'jmcantrell/vim-virtualenv', { 'on': [ 'VirtualEnvActivate',
                                           \ 'VirtualEnvDeactivate',
                                           \ 'VirtualEnvList' ] }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'jgors/vimux-ipy', { 'for': 'python' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'vim-scripts/paredit.vim', { 'for': [ 'clojure',
                                          \ 'lisp',
