@@ -1,0 +1,53 @@
+#bubblegum colorscheme, based on bloom's vim theme and xoria----------------------
+
+!black.normal     : xoria256.LineNr.guibg
+!black.bright     : black.normal.rgb - 8
+URxvt.color0      : #121212
+URxvt.color8      : #0a0a0a
+
+!red.normal       : red.bright.r - 8
+!red.bright       : xoria256.Special.guifg
+URxvt.color1      : #d75f5f
+URxvt.color9      : #d787af
+
+!green.normal     : green.bright.g - 8
+!green.bright     : xoria256.PreProc.guifg
+URxvt.color2      : #00af87
+URxvt.color10     : #5faf5f
+
+!yellow.normal    : yellow.bright.rg - 8
+!yellow.bright    : xoria256.Special.guifg
+URxvt.color3      : #afd75f
+URxvt.color11     : #d7af5f
+
+!blue.normal      : blue.bright.b - 8
+!blue.bright      : xoria256.Statement.guifg
+URxvt.color4      : #5fafd7
+URxvt.color12     : #87afd7
+
+!magenta.normal   : magenta.bright.rb - 8
+!magenta.bright   : xoria256.Identifier.guifg
+URxvt.color5      : #8787af
+URxvt.color13     : #8787d7
+
+!cyan.normal      : cyan.bright.gb - 8
+!cyan.bright      : green.bright + blue.bright
+URxvt.color6      : #00afd7
+URxvt.color14     : #87afff
+
+!white.normal     : white.bright.rgb - 8
+!white.bright     : xoria256.Folded.guifg
+URxvt.color7      : #ffffff
+URxvt.color15     : #ffffff
+
+!foreground       : xoria256.Normal.guifg
+!background       : xoria256.Normal.guibg
+!cursor           : xoria256.Cursor.guibg
+URxvt.foreground  : #a8a8a8
+URxvt.background  : #262626
+URxvt.cursorColor : #d787af
+
+!bold             : xoria256.Type.guifg
+!underline        : xoria256.htmlValue.guifg
+URxvt.colorBD     : #5fafd7
+URxvt.colorUL     : #00afd7
