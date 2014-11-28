@@ -34,6 +34,7 @@ configuration.*
 - lucius
 - mirodark
 - neverland
+- nighted
 - pencil
 - scame (from vim-mimicpak)
 - seoul256
