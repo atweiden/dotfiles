@@ -538,7 +538,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {.Xdefaults,.Xresources} set ft=xdefault
 au BufEnter,BufRead,BufNewFile,BufWrite {*.xml} set ft=xml
 au BufEnter,BufRead,BufNewFile,BufWrite {.Xmodmap} set ft=xmodmap
 au BufEnter,BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
-au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh} set ft=zsh
+au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh,.zprofile,.zshrc} set ft=zsh
 
 " }}}
 
