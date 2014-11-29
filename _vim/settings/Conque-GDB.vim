@@ -1,9 +1,6 @@
 " default = g:ConqueGdb_Leader . 'p', which conflicts with paste
 "let g:ConqueGdb_Print = <leader> ...
 
-" default = g:ConqueGdb_Leader . 'f', which conflicts with filebeagle
-"let g:ConqueGdb_Finish = <leader> ...
-
 " default = g:ConqueGdb_Leader . 'd', which conflicts with YCM
 "let g:ConqueGdb_DeleteBreak = <leader> ...
 

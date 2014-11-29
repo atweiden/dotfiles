@@ -30,7 +30,6 @@ Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
 
 " filesystem
 Plug 'dockyard/vim-easydir'
-Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'bogado/file-line'
 Plug 'scrooloose/nerdtree', { 'on': [ 'Bookmark',
                                     \ 'BookmarkToRoot',
@@ -56,6 +55,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsOpen',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
 Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
+Plug 'Shougo/vimfiler.vim'
 
 " search and replace
 Plug 'tpope/vim-abolish'

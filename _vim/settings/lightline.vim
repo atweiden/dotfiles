@@ -21,23 +21,23 @@ let g:lightline = {
       \ }
 
 function! MyModified()
-  return &ft =~ 'help\|filebeagle\|undotree' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+  return &ft =~ 'help\|vimfiler\|undotree' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|filebeagle\|undotree' && &readonly ? '' : ''
+  return &ft !~? 'help\|vimfiler\|undotree' && &readonly ? '' : ''
 endfunction
 
 function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'filebeagle' ? filebeagle#FileBeagleStatusLineCurrentDirInfo() :
+        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
         \  &ft == 'unite' ? unite#get_status_string() :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
 function! MyFugitive()
-  if &ft !~? 'filebeagle\|undotree' && exists("*fugitive#head")
+  if &ft !~? 'vimfiler\|undotree' && exists("*fugitive#head")
     let _ = fugitive#head()
     return strlen(_) ? ' '._ : ''
   endif
@@ -62,7 +62,7 @@ endfunction
 
 " Source: https://gist.github.com/cormacrelf/d0bee254f5630b0e93c3
 function! MyWordCount()
-  if &ft !~? 'filebeagle\|undotree'
+  if &ft !~? 'vimfiler\|undotree'
     let currentmode = mode()
     if !exists("g:lastmode_wc")
       let g:lastmode_wc = currentmode
