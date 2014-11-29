@@ -52,6 +52,7 @@ set notimeout
 set timeout timeoutlen=3000
 set ttimeout ttimeoutlen=5
 set modelines=0
+set switchbuf=useopen,usetab,newtab
 set nrformats=
 set viminfo='100,<50,s10,h,!
 rviminfo
@@ -369,6 +370,16 @@ noremap <silent> g<C-W> :tabclose<CR>
 noremap <silent> <leader>to :tabonly<CR>
 noremap <leader>tm :tabmove<space>
 noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
+
+" http://vim.wikia.com/wiki/Using_tab_pages
+" press Shift-F12 to show all buffers in tabs, or to close all tabs
+" it alternately executes :tab ball and :tabo
+" see also: vim -p file1 file2
+let notabs = 0
+nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
+
+" allows typing :tabv myfile.txt to view the specified file in a new read-only tab
+cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " }}}
 " --- autocompletion {{{
