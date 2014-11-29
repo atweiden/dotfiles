@@ -25,6 +25,22 @@ let g:tagbar_type_asciidoc = {
     \ ]
 \ }
 
+let g:tagbar_type_elixir = {
+  \ 'ctagstype' : 'Elixir',
+  \ 'kinds' : [
+  \   'm:modules',
+  \   'c:callbacks',
+  \   'd:delegates',
+  \   'e:exceptions',
+  \   'i:impls',
+  \   'a:macros',
+  \   'f:functions',
+  \   'o:operators',
+  \   'p:protocols',
+  \   'r:records'
+  \ ]
+\ }
+
 "let g:tagbar_type_javascript = {
     "\ 'ctagsbin' : '/usr/lib/jsctags'
 "\ }
@@ -187,6 +203,51 @@ let g:tagbar_type_r = {
         \ 'f:Functions',
         \ 'g:GlobalVariables',
         \ 'v:FunctionVariables',
+    \ ]
+\ }
+
+let g:tagbar_type_rst = {
+    \ 'ctagstype': 'rst',
+    \ 'ctagsbin' : 'rst2ctags',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
+
+let g:tagbar_type_rust = {
+    \ 'ctagstype' : 'rust',
+    \ 'kinds' : [
+        \ 'T:types,type definitions',
+        \ 'f:functions,function definitions',
+        \ 'g:enum,enumeration names',
+        \ 's:structure names',
+        \ 'm:modules,module names',
+        \ 'c:consts,static constants',
+        \ 't:traits,traits',
+        \ 'i:impls,trait implementations',
+    \ ]
+\ }
+
+let g:tagbar_type_scala = {
+    \ 'ctagstype' : 'Scala',
+    \ 'kinds'     : [
+        \ 'p:packages:1',
+        \ 'V:values',
+        \ 'v:variables',
+        \ 'T:types',
+        \ 't:traits',
+        \ 'o:objects',
+        \ 'a:aclasses',
+        \ 'c:classes',
+        \ 'r:cclasses',
+        \ 'm:methods'
     \ ]
 \ }
 
