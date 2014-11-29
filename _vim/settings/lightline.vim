@@ -92,3 +92,6 @@ function! MyWordCount()
     endif
   endif
 endfunction
+
+let g:unite_force_overwrite_statusline = 0
+let g:vimfiler_force_overwrite_statusline = 0
