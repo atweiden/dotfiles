@@ -77,6 +77,8 @@ stty start undef
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 # dotfiles
 PATH=$HOME/.bin:$PATH
+# elixir
+PATH=$HOME/.exenv/shims:$PATH
 # go
 PATH=/usr/lib/go/site/bin:$PATH
 # haskell
