@@ -192,6 +192,7 @@ alias free='free -m'
 [[ -x /usr/bin/ptipython ]] && alias ptipython='ptipython --vi'
 [[ -x /usr/bin/ptpython2 ]] && alias ptpython2='ptpython2 --vi'
 [[ -x /usr/bin/ptpython ]] && alias ptpython='ptpython --vi'
+[[ -x /usr/bin/iex && /usr/bin/rlwrap ]] && alias iex='rlwrap -Aa iex'
 [[ -x /usr/bin/google-chrome ]] && alias google-chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 
 
