@@ -3,4 +3,4 @@ set viminfo=
 set nobackup
 set noswapfile
 set nowritebackup
-set cm=blowfish
+set cm=blowfish2
