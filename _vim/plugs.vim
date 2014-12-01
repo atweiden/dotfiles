@@ -351,7 +351,6 @@ Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'typedclojure/vim-typedclojure', { 'for': 'clojure' }
-Plug 'vim-scripts/JavaDecompiler.vim', { 'for': 'java' }
 Plug 'OrangeT/vim-csharp', { 'for': 'cs' }
 Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'scss' ] }
 Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
@@ -398,6 +397,12 @@ Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': [ 'cassius',
                                                  \ 'hamlet',
                                                  \ 'julius',
                                                  \ 'lucius' ] }
+Plug 'gabesoft/vim-java', { 'for': 'java' }
+Plug 'krisajenkins/vim-java-sql', { 'for': 'java' }
+Plug 'youjumpiwatch/vim-javacomplete', { 'for': 'java' }
+Plug 'vim-scripts/JavaDecompiler.vim', { 'for': 'java' }
+Plug 'neapel/vim-java-bytecode', { 'for': 'java-bytecode' }
+Plug 'JalaiAmitahl/maven-compiler.vim', { 'for': 'java, pom' }
 Plug 'othree/html5.vim', { 'for': [ 'html', 'javascript' ] }
 Plug 'mustache/vim-mustache-handlebars', { 'for': [ 'html.handlebars',
                                                   \ 'html.mustache' ] }

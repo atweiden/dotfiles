@@ -504,6 +504,9 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.haml,*.hamlbars,*.hamlc} set ft=haml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.hs} set ft=haskell
 au BufEnter,BufRead,BufNewFile,BufWrite {.inputrc} set ft=readline
 au BufEnter,BufRead,BufNewFile,BufWrite {*.jade} set ft=jade
+au BufEnter,BufRead,BufNewFile,BufWrite {*.java} set ft=java
+au BufEnter,BufRead,BufNewFile,BufWrite {*.javap} set ft=java-bytecode
+au BufEnter,BufRead,BufNewFile,BufWrite {pom.xml} set ft=pom
 au BufEnter,BufRead,BufNewFile,BufWrite {*.js,.jshintrc} set ft=javascript
 au BufEnter,BufRead,BufNewFile,BufWrite {*.json} set ft=json
 au BufEnter,BufRead,BufNewFile,BufWrite {*.json5} set ft=json5
@@ -555,29 +558,31 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh,.zprofile,.zshrc} set ft=zsh
 
 " omnicompletion {{{
 
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType clojure set omnifunc=clojurecomplete#Complete
+autocmd FileType c setlocal omnifunc=ccomplete#Complete
+autocmd FileType clojure setlocal omnifunc=clojurecomplete#Complete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType erlang setlocal omnifunc=erlang_complete#Complete
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-autocmd FileType html,xhtml set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,xhtml setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 autocmd FileType javascript setlocal omnifunc=js#CompleteJS
 autocmd FileType lisp,racket,scheme setlocal equalprg=scmindent
 autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType sql set omnifunc=sqlcomplete#Complete
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType sql setlocal omnifunc=sqlcomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " }}}
 
 " dictionaries {{{
 
-au FileType javascript set dictionary+=$HOME/.vim/dict/javascript.dict
-au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
+autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/javascript.dict
+autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/node.dict
 
 " }}}
 
@@ -593,8 +598,8 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 if version >= 700
-    set spl=en spell
-    set nospell
+  set spl=en spell
+  set nospell
 endif
 
 " }}}
