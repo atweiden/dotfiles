@@ -11,7 +11,7 @@ let g:dwm_master_pane_width = "66%"
 nnoremap <silent> <M-T> :call ToggleDWM()<CR>
 
 " new user-specified window
-nnoremap <silent> <M-t> :DWMNewSpecified<space>
+nnoremap <M-t> :DWMNewSpecified<space>
 
 " new window
 nmap <M-w> <Plug>DWMNew
