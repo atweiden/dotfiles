@@ -435,8 +435,11 @@ nnoremap <silent> <M-H> <C-W>H
 nnoremap <silent> <M-J> <C-W>J
 nnoremap <silent> <M-K> <C-W>K
 nnoremap <silent> <M-L> <C-W>L
-" simultaneously scroll split windows
-nnoremap <silent> <leader>sb :call SplitScroll()<CR>
+" scroll specified file simultaneously in vsplit window
+nnoremap <leader>sb :SplitScrollSpecified<space>
+" scroll all windows simultaneously
+nnoremap <silent> <S-F5> :windo set scrollbind!<CR>
+inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
 
 " }}}
 
