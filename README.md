@@ -31,7 +31,7 @@ configuration.*
 - gruvbox
 - [hybrid](https://i.imgur.com/SQL9D4c.png)
 - [iceberg](https://i.imgur.com/8Iv1jUw.png)
-- jellyx
+- [jellyx](https://i.imgur.com/BVOdw4B.png)
 - lucius
 - mirodark
 - neverland
