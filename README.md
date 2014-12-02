@@ -29,18 +29,20 @@ configuration.*
 
 - eddie
 - gruvbox
-- iceberg
+- [hybrid](https://i.imgur.com/SQL9D4c.png)
+- [iceberg](https://i.imgur.com/8Iv1jUw.png)
 - jellyx
 - lucius
 - mirodark
 - neverland
-- nighted
+- [nighted](https://i.imgur.com/zpPx9x9.png)
 - pencil
 - scame (from vim-mimicpak)
 - seoul256
 - sorcerer
+- [tomorrow](https://i.imgur.com/wvUeX29.png)
 - wallaby
-- zenburn
+- [zenburn](https://i.imgur.com/jkGfXeF.png)
 
 #### Gvim only
 
