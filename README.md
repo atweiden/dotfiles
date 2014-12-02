@@ -57,7 +57,7 @@ terminal Vim no matter what you do.*
 - nefertiti
 - oceanlight
 - psclone (from vim-mimicpak)
-- solarized
+- solarized ([dark](https://i.imgur.com/Gw7vqLt.png)/[light](https://i.imgur.com/YEHys2H.png))
 - vibrantink
 - vimhut (from vim-mimicpak)
 
