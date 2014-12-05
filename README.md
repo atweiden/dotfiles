@@ -32,6 +32,7 @@ configuration.*
 - [hybrid](https://i.imgur.com/SQL9D4c.png)
 - [iceberg](https://i.imgur.com/8Iv1jUw.png)
 - [jellyx](https://i.imgur.com/BVOdw4B.png)
+- kongo
 - lucius
 - mirodark
 - neverland
