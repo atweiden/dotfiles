@@ -100,6 +100,7 @@ Credits
 - https://github.com/junegunn/dotfiles
 - https://github.com/kernelsmith/env-customization
 - https://github.com/khughitt/dotfiles
+- https://github.com/kongo2002/dotfiles
 - https://github.com/lervag/dotvim
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/nvie/vimrc

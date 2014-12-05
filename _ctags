@@ -27,6 +27,12 @@
 --regex-Elixir=/^[ \t]*defprotocol[ \t]+([A-Z][a-zA-Z0-9_]*\.)*([A-Z][a-zA-Z0-9_?!]*)/\2/p,protocols,protocols (defprotocol...)/
 --regex-Elixir=/^[ \t]*defrecord(p?)[ \t]+([A-Z][a-zA-Z0-9_]*\.)*([A-Z][a-zA-Z0-9_?!]*)/\3/r,records,records (defrecord...)/
 
+--langdef=fsharp
+--langmap=fsharp:.fs
+--regex-fsharp=/^[ \t]*let[ \t]+(rec[ \t]+)?([a-zA-Z][a-zA-Z0-9_]+)/\2/b,binding/
+--regex-fsharp=/^[ \t]*let[ \t]+inline[ \t]+([a-zA-Z][a-zA-Z0-9_]+)/\1/i,inline/
+--regex-fsharp=/^[ \t]*type[ \t]+([a-z]+[ \t]+)?([a-zA-Z][a-zA-Z0-9_]+)/\2/t,type/
+
 --langdef=gorilla
 --langmap=gorilla:.gs
 --regex-gorilla=/^let[ \t]+([A-Za-z0-9_$\-]+)[ \t]*=[ \t]*require/\1/e,module/

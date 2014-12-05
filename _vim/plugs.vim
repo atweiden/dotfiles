@@ -383,6 +383,7 @@ Plug 'edkolev/erlang-motions.vim', { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-tags', { 'for': 'erlang' }
 Plug 'fishcakez/vim-dialyzer', { 'for': 'erlang' }
 Plug 'aliva/vim-fish', { 'for': 'fish' }
+Plug 'kongo2002/fsharp-vim', { 'for': 'fs' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-jp/vim-go-extra', { 'for': 'go' }
 Plug 'Alotor/groovim', { 'for': 'groovy' }
@@ -538,6 +539,7 @@ Plug 'twerth/ir_black'
 Plug 'nanotech/jellybeans.vim'
 Plug 'guns/jellyx.vim'
 Plug 'zeis/vim-kolor'
+Plug 'atweiden/vim-colors-kongo'
 Plug 'sk1418/last256'
 Plug 'vim-scripts/lettuce.vim'
 Plug 'vim-scripts/Liquid-Carbon'

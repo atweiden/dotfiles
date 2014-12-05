@@ -15,10 +15,19 @@ let s:ismac = has('mac')
 " General
 
 set nocompatible
+
+" set mapleader from backslash to comma
 let mapleader=","
-set shortmess=aIoO
-set mouse=a
-set mousemodel=popup_setpos
+
+" hide intro screen, use all abbreviations
+set shortmess=aI
+
+" turn on mouse in all modes
+if has('mouse')
+  set mouse=a
+  set mousemodel=popup_setpos
+endif
+
 set encoding=utf-8
 set nofsync
 set noshowmode
@@ -44,17 +53,41 @@ endif
 " Basics
 
 set title
+
+" store backups in the same directory
 set backupdir=~/.vim/.backups
+
+" store swap files in the same directory
 set directory=~/.vim/.swaps
+
+" store undo files in the same directory
 set undodir=~/.vim/.undo
+
+" don't clear screen when vim closes
 set t_ti= t_te=
-set notimeout
-set timeout timeoutlen=3000
-set ttimeout ttimeoutlen=5
+
+" timeout settings
+set timeout
+set nottimeout
+set timeoutlen=1000
+set ttimeoutlen=50
+
+" no modelines
 set modelines=0
+
 set switchbuf=useopen,usetab,newtab
-set nrformats=
+
+" do not consider octal numbers for C-a/C-x
+set nrformats-=octal
+
+" configure viminfo
 set viminfo='100,<50,s10,h,!
+"           |    |   |   | |
+"           |    |   |   | +--- Save and restore all-uppercase global variables
+"           |    |   |   +----- Don't restore hlsearch on startup
+"           |    |   +--------- Exclude registers greater than N Kb
+"           |    +------------- Keep N lines for each register
+"           +------------------ Keep marks for N files
 rviminfo
 
 if !isdirectory(expand(&backupdir))
@@ -106,10 +139,6 @@ if has("gui_running")
     cnoremap <S-Insert> <MiddleMouse>
 endif
 
-if has('autocmd')
-  autocmd GUIEnter * set vb t_vb=
-endif
-
 " }}}
 
 " cursor {{{
@@ -134,8 +163,16 @@ set listchars+=trail:·
 
 " screen {{{
 
-set synmaxcol=800
+" turn off syntax coloring of long lines
+set synmaxcol=1024
+
+" print current syntax item
+nnoremap <silent> <leader>si :echo SyntaxItem()<CR>
+
+" refresh screen
 nnoremap <silent> <leader>u :syntax sync fromstart<CR>:redraw!<CR>
+
+" readjust window sizing
 au VimResized * :wincmd =
 
 " fix background color bleed in tmux / screen
@@ -158,33 +195,71 @@ set virtualedit=block
 set noerrorbells
 set vb t_vb=
 set confirm
+
+" show command
 set showcmd
+
 set report=0
 set cursorline
 set cuc cul
 set undofile
 set undolevels=500
 set history=500
+
+" always show statusline
 set laststatus=2
+
 set noshowmatch
+
+" turn on wildmenu completion
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=*.o,*~,*.pyc,.git/*,.hg/*,.svn/*,*.DS_Store
+
+" disable some filetypes for completion
+" blocking possibly large directories that usually are
+" not of interest will speed up plugins like Command-T
+set wildignore+=*.o,*.obj,*.dll,*.pyc
+set wildignore=*~,*.DS_Store
+set wildignore=.git/*,.hg/*,.svn/*
+set wildignore+=*.gif,*.jpg,*.jpeg,*.png
+set wildignore+=*.class,*.jar
+set wildignore+=*.beam
+set wildignore+=*.hi,*.p_hi,*.p_o
+
+" give following files lower priority
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,CVS/,tags
+
+" switch buffers without saving
 set hidden
+
+" vertical diffsplit by default
+set diffopt+=vertical
+
 set splitright
 set splitbelow
 set winminheight=0
 set winminwidth=0
 set updatecount=20
+
+" do not redraw screen when executing macros
 set lazyredraw
+
+" indicates fast terminal connection
 set ttyfast
 set ttymouse=xterm2
 set backspace=2
+
+" number of screen lines around cursor
 set scrolloff=8
 set sidescrolloff=8
 set sidescroll=8
+
+" break lines at sensible place
 set linebreak
+
+" hook arrow for wrapped characters
+set showbreak=↪
+
 set autoindent
 set smartindent
 set tabstop=2
@@ -195,7 +270,10 @@ set shiftround
 set matchpairs+=<:>
 set foldmethod=indent
 set foldlevel=99
+
+" visually break lines
 set wrap
+
 set number
 "set relativenumber
 set numberwidth=1
@@ -223,6 +301,7 @@ set formatoptions+=1
 " -----------------------------------------------------------------------------
 " Searching
 
+" use ag/pt/ack for grepping if available
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 elseif executable('pt')
@@ -244,11 +323,12 @@ vnoremap <C-Q> <ESC>:qall<CR>
 " Editing
 " --- selecting {{{
 
-" escape
+" bind escape key
 call arpeggio#load()
 Arpeggio inoremap jk <ESC>
 Arpeggio cnoremap jk <C-C>
 Arpeggio xnoremap jk <ESC>
+
 " preserve selection when indenting
 vnoremap > >gv
 vnoremap < <gv
@@ -258,6 +338,9 @@ nnoremap < <<
 " }}}
 " --- search and replace {{{
 
+" use vimgrep without autocommands being invoked
+nmap <leader>nv :noautocmd vim /
+
 " highlight all occurrences of current word
 nnoremap <silent> <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
@@ -265,7 +348,7 @@ nnoremap <silent> <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR
 nnoremap <leader><leader>r :'{,'}s/\<<C-R>=expand('<cword>')<CR>\>/
 nnoremap <leader><leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
 
-" remove highlights
+" remove search highlights
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
 
 " }}}
@@ -354,6 +437,9 @@ vnoremap H ^
 nnoremap L g_
 vnoremap L g_
 
+" move to middle of current line
+nmap <expr> gM (strlen(getline("."))/2)."<Bar>"
+
 " scroll four lines at a time
 nnoremap <C-E> 4<C-E>
 nnoremap <C-Y> 4<C-Y>
@@ -410,6 +496,15 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 " }}}
 
 " Navigation
+" ---buffers {{{
+
+" buffer navigation
+nmap <silent> gd :bdelete<CR>
+nmap <silent> gb :bnext<CR>
+nmap <silent> gB :bprev<CR>
+
+" }}}
+
 " ---windows {{{
 
 " map alt-[h,j,k,l,=,_,|] to resizing a window split
@@ -478,6 +573,7 @@ augroup END
 
 " languages {{{
 
+au BufEnter,BufRead,BufNewFile,BufWrite {*.bib} set ft=bib
 au BufEnter,BufRead,BufNewFile,BufWrite {*.cfg,.ackrc,.ctags,.dunstrc,.hgrc,.npmrc} set ft=cfg
 au BufEnter,BufRead,BufNewFile,BufWrite {*.clj,*.cljs,*.edn} set ft=clojure
 au BufEnter,BufRead,BufNewFile,BufWrite {*.coffee} set ft=coffee
@@ -497,6 +593,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.ex,*.exs} set ft=elixir
 au BufEnter,BufRead,BufNewFile,BufWrite {*.erl,*.hrl,rebar.config} set ft=erlang
 au BufEnter,BufRead,BufNewFile,BufWrite {*.egs} set ft=egs
 au BufEnter,BufRead,BufNewFile,BufWrite {*.erb} set ft=eruby
+au BufEnter,BufRead,BufNewFile,BufWrite {*.fs,*.fsi,*.fsx} set ft=fs
 au BufEnter,BufRead,BufNewFile,BufWrite {.gitconfig} set ft=gitconfig
 au BufEnter,BufRead,BufNewFile,BufWrite {*.go} set ft=go
 au BufEnter,BufRead,BufNewFile,BufWrite {*.groovy,*.gradle} set ft=groovy

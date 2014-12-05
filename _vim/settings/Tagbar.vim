@@ -257,3 +257,14 @@ let g:tagbar_type_snippets = {
         \ 's:snippets',
     \ ]
 \ }
+
+let g:tagbar_type_tex = {
+    \ 'ctagstype' : 'tex',
+    \ 'kinds' : [
+        \ 'c:chapter',
+        \ 's:section',
+        \ 'l:label',
+        \ 'r:ref'
+    \ ],
+    \ 'sort' : 0
+\ }
