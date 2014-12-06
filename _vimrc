@@ -19,8 +19,8 @@ set nocompatible
 " set mapleader from backslash to comma
 let mapleader=","
 
-" hide intro screen, use all abbreviations
-set shortmess=aI
+" hide intro screen, use all abbreviations, omit redundant messages
+set shortmess=aIoO
 
 " turn on mouse in all modes
 if has('mouse')
