@@ -329,6 +329,9 @@ Arpeggio inoremap jk <ESC>
 Arpeggio cnoremap jk <C-C>
 Arpeggio xnoremap jk <ESC>
 
+" reselect pasted content
+noremap gV `[v`]
+
 " preserve selection when indenting
 vnoremap > >gv
 vnoremap < <gv
@@ -427,6 +430,15 @@ inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
 nnoremap <silent><expr> g<M-t> ':set expandtab<CR>:retab!<CR>:echo "Tabs have been converted to spaces"<CR>'
 " convert all spaces into tabs and continue session with tabs
 nnoremap <silent><expr> g<M-T> ':set noexpandtab<CR>:%retab!<CR>:echo "Spaces have been converted to tabs"<CR>'
+
+" }}}
+" --- split/join {{{
+
+" keep the cursor in place while joining lines
+nnoremap J mzJ`z
+
+" split line
+nnoremap S i<CR><ESC>^mwgk:silent! s/\v +$//<CR>:noh<CR>`w
 
 " }}}
 " --- movement {{{

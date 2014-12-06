@@ -52,8 +52,12 @@ export EDITOR=vim
 export FCEDIT=vim
 export VISUAL=vim
 
+# make less more friendly for non-text input files, see lesspipe(1)
+[[ -x /usr/bin/lesspipe ]] && eval "$(lesspipe)"
+
 # man pages
 export MANPAGER="less -X"
+[[ -x /usr/bin/most ]] && export PAGER=most
 
 # mode
 set -o vi
@@ -187,12 +191,15 @@ alias :q='exit'
 alias h?='history | grep "$@" -i --color=auto'
 alias p?='ps auxf | grep -v grep | grep "$@" -i --color=auto'
 alias free='free -m'
+[[ -x /usr/bin/most ]] && alias more='most'
+[[ -x /usr/bin/most ]] && alias less='most'
 [[ -x /usr/bin/mosh ]] && alias mosh='mosh -a'
 [[ -x /usr/bin/ptipython2 ]] && alias ptipython2='ptipython2 --vi'
 [[ -x /usr/bin/ptipython ]] && alias ptipython='ptipython --vi'
 [[ -x /usr/bin/ptpython2 ]] && alias ptpython2='ptpython2 --vi'
 [[ -x /usr/bin/ptpython ]] && alias ptpython='ptpython --vi'
-[[ -x /usr/bin/iex && /usr/bin/rlwrap ]] && alias iex='rlwrap -Aa iex'
+[[ -x /usr/bin/iex && -x /usr/bin/rlwrap ]] && alias iex='rlwrap -Aa iex'
+[[ -x /usr/bin/erl && -x /usr/bin/rlwrap ]] && alias erl='rlwrap -Aa erl'
 [[ -x /usr/bin/google-chrome ]] && alias google-chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 
 
