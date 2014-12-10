@@ -60,12 +60,12 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'tpope/vim-abolish'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf'
-Plug 'junegunn/vim-oblique'
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
 Plug 'henrik/vim-indexed-search'
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
+Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 
 " movement
@@ -610,7 +610,6 @@ Plug 'drmikehenry/vim-fixkey'
 Plug 'vim-scripts/ingo-library'
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
-Plug 'junegunn/vim-pseudocl'
 Plug 'tpope/vim-scriptease'
 call plug#end()
 endif
