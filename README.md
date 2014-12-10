@@ -35,6 +35,7 @@ configuration.*
 - kongo
 - lucius
 - mirodark
+- [molokai](https://i.imgur.com/sjDVniP.png)
 - neverland
 - [nighted](https://i.imgur.com/zpPx9x9.png)
 - pencil
