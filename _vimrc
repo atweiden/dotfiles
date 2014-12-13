@@ -106,13 +106,19 @@ endif
 
 " vim {{{
 
+" dark background
 set background=dark
+
+" autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
+
 if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
-elseif $TERM == "linux" || $TERM = "vt100" || $TERM = "vt220"
+elseif $TERM == "linux"
   colorscheme miro8
+  highlight Pmenu ctermfg=7 ctermbg=0
 endif
 
 " }}}
@@ -478,12 +484,6 @@ nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else
 
 " allows typing :tabv myfile.txt to view the specified file in a new read-only tab
 cabbrev tabv tab sview +setlocal\ nomodifiable
-
-" }}}
-" --- autocompletion {{{
-
-" customize autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
 
 " }}}
 " --- merging {{{
