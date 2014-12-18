@@ -172,6 +172,11 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="W-C-Q">
+      <action name="Exit">
+        <prompt>no</prompt>
+      </action>
+    </keybind>
     <keybind key="XF86PowerOff">
       <action name="Execute">
         <command>oblogout</command>
