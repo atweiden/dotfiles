@@ -90,6 +90,9 @@ Plug 'tpope/vim-surround'
 " comments
 Plug 'tpope/vim-commentary'
 
+" modelines
+Plug 'ciaranm/securemodelines'
+
 " sessions
 Plug 'tpope/vim-obsession', { 'on': 'Obsession' }
 Plug 'tpope/vim-projectionist', { 'on': [ 'A',
