@@ -12,14 +12,14 @@ function! s:Pulse() " {{{
     let color = 233
 
     for i in range(start, end, width)
-        execute "hi CursorLine ctermbg=" . (color + i)
-        redraw
-        sleep 6m
+      execute "hi CursorLine ctermbg=" . (color + i)
+      redraw
+      sleep 6m
     endfor
     for i in range(end, start, -1 * width)
-        execute "hi CursorLine ctermbg=" . (color + i)
-        redraw
-        sleep 6m
+      execute "hi CursorLine ctermbg=" . (color + i)
+      redraw
+      sleep 6m
     endfor
 
     execute 'hi ' . old_hi

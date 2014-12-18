@@ -3,8 +3,8 @@
 function! SyntaxItem()
     let synGrp=synIDattr(synID(line("."), col("."), 1), "name")
     if synGrp != ""
-        return "[" . synGrp . "]"
+      return "[" . synGrp . "]"
     else
-        return ""
+      return ""
     endif
 endfunction
