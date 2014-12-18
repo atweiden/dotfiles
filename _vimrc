@@ -14,6 +14,7 @@ let s:ismac = has('mac')
 " -----------------------------------------------------------------------------
 " General
 
+" don't be compatible with vi
 set nocompatible
 
 " set mapleader from backslash to comma
@@ -28,8 +29,13 @@ if has('mouse')
   set mousemodel=popup_setpos
 endif
 
+" use utf-8 character encoding
 set encoding=utf-8
+
+" flush file to disk after writing for protection against data loss
 set nofsync
+
+" don't show active mode on last line, lightline has this covered
 set noshowmode
 
 
@@ -52,7 +58,15 @@ endif
 " -----------------------------------------------------------------------------
 " Basics
 
+" descriptive window title
 set title
+if has('title') && (has('gui_running') || &title)
+  set titlestring=
+  set titlestring+=%f\                                              " File name
+  set titlestring+=%h%m%r%w                                         " Flags
+  set titlestring+=\ \|\ %{v:progname}                              " Program name
+  set titlestring+=\ \|\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')} " Working directory
+endif
 
 " store backups in the same directory
 set backupdir=~/.vim/.backups
@@ -72,10 +86,18 @@ set nottimeout
 set timeoutlen=1000
 set ttimeoutlen=50
 
-" no modelines
-set modelines=0
+" disable modelines, use securemodelines.vim instead
+set nomodeline
+let g:secure_modelines_verbose = 0
+let g:secure_modelines_modelines = 15
+au VimEnter * call filter(exists("g:secure_modelines_allowed_items") ? g:secure_modelines_allowed_items : [],
+            \ 'v:val != "fdm" && v:val != "foldmethod"')
 
 set switchbuf=useopen,usetab,newtab
+"             |       |      |
+"             |       |      +-------- Prefer opening quickfix windows in new tabs
+"             |       +--------------- Consider windows in other tab pages wrt useopen
+"             +----------------------- Jump to the first open window that contains the specified buffer if there is one
 
 " do not consider octal numbers for C-a/C-x
 set nrformats-=octal
@@ -90,6 +112,7 @@ set viminfo='100,<50,s10,h,!
 "           +------------------ Keep marks for N files
 rviminfo
 
+" make directories if necessary
 if !isdirectory(expand(&backupdir))
   call mkdir(expand(&backupdir), "p")
 endif
@@ -113,10 +136,12 @@ set background=dark
 highlight Pmenu ctermbg=238 gui=bold
 
 if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  " jellyx
   set t_Co=256
   let g:jellyx_show_whitespace = 1
   colorscheme jellyx
 elseif $TERM == "linux"
+  " miro8
   colorscheme miro8
   highlight Pmenu ctermfg=7 ctermbg=0
 endif
@@ -126,23 +151,32 @@ endif
 " gvim {{{
 
 if has("gui_running")
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-    set guioptions-=L
-    set guioptions+=c
-    set guifont=Monaco\ for\ Powerline\ 16
-    set guiheadroom=0
-    set t_Co=256
-    let g:jellyx_show_whitespace = 1
-    colorscheme jellyx
-
-    " resize font
-    noremap <silent> <M--> :Smaller<CR>
-    noremap <silent> <M-+> :Bigger<CR>
-    " paste selection with <S-Ins>
-    inoremap <S-Insert> <MiddleMouse>
-    cnoremap <S-Insert> <MiddleMouse>
+  " no menu bar
+  set guioptions-=m
+  " no toolbar
+  set guioptions-=T
+  " no right-hand scrollbar
+  set guioptions-=r
+  set guioptions-=R
+  " no left-hand scrollbar
+  set guioptions-=l
+  set guioptions-=L
+  " use console dialogs instead of popups
+  set guioptions+=c
+  " use lightline-compatible monaco
+  set guifont=Monaco\ for\ Powerline\ 16
+  " allow gvim window to occupy whole screen
+  set guiheadroom=0
+  " jellyx
+  set t_Co=256
+  let g:jellyx_show_whitespace = 1
+  colorscheme jellyx
+  " resize font
+  noremap <silent> <M--> :Smaller<CR>
+  noremap <silent> <M-+> :Bigger<CR>
+  " paste selection with <S-Ins>
+  inoremap <S-Insert> <MiddleMouse>
+  cnoremap <S-Insert> <MiddleMouse>
 endif
 
 " }}}
@@ -192,29 +226,50 @@ set t_ut=""
 " -----------------------------------------------------------------------------
 " Editing
 
+" never write or update the contents of any buffer unless we say so
 set noautowrite
 set noautowriteall
 set noautoread
-set ffs=unix,dos,mac
+
+" read unix, dos and mac file formats
+set fileformats=unix,dos,mac
+
+" always keep cursor in the same column if possible
 set nostartofline
+
+" enable virtual edit in visual block mode
 set virtualedit=block
+
+" no annoying error noises
 set noerrorbells
 set vb t_vb=
+
+" use a dialog when an operation has to be confirmed
 set confirm
 
-" show command
+" show us the command we're typing
 set showcmd
 
+" always report the number of lines changed
 set report=0
-set cursorline
-set cuc cul
+
+" highlight the screen line and column in the current window only
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+
+" save undo history to an undo file
 set undofile
+
+" allow N number of changes to be undone
 set undolevels=500
+
+" store N previous vim commands and search patterns
 set history=500
 
 " always show statusline
 set laststatus=2
 
+" don't highlight matching parens
 set noshowmatch
 
 " turn on wildmenu completion
@@ -241,10 +296,15 @@ set hidden
 " vertical diffsplit by default
 set diffopt+=vertical
 
+" split windows below and to the right of the current
 set splitright
 set splitbelow
+
+" allow no height, no width windows
 set winminheight=0
 set winminwidth=0
+
+" write swap file every N characters
 set updatecount=20
 
 " do not redraw screen when executing macros
@@ -253,6 +313,8 @@ set lazyredraw
 " indicates fast terminal connection
 set ttyfast
 set ttymouse=xterm2
+
+" generous backspacing
 set backspace=2
 
 " number of screen lines around cursor
@@ -263,45 +325,110 @@ set sidescroll=8
 " break lines at sensible place
 set linebreak
 
+" wrap on these chars
+set whichwrap+=<,>,[,]
+
 " hook arrow for wrapped characters
 set showbreak=↪
 
+" copy indent from current line when starting a new line
 set autoindent
+
+" do smart autoindenting when starting a new line
 set smartindent
+
+" let <Tab> count for N spaces in the file
 set tabstop=2
+
+" use N spaces for each step of (auto)indent
 set shiftwidth=2
+
+" let <Tab> count for N spaces while making edits
 set softtabstop=2
+
+" use the appropriate number of spaces to insert a <Tab>
 set expandtab
+
+" round indent to multiple of shiftwidth
 set shiftround
+
+" jump between the following characters that form pairs
 set matchpairs+=<:>
+
+" lines with equal indent form a fold
 set foldmethod=indent
+
+" higher numbers close fewer folds, 0 closes all folds.
 set foldlevel=99
 
 " visually break lines
 set wrap
 
+" show the line number in front of each line
 set number
+
+" show the line number relative to the line
 "set relativenumber
+
+" minimum number of columns to use for the line number
 set numberwidth=1
+
+" maximum width of text that is being inserted, 0 to disable
 set textwidth=70
+
+" insert N pixel lines between characters
 set linespace=1
+
+" <Tab> in front of a line inserts blanks according to shiftwidth
 set smarttab
+
+" wrap searches around the end of the file
 set nowrapscan
+
+" search options: incremental search, highlight search
 set incsearch
 set hlsearch
+
+" ignore case in search patterns
 set ignorecase
+
+" override the ignorecase option if the search pattern contains upper case characters
 set smartcase
+
+" adjust the case of the match depending on the typed text
 set infercase
-set sessionoptions+=tabpages,globals
+
+" save and restore session data
+set sessionoptions+=blank,buffers,curdir,folds
+"                   |     |       |      |
+"                   |     |       |      +------- Manually created folds, opened/closed folds, local fold options
+"                   |     |       +-------------- The current directory
+"                   |     +---------------------- Hidden and unloaded buffers
+"                   +---------------------------- Empty windows
+set sessionoptions+=globals,help,localoptions,options
+"                   |       |    |            |
+"                   |       |    |            +--------- All options and mappings, global values for local options
+"                   |       |    +---------------------- Options and mappings local to a window or buffer
+"                   |       +--------------------------- The help window
+"                   +----------------------------------- Global variables that start with an uppercase letter and contain at least one lowercase letter
+set sessionoptions+=resize,tabpages,winpos,winsize
+"                   |      |        |      |
+"                   |      |        |      +--------- Window sizes
+"                   |      |        +---------------- Position of the whole Vim window
+"                   |      +------------------------- All tab pages
+"                   +-------------------------------- Size of the Vim window
+
+" automatic formatting options
 set formatoptions=
-set formatoptions+=c
-set formatoptions+=r
-set formatoptions+=o
-set formatoptions+=q
-set formatoptions+=n
-set formatoptions+=2
-set formatoptions+=l
-set formatoptions+=1
+set formatoptions+=c " Auto-wrap comments using textwidth
+set formatoptions+=r " Automatically insert the current comment leader after <Enter> in insert mode
+set formatoptions+=o " Automatically insert the current comment leader after 'o' or 'O' in normal mode
+set formatoptions+=q " Allow formatting of comments with gq
+set formatoptions+=n " Recognize numbered lists when formatting text
+set formatoptions+=2 " Use the indent of the secodn line of a paragraph for the rest of the paragraph instead of the first
+set formatoptions+=l " Don't break long lines in insert mode
+set formatoptions+=1 " Don't break a line after a one-letter word
+set formatoptions+=j " Remove comment leader when joining two comments
 
 
 " -----------------------------------------------------------------------------
@@ -360,6 +487,11 @@ nnoremap <leader><leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
 " remove search highlights
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
 
+" turn off any existing search
+if has("autocmd")
+  au VimEnter * nohls
+endif
+
 " }}}
 " --- pasting {{{
 
@@ -402,6 +534,8 @@ nnoremap <silent> <leader>. :cd%:h<CR>
 " fix windoze ^M
 " alternative to `dos2unix file`
 noremap <leader>rmm :%s///g<CR>
+" don't make smartindent force a # over to the first column
+inoremap # X<BS>#
 
 " }}}
 " --- redoing {{{
@@ -457,6 +591,16 @@ vnoremap L g_
 
 " move to middle of current line
 nmap <expr> gM (strlen(getline("."))/2)."<Bar>"
+
+" annoying default mappings
+inoremap <S-Up> <C-O>gk
+inoremap <S-Down> <C-O>gj
+noremap <S-Up> gk
+noremap <S-Down> gj
+
+" <PageUp> and <PageDown> do silly things in normal mode with folds
+noremap <PageUp> <C-U>
+noremap <PageDown> <C-D>
 
 " scroll four lines at a time
 nnoremap <C-E> 4<C-E>
@@ -693,6 +837,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " dictionaries {{{
 
+"set dictionary=/usr/share/dict/words
 autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/javascript.dict
 autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/node.dict
 
@@ -712,6 +857,15 @@ highlight SpellLocal term=underline cterm=underline
 if version >= 700
   set spl=en spell
   set nospell
+endif
+
+" }}}
+
+" digraphs {{{
+
+if has("digraphs")
+  " ellipsis (…)
+  digraph ., 8230
 endif
 
 " }}}
