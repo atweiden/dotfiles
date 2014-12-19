@@ -576,8 +576,6 @@ Plug 'jnurmine/Zenburn'
 Plug 'vim-scripts/zenesque.vim'
 
 " color utilities
-Plug 'vim-scripts/CSApprox'
-Plug 'vim-scripts/guicolorscheme.vim', { 'on': 'GuiColorScheme' }
 Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT', 'HLTm' ] }
 Plug 'mhinz/vim-hugefile'
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
