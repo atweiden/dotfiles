@@ -576,8 +576,10 @@ Plug 'jnurmine/Zenburn'
 Plug 'vim-scripts/zenesque.vim'
 
 " color utilities
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT', 'HLTm' ] }
 Plug 'mhinz/vim-hugefile'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
 Plug 'edkolev/promptline.vim', { 'on': 'PromptlineSnapshot' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'Tmuxline' }

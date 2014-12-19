@@ -133,14 +133,9 @@ endif
 " dark background
 set background=dark
 
-" autocomplete menu color
-highlight clear Pmenu
-highlight Pmenu ctermbg=238 gui=bold
-
 if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   " jellyx
   set t_Co=256
-  let g:jellyx_show_whitespace = 1
   colorscheme jellyx
 elseif $TERM == "linux"
   " miro8
@@ -172,7 +167,6 @@ if has("gui_running")
   set guiheadroom=0
   " jellyx
   set t_Co=256
-  let g:jellyx_show_whitespace = 1
   colorscheme jellyx
   " resize font
   noremap <silent> <M--> :Smaller<CR>
