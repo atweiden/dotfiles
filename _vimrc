@@ -93,6 +93,7 @@ let g:secure_modelines_modelines = 15
 au VimEnter * call filter(exists("g:secure_modelines_allowed_items") ? g:secure_modelines_allowed_items : [],
             \ 'v:val != "fdm" && v:val != "foldmethod"')
 
+" switching buffers
 set switchbuf=useopen,usetab,newtab
 "             |       |      |
 "             |       |      +-------- Prefer opening quickfix windows in new tabs
@@ -187,6 +188,13 @@ highlight Cursor guifg=black guibg=gray
 highlight iCursor guifg=white guibg=white
 set guicursor+=n-v-c:blinkon0-block-Cursor
 set guicursor+=i:blinkon0-ver25-Cursor/lCursor
+
+" }}}
+
+" error messages {{{
+
+highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight Error ctermfg=gray ctermbg=black guifg=gray guibg=black
 
 " }}}
 
