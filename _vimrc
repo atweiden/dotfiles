@@ -134,6 +134,7 @@ endif
 set background=dark
 
 " autocomplete menu color
+highlight clear Pmenu
 highlight Pmenu ctermbg=238 gui=bold
 
 if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
@@ -144,6 +145,7 @@ if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "sc
 elseif $TERM == "linux"
   " miro8
   colorscheme miro8
+  highlight clear Pmenu
   highlight Pmenu ctermfg=7 ctermbg=0
 endif
 
