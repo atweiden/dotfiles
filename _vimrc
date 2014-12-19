@@ -184,7 +184,9 @@ endif
 
 " cursor {{{
 
+highlight clear Cursor
 highlight Cursor guifg=black guibg=gray
+highlight clear iCursor
 highlight iCursor guifg=white guibg=white
 set guicursor+=n-v-c:blinkon0-block-Cursor
 set guicursor+=i:blinkon0-ver25-Cursor/lCursor
@@ -193,7 +195,9 @@ set guicursor+=i:blinkon0-ver25-Cursor/lCursor
 
 " error messages {{{
 
+highlight clear ErrorMsg
 highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight clear Error
 highlight Error ctermfg=gray ctermbg=black guifg=gray guibg=black
 
 " }}}
@@ -390,7 +394,7 @@ set linespace=1
 " <Tab> in front of a line inserts blanks according to shiftwidth
 set smarttab
 
-" wrap searches around the end of the file
+" don't wrap searches around the end of the file
 set nowrapscan
 
 " search options: incremental search, highlight search
@@ -505,10 +509,13 @@ endif
 
 " yank to end of line
 noremap Y y$
+
 " copy to clipboard
 vnoremap <leader>y "+yy
+
 " paste from clipboard
 noremap <leader>p "+p
+
 " toggle paste mode
 set pastetoggle=<F2>
 
@@ -523,10 +530,13 @@ vnoremap <space> :!fmt<CR>
 
 " find lines longer than 78 characters
 nnoremap <leader><leader>l /^.\{-}\zs.\%>79v<CR>
+
 " find two spaces after a period
 nnoremap <leader><leader>. /\.\s\s\+\w/s+1<CR>
+
 " find things like 'why ?' and 'now !'
 nnoremap <leader><leader>! /\w\s\+[\?\!\;\.\,]/s+1<CR>
+
 " find multiple newlines together
 nnoremap <leader><leader>cr /\n\{3,\}/s+1<CR>
 
@@ -535,13 +545,17 @@ nnoremap <leader><leader>cr /\n\{3,\}/s+1<CR>
 
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
+
 " expand %% to the path of the current buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " change to directory of file
 nnoremap <silent> <leader>. :cd%:h<CR>
+
 " fix windoze ^M
 " alternative to `dos2unix file`
 noremap <leader>rmm :%s///g<CR>
+
 " don't make smartindent force a # over to the first column
 inoremap # X<BS>#
 
@@ -550,6 +564,7 @@ inoremap # X<BS>#
 
 " maintain location in document while redoing
 nnoremap . .`[
+
 " qq to record, Q to replay
 nnoremap Q @q
 
@@ -561,6 +576,7 @@ nnoremap Q @q
 " toggle line wrap
 noremap <silent> <F3> :set nowrap!<CR>
 inoremap <silent> <F3> <C-O>:set nowrap!<CR>
+
 " toggle line numbers
 "noremap <silent> <F4> :set nonu!<CR>
 "inoremap <silent> <F4> <C-O>:set nonu!<CR>
@@ -568,14 +584,18 @@ inoremap <silent> <F3> <C-O>:set nowrap!<CR>
 "inoremap <silent> <F4> <C-O>:NumbersOnOff<CR>
 nnoremap <silent> <F4> :NumbersToggle<CR>
 inoremap <silent> <F4> <C-O>:NumbersToggle<CR>
+
 " toggle line and column highlighting
 noremap <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
 inoremap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
+
 " toggle spell checking
 noremap <silent> <F7> :set spell! spelllang=en_us<CR>
 inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
+
 " convert all tabs into spaces and continue session with spaces
 nnoremap <silent><expr> g<M-t> ':set expandtab<CR>:retab!<CR>:echo "Tabs have been converted to spaces"<CR>'
+
 " convert all spaces into tabs and continue session with tabs
 nnoremap <silent><expr> g<M-T> ':set noexpandtab<CR>:%retab!<CR>:echo "Spaces have been converted to tabs"<CR>'
 
@@ -642,6 +662,7 @@ cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " highlight conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
 " jump to next conflict marker
 nnoremap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 
@@ -694,8 +715,10 @@ nnoremap <silent> <M-H> <C-W>H
 nnoremap <silent> <M-J> <C-W>J
 nnoremap <silent> <M-K> <C-W>K
 nnoremap <silent> <M-L> <C-W>L
+
 " scroll specified file simultaneously in vsplit window
 nnoremap <leader>sb :SplitScrollSpecified<space>
+
 " scroll all windows simultaneously
 nnoremap <silent> <S-F5> :windo set scrollbind!<CR>
 inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
