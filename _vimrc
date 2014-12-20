@@ -211,6 +211,15 @@ highlight Error ctermfg=gray ctermbg=black guifg=gray guibg=black
 
 " }}}
 
+" question and more messages {{{
+
+highlight clear Question
+highlight Question term=standout ctermfg=150 gui=bold guifg=#afdf87
+highlight clear MoreMsg
+highlight MoreMsg term=bold ctermfg=150 gui=bold guifg=#afdf87
+
+" }}}
+
 " listchars {{{
 
 set nolist
