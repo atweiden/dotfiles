@@ -168,18 +168,6 @@ if has("gui_running")
   " jellyx
   set t_Co=256
   colorscheme jellyx
-  " normal mode cursor colors
-  highlight clear Cursor
-  highlight Cursor guifg=black guibg=gray
-  " insert and command line mode cursor colors
-  highlight clear iCursor
-  highlight iCursor guifg=white guibg=#FFFFAF
-  " visual mode cursor colors
-  highlight clear vCursor
-  highlight vCursor guifg=white guibg=#5F5F87
-  " replace mode cursor colors
-  highlight clear rCursor
-  highlight rCursor guifg=black guibg=#CF6A4C
   " set normal mode cursor to unblinking Cursor highlighted block
   set guicursor+=n:blinkon0-block-Cursor
   " set insert and command line mode cursor to 25% width unblinking iCursor highlighted block
@@ -211,6 +199,16 @@ highlight Search ctermfg=0 ctermbg=180 guifg=black guibg=#D7AF87
 " matching parens
 highlight clear MatchParen
 highlight MatchParen term=bold cterm=bold ctermfg=252 ctermbg=89 gui=bold guifg=#D0D0D0 guibg=#87005F
+
+" cursor
+highlight clear Cursor
+highlight Cursor guifg=black guibg=gray
+highlight clear iCursor
+highlight iCursor guifg=white guibg=#FFFFAF
+highlight clear vCursor
+highlight vCursor guifg=white guibg=#5F5F87
+highlight clear rCursor
+highlight rCursor guifg=black guibg=#CF6A4C
 
 " error and warning messages
 highlight clear Error
