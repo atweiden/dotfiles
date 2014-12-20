@@ -148,7 +148,7 @@ endif
 
 " gvim {{{
 
-if has("gui_running")
+if has('gui_running')
   " no menu bar
   set guioptions-=m
   " no toolbar
@@ -177,9 +177,7 @@ if has("gui_running")
   " set replace mode cursor to unblinking rCursor highlighted block
   set guicursor+=r:blinkon0-block-rCursor
   " no visual bell
-  if has('autocmd')
-    autocmd GUIEnter * set vb t_vb=
-  endif
+  if has('autocmd') | au GUIEnter * set vb t_vb= | endif
   " resize font
   noremap <silent> <M--> :Smaller<CR>
   noremap <silent> <M-+> :Bigger<CR>
@@ -413,9 +411,6 @@ set wrap
 " show the line number in front of each line
 set number
 
-" show the line number relative to the line
-"set relativenumber
-
 " minimum number of columns to use for the line number
 set numberwidth=1
 
@@ -534,9 +529,7 @@ nnoremap <leader><leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
 
 " turn off any existing search
-if has("autocmd")
-  au VimEnter * nohls
-endif
+if has('autocmd') | au VimEnter * nohls | endif
 
 " }}}
 " --- pasting {{{
@@ -612,10 +605,6 @@ noremap <silent> <F3> :set nowrap!<CR>
 inoremap <silent> <F3> <C-O>:set nowrap!<CR>
 
 " toggle line numbers
-"noremap <silent> <F4> :set nonu!<CR>
-"inoremap <silent> <F4> <C-O>:set nonu!<CR>
-"nnoremap <silent> <F4> :NumbersOnOff<CR>
-"inoremap <silent> <F4> <C-O>:NumbersOnOff<CR>
 nnoremap <silent> <F4> :NumbersToggle<CR>
 inoremap <silent> <F4> <C-O>:NumbersToggle<CR>
 
@@ -653,12 +642,6 @@ vnoremap L g_
 
 " move to middle of current line
 nmap <expr> gM (strlen(getline("."))/2)."<Bar>"
-
-" annoying default mappings
-inoremap <S-Up> <C-O>gk
-inoremap <S-Down> <C-O>gj
-noremap <S-Up> gk
-noremap <S-Down> gj
 
 " <PageUp> and <PageDown> do silly things in normal mode with folds
 noremap <PageUp> <C-U>
@@ -728,15 +711,11 @@ nmap <silent> gB :bprev<CR>
 
 " map alt-[h,j,k,l,=,_,|] to resizing a window split
 " map alt-[s,v] to horizontal and vertical split respectively
-" map alt-[n,p] to moving to next and previous window respectively
+" map alt-[N,P] to moving to next and previous window respectively
 " map alt-[H,J,K,L] to repositioning a window split
-"nnoremap <silent> <M-h> <C-W><
 nnoremap <silent> <M-h> :ObviousResizeLeft<CR>
-"nnoremap <silent> <M-j> <C-W>-
 nnoremap <silent> <M-j> :ObviousResizeDown<CR>
-"nnoremap <silent> <M-k> <C-W>+
 nnoremap <silent> <M-k> :ObviousResizeUp<CR>
-"nnoremap <silent> <M-l> <C-W>>
 nnoremap <silent> <M-l> :ObviousResizeRight<CR>
 nnoremap <silent> <M-=> <C-W>=
 nnoremap <silent> <M-_> <C-W>_
@@ -765,18 +744,15 @@ inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
 
 " don't move back the cursor one position when exiting insert mode {{{
 
-autocmd InsertEnter * let CursorColumnI = col('.')
-autocmd CursorMovedI * let CursorColumnI = col('.')
-autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
+au InsertEnter * let CursorColumnI = col('.')
+au CursorMovedI * let CursorColumnI = col('.')
+au InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
 
 " }}}
 
 " return to last edit position {{{
 
-autocmd BufReadPost *
-  \ if line("'\"") > 1 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " }}}
 
@@ -879,48 +855,45 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.zsh,.zprofile,.zshrc} set ft=zsh
 
 " omnicompletion {{{
 
-autocmd FileType c setlocal omnifunc=ccomplete#Complete
-autocmd FileType clojure setlocal omnifunc=clojurecomplete#Complete
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType erlang setlocal omnifunc=erlang_complete#Complete
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-autocmd FileType html,xhtml setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
-autocmd FileType javascript setlocal omnifunc=js#CompleteJS
-autocmd FileType lisp,racket,scheme setlocal equalprg=scmindent
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType sql setlocal omnifunc=sqlcomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+au FileType c setlocal omnifunc=ccomplete#Complete
+au FileType clojure setlocal omnifunc=clojurecomplete#Complete
+au FileType css setlocal omnifunc=csscomplete#CompleteCSS
+au FileType erlang setlocal omnifunc=erlang_complete#Complete
+au FileType haskell setlocal omnifunc=necoghc#omnifunc
+au FileType html,xhtml setlocal omnifunc=htmlcomplete#CompleteTags
+au FileType java setlocal omnifunc=javacomplete#Complete
+au FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
+au FileType javascript setlocal omnifunc=js#CompleteJS
+au FileType lisp,racket,scheme setlocal equalprg=scmindent
+au FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+au FileType python setlocal omnifunc=pythoncomplete#Complete
+au FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
+au FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+au FileType ruby,eruby let g:rubycomplete_rails = 1
+au FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+au FileType sql setlocal omnifunc=sqlcomplete#Complete
+au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " }}}
 
 " dictionaries {{{
 
 "set dictionary=/usr/share/dict/words
-autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/javascript.dict
-autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/node.dict
+au FileType javascript setlocal dictionary+=$HOME/.vim/dict/javascript.dict
+au FileType javascript setlocal dictionary+=$HOME/.vim/dict/node.dict
 
 " }}}
 
 " spelling {{{
 
 let g:spellfile_URL = '/usr/share/vim/vimfiles/spell'
-if version >= 700
-  set spl=en spell
-  set nospell
-endif
+if version >= 700 | set spl=en spell | set nospell | endif
 
 " }}}
 
 " digraphs {{{
 
-if has("digraphs")
+if has('digraphs')
   " ellipsis (…)
   digraph ., 8230
 endif
