@@ -103,7 +103,7 @@ set switchbuf=useopen,usetab,newtab
 " do not consider octal numbers for C-a/C-x
 set nrformats-=octal
 
-" configure viminfo
+" configure viminfo then read from it
 set viminfo='100,<50,s10,h,!
 "           |    |   |   | |
 "           |    |   |   | +--- Save and restore all-uppercase global variables
@@ -202,25 +202,43 @@ endif
 
 " }}}
 
-" error messages {{{
+" highlighting {{{
 
-highlight clear ErrorMsg
-highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+" searches
+highlight clear Search
+highlight Search ctermfg=0 ctermbg=180 guifg=black guibg=#D7AF87
+
+" matching parens
+highlight clear MatchParen
+highlight MatchParen term=bold cterm=bold ctermfg=252 ctermbg=89 gui=bold guifg=#D0D0D0 guibg=#87005F
+
+" error and warning messages
 highlight clear Error
 highlight Error ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight clear ErrorMsg
+highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight clear WarningMsg
+highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
 
-" }}}
-
-" question and more messages {{{
-
+" question and more messages
 highlight clear Question
-highlight Question term=standout ctermfg=150 gui=bold guifg=#afdf87
+highlight Question term=standout ctermfg=150 gui=bold guifg=#AFDF87
 highlight clear MoreMsg
-highlight MoreMsg term=bold ctermfg=150 gui=bold guifg=#afdf87
+highlight MoreMsg term=bold ctermfg=150 gui=bold guifg=#AFDF87
+
+" spelling
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
 
 " }}}
 
-" listchars {{{
+" show listchars {{{
 
 set nolist
 set listchars =tab:▷⋅
@@ -895,14 +913,6 @@ autocmd FileType javascript setlocal dictionary+=$HOME/.vim/dict/node.dict
 " spelling {{{
 
 let g:spellfile_URL = '/usr/share/vim/vimfiles/spell'
-highlight clear SpellBad
-highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
-highlight clear SpellCap
-highlight SpellCap term=underline cterm=underline
-highlight clear SpellRare
-highlight SpellRare term=underline cterm=underline
-highlight clear SpellLocal
-highlight SpellLocal term=underline cterm=underline
 if version >= 700
   set spl=en spell
   set nospell
