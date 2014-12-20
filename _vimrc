@@ -173,7 +173,7 @@ if has("gui_running")
   highlight Cursor guifg=black guibg=gray
   " insert and command line mode cursor colors
   highlight clear iCursor
-  highlight iCursor guifg=white guibg=white
+  highlight iCursor guifg=white guibg=#FFFFAF
   " visual mode cursor colors
   highlight clear vCursor
   highlight vCursor guifg=white guibg=#5F5F87
@@ -188,6 +188,10 @@ if has("gui_running")
   set guicursor+=v:blinkon0-block-vCursor
   " set replace mode cursor to unblinking rCursor highlighted block
   set guicursor+=r:blinkon0-block-rCursor
+  " no visual bell
+  if has('autocmd')
+    autocmd GUIEnter * set vb t_vb=
+  endif
   " resize font
   noremap <silent> <M--> :Smaller<CR>
   noremap <silent> <M-+> :Bigger<CR>
