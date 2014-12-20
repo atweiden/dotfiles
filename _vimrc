@@ -168,6 +168,26 @@ if has("gui_running")
   " jellyx
   set t_Co=256
   colorscheme jellyx
+  " normal mode cursor colors
+  highlight clear Cursor
+  highlight Cursor guifg=black guibg=gray
+  " insert and command line mode cursor colors
+  highlight clear iCursor
+  highlight iCursor guifg=white guibg=white
+  " visual mode cursor colors
+  highlight clear vCursor
+  highlight vCursor guifg=white guibg=#5F5F87
+  " replace mode cursor colors
+  highlight clear rCursor
+  highlight rCursor guifg=black guibg=#CF6A4C
+  " set normal mode cursor to unblinking Cursor highlighted block
+  set guicursor+=n:blinkon0-block-Cursor
+  " set insert and command line mode cursor to 25% width unblinking iCursor highlighted block
+  set guicursor+=i-c:blinkon0-ver25-iCursor
+  " set visual mode cursor to unblinking vCursor highlighted block
+  set guicursor+=v:blinkon0-block-vCursor
+  " set replace mode cursor to unblinking rCursor highlighted block
+  set guicursor+=r:blinkon0-block-rCursor
   " resize font
   noremap <silent> <M--> :Smaller<CR>
   noremap <silent> <M-+> :Bigger<CR>
@@ -175,17 +195,6 @@ if has("gui_running")
   inoremap <S-Insert> <MiddleMouse>
   cnoremap <S-Insert> <MiddleMouse>
 endif
-
-" }}}
-
-" cursor {{{
-
-highlight clear Cursor
-highlight Cursor guifg=black guibg=gray
-highlight clear iCursor
-highlight iCursor guifg=white guibg=white
-set guicursor+=n-v-c:blinkon0-block-Cursor
-set guicursor+=i:blinkon0-ver25-Cursor/lCursor
 
 " }}}
 
