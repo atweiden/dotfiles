@@ -5,8 +5,8 @@ let g:ycm_confirm_extra_conf = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 "let g:ycm_server_idle_suicide_seconds = 6000
 
-nnoremap <leader>] :YcmCompleter GoToDefinitionElseDeclaration<CR>mzzMzvzz15<c-e>`z:Pulse<cr>
-" nnoremap <leader>] :YcmCompleter GoToDeclaration<CR>mzzMzvzz15<c-e>`z:Pulse<cr>
+nnoremap <leader>] :YcmCompleter GoToDefinitionElseDeclaration<CR>:call FocusLine()<CR>
+" nnoremap <leader>] :YcmCompleter GoToDeclaration<CR>:call FocusLine()<CR>
 
 " for vim-neco-ghc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
