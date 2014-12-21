@@ -100,6 +100,7 @@ Credits
 - https://github.com/jeremyjh/dotfiles
 - https://github.com/jeroenjanssens/dotfiles
 - https://github.com/jgors/configs
+- https://github.com/jszakmeister/vimuser-jszakmeister
 - https://github.com/junegunn/dotfiles
 - https://github.com/kernelsmith/env-customization
 - https://github.com/khughitt/dotfiles
@@ -126,6 +127,7 @@ Credits
 - https://github.com/wavded/dotfiles
 - https://github.com/whatyouhide/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment
+- https://github.com/xero/dotfiles
 
 
 Licensing
