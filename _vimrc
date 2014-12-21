@@ -414,8 +414,8 @@ set number
 " minimum number of columns to use for the line number
 set numberwidth=1
 
-" maximum width of text that is being inserted, 0 to disable
-set textwidth=70
+" don't autowrap text as it's being inserted
+set textwidth=0
 
 " insert N pixel lines between characters
 set linespace=1
@@ -461,7 +461,6 @@ set sessionoptions+=resize,tabpages,winpos,winsize
 
 " automatic formatting options
 set formatoptions=
-set formatoptions+=c " Auto-wrap comments using textwidth
 set formatoptions+=r " Automatically insert the current comment leader after <Enter> in insert mode
 set formatoptions+=o " Automatically insert the current comment leader after 'o' or 'O' in normal mode
 set formatoptions+=q " Allow formatting of comments with gq
@@ -799,6 +798,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.html,*.htm,*.ejs} set ft=html
 au BufEnter,BufRead,BufNewFile,BufWrite {*.html.ep,*.html.epl} set ft=html.epl
 au BufEnter,BufRead,BufNewFile,BufWrite {*.haml,*.hamlbars,*.hamlc} set ft=haml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.hs} set ft=haskell
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ini,php.ini,php-fpm.conf,my.cnf} set ft=dosini
 au BufEnter,BufRead,BufNewFile,BufWrite {.inputrc} set ft=readline
 au BufEnter,BufRead,BufNewFile,BufWrite {*.jade} set ft=jade
 au BufEnter,BufRead,BufNewFile,BufWrite {*.java} set ft=java
@@ -819,6 +819,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.ctp,*.hh,*.hhi} set ft=php
+au BufEnter,BufRead,BufNewFile,BufWrite {.AURINFO,.SRCINFO} set ft=PKGBUILD
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pro} set ft=pro
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
@@ -844,6 +845,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux-conf
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tup,Tupfile} set ft=tup
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
+au BufEnter,BufRead,BufNewFile,BufWrite {*.automount,*.mount,*.path,*.service,*.socket,*.swap,*.target,*.timer} set ft=systemd
 au BufEnter,BufRead,BufNewFile,BufWrite {.wgetrc} set ft=wget
 au BufEnter,BufRead,BufNewFile,BufWrite {.Xdefaults,.Xresources} set ft=xdefaults
 au BufEnter,BufRead,BufNewFile,BufWrite {*.xml,*.xaml} set ft=xml
