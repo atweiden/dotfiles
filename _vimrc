@@ -20,6 +20,12 @@ set nocompatible
 " set mapleader from backslash to comma
 let mapleader=","
 
+" use bash login shell
+set shell=/bin/bash\ --login
+
+" turn off manual key
+nnoremap K <nop>
+
 " hide intro screen, use all abbreviations, omit redundant messages
 set shortmess=aIoO
 
@@ -85,6 +91,9 @@ set timeout
 set nottimeout
 set timeoutlen=1000
 set ttimeoutlen=50
+
+" greatly restrict local .vimrc and .exrc files
+set secure
 
 " disable modelines, use securemodelines.vim instead
 set nomodeline
@@ -407,11 +416,20 @@ set shiftround
 " jump between the following characters that form pairs
 set matchpairs+=<:>
 
-" lines with equal indent form a fold
-set foldmethod=indent
+" triple matching curly braces form a fold
+set foldmethod=marker
 
 " higher numbers close fewer folds, 0 closes all folds.
 set foldlevel=99
+
+" automatically open folds on these commands
+set foldopen=hor,insert,mark,percent,tag,undo
+
+" customize fold text shown
+set foldtext=MyFoldText()
+
+" deepest fold is 3 levels
+set foldnestmax=3
 
 " visually break lines
 set wrap
@@ -510,8 +528,8 @@ Arpeggio inoremap jk <ESC>
 Arpeggio cnoremap jk <C-C>
 Arpeggio xnoremap jk <ESC>
 
-" reselect pasted content
-noremap gV `[v`]
+" visually select the text that was last edited/pasted
+nnoremap <expr> gV '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " preserve selection when indenting
 vnoremap > >gv
@@ -665,6 +683,19 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- folds {{{
 
+" save and restore folds when files are closed and re-opened
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
+
+" toggle folds with spacebar
+nnoremap <silent> <space> :exe ":silent! normal za"<CR>
+
+" focus just the current line with minimal number of folds open
+nnoremap <silent> <leader><space> :call FocusLine()<CR>
+
+" make zO recursively open whatever fold we're in, even if it's partially open
+nnoremap zO zczO
+
 " set fold level
 nnoremap <leader>f0 :set foldlevel=0<CR>
 nnoremap <leader>f1 :set foldlevel=1<CR>
@@ -741,13 +772,17 @@ inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
 " }}}
 " --- tabs {{{
 
-noremap <silent> g<C-T> :tabnew<CR>
-noremap <silent> g<C-N> :tabnext<CR>
-noremap <silent> g<C-P> :tabprevious<CR>
+" close tab
 noremap <silent> g<C-W> :tabclose<CR>
-noremap <silent> <leader>to :tabonly<CR>
+
+" move tab
 noremap <leader>tm :tabmove<space>
+
+" open specified file in new tab
 noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
+
+" allows typing :tabv myfile.txt to view the specified file in a new read-only tab
+cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " http://vim.wikia.com/wiki/Using_tab_pages
 " press Shift-F12 to show all buffers in tabs, or to close all tabs
@@ -755,9 +790,6 @@ noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
 " see also: vim -p file1 file2
 let notabs = 0
 nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
-
-" allows typing :tabv myfile.txt to view the specified file in a new read-only tab
-cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " }}}
 
