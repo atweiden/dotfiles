@@ -177,7 +177,9 @@ if has('gui_running')
   " set replace mode cursor to unblinking rCursor highlighted block
   set guicursor+=r:blinkon0-block-rCursor
   " no visual bell
-  if has('autocmd') | au GUIEnter * set vb t_vb= | endif
+  if has('autocmd')
+    autocmd GUIEnter * set vb t_vb=
+  endif
   " resize font
   noremap <silent> <M--> :Smaller<CR>
   noremap <silent> <M-+> :Bigger<CR>
@@ -528,7 +530,9 @@ nnoremap <leader><leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
 
 " turn off any existing search
-if has('autocmd') | au VimEnter * nohls | endif
+if has('autocmd')
+  au VimEnter * nohls
+endif
 
 " }}}
 " --- pasting {{{
@@ -751,7 +755,10 @@ au InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | end
 
 " return to last edit position {{{
 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
 
 " }}}
 
@@ -889,7 +896,10 @@ au FileType javascript setlocal dictionary+=$HOME/.vim/dict/node.dict
 " spelling {{{
 
 let g:spellfile_URL = '/usr/share/vim/vimfiles/spell'
-if version >= 700 | set spl=en spell | set nospell | endif
+if version >= 700
+  set spl=en spell
+  set nospell
+endif
 
 " }}}
 
