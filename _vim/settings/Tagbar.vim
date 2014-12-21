@@ -25,6 +25,25 @@ let g:tagbar_type_asciidoc = {
     \ ]
 \ }
 
+let g:tagbar_type_clojure = {
+    \ 'ctagstype': 'clojure',
+    \ 'ctagsbin' : 'ctags',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 'n:namespaces',
+        \ 'f:functions',
+        \ 'p:private functions',
+        \ 'i:inline',
+        \ 'a:multimethod definitions',
+        \ 'b:multimethod instances',
+        \ 'c:definitions (once)',
+        \ 's:structures',
+        \ 'v:interns',
+        \ 'm:macros',
+        \ 'd:definitions'
+    \ ],
+\ }
+
 let g:tagbar_type_elixir = {
   \ 'ctagstype' : 'Elixir',
   \ 'kinds' : [

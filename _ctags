@@ -1,8 +1,21 @@
+--exclude=build
+--exclude=_build
+--exclude='*.bz2'
+--exclude=.bzr
+--exclude=classes
+--exclude=dist
 --exclude=.git
+--exclude='*.gz'
 --exclude=.hg
 --exclude=*.min.js
+--exclude=out
 --exclude=*.pyc
+--exclude=__pycache__
 --exclude=*.pyo
+--exclude='*.snippets'
+--exclude=.svn
+--exclude=target
+--exclude='*.xz'
 
 --langdef=asciidoc
 --langmap=asciidoc:.ad.adoc.asciidoc
@@ -12,7 +25,20 @@
 --regex-asciidoc=/^====[ \t]+(.*)/. . . \1/s,Section_L3/
 --regex-asciidoc=/^=====[ \t]+(.*)/. . . . \1/s,Section_L4/
 
---langmap=Lisp:+.clj
+--langdef=clojure
+--langmap=clojure:.clj.cljs
+--regex-clojure=/\([ \t]*create-ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
+--regex-clojure=/\([ \t]*def[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/d,definition/
+--regex-clojure=/\([ \t]*defn[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/f,function/
+--regex-clojure=/\([ \t]*defn-[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/p,private function/
+--regex-clojure=/\([ \t]*defmacro[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/m,macro/
+--regex-clojure=/\([ \t]*definline[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/i,inline/
+--regex-clojure=/\([ \t]*defmulti[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/a,multimethod definition/
+--regex-clojure=/\([ \t]*defmethod[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/b,multimethod instance/
+--regex-clojure=/\([ \t]*defonce[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/c,definition (once)/
+--regex-clojure=/\([ \t]*defstruct[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/s,struct/
+--regex-clojure=/\([ \t]*intern[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/v,intern/
+--regex-clojure=/\([ \t]*ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
 
 --langdef=Elixir
 --langmap=Elixir:.ex.exs
@@ -101,3 +127,7 @@
 --langdef=snippets
 --langmap=snippets:.snippets
 --regex-snippets=/^snippet (.*)/\1/s,snippet/
+
+--langmap=vim:+(vimrc)
+--exclude='lusty-explorer.vim'
+--exclude='lusty-juggler.vim'
