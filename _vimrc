@@ -194,7 +194,9 @@ endif
 
 " searches
 highlight clear Search
-highlight Search ctermfg=0 ctermbg=180 guifg=black guibg=#D7AF87
+highlight Search term=bold,underline cterm=bold,underline ctermfg=15 ctermbg=197 gui=bold,underline guifg=white guibg=#FF005F
+highlight clear IncSearch
+highlight IncSearch term=bold cterm=bold ctermfg=15 ctermbg=197 gui=bold guifg=white guibg=#FF005F
 
 " matching parens
 highlight clear MatchParen
@@ -223,6 +225,10 @@ highlight clear Question
 highlight Question term=standout ctermfg=150 gui=bold guifg=#AFDF87
 highlight clear MoreMsg
 highlight MoreMsg term=bold ctermfg=150 gui=bold guifg=#AFDF87
+
+" directories
+highlight clear Directory
+highlight Directory term=bold cterm=bold ctermfg=110 gui=bold guifg=#87AFD7
 
 " spelling
 highlight clear SpellBad
@@ -657,27 +663,21 @@ nnoremap <C-Y> 4<C-Y>
 " }}}
 
 " Programming
-" --- tabs {{{
+" --- folds {{{
 
-noremap <silent> g<C-T> :tabnew<CR>
-noremap <silent> g<C-N> :tabnext<CR>
-noremap <silent> g<C-P> :tabprevious<CR>
-noremap <silent> g<C-W> :tabclose<CR>
-noremap <silent> <leader>to :tabonly<CR>
-noremap <leader>tm :tabmove<space>
-noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
+" set fold level
+nmap <leader>f0 :set foldlevel=0<CR>
+nmap <leader>f1 :set foldlevel=1<CR>
+nmap <leader>f2 :set foldlevel=2<CR>
+nmap <leader>f3 :set foldlevel=3<CR>
+nmap <leader>f4 :set foldlevel=4<CR>
+nmap <leader>f5 :set foldlevel=5<CR>
+nmap <leader>f6 :set foldlevel=6<CR>
+nmap <leader>f7 :set foldlevel=7<CR>
+nmap <leader>f8 :set foldlevel=8<CR>
+nmap <leader>f9 :set foldlevel=9<CR>
 
-" http://vim.wikia.com/wiki/Using_tab_pages
-" press Shift-F12 to show all buffers in tabs, or to close all tabs
-" it alternately executes :tab ball and :tabo
-" see also: vim -p file1 file2
-let notabs = 0
-nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
-
-" allows typing :tabv myfile.txt to view the specified file in a new read-only tab
-cabbrev tabv tab sview +setlocal\ nomodifiable
-
-" }}}
+"  }}}
 " --- merging {{{
 
 " highlight conflict markers
@@ -701,7 +701,7 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 " }}}
 
 " Navigation
-" ---buffers {{{
+" --- buffers {{{
 
 " buffer navigation
 nmap <silent> gd :bdelete<CR>
@@ -709,8 +709,7 @@ nmap <silent> gb :bnext<CR>
 nmap <silent> gB :bprev<CR>
 
 " }}}
-
-" ---windows {{{
+" --- windows {{{
 
 " map alt-[h,j,k,l,=,_,|] to resizing a window split
 " map alt-[s,v] to horizontal and vertical split respectively
@@ -738,6 +737,27 @@ nnoremap <leader>sb :SplitScrollSpecified<space>
 " scroll all windows simultaneously
 nnoremap <silent> <S-F5> :windo set scrollbind!<CR>
 inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
+
+" }}}
+" --- tabs {{{
+
+noremap <silent> g<C-T> :tabnew<CR>
+noremap <silent> g<C-N> :tabnext<CR>
+noremap <silent> g<C-P> :tabprevious<CR>
+noremap <silent> g<C-W> :tabclose<CR>
+noremap <silent> <leader>to :tabonly<CR>
+noremap <leader>tm :tabmove<space>
+noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
+
+" http://vim.wikia.com/wiki/Using_tab_pages
+" press Shift-F12 to show all buffers in tabs, or to close all tabs
+" it alternately executes :tab ball and :tabo
+" see also: vim -p file1 file2
+let notabs = 0
+nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
+
+" allows typing :tabv myfile.txt to view the specified file in a new read-only tab
+cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " }}}
 
