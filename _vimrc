@@ -395,9 +395,6 @@ set showbreak=↪
 " copy indent from current line when starting a new line
 set autoindent
 
-" do smart autoindenting when starting a new line
-set smartindent
-
 " let <Tab> count for N spaces in the file
 set tabstop=2
 
@@ -609,9 +606,6 @@ nnoremap <silent> <leader>. :cd%:h<CR>
 " fix windoze ^M
 " alternative to `dos2unix file`
 noremap <leader>rmm :%s///g<CR>
-
-" don't make smartindent force a # over to the first column
-inoremap # X<BS>#
 
 " }}}
 " --- redoing {{{
