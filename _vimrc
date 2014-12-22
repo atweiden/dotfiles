@@ -209,7 +209,7 @@ highlight IncSearch term=bold cterm=bold ctermfg=15 ctermbg=197 gui=bold guifg=w
 
 " matching parens
 highlight clear MatchParen
-highlight MatchParen term=bold cterm=bold ctermfg=252 ctermbg=89 gui=bold guifg=#D0D0D0 guibg=#87005F
+highlight MatchParen term=bold cterm=bold ctermfg=15 ctermbg=74 gui=bold guifg=white guibg=#5FAFD7
 
 " cursor
 highlight clear Cursor
