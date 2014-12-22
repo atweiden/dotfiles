@@ -20,9 +20,6 @@ set nocompatible
 " set mapleader from backslash to comma
 let mapleader=","
 
-" use bash login shell
-set shell=/bin/bash\ --login
-
 " turn off manual key
 nnoremap K <nop>
 
