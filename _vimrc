@@ -209,7 +209,7 @@ highlight IncSearch term=bold cterm=bold ctermfg=15 ctermbg=197 gui=bold guifg=w
 
 " matching parens
 highlight clear MatchParen
-highlight MatchParen term=bold cterm=bold ctermfg=15 ctermbg=74 gui=bold guifg=white guibg=#5FAFD7
+highlight MatchParen term=bold,NONE cterm=bold,NONE ctermfg=179 gui=bold,NONE guifg=#D7AF5F
 
 " cursor
 highlight clear Cursor
@@ -231,9 +231,9 @@ highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
 
 " question and more messages
 highlight clear Question
-highlight Question term=standout ctermfg=150 gui=bold guifg=#AFDF87
+highlight Question term=standout ctermfg=179 gui=bold guifg=#D7AF5F
 highlight clear MoreMsg
-highlight MoreMsg term=bold ctermfg=150 gui=bold guifg=#AFDF87
+highlight MoreMsg term=bold cterm=bold ctermfg=179 gui=bold guifg=#D7AF5F
 
 " directories
 highlight clear Directory
