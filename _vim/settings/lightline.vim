@@ -6,41 +6,62 @@ let g:lightline = {
       \   'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
-      \   'modified': 'MyModified',
-      \   'readonly': 'MyReadonly',
       \   'fugitive': 'MyFugitive',
       \   'filename': 'MyFilename',
       \   'fileformat': 'MyFileformat',
       \   'filetype': 'MyFiletype',
       \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode',
-      \   'wordcount': 'MyWordCount'
+      \   'mode': 'MyMode'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 function! MyModified()
-  return &ft =~ 'help\|vimfiler\|undotree' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+  try
+    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|undotree\|thumbnail\|calendar'
+      if &modified == 1
+        return '+'
+      else
+        return ''
+      endif
+    endif
+  catch
+  endtry
+  return ''
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|undotree' && &readonly ? '' : ''
+  try
+    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|undotree\|thumbnail\|calendar' && &readonly
+      return ''
+    endif
+  catch
+  endtry
+  return ''
 endfunction
 
 function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
+       \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+       \  &ft == 'unite' ? unite#get_status_string() :
+       \  &ft == 'vimshell' ? vimshell#get_status_string() :
+       \  &ft == 'undotree' ? '' :
+       \  &ft == 'calendar' ? strftime('%Y/%m/%d') :
+       \  &ft == 'thumbnail' ? exists('b:thumbnail.status') ? b:thumbnail.status : 'Thumbnail' :
+       \  expand('%:t') =~? 'diffpanel_\|Tagbar\|NERD\|Lusty' ? '' :
+       \  '' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
 function! MyFugitive()
-  if &ft !~? 'vimfiler\|undotree' && exists("*fugitive#head")
-    let _ = fugitive#head()
-    return strlen(_) ? ' '._ : ''
-  endif
+  try
+    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
+      let _ = fugitive#head()
+      return strlen(_) ? ' '._ : ''
+    endif
+  catch
+  endtry
   return ''
 endfunction
 
@@ -57,41 +78,25 @@ function! MyFileencoding()
 endfunction
 
 function! MyMode()
-  return winwidth(0) > 60 ? lightline#mode() : ''
+  let fname = expand('%:t')
+  return fname == '__Tagbar__' ? 'Tagbar' :
+       \ fname =~ 'Lusty' ? 'Lusty' :
+       \ fname =~ 'NERD_tree' ? 'NERDTree' :
+       \ fname =~ 'diffpanel_' ? 'DiffPanel' :
+       \ &ft == 'undotree' ? 'UndoTree' :
+       \ &ft == 'unite' ? 'Unite' :
+       \ &ft == 'vimfiler' ? 'VimFiler' :
+       \ &ft == 'vimshell' ? 'VimShell' :
+       \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
-" Source: https://gist.github.com/cormacrelf/d0bee254f5630b0e93c3
-function! MyWordCount()
-  if &ft !~? 'vimfiler\|undotree'
-    let currentmode = mode()
-    if !exists("g:lastmode_wc")
-      let g:lastmode_wc = currentmode
-    endif
-    " if we modify file, open a new buffer, be in visual ever, or switch modes
-    " since last run, we recompute.
-    if &modified || !exists("b:wordcount") || currentmode =~? '\c.*v' || currentmode != g:lastmode_wc
-      let g:lastmode_wc = currentmode
-      let l:old_position = getpos('.')
-      let l:old_status = v:statusmsg
-      execute "silent normal g\<C-G>"
-      if v:statusmsg == "--No lines in buffer--" || (bufwinnr('LustyExplorer--Buffers') == 1)
-        let b:wordcount = 0
-      else
-        let s:split_wc = split(v:statusmsg)
-        if index(s:split_wc, "Selected") < 0
-          let b:wordcount = str2nr(s:split_wc[11])
-        else
-          let b:wordcount = str2nr(s:split_wc[5])
-        endif
-        let v:statusmsg = l:old_status
-      endif
-      call setpos('.', l:old_position)
-      return b:wordcount
-    else
-      return b:wordcount
-    endif
-  endif
+let g:tagbar_status_func = 'TagbarStatusFunc'
+
+function! TagbarStatusFunc(current, sort, fname, ...) abort
+    let g:lightline.fname = a:fname
+  return lightline#statusline(0)
 endfunction
 
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
+let g:vimshell_force_overwrite_statusline = 0
