@@ -27,6 +27,7 @@ Recommended color themes for Vim
 *These colors work well with Vim and Gvim, without any additional
 configuration.*
 
+- darcula
 - eddie
 - gruvbox
 - [hybrid](https://i.imgur.com/SQL9D4c.png)
