@@ -18,7 +18,8 @@
                 ~/.vim/.backups \
                 ~/.vim/.swaps \
                 ~/.vim/.tmp \
-                ~/.vim/.undo
+                ~/.vim/.undo \
+                ~/.vim/view
 
 if [[ -x /usr/bin/perlbrew ]]; then
   export PERLBREW_ROOT=~/.perlbrew_root
