@@ -116,6 +116,7 @@ Credits
 - https://github.com/rafi/.config
 - https://github.com/saimn/dotfiles
 - https://github.com/Schnouki/dotfiles
+- https://github.com/Shougo/shougo-s-github
 - https://github.com/sickill/dotfiles
 - https://github.com/sjl/dotfiles
 - https://github.com/sjn/dotfiles
