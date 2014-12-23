@@ -676,10 +676,6 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- folds {{{
 
-" save and restore folds when files are closed and re-opened
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
-
 " toggle folds with spacebar
 nnoremap <silent> <space> :exe ":silent! normal za"<CR>
 

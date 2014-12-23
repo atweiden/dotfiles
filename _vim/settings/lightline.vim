@@ -45,7 +45,7 @@ function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
        \  &ft == 'unite' ? unite#get_status_string() :
-       \  &ft == 'vimshell' ? vimshell#get_status_string() :
+       \  &ft == 'vimshell' ? '' :
        \  &ft == 'undotree' ? '' :
        \  &ft == 'calendar' ? strftime('%Y/%m/%d') :
        \  &ft == 'thumbnail' ? exists('b:thumbnail.status') ? b:thumbnail.status : 'Thumbnail' :
