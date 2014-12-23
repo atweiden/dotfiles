@@ -56,7 +56,7 @@ endfunction
 
 function! MyFugitive()
   try
-    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vimfiler\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
+    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vimfiler\|vimshell\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
       let _ = fugitive#head()
       return strlen(_) ? ' '._ : ''
     endif

@@ -15,6 +15,8 @@ let g:vimshell_max_command_history = 100000
 " urxvt
 let g:vimshell_use_terminal_command = 'urxvt -geometry 120x30 -e sh -c %s'
 
+let g:vimshell_cat_command = 'less -X'
+
 " gvim is specialized gui command
 call vimshell#set_alias('gvim', 'gexe gvim')
 
