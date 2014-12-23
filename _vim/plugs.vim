@@ -55,6 +55,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
 Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
 Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/vimshell.vim'
 
 " search and replace
 Plug 'tpope/vim-abolish'
