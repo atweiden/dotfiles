@@ -15,6 +15,7 @@ let g:vimshell_max_command_history = 100000
 " urxvt
 let g:vimshell_use_terminal_command = 'urxvt -geometry 120x30 -e sh -c %s'
 
+" use less as default pager
 let g:vimshell_cat_command = 'less -X'
 
 " gvim is specialized gui command
