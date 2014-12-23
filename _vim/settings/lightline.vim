@@ -19,7 +19,7 @@ let g:lightline = {
 
 function! MyModified()
   try
-    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|undotree\|thumbnail\|calendar'
+    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|vim-plug\|undotree\|thumbnail\|calendar'
       if &modified == 1
         return '+'
       else
@@ -33,7 +33,7 @@ endfunction
 
 function! MyReadonly()
   try
-    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vimfiler\|undotree\|thumbnail\|calendar' && &readonly
+    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vim-plug\|vimfiler\|undotree\|thumbnail\|calendar' && &readonly
       return ''
     endif
   catch
@@ -47,6 +47,7 @@ function! MyFilename()
        \  &ft == 'unite' ? unite#get_status_string() :
        \  &ft == 'vimshell' ? '' :
        \  &ft == 'undotree' ? '' :
+       \  &ft == 'vim-plug' ? '' :
        \  &ft == 'calendar' ? strftime('%Y/%m/%d') :
        \  &ft == 'thumbnail' ? exists('b:thumbnail.status') ? b:thumbnail.status : 'Thumbnail' :
        \  expand('%:t') =~? 'diffpanel_\|Tagbar\|NERD\|Lusty' ? '' :
@@ -56,7 +57,7 @@ endfunction
 
 function! MyFugitive()
   try
-    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vimfiler\|vimshell\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
+    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vim-plug\|vimfiler\|vimshell\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
       let _ = fugitive#head()
       return strlen(_) ? ' '._ : ''
     endif
@@ -87,6 +88,7 @@ function! MyMode()
        \ &ft == 'unite' ? 'Unite' :
        \ &ft == 'vimfiler' ? 'VimFiler' :
        \ &ft == 'vimshell' ? 'VimShell' :
+       \ &ft == 'vim-plug' ? 'Plug' :
        \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
