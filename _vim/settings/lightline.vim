@@ -89,6 +89,8 @@ function! MyMode()
        \ &ft == 'vimfiler' ? 'VimFiler' :
        \ &ft == 'vimshell' ? 'VimShell' :
        \ &ft == 'vim-plug' ? 'Plug' :
+       \ &ft == 'calendar' ? 'Calendar' :
+       \ &ft == 'thumbnail' ? 'Thumbnail' :
        \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
