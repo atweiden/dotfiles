@@ -33,7 +33,7 @@ endfunction
 
 function! MyReadonly()
   try
-    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|undotree\|thumbnail\|calendar' && &readonly
+    if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vimfiler\|undotree\|thumbnail\|calendar' && &readonly
       return ''
     endif
   catch
@@ -56,7 +56,7 @@ endfunction
 
 function! MyFugitive()
   try
-    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
+    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vimfiler\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
       let _ = fugitive#head()
       return strlen(_) ? ' '._ : ''
     endif
