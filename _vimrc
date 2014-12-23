@@ -218,13 +218,15 @@ highlight vCursor guifg=white guibg=#5F5F87
 highlight clear rCursor
 highlight rCursor guifg=black guibg=#CF6A4C
 
-" error and warning messages
+" error, warning and mode messages
 highlight clear Error
 highlight Error ctermfg=gray ctermbg=black guifg=gray guibg=black
 highlight clear ErrorMsg
 highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
 highlight clear WarningMsg
 highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight clear ModeMsg
+highlight ModeMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
 
 " question and more messages
 highlight clear Question
@@ -895,6 +897,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux-conf
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tup,Tupfile} set ft=tup
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
+au BufEnter,BufRead,BufNewFile,BufWrite {*vimshrc*} set ft=vimshrc
 au BufEnter,BufRead,BufNewFile,BufWrite {*.automount,*.mount,*.path,*.service,*.socket,*.swap,*.target,*.timer} set ft=systemd
 au BufEnter,BufRead,BufNewFile,BufWrite {.wgetrc} set ft=wget
 au BufEnter,BufRead,BufNewFile,BufWrite {.Xdefaults,.Xresources} set ft=xdefaults
