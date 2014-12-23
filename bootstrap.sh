@@ -46,8 +46,9 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.conkyrc1      \
                $HOME/.ctags         \
                $HOME/.curlrc        \
+               $HOME/.dir_colors    \
                $HOME/.dunstrc       \
-               $HOME/.functions     \
+               $HOME/.functions.d   \
                $HOME/.gitconfig     \
                $HOME/.gitignore     \
                $HOME/.gitattributes \
@@ -60,6 +61,7 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.inputrc       \
                $HOME/.jshintignore  \
                $HOME/.jshintrc      \
+               $HOME/.keymap        \
                $HOME/.npmrc         \
                $HOME/.pdbrc         \
                $HOME/.psqlrc        \
@@ -70,8 +72,11 @@ for dotfile in $HOME/.ackrc         \
                $HOME/.vim           \
                $HOME/.vimrc         \
                $HOME/.vimrc.lite    \
+               $HOME/.vimshrc       \
                $HOME/.vimencrypt    \
+               $HOME/.wgetrc        \
                $HOME/.Xdefaults     \
+               $HOME/.Xmodmap       \
                $HOME/.xinitrc       \
                $HOME/.xsession      \
                $HOME/.ycm_extra_conf.py; do
@@ -105,6 +110,7 @@ for dotfile in ackrc         \
                conkyrc1      \
                ctags         \
                curlrc        \
+               dir_colors    \
                dunstrc       \
                gitattributes \
                gitconfig     \
@@ -115,6 +121,7 @@ for dotfile in ackrc         \
                inputrc       \
                jshintignore  \
                jshintrc      \
+               keymap        \
                npmrc         \
                pdbrc         \
                psqlrc        \
@@ -124,7 +131,10 @@ for dotfile in ackrc         \
                vimencrypt    \
                vimrc         \
                vimrc.lite    \
+               vimshrc       \
+               wgetrc        \
                Xdefaults     \
+               Xmodmap       \
                xinitrc       \
                xsession      \
                ycm_extra_conf.py; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
