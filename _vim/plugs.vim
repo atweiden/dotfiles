@@ -586,6 +586,7 @@ Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
 Plug 'edkolev/promptline.vim', { 'on': 'PromptlineSnapshot' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'Tmuxline' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'on': [ 'RainbowParentheses' ] }
+Plug 'vim-scripts/SyntaxAttr.vim'
 Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore', 'SyntaxInclude' ] }
 Plug 'reedes/vim-thematic'
 Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',

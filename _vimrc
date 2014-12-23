@@ -267,6 +267,7 @@ set listchars+=trail:·
 set synmaxcol=1024
 
 " print current syntax item
+nnoremap <silent> <leader>sa :call SyntaxAttr()<CR>
 nnoremap <silent> <leader>si :echo SyntaxItem()<CR>
 
 " refresh screen
