@@ -308,8 +308,8 @@ set vb t_vb=
 " use a dialog when an operation has to be confirmed
 set confirm
 
-" show us the command we're typing
-set showcmd
+" don't show us the command we're typing
+set noshowcmd
 
 " always report the number of lines changed
 set report=0
