@@ -840,6 +840,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.egs} set ft=egs
 au BufEnter,BufRead,BufNewFile,BufWrite {*.erb} set ft=eruby
 au BufEnter,BufRead,BufNewFile,BufWrite {*.fs,*.fsi,*.fsx} set ft=fs
 au BufEnter,BufRead,BufNewFile,BufWrite {.gitconfig} set ft=gitconfig
+au BufEnter,BufRead,BufNewFile,BufWrite {*gtkrc*} set ft=gtkrc
 au BufEnter,BufRead,BufNewFile,BufWrite {*.go} set ft=go
 au BufEnter,BufRead,BufNewFile,BufWrite {*.groovy,*.gradle} set ft=groovy
 au BufEnter,BufRead,BufNewFile,BufWrite {*.gs} set ft=gorilla
