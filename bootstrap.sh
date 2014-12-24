@@ -35,50 +35,51 @@ mkdir -p $HOME/.marks               \
 # -----------------------------------------------------------------------------
 # backup
 
-for dotfile in $HOME/.ackrc         \
-               $HOME/.bashrc        \
-               $HOME/.bash_logout   \
-               $HOME/.bash_profile  \
-               $HOME/.bin           \
-               $HOME/.codex         \
-               $HOME/.config        \
-               $HOME/.conkyrc       \
-               $HOME/.conkyrc1      \
-               $HOME/.ctags         \
-               $HOME/.curlrc        \
-               $HOME/.dir_colors    \
-               $HOME/.dunstrc       \
-               $HOME/.functions.d   \
-               $HOME/.gitconfig     \
-               $HOME/.gitignore     \
-               $HOME/.gitattributes \
-               $HOME/.gnupg         \
-               $HOME/.hgext         \
-               $HOME/.hgignore      \
-               $HOME/.hgmap         \
-               $HOME/.hgrc          \
-               $HOME/.iex.exs       \
-               $HOME/.inputrc       \
-               $HOME/.jshintignore  \
-               $HOME/.jshintrc      \
-               $HOME/.keymap        \
-               $HOME/.npmrc         \
-               $HOME/.pdbrc         \
-               $HOME/.psqlrc        \
-               $HOME/.pythonrc      \
-               $HOME/.screenrc      \
-               $HOME/.tmux          \
-               $HOME/.tmux.conf     \
-               $HOME/.vim           \
-               $HOME/.vimrc         \
-               $HOME/.vimrc.lite    \
-               $HOME/.vimshrc       \
-               $HOME/.vimencrypt    \
-               $HOME/.wgetrc        \
-               $HOME/.Xdefaults     \
-               $HOME/.Xmodmap       \
-               $HOME/.xinitrc       \
-               $HOME/.xsession      \
+for dotfile in $HOME/.ackrc          \
+               $HOME/.bashrc         \
+               $HOME/.bash_logout    \
+               $HOME/.bash_profile   \
+               $HOME/.bin            \
+               $HOME/.codex          \
+               $HOME/.config         \
+               $HOME/.conkyrc        \
+               $HOME/.conkyrc1       \
+               $HOME/.ctags          \
+               $HOME/.curlrc         \
+               $HOME/.dir_colors     \
+               $HOME/.dunstrc        \
+               $HOME/.functions.d    \
+               $HOME/.gitconfig      \
+               $HOME/.gitignore      \
+               $HOME/.gitattributes  \
+               $HOME/.gtkrc-2.0.mine \
+               $HOME/.gnupg          \
+               $HOME/.hgext          \
+               $HOME/.hgignore       \
+               $HOME/.hgmap          \
+               $HOME/.hgrc           \
+               $HOME/.iex.exs        \
+               $HOME/.inputrc        \
+               $HOME/.jshintignore   \
+               $HOME/.jshintrc       \
+               $HOME/.keymap         \
+               $HOME/.npmrc          \
+               $HOME/.pdbrc          \
+               $HOME/.psqlrc         \
+               $HOME/.pythonrc       \
+               $HOME/.screenrc       \
+               $HOME/.tmux           \
+               $HOME/.tmux.conf      \
+               $HOME/.vim            \
+               $HOME/.vimrc          \
+               $HOME/.vimrc.lite     \
+               $HOME/.vimshrc        \
+               $HOME/.vimencrypt     \
+               $HOME/.wgetrc         \
+               $HOME/.Xdefaults      \
+               $HOME/.Xmodmap        \
+               $HOME/.xinitrc        \
+               $HOME/.xsession       \
                $HOME/.ycm_extra_conf.py; do
                                     echo "backing up ${dotfile} (if it exists)"
                                     if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
@@ -101,42 +102,43 @@ for dotfolder in bin         \
                  vim; do cp -R "${DIR}/_${dotfolder}" "$HOME/.${dotfolder}"
 done
 
-for dotfile in ackrc         \
-               bash_logout   \
-               bash_profile  \
-               bashrc        \
-               codex         \
-               conkyrc       \
-               conkyrc1      \
-               ctags         \
-               curlrc        \
-               dir_colors    \
-               dunstrc       \
-               gitattributes \
-               gitconfig     \
-               gitignore     \
-               hgignore      \
-               hgrc          \
-               iex.exs       \
-               inputrc       \
-               jshintignore  \
-               jshintrc      \
-               keymap        \
-               npmrc         \
-               pdbrc         \
-               psqlrc        \
-               pythonrc      \
-               screenrc      \
-               tmux.conf     \
-               vimencrypt    \
-               vimrc         \
-               vimrc.lite    \
-               vimshrc       \
-               wgetrc        \
-               Xdefaults     \
-               Xmodmap       \
-               xinitrc       \
-               xsession      \
+for dotfile in ackrc          \
+               bash_logout    \
+               bash_profile   \
+               bashrc         \
+               codex          \
+               conkyrc        \
+               conkyrc1       \
+               ctags          \
+               curlrc         \
+               dir_colors     \
+               dunstrc        \
+               gitattributes  \
+               gitconfig      \
+               gitignore      \
+               gtkrc-2.0.mine \
+               hgignore       \
+               hgrc           \
+               iex.exs        \
+               inputrc        \
+               jshintignore   \
+               jshintrc       \
+               keymap         \
+               npmrc          \
+               pdbrc          \
+               psqlrc         \
+               pythonrc       \
+               screenrc       \
+               tmux.conf      \
+               vimencrypt     \
+               vimrc          \
+               vimrc.lite     \
+               vimshrc        \
+               wgetrc         \
+               Xdefaults      \
+               Xmodmap        \
+               xinitrc        \
+               xsession       \
                ycm_extra_conf.py; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
 done
 
