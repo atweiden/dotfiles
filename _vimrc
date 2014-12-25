@@ -200,9 +200,9 @@ endif
 
 " searches
 highlight clear Search
-highlight Search term=bold,underline cterm=bold,underline ctermfg=15 ctermbg=197 gui=bold,underline guifg=white guibg=#FF005F
+highlight Search term=bold,underline cterm=bold,underline ctermfg=0 ctermbg=149 gui=bold,underline guifg=black guibg=#AFD75F
 highlight clear IncSearch
-highlight IncSearch term=bold cterm=bold ctermfg=15 ctermbg=197 gui=bold guifg=white guibg=#FF005F
+highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=197 gui=bold guifg=black guibg=#FF005F
 
 " matching parens
 highlight clear MatchParen
