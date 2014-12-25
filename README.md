@@ -98,6 +98,7 @@ Credits
 - https://github.com/haya14busa/dotfiles
 - https://github.com/henrik/dotfiles
 - https://github.com/ifschleife/dotfiles
+- https://github.com/ivyl/vim-config
 - https://github.com/jeremyjh/dotfiles
 - https://github.com/jeroenjanssens/dotfiles
 - https://github.com/jgors/configs
