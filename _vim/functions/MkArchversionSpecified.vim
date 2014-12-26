@@ -1,1 +1,1 @@
-command! -nargs=1 MkArchversionSpecified call MkArchversionSpecific(<f-args>)
+command! -nargs=* MkArchversionSpecified call MkArchversionSpecific(<f-args>)
