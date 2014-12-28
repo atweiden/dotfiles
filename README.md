@@ -19,6 +19,54 @@ cd dotfiles
 ```
 
 
+Usage
+-----
+
+Log in and run `startx` to launch OpenBox.
+
+**Keybindings**
+
+*The Windows symbol key is the 'Super' key. For example,
+<kbd>Windows+spacebar</kbd> opens the main menu. Right-click anywhere
+on the desktop to open the main menu.*
+
+Program shortcuts:
+
+- <kbd>Super+space</kbd>: main menu
+- <kbd>Super+t</kbd>    : LXTerminal (T)erminal
+- <kbd>Super+f</kbd>    : PCManFM (F)ile manager
+- <kbd>Super+e</kbd>    : Leafpad (E)ditor
+- <kbd>Super+m</kbd>    : VLC (M)edia player
+- <kbd>Super+w</kbd>    : Chromium (W)eb browser
+- <kbd>Super+q</kbd>    : Force (Q)uit
+- <kbd>Super+g</kbd>    : (g)Vim
+- <kbd>Super+l</kbd>    : (L)ock screen
+- <kbd>Super+r</kbd>    : Calculato(R)
+- <kbd>Alt+F2</kbd>     : gmrun dialog (program launcher)
+- <kbd>Alt+F3</kbd>     : dmenu (HUD-like program launcher with simple fuzzy completion)
+
+Desktop shortcuts:
+
+- <kbd>Super+a</kbd> : toggle maximize the current window
+- <kbd>Super+h</kbd> : toggle fully expand the current window horizontally
+- <kbd>Super+v</kbd> : toggle fully expand the current window vertically
+- <kbd>Super+c</kbd> : center the current window
+- <kbd>Super+<UP></kbd>   : move the current window up
+- <kbd>Super+<DOWN></kbd> : move the current window down
+- <kbd>Super+<RIGHT></kbd>: move the current window to the right
+- <kbd>Super+<LEFT></kbd> : move the current window to the left
+- <kbd>Alt+Super+<ARROW></kbd> : resize the current window
+- <kbd>Alt+Shift+<ARROW></kbd> : move the current window to a different desktop
+- <kbd>Super+<F1-F4></kbd> : switch to desktop #1-4
+
+Mouse shortcuts:
+
+- right-click anywhere on desktop: main menu
+- mousewheel-scrolldown on app icon in lower panel: minimize app to lower panel
+- mousewheel-scrollup on app icon in lower panel: restore app to size from minimized in lower panel
+- right-click on app icon in lower panel: quit app / close app window
+
+
 Recommended color themes for Vim
 --------------------------------
 
