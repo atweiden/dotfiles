@@ -32,18 +32,18 @@ on the desktop to open the main menu.*
 
 Program shortcuts:
 
-- <kbd>Super+space</kbd>: main menu
-- <kbd>Super+t</kbd>    : LXTerminal (T)erminal
-- <kbd>Super+f</kbd>    : PCManFM (F)ile manager
-- <kbd>Super+e</kbd>    : Leafpad (E)ditor
-- <kbd>Super+m</kbd>    : VLC (M)edia player
-- <kbd>Super+w</kbd>    : Chromium (W)eb browser
-- <kbd>Super+q</kbd>    : Force (Q)uit
-- <kbd>Super+g</kbd>    : (g)Vim
-- <kbd>Super+l</kbd>    : (L)ock screen
-- <kbd>Super+r</kbd>    : Calculato(R)
-- <kbd>Alt+F2</kbd>     : gmrun dialog (program launcher)
-- <kbd>Alt+F3</kbd>     : dmenu (HUD-like program launcher with simple fuzzy completion)
+- <kbd>Super+space</kbd> : main menu
+- <kbd>Super+t</kbd>     : LXTerminal (T)erminal
+- <kbd>Super+f</kbd>     : PCManFM (F)ile manager
+- <kbd>Super+e</kbd>     : Leafpad (E)ditor
+- <kbd>Super+m</kbd>     : VLC (M)edia player
+- <kbd>Super+w</kbd>     : Chromium (W)eb browser
+- <kbd>Super+q</kbd>     : Force (Q)uit
+- <kbd>Super+g</kbd>     : (g)Vim
+- <kbd>Super+l</kbd>     : (L)ock screen
+- <kbd>Super+r</kbd>     : Calculato(R)
+- <kbd>Alt+F2</kbd>      : gmrun dialog (program launcher)
+- <kbd>Alt+F3</kbd>      : dmenu (HUD-like program launcher with simple fuzzy completion)
 
 Desktop shortcuts:
 
