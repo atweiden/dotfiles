@@ -22,7 +22,7 @@ cd dotfiles
 Usage
 -----
 
-Log in and run `startx` to launch OpenBox.
+Log in and run `startx` to launch Openbox.
 
 **Keybindings**
 
