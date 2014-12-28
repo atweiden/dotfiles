@@ -51,13 +51,13 @@ Desktop shortcuts:
 - <kbd>Super+h</kbd> : toggle fully expand the current window horizontally
 - <kbd>Super+v</kbd> : toggle fully expand the current window vertically
 - <kbd>Super+c</kbd> : center the current window
-- <kbd>Super+<UP></kbd>   : move the current window up
-- <kbd>Super+<DOWN></kbd> : move the current window down
-- <kbd>Super+<RIGHT></kbd>: move the current window to the right
-- <kbd>Super+<LEFT></kbd> : move the current window to the left
-- <kbd>Alt+Super+<ARROW></kbd> : resize the current window
-- <kbd>Alt+Shift+<ARROW></kbd> : move the current window to a different desktop
-- <kbd>Super+<F1-F4></kbd> : switch to desktop #1-4
+- <kbd>Super+Up</kbd>   : move the current window up
+- <kbd>Super+Down</kbd> : move the current window down
+- <kbd>Super+Right</kbd>: move the current window to the right
+- <kbd>Super+Left</kbd> : move the current window to the left
+- <kbd>Alt+Super+Arrow</kbd> : resize the current window
+- <kbd>Alt+Shift+Arrow</kbd> : move the current window to a different desktop
+- <kbd>Super+F1-F4</kbd> : switch to desktop #1-4
 
 Mouse shortcuts:
 
