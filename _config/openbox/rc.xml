@@ -500,21 +500,6 @@
       <mousebind action="DoubleClick" button="Left">
         <action name="ToggleMaximizeFull"/>
       </mousebind>
-      <mousebind action="Press" button="Middle">
-        <action name="Lower"/>
-        <action name="FocusToBottom"/>
-        <action name="Unfocus"/>
-      </mousebind>
-      <mousebind action="Click" button="Up">
-        <action name="Shade"/>
-        <action name="FocusToBottom"/>
-        <action name="Unfocus"/>
-        <action name="Lower"/>
-      </mousebind>
-      <mousebind action="Click" button="Down">
-        <action name="Unshade"/>
-        <action name="Raise"/>
-      </mousebind>
       <mousebind action="Press" button="Right">
         <action name="Focus"/>
         <action name="Raise"/>
