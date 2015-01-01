@@ -200,7 +200,7 @@ endif
 
 " searches
 highlight clear Search
-highlight Search term=bold,underline cterm=bold,underline ctermfg=0 ctermbg=149 gui=bold,underline guifg=black guibg=#AFD75F
+highlight Search term=bold,underline cterm=bold,underline ctermfg=0 ctermbg=180 gui=bold,underline guifg=black guibg=#D7AF87
 highlight clear IncSearch
 highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=197 gui=bold guifg=black guibg=#FF005F
 
@@ -521,9 +521,9 @@ vnoremap <C-Q> <ESC>:qall<CR>
 
 " bind escape key
 call arpeggio#load()
+Arpeggio noremap jk <ESC>
 Arpeggio inoremap jk <ESC>
 Arpeggio cnoremap jk <C-C>
-Arpeggio xnoremap jk <ESC>
 
 " visually select the text that was last edited/pasted
 nnoremap <expr> gV '`[' . strpart(getregtype(), 0, 1) . '`]'
