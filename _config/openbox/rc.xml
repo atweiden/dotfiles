@@ -346,10 +346,10 @@
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <command>vlc</command>
+        <command>gnumeric</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>VLC</name>
+          <name>Gnumeric</name>
         </startupnotify>
       </action>
     </keybind>

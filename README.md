@@ -36,7 +36,7 @@ Program shortcuts:
 - <kbd>Super+t</kbd>     : LXTerminal (T)erminal
 - <kbd>Super+f</kbd>     : PCManFM (F)ile manager
 - <kbd>Super+e</kbd>     : Leafpad (E)ditor
-- <kbd>Super+m</kbd>     : VLC (M)edia player
+- <kbd>Super+m</kbd>     : Gnu(M)eric spreadsheet
 - <kbd>Super+w</kbd>     : Chromium (W)eb browser
 - <kbd>Super+q</kbd>     : Force (Q)uit
 - <kbd>Super+g</kbd>     : (g)Vim
