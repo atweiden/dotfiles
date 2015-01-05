@@ -346,15 +346,18 @@ set wildmode=list:longest,full
 " blocking possibly large directories that usually are
 " not of interest will speed up plugins like Command-T
 set wildignore+=*.o,*.obj,*.dll,*.pyc
-set wildignore=*~,*.DS_Store
-set wildignore=.git/*,.hg/*,.svn/*
+set wildignore+=*~,*.DS_Store
+set wildignore+=.git/*,.hg/*,.svn/*
 set wildignore+=*.gif,*.jpg,*.jpeg,*.png
 set wildignore+=*.class,*.jar
 set wildignore+=*.beam
 set wildignore+=*.hi,*.p_hi,*.p_o
 
 " give following files lower priority
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,CVS/,tags
+set suffixes+=.bak,~,.swp,.o,.info,.aux
+set suffixes+=.log,.dvi,.bbl,.blg,.brf
+set suffixes+=.cb,.ind,.idx,.ilg,.inx
+set suffixes+=.out,.toc,CVS/,tags
 
 " switch buffers without saving
 set hidden
