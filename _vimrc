@@ -719,8 +719,8 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- folds {{{
 
-" toggle folds with spacebar
-nnoremap <silent> <space> :exe ":silent! normal za"<CR>
+" toggle folds with g+spacebar
+nnoremap <silent> g<space> :exe ":silent! normal za"<CR>
 
 " focus just the current line with minimal number of folds open
 nnoremap <silent> <leader><space> :call FocusLine()<CR>
