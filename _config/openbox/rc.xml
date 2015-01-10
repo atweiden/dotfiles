@@ -172,7 +172,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-C-Q">
+    <keybind key="W-C-q">
       <action name="Exit">
         <prompt>no</prompt>
       </action>
@@ -353,7 +353,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-l">
+    <keybind key="W-C-l">
       <action name="Execute">
         <command>xlock -mode blank</command>
         <startupnotify>
