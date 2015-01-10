@@ -37,13 +37,14 @@ Program shortcuts:
 - <kbd>Super+l</kbd>      : LXTerminal terminal
 - <kbd>Super+f</kbd>      : PCManFM file manager
 - <kbd>Super+e</kbd>      : Leafpad editor
-- <kbd>Super+m</kbd>      : Gnumeric spreadsheet
+- <kbd>Super+m</kbd>      : VLC media player
 - <kbd>Super+w</kbd>      : Firefox web browser
-- <kbd>Super+q</kbd>      : Force quit target program
-- <kbd>Super+Ctrl+q</kbd> : Quit Openbox
 - <kbd>Super+g</kbd>      : Gvim
-- <kbd>Super+Ctrl+l</kbd> : Lock screen
 - <kbd>Super+r</kbd>      : Calculator
+- <kbd>Super+s</kbd>      : Gnumeric spreadsheet
+- <kbd>Super+q</kbd>      : Force quit target program
+- <kbd>Super+Ctrl+l</kbd> : Lock screen
+- <kbd>Super+Ctrl+q</kbd> : Quit Openbox
 - <kbd>Alt+F2</kbd>       : gmrun dialog (program launcher)
 - <kbd>Alt+F3</kbd>       : dmenu (HUD-like program launcher with simple fuzzy completion)
 

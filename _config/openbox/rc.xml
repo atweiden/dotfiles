@@ -355,10 +355,10 @@
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <command>gnumeric</command>
+        <command>vlc</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Gnumeric</name>
+          <name>VLC Media Player</name>
         </startupnotify>
       </action>
     </keybind>
@@ -377,6 +377,15 @@
         <startupnotify>
           <enabled>yes</enabled>
           <name>calculator</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <command>gnumeric</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>Gnumeric Spreadsheet</name>
         </startupnotify>
       </action>
     </keybind>

@@ -48,19 +48,22 @@ $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 
 ${font sans-serif:bold:size=8}SHORTCUT KEYS ${hr 2}
-${font sans-serif:normal:size=8}Alt+F2$alignr Run Dialog
-Alt+F3$alignr Dmenu
-Super+space$alignr Main Menu
-Super+t$alignr Terminal
-Super+f$alignr File Manager
-Super+e$alignr Editor
-Super+m$alignr Media Player
-Super+w$alignr Web Browser
-Super+q$alignr Force Quit
-Super+g$alignr gVim
-Super+l$alignr Lock
-Super+r$alignr Calculator
-Super+x$alignr Tiling Keybinds
+${font monospace:normal:size=8}Super+space${font sans-serif:normal:size=8}$alignr Main Menu
+${font monospace:normal:size=8}Super+t${font sans-serif:normal:size=8}$alignr Terminal
+${font monospace:normal:size=8}Super+l${font sans-serif:normal:size=8}$alignr LXTerminal
+${font monospace:normal:size=8}Super+f${font sans-serif:normal:size=8}$alignr File Manager
+${font monospace:normal:size=8}Super+w${font sans-serif:normal:size=8}$alignr Web Browser
+${font monospace:normal:size=8}Super+m${font sans-serif:normal:size=8}$alignr Media Player
+${font monospace:normal:size=8}Super+e${font sans-serif:normal:size=8}$alignr Editor
+${font monospace:normal:size=8}Super+g${font sans-serif:normal:size=8}$alignr Gvim
+${font monospace:normal:size=8}Super+r${font sans-serif:normal:size=8}$alignr Calculator
+${font monospace:normal:size=8}Super+s${font sans-serif:normal:size=8}$alignr Spreadsheet
+${font monospace:normal:size=8}Super+q${font sans-serif:normal:size=8}$alignr Force Quit
+${font monospace:normal:size=8}Super+ctrl+q${font sans-serif:normal:size=8}$alignr Quit
+${font monospace:normal:size=8}Super+ctrl+l${font sans-serif:normal:size=8}$alignr Lock
+${font monospace:normal:size=8}Alt+F2${font sans-serif:normal:size=8}$alignr Run Dialog
+${font monospace:normal:size=8}Alt+F3${font sans-serif:normal:size=8}$alignr Dmenu
+${font monospace:normal:size=8}Super+x${font sans-serif:normal:size=8}$alignr Alt Keybinds
 
 ${font sans-serif:bold:size=8}NETWORK ${hr 2}
 ${font sans-serif:normal:size=8}Host:$alignr$nodename
