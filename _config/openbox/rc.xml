@@ -298,10 +298,10 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>chromium</command>
+        <command>firefox</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Chromium</name>
+          <name>Firefox</name>
         </startupnotify>
       </action>
     </keybind>
@@ -315,6 +315,15 @@
       </action>
     </keybind>
     <keybind key="W-t">
+      <action name="Execute">
+        <command>urxvt</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>urxvt</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-l">
       <action name="Execute">
         <command>lxterminal</command>
         <startupnotify>

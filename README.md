@@ -33,11 +33,12 @@ on the desktop to open the main menu.*
 Program shortcuts:
 
 - <kbd>Super+space</kbd>  : main menu
-- <kbd>Super+t</kbd>      : LXTerminal terminal
+- <kbd>Super+t</kbd>      : URxvt terminal
+- <kbd>Super+l</kbd>      : LXTerminal terminal
 - <kbd>Super+f</kbd>      : PCManFM file manager
 - <kbd>Super+e</kbd>      : Leafpad editor
 - <kbd>Super+m</kbd>      : Gnumeric spreadsheet
-- <kbd>Super+w</kbd>      : Chromium web browser
+- <kbd>Super+w</kbd>      : Firefox web browser
 - <kbd>Super+q</kbd>      : Force quit target program
 - <kbd>Super+Ctrl+q</kbd> : Quit Openbox
 - <kbd>Super+g</kbd>      : Gvim
