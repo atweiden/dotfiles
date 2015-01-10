@@ -388,8 +388,8 @@ set backspace=2
 
 " number of screen lines around cursor
 set scrolloff=8
-set sidescrolloff=8
-set sidescroll=8
+set sidescrolloff=40
+set sidescroll=1
 
 " break lines at sensible place
 set linebreak
