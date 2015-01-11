@@ -105,7 +105,7 @@ URxvt*scrollColor        : #a8a8a8
 #bubblegum colorscheme, based on bloom's vim theme and xoria----------------------
 !black.normal     : xoria256.LineNr.guibg
 !black.bright     : black.normal.rgb - 8
-URxvt.color0      : #121212
+URxvt.color0      : #000000
 URxvt.color8      : #0a0a0a
 
 !red.normal       : red.bright.r - 8
@@ -147,7 +147,7 @@ URxvt.color15     : #ffffff
 !background       : xoria256.Normal.guibg
 !cursor           : xoria256.Cursor.guibg
 URxvt.foreground  : #a8a8a8
-URxvt.background  : #262626
+URxvt.background  : #000000
 URxvt.cursorColor : #d787af
 
 !bold             : xoria256.Type.guifg
@@ -168,7 +168,7 @@ Xterm*saveLines   : 65535
 XTerm*titeInhibit : true
 
 ! bubblegum colorscheme
-XTerm*color0      : #121212
+XTerm*color0      : #000000
 XTerm*color1      : #d75f5f
 XTerm*color2      : #00af87
 XTerm*color3      : #afd75f
@@ -185,7 +185,7 @@ XTerm*color13     : #8787d7
 XTerm*color14     : #87afff
 XTerm*color15     : #ffffff
 XTerm*foreground  : #a8a8a8
-XTerm*background  : #262626
+XTerm*background  : #000000
 XTerm*cursorColor : #d787af
 XTerm*colorBD     : #5fafd7
 XTerm*colorUL     : #00afd7
