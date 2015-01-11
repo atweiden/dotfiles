@@ -7,6 +7,7 @@
 function slur() {
 [[ -x /usr/bin/quixand ]] \
   && quixand -p ~/.bash_history \
+                ~/.gmrun_history \
                 ~/.lesshst \
                 ~/.local/share/recently-used.xbel \
                 ~/.viminfo \

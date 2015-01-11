@@ -8,6 +8,7 @@
 
 [[ -x /usr/bin/quixand ]] \
   && quixand ~/.bash_history \
+             ~/.gmrun_history \
              ~/.lesshst \
              ~/.local/share/recently-used.xbel \
              ~/.viminfo \
