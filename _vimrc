@@ -397,8 +397,8 @@ set linebreak
 " wrap on these chars
 set whichwrap+=<,>,[,]
 
-" hook arrow for wrapped characters
-set showbreak=↪
+" indicate wrapped characters
+set showbreak=⁍
 
 " copy indent from current line when starting a new line
 set autoindent
