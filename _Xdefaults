@@ -87,7 +87,7 @@ URxvt*skipBuiltinGlyphs  : true
 ! no: disable tab new button
 URxvt*tabbed.new-button  : no
 ! yes: disable the tab bar if only one tab is present
-URxvt*tabbed.autohide    : no
+URxvt*tabbed.autohide    : yes
 ! no: disable urxvt default title
 URxvt.tabbed.title       : no
 ! colors
