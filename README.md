@@ -27,8 +27,8 @@ Log in and run `startx` to launch Openbox.
 **Keybindings**
 
 *The Windows symbol key is the 'Super' key. For example,
-<kbd>Windows+spacebar</kbd> opens the main menu. Right-click anywhere
-on the desktop to open the main menu.*
+<kbd>Windows+spacebar</kbd>, displayed below as <kbd>Super+space</kbd>
+opens the main menu.*
 
 Program shortcuts:
 
@@ -68,65 +68,6 @@ Mouse shortcuts:
 - mousewheel-scrolldown on app icon in lower panel: minimize app to lower panel
 - mousewheel-scrollup on app icon in lower panel: restore app to size from minimized in lower panel
 - right-click on app icon in lower panel: quit app / close app window
-
-
-Recommended color themes for Vim
---------------------------------
-
-#### Full support for Vim and Gvim
-
-*These colors work well with Vim and Gvim, without any additional
-configuration.*
-
-- darcula
-- eddie
-- gruvbox
-- [hybrid](https://i.imgur.com/SQL9D4c.png)
-- [iceberg](https://i.imgur.com/8Iv1jUw.png)
-- [jellyx](https://i.imgur.com/BVOdw4B.png)
-- kongo
-- lucius
-- mirodark
-- [molokai](https://i.imgur.com/sjDVniP.png)
-- neverland
-- [nighted](https://i.imgur.com/zpPx9x9.png)
-- pencil
-- scame (from vim-mimicpak)
-- seoul256
-- sorcerer
-- [tomorrow](https://i.imgur.com/wvUeX29.png)
-- wallaby
-- [zenburn](https://i.imgur.com/jkGfXeF.png)
-
-#### Gvim only
-
-*Certain Gvim-only colors can work well in terminal Vim, but only if
-you modify your terminal's colors to match. Others may not work in
-terminal Vim no matter what you do.*
-
-- base16
-- baycomb
-- briofita
-- liquidcarbon
-- nefertiti
-- oceanlight
-- psclone (from vim-mimicpak)
-- solarized ([dark](https://i.imgur.com/Gw7vqLt.png)/[light](https://i.imgur.com/YEHys2H.png))
-- vibrantink
-- vimhut (from vim-mimicpak)
-
-#### 8-color terminal only
-
-*Only works if you modify your terminal's colors to match.*
-
-- miro8
-
-#### Custom
-
-- Entering the command `:colorscheme custom` will black out the
-  background, which is helpful if you prefer solid black backgrounds
-  to the dark gray colors that are present in some themes. Thanks to
-  [@jmcantrell](https://github.com/jmcantrell).
 
 
 Credits
