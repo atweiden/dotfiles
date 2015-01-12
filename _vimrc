@@ -303,8 +303,8 @@ set fileformats=unix,dos,mac
 " always keep cursor in the same column if possible
 set nostartofline
 
-" keep cursor in same horizontal position while scrolling
-set virtualedit=all
+" enable virtual edit in visual block mode
+set virtualedit=block
 
 " no annoying error noises
 set noerrorbells
