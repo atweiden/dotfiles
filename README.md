@@ -32,42 +32,48 @@ opens the main menu.*
 
 Program shortcuts:
 
-- <kbd>Super+space</kbd>  : main menu
-- <kbd>Super+t</kbd>      : URxvt terminal
-- <kbd>Super+l</kbd>      : LXTerminal terminal
-- <kbd>Super+f</kbd>      : PCManFM file manager
-- <kbd>Super+e</kbd>      : Leafpad editor
-- <kbd>Super+m</kbd>      : VLC media player
-- <kbd>Super+w</kbd>      : Firefox web browser
-- <kbd>Super+g</kbd>      : Gvim
-- <kbd>Super+r</kbd>      : Calculator
-- <kbd>Super+s</kbd>      : Gnumeric spreadsheet
-- <kbd>Super+q</kbd>      : Force quit target program
-- <kbd>Super+Ctrl+l</kbd> : Lock screen
-- <kbd>Super+Ctrl+q</kbd> : Quit Openbox
-- <kbd>Alt+F2</kbd>       : gmrun dialog (program launcher)
-- <kbd>Alt+F3</kbd>       : dmenu (HUD-like program launcher with simple fuzzy completion)
+Shortcut                | Action
+---                     | ---
+<kbd>Super+space</kbd>  | Main menu
+<kbd>Super+t</kbd>      | URxvt terminal
+<kbd>Super+l</kbd>      | LXTerminal terminal
+<kbd>Super+f</kbd>      | PCManFM file manager
+<kbd>Super+e</kbd>      | Leafpad editor
+<kbd>Super+m</kbd>      | VLC media player
+<kbd>Super+w</kbd>      | Firefox web browser
+<kbd>Super+g</kbd>      | Gvim
+<kbd>Super+r</kbd>      | Calculator
+<kbd>Super+s</kbd>      | Gnumeric spreadsheet
+<kbd>Super+q</kbd>      | Force quit target program
+<kbd>Super+Ctrl+l</kbd> | Lock screen
+<kbd>Super+Ctrl+q</kbd> | Quit Openbox
+<kbd>Alt+F2</kbd>       | gmrun dialog (program launcher)
+<kbd>Alt+F3</kbd>       | dmenu (HUD-like program launcher with simple fuzzy completion)
 
 Desktop shortcuts:
 
-- <kbd>Super+a</kbd> : toggle maximize the current window
-- <kbd>Super+h</kbd> : toggle fully expand the current window horizontally
-- <kbd>Super+v</kbd> : toggle fully expand the current window vertically
-- <kbd>Super+c</kbd> : center the current window
-- <kbd>Super+Up</kbd>   : move the current window up
-- <kbd>Super+Down</kbd> : move the current window down
-- <kbd>Super+Right</kbd>: move the current window to the right
-- <kbd>Super+Left</kbd> : move the current window to the left
-- <kbd>Alt+Super+Arrow</kbd> : resize the current window
-- <kbd>Alt+Shift+Arrow</kbd> : move the current window to a different desktop
-- <kbd>Super+F1-F4</kbd> : switch to desktop #1-4
+Shortcut                   | Action
+---                        | ---
+<kbd>Super+a</kbd>         | Toggle maximize the current window
+<kbd>Super+h</kbd>         | Toggle fully expand the current window horizontally
+<kbd>Super+v</kbd>         | Toggle fully expand the current window vertically
+<kbd>Super+c</kbd>         | Center the current window
+<kbd>Super+Up</kbd>        | Move the current window up
+<kbd>Super+Down</kbd>      | Move the current window down
+<kbd>Super+Right</kbd>     | Move the current window to the right
+<kbd>Super+Left</kbd>      | Move the current window to the left
+<kbd>Alt+Super+Arrow</kbd> | Resize the current window
+<kbd>Alt+Shift+Arrow</kbd> | Move the current window to a different desktop
+<kbd>Super+F1-F4</kbd>     | Switch to desktop #1-4
 
 Mouse shortcuts:
 
-- right-click anywhere on desktop: main menu
-- mousewheel-scrolldown on app icon in lower panel: minimize app to lower panel
-- mousewheel-scrollup on app icon in lower panel: restore app to size from minimized in lower panel
-- right-click on app icon in lower panel: quit app / close app window
+Shortcut                                         | Action
+---                                              | ---
+Right-click anywhere on desktop                  | Main menu
+Mousewheel-scrolldown on app icon in lower panel | Minimize app to lower panel
+Mousewheel-scrollup on app icon in lower panel   | Restore app to size from minimized in lower panel
+Right-click on app icon in lower panel           | Quit app / close app window
 
 
 Credits
