@@ -1,5 +1,5 @@
-Dotfiles for Arch
-=================
+Dotfiles
+========
 
 Screenshots
 -----------
