@@ -171,7 +171,7 @@ function! plug#end()
           endif
           call add(s:triggers[name].map, cmd)
         elseif cmd =~ '^[A-Z]'
-          if !exists(':'.cmd)
+          if exists(':'.cmd) != 2
             execute printf(
             \ 'command! -nargs=* -range -bang %s call s:lod_cmd(%s, "<bang>", <line1>, <line2>, <q-args>, %s)',
             \ cmd, string(cmd), string(name))
@@ -914,7 +914,7 @@ while 1 " Without TCO, Vim stack is bound to explode
     if valid
       if pull
         call s:spawn(name,
-          \ printf('git checkout -q %s 2>&1 && git pull --progress --no-rebase origin %s 2>&1 && git submodule update --init --recursive 2>&1',
+          \ printf('(git fetch --progress 2>&1 && git checkout -q %s 2>&1 && git merge --ff-only origin/%s 2>&1 && git submodule update --init --recursive 2>&1)',
           \ s:shellesc(spec.branch), s:shellesc(spec.branch)), { 'dir': spec.dir })
       else
         let s:jobs[name] = { 'running': 0, 'result': 'Already installed', 'error': 0 }
@@ -1125,7 +1125,7 @@ function! s:update_ruby()
               else
                 if pull
                   log.call name, 'Updating ...', :update
-                  bt.call "#{cd} #{dir} && git checkout -q #{branch} 2>&1 && (git pull --no-rebase origin #{branch} #{progress} 2>&1 && #{subm})", name, :update, nil
+                  bt.call "#{cd} #{dir} && (git fetch #{progress} 2>&1 && git checkout -q #{branch} 2>&1 && git merge --ff-only origin/#{branch} 2>&1 && #{subm})", name, :update, nil
                 else
                   [true, skip]
                 end
@@ -1266,7 +1266,7 @@ function! s:clean(force)
     call append(line('$'), 'Already clean.')
   else
     call inputsave()
-    let yes = a:force || (input('Proceed? (Y/N) ') =~? '^y')
+    let yes = a:force || (input('Proceed? (y/N) ') =~? '^y')
     call inputrestore()
     if yes
       for dir in todo
@@ -1483,7 +1483,7 @@ endfunction
 function! s:revert()
   let name = s:find_name(line('.'))
   if empty(name) || !has_key(g:plugs, name) ||
-    \ input(printf('Revert the update of %s? (Y/N) ', name)) !~? '^y'
+    \ input(printf('Revert the update of %s? (y/N) ', name)) !~? '^y'
     return
   endif
 
