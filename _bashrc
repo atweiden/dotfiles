@@ -173,7 +173,7 @@ alias bzip2='bzip2 -9'
 alias grep='grep --ignore-case --color=auto'
 alias fgrep='fgrep --ignore-case --color=auto'
 alias egrep='egrep --ignore-case --color=auto'
-[[ -x /usr/bin/fzf ]] && alias fzf='fzf --multi --no-sort --sort 10000'
+[[ -x /usr/bin/fzf ]] && alias fzf='fzf --multi'
 [[ -x /usr/bin/locate ]] && alias locate='locate --ignore-case'
 if [[ -x /usr/bin/icdiff ]]; then
   alias diff='icdiff'
