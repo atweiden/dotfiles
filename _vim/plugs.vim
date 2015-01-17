@@ -415,6 +415,7 @@ Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+Plug 'ason0x43/vim-js-indent', { 'for': [ 'html', 'javascript', 'typescript' ] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
@@ -422,6 +423,7 @@ Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
 Plug 'unc0/vim-egs', { 'for': 'egs' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'mitsuhiko/vim-json', { 'for': 'json' }
 Plug 'GutenYe/json5.vim', { 'for': 'json5' }
 Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
