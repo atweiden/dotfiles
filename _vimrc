@@ -542,6 +542,10 @@ vnoremap < <gv
 nnoremap > >>
 nnoremap < <<
 
+" quick virtualedit
+cabbrev vba set virtualedit=all
+cabbrev vbb set virtualedit=block
+
 " }}}
 " --- don't move back the cursor one position when exiting insert mode {{{
 
@@ -616,6 +620,9 @@ nnoremap <leader><leader>cr /\n\{3,\}/s+1<CR>
 
 " }}}
 " --- writing {{{
+
+" quick write
+nnoremap <silent> <leader>w :w<CR>
 
 " sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
