@@ -282,8 +282,6 @@ nnoremap <silent> <leader>u :syntax sync fromstart<CR>:redraw!<CR>
 au VimResized * :wincmd =
 
 " fix background color bleed in tmux / screen
-" http://snk.tuxfamily.org/log/vim-256color-bce.html
-" http://sunaku.github.io/vim-256color-bce.html
 set t_ut=""
 
 " }}}
@@ -565,7 +563,7 @@ autocmd BufReadPost *
 " --- search and replace {{{
 
 " use vimgrep without autocommands being invoked
-nmap <leader>nv :noautocmd vim /
+nnoremap <leader>nv :noautocmd vim /
 
 " highlight all occurrences of current word
 nnoremap <silent> <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
@@ -711,7 +709,10 @@ nnoremap L g_
 vnoremap L g_
 
 " move to middle of current line
-nmap <expr> gM (strlen(getline("."))/2)."<Bar>"
+nnoremap <expr> gM (strlen(getline("."))/2)."<Bar>"
+
+" move to last change
+nnoremap gI `.
 
 " <PageUp> and <PageDown> do silly things in normal mode with folds
 noremap <PageUp> <C-U>
@@ -774,9 +775,9 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 " --- buffers {{{
 
 " buffer navigation
-nmap <silent> gd :bdelete<CR>
-nmap <silent> gb :bnext<CR>
-nmap <silent> gB :bprev<CR>
+nnoremap <silent> gd :bdelete<CR>
+nnoremap <silent> gb :bnext<CR>
+nnoremap <silent> gB :bprev<CR>
 
 " }}}
 " --- windows {{{
@@ -801,6 +802,12 @@ nnoremap <silent> <M-J> <C-W>J
 nnoremap <silent> <M-K> <C-W>K
 nnoremap <silent> <M-L> <C-W>L
 
+" create a split on the given side
+nnoremap <leader>swh :leftabove vsp<CR>
+nnoremap <leader>swl :rightbelow vsp<CR>
+nnoremap <leader>swk :leftabove sp<CR>
+nnoremap <leader>swj :rightbelow sp<CR>
+
 " scroll specified file simultaneously in vsplit window
 nnoremap <leader>sb :SplitScrollSpecified<space>
 
@@ -820,10 +827,7 @@ noremap <leader>te :tabedit <C-R>=expand("%:p:h")<CR>/
 " allows typing :tabv myfile.txt to view the specified file in a new read-only tab
 cabbrev tabv tab sview +setlocal\ nomodifiable
 
-" http://vim.wikia.com/wiki/Using_tab_pages
 " press Shift-F12 to show all buffers in tabs, or to close all tabs
-" it alternately executes :tab ball and :tabo
-" see also: vim -p file1 file2
 let notabs = 0
 nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
 
