@@ -77,6 +77,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux-conf
 au BufEnter,BufRead,BufNewFile,BufWrite {*.toml} set ft=toml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tup,Tupfile} set ft=tup
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ts} set ft=typescript
 au BufEnter,BufRead,BufNewFile,BufWrite {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
 au BufEnter,BufRead,BufNewFile,BufWrite {*vimshrc*} set ft=vimshrc
 au BufEnter,BufRead,BufNewFile,BufWrite {*.automount,*.mount,*.path,*.service,*.socket,*.swap,*.target,*.timer} set ft=systemd
