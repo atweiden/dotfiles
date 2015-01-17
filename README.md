@@ -106,6 +106,7 @@ Credits
 - https://github.com/khughitt/dotfiles
 - https://github.com/knewter/dotfiles
 - https://github.com/kongo2002/dotfiles
+- https://github.com/leafgarland/vimfiles
 - https://github.com/lervag/dotvim
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/nvie/vimrc
