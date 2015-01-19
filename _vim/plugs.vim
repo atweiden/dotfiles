@@ -442,7 +442,7 @@ Plug 'atweiden/merlin.vim', { 'for': 'ocaml', 'branch': 'vim' }
 Plug 'def-lkb/vimbufsync', { 'for': 'ocaml' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
-Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
+"Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
 Plug 'c9s/perlomni.vim', { 'for': 'perl' }
 Plug 'yko/mojo.vim', { 'for': 'html.epl' }
 Plug 'hhvm/vim-hack', { 'for': 'php' }
@@ -523,7 +523,7 @@ Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
 Plug 'whatyouhide/vim-tmux-syntax', { 'for': 'tmux-conf' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
+"Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors
 Plug 'vim-scripts/AutumnLeaf'
