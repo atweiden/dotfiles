@@ -673,18 +673,22 @@ endif
 " toggle line wrap
 noremap <silent> <F3> :set nowrap!<CR>
 inoremap <silent> <F3> <C-O>:set nowrap!<CR>
+vnoremap <silent> <F3> <ESC>:set nowrap!<CR>gv
 
 " toggle line numbers
 nnoremap <silent> <F4> :NumbersToggle<CR>
 inoremap <silent> <F4> <C-O>:NumbersToggle<CR>
+vnoremap <silent> <F4> <ESC>:NumbersToggle<CR>gv
 
 " toggle line and column highlighting
 noremap <silent> <F5> :set nocursorline! nocursorcolumn!<CR>
 inoremap <silent> <F5> <C-O>:set nocursorline! nocursorcolumn!<CR>
+vnoremap <silent> <F5> <ESC>:set nocursorline! nocursorcolumn!<CR>gv
 
 " toggle spell checking
 noremap <silent> <F7> :set spell! spelllang=en_us<CR>
 inoremap <silent> <F7> <C-O>:set spell! spelllang=en_us<CR>
+vnoremap <silent> <F7> <ESC>:set spell! spelllang=en_us<CR>gv
 
 " convert all tabs into spaces and continue session with spaces
 nnoremap <silent><expr> g<M-t> ':set expandtab<CR>:retab!<CR>:echo "Tabs have been converted to spaces"<CR>'
@@ -729,8 +733,11 @@ nnoremap <C-Y> 4<C-Y>
 " Programming
 " --- tabs {{{
 
-" set tabstop, shiftwidth and softtabstop to same value
-nnoremap <silent> <C-S-Tab> :call SummarizeTabs()<CR>
+" set tabstop, shiftwidth and softtabstop to same (specified) value
+nnoremap <leader>ts :Stab<CR>
+
+" echo tabstop, shiftwidth, softtabstop and expandtab values
+nnoremap <leader>st :call SummarizeTabs()<CR>
 
 "  }}}
 " --- folds {{{
@@ -770,6 +777,8 @@ nnoremap <silent> <leader>jc /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
 
 " toggle between hex and binary, after opening file with `vim -b`
 noremap <silent> <F9> :call HexMe()<CR>
+inoremap <silent> <F9> <C-O>:call HexMe()<CR>
+vnoremap <silent> <F9> <ESC>:call HexMe()<CR>gv
 
 " }}}
 " --- conceal {{{
