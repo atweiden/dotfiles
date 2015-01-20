@@ -434,7 +434,7 @@ Plug 'lfairy/lilyvim', { 'for': 'lilypond' }
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
 Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
 Plug 'leafo/moonscript-vim', { 'for': 'moon' }
-Plug 'plasticboy/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
+Plug 'tpope/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'mattly/vim-markdown-enhancements', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'nelstrom/vim-markdown-folding', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'zah/nimrod.vim', { 'for': 'nim' }
