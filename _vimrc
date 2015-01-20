@@ -401,17 +401,19 @@ set showbreak=⁍
 " copy indent from current line when starting a new line
 set autoindent
 
-" let <Tab> count for N spaces in the file
+" sets the width of a <Tab> character
 set tabstop=2
 
-" use N spaces for each step of (auto)indent
-set shiftwidth=2
+" when enabled, causes spaces to be used instead of <Tab> characters
+set expandtab
 
-" let <Tab> count for N spaces while making edits
+" when enabled, sets the amount of whitespace to be inserted/removed on <Tab> / <BS>
+" if softtabstop < tabstop, and expandtab is disabled (with noexpandtab), vim will start <Tab>s with whitespace
+" this initial whitespace will be dynamically converted to / from <Tab> characters as the indent level of 'tabstop' is reached / unreached
 set softtabstop=2
 
-" use the appropriate number of spaces to insert a <Tab>
-set expandtab
+" sets the amount of space to insert / remove while using indentation commands in normal mode (>, <)
+set shiftwidth=2
 
 " round indent to multiple of shiftwidth
 set shiftround
@@ -725,6 +727,12 @@ nnoremap <C-Y> 4<C-Y>
 " }}}
 
 " Programming
+" --- tabs {{{
+
+" set tabstop, shiftwidth and softtabstop to same value
+nnoremap <silent> <C-S-Tab> :call SummarizeTabs()<CR>
+
+"  }}}
 " --- folds {{{
 
 " toggle folds with g+spacebar
