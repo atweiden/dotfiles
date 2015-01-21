@@ -451,6 +451,7 @@ Plug '2072/vim-syntax-for-PHP', { 'for': 'php' }
 Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
 Plug 'vim-scripts/phpErrorMarker', { 'for': 'php' }
 Plug 'vim-scripts/phpfolding.vim', { 'for': 'php' }
+Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv', { 'on': [ 'VirtualEnvActivate',
                                           \ 'VirtualEnvDeactivate',
