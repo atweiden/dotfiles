@@ -234,6 +234,12 @@ fi
 
 
 # -----------------------------------------------------------------------------
+# CommaCD
+
+[[ -r "/usr/share/commacd/commacd.bash" ]] && . /usr/share/commacd/commacd.bash
+
+
+# -----------------------------------------------------------------------------
 # Host-specific config
 
 [[ -f ~/.bashrc.$HOSTNAME ]] && . ~/.bashrc.$HOSTNAME
