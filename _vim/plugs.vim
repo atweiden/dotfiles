@@ -28,6 +28,9 @@ Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
                                \ 'TabooRename',
                                \ 'TabooReset' ] }
 
+" folds
+Plug 'Harenome/vim-neatfoldtext'
+
 " filesystem
 Plug 'dockyard/vim-easydir'
 Plug 'scrooloose/nerdtree', { 'on': [ 'Bookmark',

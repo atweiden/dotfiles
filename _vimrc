@@ -430,9 +430,6 @@ set foldlevel=99
 " automatically open folds on these commands
 set foldopen=hor,insert,mark,percent,tag,undo
 
-" customize fold text shown
-set foldtext=MyFoldText()
-
 " deepest fold is 3 levels
 set foldnestmax=3
 
