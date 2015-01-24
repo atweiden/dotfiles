@@ -79,9 +79,8 @@ Right-click on app icon in lower panel           | Quit app / close app window
 Credits
 -------
 
-- http://apaulodesign.com/vimrc.html
-- http://static.askapache.com/askapache-bash-profile.txt
-- http://dotfiles.github.com
+- https://apaulodesign.com/vimrc.html
+- https://dotfiles.github.com
 - https://github.com/alessioalex/dotfiles
 - https://github.com/begriffs/haskell-vim-now
 - https://github.com/ciaranm/dotfiles
