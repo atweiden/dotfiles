@@ -1,0 +1,10 @@
+:verbose: true
+:sources:
+- https://rubygems.org
+- https://gems.github.com
+:benchmark: false
+:update_sources: true
+install: --no-rdoc --no-ri
+update: --no-rdoc --no-ri
+search: --remote
+specification: --remote

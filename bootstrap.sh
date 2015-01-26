@@ -49,6 +49,7 @@ for dotfile in $HOME/.ackrc          \
                $HOME/.dir_colors     \
                $HOME/.dunstrc        \
                $HOME/.functions.d    \
+               $HOME/.gemrc          \
                $HOME/.gitconfig      \
                $HOME/.gitignore      \
                $HOME/.gitattributes  \
@@ -113,6 +114,7 @@ for dotfile in ackrc          \
                curlrc         \
                dir_colors     \
                dunstrc        \
+               gemrc          \
                gitattributes  \
                gitconfig      \
                gitignore      \

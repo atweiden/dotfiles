@@ -113,6 +113,7 @@ Credits
 - https://github.com/pocke/dotfiles
 - https://github.com/prurigro/darkcloud-vimconfig
 - https://github.com/rafi/.config
+- https://github.com/rhysd/dotfiles
 - https://github.com/saimn/dotfiles
 - https://github.com/Schnouki/dotfiles
 - https://github.com/Shougo/shougo-s-github
