@@ -792,6 +792,12 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 nnoremap <silent> gd :bdelete<CR>
 nnoremap <silent> gb :bnext<CR>
 nnoremap <silent> gB :bprev<CR>
+nnoremap <silent> <leader>1 :<C-U>buffer 1<CR>
+nnoremap <silent> <leader>2 :<C-U>buffer 2<CR>
+nnoremap <silent> <leader>3 :<C-U>buffer 3<CR>
+nnoremap <silent> <leader>4 :<C-U>buffer 4<CR>
+nnoremap <silent> <leader>5 :<C-U>buffer 5<CR>
+nnoremap <silent> <leader>6 :<C-U>buffer 6<CR>
 
 " }}}
 " --- windows {{{

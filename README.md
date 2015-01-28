@@ -125,6 +125,7 @@ Credits
 - https://github.com/spf13/spf13-vim
 - https://github.com/square/maximum-awesome
 - https://github.com/ton/dotfiles
+- https://github.com/vially/dotconfig
 - https://github.com/wavded/dotfiles
 - https://github.com/whatyouhide/dotfiles
 - https://github.com/wnodom/wnodom-vim-environment
