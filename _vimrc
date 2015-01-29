@@ -203,9 +203,9 @@ endif
 
 " searches
 highlight clear Search
-highlight Search term=bold cterm=bold ctermfg=0 ctermbg=11 gui=bold guifg=black guibg=#FFFF00
+highlight Search term=bold cterm=bold ctermfg=0 ctermbg=191 gui=bold guifg=black guibg=#DFFF5F
 highlight clear IncSearch
-highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=202 gui=bold guifg=black guibg=#FF5F00
+highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=214 gui=bold guifg=black guibg=#FFAF00
 
 " matching parens
 highlight clear MatchParen
@@ -792,12 +792,12 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 nnoremap <silent> gd :bdelete<CR>
 nnoremap <silent> gb :bnext<CR>
 nnoremap <silent> gB :bprev<CR>
-nnoremap <silent> <leader>1 :<C-U>buffer 1<CR>
-nnoremap <silent> <leader>2 :<C-U>buffer 2<CR>
-nnoremap <silent> <leader>3 :<C-U>buffer 3<CR>
-nnoremap <silent> <leader>4 :<C-U>buffer 4<CR>
-nnoremap <silent> <leader>5 :<C-U>buffer 5<CR>
-nnoremap <silent> <leader>6 :<C-U>buffer 6<CR>
+nnoremap <leader>1 :<C-U>buffer 1<CR>
+nnoremap <leader>2 :<C-U>buffer 2<CR>
+nnoremap <leader>3 :<C-U>buffer 3<CR>
+nnoremap <leader>4 :<C-U>buffer 4<CR>
+nnoremap <leader>5 :<C-U>buffer 5<CR>
+nnoremap <leader>6 :<C-U>buffer 6<CR>
 
 " }}}
 " --- windows {{{
