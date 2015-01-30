@@ -18,5 +18,6 @@ nmap ga <Plug>(breeze-next-attribute-hl)
 " move to the previous attribute
 nmap gA <Plug>(breeze-prev-attribute-hl)
 
+" highlight all jump marks in bold red
 highlight clear BreezeJumpMark
 highlight BreezeJumpMark cterm=bold ctermfg=9 gui=bold guifg=red
