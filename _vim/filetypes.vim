@@ -49,6 +49,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.less} set ft=less
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ly,*.ily} set ft=lilypond
 au BufEnter,BufRead,BufNewFile,BufWrite {*.lisp} set ft=lisp
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ll} set ft=llvm
+au BufEnter,BufRead,BufNewFile,BufWrite {*.ls,*Slakefile} set ft=ls
 au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
 au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set ft=markdown conceallevel=0
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim

@@ -73,6 +73,18 @@ Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 
 " movement
+Plug 'gcmt/breeze.vim', { 'for': [ 'eelixir',
+                                 \ 'egs',
+                                 \ 'ejs',
+                                 \ 'eruby',
+                                 \ 'hamlet',
+                                 \ 'html',
+                                 \ 'html.epl',
+                                 \ 'html.handlebars',
+                                 \ 'html.mustache',
+                                 \ 'javascript',
+                                 \ 'jinja',
+                                 \ 'php' ] }
 Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
@@ -416,9 +428,42 @@ Plug 'mustache/vim-mustache-handlebars', { 'for': [ 'html.handlebars',
 Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
 Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
-Plug 'jason0x43/vim-js-indent', { 'for': [ 'html', 'javascript', 'typescript' ] }
+Plug 'othree/yajs.vim', { 'for': [ 'eelixir',
+                                 \ 'egs',
+                                 \ 'ejs',
+                                 \ 'eruby',
+                                 \ 'haml',
+                                 \ 'hamlet',
+                                 \ 'html',
+                                 \ 'html.epl',
+                                 \ 'html.handlebars',
+                                 \ 'html.mustache',
+                                 \ 'jade',
+                                 \ 'javascript',
+                                 \ 'jinja',
+                                 \ 'php',
+                                 \ 'slim' ] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': [ 'coffeescript',
+                                                        \ 'eelixir',
+                                                        \ 'egs',
+                                                        \ 'ejs',
+                                                        \ 'eruby',
+                                                        \ 'haml',
+                                                        \ 'hamlet',
+                                                        \ 'html',
+                                                        \ 'html.epl',
+                                                        \ 'html.handlebars',
+                                                        \ 'html.mustache',
+                                                        \ 'jade',
+                                                        \ 'javascript',
+                                                        \ 'jinja',
+                                                        \ 'livescript',
+                                                        \ 'php',
+                                                        \ 'slim',
+                                                        \ 'typescript' ] }
+Plug 'jason0x43/vim-js-indent', { 'for': [ 'html',
+                                         \ 'javascript',
+                                         \ 'typescript' ] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
@@ -426,6 +471,8 @@ Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
 Plug 'unc0/vim-egs', { 'for': 'egs' }
+Plug 'nikvdp/ejs-syntax', { 'for': 'ejs' }
+Plug 'gkz/vim-ls', { 'for': 'ls' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'mitsuhiko/vim-json', { 'for': 'json' }
 Plug 'GutenYe/json5.vim', { 'for': 'json5' }
