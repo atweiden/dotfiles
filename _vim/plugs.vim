@@ -449,6 +449,7 @@ Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'c9s/perlomni.vim', { 'for': 'perl' }
 Plug 'yko/mojo.vim', { 'for': 'html.epl' }
 Plug 'hhvm/vim-hack', { 'for': 'php' }
+Plug 'mxw/vim-xhp', { 'for': 'php' }
 Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
 Plug '2072/vim-syntax-for-PHP', { 'for': 'php' }
 Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
