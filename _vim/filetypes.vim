@@ -38,7 +38,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.jade} set ft=jade
 au BufEnter,BufRead,BufNewFile,BufWrite {*.java} set ft=java
 au BufEnter,BufRead,BufNewFile,BufWrite {*.javap} set ft=java-bytecode
 au BufEnter,BufRead,BufNewFile,BufWrite {pom.xml} set ft=pom
-au BufEnter,BufRead,BufNewFile,BufWrite {*.js,*.jsm,*.jss,.jshintrc,Jakefile} set ft=javascript
+au BufEnter,BufRead,BufNewFile,BufWrite {*.js,*.jsm,*.jss,*.jsx,.jshintrc,Jakefile} set ft=javascript
 au BufEnter,BufRead,BufNewFile,BufWrite {*.json,*.jsonp} set ft=json
 au BufEnter,BufRead,BufNewFile,BufWrite {*.json5} set ft=json5
 au BufEnter,BufRead,BufNewFile,BufWrite {*.j2,*.jinja,*.jinja2} set ft=jinja
@@ -53,7 +53,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
 au BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set ft=markdown conceallevel=0
 au BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
-au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.ctp,*.hh,*.hhi} set ft=php
+au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.phpt,*.ctp,*.hh,*.hhi} set ft=php
 au BufEnter,BufRead,BufNewFile,BufWrite {.AURINFO,.SRCINFO} set ft=PKGBUILD
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t} set ft=perl
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pp} set ft=puppet

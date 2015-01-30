@@ -1,1 +1,1 @@
-let g:used_javascript_libs = 'jquery,underscore'
+let g:used_javascript_libs = 'flux,jquery,react'
