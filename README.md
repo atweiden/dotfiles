@@ -57,6 +57,7 @@ Shortcut                   | Action
 <kbd>Super+a</kbd>         | Toggle maximize the current window
 <kbd>Super+h</kbd>         | Toggle fully expand the current window horizontally
 <kbd>Super+v</kbd>         | Toggle fully expand the current window vertically
+<kbd>Super+F11</kbd>       | Toggle full screen on the current window
 <kbd>Super+c</kbd>         | Center the current window
 <kbd>Super+Up</kbd>        | Move the current window up
 <kbd>Super+Down</kbd>      | Move the current window down
