@@ -69,12 +69,13 @@ Shortcut                   | Action
 
 Mouse shortcuts:
 
-Shortcut                                         | Action
----                                              | ---
-Right-click anywhere on desktop                  | Main menu
-Mousewheel-scrolldown on app icon in lower panel | Minimize app to lower panel
-Mousewheel-scrollup on app icon in lower panel   | Restore app to size from minimized in lower panel
-Right-click on app icon in lower panel           | Quit app / close app window
+Shortcut                                               | Action
+---                                                    | ---
+Right-click anywhere on desktop                        | Main menu
+Mousewheel-scrolldown on app icon in lower panel       | Minimize app to lower panel
+Mousewheel-scrollup on app icon in lower panel         | Restore app to size from minimized in lower panel
+Right-click on app icon in lower panel                 | Quit app / close app window
+Left-click and drag window titlebar past desktop sides | Move window to adjacent desktop
 
 
 Credits
