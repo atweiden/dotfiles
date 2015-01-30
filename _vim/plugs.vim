@@ -418,7 +418,7 @@ Plug 'vim-scripts/iptables', { 'for': 'udev' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
-Plug 'ason0x43/vim-js-indent', { 'for': [ 'html', 'javascript', 'typescript' ] }
+Plug 'jason0x43/vim-js-indent', { 'for': [ 'html', 'javascript', 'typescript' ] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
