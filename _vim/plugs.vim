@@ -84,7 +84,9 @@ Plug 'gcmt/breeze.vim', { 'for': [ 'eelixir',
                                  \ 'html.mustache',
                                  \ 'javascript',
                                  \ 'jinja',
-                                 \ 'php' ] }
+                                 \ 'markdown',
+                                 \ 'php',
+                                 \ 'xml' ] }
 Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
