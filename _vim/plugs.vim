@@ -3,7 +3,7 @@ silent! if plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 
 " windows
-Plug 'spolu/dwm.vim'
+"Plug 'spolu/dwm.vim'
 Plug 'talek/obvious-resize'
 
 " buffers
@@ -12,6 +12,7 @@ Plug 'ton/vim-bufsurf'
 Plug 'vim-scripts/clone', { 'on': [ 'CloneAs', 'SCloneAs' ] }
 Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
 Plug 'sjbach/lusty'
+Plug 'chrisbra/NrrwRgn'
 Plug 'chrisbra/Recover.vim'
 Plug 'henrik/rename.vim', { 'on': 'Rename' }
 Plug 'itchyny/thumbnail.vim', { 'on': 'Thumbnail' }
