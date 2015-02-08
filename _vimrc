@@ -107,7 +107,7 @@ set switchbuf=useopen,usetab,newtab
 "             |       +--------------- Consider windows in other tab pages wrt useopen
 "             +----------------------- Jump to the first open window that contains the specified buffer if there is one
 
-" do not consider octal numbers for C-a/C-x
+" do not consider octal numbers for C-A/C-X
 set nrformats-=octal
 
 " configure viminfo then read from it
