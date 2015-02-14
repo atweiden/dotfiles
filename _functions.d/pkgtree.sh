@@ -6,5 +6,5 @@
 
 function pkgtree() {
 [[ -x /usr/bin/package-query ]] \
-  && package-query -Q -f %F $1 | sed 's/\s/\n/g' | sort
+  && package-query -Q -f %F $1 | sed 's@\s@\n@g' | sed 's@^@/@' | sort
 }
