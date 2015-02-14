@@ -85,6 +85,8 @@ PATH=/usr/lib/go/site/bin:$PATH
 PATH=$HOME/.cabal/bin:$PATH
 # nim
 PATH=$HOME/.nimble/bin:$PATH
+# node
+export N_PREFIX=$HOME/.n
 # perl
 PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
 # python
