@@ -27,7 +27,7 @@ nnoremap <silent> <M-f> :FZFLines<CR>
 command! FZFLines call fzf#run({
   \ 'source':  BuffersLines(),
   \ 'sink':    function('LineHandler'),
-  \ 'options': '--extended --nth=3..,',
+  \ 'options': '--extended --nth=3..',
   \ 'tmux_height': '60%'
 \})
 
