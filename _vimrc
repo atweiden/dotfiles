@@ -703,6 +703,12 @@ nnoremap J mzJ`z
 nnoremap <silent> S i<CR><ESC>^mwgk:silent! s/\v +$//<CR>:noh<CR>`w
 
 " }}}
+" --- editing {{{
+
+" delete char adjacent-right without moving cursor over one from the left
+nnoremap <silent> gx lxh
+
+"  }}}
 " --- movement {{{
 
 " move between beginning and end of line
@@ -778,9 +784,9 @@ inoremap <silent> <F9> <C-O>:call HexMe()<CR>
 vnoremap <silent> <F9> <ESC>:call HexMe()<CR>gv
 
 " }}}
-" --- conceal {{{
+" --- unicode {{{
 
-" toggle concealed characters
+" toggle display unicode operators in code without changing the underlying file
 noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 
 " }}}
