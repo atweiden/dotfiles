@@ -57,6 +57,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
 au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.phpt,*.ctp,*.hh,*.hhi} set ft=php
 au BufEnter,BufRead,BufNewFile,BufWrite {.AURINFO,.SRCINFO} set ft=PKGBUILD
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pl,*.pm,*.t,cpanfile} set ft=perl
+au BufEnter,BufRead,BufNewFile,BufWrite {*.p6,*.nqp} set ft=perl6
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pp} set ft=puppet
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pro} set ft=pro
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python

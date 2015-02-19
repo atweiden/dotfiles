@@ -494,9 +494,9 @@ Plug 'zah/nimrod.vim', { 'for': 'nim' }
 Plug 'atweiden/merlin.vim', { 'for': 'ocaml', 'branch': 'vim' }
 Plug 'def-lkb/vimbufsync', { 'for': 'ocaml' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
-Plug 'vim-perl/vim-perl', { 'for': 'perl' }
-"Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
-Plug 'c9s/perlomni.vim', { 'for': 'perl' }
+Plug 'vim-perl/vim-perl', { 'for': [ 'perl', 'perl6' ] }
+"Plug 'trapd00r/vim-after-syntax-perl', { 'for': [ 'perl', 'perl6' ] }
+Plug 'c9s/perlomni.vim', { 'for': [ 'perl', 'perl6' ] }
 Plug 'yko/mojo.vim', { 'for': 'html.epl' }
 Plug 'hhvm/vim-hack', { 'for': 'php' }
 Plug 'mxw/vim-xhp', { 'for': 'php' }
