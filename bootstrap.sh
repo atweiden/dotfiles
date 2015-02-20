@@ -80,8 +80,7 @@ for dotfile in $HOME/.ackrc          \
                $HOME/.Xdefaults      \
                $HOME/.Xmodmap        \
                $HOME/.xinitrc        \
-               $HOME/.xsession       \
-               $HOME/.ycm_extra_conf.py; do
+               $HOME/.xsession; do
                                     echo "backing up ${dotfile} (if it exists)"
                                     if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
                                       mv "${dotfile}" "${dotfile}".bak
@@ -140,8 +139,7 @@ for dotfile in ackrc          \
                Xdefaults      \
                Xmodmap        \
                xinitrc        \
-               xsession       \
-               ycm_extra_conf.py; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
+               xsession; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
 done
 
 
