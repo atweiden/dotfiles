@@ -812,10 +812,10 @@ nnoremap <leader>6 :<C-U>buffer 6<CR>
 " map alt-[s,v] to horizontal and vertical split respectively
 " map alt-[N,P] to moving to next and previous window respectively
 " map alt-[H,J,K,L] to repositioning a window split
-nnoremap <silent> <M-h> :ObviousResizeLeft<CR>
-nnoremap <silent> <M-j> :ObviousResizeDown<CR>
-nnoremap <silent> <M-k> :ObviousResizeUp<CR>
-nnoremap <silent> <M-l> :ObviousResizeRight<CR>
+nnoremap <silent> <M-h> :<C-U>ObviousResizeLeft<CR>
+nnoremap <silent> <M-j> :<C-U>ObviousResizeDown<CR>
+nnoremap <silent> <M-k> :<C-U>ObviousResizeUp<CR>
+nnoremap <silent> <M-l> :<C-U>ObviousResizeRight<CR>
 nnoremap <silent> <M-=> <C-W>=
 nnoremap <silent> <M-_> <C-W>_
 nnoremap <silent> <M-\|> <C-W>\|
