@@ -159,6 +159,7 @@ alias cdp='cd $HOME/Projects'
 alias cds='cd $HOME/.src'
 [[ -x /usr/bin/systemctl ]] && alias userctl='systemctl --user'
 [[ -x /usr/bin/archversion ]] && alias avs='archversion sync && archversion report --new'
+[[ -x /usr/bin/archversion ]] && alias avr='archversion report --new'
 [[ -x /usr/bin/packer ]] && alias aurupdate='packer -Syu --auronly'
 [[ "$DISPLAY" == "" ]] && alias vim='vim -X' # if not in X, tell vim not to attempt connection w/ X server
 [[ -x /usr/bin/vim ]] && alias view='vim -R'
