@@ -100,3 +100,10 @@ endfunction
 function! Arghandler(l)
     return "ag -i " . a:l . " | sed 's@\\(.[^:]*\\):\\(.[^:]*\\):\\(.*\\)@\\3:\\2:\\1@' "
 endfunction
+
+
+""""""""""""""""""""""""""""
+" locate files using mlocate
+
+command! -nargs=1 Locate call fzf#run(
+      \ {'source': 'locate <q-args>', 'sink': 'e', 'options': '-m'})
