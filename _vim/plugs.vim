@@ -350,7 +350,8 @@ Plug 'mattn/emmet-vim', { 'for': [ 'css',
                                  \ 'less',
                                  \ 'sass',
                                  \ 'scss',
-                                 \ 'slim' ] }
+                                 \ 'slim',
+                                 \ 'stylus' ] }
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
 Plug 'SirVer/ultisnips'
 Plug 'tdcdev/ycm_simple_conf'
