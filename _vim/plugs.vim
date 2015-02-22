@@ -61,6 +61,10 @@ Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/vimshell.vim'
 
+" keyboard
+Plug 'kana/vim-arpeggio'
+Plug 'drmikehenry/vim-fixkey'
+
 " search and replace
 Plug 'tpope/vim-abolish'
 Plug 'dyng/ctrlsf.vim'
@@ -168,7 +172,6 @@ Plug 'tek/vim-fieldtrip'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
 Plug 'vim-scripts/LineJugglerCommands', { 'on': [ 'Replace', 'Swap' ] }
-Plug 'kana/vim-operator-user'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'kana/vim-submode'
@@ -176,7 +179,6 @@ Plug 'wellle/targets.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-textobj-sentence'
-Plug 'kana/vim-textobj-user'
 Plug 'coderifous/textobj-word-column.vim'
 
 " bookmarks
@@ -672,12 +674,12 @@ Plug 'guns/xterm-color-table.vim', { 'on': [ 'EXtermColorTable',
                                            \ 'VXtermColorTable',
                                            \ 'XtermColorTable' ] }
 
-" utilities
-Plug 'kana/vim-arpeggio'
-Plug 'drmikehenry/vim-fixkey'
+" utilities / dependencies
 Plug 'vim-scripts/ingo-library'
 Plug 'xolox/vim-misc'
 Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-scriptease'
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-textobj-user'
 call plug#end()
 endif
