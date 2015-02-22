@@ -451,8 +451,8 @@ set linespace=1
 " <Tab> in front of a line inserts blanks according to shiftwidth
 set smarttab
 
-" wrap searches around the end of the file
-set wrapscan
+" don't wrap searches around the end of the file
+set nowrapscan
 
 " search options: incremental search, highlight search
 set incsearch
