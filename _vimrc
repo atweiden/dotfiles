@@ -561,6 +561,17 @@ autocmd BufReadPost *
 " }}}
 " --- search and replace {{{
 
+" turn off any existing search
+if has('autocmd')
+  au VimEnter * nohls
+endif
+
+" remove search highlights
+nnoremap <silent> <leader><CR> :nohlsearch<CR>
+
+" prompt global search
+nnoremap ;; :%s:::gc<Left><Left><Left><Left>
+
 " use vimgrep without autocommands being invoked
 nnoremap <leader>nv :noautocmd vim /
 
@@ -570,14 +581,6 @@ nnoremap <silent> <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR
 " replace word under cursor
 nnoremap <leader><leader>r :'{,'}s/\<<C-R>=expand('<cword>')<CR>\>/
 nnoremap <leader><leader>R :%s/\<<C-R>=expand('<cword>')<CR>\>/
-
-" remove search highlights
-nnoremap <silent> <leader><CR> :nohlsearch<CR>
-
-" turn off any existing search
-if has('autocmd')
-  au VimEnter * nohls
-endif
 
 " }}}
 " --- pasting {{{
