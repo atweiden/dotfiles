@@ -288,7 +288,6 @@ Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy', 'NoWordy', 'PrevWordy', 'Wordy' 
 Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 
 " math
-Plug 'arecarn/crunch.vim'
 Plug 'jmcantrell/vim-numbered', { 'on': 'Numbered' }
 
 " crypto
