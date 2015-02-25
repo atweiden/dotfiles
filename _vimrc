@@ -661,6 +661,8 @@ endif
 
 " digraphs
 if has('digraphs')
+  " BTC (฿)
+  digraph B\| 3647
   " ellipsis (…)
   digraph ., 8230
 endif
