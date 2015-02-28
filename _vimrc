@@ -428,7 +428,7 @@ set foldmethod=marker
 set foldlevel=99
 
 " automatically open folds on these commands
-set foldopen=hor,insert,mark,percent,tag,undo
+set foldopen=insert,mark,percent,tag,undo
 
 " deepest fold is 3 levels
 set foldnestmax=3
