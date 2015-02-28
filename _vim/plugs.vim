@@ -364,7 +364,7 @@ Plug 'prurigro/vim-archversion', { 'for': 'archversion' }
 Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
 Plug 'Shirk/vim-gas', { 'for': 'gas' }
 Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
-Plug 'vim-jp/cpp-vim', { 'for': [ 'c', 'cpp' ] }
+Plug 'vim-jp/vim-cpp', { 'for': [ 'c', 'cpp' ] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
 Plug 'vim-scripts/ifdef-highlighting', { 'for': [ 'c', 'cpp' ] }
 Plug 'vim-scripts/Conque-GDB', { 'for': [ 'c', 'cpp' ] }
