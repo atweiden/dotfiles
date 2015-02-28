@@ -22,69 +22,69 @@ zipcode=97210              # Zipcode (f.lux)
 # -----------------------------------------------------------------------------
 # dirs
 
-mkdir -p $HOME/.marks               \
-         $HOME/.src                 \
-         $HOME/Desktop              \
-         $HOME/Documents            \
-         $HOME/Downloads            \
-         $HOME/Graphics             \
-         $HOME/Music                \
-         $HOME/Projects
+mkdir -p "$HOME/.marks"               \
+         "$HOME/.src"                 \
+         "$HOME/Desktop"              \
+         "$HOME/Documents"            \
+         "$HOME/Downloads"            \
+         "$HOME/Graphics"             \
+         "$HOME/Music"                \
+         "$HOME/Projects"
 
 
 # -----------------------------------------------------------------------------
 # backup
 
-for dotfile in $HOME/.ackrc          \
-               $HOME/.bashrc         \
-               $HOME/.bash_logout    \
-               $HOME/.bash_profile   \
-               $HOME/.bin            \
-               $HOME/.codex          \
-               $HOME/.config         \
-               $HOME/.conkyrc        \
-               $HOME/.conkyrc1       \
-               $HOME/.ctags          \
-               $HOME/.curlrc         \
-               $HOME/.dir_colors     \
-               $HOME/.dunstrc        \
-               $HOME/.functions.d    \
-               $HOME/.gemrc          \
-               $HOME/.gitconfig      \
-               $HOME/.gitignore      \
-               $HOME/.gitattributes  \
-               $HOME/.gtkrc-2.0.mine \
-               $HOME/.gnupg          \
-               $HOME/.hgext          \
-               $HOME/.hgignore       \
-               $HOME/.hgmap          \
-               $HOME/.hgrc           \
-               $HOME/.iex.exs        \
-               $HOME/.inputrc        \
-               $HOME/.jshintignore   \
-               $HOME/.jshintrc       \
-               $HOME/.keymap         \
-               $HOME/.npmrc          \
-               $HOME/.pdbrc          \
-               $HOME/.psqlrc         \
-               $HOME/.pythonrc       \
-               $HOME/.screenrc       \
-               $HOME/.tmux           \
-               $HOME/.tmux.conf      \
-               $HOME/.vim            \
-               $HOME/.vimrc          \
-               $HOME/.vimrc.lite     \
-               $HOME/.vimshrc        \
-               $HOME/.vimencrypt     \
-               $HOME/.wgetrc         \
-               $HOME/.Xdefaults      \
-               $HOME/.Xmodmap        \
-               $HOME/.xinitrc        \
-               $HOME/.xsession; do
-                                    echo "backing up ${dotfile} (if it exists)"
-                                    if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
-                                      mv "${dotfile}" "${dotfile}".bak
-                                    fi
+for dotfile in "$HOME/.ackrc"          \
+               "$HOME/.bashrc"         \
+               "$HOME/.bash_logout"    \
+               "$HOME/.bash_profile"   \
+               "$HOME/.bin"            \
+               "$HOME/.codex"          \
+               "$HOME/.config"         \
+               "$HOME/.conkyrc"        \
+               "$HOME/.conkyrc1"       \
+               "$HOME/.ctags"          \
+               "$HOME/.curlrc"         \
+               "$HOME/.dir_colors"     \
+               "$HOME/.dunstrc"        \
+               "$HOME/.functions.d"    \
+               "$HOME/.gemrc"          \
+               "$HOME/.gitconfig"      \
+               "$HOME/.gitignore"      \
+               "$HOME/.gitattributes"  \
+               "$HOME/.gtkrc-2.0.mine" \
+               "$HOME/.gnupg"          \
+               "$HOME/.hgext"          \
+               "$HOME/.hgignore"       \
+               "$HOME/.hgmap"          \
+               "$HOME/.hgrc"           \
+               "$HOME/.iex.exs"        \
+               "$HOME/.inputrc"        \
+               "$HOME/.jshintignore"   \
+               "$HOME/.jshintrc"       \
+               "$HOME/.keymap"         \
+               "$HOME/.npmrc"          \
+               "$HOME/.pdbrc"          \
+               "$HOME/.psqlrc"         \
+               "$HOME/.pythonrc"       \
+               "$HOME/.screenrc"       \
+               "$HOME/.tmux"           \
+               "$HOME/.tmux.conf"      \
+               "$HOME/.vim"            \
+               "$HOME/.vimrc"          \
+               "$HOME/.vimrc.lite"     \
+               "$HOME/.vimshrc"        \
+               "$HOME/.vimencrypt"     \
+               "$HOME/.wgetrc"         \
+               "$HOME/.Xdefaults"      \
+               "$HOME/.Xmodmap"        \
+               "$HOME/.xinitrc"        \
+               "$HOME/.xsession;" do
+                                      echo "backing up ${dotfile} (if it exists)"
+                                      if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
+                                        mv "${dotfile}" "${dotfile}".bak
+                                      fi
 done
 
 
@@ -157,14 +157,14 @@ done
 # -----------------------------------------------------------------------------
 # github
 
-sed -i "s#yourname#$name#"         $HOME/.gitconfig
-sed -i "s#youremail#$email#"       $HOME/.gitconfig
-sed -i "s#yourgithubacct#$github#" $HOME/.gitconfig
-sed -i "s#yourname#$name#"         $HOME/.hgrc
-sed -i "s#youremail#$email#"       $HOME/.hgrc
+sed -i "s#yourname#$name#"         "$HOME/.gitconfig"
+sed -i "s#youremail#$email#"       "$HOME/.gitconfig"
+sed -i "s#yourgithubacct#$github#" "$HOME/.gitconfig"
+sed -i "s#yourname#$name#"         "$HOME/.hgrc"
+sed -i "s#youremail#$email#"       "$HOME/.hgrc"
 
 
 # -----------------------------------------------------------------------------
 # f.lux
 
-sed -i "s#97210#$zipcode#"         $HOME/.config/openbox/autostart.sh
+sed -i "s#97210#$zipcode#"         "$HOME/.config/openbox/autostart.sh"
