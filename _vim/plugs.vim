@@ -578,6 +578,7 @@ Plug 'vim-scripts/dbext.vim', { 'on': [ '<Plug>DBDescribeProcedure',
                                       \ '<Plug>DBSelectFromTableWithWhere',
                                       \ '<Plug>DBSelectFromTopXTable',
                                       \ '<Plug>DBSelectFromTopXTable' ] }
+Plug 'vim-jp/vim-streem', { 'for': 'streem' }
 Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
 Plug 'whatyouhide/vim-tmux-syntax', { 'for': 'tmux-conf' }

@@ -79,6 +79,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.sh,*.install,.bashrc,.bash_logout,.ba
 au BufEnter,BufRead,BufNewFile,BufWrite {*.slim} set ft=slim
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sls} set ft=sls
 au BufEnter,BufRead,BufNewFile,BufWrite {*.sql,.psqlrc} set ft=sql
+au BufEnter,BufRead,BufNewFile,BufWrite {*.strm} set ft=streem
 au BufEnter,BufRead,BufNewFile,BufWrite {*.styl,*.stylus} set ft=stylus
 au BufEnter,BufRead,BufNewFile,BufWrite {*.swift} set ft=swift
 au BufEnter,BufRead,BufNewFile,BufWrite {*.tex} set ft=tex
