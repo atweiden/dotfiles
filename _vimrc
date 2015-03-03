@@ -663,6 +663,14 @@ endif
 if has('digraphs')
   " (฿) BTC
   digraph B\| 3647
+  " (‘) curly left single quote
+  digraph Ql 8216
+  " (’) curly right single quote
+  digraph Qr 8217
+  " (“) curly left double quote
+  digraph ql 8220
+  " (”) curly right double quote
+  digraph qr 8221
   " (…) ellipsis
   digraph ., 8230
   " (∈) equivalent to `(elem)`: http://doc.perl6.org/routine/%E2%88%88
