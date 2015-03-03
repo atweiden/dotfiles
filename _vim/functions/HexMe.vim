@@ -1,5 +1,5 @@
 let $in_hex=0
-function HexMe()
+function! HexMe()
     set binary
     set noeol
     if $in_hex>0

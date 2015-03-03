@@ -97,8 +97,11 @@ set secure
 set nomodeline
 let g:secure_modelines_verbose = 0
 let g:secure_modelines_modelines = 15
-au VimEnter * call filter(exists("g:secure_modelines_allowed_items") ? g:secure_modelines_allowed_items : [],
-            \ 'v:val != "fdm" && v:val != "foldmethod"')
+augroup modelines
+  autocmd!
+  autocmd VimEnter * call filter(exists("g:secure_modelines_allowed_items") ? g:secure_modelines_allowed_items : [],
+              \ 'v:val != "fdm" && v:val != "foldmethod"')
+augroup END
 
 " switching buffers
 set switchbuf=useopen,usetab,newtab
@@ -187,7 +190,10 @@ if has('gui_running')
   set guicursor+=o:blinkon0-hor50-oCursor
   " no visual bell
   if has('autocmd')
-    autocmd GUIEnter * set vb t_vb=
+    augroup errorbells
+      autocmd!
+      autocmd GUIEnter * set vb t_vb=
+    augroup END
   endif
   " resize font
   noremap <silent> <M--> :Smaller<CR>
@@ -279,7 +285,10 @@ nnoremap <silent> <leader>si :echo SyntaxItem()<CR>
 nnoremap <silent> <leader>u :syntax sync fromstart<CR>:redraw!<CR>
 
 " readjust window sizing
-au VimResized * :wincmd =
+augroup autoresize
+  autocmd!
+  autocmd VimResized * :wincmd =
+augroup END
 
 " fix background color bleed in tmux / screen
 set t_ut=""
@@ -318,8 +327,11 @@ set noshowcmd
 set report=0
 
 " highlight the screen line and column in the current window only
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
+augroup cursorhighlight
+  autocmd!
+  autocmd WinLeave * set nocursorline nocursorcolumn
+  autocmd WinEnter * set cursorline cursorcolumn
+augroup END
 
 " save undo history to an undo file
 set undofile
@@ -546,24 +558,33 @@ cabbrev vbb set virtualedit=block
 " }}}
 " --- don't move back the cursor one position when exiting insert mode {{{
 
-au InsertEnter * let CursorColumnI = col('.')
-au CursorMovedI * let CursorColumnI = col('.')
-au InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
+augroup cursorpos
+  autocmd!
+  autocmd InsertEnter * let CursorColumnI = col('.')
+  autocmd CursorMovedI * let CursorColumnI = col('.')
+  autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
+augroup END
 
 " }}}
 " --- return to last edit position {{{
 
-autocmd BufReadPost *
-  \ if line("'\"") > 1 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
+augroup cursormem
+  autocmd!
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+augroup END
 
 " }}}
 " --- search and replace {{{
 
 " turn off any existing search
 if has('autocmd')
-  au VimEnter * nohls
+  augroup searchhighlight
+    autocmd!
+    autocmd VimEnter * nohls
+  augroup END
 endif
 
 " remove search highlights
