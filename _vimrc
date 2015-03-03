@@ -661,10 +661,50 @@ endif
 
 " digraphs
 if has('digraphs')
-  " BTC (฿)
+  " (฿) BTC
   digraph B\| 3647
-  " ellipsis (…)
+  " (…) ellipsis
   digraph ., 8230
+  " (∈) equivalent to `(elem)`: http://doc.perl6.org/routine/%E2%88%88
+  digraph (- 8712
+  " (∉) equivalent to `!(elem)`: http://doc.perl6.org/routine/%E2%88%89
+  digraph (/ 8713
+  " (∋) equivalent to `(cont)`: http://doc.perl6.org/routine/%E2%88%8B
+  digraph -) 8715
+  " (∌) equivalent to `!(cont)`: http://doc.perl6.org/routine/%E2%88%8C
+  digraph /) 8716
+  " (∖) equivalent to `(-)`: http://doc.perl6.org/routine/%E2%88%96
+  digraph \\ 8726
+  " (∩) equivalent to `(&)`: http://doc.perl6.org/routine/%E2%88%A9
+  digraph (U 8745
+  " (∪) equivalent to `(|)`: http://doc.perl6.org/routine/%E2%88%AA
+  digraph )U 8746
+  " (≼) equivalent to `(<+)`: http://doc.perl6.org/routine/%E2%89%BC
+  digraph <+ 8828
+  " (≽) equivalent to `(+>)`: http://doc.perl6.org/routine/%E2%89%BD
+  digraph +> 8829
+  " (⊂) equivalent to `(<)`: http://doc.perl6.org/routine/%E2%8A%82
+  digraph (c 8834
+  " (⊃) equivalent to `(>)`: http://doc.perl6.org/routine/%E2%8A%83
+  digraph )c 8835
+  " (⊄) equivalent to `!(<)`: http://doc.perl6.org/routine/%E2%8A%84
+  digraph c/ 8836
+  " (⊅) equivalent to `!(>)`: http://doc.perl6.org/routine/%E2%8A%85
+  digraph \c 8837
+  " (⊆) equivalent to `(<=)`: http://doc.perl6.org/routine/%E2%8A%86
+  digraph (_ 8838
+  " (⊇) equivalent to `(>=)`: http://doc.perl6.org/routine/%E2%8A%87
+  digraph )_ 8839
+  " (⊈) equivalent to `!(<=)`: http://doc.perl6.org/routine/%E2%8A%88
+  digraph _/ 8840
+  " (⊉) equivalent to `!(>=)`: http://doc.perl6.org/routine/%E2%8A%89
+  digraph \_ 8841
+  " (⊍) equivalent to `(.)`: http://doc.perl6.org/routine/%E2%8A%8D
+  digraph U. 8845
+  " (⊎) equivalent to `(+)`: http://doc.perl6.org/routine/%E2%8A%8E
+  digraph U+ 8846
+  " (⊖) equivalent to `(^)`: http://doc.perl6.org/routine/%E2%8A%96
+  digraph 0- 8854
 endif
 
 " }}}
