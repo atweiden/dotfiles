@@ -20,6 +20,10 @@ set nocompatible
 " set mapleader from backslash to comma
 let mapleader=","
 
+" map ; to :
+nnoremap ; :
+vnoremap ; :
+
 " turn off manual key
 nnoremap K <nop>
 vnoremap K <nop>
@@ -589,9 +593,6 @@ endif
 
 " remove search highlights
 nnoremap <silent> <leader><CR> :nohlsearch<CR>
-
-" prompt global search
-nnoremap ;; :%s:::gc<Left><Left><Left><Left>
 
 " use vimgrep without autocommands being invoked
 nnoremap <leader>nv :noautocmd vim /
