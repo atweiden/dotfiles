@@ -28,6 +28,12 @@ vnoremap ; :
 nnoremap K <nop>
 vnoremap K <nop>
 
+" Ctrl-Q to quit
+nnoremap <C-Q> :qall<CR>
+cnoremap <C-Q> <C-C>:qall<CR>
+inoremap <C-Q> <C-O>:qall<CR>
+vnoremap <C-Q> <ESC>:qall<CR>
+
 " hide intro screen, use all abbreviations, omit redundant messages
 set shortmess=aIoO
 
@@ -531,12 +537,6 @@ endif
 " -----------------------------------------------------------------------------
 " Shortcuts
 
-" Ctrl-Q to quit
-nnoremap <C-Q> :qall<CR>
-cnoremap <C-Q> <C-C>:qall<CR>
-inoremap <C-Q> <C-O>:qall<CR>
-vnoremap <C-Q> <ESC>:qall<CR>
-
 " Editing
 " --- selecting {{{
 
@@ -555,9 +555,8 @@ vnoremap < <gv
 nnoremap > >>
 nnoremap < <<
 
-" quick virtualedit
-cabbrev vba set virtualedit=all
-cabbrev vbb set virtualedit=block
+" toggle virtualedit=all
+nnoremap <leader><leader>v :let &virtualedit=&virtualedit=="block" ? "all" : "block" <Bar> set virtualedit?<CR>
 
 " }}}
 " --- don't move back the cursor one position when exiting insert mode {{{
