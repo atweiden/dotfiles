@@ -556,7 +556,7 @@ nnoremap > >>
 nnoremap < <<
 
 " toggle virtualedit=all
-nnoremap <leader><leader>v :let &virtualedit=&virtualedit=="block" ? "all" : "block" <Bar> set virtualedit?<CR>
+nnoremap <silent> <leader><leader>v :let &virtualedit=&virtualedit=="block" ? "all" : "block" <Bar> set virtualedit?<CR>
 
 " }}}
 " --- don't move back the cursor one position when exiting insert mode {{{
