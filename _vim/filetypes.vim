@@ -58,6 +58,7 @@ au BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.phpt,*.ctp,*.hh,*.hhi} set ft=p
 au BufEnter,BufRead,BufNewFile,BufWrite {.AURINFO,.SRCINFO} set ft=PKGBUILD
 au BufEnter,BufRead,BufNewFile,BufWrite {cpanfile} set ft=perl
 au BufEnter,BufRead,BufNewFile,BufWrite {*.p6,*.pl6,*.pm6,*.t6,*.nqp} set ft=perl6
+au BufEnter,BufRead,BufNewFile,BufWrite {*.pod} set ft=pod
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pp} set ft=puppet
 au BufEnter,BufRead,BufNewFile,BufWrite {*.pro} set ft=pro
 au BufEnter,BufRead,BufNewFile,BufWrite {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
