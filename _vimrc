@@ -442,6 +442,8 @@ set shiftround
 
 " jump between the following characters that form pairs
 set matchpairs+=<:>
+set matchpairs+=«:»
+set matchpairs+=「:」
 
 " triple matching curly braces form a fold
 set foldmethod=marker
