@@ -557,7 +557,9 @@ vnoremap < <gv
 nnoremap > >>
 nnoremap < <<
 
-" toggle virtualedit=all
+" }}}
+" --- toggle virtualedit=all {{{
+
 nnoremap <silent> <leader><leader>v :let &virtualedit=&virtualedit=="block" ? "all" : "block" <Bar> set virtualedit?<CR>
 
 " }}}
