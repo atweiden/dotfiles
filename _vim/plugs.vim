@@ -214,7 +214,7 @@ Plug 'majutsushi/tagbar', { 'on': [ 'Tagbar',
                                   \ 'TagbarShowTag',
                                   \ 'TagbarToggle',
                                   \ 'TagbarTogglePause' ] }
-Plug 'h1mesuke/unite-outline', { 'on': 'Unite' }
+Plug 'h1mesuke/unite-outline'
 
 " diffs
 Plug 'AndrewRadev/linediff.vim'
