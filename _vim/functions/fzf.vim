@@ -55,7 +55,7 @@ command! FZFLines call fzf#run({
 \   'source':  <sid>buffer_lines(),
 \   'sink':    function('<sid>line_handler'),
 \   'options': '--extended --nth=3..',
-\   'tmux_height': '60%'
+\   'down':    '60%'
 \})
 
 
