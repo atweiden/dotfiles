@@ -345,6 +345,7 @@ Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxZoomRunner' ] }
 
 " code completion
+Plug 'zef/vim-cycle'
 Plug 'mattn/emmet-vim', { 'for': [ 'css',
                                  \ 'haml',
                                  \ 'html',
