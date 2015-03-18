@@ -4,17 +4,18 @@ map g/ <Plug>(incsearch-stay)
 
 " Compatibility with vim-indexed-search
 let g:indexed_search_mappings = 0
+
 augroup incsearch-indexed
-    autocmd!
-    autocmd User IncSearchLeave ShowSearchIndex
+  autocmd!
+  autocmd User IncSearchLeave ShowSearchIndex
 augroup END
 
 augroup incsearch-keymap
-    autocmd!
-    autocmd VimEnter call s:incsearch_keymap()
+  autocmd!
+  autocmd VimEnter call s:incsearch_keymap()
 augroup END
 
 function! s:incsearch_keymap()
-    IncSearchNoreMap <C-F> <Right>
-    IncSearchNoreMap <C-B> <Left>
+  IncSearchNoreMap <C-F> <Right>
+  IncSearchNoreMap <C-B> <Left>
 endfunction

@@ -19,4 +19,8 @@ let g:vimfiler_marked_file_icon = '*'
 
 " Open a vimfiler buffer automatically when Vim starts up if no files
 " (arguments) were specified
-"autocmd VimEnter * if !argc() | VimFiler | endif
+
+"augroup vimfiler
+"  autocmd!
+"  autocmd VimEnter * if !argc() | VimFiler | endif
+"augroup END

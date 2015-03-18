@@ -33,4 +33,7 @@ set csverb
 set completeopt+=longest
 
 " Automatically make cscope connections
-au BufEnter *.hs call LoadHscope()
+augroup hscope
+  autocmd!
+  autocmd BufEnter *.hs call LoadHscope()
+augroup END

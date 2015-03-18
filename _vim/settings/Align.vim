@@ -9,4 +9,7 @@ function! s:RemoveConflictingAlignMaps()
   endif
 endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
-silent! autocmd VimEnter * RemoveConflictingAlignMaps
+augroup alignmaps
+  autocmd!
+  silent! autocmd VimEnter * RemoveConflictingAlignMaps
+augroup END

@@ -7,5 +7,8 @@ function! s:Terminal(...)
   execute 'ConqueTermSplit ' . l:cmd
 endfunction
 command! -nargs=? Terminal call s:Terminal(<f-args>)
-au FileType conque_term highlight ExtraWhitespace guibg=NONE ctermbg=NONE
-au FileType conque_term set nospell
+augroup conque_term
+  autocmd!
+  autocmd FileType conque_term highlight ExtraWhitespace guibg=NONE ctermbg=NONE
+  autocmd FileType conque_term set nospell
+augroup END
