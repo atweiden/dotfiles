@@ -1,37 +1,37 @@
 "source: https://github.com/ds26gte/dotfiles/blob/master/.vim/plugin/ccrypt.vim
-"last modified 2014-12-04
+"last modified 2015-03-18
 "from vim.wikia.com/wiki/Encryption
 
-au bufreadpre *.cpt call s:ccrypt_bufreadpre()
+augroup ccrypt
+  autocmd!
+  autocmd bufreadpre *.cpt call s:ccrypt_bufreadpre()
+  autocmd bufreadpost *.cpt call s:ccrypt_bufreadpost()
+  autocmd bufwritepre *.cpt call s:ccrypt_bufwritepre()
+  autocmd bufwritepost *.cpt call s:ccrypt_bufwritepost()
+augroup END
 
-au bufreadpost *.cpt call s:ccrypt_bufreadpost()
+function! s:ccrypt_bufreadpre()
+  setlocal binary
+  setlocal viminfo=
+  setlocal noswapfile
+endfunction
 
-au bufwritepre *.cpt call s:ccrypt_bufwritepre()
+function! s:ccrypt_bufreadpost()
+  let $crypticnonsense = inputsecret("Password: ")
+  silent %!ccrypt -c -E crypticnonsense
+  setlocal nobinary
+endfunction
 
-au bufwritepost *.cpt call s:ccrypt_bufwritepost()
+function! s:ccrypt_bufwritepre()
+  let b:save_cursor = getpos(".")
+  setlocal binary
+  %!ccrypt -e -E crypticnonsense
+endfunction
 
-func! s:ccrypt_bufreadpre()
-    setl bin
-    setl vi=
-    setl noswf
-endfunc
-
-func! s:ccrypt_bufreadpost()
-    let $crypticnonsense = inputsecret("Password: ")
-    sil %!ccrypt -c -E crypticnonsense
-    setl nobin
-endfunc
-
-func! s:ccrypt_bufwritepre()
-    let b:save_cursor = getpos(".")
-    setl bin
-    %!ccrypt -e -E crypticnonsense
-endfunc
-
-func! s:ccrypt_bufwritepost()
-    u
-    setl nobin
-    setl nomod
-    call setpos('.', b:save_cursor)
-    redraw!
-endfunc
+function! s:ccrypt_bufwritepost()
+  undo
+  setlocal nobinary
+  setlocal nomodified
+  call setpos('.', b:save_cursor)
+  redraw!
+endfunction
