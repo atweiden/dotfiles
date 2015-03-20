@@ -9,6 +9,5 @@ endfunction
 command! -nargs=? Terminal call s:Terminal(<f-args>)
 augroup conque_term
   autocmd!
-  autocmd FileType conque_term highlight ExtraWhitespace guibg=NONE ctermbg=NONE
   autocmd FileType conque_term set nospell
 augroup END

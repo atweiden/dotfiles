@@ -1,5 +1,6 @@
 " disable whitespace highlights for specified filetypes
 let g:better_whitespace_filetypes_blacklist=[ 'calendar',
+                                            \ 'conque_term',
                                             \ 'ctrlsf',
                                             \ 'help',
                                             \ 'unite',
