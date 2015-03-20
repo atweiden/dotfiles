@@ -102,11 +102,14 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {.Xmodmap} set ft=xmodmap
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.bin} set ft=xxd
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.zsh,.zprofile,.zshrc} set ft=zsh
+augroup END
 
-  " }}}
+" }}}
 
-  " language omnicompletion {{{
+" language omnicompletion {{{
 
+augroup language-omnicompletion
+  autocmd!
   autocmd FileType c setlocal omnifunc=ccomplete#Complete
   autocmd FileType clojure setlocal omnifunc=clojurecomplete#Complete
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
