@@ -1,1 +1,1 @@
-let c_no_curly_error = 1
+let g:c_no_curly_error = 1
