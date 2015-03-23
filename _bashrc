@@ -177,7 +177,6 @@ alias bzip2='bzip2 -9'
 alias grep='grep --ignore-case --color=auto'
 alias fgrep='fgrep --ignore-case --color=auto'
 alias egrep='egrep --ignore-case --color=auto'
-[[ -x /usr/bin/fzf ]] && alias fzf='fzf --multi'
 [[ -x /usr/bin/locate ]] && alias locate='locate --ignore-case'
 if [[ -x /usr/bin/icdiff ]]; then
   alias diff='icdiff'
@@ -233,6 +232,9 @@ elif [[ -x /usr/bin/pt ]]; then
 elif [[ -x /usr/bin/ack ]]; then
   export FZF_DEFAULT_COMMAND='ack -l -g ""'
 fi
+
+# use extended search mode with multi-select
+export FZF_DEFAULT_OPTS='-x -m'
 
 # create fzf key bindings
 [[ -e "/etc/profile.d/fzf.sh" ]] && . /etc/profile.d/fzf.sh
