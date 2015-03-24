@@ -515,7 +515,6 @@ Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv', { 'on': [ 'VirtualEnvActivate',
                                           \ 'VirtualEnvDeactivate',
                                           \ 'VirtualEnvList' ] }
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'jgors/vimux-ipy', { 'for': 'python' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'vim-scripts/paredit.vim', { 'for': [ 'clojure',
