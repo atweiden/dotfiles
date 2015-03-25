@@ -40,6 +40,33 @@
 --regex-clojure=/\([ \t]*intern[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/v,intern/
 --regex-clojure=/\([ \t]*ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
 
+--langdef=coffee
+--langmap=coffee:.coffee
+--regex-coffee=/(^|=[ \t])*class ([A-Za-z]+\.)*([A-Za-z]+)( extends [A-Za-z_.]+)?$/\3/c,class/
+--regex-coffee=/^[ \t]*(module\.)?(exports\.)?@?([A-Za-z_.]+):.*[-=]>.*$/\3/m,method/
+--regex-coffee=/^[ \t]*(module\.)?(exports\.)?([A-Za-z_.]+)[ \t]+=.*[-=]>.*$/\3/f,function/
+--regex-coffee=/^[ \t]*([A-Za-z_.]+)[ \t]+=[^->\n]*$/\1/v,variable/
+--regex-coffee=/^[ \t]*@([A-Za-z_.]+)[ \t]+=[^->\n]*$/\1/f,field/
+--regex-coffee=/^[ \t]*@([A-Za-z_.]+):[^->\n]*$/\1/f,static field/
+--regex-coffee=/^[ \t]*([A-Za-z_.]+):[^->\n]*$/\1/f,field/
+--regex-coffee=/constructor:[ \t]+\([ \t]*@([A-Za-z_.]+)/\1/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){1}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){2}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){3}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){4}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){5}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){6}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){7}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){8}/\2/f,field/
+--regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){9}/\2/f,field/
+
+--langdef=css
+--langmap=css:.css
+--regex-css=/^[ \t]*\.([A-Za-z0-9_-]+)/#\1/c,class,classes/
+--regex-css=/^[ \t]*#([A-Za-z0-9_-]+)/.\1/i,id,ids/
+--regex-css=/^[ \t]*(([A-Za-z0-9_-]+[ \t\n,]+)+)\{/\1/t,tag,tags/
+--regex-css=/^[ \t]*@media\s+([A-Za-z0-9_-]+)/\1/m,media,medias/
+
 --langdef=Elixir
 --langmap=Elixir:.ex.exs
 --regex-Elixir=/^[ \t]*def(p?)[ \t]+([a-z_][a-zA-Z0-9_?!]*)/\2/f,functions,functions (def ...)/
@@ -91,7 +118,26 @@
 --regex-jsx=/^[ \t]*([a-z]+[ \t]+)*interface[ \t]+([A-Za-z0-9_]+)[ \t]*([^)])/\2/i,interface,interfaces/
 --regex-jsx=/^[ \t]*([a-z]+[ \t]+)*mixin[ \t]+([A-Za-z0-9_]+)[ \t]*([^)])/\2/m,mixin,mixins/
 
+--langdef=less
+--langmap=less:.less
+--regex-less=/^[ \t]*\.([A-Za-z0-9_-]+)/\1/c,class,classes/
+--regex-less=/^[ \t]*#([A-Za-z0-9_-]+)/\1/i,id,ids/
+--regex-less=/^[ \t]*(([A-Za-z0-9_-]+[ \t\n,]+)+)\{/\1/t,tag,tags/
+--regex-less=/^[ \t]*@media\s+([A-Za-z0-9_-]+)/\1/m,media,medias/
+
 --regex-make=/^\s*([^#][^:]*):/\1/t,target/
+
+--langdef=objc
+--langmap=objc:.m.mm
+--regex-objc=/\@interface[[:space:]]+([[:alnum:]_]+)/\1/i,interface/
+--regex-objc=/\@implementation[[:space:]]+([[:alnum:]_]+)/\1/I,implementation/
+--regex-objc=/\@protocol[[:space:]]+([[:alnum:]_]+)/\1/P,protocol/
+--regex-objc=/\@property[[:space:]]+\([[:alnum:],[:space:]]+\)[[:space:]]+[[:alnum:]_]+[[:space:]]+\*?([[:alnum:]_]+)/\1/p,property/
+--regex-objc=/([-+])[[:space:]]*\([[:alpha:]_][^)]*\)[[:space:]]*([[:alpha:]_][^:;{]+).*/\1\2/M,method definition/
+--regex-objc=/^[^#@[:space:]][^=]*[[:space:]]([[:alpha:]_][[:alnum:]_]*)[[:space:]]*=/\1/c,constant/
+--regex-objc=/^[[:space:]]*typedef[[:space:]][^;]+[[:space:]]([[:alpha:]_][[:alnum:]]*)[[:space:]]*;/\1/t,typedef/
+--regex-objc=/^[[:space:]]*NS_ENUM\([[:alnum:]]+[[:space:]]*,[[:space:]]([[:alnum:]]+)\)/\1/e,enum/
+--regex-objc=/^#pragma[[:space:]]+mark[[:space:]]+-?[[:space:]]+([[:alnum:][:space:]]+)/\1/g,pragma/
 
 --langdef=puppet
 --langmap=puppet:.pp
@@ -131,6 +177,12 @@
 --regex-scala=/^[ \t]*final case class[ \t]+([a-zA-Z0-9_]+)/\1/c,case classes/
 --regex-scala=/^[ \t]*object[ \t]+([a-zA-Z0-9_]+)/\1/o,objects/
 --regex-scala=/^[ \t]*private def[ \t]+([a-zA-Z0-9_]+)/\1/pd,defs/
+
+--langdef=scss
+--langmap=scss:.scss
+--regex-scss=/^[ \t]*([^\t {][^{]{1,100})(\t| )*\{/| \1/d,definition/
+--regex-scss=/^[@]mixin ([^ (]+).*/\1/m,mixin/
+--regex-scss=/^[@]function ([^ (]+).*/\1/f,function/
 
 --langdef=snippets
 --langmap=snippets:.snippets
