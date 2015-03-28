@@ -22,15 +22,10 @@ command! FZFMru call fzf#run({
 """"""""""""""
 " Jump to tags
 
-function! TagCommand()
-  return substitute('awk _!/^!/ { print \$1 }_ ', '_', "'", 'g')
-              \ . join(tagfiles(), ' ')
-endfunction
-
-command! FZFTag call fzf#run({
-\   'source'     : TagCommand(),
-\   'sink'       : 'tag',
-\   })
+command! FZFTag if !empty(tagfiles()) | call fzf#run({
+\   'source': "sed '/^\\!/d;s/\t.*//' " . join(tagfiles()) . ' | uniq',
+\   'sink':   'tag',
+\ }) | else | echo 'No tags' | endif
 
 
 """"""""""""""""""""""""""""""""""""""
