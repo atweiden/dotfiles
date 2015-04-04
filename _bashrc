@@ -238,6 +238,7 @@ export FZF_DEFAULT_OPTS='-x -m'
 
 # create fzf key bindings
 [[ -e "/etc/profile.d/fzf.sh" ]] && . /etc/profile.d/fzf.sh
+[[ -e "/etc/profile.d/fzf-extras.sh" ]] && . /etc/profile.d/fzf-extras.sh
 
 
 # -----------------------------------------------------------------------------
