@@ -589,6 +589,7 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'vim-scripts/AutumnLeaf'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/baycomb'
+Plug 'atweiden/vim-colors-behelit'
 Plug 'vim-scripts/Briofita'
 Plug 'baskerville/bubblegum'
 Plug 'vim-scripts/buttercream.vim'
