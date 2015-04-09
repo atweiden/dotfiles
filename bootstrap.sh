@@ -80,7 +80,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.Xdefaults"      \
                "$HOME/.Xmodmap"        \
                "$HOME/.xinitrc"        \
-               "$HOME/.xsession;" do
+               "$HOME/.xsession"; do
                                       echo "backing up ${dotfile} (if it exists)"
                                       if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
                                         mv "${dotfile}" "${dotfile}".bak
