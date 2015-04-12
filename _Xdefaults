@@ -18,7 +18,7 @@ URxvt*depth                 : 32
 URxvt*saveLines             : 65535
 URxvt*cursorBlink           : false
 URxvt*cursorUnderline       : true
-URxvt*perl-ext-common       : default,-searchable-scrollback,clipboard,tabbedex,url-select,keyboard-select
+URxvt*perl-ext-common       : default,-searchable-scrollback,clipboard,url-select,keyboard-select
 URxvt*iso14755              : false
 URxvt*clipboard.autocopy    : true
 URxvt*keysym.C-C            : perl:clipboard:copy
