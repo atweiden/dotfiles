@@ -69,6 +69,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.psqlrc"         \
                "$HOME/.pythonrc"       \
                "$HOME/.screenrc"       \
+               "$HOME/.terminfo"       \
                "$HOME/.tmux"           \
                "$HOME/.tmux.conf"      \
                "$HOME/.vim"            \
@@ -98,6 +99,7 @@ for dotfolder in bin         \
                  hgext       \
                  hgmap       \
                  ssh         \
+                 terminfo    \
                  tmux        \
                  vim; do cp -R "${DIR}/_${dotfolder}" "$HOME/.${dotfolder}"
 done
