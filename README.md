@@ -6,7 +6,7 @@ Screenshots
 
 ![Desktop](https://i.imgur.com/bEGxhbP.png)
 
-![URxvt](https://i.imgur.com/ElJRxPs.png)
+![tmux in URxvt](https://i.imgur.com/2wYcZrz.png)
 
 
 Installation
