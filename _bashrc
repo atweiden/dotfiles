@@ -20,14 +20,14 @@ else
     alias tmux="tmux -2"
   fi
 fi
-[[ "$TERM" = "screen" && "$HAS_256_COLORS" = "yes" ]] && export TERM=screen-256color
+[[ "$TERM" == "screen" && "$HAS_256_COLORS" == "yes" ]] && export TERM=screen-256color
 
 
 # miromiro dircolors by jwr
 #[[ -f "$HOME/.dir_colors" ]] && eval $(dircolors -b "$HOME/.dir_colors")
 
 # miro8 console colors by jwr
-if [[ "$TERM" = "linux" || "$TERM" = "vt100" || "$TERM" = "vt220" ]]; then
+if [[ "$TERM" == "linux" || "$TERM" == "vt100" || "$TERM" == "vt220" ]]; then
    echo -en "\e]P0000000" #black
    echo -en "\e]P83d3d3d" #darkgrey
    echo -en "\e]P18c4665" #darkred
