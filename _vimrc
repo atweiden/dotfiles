@@ -28,6 +28,9 @@ vnoremap ; :
 nnoremap K <nop>
 vnoremap K <nop>
 
+" never use ZZ, too dangerous
+nnoremap ZZ <nop>
+
 " Ctrl-Q to quit
 nnoremap <C-Q> :qall<CR>
 cnoremap <C-Q> <C-C>:qall<CR>

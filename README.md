@@ -88,6 +88,7 @@ Credits
 - [@drmikehenry](https://github.com/drmikehenry/vimfiles)
 - [@ervandew](https://github.com/ervandew/dotfiles)
 - [@Floby](https://github.com/Floby/vim-config)
+- [@fortes](https://github.com/fortes/dotfiles)
 - [@gabrielelana](https://github.com/gabrielelana/dotfiles)
 - [@gf3](https://github.com/gf3/dotfiles)
 - [@gmarik](https://github.com/gmarik/vimfiles)
