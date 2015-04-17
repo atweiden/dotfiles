@@ -13,7 +13,7 @@
 if [[ "x$DISPLAY" != "x" ]]; then
   export HAS_256_COLORS=yes
   alias tmux="tmux -2"
-  [[ "$TERM" = "xterm" ]] && export TERM=xterm-256color
+  [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
 else
   if [[ "$TERM" == "xterm" || "$TERM" == "xterm-256color" ]]; then
     export HAS_256_COLORS=yes
@@ -171,6 +171,7 @@ alias cds='cd $HOME/.src'
 [[ -x /usr/bin/gvim ]] && alias gvime='gvim -u ~/.vimencrypt -x'
 [[ -x /usr/bin/gvim ]] && alias gviml='gvim -u ~/.vimrc.lite'
 [[ -x /usr/bin/gvim ]] && alias gvimmin='gvim -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
+[[ -x /usr/bin/tmux ]] && alias tm='tmux attach-session -t ø &>/dev/null || tmux new-session -s ø'
 [[ -x /usr/bin/zip ]] && alias zip='zip -9'
 alias gzip='gzip -9'
 alias bzip2='bzip2 -9'
