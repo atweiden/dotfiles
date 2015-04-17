@@ -1,5 +1,5 @@
 " unbind <C-L>
-nnoremap <leader>xc <Plug>SearchPartyHighlightClear
+nnoremap <leader><leader>xc <Plug>SearchPartyHighlightClear
 
 " unbind <C-\>
-nnoremap <leader>xx <Plug>SearchPartyHighlightToggle
+nnoremap <leader><leader>xx <Plug>SearchPartyHighlightToggle
