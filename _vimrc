@@ -31,6 +31,10 @@ vnoremap K <nop>
 " never use ZZ, too dangerous
 nnoremap ZZ <nop>
 
+" disable <C-A>, interferes with tmux prefix
+noremap <C-A> <nop>
+inoremap <C-A> <nop>
+
 " Ctrl-Q to quit
 nnoremap <C-Q> :qall<CR>
 cnoremap <C-Q> <C-C>:qall<CR>
