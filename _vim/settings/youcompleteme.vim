@@ -28,4 +28,17 @@ nnoremap <leader>] :YcmCompleter GoToDefinitionElseDeclaration<CR>:call FocusLin
 "nnoremap <leader>] :YcmCompleter GoToDeclaration<CR>:call FocusLine()<CR>
 
 " Character-based triggers for the various semantic completion engines
-let g:ycm_semantic_triggers = { 'haskell' : ['.'] } " for vim-neco-ghc
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,haskell,java,javascript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'vim' : ['re![_a-zA-Z]+[_\w]*\.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \   'tex' : ['re!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'],
+  \ }
