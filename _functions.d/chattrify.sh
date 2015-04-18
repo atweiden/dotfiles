@@ -23,12 +23,12 @@
 #   chattrify "/var/log/journal" "755" "root" "systemd-journal"
 #   chattrify "/srv/bitcoin" "755" "bitcoin" "bitcoin"
 
-_orig_dir=$( echo "$1" | sed 's@/$@@' )
-
 function chattrify() {
 
+_orig_dir=$( echo "$1" | sed 's@/$@@' )
+
 if [[ -d "$1" ]]; then
-  echo -n "Moving original directory '$1' to '${1}_old'... "
+  echo -n "Moving original directory '$1' to '${_orig_dir}_old'... "
   mv "$1" "${_orig_dir}"_old
   echo "done"
 fi
@@ -56,7 +56,7 @@ chown -R $3:$4 "$1"
 echo "done"
 
 if [[ -d "${_orig_dir}"_old ]]; then
-  echo -n "Removing original directory '${1}_old'... "
+  echo -n "Removing backup of original directory '${_orig_dir}_old'... "
   rm -rf "${_orig_dir}"_old
   echo "done"
 fi
