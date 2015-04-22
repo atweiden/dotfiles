@@ -535,7 +535,7 @@ set formatoptions+=j " Remove comment leader when joining two comments
 
 " use ag/pt/ack for grepping if available
 if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --nogroup\ --nocolor\ --unrestricted
 elseif executable('pt')
   set grepprg=pt\ --nogroup\ --nocolor
 elseif executable('ack')
