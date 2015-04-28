@@ -581,7 +581,7 @@ Plug 'vim-scripts/dbext.vim', { 'on': [ '<Plug>DBDescribeProcedure',
 Plug 'vim-jp/vim-streem', { 'for': 'streem' }
 Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
-Plug 'whatyouhide/vim-tmux-syntax', { 'for': 'tmux-conf' }
+Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 "Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
