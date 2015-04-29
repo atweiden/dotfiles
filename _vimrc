@@ -939,15 +939,15 @@ inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
 " --- tabs {{{
 
 " new tab
-nnoremap <silent> <M-S> :tabnew<CR>
+nnoremap <silent> <M-Down> :tabnew<CR>
 
 " switch between tabs
-nnoremap <silent> <M-a> :tabprevious<CR>
-nnoremap <silent> <M-d> :tabnext<CR>
+nnoremap <silent> <M-Left> :tabprevious<CR>
+nnoremap <silent> <M-Right> :tabnext<CR>
 
 " move tab adjacent
-nnoremap <silent> <M-A> :tabmove -1<CR>
-nnoremap <silent> <M-D> :tabmove +1<CR>
+nnoremap <silent> <M-S-Left> :tabmove -1<CR>
+nnoremap <silent> <M-S-Right> :tabmove +1<CR>
 
 " move tab
 noremap <leader>tm :tabmove<space>
