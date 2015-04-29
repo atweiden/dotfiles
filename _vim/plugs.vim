@@ -7,7 +7,6 @@ Plug 'talek/obvious-resize'
 
 " buffers
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
-Plug 'ton/vim-bufsurf'
 Plug 'vim-scripts/clone', { 'on': [ 'CloneAs', 'SCloneAs' ] }
 Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
 Plug 'sjbach/lusty'
