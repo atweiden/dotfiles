@@ -3,7 +3,6 @@ silent! if plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 
 " windows
-"Plug 'spolu/dwm.vim'
 Plug 'talek/obvious-resize'
 
 " buffers
