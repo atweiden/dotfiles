@@ -201,22 +201,22 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="W-S-Left">
       <action name="SendToDesktopLeft">
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="W-S-Right">
       <action name="SendToDesktopRight">
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="W-S-Up">
       <action name="SendToDesktopUp">
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="W-S-Down">
       <action name="SendToDesktopDown">
         <wrap>no</wrap>
       </action>
@@ -500,10 +500,10 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <mousebind action="Click" button="A-S-Up">
+      <mousebind action="Click" button="W-S-Up">
         <action name="SendToDesktopPrevious"/>
       </mousebind>
-      <mousebind action="Click" button="A-S-Down">
+      <mousebind action="Click" button="W-S-Down">
         <action name="SendToDesktopNext"/>
       </mousebind>
     </context>

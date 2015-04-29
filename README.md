@@ -52,20 +52,20 @@ Shortcut                | Action
 
 Desktop shortcuts:
 
-Shortcut                   | Action
----                        | ---
-<kbd>Super+a</kbd>         | Toggle maximize the current window
-<kbd>Super+h</kbd>         | Toggle fully expand the current window horizontally
-<kbd>Super+v</kbd>         | Toggle fully expand the current window vertically
-<kbd>Super+F11</kbd>       | Toggle full screen on the current window
-<kbd>Super+c</kbd>         | Center the current window
-<kbd>Super+Up</kbd>        | Move the current window up
-<kbd>Super+Down</kbd>      | Move the current window down
-<kbd>Super+Right</kbd>     | Move the current window to the right
-<kbd>Super+Left</kbd>      | Move the current window to the left
-<kbd>Alt+Super+Arrow</kbd> | Resize the current window
-<kbd>Alt+Shift+Arrow</kbd> | Move the current window to a different desktop
-<kbd>Super+F1-F4</kbd>     | Switch to desktop #1-4
+Shortcut                     | Action
+---                          | ---
+<kbd>Super+a</kbd>           | Toggle maximize the current window
+<kbd>Super+h</kbd>           | Toggle fully expand the current window horizontally
+<kbd>Super+v</kbd>           | Toggle fully expand the current window vertically
+<kbd>Super+F11</kbd>         | Toggle full screen on the current window
+<kbd>Super+c</kbd>           | Center the current window
+<kbd>Super+Up</kbd>          | Move the current window up
+<kbd>Super+Down</kbd>        | Move the current window down
+<kbd>Super+Right</kbd>       | Move the current window to the right
+<kbd>Super+Left</kbd>        | Move the current window to the left
+<kbd>Alt+Super+Arrow</kbd>   | Resize the current window
+<kbd>Super+Shift+Arrow</kbd> | Move the current window to a different desktop
+<kbd>Super+F1-F4</kbd>       | Switch to desktop #1-4
 
 Mouse shortcuts:
 
