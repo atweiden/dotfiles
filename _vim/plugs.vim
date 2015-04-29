@@ -300,7 +300,6 @@ Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'FocusDispatch',
                                    \ 'Make',
                                    \ 'Start' ] }
-Plug 'ervandew/screen'
 Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCChooseInterpreter',
                                      \ 'SCCompile',
