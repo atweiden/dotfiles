@@ -117,7 +117,6 @@ Plug 'tpope/vim-commentary'
 Plug 'ciaranm/securemodelines'
 
 " sessions
-Plug 'tpope/vim-obsession', { 'on': 'Obsession' }
 Plug 'tpope/vim-projectionist', { 'on': [ 'A',
                                         \ 'AD',
                                         \ 'AS',
@@ -131,7 +130,7 @@ Plug 'tpope/vim-projectionist', { 'on': [ 'A',
                                         \ 'S',
                                         \ 'T',
                                         \ 'V' ] }
-Plug 'dhruvasagar/vim-prosession', { 'on': 'Prosession' }
+Plug 'xolox/vim-session'
 
 " align
 Plug 'JLimperg/Align'
