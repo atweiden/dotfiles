@@ -63,7 +63,7 @@ Shortcut                     | Action
 <kbd>Super+Down</kbd>        | Move the current window down
 <kbd>Super+Right</kbd>       | Move the current window to the right
 <kbd>Super+Left</kbd>        | Move the current window to the left
-<kbd>Alt+Super+Arrow</kbd>   | Resize the current window
+<kbd>Super+Alt+Arrow</kbd>   | Resize the current window
 <kbd>Super+Shift+Arrow</kbd> | Move the current window to a different desktop
 <kbd>Super+F1-F4</kbd>       | Switch to desktop #1-4
 
