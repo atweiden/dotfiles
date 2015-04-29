@@ -933,6 +933,10 @@ inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
 nnoremap <silent> <M-a> :tabprevious<CR>
 nnoremap <silent> <M-d> :tabnext<CR>
 
+" move tab adjacent
+nnoremap <silent> <M-A> :tabmove -1<CR>
+nnoremap <silent> <M-D> :tabmove +1<CR>
+
 " move tab
 noremap <leader>tm :tabmove<space>
 
