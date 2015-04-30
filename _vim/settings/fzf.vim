@@ -12,7 +12,7 @@ nnoremap <silent> <M-m> :FZFMru<CR>
 " fuzzy cmdline completion
 " add an extra <CR> at the end of this line to automatically accept the
 " fzf-selected completions.
-cnoremap <silent> <C-L> <C-\>eGetCompletions()<CR>
+cnoremap <silent> <C-L> <C-\>eGetCompletions()<CR><CR>
 
 " hit <C-L> while in the ex commandline (i.e. after pressing :) to have fzf
 " filter a list of vim's commandline auto-completions. Try :colo␣<c-l>
