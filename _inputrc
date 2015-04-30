@@ -14,8 +14,8 @@ $if mode=vi
 $endif
 
 # Make <Ctrl-j> and <Ctrl-k> cycle through completions
-Control-j: menu-complete
-Control-k: menu-complete-backward
+# Control-j: menu-complete
+# Control-k: menu-complete-backward
 
 # Add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
