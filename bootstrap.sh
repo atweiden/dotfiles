@@ -65,6 +65,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.jshintrc"       \
                "$HOME/.keymap"         \
                "$HOME/.npmrc"          \
+               "$HOME/.nvimrc"         \
                "$HOME/.pdbrc"          \
                "$HOME/.psqlrc"         \
                "$HOME/.pythonrc"       \
@@ -128,6 +129,7 @@ for dotfile in ackrc          \
                jshintrc       \
                keymap         \
                npmrc          \
+               nvimrc         \
                pdbrc          \
                psqlrc         \
                pythonrc       \
