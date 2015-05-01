@@ -248,13 +248,13 @@ highlight oCursor guifg=black guibg=gray
 
 " error, warning and mode messages
 highlight clear Error
-highlight Error ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight Error ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
 highlight clear ErrorMsg
-highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight ErrorMsg ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
 highlight clear WarningMsg
-highlight ErrorMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight ErrorMsg ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
 highlight clear ModeMsg
-highlight ModeMsg ctermfg=gray ctermbg=black guifg=gray guibg=black
+highlight ModeMsg ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
 
 " question and more messages
 highlight clear Question
