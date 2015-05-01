@@ -343,12 +343,8 @@ set noshowcmd
 " always report the number of lines changed
 set report=0
 
-" highlight the screen line and column in the current window only
-augroup cursorhighlight
-  autocmd!
-  autocmd WinLeave * set nocursorline nocursorcolumn
-  autocmd WinEnter * set cursorline cursorcolumn
-augroup END
+" don't highlight the screen line or column
+set nocursorline nocursorcolumn
 
 " save undo history to an undo file
 set undofile
