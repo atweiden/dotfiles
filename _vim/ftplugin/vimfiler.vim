@@ -1,4 +1,4 @@
-setlocal winfixwidth
+setlocal cursorline cursorcolumn winfixwidth
 nunmap <buffer> <C-J>
 nunmap <buffer> <C-L>
 nunmap <buffer> E
