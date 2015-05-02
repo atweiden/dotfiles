@@ -164,7 +164,7 @@ if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "sc
   " jellyx
   set t_Co=256
   colorscheme jellyx
-elseif $TERM == "linux"
+elseif $TERM == "linux" || $TERM == "screen"
   " miro8
   colorscheme miro8
   highlight clear Pmenu

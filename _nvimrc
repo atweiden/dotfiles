@@ -184,7 +184,7 @@ endif
     if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "screen-it-256color" || $COLORTERM == "gnome-terminal"
       set t_Co=256
       colorscheme jellyx
-    elseif $TERM == "linux"
+    elseif $TERM == "linux" || $TERM == "screen"
       colorscheme miro8
       highlight clear Pmenu
       highlight Pmenu ctermfg=7 ctermbg=0
