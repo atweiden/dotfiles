@@ -177,7 +177,7 @@ endif
 
   " --- }}}
 
-  " --- nvim display settings {{{
+  " --- terminal display settings {{{
 
     " ------- colorscheme {{{
     set background=dark
@@ -190,6 +190,57 @@ endif
       highlight Pmenu ctermfg=7 ctermbg=0
     endif
     " ------- }}}
+
+  " --- }}}
+
+  " --- gui display settings {{{
+
+    if has('gui_running')
+      " no menu bar
+      set guioptions-=m
+      " no toolbar
+      set guioptions-=T
+      " no right-hand scrollbar
+      set guioptions-=r
+      set guioptions-=R
+      " no left-hand scrollbar
+      set guioptions-=l
+      set guioptions-=L
+      " use console style tabbed interface
+      set guioptions-=e
+      " use console dialogs instead of popups
+      set guioptions+=c
+      " use lightline-compatible monaco
+      set guifont=Monaco\ for\ Powerline\ 16
+      " allow gvim window to occupy whole screen
+      set guiheadroom=0
+      " jellyx
+      set t_Co=256
+      colorscheme jellyx
+      " set normal mode cursor to unblinking Cursor highlighted block
+      set guicursor+=n:blinkon0-block-Cursor
+      " set insert and command line mode cursor to 25% width unblinking iCursor highlighted block
+      set guicursor+=i-c:blinkon0-ver25-iCursor
+      " set visual mode cursor to unblinking vCursor highlighted block
+      set guicursor+=v:blinkon0-block-vCursor
+      " set replace mode cursor to unblinking rCursor highlighted block
+      set guicursor+=r:blinkon0-block-rCursor
+      " set operator pending mode cursor to 50% height unblinking oCursor highlighted block
+      set guicursor+=o:blinkon0-hor50-oCursor
+      " no visual bell
+      if has('autocmd')
+        augroup errorbells
+          autocmd!
+          autocmd GUIEnter * set vb t_vb=
+        augroup END
+      endif
+      " resize font
+      noremap <silent> <M--> :Smaller<CR>
+      noremap <silent> <M-+> :Bigger<CR>
+      " paste selection with <S-Ins>
+      inoremap <S-Insert> <MiddleMouse>
+      cnoremap <S-Insert> <MiddleMouse>
+    endif
 
   " --- }}}
 
