@@ -45,7 +45,6 @@ function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
        \  &ft == 'unite' ? unite#get_status_string() :
-       \  &ft == 'vimshell' ? '' :
        \  &ft == 'undotree' ? '' :
        \  &ft == 'vim-plug' ? '' :
        \  &ft == 'calendar' ? strftime('%Y/%m/%d') :
@@ -57,7 +56,7 @@ endfunction
 
 function! MyFugitive()
   try
-    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vim-plug\|vimfiler\|vimshell\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
+    if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vim-plug\|vimfiler\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
       let _ = fugitive#head()
       return strlen(_) ? ' '._ : ''
     endif
@@ -87,7 +86,6 @@ function! MyMode()
        \ &ft == 'undotree' ? 'UndoTree' :
        \ &ft == 'unite' ? 'Unite' :
        \ &ft == 'vimfiler' ? 'VimFiler' :
-       \ &ft == 'vimshell' ? 'VimShell' :
        \ &ft == 'vim-plug' ? 'Plug' :
        \ &ft == 'calendar' ? 'Calendar' :
        \ &ft == 'thumbnail' ? 'Thumbnail' :
@@ -103,4 +101,3 @@ endfunction
 
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
