@@ -782,9 +782,9 @@ endif
     nnoremap <leader>sb :SplitScrollSpecified<space>
     " ------- }}}
     " ------- scroll all windows simultaneously {{{
-    nnoremap <silent> <S-F7> :windo set scrollbind!<CR>
-    inoremap <silent> <S-F7> <C-O>:windo set scrollbind!<CR>
-    tnoremap <silent> <S-F7> <C-\><C-N>:windo set scrollbind!<CR>
+    nnoremap <silent> <S-F5> :windo set scrollbind!<CR>
+    inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
+    tnoremap <silent> <S-F5> <C-\><C-N>:windo set scrollbind!<CR>
     " ------- }}}
 
   " --- }}}
