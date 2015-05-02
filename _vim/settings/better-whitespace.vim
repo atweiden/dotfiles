@@ -4,8 +4,7 @@ let g:better_whitespace_filetypes_blacklist=[ 'calendar',
                                             \ 'ctrlsf',
                                             \ 'help',
                                             \ 'unite',
-                                            \ 'vim-plug',
-                                            \ 'vimshell' ]
+                                            \ 'vim-plug' ]
 
 " jellyx whitespace colors
 highlight ExtraWhitespace ctermbg=89 guibg=#87005f
