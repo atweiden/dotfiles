@@ -57,7 +57,6 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
 Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
 Plug 'Shougo/vimfiler.vim'
-Plug 'Shougo/vimshell.vim'
 
 " keyboard
 Plug 'kana/vim-arpeggio'
@@ -323,11 +322,7 @@ Plug 'epeli/slimux', { 'on': [ 'SlimuxREPLConfigure',
                              \ 'SlimuxShellLast',
                              \ 'SlimuxShellPrompt',
                              \ 'SlimuxShellRun' ] }
-Plug 'tpope/vim-tbone', { 'on': [ 'Tattach',
-                                \ 'Tmux',
-                                \ 'Tput',
-                                \ 'Twrite',
-                                \ 'Tyank' ] }
+Plug 'tpope/vim-tbone'
 Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
                                \ 'VimuxCloseRunner',
                                \ 'VimuxInspectRunner',
