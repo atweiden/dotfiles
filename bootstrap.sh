@@ -65,6 +65,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.jshintrc"       \
                "$HOME/.keymap"         \
                "$HOME/.npmrc"          \
+               "$HOME/.nvim"           \
                "$HOME/.nvimrc"         \
                "$HOME/.pdbrc"          \
                "$HOME/.psqlrc"         \
@@ -76,7 +77,6 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.vim"            \
                "$HOME/.vimrc"          \
                "$HOME/.vimrc.lite"     \
-               "$HOME/.vimshrc"        \
                "$HOME/.vimencrypt"     \
                "$HOME/.wgetrc"         \
                "$HOME/.Xdefaults"      \
@@ -99,6 +99,7 @@ for dotfolder in bin         \
                  gnupg       \
                  hgext       \
                  hgmap       \
+                 nvim        \
                  ssh         \
                  terminfo    \
                  tmux        \
@@ -138,7 +139,6 @@ for dotfile in ackrc          \
                vimencrypt     \
                vimrc          \
                vimrc.lite     \
-               vimshrc        \
                wgetrc         \
                Xdefaults      \
                Xmodmap        \
