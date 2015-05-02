@@ -186,6 +186,8 @@ if has('gui_running')
   " no left-hand scrollbar
   set guioptions-=l
   set guioptions-=L
+  " use console style tabbed interface
+  set guioptions-=e
   " use console dialogs instead of popups
   set guioptions+=c
   " use lightline-compatible monaco
