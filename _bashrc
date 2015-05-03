@@ -178,7 +178,6 @@ alias grep='grep --ignore-case --color=auto'
 alias fgrep='fgrep --ignore-case --color=auto'
 alias egrep='egrep --ignore-case --color=auto'
 [[ -x /usr/bin/locate ]] && alias locate='locate --ignore-case'
-[[ -x /usr/bin/ag ]] && alias ag='ag --unrestricted'
 if [[ -x /usr/bin/icdiff ]]; then
   alias diff='icdiff'
 elif [[ -x /usr/bin/colordiff ]]; then
