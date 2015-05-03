@@ -249,8 +249,8 @@ endif
     " ------- always show statusline {{{
     set laststatus=2
     " ------- }}}
-    " ------- show active mode on last line {{{
-    set showmode
+    " ------- don't show active mode on last line {{{
+    set noshowmode
     " ------- }}}
 
   " --- }}}
