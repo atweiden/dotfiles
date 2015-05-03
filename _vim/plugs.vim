@@ -22,11 +22,6 @@ Plug 'mattboehm/vim-unstack', { 'on': [ 'UnstackFromClipboard',
                                       \ 'UnstackFromText' ] }
 Plug 'vim-scripts/VerticalHelp', { 'on': 'H' }
 
-" tabs
-Plug 'gcmt/taboo.vim', { 'on': [ 'TabooOpen',
-                               \ 'TabooRename',
-                               \ 'TabooReset' ] }
-
 " folds
 Plug 'Harenome/vim-neatfoldtext'
 
