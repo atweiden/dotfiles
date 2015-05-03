@@ -49,6 +49,7 @@ Shortcut                | Action
 <kbd>Super+Ctrl+q</kbd> | Quit Openbox
 <kbd>Alt+F2</kbd>       | gmrun dialog (program launcher)
 <kbd>Alt+F3</kbd>       | dmenu (HUD-like program launcher with simple fuzzy completion)
+<kbd>Alt+F4</kbd>       | Quit current program
 
 Desktop shortcuts:
 
