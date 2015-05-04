@@ -17,6 +17,17 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
+let g:lightline.tab = {
+      \ 'active': [ 'tabnum', 'mytabname', 'mytabmodified' ],
+      \ 'inactive': [ 'tabnum', 'mytabname', 'mytabmodified' ] }
+
+let g:lightline.tab_component_function = {
+      \ 'mytabname': 'MyTabname',
+      \ 'mytabmodified': 'MyTabmodified',
+      \ 'readonly': 'lightline#tab#readonly',
+      \ 'tabnum': 'lightline#tab#tabnum'
+      \ }
+
 function! MyModified()
   try
     if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|vim-plug\|undotree\|thumbnail\|calendar'
@@ -43,7 +54,7 @@ endfunction
 
 function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-       \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+       \ (&ft == 'vimfiler' ? pathshorten(vimfiler#get_status_string()[0:-9]) :
        \  &ft == 'unite' ? unite#get_status_string() :
        \  &ft == 'undotree' ? '' :
        \  &ft == 'vim-plug' ? '' :
@@ -92,8 +103,26 @@ function! MyMode()
        \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
-let g:tagbar_status_func = 'TagbarStatusFunc'
+function! MyTabname(n) abort
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  let _ = expand('#'.buflist[winnr - 1].':t')
+  if gettabwinvar(a:n, winnr, '&ft') == 'vimfiler'
+    return '۷ϝ'
+  else
+    return strlen(_) ? _ : '[No Name]'
+  endif
+endfunction
 
+function! MyTabmodified(n) abort
+  let winnr = tabpagewinnr(a:n)
+  if gettabwinvar(a:n, winnr, '&ft') == 'vimfiler'
+    return ''
+  else
+    return gettabwinvar(a:n, winnr, '&modified') ? '+' : gettabwinvar(a:n, winnr, '&modifiable') ? '' : '-'
+endfunction
+
+let g:tagbar_status_func = 'TagbarStatusFunc'
 function! TagbarStatusFunc(current, sort, fname, ...) abort
     let g:lightline.fname = a:fname
   return lightline#statusline(0)
