@@ -54,7 +54,7 @@ endfunction
 
 function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-       \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+       \ (&ft == 'vimfiler' ? pathshorten(vimfiler#get_status_string()[0:-9]) :
        \  &ft == 'unite' ? unite#get_status_string() :
        \  &ft == 'undotree' ? '' :
        \  &ft == 'vim-plug' ? '' :
