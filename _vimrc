@@ -940,7 +940,7 @@ inoremap <silent> <S-F5> <C-O>:windo set scrollbind!<CR>
 nnoremap <silent> <M-Down> :tabnew<CR>
 
 " close tab
-nnoremap <silent> <M-d> :tabclose<CR><Bar>:tabmove -1<CR>
+nnoremap <silent> <M-d> :tabclose<CR>
 
 " switch between tabs
 nnoremap <silent> <M-Left> :tabprevious<CR>
