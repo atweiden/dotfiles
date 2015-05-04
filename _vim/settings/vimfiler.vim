@@ -12,10 +12,10 @@ let g:vimfiler_marked_file_icon = '*'
 " Use trash-cli if deleting files from vimfiler
 "let g:unite_kind_file_use_trashbox = 1
 
-" Enable file operation commands
-"call vimfiler#custom#profile('default', 'context', {
-"      \ 'safe' : 0
-"      \ })
+" Open files in new tabs
+call vimfiler#custom#profile('default', 'context', {
+      \ 'edit_action' : 'tabopen'
+      \ })
 
 " Open a vimfiler buffer automatically when Vim starts up if no files
 " (arguments) were specified
