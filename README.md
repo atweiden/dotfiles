@@ -101,6 +101,7 @@ Credits
 - [@jeremyjh](https://github.com/jeremyjh/dotfiles)
 - [@jeroenjanssens](https://github.com/jeroenjanssens/dotfiles)
 - [@jgors](https://github.com/jgors/configs)
+- [@jonhoo](https://github.com/jonhoo/configs)
 - [@jszakmeister](https://github.com/jszakmeister/vimuser-jszakmeister)
 - [@junegunn](https://github.com/junegunn/dotfiles)
 - [@kernelsmith](https://github.com/kernelsmith/env-customization)
