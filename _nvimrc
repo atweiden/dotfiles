@@ -855,6 +855,13 @@ endif
     " ------- change to directory of file {{{
     nnoremap <silent> <leader>. :cd%:h<CR>
     " ------- }}}
+    " ------- prevent accidental writes to buffers that shouldn't be edited {{{
+    augroup readonly
+      autocmd!
+      autocmd BufRead *.orig set readonly
+      autocmd BufRead *.pacnew set readonly
+    augroup END
+    " ------- }}}
 
   " --- }}}
 

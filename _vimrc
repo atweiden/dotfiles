@@ -667,6 +667,13 @@ nnoremap <silent> <leader>. :cd%:h<CR>
 " alternative to `dos2unix file`
 noremap <leader>rmm :%s///g<CR>
 
+" prevent accidental writes to buffers that shouldn't be edited
+augroup readonly
+  autocmd!
+  autocmd BufRead *.orig set readonly
+  autocmd BufRead *.pacnew set readonly
+augroup END
+
 " }}}
 " --- redoing {{{
 
