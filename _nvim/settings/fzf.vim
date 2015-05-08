@@ -1,16 +1,20 @@
+" for nvim only
+let $FZF_DEFAULT_OPTS .= ' --inline-info'
+
+" open fzf in urxvt
 let g:fzf_launcher = 'urxvt -geometry 120x30 -e sh -c %s'
 
-" search files from CWD
-nnoremap <silent> <M-F> :FZF<CR>
-tnoremap <silent> <M-F> <C-\><C-N>:FZF<CR>
+" open files from CWD
+nnoremap <silent> <leader>o :FZF -m<CR>
+
+" select buffer
+nnoremap <silent> <leader>lz :FZFBuf<CR>
 
 " search lines in all open vim buffers
 nnoremap <silent> <M-f> :FZFLines<CR>
-tnoremap <silent> <M-f> <C-\><C-N>:FZFLines<CR>
 
 " simple MRU search
 nnoremap <silent> <M-m> :FZFMru<CR>
-tnoremap <silent> <M-m> <C-\><C-N>:FZFMru<CR>
 
 " fuzzy cmdline completion
 " add an extra <CR> at the end of this line to automatically accept the
@@ -25,3 +29,6 @@ cnoremap <silent> <C-L> <C-\>eGetCompletions()<CR><CR>
 " the arglist at once. More special cases could be added. Some limitations:
 " the auto-complete for :help and :tag are limited to 300 entries, so you
 " may need to narrow it a bit.
+
+" dictionary word completion
+inoremap <silent> <C-X><C-W> <C-O>:FZFWords<CR>

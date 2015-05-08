@@ -123,3 +123,46 @@ function! GetCompletions()
                     \}))
     endif
 endfunction
+
+
+""""""""""""""""""""""""""""
+" Dictionary word completion
+
+function! s:fzf_insert(data)
+  execute 'normal!' (empty(s:fzf_query) ? 'a' : 'ciW')."\<C-R>=a:data\<CR>"
+  startinsert!
+endfunction
+
+function! s:fzf_words(query)
+  let s:fzf_query = a:query
+  let matches = fzf#run({
+  \ 'source':  'cat /usr/share/dict/words',
+  \ 'sink':    function('s:fzf_insert'),
+  \ 'options': '--no-multi --query="'.escape(a:query, '"').'"',
+  \ 'down':    '40%'
+  \ })
+endfunction
+
+command! FZFWords call <SID>fzf_words(expand('<cWORD>'))
+
+
+"""""""""""""""
+" Select buffer
+
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+command! FZFBuf call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m --prompt="Buf> "',
+\   'down':    len(<sid>buflist()) + 2
+\ })
