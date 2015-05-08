@@ -64,6 +64,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.jshintignore"   \
                "$HOME/.jshintrc"       \
                "$HOME/.keymap"         \
+               "$HOME/.mrconfig.d"     \
                "$HOME/.npmrc"          \
                "$HOME/.nvim"           \
                "$HOME/.nvimrc"         \
@@ -99,6 +100,7 @@ for dotfolder in bin         \
                  gnupg       \
                  hgext       \
                  hgmap       \
+                 mrconfig.d  \
                  nvim        \
                  ssh         \
                  terminfo    \

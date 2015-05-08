@@ -1,0 +1,62 @@
+[bioperl6]
+checkout = git clone 'https://github.com/cjfields/bioperl6' 'bioperl6'
+
+[book]
+checkout = git clone 'https://github.com/perl6/book' 'book'
+
+[doc]
+checkout = git clone 'https://github.com/perl6/doc' 'doc'
+
+[json]
+checkout = git clone 'https://github.com/moritz/json' 'json'
+
+[Module-Minter]
+checkout = git clone 'https://github.com/dnmfarrell/Module-Minter' 'Module-Minter'
+
+[nqp]
+checkout = git clone 'https://github.com/perl6/nqp' 'nqp'
+
+[p6-c-parser]
+checkout = git clone 'https://github.com/andydude/p6-c-parser' 'p6-c-parser'
+
+[p6-Grammar-Mixin]
+checkout = git clone 'https://github.com/Mouq/p6-Grammar-Mixin' 'p6-Grammar-Mixin'
+
+[perl6-Config-INI]
+checkout = git clone 'https://github.com/tadzik/perl6-Config-INI' 'perl6-Config-INI'
+
+[perl6-docs]
+checkout = git clone 'https://github.com/perlpilot/perl6-docs' 'perl6-docs'
+
+[perl6-examples]
+checkout = git clone 'https://github.com/perl6/perl6-examples' 'perl6-examples'
+
+[perl6-Lingua-EN-Sentence]
+checkout = git clone 'https://github.com/dginev/perl6-Lingua-EN-Sentence' 'perl6-Lingua-EN-Sentence'
+
+[perl6-lwp-simple]
+checkout = git clone 'https://github.com/cosimo/perl6-lwp-simple' 'perl6-lwp-simple'
+
+[perl6-Porting-Pearls]
+checkout = git clone 'https://github.com/dginev/perl6-Porting-Pearls' 'perl6-Porting-Pearls'
+
+[rakudo]
+checkout = git clone 'https://github.com/rakudo/rakudo' 'rakudo'
+
+[roast]
+checkout = git clone 'https://github.com/perl6/roast' 'roast'
+
+[specs]
+checkout = git clone 'https://github.com/perl6/specs' 'specs'
+
+[std]
+checkout = git clone 'https://github.com/perl6/std' 'std'
+
+[System-Passwd]
+checkout = git clone 'https://github.com/dnmfarrell/System-Passwd' 'System-Passwd'
+
+[text-indented]
+checkout = git clone 'https://github.com/masak/text-indented' 'text-indented'
+
+[toml-pm6]
+checkout = git clone 'https://github.com/Mouq/toml-pm6' 'toml-pm6'
