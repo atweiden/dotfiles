@@ -67,7 +67,7 @@ Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
 Plug 'henrik/vim-indexed-search'
 "Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
 "Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
-Plug 'dahu/SearchParty'
+"Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 
 " sort
@@ -198,7 +198,8 @@ Plug 'vim-scripts/marvim'
 Plug 'naquad/Partial.vim', { 'on': 'Partial' }
 
 " auto-close
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
+Plug 'cohama/lexima.vim'
 
 " multiple cursors
 "Plug 'terryma/vim-multiple-cursors'
