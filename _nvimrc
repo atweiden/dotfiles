@@ -795,12 +795,15 @@ endif
     nnoremap <silent> gd :bdelete<CR>
     nnoremap <silent> gb :bnext<CR>
     nnoremap <silent> gB :bprev<CR>
-    nnoremap <leader>1 :<C-U>buffer 1<CR>
-    nnoremap <leader>2 :<C-U>buffer 2<CR>
-    nnoremap <leader>3 :<C-U>buffer 3<CR>
-    nnoremap <leader>4 :<C-U>buffer 4<CR>
-    nnoremap <leader>5 :<C-U>buffer 5<CR>
-    nnoremap <leader>6 :<C-U>buffer 6<CR>
+    nnoremap <silent> <leader>1 :<C-U>buffer 1<CR>
+    nnoremap <silent> <leader>2 :<C-U>buffer 2<CR>
+    nnoremap <silent> <leader>3 :<C-U>buffer 3<CR>
+    nnoremap <silent> <leader>4 :<C-U>buffer 4<CR>
+    nnoremap <silent> <leader>5 :<C-U>buffer 5<CR>
+    nnoremap <silent> <leader>6 :<C-U>buffer 6<CR>
+    nnoremap <silent> <leader>7 :<C-U>buffer 7<CR>
+    nnoremap <silent> <leader>8 :<C-U>buffer 8<CR>
+    nnoremap <silent> <leader>9 :<C-U>buffer 9<CR>
     " ------- }}}
 
   " --- }}}
