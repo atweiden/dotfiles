@@ -70,6 +70,18 @@ Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 
+" sort
+Plug 'vim-scripts/AdvancedSorters', { 'on': [ 'SortByCharLength',
+                                            \ 'SortByExpr',
+                                            \ 'SortByExprUnique',
+                                            \ 'SortByWidth',
+                                            \ 'SortRangesByHeader',
+                                            \ 'SortRangesByMatch',
+                                            \ 'SortRangesByRange',
+                                            \ 'SortUnfolded',
+                                            \ 'SortWORDs',
+                                            \ 'Uniq' ] }
+
 " movement
 Plug 'gcmt/breeze.vim', { 'for': [ 'eelixir',
                                  \ 'egs',
