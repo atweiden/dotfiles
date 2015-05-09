@@ -280,7 +280,9 @@ Plug 'ludovicchabant/vim-lawrencium', { 'on': [ 'Hg',
                                               \ 'Hgvdiffsumsplit',
                                               \ 'Hgvimgrep',
                                               \ 'Hgwannotate' ] }
-Plug 'idanarye/vim-merginal'
+Plug 'idanarye/vim-merginal', { 'on': [ 'Merginal',
+                                      \ 'MerginalClose',
+                                      \ 'MerginalToggle' ] }
 Plug 'jmcantrell/vim-reporoot', { 'on': 'RepoRoot' }
 
 " writing
