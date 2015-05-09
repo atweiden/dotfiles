@@ -953,8 +953,8 @@ nnoremap <silent> <M-Down> :tabnew<CR>
 nnoremap <silent> <M-d> :tabclose<CR>
 
 " switch between tabs
-nnoremap <silent> <M-Left> :tabprevious<CR>
-nnoremap <silent> <M-Right> :tabnext<CR>
+nnoremap <silent> <C-S-Tab> :tabprevious<CR>
+nnoremap <silent> <C-Tab> :tabnext<CR>
 
 " move tab adjacent
 nnoremap <silent> <M-S-Left> :tabmove -1<CR>

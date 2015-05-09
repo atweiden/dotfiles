@@ -819,10 +819,10 @@ endif
     tnoremap <silent> <M-d> <C-\><C-N>:tabclose<CR>
     " ------- }}}
     " ------- switch between tabs {{{
-    nnoremap <silent> <M-Left> :tabprevious<CR>
-    nnoremap <silent> <M-Right> :tabnext<CR>
-    tnoremap <silent> <M-Left> <C-\><C-N>:tabprevious<CR>
-    tnoremap <silent> <M-Right> <C-\><C-N>:tabnext<CR>
+    nnoremap <silent> <C-S-Tab> :tabprevious<CR>
+    nnoremap <silent> <C-Tab> :tabnext<CR>
+    tnoremap <silent> <C-S-Tab> <C-\><C-N>:tabprevious<CR>
+    tnoremap <silent> <C-Tab> <C-\><C-N>:tabnext<CR>
     " ------- }}}
     " ------- move tab adjacent {{{
     nnoremap <silent> <M-S-Left> :tabmove -1<CR>
