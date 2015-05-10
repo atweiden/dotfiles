@@ -190,6 +190,7 @@ Plug 'kana/vim-submode'
 Plug 'wellle/targets.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-function'
+Plug 'thinca/vim-textobj-function-javascript', { 'for': 'javascript' }
 Plug 'thinca/vim-textobj-function-perl', { 'for': [ 'perl', 'perl6' ] }
 Plug 'kana/vim-textobj-lastpat'
 Plug 'reedes/vim-textobj-quote'
