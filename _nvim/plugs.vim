@@ -235,6 +235,7 @@ Plug 'junkblocker/patchreview-vim', { 'on': [ 'DiffReview',
                                             \ 'ReversePatchReview' ] }
 
 " vcs
+Plug 'cohama/agit.vim', { 'on': [ 'Agit', 'AgitFile', 'AgitGit' ] }
 "Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
 Plug 'tpope/vim-fugitive'
 "Plug 'gregsexton/gitv', { 'on': 'Gitv' }
