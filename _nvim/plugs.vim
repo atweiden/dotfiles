@@ -188,6 +188,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 "Plug 'kana/vim-submode' " is a runtime dependency for fieldtrip/sideways
 Plug 'wellle/targets.vim'
 Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-lastpat'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'coderifous/textobj-word-column.vim'
