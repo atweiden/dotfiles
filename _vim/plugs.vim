@@ -445,6 +445,11 @@ Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': [ 'cassius',
                                                  \ 'hamlet',
                                                  \ 'julius',
                                                  \ 'lucius' ] }
+Plug 'jdonaldson/vaxe', { 'for': [ 'haxe',
+                                 \ 'hss',
+                                 \ 'hxml',
+                                 \ 'lime.xml',
+                                 \ 'nmml.xml' ] }
 Plug 'gabesoft/vim-java', { 'for': 'java' }
 Plug 'krisajenkins/vim-java-sql', { 'for': 'java' }
 Plug 'youjumpiwatch/vim-javacomplete', { 'for': 'java' }

@@ -33,7 +33,9 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.html.ep,*.html.epl} set ft=html.epl
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.haml,*.hamlbars,*.hamlc} set ft=haml
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.hs} set ft=haskell
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.hss} set ft=hss
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.hx} set ft=haxe
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.hxml} set ft=hxml
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ini,php.ini,php-fpm.conf,my.cnf} set ft=dosini
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {.inputrc} set ft=readline
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.jade} set ft=jade
@@ -48,6 +50,7 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.kv} set ft=kivy
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ledger} set ft=ledger
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.less} set ft=less
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.lime} set ft=lime.xml
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ly,*.ily} set ft=lilypond
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.lisp} set ft=lisp
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ll} set ft=llvm
@@ -55,6 +58,7 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.lua} set ft=lua
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set ft=markdown conceallevel=0
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.nim} set ft=nim
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.nmml} set ft=nmml.xml
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ml,*.mli} set ft=ocaml
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.php,*.phpt,*.ctp,*.hh,*.hhi} set ft=php
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {.AURINFO,.SRCINFO} set ft=PKGBUILD
