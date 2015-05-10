@@ -530,6 +530,7 @@ Plug 'def-lkb/vimbufsync', { 'for': 'ocaml' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': [ 'perl', 'perl6' ] }
 "Plug 'trapd00r/vim-after-syntax-perl', { 'for': [ 'perl', 'perl6' ] }
+Plug 'yuuki1/perl-local-lib-path.vim', { 'for': [ 'perl', 'perl6' ] }
 Plug 'c9s/perlomni.vim', { 'for': [ 'perl', 'perl6' ] }
 Plug 'yko/mojo.vim', { 'for': 'html.epl' }
 Plug 'hhvm/vim-hack', { 'for': 'php' }
