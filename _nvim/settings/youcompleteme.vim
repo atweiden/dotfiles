@@ -21,6 +21,9 @@ let g:ycm_confirm_extra_conf = 1
 " you're writing.
 let g:ycm_seed_identifiers_with_syntax = 1
 
+" Don't create mapping for showing diagnostic text
+let g:ycm_key_detailed_diagnostics = ''
+
 " Turn off YCM's diagnostic display features (clutters vim gutter)
 let g:ycm_show_diagnostics_ui = 0
 
