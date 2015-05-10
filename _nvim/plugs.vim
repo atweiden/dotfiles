@@ -310,6 +310,10 @@ Plug 'tyru/capture.vim', { 'on': 'Capture' }
 "                                    \ 'FocusDispatch',
 "                                    \ 'Make',
 "                                    \ 'Start' ] }
+Plug 'idanarye/vim-erroneous', { 'on': [ 'Elmake',
+                                       \ 'Elrun',
+                                       \ 'Emake',
+                                       \ 'Erun' ] }
 Plug 'idanarye/vim-integrake', { 'on': [ 'IR',
                                        \ 'IRgrab',
                                        \ 'IRsedit',
@@ -486,7 +490,6 @@ Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'felixge/vim-nodejs-errorformat', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
 Plug 'unc0/vim-egs', { 'for': 'egs' }
 Plug 'nikvdp/ejs-syntax', { 'for': 'ejs' }
@@ -518,7 +521,6 @@ Plug 'mxw/vim-xhp', { 'for': 'php' }
 Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
 Plug '2072/vim-syntax-for-PHP', { 'for': 'php' }
 Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
-Plug 'vim-scripts/phpErrorMarker', { 'for': 'php' }
 Plug 'vim-scripts/phpfolding.vim', { 'for': 'php' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
