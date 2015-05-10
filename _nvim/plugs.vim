@@ -362,6 +362,10 @@ Plug 'SirVer/ultisnips'
 Plug 'tdcdev/ycm_simple_conf'
 Plug 'Valloric/YouCompleteMe'
 
+" debuggers
+"Plug 'vim-scripts/Conque-GDB', { 'for': [ 'c', 'cpp' ] }
+"Plug 'idanarye/vim-vebugger'
+
 " languages
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'prurigro/vim-archversion', { 'for': 'archversion' }
@@ -371,7 +375,6 @@ Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
 Plug 'vim-jp/vim-cpp', { 'for': [ 'c', 'cpp' ] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
 Plug 'vim-scripts/ifdef-highlighting', { 'for': [ 'c', 'cpp' ] }
-"Plug 'vim-scripts/Conque-GDB', { 'for': [ 'c', 'cpp' ] }
 Plug 'b4winckler/vim-objc', { 'for': 'objc' }
 Plug 'tpope/vim-classpath', { 'for': [ 'clojure', 'java' ] }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
