@@ -200,8 +200,7 @@ Plug 'vim-scripts/marvim'
 Plug 'naquad/Partial.vim', { 'on': 'Partial' }
 
 " auto-close
-"Plug 'jiangmiao/auto-pairs'
-Plug 'cohama/lexima.vim'
+Plug 'jiangmiao/auto-pairs'
 
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
