@@ -70,6 +70,7 @@ Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 "Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
+Plug 'idanarye/vim-yankitute', { 'on': 'Yankitute' }
 
 " sort
 Plug 'vim-scripts/AdvancedSorters', { 'on': [ 'SortByCharLength',
