@@ -147,7 +147,7 @@ Plug 'xolox/vim-session'
 " align
 Plug 'JLimperg/Align'
 Plug 'sk1418/blockit'
-Plug 'atweiden/vim-dragvisuals'
+"Plug 'atweiden/vim-dragvisuals'
 Plug 'junegunn/vim-easy-align'
 Plug 'dhruvasagar/vim-table-mode', { 'on': [ 'TableAddFormula',
                                            \ 'TableEvalFormulaLine',
@@ -173,6 +173,7 @@ Plug 'dhruvasagar/vim-table-mode', { 'on': [ 'TableAddFormula',
                                            \ '<Plug>(table-mode-tableize-delimiter)' ] }
 Plug 'godlygeek/tabular'
 Plug 'atsepkov/vim-tabularity'
+Plug 't9md/vim-textmanip'
 Plug 'vim-scripts/vis'
 
 " textobj
