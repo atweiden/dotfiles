@@ -104,10 +104,11 @@ Plug 'gcmt/breeze.vim', { 'for': [ 'eelixir',
                                  \ 'markdown',
                                  \ 'php',
                                  \ 'xml' ] }
-Plug 'rhysd/clever-f.vim'
+"Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
 Plug 'myusuf3/numbers.vim'
+Plug 'justinmk/vim-sneak'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bruno-/vim-vertical-move'
 
@@ -178,7 +179,7 @@ Plug 'vim-scripts/vis'
 
 " textobj
 Plug 'tommcdo/vim-centaur'
-Plug 'terryma/vim-expand-region'
+"Plug 'terryma/vim-expand-region'
 Plug 'tek/vim-fieldtrip'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
