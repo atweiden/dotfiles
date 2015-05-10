@@ -62,6 +62,8 @@ Plug 'drmikehenry/vim-fixkey'
 Plug 'tpope/vim-abolish'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf'
+Plug 'osyo-manga/vim-hopping', { 'on': [ 'HoppingStart',
+                                       \ '<Plug>(hopping-start)' ] }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
@@ -69,7 +71,7 @@ Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
 "Plug 'Grimy/indextrous'
 "Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
-"Plug 'dahu/SearchParty'
+Plug 'dahu/SearchParty'
 Plug 'jcorbin/vim-searchmatch', { 'on': [ '<Plug>Searchmatch1',
                                         \ '<Plug>Searchmatch2',
                                         \ '<Plug>Searchmatch3',
