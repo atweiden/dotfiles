@@ -69,6 +69,10 @@ Plug 'henrik/vim-indexed-search'
 Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
 Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 "Plug 'dahu/SearchParty'
+Plug 'jcorbin/vim-searchmatch', { 'on': [ '<Plug>Searchmatch1',
+                                        \ '<Plug>Searchmatch2',
+                                        \ '<Plug>Searchmatch3',
+                                        \ '<Plug>SearchmatchReset' ] }
 Plug 'Shougo/unite.vim'
 Plug 'idanarye/vim-yankitute', { 'on': 'Yankitute' }
 
