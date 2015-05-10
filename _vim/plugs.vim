@@ -372,6 +372,7 @@ Plug 'mattn/emmet-vim', { 'for': [ 'css',
                                  \ 'slim',
                                  \ 'stylus' ] }
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
+Plug 't9md/vim-transform'
 Plug 'SirVer/ultisnips'
 Plug 'tdcdev/ycm_simple_conf'
 Plug 'Valloric/YouCompleteMe'
