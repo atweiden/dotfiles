@@ -310,6 +310,10 @@ Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
                                    \ 'FocusDispatch',
                                    \ 'Make',
                                    \ 'Start' ] }
+Plug 'idanarye/vim-integrake', { 'on': [ 'IR',
+                                       \ 'IRgrab',
+                                       \ 'IRsedit',
+                                       \ 'IRvedit' ] }
 Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
                                      \ 'SCChooseInterpreter',
                                      \ 'SCCompile',

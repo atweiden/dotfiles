@@ -310,6 +310,10 @@ Plug 'tyru/capture.vim', { 'on': 'Capture' }
 "                                    \ 'FocusDispatch',
 "                                    \ 'Make',
 "                                    \ 'Start' ] }
+Plug 'idanarye/vim-integrake', { 'on': [ 'IR',
+                                       \ 'IRgrab',
+                                       \ 'IRsedit',
+                                       \ 'IRvedit' ] }
 " Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
 "                                      \ 'SCChooseInterpreter',
 "                                      \ 'SCCompile',
