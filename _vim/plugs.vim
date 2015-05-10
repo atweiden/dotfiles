@@ -229,6 +229,7 @@ Plug 'majutsushi/tagbar', { 'on': [ 'Tagbar',
 Plug 'h1mesuke/unite-outline'
 
 " diffs
+Plug 'vim-scripts/diffchar.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'junkblocker/patchreview-vim', { 'on': [ 'DiffReview',
                                             \ 'PatchReview',
