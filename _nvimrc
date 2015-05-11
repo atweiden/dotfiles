@@ -819,16 +819,16 @@ endif
     tnoremap <silent> <M-d> <C-\><C-N>:tabclose<CR>
     " ------- }}}
     " ------- switch between tabs {{{
-    nnoremap <silent> <C-S-Tab> :tabprevious<CR>
-    nnoremap <silent> <C-Tab> :tabnext<CR>
-    tnoremap <silent> <C-S-Tab> <C-\><C-N>:tabprevious<CR>
-    tnoremap <silent> <C-Tab> <C-\><C-N>:tabnext<CR>
+    nnoremap <silent> ( @='gT'<CR>
+    nnoremap <silent> ) @='gt'<CR>
+    tnoremap <silent> ( <C-\><C-N>@='gT'<CR>
+    tnoremap <silent> ) <C-\><C-N>@='gt'<CR>
     " ------- }}}
     " ------- move tab adjacent {{{
-    nnoremap <silent> <M-S-Left> :tabmove -1<CR>
-    nnoremap <silent> <M-S-Right> :tabmove +1<CR>
-    tnoremap <silent> <M-S-Left> <C-\><C-N>:tabmove -1<CR>
-    tnoremap <silent> <M-S-Right> <C-\><C-N>:tabmove +1<CR>
+    nnoremap <silent> g( :<C-U>:execute "tabmove -" . v:count1<CR>
+    nnoremap <silent> g) :<C-U>:execute "tabmove +" . v:count1<CR>
+    tnoremap <silent> g( <C-\><C-N>:<C-U>:execute "tabmove -" . v:count1<CR>
+    tnoremap <silent> g) <C-\><C-N>:<C-U>:execute "tabmove +" . v:count1<CR>
     " ------- }}}
     " ------- move tab {{{
     noremap <leader>tm :tabmove<space>
@@ -871,7 +871,7 @@ endif
   " --- deleting {{{
 
     " ------- delete char adjacent-right without moving cursor over one from the left {{{
-    nnoremap <silent> gx lxh
+    nnoremap <silent> gx @='lxh'<CR>
     " ------- }}}
 
   " --- }}}

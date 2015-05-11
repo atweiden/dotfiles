@@ -796,7 +796,7 @@ nnoremap <silent> S i<CR><ESC>^mwgk:silent! s/\v +$//<CR>:noh<CR>`w
 " --- editing {{{
 
 " delete char adjacent-right without moving cursor over one from the left
-nnoremap <silent> gx lxh
+nnoremap <silent> gx @='lxh'<CR>
 
 "  }}}
 " --- movement {{{
@@ -953,12 +953,12 @@ nnoremap <silent> <M-Down> :tabnew<CR>
 nnoremap <silent> <M-d> :tabclose<CR>
 
 " switch between tabs
-nnoremap <silent> <C-S-Tab> :tabprevious<CR>
-nnoremap <silent> <C-Tab> :tabnext<CR>
+nnoremap <silent> ( @='gT'<CR>
+nnoremap <silent> ) @='gt'<CR>
 
 " move tab adjacent
-nnoremap <silent> <M-S-Left> :tabmove -1<CR>
-nnoremap <silent> <M-S-Right> :tabmove +1<CR>
+nnoremap <silent> g( :<C-U>:execute "tabmove -" . v:count1<CR>
+nnoremap <silent> g) :<C-U>:execute "tabmove +" . v:count1<CR>
 
 " move tab
 noremap <leader>tm :tabmove<space>
