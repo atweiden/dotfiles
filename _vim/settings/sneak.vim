@@ -23,13 +23,16 @@ omap - <Plug>Sneak_s
 omap _ <Plug>Sneak_S
 
 " explicit repeat (as opposed to clever-s repeat)
-nmap <CR> <Plug>SneakNext
-xmap <CR> <Plug>SneakNext
-nmap <BS> <Plug>SneakPrevious
-xmap <BS> <Plug>SneakPrevious
+"nmap <CR> <Plug>SneakNext
+"xmap <CR> <Plug>SneakNext
+"nmap <BS> <Plug>SneakPrevious
+"xmap <BS> <Plug>SneakPrevious
 
 " use clever-s repeat behavior
 let g:sneak#s_next = 1
+
+" empty prompt
+let g:sneak#prompt = ''
 
 " don't do any special handling of file manager buffers
 let g:sneak#map_netrw = 0
