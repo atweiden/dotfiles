@@ -6,6 +6,6 @@
 
 function decimal2hex() {
 for _decimal in "$@"; do
-  echo "$_decimal" | perl -n -e 'print sprintf("0x%x", $_), "\n"'
+  printf "0x%x\n" "$_decimal"
 done
 }
