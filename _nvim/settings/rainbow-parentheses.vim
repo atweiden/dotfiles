@@ -1,5 +1,5 @@
 " toggle rainbow_parentheses.vim
-nnoremap <leader><leader>rp :RainbowParentheses!!<CR>
+nnoremap <leader><leader>pp :RainbowParentheses!!<CR>
 
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']']]
