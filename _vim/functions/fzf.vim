@@ -57,25 +57,26 @@ command! FZFLines call fzf#run({
 """"""""""""""""""""""""""""""
 " Narrow ag results within vim
 
-" Use `:AgFZF` followed by an ag-recogizable regex to pipe ag results
-" into fzf for narrowing. Selected results are opened in new tabs so
-" that you can open multiple positions within the same file (perhaps
-" there's a better way of doing this).
+" use `CTRL-X`, `CTRL-V`, `CTRL-T` to open in a new split, vertical split,
+" tab respectively.
 
-command! -nargs=1 AgFZF call fzf#run({
-            \'source': Arghandler(<f-args>),
-            \'sink' : function('AgHandler'),
-            \'options' : '-m'
-            \})
+function! s:ag_handler(lines)
+  if len(a:lines) < 2 | return | endif
 
-function! AgHandler(l)
-    let keys = split(a:l,':')
-    execute 'tabe +' . keys[-2] . ' ' . escape(keys[-1], ' ')
+  let [key, line] = a:lines[0:1]
+  let [file, line, col] = split(line, ':')[0:2]
+  let cmd = get({'ctrl-x': 'split', 'ctrl-v': 'vertical split', 'ctrl-t': 'tabe'}, key, 'e')
+  execute cmd escape(file, ' %#\')
+  execute line
+  execute 'normal!' col.'|'
 endfunction
 
-function! Arghandler(l)
-    return "ag -i " . a:l . " | sed 's@\\(.[^:]*\\):\\(.[^:]*\\):\\(.*\\)@\\3:\\2:\\1@' "
-endfunction
+command! -nargs=1 Ag call fzf#run({
+\ 'source':  'ag --nogroup --column --color "'.escape(<q-args>, '"\').'"',
+\ 'sink*':    function('<sid>ag_handler'),
+\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --no-multi',
+\ 'down':    '50%'
+\ })
 
 
 """"""""""""""""""""""""""
