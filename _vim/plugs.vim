@@ -61,6 +61,7 @@ Plug 'drmikehenry/vim-fixkey'
 " search and replace
 Plug 'tpope/vim-abolish'
 Plug 'dyng/ctrlsf.vim'
+Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf'
 Plug 'osyo-manga/vim-hopping', { 'on': [ 'HoppingStart',
                                        \ '<Plug>(hopping-start)' ] }
@@ -714,6 +715,7 @@ Plug 'guns/xterm-color-table.vim', { 'on': [ 'EXtermColorTable',
 " utilities / dependencies
 Plug 'vim-scripts/ingo-library'
 Plug 'xolox/vim-misc'
+Plug 'junegunn/vim-pseudocl'
 Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-scriptease'
 Plug 'kana/vim-operator-user'
