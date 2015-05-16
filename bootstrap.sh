@@ -161,6 +161,13 @@ done
 
 
 # -----------------------------------------------------------------------------
+# makepkg
+
+sed -i "s#yourname#$name#"         "$HOME/.config/pacman/makepkg.conf"
+sed -i "s#youremail#$email#"       "$HOME/.config/pacman/makepkg.conf"
+
+
+# -----------------------------------------------------------------------------
 # github
 
 sed -i "s#yourname#$name#"         "$HOME/.gitconfig"
