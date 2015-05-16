@@ -112,6 +112,7 @@ Credits
 - [@lervag](https://github.com/lervag/dotvim)
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
 - [@nvie](https://github.com/nvie/vimrc)
+- [@orlp](https://github.com/orlp/dotfiles)
 - [@phleet](https://github.com/phleet/dotfiles)
 - [@pjan](https://github.com/pjan/osx-dotfiles)
 - [@pocke](https://github.com/pocke/dotfiles)
