@@ -616,9 +616,12 @@ noremap Y y$
 
 " copy to clipboard
 vnoremap <leader>y "+yy
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+y$
 
 " paste from clipboard
 noremap <leader>p "+p
+noremap <leader>P "+P
 
 " toggle paste mode
 set pastetoggle=<F2>
