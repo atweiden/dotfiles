@@ -188,6 +188,7 @@ Plug 'tek/vim-fieldtrip'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
 Plug 'vim-scripts/LineJugglerCommands', { 'on': [ 'Replace', 'Swap' ] }
+Plug 'tommcdo/vim-ninja-feet'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'kana/vim-submode'
