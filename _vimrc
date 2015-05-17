@@ -881,15 +881,6 @@ noremap <silent> <leader><leader>cl :call ConcealToggle()<CR>
 " }}}
 
 " Navigation
-" --- cursor {{{
-
-" refresh colorscheme
-" 1. press \\ once to scroll down to where only the last line is showing
-" 2. press \\ again to move the cursor back to slightly above its original position
-let refreshed_colors = 0
-nnoremap <silent> \\ :let refreshed_colors=!refreshed_colors<Bar>:if refreshed_colors<Bar>:call RefreshColors()<Bar>:else<Bar>:call setpos('.', b:save_spot)<Bar>exe "normal! 3k"<Bar>:endif<CR>
-
-" }}}
 " --- buffers {{{
 
 " buffer navigation
