@@ -652,6 +652,7 @@ Plug 'zeis/vim-kolor'
 Plug 'atweiden/vim-colors-kongo'
 Plug 'sk1418/last256'
 Plug 'vim-scripts/lettuce.vim'
+Plug 'wimstefan/Lightning'
 Plug 'vim-scripts/Liquid-Carbon'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'vim-scripts/matrix.vim', { 'tag': '1.0' }
