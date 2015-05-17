@@ -624,6 +624,7 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 "Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors
+Plug 'romainl/Apprentice'
 Plug 'vim-scripts/AutumnLeaf'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/baycomb'
