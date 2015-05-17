@@ -14,5 +14,5 @@ augroup after-object
                                              \   '/', '\',
                                              \   '$', '@',
                                              \   '%', '&',
-                                             \   '+', '*'   )
+                                             \   '+', '*'    )
 augroup END
