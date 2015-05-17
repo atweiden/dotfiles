@@ -675,6 +675,7 @@ Plug 'vim-scripts/stackoverflow.vim'
 Plug 'vim-scripts/summerfruit256.vim'
 Plug 'vim-scripts/TaQua'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'Bravo13/vim-perl-colorscheme'
 Plug 'atweiden/VibrantInk-for-Vim', { 'branch': 'plugin-manager-compatibility' }
 Plug 'octol/vombatidae-vim'
 Plug 'molok/vim-vombato-colorscheme'
