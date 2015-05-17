@@ -6,9 +6,13 @@ augroup after-object
                                              \   ' ', '.',
                                              \   ',', '^',
                                              \   '!', '?',
-                                             \   '|', '_',
+                                             \   '|', '_'    )
+  autocmd VimEnter * call after_object#enable(  [']', '['],
                                              \   ']', '[',
                                              \   '}', '{',
                                              \   '<', '>',
-                                             \   '/'        )
+                                             \   '/', '\',
+                                             \   '$', '@',
+                                             \   '%', '&',
+                                             \   '+', '*'   )
 augroup END
