@@ -153,6 +153,7 @@ Plug 'JLimperg/Align'
 Plug 'sk1418/blockit'
 "Plug 'atweiden/vim-dragvisuals'
 Plug 'junegunn/vim-easy-align'
+Plug 'tommcdo/vim-lion'
 Plug 'dhruvasagar/vim-table-mode', { 'on': [ 'TableAddFormula',
                                            \ 'TableEvalFormulaLine',
                                            \ 'Tableize',
