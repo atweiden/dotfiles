@@ -11,6 +11,7 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {.conkyrc*} set ft=conkyrc
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.c} set ft=c
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.cpp,*.hpp} set ft=cpp
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.cr,*.crystal,Projectfile} set ft=crystal
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.cs} set ft=cs
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.css} set ft=css
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.csv,*.psv,*.tsv} set ft=csv
