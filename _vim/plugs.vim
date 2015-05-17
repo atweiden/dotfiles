@@ -410,6 +410,7 @@ Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'typedclojure/vim-typedclojure', { 'for': 'clojure' }
+Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
 Plug 'OrangeT/vim-csharp', { 'for': 'cs' }
 Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'scss' ] }
 Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
