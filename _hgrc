@@ -17,6 +17,7 @@ track.current = True
 color =
 fetch =
 graphlog =
+histedit =
 largefiles =
 pager =
 progress =
