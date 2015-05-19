@@ -466,6 +466,11 @@
         <command>sudo pm-suspend</command>
       </action>
     </keybind>
+    <keybind key="XF86Display">
+      <action name="Execute">
+        <command>lxrandr</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>8</dragThreshold>
