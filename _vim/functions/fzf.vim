@@ -68,7 +68,7 @@ function! s:ag_handler(lines)
   let cmd = get({'ctrl-x': 'split', 'ctrl-v': 'vertical split', 'ctrl-t': 'tabe'}, key, 'e')
   execute cmd escape(file, ' %#\')
   execute line
-  execute 'normal!' col.'|'
+  execute 'normal!' col.'|zz'
 endfunction
 
 command! -nargs=1 Ag call fzf#run({
