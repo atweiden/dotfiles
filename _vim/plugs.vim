@@ -447,6 +447,7 @@ Plug 'kongo2002/fsharp-vim', { 'for': 'fs' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-jp/vim-go-extra', { 'for': 'go' }
 Plug 'Alotor/groovim', { 'for': 'groovy' }
+Plug 'vim-scripts/gsl.vim', { 'for': 'gsl' }
 Plug 'tpope/vim-haml', { 'for': [ 'haml', 'sass', 'scss' ] }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
