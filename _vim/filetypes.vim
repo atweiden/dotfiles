@@ -28,8 +28,9 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.git/config,.gitconfig,.gitmodules,gitconfig} set ft=gitconfig
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*gtkrc*} set ft=gtkrc
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.go} set ft=go
-  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.groovy,*.gradle} set ft=groovy
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.gs} set ft=gorilla
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.groovy,*.gradle} set ft=groovy
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.gsl} set ft=gsl
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.html,*.htm,*.ejs} set ft=html
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.html.ep,*.html.epl} set ft=html.epl
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.haml,*.hamlbars,*.hamlc} set ft=haml
