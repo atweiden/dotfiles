@@ -22,10 +22,10 @@ command! FZFMru call fzf#run({
 """"""""""""""
 " Jump to tags
 
-command! FZFTag if !empty(tagfiles()) | call fzf#run({
+command! -bar FZFTags if !empty(tagfiles()) | call fzf#run({
 \   'source': "sed '/^\\!/d;s/\t.*//' " . join(tagfiles()) . ' | uniq',
 \   'sink':   'tag',
-\ }) | else | echo 'No tags' | endif
+\ }) | else | echo 'Preparing tags' | call system('ctags -R') | FZFTag | endif
 
 
 """"""""""""""""""""""""""""""""""""""
@@ -33,7 +33,7 @@ command! FZFTag if !empty(tagfiles()) | call fzf#run({
 
 function! s:line_handler(l)
   let keys = split(a:l, ':\t')
-  exec 'buf ' . keys[0]
+  exec 'buf' keys[0]
   exec keys[1]
   normal! ^zz
 endfunction
