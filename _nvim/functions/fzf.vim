@@ -28,6 +28,17 @@ command! -bar FZFTags if !empty(tagfiles()) | call fzf#run({
 \ }) | else | echo 'Preparing tags' | call system('ctags -R') | FZFTag | endif
 
 
+"""""""""""""""""""""""""""""""""""
+" Jump to tags only in current file
+
+command! FZFTagFile if !empty(tagfiles()) | call fzf#run({
+\   'source': "cat " . tagfiles()[0] . ' | grep "' . expand('%:@') . '"' . " | sed -e '/^\\!/d;s/\t.*//' ". ' |  uniq',
+\   'sink':   'tag',
+\   'options':  '+m',
+\   'left':     60,
+\ }) | else | echo 'No tags' | endif
+
+
 """"""""""""""""""""""""""""""""""""""
 " Search lines in all open vim buffers
 
