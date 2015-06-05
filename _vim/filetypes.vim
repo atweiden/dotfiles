@@ -26,6 +26,7 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.erb} set ft=eruby
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.fs,*.fsi,*.fsx} set ft=fs
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.git/config,.gitconfig,.gitmodules,gitconfig} set ft=gitconfig
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {COMMIT_EDITMSG} set ft=gitcommit
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*gtkrc*} set ft=gtkrc
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.go} set ft=go
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.gs} set ft=gorilla
