@@ -79,13 +79,18 @@
     " ------- }}}
     " ------- disable modelines, use securemodelines.vim instead {{{
     set nomodeline
-    let g:secure_modelines_verbose = 0
-    let g:secure_modelines_modelines = 15
-    augroup modelines
-      autocmd!
-      autocmd VimEnter * call filter(exists("g:secure_modelines_allowed_items") ? g:secure_modelines_allowed_items : [],
-                  \ 'v:val != "fdm" && v:val != "foldmethod"')
-    augroup END
+    let g:secure_modelines_allowed_items = [
+                \ "expandtab", "et", "noexpandtab", "noet",
+                \ "filetype", "ft",
+                \ "foldlevel", "fdl",
+                \ "foldmarker", "fmr",
+                \ "foldmethod", "fdm",
+                \ "rightleft", "rl", "norightleft", "norl",
+                \ "shiftwidth", "sw",
+                \ "softtabstop", "sts",
+                \ "tabstop", "ts",
+                \ "textwidth", "tw"
+                \ ]
     " ------- }}}
 
   " --- }}}
