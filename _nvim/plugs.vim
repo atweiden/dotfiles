@@ -107,11 +107,10 @@ Plug 'gcmt/breeze.vim', { 'for': [ 'eelixir',
                                  \ 'markdown',
                                  \ 'php',
                                  \ 'xml' ] }
-"Plug 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/matchit.zip'
 Plug 'myusuf3/numbers.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'christoomey/vim-tmux-navigator'
 "Plug 'bruno-/vim-vertical-move'
 
