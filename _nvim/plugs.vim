@@ -540,7 +540,7 @@ Plug 'leafo/moonscript-vim', { 'for': 'moon' }
 Plug 'tpope/vim-markdown', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'mattly/vim-markdown-enhancements', { 'for': [ 'markdown', 'mkd' ] }
 Plug 'nelstrom/vim-markdown-folding', { 'for': [ 'markdown', 'mkd' ] }
-Plug 'zah/nimrod.vim', { 'for': 'nim' }
+Plug 'zah/nim.vim', { 'for': 'nim' }
 Plug 'atweiden/merlin.vim', { 'for': 'ocaml', 'branch': 'vim' }
 Plug 'def-lkb/vimbufsync', { 'for': 'ocaml' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
