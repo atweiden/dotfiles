@@ -5,7 +5,7 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ino,*.pde} set ft=arduino
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.bib} set ft=bib
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.cfg,.ackrc,.ctags,.dunstrc,.hgrc,.npmrc} set ft=cfg
-  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.clj,*.cljs,*.edn} set ft=clojure
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.clj,*.cljc,*.cljs,*.cljx,*.edn} set ft=clojure
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.coffee,*.ck,*.coffeekup,Cakefile} set ft=coffee
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {.curlrc,.gitignore,.gitattributes,.hgignore,.jshintignore} set ft=conf
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {.conkyrc*} set ft=conkyrc
