@@ -163,10 +163,6 @@ endif
     " ------- do not redraw screen when executing macros {{{
     set lazyredraw
     " ------- }}}
-    " ------- indicates fast terminal connection {{{
-    set ttyfast
-    set ttymouse=xterm2
-    " ------- }}}
     " ------- insert N pixel lines between characters {{{
     set linespace=1
     " ------- }}}
