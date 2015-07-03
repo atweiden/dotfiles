@@ -568,6 +568,11 @@ nnoremap > >>
 nnoremap < <<
 
 " }}}
+" --- toggle showcmd {{{
+
+nnoremap <silent> <leader>sc :set showcmd!<CR>
+
+" }}}
 " --- toggle virtualedit=all {{{
 
 nnoremap <silent> <leader><leader>v :let &virtualedit=&virtualedit=="block" ? "all" : "block" <Bar> set virtualedit?<CR>

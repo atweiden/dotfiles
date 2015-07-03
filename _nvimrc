@@ -640,6 +640,14 @@ endif
 
 " shortcuts {{{
 
+  " --- display {{{
+
+    " ------- toggle showcmd {{{
+    nnoremap <silent> <leader>sc :set showcmd!<CR>
+    " ------- }}}
+
+  " --- }}}
+
   " --- selecting {{{
 
     " ------- bind escape key {{{
