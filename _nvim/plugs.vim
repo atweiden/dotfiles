@@ -687,6 +687,7 @@ Plug 'Bravo13/vim-perl-colorscheme'
 Plug 'atweiden/VibrantInk-for-Vim', { 'branch': 'plugin-manager-compatibility' }
 Plug 'octol/vombatidae-vim'
 Plug 'molok/vim-vombato-colorscheme'
+Plug 'vyshane/vydark-vim-color'
 Plug 'rhysd/wallaby.vim'
 Plug 'vim-scripts/xoria256.vim'
 Plug 'jnurmine/Zenburn'
