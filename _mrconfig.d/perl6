@@ -10,6 +10,9 @@ checkout = git clone 'https://github.com/perl6/doc' 'doc'
 [json]
 checkout = git clone 'https://github.com/moritz/json' 'json'
 
+[MoarVM]
+checkout = git clone 'https://github.com/MoarVM/MoarVM' 'MoarVM'
+
 [Module-Minter]
 checkout = git clone 'https://github.com/dnmfarrell/Module-Minter' 'Module-Minter'
 
@@ -21,6 +24,9 @@ checkout = git clone 'https://github.com/andydude/p6-c-parser' 'p6-c-parser'
 
 [p6-Grammar-Mixin]
 checkout = git clone 'https://github.com/Mouq/p6-Grammar-Mixin' 'p6-Grammar-Mixin'
+
+[panda]
+checkout = git clone 'https://github.com/tadzik/panda' 'panda'
 
 [perl6-Config-INI]
 checkout = git clone 'https://github.com/tadzik/perl6-Config-INI' 'perl6-Config-INI'
@@ -60,3 +66,6 @@ checkout = git clone 'https://github.com/masak/text-indented' 'text-indented'
 
 [toml-pm6]
 checkout = git clone 'https://github.com/Mouq/toml-pm6' 'toml-pm6'
+
+[zef]
+checkout = git clone 'https://github.com/ugexe/zef' 'zef'
