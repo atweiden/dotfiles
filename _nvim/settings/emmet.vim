@@ -3,5 +3,5 @@ let g:user_emmet_leader_key = '<C-E>'
 
 augroup emmet
   autocmd!
-  autocmd FileType html,css,haml,less,sass,scss,slim EmmetInstall
+  autocmd FileType html,css,haml,jade,less,sass,scss,slim EmmetInstall
 augroup END
