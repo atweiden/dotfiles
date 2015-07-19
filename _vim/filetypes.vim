@@ -97,6 +97,7 @@ augroup languages
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.textile} set ft=textile
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.tmux,*tmux.conf*} set ft=tmux
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.toml,Cargo.lock} set ft=toml
+  autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.transactions} set ft=transactions
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.tup,Tupfile} set ft=tup
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.ts} set ft=typescript
   autocmd BufEnter,BufRead,BufNewFile,BufWrite {*.vala,*.vapi} set ft=vala
