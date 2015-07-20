@@ -104,7 +104,7 @@ command! -nargs=* Ag call fzf#run({
 \ 'source':  printf('ag --nogroup --column --color "%s"',
 \                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
 \ 'sink*':    function('<sid>ag_handler'),
-\ 'options': '--ansi --no-hscroll --expect=ctrl-t,ctrl-v,ctrl-x '.
+\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x '.
 \            '--multi --bind ctrl-a:select-all,ctrl-d:deselect-all '.
 \            '--color hl:68,hl+:110',
 \ 'down':    '50%'
