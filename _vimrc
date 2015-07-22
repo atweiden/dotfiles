@@ -973,6 +973,10 @@ cabbrev tabv tab sview +setlocal\ nomodifiable
 let notabs = 0
 nnoremap <silent> <S-F12> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
 
+" show and hide tabline
+nnoremap <silent> <M-S-Up> :set showtabline=0<CR>
+nnoremap <silent> <M-S-Down> :set showtabline=1<CR>
+
 " }}}
 
 
