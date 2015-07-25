@@ -6,29 +6,29 @@ let g:lightline = {
       \   'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
-      \   'fugitive': 'MyFugitive',
-      \   'filename': 'MyFilename',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode'
+      \   'fugitive': 'LightLineFugitive',
+      \   'filename': 'LightLineFilename',
+      \   'fileformat': 'LightLineFileformat',
+      \   'filetype': 'LightLineFiletype',
+      \   'fileencoding': 'LightLineFileencoding',
+      \   'mode': 'LightLineMode'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 let g:lightline.tab = {
-      \ 'active': [ 'tabnum', 'mytabname', 'mytabmodified' ],
-      \ 'inactive': [ 'tabnum', 'mytabname', 'mytabmodified' ] }
+      \ 'active': [ 'tabnum', 'lightlinetabname', 'lightlinetabmodified' ],
+      \ 'inactive': [ 'tabnum', 'lightlinetabname', 'lightlinetabmodified' ] }
 
 let g:lightline.tab_component_function = {
-      \ 'mytabname': 'MyTabname',
-      \ 'mytabmodified': 'MyTabmodified',
+      \ 'lightlinetabname': 'LightLineTabname',
+      \ 'lightlinetabmodified': 'LightLineTabmodified',
       \ 'readonly': 'lightline#tab#readonly',
       \ 'tabnum': 'lightline#tab#tabnum'
       \ }
 
-function! MyModified()
+function! LightLineModified()
   try
     if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'vimfiler\|vim-plug\|undotree\|thumbnail\|calendar'
       if &modified == 1
@@ -42,7 +42,7 @@ function! MyModified()
   return ''
 endfunction
 
-function! MyReadonly()
+function! LightLineReadonly()
   try
     if expand('%:t') !~? 'diffpanel_\|Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vim-plug\|vimfiler\|undotree\|thumbnail\|calendar' && &readonly
       return ''
@@ -52,8 +52,8 @@ function! MyReadonly()
   return ''
 endfunction
 
-function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+function! LightLineFilename()
+  return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
        \ (&ft == 'vimfiler' ? pathshorten(vimfiler#get_status_string()[0:-9]) :
        \  &ft == 'unite' ? unite#get_status_string() :
        \  &ft == 'undotree' ? '' :
@@ -62,10 +62,10 @@ function! MyFilename()
        \  &ft == 'thumbnail' ? exists('b:thumbnail.status') ? b:thumbnail.status : 'Thumbnail' :
        \  expand('%:t') =~? 'diffpanel_\|Tagbar\|NERD\|Lusty' ? '' :
        \  '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-       \ ('' != MyModified() ? ' ' . MyModified() : '')
+       \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
 endfunction
 
-function! MyFugitive()
+function! LightLineFugitive()
   try
     if expand('%:t') !~? 'Tagbar\|NERD\|Lusty' && &ft !~? 'help\|vim-plug\|vimfiler\|undotree\|thumbnail\|calendar' && exists('*fugitive#head')
       let _ = fugitive#head()
@@ -76,19 +76,19 @@ function! MyFugitive()
   return ''
 endfunction
 
-function! MyFileformat()
+function! LightLineFileformat()
   return winwidth(0) > 70 ? &fileformat : ''
 endfunction
 
-function! MyFiletype()
+function! LightLineFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
 endfunction
 
-function! MyFileencoding()
+function! LightLineFileencoding()
   return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
 endfunction
 
-function! MyMode()
+function! LightLineMode()
   let fname = expand('%:t')
   return fname == '__Tagbar__' ? 'Tagbar' :
        \ fname =~ 'Lusty' ? 'Lusty' :
@@ -103,7 +103,7 @@ function! MyMode()
        \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
-function! MyTabname(n) abort
+function! LightLineTabname(n) abort
   let buflist = tabpagebuflist(a:n)
   let winnr = tabpagewinnr(a:n)
   let _ = expand('#'.buflist[winnr - 1].':t')
@@ -114,7 +114,7 @@ function! MyTabname(n) abort
   endif
 endfunction
 
-function! MyTabmodified(n) abort
+function! LightLineTabmodified(n) abort
   let winnr = tabpagewinnr(a:n)
   if gettabwinvar(a:n, winnr, '&ft') == 'vimfiler'
     return ''
