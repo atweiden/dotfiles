@@ -92,6 +92,9 @@
                 \ "textwidth", "tw"
                 \ ]
     " ------- }}}
+    " ------- prefer blowfish2 encryption method {{{
+    silent! set cryptmethod=blowfish2
+    " ------- }}}
 
   " --- }}}
 

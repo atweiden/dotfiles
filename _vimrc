@@ -56,6 +56,9 @@ set encoding=utf-8
 " flush file to disk after writing for protection against data loss
 set nofsync
 
+" prefer blowfish2 encryption method
+silent! set cryptmethod=blowfish2
+
 " don't show active mode on last line, lightline has this covered
 set noshowmode
 
