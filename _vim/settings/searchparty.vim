@@ -1,3 +1,6 @@
+" unbind g*
+nnoremap <leader><leader>g* <Plug>SearchPartyMashShadowg*
+
 " unbind <C-L>
 nnoremap <leader><leader>xc <Plug>SearchPartyHighlightClear
 

@@ -1,2 +1,2 @@
 " start buffer line filtering
-nmap <space>/ <Plug>(hopping-start)
+nmap g* <Plug>(hopping-start)
