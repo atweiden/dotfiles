@@ -24,6 +24,11 @@ let mapleader=","
 nnoremap ; :
 vnoremap ; :
 
+" turn off F1 help shortcut
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>
+
 " turn off manual key
 nnoremap K <nop>
 vnoremap K <nop>
