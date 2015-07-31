@@ -9,14 +9,21 @@ command! -nargs=1 Locate call fzf#run(
 " old Ruby version.
 
 
-"""""""""""""""""""
-" Simple MRU search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Simple MRU search (Filtered `v:oldfiles` and open buffers)
 
 command! FZFMru call fzf#run({
-            \'source': v:oldfiles,
-            \'sink' : 'e ',
-            \'options' : '-m',
-            \})
+\ 'source':  reverse(s:all_files()),
+\ 'sink':    'edit',
+\ 'options': '-m -x +s',
+\ 'down':    '40%' })
+
+function! s:all_files()
+  return extend(
+  \ filter(copy(v:oldfiles),
+  \        "v:val !~ 'fugitive:\\|NERD_tree\\|^/tmp/\\|.git/'"),
+  \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
+endfunction
 
 
 """"""""""""""
@@ -28,19 +35,31 @@ command! -bar FZFTags if !empty(tagfiles()) | call fzf#run({
 \ }) | else | echo 'Preparing tags' | call system('ctags -R') | FZFTag | endif
 
 
-"""""""""""""""""""""""""""""""""""
-" Jump to tags only in current file
+""""""""""""""""""""""""""""""""""
+" Jump to tags in the current file
 
 command! FZFTagFile if !empty(tagfiles()) | call fzf#run({
-\   'source': "cat " . tagfiles()[0] . ' | grep "' . expand('%:@') . '"' . " | sed -e '/^\\!/d;s/\t.*//' ". ' |  uniq',
-\   'sink':   'tag',
-\   'options':  '+m',
-\   'left':     60,
+\ 'source': "cat " . join(tagfiles()) . ' | grep -P "' . expand('%:t') . '"',
+\ 'sink': function('<sid>tag_handler'),
+\ 'options': '+m --with-nth=1',
+\ 'down': '50%'
 \ }) | else | echo 'No tags' | endif
 
+function! s:tag_handler(tag)
+    if !empty(a:tag)
+        let token = split(split(a:tag, '\t')[2],';"')[0]
+        let m = &magic
+        setlocal nomagic
+        execute token
+        if m
+            setlocal magic
+        endif
+    endif
+endfunction
 
-""""""""
-" BTags
+
+""""""""""""""""""""""""""""""""""""
+" Jump to tags in the current buffer
 
 function! s:align_lists(lists)
   let maxes = {}
@@ -59,7 +78,7 @@ endfunction
 
 function! s:btags_source()
   let lines = map(split(system(printf(
-    \ 'ctags -f - --sort=no --excmd=pattern --language-force=%s %s',
+    \ 'ctags -f - --sort=no --excmd=number --language-force=%s %s',
     \ &filetype, expand('%:S'))), "\n"), 'split(v:val, "\t")')
   if v:shell_error
     throw 'failed to extract tags'
@@ -75,7 +94,7 @@ function! s:btags()
   try
     call fzf#run({'source':  s:btags_source(),
                  \'down':    '40%',
-                 \'options': '+m -d "\t" --with-nth 1,4..',
+                 \'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
                  \'sink':    function('s:btags_sink')})
   catch
     echohl WarningMsg
@@ -152,7 +171,7 @@ command! -nargs=* Ag call fzf#run({
 \ 'source':  printf('ag --nogroup --column --color "%s"',
 \                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
 \ 'sink*':    function('<sid>ag_handler'),
-\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x '.
+\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
 \            '--multi --bind ctrl-a:select-all,ctrl-d:deselect-all '.
 \            '--color hl:68,hl+:110',
 \ 'down':    '50%'
