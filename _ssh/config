@@ -1,5 +1,5 @@
 # Ignore ssh-agent keys
-IdentitiesOnly yes
+#IdentitiesOnly yes
 
 # Disable public key authentication
 #PubkeyAuthentication no
