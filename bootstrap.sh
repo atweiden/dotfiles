@@ -61,6 +61,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.hgrc"           \
                "$HOME/.iex.exs"        \
                "$HOME/.inputrc"        \
+               "$HOME/.irbrc"          \
                "$HOME/.jshintignore"   \
                "$HOME/.jshintrc"       \
                "$HOME/.keymap"         \
@@ -128,6 +129,7 @@ for dotfile in ackrc          \
                hgrc           \
                iex.exs        \
                inputrc        \
+               irbrc          \
                jshintignore   \
                jshintrc       \
                keymap         \
