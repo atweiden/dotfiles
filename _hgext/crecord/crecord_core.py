@@ -51,10 +51,14 @@ def dorecord(ui, repo, commitfunc, *pats, **opts):
         # we take only the first 3 of these
         changes = repo.status(match=match)[:3]
         modified, added, removed = changes
-        diffopts = opts.copy()
-        diffopts['nodates'] = True
-        diffopts['git'] = True
-        diffopts = patch.diffopts(ui, opts=diffopts)
+        try:
+            # Mercurial >= 3.3 allow disabling format-changing diffopts
+            diffopts = patch.difffeatureopts(ui, opts=opts, section='crecord',
+                                             whitespace=True)
+        except AttributeError:
+            diffopts = patch.diffopts(ui, opts=opts, section='crecord')
+        diffopts.nodates = True
+        diffopts.git = True
         chunks = patch.diff(repo, changes=changes, opts=diffopts)
         fp = cStringIO.StringIO()
         fp.write(''.join(chunks))
@@ -129,7 +133,7 @@ def dorecord(ui, repo, commitfunc, *pats, **opts):
                           lambda key: key in backups)
             # remove newly added files from 'clean' repo (so patch can apply)
             for f in newly_added_backups:
-                os.unlink(f)
+                os.unlink(repo.wjoin(f))
 
             # 3b. (apply)
             if dopatch:

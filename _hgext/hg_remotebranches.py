@@ -23,6 +23,8 @@ try:
 except ImportError:
     templatekw = None
 
+testedwith = '1.7 1.8 1.9 2.0 2.9 3.1 3.2 3.3 3.4'
+
 from hgext import schemes
 
 hasexchange = False
@@ -160,7 +162,7 @@ def reposetup(ui, repo):
                             rpath = getattr(getattr(remote, '_repo', None),
                                             'root', None)
                     else:
-                        rpath = remote._url
+                        rpath = getattr(remote, 'url', lambda : remote._url)()
                         if uri.startswith('http'):
                             try:
                                 uri = url.url(uri).authinfo()[0]
