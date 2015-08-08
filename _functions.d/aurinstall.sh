@@ -5,17 +5,17 @@
 # -----------------------------------------------------------------------------
 
 function aurinstall() {
-ORIGIN=$PWD
 read -a aurpkgs <<< "$(< /dev/stdin)"
 mkdir -p ~/.src
+ORIGIN="$PWD"
 for aurpkg in "$@" "$aurpkgs"; do
   cd ~/.src
-  rm -rf ${aurpkg} ${aurpkg}.tar.gz*
-  curl -O https://aur.archlinux.org/packages/${aurpkg:0:2}/${aurpkg}/${aurpkg}.tar.gz
-  mkdir -p ${aurpkg}
-  tar -xvzf ${aurpkg}.tar.gz --strip 1 -C ${aurpkg}
-  cd ${aurpkg}
+  rm -rf $aurpkg $aurpkg.tar.gz*
+  curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/$aurpkg.tar.gz
+  mkdir -p $aurpkg
+  tar -xvzf $aurpkg.tar.gz --strip 1 -C $aurpkg
+  cd $aurpkg
   makepkg -Acsi --noconfirm
 done
-cd $ORIGIN
+cd "$ORIGIN"
 }
