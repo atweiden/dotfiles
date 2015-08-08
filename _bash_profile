@@ -11,6 +11,7 @@
              ~/.gmrun_history \
              ~/.lesshst \
              ~/.local/share/recently-used.xbel \
+             ~/.sdcv_history \
              ~/.viminfo \
              ~/.vim_mru_files \
              -d ~/Sandbox \
