@@ -26,13 +26,44 @@ function! s:all_files()
 endfunction
 
 
-""""""""""""""
-" Jump to tags
+"""""""""""""""""""""""
+" Jump to tags (simple)
 
 command! -bar FZFTags if !empty(tagfiles()) | call fzf#run({
 \   'source': "sed '/^\\!/d;s/\t.*//' " . join(tagfiles()) . ' | uniq',
 \   'sink':   'tag',
-\ }) | else | echo 'Preparing tags' | call system('ctags -R') | FZFTag | endif
+\ }) | else | echo 'Preparing tags' | call system('ctags -R') | FZFTags | endif
+
+
+"""""""""""""""""""""""""
+" Jump to tags (improved)
+
+function! s:tags_sink(line)
+  let parts = split(a:line, '\t\zs')
+  let excmd = matchstr(parts[2:], '^.*\ze;"\t')
+  execute 'silent e' parts[1][:-2]
+  let [magic, &magic] = [&magic, 0]
+  execute excmd
+  let &magic = magic
+endfunction
+
+function! s:tags()
+  if empty(tagfiles())
+    echohl WarningMsg
+    echom 'Preparing tags'
+    echohl None
+    call system('ctags -R')
+  endif
+
+  call fzf#run({
+  \ 'source':  'cat '.join(map(tagfiles(), 'fnamemodify(v:val, ":S")')).
+  \            '| grep -v ^!',
+  \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
+  \ 'down':    '40%',
+  \ 'sink':    function('s:tags_sink')})
+endfunction
+
+command! Tags call s:tags()
 
 
 """"""""""""""""""""""""""""""""""
@@ -92,10 +123,11 @@ endfunction
 
 function! s:btags()
   try
-    call fzf#run({'source':  s:btags_source(),
-                 \'down':    '40%',
-                 \'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
-                 \'sink':    function('s:btags_sink')})
+    call fzf#run({
+    \ 'source':  s:btags_source(),
+    \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
+    \ 'down':    '40%',
+    \ 'sink':    function('s:btags_sink')})
   catch
     echohl WarningMsg
     echom v:exception
