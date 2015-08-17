@@ -384,14 +384,15 @@ Plug 'mattn/emmet-vim', { 'for': [ 'css',
                                  \ 'stylus' ] }
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
 Plug 't9md/vim-transform'
-Plug 'SirVer/ultisnips', { 'on': [] }
+" Plug 'SirVer/ultisnips', { 'on': [] }
 Plug 'tdcdev/ycm_simple_conf'
 Plug 'Valloric/YouCompleteMe', { 'on': [] }
 
 " https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
 augroup load_us_ycm
   autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
+  " autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
+  autocmd InsertEnter * call plug#load('YouCompleteMe')
                      \| call youcompleteme#Enable() | autocmd! load_us_ycm
 augroup END
 
