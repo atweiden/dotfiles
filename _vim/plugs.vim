@@ -115,7 +115,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'bruno-/vim-vertical-move'
 
 " repeat
-Plug 'daisuzu/autorepeat.vim', { 'on': '<Plug>(autorepeat)' }
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/visualrepeat'
 
