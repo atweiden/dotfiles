@@ -80,7 +80,8 @@ URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.s
 
 #font
 URxvt*font               : xft:Monaco\ for\ Powerline-16
-URxvt*letterSpace        : -1
+!URxvt*letterSpace       : -1
+!URxvt*lineSpace         : -1
 URxvt*skipBuiltinGlyphs  : true
 
 #tabs
