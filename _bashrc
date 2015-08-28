@@ -51,6 +51,7 @@ fi
 export EDITOR=vim
 export FCEDIT=vim
 export VISUAL=vim
+export SUDO_EDITOR=rvim
 
 # man pages
 export MANPAGER="less -X"
