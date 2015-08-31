@@ -5,7 +5,7 @@
 #          panda-git 20150613-1 (Thu 18 Jun 2015 04:45:03 PM PDT)
 # -----------------------------------------------------------------------------
 
-function pkgdate() {
+pkgdate() {
 if [[ -x /usr/bin/perl6 ]]; then
 package=$1
 printf "%b" "$(pacman -Q $package) ("

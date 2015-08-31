@@ -5,7 +5,7 @@
 # http://www.commandlinefu.com/commands/view/6533/print-all-256-colors-for-testing-term-or-for-a-quick-reference
 # -----------------------------------------------------------------------------
 
-function colors() {
+colors() {
 ( x=$(tput op) y=$(printf %$((${COLUMNS}-6))s);
   for i in {0..256}; do
     o=00$i;

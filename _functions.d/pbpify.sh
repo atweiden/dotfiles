@@ -8,7 +8,7 @@
 # -----------------------------------------------------------------------------
 # encrypt
 
-function pbpify() {
+pbpify() {
 echo -n 'Enter your passphrase: '; read -s PASSPHRASE
 local file; for file in `find "$@" -type f`; do expect <<EOF
   spawn pbp --armor --encrypt -i ${file} -o ${file}.pbp
@@ -28,7 +28,7 @@ echo 'The following files were encrypted:'; find . -type f -name "*.pbp" -exec e
 # -----------------------------------------------------------------------------
 # decrypt
 
-function unpbpify() {
+unpbpify() {
 echo -n 'Enter your passphrase: '; read -s PASSPHRASE
 local file; for file in `find "$@" -type f -name "*.pbp"`; do expect <<EOF
   spawn pbp --decrypt -i ${file} -o ${file%.pbp}

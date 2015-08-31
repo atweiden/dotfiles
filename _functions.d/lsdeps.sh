@@ -15,7 +15,7 @@ white=$(tput setaf 7)
 # -----------------------------------------------------------------------------
 # depends
 
-function lsdeps() {
+lsdeps() {
 for _basepkg in "$@"; do
   echo "${bold}${white}Package ${green}${_basepkg}${normal} ${bold}${white}depends on${normal}:"
   for _pkg in `pacman -Qi "${_basepkg}" | ag 'depends on' | sed 's/.*:\s//' | sed -r 's/\s+/\n/g'`; do
@@ -28,7 +28,7 @@ done
 # -----------------------------------------------------------------------------
 # optdepends
 
-function lsoptdeps() {
+lsoptdeps() {
 for _basepkg in "$@"; do
   echo "${bold}${white}Package ${green}${_basepkg}${normal} ${bold}${white}optionally depends on${normal}:"
   pacman -Qi "${_basepkg}" | sed -n -r '/Optional Deps\s+:/,/Required By.*/p' | sed '/Required.*/d' | sed -r 's/Optional Deps\s+://' | sed -r 's/^\s+//'

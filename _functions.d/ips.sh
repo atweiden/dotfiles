@@ -5,6 +5,6 @@
 # https://github.com/Aqua-Ye/dotfiles
 # -----------------------------------------------------------------------------
 
-function ips() {
+ips() {
 ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'
 }

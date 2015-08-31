@@ -5,6 +5,6 @@
 # https://raymii.org/s/snippets/Arch-bash-pacman-bashrc-tips.html
 # -----------------------------------------------------------------------------
 
-function tcal() {
+tcal() {
 cal | sed "s/^/ /;s/$/ /;s/ $(date +%e) / $(date +%e | sed '''s/./#/g''') /"
 }

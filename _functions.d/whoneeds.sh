@@ -17,7 +17,7 @@ white=$(tput setaf 7)
 # -----------------------------------------------------------------------------
 # depends
 
-function whoneeds() {
+whoneeds() {
 for _basepkg in "$@"; do
   echo "${bold}${white}Packages that depend on${normal} ${green}${_basepkg}${normal}:"
   for _pkg in `pacman -Qi "${_basepkg}" | ag required | sed 's@.*:\s@@'`; do
@@ -31,7 +31,7 @@ done
 # -----------------------------------------------------------------------------
 # optdepends
 
-function whowants() {
+whowants() {
 for _basepkg in "$@"; do
   echo "${bold}${white}Packages that optionally depend on${normal} ${green}${_basepkg}${normal}:"
   for _pkg in `pacman -Qi "${_basepkg}" | ag "optional for" | sed 's@.*:\s@@'`; do

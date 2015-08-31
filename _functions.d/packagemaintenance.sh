@@ -7,7 +7,7 @@
 # Source: https://bbs.archlinux.org/viewtopic.php?pid=1143655#p1143655
 # -----------------------------------------------------------------------------
 
-function packagemaintenance() {
+packagemaintenance() {
 cd /usr/bin
 for file in $(find .  -type f -executable -readable)
 do

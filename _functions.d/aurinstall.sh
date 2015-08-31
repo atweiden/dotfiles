@@ -4,7 +4,7 @@
 # aurinstall: easily install one or more packages from the AUR
 # -----------------------------------------------------------------------------
 
-function aurinstall() {
+aurinstall() {
 read -a aurpkgs <<< "$(< /dev/stdin)"
 mkdir -p ~/.src
 ORIGIN="$PWD"

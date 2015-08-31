@@ -4,4 +4,4 @@
 # mkdircd: mkdir then cd into it
 # -----------------------------------------------------------------------------
 
-function mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
+mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }

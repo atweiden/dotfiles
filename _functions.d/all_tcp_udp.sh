@@ -4,6 +4,6 @@
 # all_tcp_udp: show all listening TCP/UDP ports
 # -----------------------------------------------------------------------------
 
-function all_tcp_udp() {
+all_tcp_udp() {
 lsof -Pan -i tcp -i udp
 }

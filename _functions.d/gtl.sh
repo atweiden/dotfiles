@@ -5,4 +5,4 @@
 # https://github.com/harleypig/dotfiles
 # -----------------------------------------------------------------------------
 
-function gtl() { cd $(git rev-parse --show-toplevel); }
+gtl() { cd $(git rev-parse --show-toplevel); }

@@ -4,4 +4,4 @@
 # mkaurpkg: create new aur pkg with git clone
 # -----------------------------------------------------------------------------
 
-function mkaurpkg() { git clone git+ssh://aur@aur.archlinux.org/${1}.git; }
+mkaurpkg() { git clone git+ssh://aur@aur.archlinux.org/${1}.git; }

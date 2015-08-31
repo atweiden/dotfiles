@@ -4,7 +4,7 @@
 # slur: safe reboot
 # -----------------------------------------------------------------------------
 
-function slur() {
+slur() {
 [[ -x /usr/bin/quixand ]] \
   && quixand -p ~/.bash_history \
                 ~/.gmrun_history \

@@ -5,7 +5,7 @@
 # https://wiki.archlinux.org/index.php/Secure_Shell
 # -----------------------------------------------------------------------------
 
-function secure_chromium() {
+secure_chromium() {
   port=4711
   export SOCKS_SERVER=localhost:$port
   export SOCKS_VERSION=5

@@ -4,7 +4,7 @@
 # LAFSify: derive an Electrum wallet from any given Tahoe-LAFS writecap
 # -----------------------------------------------------------------------------
 
-function lafsify() {
+lafsify() {
 echo -n 'Enter your Tahoe-LAFS writecap: '; read WRITECAP
 #SEED=$(echo $WRITECAP | xxd -p)
 SEED=$(hURL -s --no-color --HEX $WRITECAP)
@@ -30,7 +30,7 @@ echo "Your resulting Electrum wallet seed: $SEED"
 echo "Your resulting Electrum wallet mnemonic: $MNEMONIC"
 }
 
-function unlafsify() {
+unlafsify() {
 echo -n 'Enter your Electrum-LAFS mnemonic: '; read MNEMONIC
 expect <<EOF
   spawn electrum -w electrum-lafs.dat restore -o -C

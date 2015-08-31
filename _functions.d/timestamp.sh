@@ -10,7 +10,7 @@
 # HTTP(S) for increased end-user security
 # -----------------------------------------------------------------------------
 
-function timestamp() {
+timestamp() {
 echo -n 'Enter the path to your file for timestamping: '; read BASEFILE
 CHECKSUMWALLET="${BASEFILE}-electrum.dat"
 SEED=$(sha256sum $BASEFILE | cut -c -64 | sha256sum | cut -c -64)

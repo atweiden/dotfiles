@@ -23,7 +23,7 @@
 #   chattrify "/var/log/journal" "755" "root" "systemd-journal"
 #   chattrify "/srv/bitcoin" "755" "bitcoin" "bitcoin"
 
-function chattrify() {
+chattrify() {
 
 _orig_dir=$( echo "$1" | sed 's@/$@@' )
 

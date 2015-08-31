@@ -5,6 +5,6 @@
 # https://news.ycombinator.com/item?id=7411120
 # -----------------------------------------------------------------------------
 
-function now() {
+now() {
   echo $(date "+%Y-%m-%d %H:%M:%S") - "$@" >> $HOME/.now
 }

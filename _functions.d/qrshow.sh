@@ -5,4 +5,4 @@
 # https://news.ycombinator.com/item?id=5332843
 # -----------------------------------------------------------------------------
 
-function qrshow() { qrencode -s 10 "$1" -o - | display - ; }
+qrshow() { qrencode -s 10 "$1" -o - | display - ; }

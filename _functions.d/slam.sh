@@ -4,7 +4,7 @@
 # slam: safe shut down
 # -----------------------------------------------------------------------------
 
-function slam() {
+slam() {
 [[ -x /usr/bin/quixand ]] \
   && quixand -p ~/.bash_history \
                 ~/.gmrun_history \

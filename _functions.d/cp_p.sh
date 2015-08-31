@@ -4,6 +4,6 @@
 # cp_p: copy with progress
 # -----------------------------------------------------------------------------
 
-function cp_p() {
+cp_p() {
   rsync -WavP --human-readable --progress $1 $2
 }

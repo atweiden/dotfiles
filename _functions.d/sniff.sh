@@ -4,6 +4,6 @@
 # sniff: view HTTP traffic
 # -----------------------------------------------------------------------------
 
-function sniff() {
+sniff() {
 sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'
 }
