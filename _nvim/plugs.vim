@@ -401,6 +401,7 @@ augroup END
 
 " languages
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
+Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
 Plug 'prurigro/vim-archversion', { 'for': 'archversion' }
 Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
 Plug 'Shirk/vim-gas', { 'for': 'gas' }

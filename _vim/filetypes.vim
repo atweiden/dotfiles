@@ -2,6 +2,7 @@
 
 augroup languages
   autocmd!
+  autocmd BufEnter,BufNewFile {*.apib,*.apiblueprint} set ft=apiblueprint
   autocmd BufEnter,BufNewFile {*.ino,*.pde} set ft=arduino
   autocmd BufEnter,BufNewFile {*.bib} set ft=bib
   autocmd BufEnter,BufNewFile {*.cfg,.ackrc,.ctags,.dunstrc,.hgrc,.npmrc} set ft=cfg
