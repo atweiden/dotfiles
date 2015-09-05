@@ -28,6 +28,9 @@ checkout = git clone 'https://github.com/Mouq/p6-Grammar-Mixin' 'p6-Grammar-Mixi
 [panda]
 checkout = git clone 'https://github.com/tadzik/panda' 'panda'
 
+[perl5-to-perl6-docs]
+checkout = git clone 'https://github.com/dha/perl5-to-perl6-docs' perl5-to-perl6-docs
+
 [perl6-Config-INI]
 checkout = git clone 'https://github.com/tadzik/perl6-Config-INI' 'perl6-Config-INI'
 
