@@ -569,6 +569,7 @@ Plug 'vim-scripts/paredit.vim', { 'for': [ 'clojure',
                                          \ 'scheme' ] }
 Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
 Plug 'vim-scripts/scribble.vim', { 'for': 'racket' }
+Plug 'IN3D/vim-raml', { 'for': 'raml' }
 Plug 'mitsuhiko/vim-rst', { 'for': 'rst' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }

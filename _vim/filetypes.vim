@@ -73,6 +73,7 @@ augroup languages
   autocmd BufEnter,BufNewFile {*.pro} set ft=pro
   autocmd BufEnter,BufNewFile {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
   autocmd BufEnter,BufNewFile {*.r,*.R,*.s,*.S,*.Rhistory,*.Rprofile} set ft=r
+  autocmd BufEnter,BufNewFile {*.raml} set ft=raml
   autocmd BufEnter,BufNewFile {*.rb,*.cap,*.gemspec,*.god,*.jbuilder,*.podspec,*.rabl,*.rake,*.rant,*.rbw,*.thor,.caprc,.irbrc,.pryrc,[Bb]uildfile,Berksfile,Capfile,Cheffile,Guardfile,.Guardfile,Gemfile,Podfile,Puppetfile,[Rr]akefile,[Rr]antfile,[Tt]horfile,[Vv]agrantfile,config.ru,irb_tempfile*} set ft=ruby
   autocmd BufEnter,BufNewFile {*.rkt} set ft=racket
   autocmd BufEnter,BufNewFile {*.rmd,*.Rmd} set ft=rmd
