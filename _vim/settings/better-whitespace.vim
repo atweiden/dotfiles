@@ -2,7 +2,9 @@
 let g:better_whitespace_filetypes_blacklist=[ 'calendar',
                                             \ 'conque_term',
                                             \ 'ctrlsf',
+                                            \ 'diff',
                                             \ 'help',
+                                            \ 'qf',
                                             \ 'unite',
                                             \ 'vimfiler',
                                             \ 'vim-plug' ]
