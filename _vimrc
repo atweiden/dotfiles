@@ -44,6 +44,7 @@ inoremap <C-A> <nop>
 nnoremap <C-Q> :qall<CR>
 cnoremap <C-Q> <C-C>:qall<CR>
 inoremap <C-Q> <C-O>:qall<CR>
+onoremap <C-Q> <ESC>:qall<CR>
 vnoremap <C-Q> <ESC>:qall<CR>
 
 " hide intro screen, use all abbreviations, omit redundant messages

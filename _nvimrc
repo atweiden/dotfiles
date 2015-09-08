@@ -30,6 +30,7 @@
     cnoremap <C-Q> <C-C>:qall<CR>
     inoremap <C-Q> <C-O>:qall<CR>
     vnoremap <C-Q> <ESC>:qall<CR>
+    onoremap <C-Q> <ESC>:qall<CR>
     tnoremap <C-Q> <C-\><C-N>:qall<CR>
     " ------- }}}
 
