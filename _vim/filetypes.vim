@@ -101,7 +101,7 @@ augroup languages
   autocmd BufEnter,BufNewFile {*.toml,Cargo.lock} set ft=toml
   autocmd BufEnter,BufNewFile {*.transactions} set ft=transactions
   autocmd BufEnter,BufNewFile {*.tup,Tupfile} set ft=tup
-  autocmd BufEnter,BufNewFile {*.ts} set ft=typescript
+  autocmd BufEnter,BufNewFile {*.ts,*.tsx} set ft=typescript
   autocmd BufEnter,BufNewFile {*.vala,*.vapi} set ft=vala
   autocmd BufEnter,BufNewFile {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
   autocmd BufEnter,BufNewFile {*vimshrc*} set ft=vimshrc
