@@ -24,7 +24,7 @@ augroup languages
   autocmd BufEnter,BufNewFile {*.ex,*.exs} set ft=elixir
   autocmd BufEnter,BufNewFile {*.erl,*.es,*.hrl,*.xrl,*.yaws,rebar.config} set ft=erlang
   autocmd BufEnter,BufNewFile {*.egs} set ft=egs
-  autocmd BufEnter,BufNewFile {*.erb} set ft=eruby
+  autocmd BufEnter,BufNewFile {*.erb,*.rhtml} set ft=eruby
   autocmd BufEnter,BufNewFile {*.fs,*.fsi,*.fsx} set ft=fs
   autocmd BufEnter,BufNewFile {*.git/config,.gitconfig,.gitmodules,gitconfig} set ft=gitconfig
   autocmd BufEnter,BufNewFile {COMMIT_EDITMSG} set ft=gitcommit
@@ -75,7 +75,7 @@ augroup languages
   autocmd BufEnter,BufNewFile {*.py,.pdbrc,.pythonrc,.python_history} set ft=python
   autocmd BufEnter,BufNewFile {*.r,*.R,*.s,*.S,*.Rhistory,*.Rprofile} set ft=r
   autocmd BufEnter,BufNewFile {*.raml} set ft=raml
-  autocmd BufEnter,BufNewFile {*.rb,*.cap,*.gemspec,*.god,*.jbuilder,*.podspec,*.rabl,*.rake,*.rant,*.rbw,*.thor,.caprc,.irbrc,.pryrc,[Bb]uildfile,Berksfile,Capfile,Cheffile,Guardfile,.Guardfile,Gemfile,Podfile,Puppetfile,[Rr]akefile,[Rr]antfile,[Tt]horfile,[Vv]agrantfile,config.ru,irb_tempfile*} set ft=ruby
+  autocmd BufEnter,BufNewFile {*.rb,*.ruby,*.builder,*.cap,*.gemspec,*.god,*.jbuilder,*.podspec,*.rabl,*.rake,*.rant,*.rbw,*.rjs,*.ru,*.rxml,*.thor,.autotest,.caprc,.irbrc,.pryrc,.simplecov,Appraisals,[Bb]uildfile,Berksfile,Capfile,Cheffile,Guardfile,.Guardfile,Gemfile,Podfile,Puppetfile,[Rr]akefile,[Rr]antfile,[Rr]outefile,[Tt]horfile,[Vv]agrantfile,irb_tempfile*} set ft=ruby
   autocmd BufEnter,BufNewFile {*.rkt} set ft=racket
   autocmd BufEnter,BufNewFile {*.rmd,*.Rmd} set ft=rmd
   autocmd BufEnter,BufNewFile {*.Rout*} set ft=rout
