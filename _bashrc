@@ -90,15 +90,22 @@ PATH=$HOME/.nimble/bin:$PATH
 export N_PREFIX=$HOME/.n
 # perl
 PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
+# perl6
+if [[ -x /usr/bin/perl6 ]]; then
+  # perl6 -e "say %*CUSTOM_LIB<site>.IO.child('bin').Str"
+  PATH=/usr/share/perl6/site/bin:$PATH
+  # panda
+  # PATH=$HOME/.perl6/$(perl6 --version | awk '{print $5}')/bin:$PATH
+fi
 # python
 PATH=$HOME/.virtualenvs:$PATH
 # ruby
-PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
-if [[ -x /usr/bin/ruby ]]; then
+if [[ -x /usr/bin/gem && -x /usr/bin/ruby ]]; then
   PATH=$(gem env gempath | awk -F: '{print $2}')/bin:$PATH
   PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
   export GEM_HOME=$(ruby -rubygems -e "puts Gem.user_dir")
 fi
+PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shim:$PATH
 
 
 # -----------------------------------------------------------------------------
