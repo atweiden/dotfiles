@@ -574,6 +574,7 @@ Plug 'IN3D/vim-raml', { 'for': 'raml' }
 Plug 'mitsuhiko/vim-rst', { 'for': 'rst' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
+Plug 'atweiden/vim-citrus', { 'for': 'citrus' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
