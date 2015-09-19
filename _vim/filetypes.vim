@@ -5,12 +5,13 @@ augroup languages
   autocmd BufEnter,BufNewFile {*.apib,*.apiblueprint} set ft=apiblueprint
   autocmd BufEnter,BufNewFile {*.ino,*.pde} set ft=arduino
   autocmd BufEnter,BufNewFile {*.bib} set ft=bib
+  autocmd BufEnter,BufNewFile {*.c} set ft=c
   autocmd BufEnter,BufNewFile {*.cfg,.ackrc,.ctags,.dunstrc,.hgrc,.npmrc} set ft=cfg
+  autocmd BufEnter,BufNewFile {*.citrus} set ft=citrus
   autocmd BufEnter,BufNewFile {*.clj,*.cljc,*.cljs,*.cljx,*.edn} set ft=clojure
   autocmd BufEnter,BufNewFile {*.coffee,*.ck,*.coffeekup,Cakefile} set ft=coffee
   autocmd BufEnter,BufNewFile {.curlrc,.gitignore,.gitattributes,.hgignore,.jshintignore} set ft=conf
   autocmd BufEnter,BufNewFile {.conkyrc*} set ft=conkyrc
-  autocmd BufEnter,BufNewFile {*.c} set ft=c
   autocmd BufEnter,BufNewFile {*.cpp,*.hpp} set ft=cpp
   autocmd BufEnter,BufNewFile {*.cr,*.crystal,Projectfile} set ft=crystal
   autocmd BufEnter,BufNewFile {*.cs} set ft=cs
