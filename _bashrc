@@ -88,6 +88,8 @@ PATH=$HOME/.cabal/bin:$PATH
 PATH=$HOME/.nimble/bin:$PATH
 # node
 export N_PREFIX=$HOME/.n
+# ocaml
+PATH=$HOME/.opam/system/bin:$PATH
 # perl
 PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
 # perl6
