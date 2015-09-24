@@ -826,7 +826,7 @@ nnoremap L g_
 vnoremap L g_
 
 " move to middle of current line
-nnoremap <expr> gM (strlen(getline("."))/2)."<Bar>"
+nnoremap <expr> - (strlen(getline("."))/2)."<Bar>"
 
 " move to last change
 nnoremap gI `.
