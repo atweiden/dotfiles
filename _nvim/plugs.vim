@@ -634,6 +634,7 @@ Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'atweiden/vim-uzbl', { 'for': 'uzbl' }
 "Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors

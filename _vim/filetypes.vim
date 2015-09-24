@@ -103,6 +103,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.transactions} set ft=transactions
   autocmd BufNewFile,BufRead {*.tup,Tupfile} set ft=tup
   autocmd BufNewFile,BufRead {*.ts,*.tsx} set ft=typescript
+  autocmd BufNewFile,BufRead {*.uzbl,~/.config/uzbl/*,*/uzbl/config} set ft=uzbl
   autocmd BufNewFile,BufRead {*.vala,*.vapi} set ft=vala
   autocmd BufNewFile,BufRead {*.vim,*.vimencrypt,*viminfo*,*vimrc*} set ft=vim
   autocmd BufNewFile,BufRead {*vimshrc*} set ft=vimshrc
