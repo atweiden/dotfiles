@@ -18,12 +18,14 @@ URxvt*depth                 : 32
 URxvt*saveLines             : 65535
 URxvt*cursorBlink           : false
 URxvt*cursorUnderline       : true
-URxvt*perl-ext-common       : default,-searchable-scrollback,clipboard,url-select,keyboard-select
+URxvt*perl-ext-common       : default,-searchable-scrollback,clipboard,url-select,keyboard-select,autocomplete-ALL-the-things
 URxvt*iso14755              : false
 URxvt*clipboard.autocopy    : true
 URxvt*keysym.C-C            : perl:clipboard:copy
 URxvt*keysym.C-V            : perl:clipboard:paste
 URxvt*keysym.C-A-V          : perl:clipboard:paste_escaped
+URxvt*keysym.M-slash        : perl:aAtt:word-complete
+URxvt*keysym.M-question     : perl:aAtt:fuzzy-complete
 URxvt*url-select.launcher   : xdg-open
 URxvt*url-select.underline  : false
 URxvt*keysym.M-u            : perl:url-select:select_next
