@@ -153,3 +153,21 @@ augroup language-dictionaries
 augroup END
 
 " }}}
+
+" security {{{
+
+augroup ccrypt
+  autocmd!
+  autocmd BufNewFile *.cpt call s:ccrypt_bufnewfile()
+  autocmd BufReadPre,FileWritePre *.cpt call s:ccrypt_bufreadpre()
+  autocmd BufReadPost,FileWritePost *.cpt call s:ccrypt_bufreadpost()
+  autocmd BufWritePre,FileWritePre *.cpt call s:ccrypt_bufwritepre()
+  autocmd BufWritePost,FileWritePost *.cpt call s:ccrypt_bufwritepost()
+augroup END
+
+augroup gpg
+  autocmd!
+  autocmd QuitPre *.gpg exec system('pkill gpg-agent')
+augroup END
+
+" }}}
