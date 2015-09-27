@@ -70,6 +70,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.nvim"           \
                "$HOME/.nvimrc"         \
                "$HOME/.pdbrc"          \
+               "$HOME/.pfp"            \
                "$HOME/.psqlrc"         \
                "$HOME/.pythonrc"       \
                "$HOME/.screenrc"       \
@@ -136,6 +137,7 @@ for dotfile in ackrc          \
                npmrc          \
                nvimrc         \
                pdbrc          \
+               pfp            \
                psqlrc         \
                pythonrc       \
                screenrc       \

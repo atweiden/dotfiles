@@ -469,6 +469,7 @@ Plug 'jdonaldson/vaxe', { 'for': [ 'haxe',
                                  \ 'hxml',
                                  \ 'lime.xml',
                                  \ 'nmml.xml' ] }
+Plug 'd0c-s4vage/pfp-vim', { 'on': [ 'PfpInit', 'PfpParse' ] }
 Plug 'gabesoft/vim-java', { 'for': 'java' }
 Plug 'krisajenkins/vim-java-sql', { 'for': 'java' }
 Plug 'youjumpiwatch/vim-javacomplete', { 'for': 'java' }
