@@ -325,10 +325,10 @@
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>xfce4-terminal</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>lxterminal</name>
+          <name>xfce4-terminal</name>
         </startupnotify>
       </action>
     </keybind>

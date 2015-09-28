@@ -36,7 +36,7 @@ Shortcut                | Action
 ---                     | ---
 <kbd>Super+space</kbd>  | Main menu
 <kbd>Super+t</kbd>      | URxvt terminal
-<kbd>Super+l</kbd>      | LXTerminal terminal
+<kbd>Super+l</kbd>      | XFCE4 terminal
 <kbd>Super+f</kbd>      | PCManFM file manager
 <kbd>Super+e</kbd>      | Leafpad editor
 <kbd>Super+m</kbd>      | VLC media player
