@@ -63,6 +63,7 @@ Plug 'kana/vim-arpeggio'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'osyo-manga/vim-hopping', { 'on': [ 'HoppingStart',
                                        \ '<Plug>(hopping-start)' ] }
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
