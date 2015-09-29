@@ -174,7 +174,7 @@ endif
 " dark background
 set background=dark
 
-if $TERM == "rxvt-unicode-256color" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "screen-256color-it" || $TERM == "screen-it-256color" || $COLORTERM == "gnome-terminal"
+if $TERM =~ "256color" || $COLORTERM == "gnome-terminal"
   " jellyx
   set t_Co=256
   colorscheme jellyx

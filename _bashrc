@@ -13,14 +13,15 @@
 if [[ "x$DISPLAY" != "x" ]]; then
   export HAS_256_COLORS=yes
   alias tmux="tmux -2"
-  [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+  [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color-it
 else
-  if [[ "$TERM" == "xterm" || "$TERM" == "xterm-256color" ]]; then
+  if [[ "$TERM" == "xterm" || "$TERM" =~ "256color" ]]; then
     export HAS_256_COLORS=yes
     alias tmux="tmux -2"
   fi
 fi
-[[ "$TERM" == "screen" && "$HAS_256_COLORS" == "yes" ]] && export TERM=screen-256color
+[[ "$TERM" == "screen" && "$HAS_256_COLORS" == "yes" ]] && \
+  export TERM=screen-256color-it
 
 
 # miromiro dircolors by jwr
