@@ -74,6 +74,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.psqlrc"         \
                "$HOME/.pythonrc"       \
                "$HOME/.screenrc"       \
+               "$HOME/.sift.conf"      \
                "$HOME/.tmux"           \
                "$HOME/.tmux.conf"      \
                "$HOME/.vim"            \
@@ -139,6 +140,7 @@ for dotfile in ackrc          \
                psqlrc         \
                pythonrc       \
                screenrc       \
+               sift.conf      \
                tmux.conf      \
                vimencrypt     \
                vimrc          \
