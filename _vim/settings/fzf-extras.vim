@@ -1,3 +1,6 @@
+" prepend FZF to commands
+let g:fzf_command_prefix = 'FZF'
+
 " cat /usr/share/dict/words
 imap <C-X><C-K> <Plug>(fzf-complete-word)
 
@@ -11,16 +14,16 @@ imap <C-X><C-J> <Plug>(fzf-complete-file-ag)
 imap <C-X><C-L> <Plug>(fzf-complete-line)
 
 " open files from CWD
-nnoremap <silent> <leader>o :Files<CR>
+nnoremap <silent> <leader>o :FZFFiles<CR>
 
 " select buffer
-nnoremap <silent> <leader>lz :Buffers<CR>
+nnoremap <silent> <leader>lz :FZFBuffers<CR>
 
 " search lines in current buffer
-nnoremap <silent> <M-f> :BLines<CR>
+nnoremap <silent> <M-f> :FZFBLines<CR>
 
 " search lines in loaded buffers
-nnoremap <silent> <M-F> :Lines<CR>
+nnoremap <silent> <M-F> :FZFLines<CR>
 
 " simple MRU file search
-nnoremap <silent> <M-m> :History<CR>
+nnoremap <silent> <M-m> :FZFHistory<CR>
