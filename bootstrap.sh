@@ -156,12 +156,7 @@ done
 # -----------------------------------------------------------------------------
 # tmux
 [[ -x /usr/bin/git ]] \
-  && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm \
-  && git clone https://github.com/tmux-plugins/tmux-copycat ~/.tmux/plugins/tmux-copycat \
-  && git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yank \
-  && git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/plugins/tmux-logging \
-  && git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect \
-  && git clone https://github.com/tmux-plugins/tmux-sessionist ~/.tmux/plugins/tmux-sessionist
+  && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
 # -----------------------------------------------------------------------------
