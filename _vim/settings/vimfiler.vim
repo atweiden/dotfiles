@@ -9,6 +9,9 @@ let g:vimfiler_tree_closed_icon = '▸'
 let g:vimfiler_file_icon = '-'
 let g:vimfiler_marked_file_icon = '*'
 
+" Don't detect drives
+let g:vimfiler_detect_drives = []
+
 " Use trash-cli if deleting files from vimfiler
 "let g:unite_kind_file_use_trashbox = 1
 
