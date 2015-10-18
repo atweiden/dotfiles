@@ -102,6 +102,8 @@ if [[ -x /usr/bin/perl6 ]]; then
 fi
 # python
 PATH=$HOME/.virtualenvs:$PATH
+# R
+export R_LIBS=$HOME/.R
 # ruby
 if [[ -x /usr/bin/gem && -x /usr/bin/ruby ]]; then
   PATH=$(gem env gempath | awk -F: '{print $2}')/bin:$PATH

@@ -73,6 +73,7 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.pfp"            \
                "$HOME/.psqlrc"         \
                "$HOME/.pythonrc"       \
+               "$HOME/.Renviron"       \
                "$HOME/.screenrc"       \
                "$HOME/.sift.conf"      \
                "$HOME/.tmux"           \
@@ -139,6 +140,7 @@ for dotfile in ackrc          \
                pfp            \
                psqlrc         \
                pythonrc       \
+               Renviron       \
                screenrc       \
                sift.conf      \
                tmux.conf      \
