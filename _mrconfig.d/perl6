@@ -70,5 +70,8 @@ checkout = git clone 'https://github.com/masak/text-indented' 'text-indented'
 [toml-pm6]
 checkout = git clone 'https://github.com/Mouq/toml-pm6' 'toml-pm6'
 
+[zavolaj]
+checkout = git clone 'https://github.com/jnthn/zavolaj' 'zavolaj'
+
 [zef]
 checkout = git clone 'https://github.com/ugexe/zef' 'zef'
