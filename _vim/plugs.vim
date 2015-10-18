@@ -635,6 +635,7 @@ Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'cespare/vim-toml', { 'for': [ 'markdown', 'toml' ] }
 Plug 'atweiden/vim-uzbl', { 'for': 'uzbl' }
+Plug 'atweiden/vim-vala', { 'for': 'vala' }
 "Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors
