@@ -153,6 +153,18 @@ let g:tagbar_type_haskell = {
     \ }
 \ }
 
+let g:tagbar_type_tex = {
+    \ 'ctagstype' : 'latex',
+    \ 'kinds'     : [
+        \ 's:sections',
+        \ 'g:graphics:0:0',
+        \ 'l:labels',
+        \ 'r:refs:1:0',
+        \ 'p:pagerefs:1:0'
+    \ ],
+    \ 'sort' : 0,
+\ }
+
 let g:tagbar_type_make = {
             \ 'kinds':[
                 \ 'm:macros',
@@ -278,15 +290,4 @@ let g:tagbar_type_snippets = {
     \ 'kinds' : [
         \ 's:snippets',
     \ ]
-\ }
-
-let g:tagbar_type_tex = {
-    \ 'ctagstype' : 'tex',
-    \ 'kinds' : [
-        \ 'c:chapter',
-        \ 's:section',
-        \ 'l:label',
-        \ 'r:ref'
-    \ ],
-    \ 'sort' : 0
 \ }
