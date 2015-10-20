@@ -20,8 +20,11 @@ else
     alias tmux="tmux -2"
   fi
 fi
-[[ "$TERM" == "screen" && "$HAS_256_COLORS" == "yes" ]] && \
+if [[ "$TERM" == "screen" && "$HAS_256_COLORS" == "yes" ]]; then
   export TERM=screen-256color-it
+elif [[ "$TERM" == "tmux" && "$HAS_256_COLORS" == "yes" ]]; then
+  export TERM=tmux-256color
+fi
 
 
 # miromiro dircolors by jwr
