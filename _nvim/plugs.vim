@@ -457,7 +457,7 @@ Plug 'Alotor/groovim', { 'for': 'groovy' }
 Plug 'vim-scripts/gsl.vim', { 'for': 'gsl' }
 Plug 'tpope/vim-haml', { 'for': [ 'haml', 'sass', 'scss' ] }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+"Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
 Plug 'Twinside/vim-haskellFold', { 'for': 'haskell' }
 Plug 'travitch/hasksyn', { 'for': 'haskell' }
 Plug 'wting/lhaskell.vim', { 'for': 'haskell' }
