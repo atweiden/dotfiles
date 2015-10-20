@@ -1,3 +1,9 @@
+--recurse=yes
+--tag-relative=yes
+--fields=+ailmnS
+--sort=yes
+--verbose=no
+
 --exclude=bower_components
 --exclude=build
 --exclude=_build
@@ -18,12 +24,18 @@
 --exclude=__pycache__
 --exclude=*.pyo
 --exclude='*.snippets'
+--exclude=.subgit
+--exclude=.subhg
 --exclude=.svn
 --exclude=target
 --exclude=.tmp
 --exclude=tools
 --exclude=vendor
 --exclude='*.xz'
+
+--langdef=ansible
+--langmap=ansible:.yml.yaml
+--regex-ansible=/^[ \t]*-[ \t]*name:[ \t]*(.+)/\1/k,tasks/
 
 --langdef=asciidoc
 --langmap=asciidoc:.ad.adoc.asciidoc
