@@ -190,10 +190,10 @@ endif
   " --- terminal display settings {{{
 
     " change the cursor shape to a vertical bar while in insert mode
-    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+    "let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
     " assume the host terminal supports 24 bit colors
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
     " ------- colorscheme {{{
     set background=dark
