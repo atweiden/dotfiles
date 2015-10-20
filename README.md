@@ -113,6 +113,7 @@ Credits
 - [@leafgarland](https://github.com/leafgarland/vimfiles)
 - [@lervag](https://github.com/lervag/dotvim)
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+- [@noctuid](https://github.com/noctuid/dotfiles)
 - [@nvie](https://github.com/nvie/vimrc)
 - [@orlp](https://github.com/orlp/dotfiles)
 - [@phleet](https://github.com/phleet/dotfiles)
