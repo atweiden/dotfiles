@@ -69,12 +69,11 @@ Plug 'osyo-manga/vim-hopping', { 'on': [ 'HoppingStart',
 Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
                                          \ '<Plug>(incsearch-forward)',
                                          \ '<Plug>(incsearch-stay)' ] }
-"Plug 'henrik/vim-indexed-search'
-"Plug 'Grimy/indextrous'
+Plug 'google/vim-searchindex'
 "Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
 "Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 Plug 't9md/vim-quickhl'
-Plug 'dahu/SearchParty'
+"Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
 Plug 'idanarye/vim-yankitute', { 'on': 'Yankitute' }
 
