@@ -10,7 +10,6 @@ Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'mihaifm/bufstop'
 Plug 'vim-scripts/clone', { 'on': [ 'CloneAs', 'SCloneAs' ] }
 Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
-Plug 'sjbach/lusty'
 Plug 'chrisbra/NrrwRgn'
 Plug 'chrisbra/Recover.vim'
 Plug 'henrik/rename.vim', { 'on': 'Rename' }

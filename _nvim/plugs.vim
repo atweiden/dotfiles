@@ -10,7 +10,6 @@ Plug 'talek/obvious-resize'
 Plug 'mihaifm/bufstop'
 Plug 'vim-scripts/clone', { 'on': [ 'CloneAs', 'SCloneAs' ] }
 Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
-"Plug 'sjbach/lusty'    " requires neovim-ruby bindings
 Plug 'chrisbra/NrrwRgn'
 Plug 'chrisbra/Recover.vim'
 Plug 'henrik/rename.vim', { 'on': 'Rename' }
