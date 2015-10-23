@@ -49,6 +49,9 @@ checkout = git clone 'https://github.com/cosimo/perl6-lwp-simple' 'perl6-lwp-sim
 [perl6-Porting-Pearls]
 checkout = git clone 'https://github.com/dginev/perl6-Porting-Pearls' 'perl6-Porting-Pearls'
 
+[Pod-PerlTricks]
+checkout = git clone 'https://github.com/dnmfarrell/Pod-PerlTricks' 'Pod-PerlTricks'
+
 [rakudo]
 checkout = git clone 'https://github.com/rakudo/rakudo' 'rakudo'
 
