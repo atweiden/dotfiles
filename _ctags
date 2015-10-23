@@ -121,14 +121,26 @@
 --regex-gorilla=/^let[ \t]+([^= ]+)[ \t]*=[ \t]*[^"r]'[^']*/\1/s,string/
 --regex-gorilla=/^let[ \t]+([^= ]+)[ \t]*=[ \t]*[^'r]"[^"]*/\1/s,string/
 
---langdef=groovy
---langmap=groovy:.groovy
---regex-groovy=/^[ \t][(private|public|protected) ( \t)][A-Za-z0-9<>]+[ \t]+([A-Za-z0-9]+)[ \t](.)[ \t]{/\1/f,function,functions/
---regex-groovy=/^[ \t]*def[ \t]+([A-Za-z0-9_]+)[ \t]\=[ \t]{/\1/f,function,functions/
---regex-groovy=/^[ \t]*private def[ \t]+([A-Za-z0-9_]+)[ \t]/\1/v,private,private variables/
---regex-groovy=/^[ \t]def[ \t]+([A-Za-z0-9_]+)[ \t]/\1/u,public,public variables/
---regex-groovy=/^[ \t][abstract ( \t)][(private|public) ( \t)]class[ \t]+([A-Za-z0-9_]+)[ \t]/\1/c,class,classes/
---regex-groovy=/^[ \t][abstract ( \t)][(private|public) ( \t)]enum[ \t]+([A-Za-z0-9_]+)[ \t]/\1/c,class,classes/
+--langdef=Gradle
+--langmap=Gradle:.gradle
+--regex-Gradle=/^\s*task\s+([a-zA-Z0-9]+)/\1/t,task/
+
+--langdef=Groovy
+--langmap=Groovy:.groovy
+--regex-Groovy=/^\s*package\s+([a-zA-Z0-9.-_]+)/\1/p,package/
+--regex-Groovy=/^\s*(abstract)?\s*(private|public)?\s*class\s+([A-Za-z0-9_]+)\s+/\3/c,class/
+--regex-Groovy=/^\s*(abstract)?\s*public\s+(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/+\3/m,public method/
+--regex-Groovy=/^\s*(abstract)?\s*protected\s+(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/#\3/m,protected method/
+--regex-Groovy=/^\s*(abstract)?\s*(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/~\3/m,package method/
+--regex-Groovy=/^\s*(abstract)?\s*private\s+(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/-\3/m,private method/
+--regex-Groovy=/^\s*public\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/+\2/f,public field/
+--regex-Groovy=/^\s*protected\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/#\2/f,protected field/
+--regex-Groovy=/^\s*(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/~\2/f,package field/
+--regex-Groovy=/^\s*private\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/-\2/f,private field/
+--regex-Groovy=/^\s*public\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/+\2/f,public field/
+--regex-Groovy=/^\s*protected\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/#\2/f,protected field/
+--regex-Groovy=/^\s*(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/~\2/f,package field/
+--regex-Groovy=/^\s*private\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/-\2/f,private field/
 
 --langdef=haxe
 --langmap=haxe:.hx

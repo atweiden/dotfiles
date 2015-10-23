@@ -110,14 +110,22 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+let g:tagbar_type_gradle = {
+    \ 'ctagstype' : 'Gradle',
+    \ 'kinds'     : [
+        \ 't:tasks'
+    \ ]
+\ }
+
 let g:tagbar_type_groovy = {
-    \ 'ctagstype' : 'groovy',
+    \ 'ctagstype' : 'Groovy',
     \ 'kinds'     : [
         \ 'p:package',
         \ 'c:class',
         \ 'i:interface',
-        \ 'f:function',
-        \ 'v:variables',
+        \ 'e:enum',
+        \ 'm:methods',
+        \ 'f:fields'
     \ ]
 \ }
 
