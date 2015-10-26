@@ -449,7 +449,7 @@ Plug 'edkolev/erlang-motions.vim', { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-tags', { 'for': 'erlang' }
 Plug 'fishcakez/vim-dialyzer', { 'for': 'erlang' }
 Plug 'aliva/vim-fish', { 'for': 'fish' }
-Plug 'kongo2002/fsharp-vim', { 'for': 'fs' }
+Plug 'kongo2002/fsharp-vim', { 'for': 'fsharp' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'vim-jp/vim-go-extra', { 'for': 'go' }
 Plug 'Alotor/groovim', { 'for': 'groovy' }

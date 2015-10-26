@@ -26,7 +26,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.erl,*.es,*.hrl,*.xrl,*.yaws,rebar.config} set ft=erlang
   autocmd BufNewFile,BufRead {*.egs} set ft=egs
   autocmd BufNewFile,BufRead {*.erb,*.rhtml} set ft=eruby
-  autocmd BufNewFile,BufRead {*.fs,*.fsi,*.fsx} set ft=fs
+  autocmd BufNewFile,BufRead {*.fs,*.fsi,*.fsx} set ft=fsharp
   autocmd BufNewFile,BufRead {*.git/config,.gitconfig,.gitmodules,gitconfig} set ft=gitconfig
   autocmd BufNewFile,BufRead {COMMIT_EDITMSG} set ft=gitcommit
   autocmd BufNewFile,BufRead {*gtkrc*} set ft=gtkrc
