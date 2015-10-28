@@ -177,6 +177,8 @@ set background=dark
 if $TERM =~ "256color" || $COLORTERM == "gnome-terminal"
   " jellyx
   set t_Co=256
+  "let g:seoul256_background = 233
+  "colorscheme seoul256
   colorscheme jellyx
 elseif $TERM == "linux" || $TERM == "screen"
   " miro8
@@ -210,6 +212,8 @@ if has('gui_running')
   set guiheadroom=0
   " jellyx
   set t_Co=256
+  "let g:seoul256_background = 233
+  "colorscheme seoul256
   colorscheme jellyx
   " set normal mode cursor to unblinking Cursor highlighted block
   set guicursor+=n:blinkon0-block-Cursor

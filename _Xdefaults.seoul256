@@ -1,0 +1,239 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi        : 96
+Xft.antialias  : true
+Xft.rgba       : rgb
+Xft.hinting    : true
+Xft.hintstyle  : hintslight
+
+
+!-------------------------------------------------------------------------------
+!
+! U R X V T - Settings
+!
+
+URxvt*geometry              : 80x25
+URxvt*borderLess            : true
+URxvt*depth                 : 32
+URxvt*saveLines             : 65535
+URxvt*cursorBlink           : false
+URxvt*cursorUnderline       : true
+URxvt*perl-ext-common       : default,-searchable-scrollback,clipboard,url-select,keyboard-select,autocomplete-ALL-the-things
+URxvt*iso14755              : false
+URxvt*clipboard.autocopy    : true
+URxvt*keysym.C-C            : perl:clipboard:copy
+URxvt*keysym.C-V            : perl:clipboard:paste
+URxvt*keysym.C-A-V          : perl:clipboard:paste_escaped
+URxvt*keysym.M-slash        : perl:aAtt:word-complete
+URxvt*keysym.M-question     : perl:aAtt:fuzzy-complete
+URxvt*url-select.launcher   : xdg-open
+URxvt*url-select.underline  : false
+URxvt*keysym.M-u            : perl:url-select:select_next
+URxvt*keysym.M-Escape       : perl:keyboard-select:activate
+URxvt*keysym.C-s            : perl:keyboard-select:search
+
+# IO
+! True: specify that jump scrolling should be used. When receiving lots of lines, urxvt will only scroll once a whole screen height of lines has been read, resulting in fewer updates while still displaying every received line; option -j.
+! False: specify that smooth scrolling should be used. urxvt will force a screen refresh on each new line it received
+URxvt*jumpScroll: True
+! True: (the default) specify that skip scrolling should be used. When receiving lots of lines, urxvt will only scroll once in a while (around 60 times per second), resulting in far fewer updates. This can result in urxvt not ever displaying some of the lines it receives; option -ss.
+URxvt*skipScroll: True
+! True: set the urgency hint for the wm on receipt of a bell character. False: do not set the urgency hint [default] urxvt resets the urgency hint on every focus change.
+URxvt*urgentOnBell: False
+URxvt*visualBell: False
+! True: scroll to bottom when tty receives output; option -si. False: do not scroll to bottom when tty receives output; option +si.
+URxvt*scrollTtyOutput: False
+! True: scroll with scrollback buffer when tty receives new lines (i.e. try to show the same lines) and scrollTtyOutput is False; option -sw. False: do not scroll with scrollback buffer when tty receives new lines; option +sw.
+URxvt*scrollWithBuffer: True
+! True: scroll to bottom when a non-special key is pressed. Special keys are those which are intercepted by rxvt-unicode for special handling and are not passed onto the shell; option -sk. False: do not scroll to bottom when a non-special key is pressed; option +sk.
+URxvt*scrollTtyKeypress: True
+! False: don't clear the screen after exiting Vim
+URxvt*secondaryScreen: False
+
+# Enabling Ctrl/Alt/Shift, function keys and arrows for Vim
+!URxvt.keysym.M-Up             : \033[1;3A
+!URxvt.keysym.M-Down           : \033[1;3B
+!URxvt.keysym.M-Right          : \033[1;3C
+!URxvt.keysym.M-Left           : \033[1;3D
+!URxvt.keysym.M-Prior          : \033[5;3~
+!URxvt.keysym.M-Next           : \033[6;3~
+!URxvt.keysym.M-End            : \033[1;3F
+!URxvt.keysym.M-Home           : \033[1;3H
+!URxvt.keysym.C-Up             : \033[1;5A
+!URxvt.keysym.C-Down           : \033[1;5B
+!URxvt.keysym.C-Right          : \033[1;5C
+!URxvt.keysym.C-Left           : \033[1;5D
+!URxvt.keysym.C-Prior          : \033[5;5~
+!URxvt.keysym.C-Next           : \033[6;5~
+!URxvt.keysym.C-End            : \033[1;5F
+!URxvt.keysym.C-Home           : \033[1;5H
+!URxvt.keysym.C-Tab            : \033[27;5;9~
+!URxvt.keysym.C-S-Tab          : \033[27;6;9~
+!URxvt.keysym.C-S-ISO_Left_Tab : \033[27;6;9~
+!URxvt.keysym.Home             : \033OH
+!URxvt.keysym.End              : \033OF
+!URxvt.keysym.F1               : \033OP
+!URxvt.keysym.F2               : \033OQ
+!URxvt.keysym.F3               : \033OR
+!URxvt.keysym.F4               : \033OS
+
+#icon
+URxvt.iconFile: /usr/share/icons/HighContrast/scalable/apps/utilities-terminal.svg
+
+#font
+URxvt*font               : xft:Monaco\ for\ Powerline-16
+!URxvt*letterSpace       : -1
+!URxvt*lineSpace         : -1
+URxvt*skipBuiltinGlyphs  : true
+
+#tabs
+! no: disable tab new button
+URxvt*tabbed.new-button  : no
+! yes: disable the tab bar if only one tab is present
+URxvt*tabbed.autohide    : yes
+! no: disable urxvt default title
+URxvt.tabbed.title       : no
+! colors
+URxvt*tabbed.tabbar-fg   : 4
+URxvt*tabbed.tabbar-bg   : 0
+URxvt*tabbed.tab-fg      : 9
+URxvt*tabbed.tab-bg      : 0
+
+#scrollbar
+URxvt*scrollBar          : false
+URxvt*scrollBar_right    : true
+URxvt*scrollstyle        : plain
+URxvt*scrollColor        : #a8a8a8
+
+# seoul256 by @junegunn
+URxvt*color0: #4e4e4e
+URxvt*color1: #d68787
+URxvt*color2: #5f865f
+URxvt*color3: #d8af5f
+URxvt*color4: #85add4
+URxvt*color5: #d7afaf
+URxvt*color6: #87afaf
+URxvt*color7: #d0d0d0
+URxvt*color8: #626262
+URxvt*color9: #d75f87
+URxvt*color10: #87af87
+URxvt*color11: #ffd787
+URxvt*color12: #add4fb
+URxvt*color13: #ffafaf
+URxvt*color14: #87d7d7
+URxvt*color15: #e4e4e4
+
+!foreground       : xoria256.Normal.guifg
+!background       : xoria256.Normal.guibg
+!cursor           : xoria256.Cursor.guibg
+#URxvt*background: #3a3a3a
+# let g:seoul256_background = 233
+URxvt*background: #121212
+URxvt*foreground: #d0d0d0
+URxvt*cursorColor: #d0d0d0
+URxvt*cursorColor2: #3a3a3a
+
+!bold             : xoria256.Type.guifg
+!underline        : xoria256.htmlValue.guifg
+URxvt*colorBD     : #e4e4e4
+URxvt.colorUL     : #00afd7
+
+
+!-------------------------------------------------------------------------------
+!
+! X T E R M - Settings
+!
+
+XTerm*locale      : true
+XTerm*borderWidth : 0
+XTerm*jumpScroll  : false
+XTerm*saveLines   : 65535
+XTerm*titeInhibit : true
+
+! bubblegum colorscheme
+XTerm*color0      : #000000
+XTerm*color1      : #d75f5f
+XTerm*color2      : #00af87
+XTerm*color3      : #afd75f
+XTerm*color4      : #5fafd7
+XTerm*color5      : #8787af
+XTerm*color6      : #00afd7
+XTerm*color7      : #ffffff
+XTerm*color8      : #0a0a0a
+XTerm*color9      : #d787af
+XTerm*color10     : #5faf5f
+XTerm*color11     : #d7af5f
+XTerm*color12     : #87afd7
+XTerm*color13     : #8787d7
+XTerm*color14     : #87afff
+XTerm*color15     : #ffffff
+XTerm*foreground  : #a8a8a8
+XTerm*background  : #000000
+XTerm*cursorColor : #d787af
+XTerm*colorBD     : #5fafd7
+XTerm*colorUL     : #00afd7
+
+! font
+XTerm*faceName    : Monaco for Powerline
+XTerm*faceSize    : 16
+
+! clipboard
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+! alt bindings
+XTerm*metaSendsEscape   : true
+
+! console vim fixes
+XTerm*fullscreen        : never
+XTerm.omitTranslation   : fullscreen
+
+
+!-------------------------------------------------------------------------------
+!
+! X C A L C - Settings
+!
+
+XCalc*geometry:                        200x275
+XCalc.ti.bevel.background:             #111111
+XCalc.ti.bevel.screen.background:      #000000
+XCalc.ti.bevel.screen.DEG.background:  #000000
+XCalc.ti.bevel.screen.DEG.foreground:  LightSeaGreen
+XCalc.ti.bevel.screen.GRAD.background: #000000
+XCalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+XCalc.ti.bevel.screen.RAD.background:  #000000
+XCalc.ti.bevel.screen.RAD.foreground:  LightSeaGreen
+XCalc.ti.bevel.screen.INV.background:  #000000
+XCalc.ti.bevel.screen.INV.foreground:  Red
+XCalc.ti.bevel.screen.LCD.background:  #000000
+XCalc.ti.bevel.screen.LCD.foreground:  LightSeaGreen
+XCalc.ti.bevel.screen.LCD.shadowWidth: 0
+XCalc.ti.bevel.screen.M.background:    #000000
+XCalc.ti.bevel.screen.M.foreground:    LightSeaGreen
+XCalc.ti.bevel.screen.P.background:    #000000
+XCalc.ti.bevel.screen.P.foreground:    Yellow
+XCalc.ti.Command.foreground:  White
+XCalc.ti.Command.background:  #777777
+XCalc.ti.button5.background:  Orange3
+XCalc.ti.button19.background: #611161
+XCalc.ti.button18.background: #611161
+XCalc.ti.button20.background: #611111
+!uncomment to change label on division button
+!XCalc.ti.button20.label:      /
+XCalc.ti.button25.background: #722222
+XCalc.ti.button30.background: #833333
+XCalc.ti.button35.background: #944444
+XCalc.ti.button40.background: #a55555
+XCalc.ti.button22.background: #222262
+XCalc.ti.button23.background: #222262
+XCalc.ti.button24.background: #222272
+XCalc.ti.button27.background: #333373
+XCalc.ti.button28.background: #333373
+XCalc.ti.button29.background: #333373
+XCalc.ti.button32.background: #444484
+XCalc.ti.button33.background: #444484
+XCalc.ti.button34.background: #444484
+XCalc.ti.button37.background: #555595
+XCalc.ti.button38.background: #555595
+XCalc.ti.button39.background: #555595
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
