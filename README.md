@@ -8,7 +8,7 @@ Screenshots
 
 ![tmux in URxvt (jellyx)](https://i.imgur.com/2wYcZrz.png)
 
-![tmux in URxvt (seoul256)](https://i.imgur.com/2wYcZrz.png)
+![tmux in URxvt (seoul256)](https://i.imgur.com/R2d0HE1.png)
 
 
 Installation
