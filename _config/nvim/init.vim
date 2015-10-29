@@ -39,13 +39,13 @@
   " --- directories {{{
 
     " ------- store backups in the same directory {{{
-    set backupdir=~/.nvim/.backups
+    set backupdir=~/.config/nvim/.backups
     " ------- }}}
     " ------- store swap files in the same directory {{{
-    set directory=~/.nvim/.swaps
+    set directory=~/.config/nvim/.swaps
     " ------- }}}
     " ------- store undo files in the same directory {{{
-    set undodir=~/.nvim/.undo
+    set undodir=~/.config/nvim/.undo
     " ------- }}}
     " ------- make directories if necessary {{{
     if !isdirectory(expand(&backupdir))
@@ -135,8 +135,8 @@
 
 " load plugin manager {{{
 
-if filereadable(expand('~/.nvim/plugs.vim'))
-  source ~/.nvim/plugs.vim
+if filereadable(expand('~/.config/nvim/plugs.vim'))
+  source ~/.config/nvim/plugs.vim
 endif
 
 " }}}
@@ -144,8 +144,8 @@ endif
 
 " load functions {{{
 
-if filereadable(expand('~/.nvim/functions.vim'))
-  source ~/.nvim/functions.vim
+if filereadable(expand('~/.config/nvim/functions.vim'))
+  source ~/.config/nvim/functions.vim
 endif
 
 " }}}
@@ -1158,8 +1158,8 @@ highlight TermCursorNC ctermfg=red cterm=underline gui=underline
 
 " load filetype settings {{{
 
-if filereadable(expand('~/.nvim/filetypes.vim'))
-  source ~/.nvim/filetypes.vim
+if filereadable(expand('~/.config/nvim/filetypes.vim'))
+  source ~/.config/nvim/filetypes.vim
 endif
 
 " }}}
@@ -1167,8 +1167,8 @@ endif
 
 " load plugin settings {{{
 
-if filereadable(expand('~/.nvim/settings.vim'))
-  source ~/.nvim/settings.vim
+if filereadable(expand('~/.config/nvim/settings.vim'))
+  source ~/.config/nvim/settings.vim
 endif
 
 " }}}

@@ -67,8 +67,6 @@ for dotfile in "$HOME/.ackrc"          \
                "$HOME/.keymap"         \
                "$HOME/.mrconfig.d"     \
                "$HOME/.npmrc"          \
-               "$HOME/.nvim"           \
-               "$HOME/.nvimrc"         \
                "$HOME/.pdbrc"          \
                "$HOME/.pfp"            \
                "$HOME/.psqlrc"         \
@@ -104,7 +102,6 @@ for dotfolder in bin         \
                  hgext       \
                  hgmap       \
                  mrconfig.d  \
-                 nvim        \
                  ssh         \
                  tmux        \
                  vim; do cp -R "${DIR}/_${dotfolder}" "$HOME/.${dotfolder}"
@@ -135,7 +132,6 @@ for dotfile in ackrc          \
                jshintrc       \
                keymap         \
                npmrc          \
-               nvimrc         \
                pdbrc          \
                pfp            \
                psqlrc         \
