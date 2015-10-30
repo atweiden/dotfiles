@@ -382,7 +382,10 @@ Plug 'mattn/emmet-vim', { 'for': [ 'css',
 Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
 Plug 't9md/vim-transform'
 Plug 'SirVer/ultisnips', { 'on': [] }
-Plug 'tdcdev/ycm_simple_conf'
+"Plug 'tdcdev/ycm_simple_conf'
+Plug 'rdnetto/YCM-Generator', { 'on': [ 'CCGenerateConfig',
+                                      \ 'YcmGenerateConfig' ],
+                                      \ 'branch': 'stable' }
 Plug 'Valloric/YouCompleteMe', { 'on': [] }
 
 " https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
