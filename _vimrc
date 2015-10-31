@@ -266,6 +266,14 @@ highlight rCursor guifg=black guibg=#CF6A4C
 highlight clear oCursor
 highlight oCursor guifg=black guibg=gray
 
+" cursor line and column (seoul256)
+"highlight clear CursorLine
+"highlight CursorLine term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#1C1C1C
+"highlight clear CursorColumn
+"highlight CursorColumn term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#1C1C1C
+"highlight clear ColorColumn
+"highlight ColorColumn term=NONE cterm=NONE ctermbg=95 gui=NONE guibg=#875F5F
+
 " error, warning and mode messages
 highlight clear Error
 highlight Error ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
