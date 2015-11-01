@@ -257,8 +257,8 @@ fi
 #export FZF_DEFAULT_OPTS='
 #  --extended
 #  --multi
-#  --color fg:109,bg:233,hl:65,fg+:110,bg+:234,hl+:108
-#  --color info:108,prompt:179,spinner:108,pointer:168,marker:131
+#  --color fg:109,bg:233,hl:187,fg+:110,bg+:234,hl+:181
+#  --color info:108,prompt:179,spinner:108,pointer:131,marker:168
 #'
 
 # use extended search mode with multi-select and jellyx colors
