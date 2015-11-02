@@ -1143,8 +1143,8 @@ endif
 " scrollback lines
 let g:terminal_scrollback_buffer_size = 10000
 
-" open terminal
-nnoremap <silent> <leader><space> :terminal<CR>
+" open terminal in lower split
+nnoremap <silent> <leader><space> :sp term://bash<CR>
 
 " enter normal mode in terminal mode
 tnoremap \\ <C-\><C-N>
