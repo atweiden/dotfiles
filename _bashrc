@@ -254,17 +254,15 @@ elif [[ -x /usr/bin/ack ]]; then
   export FZF_DEFAULT_COMMAND='ack -l -g ""'
 fi
 
-# use extended search mode with multi-select and seoul256 colors
+# use multi-select and seoul256 colors
 #export FZF_DEFAULT_OPTS='
-#  --extended
 #  --multi
 #  --color fg:109,bg:233,hl:187,fg+:110,bg+:234,hl+:181
 #  --color info:108,prompt:179,spinner:108,pointer:131,marker:168
 #'
 
-# use extended search mode with multi-select and jellyx colors
+# use multi-select and jellyx colors
 export FZF_DEFAULT_OPTS='
-  --extended
   --multi
   --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229
   --color info:150,prompt:110,spinner:150,pointer:167,marker:174
