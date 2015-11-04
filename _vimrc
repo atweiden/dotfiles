@@ -646,7 +646,7 @@ nnoremap <silent> <leader><leader>h :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR
 noremap Y y$
 
 " copy to clipboard
-vnoremap <leader>y "+yy
+vnoremap <leader>y "+yy<ESC>
 nnoremap <leader>y "+y
 nnoremap <leader>Y "+y$
 
