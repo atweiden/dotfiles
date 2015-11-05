@@ -26,6 +26,7 @@ rebase =
 shelve =
 hgext.churn =
 hgext.extdiff =
+hgext.gpg =
 hgext.hbisect=
 hgext.mq =
 hgext.record =
