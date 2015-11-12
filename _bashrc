@@ -272,6 +272,23 @@ export FZF_DEFAULT_OPTS='
 [[ -e "/etc/profile.d/fzf.bash" ]] && . /etc/profile.d/fzf.bash
 [[ -e "/etc/profile.d/fzf-extras.bash" ]] && . /etc/profile.d/fzf-extras.bash
 
+# enable fuzzy completion for additional programs
+for _program in abiword \
+                evince \
+                feh \
+                firefox \
+                gimp \
+                gnumeric \
+                inkscape \
+                libreoffice \
+                mplayer \
+                perl6 \
+                shotwell \
+                vlc \
+                vym; do
+  complete -F _fzf_file_completion -o default -o bashdefault $_program
+done
+
 
 # -----------------------------------------------------------------------------
 # CommaCD
