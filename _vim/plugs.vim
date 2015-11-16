@@ -523,7 +523,7 @@ Plug 'jason0x43/vim-js-indent', { 'for': [ 'html',
                                          \ 'javascript',
                                          \ 'typescript' ] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
-Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'unc0/vim-gorilla-script', { 'for': [ 'egs', 'gorilla' ] }
