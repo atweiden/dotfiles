@@ -274,6 +274,8 @@ export FZF_DEFAULT_OPTS='
 
 # enable fuzzy completion for additional programs
 for _program in abiword \
+                ack \
+                ag \
                 evince \
                 feh \
                 firefox \
@@ -284,6 +286,7 @@ for _program in abiword \
                 mplayer \
                 perl6 \
                 shotwell \
+                sift \
                 vlc \
                 vym; do
   complete -F _fzf_file_completion -o default -o bashdefault $_program
