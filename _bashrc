@@ -99,7 +99,7 @@ PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
 # perl6
 if [[ -x /usr/bin/perl6 ]]; then
   # perl6 -e "say %*CUSTOM_LIB<site>.IO.child('bin').Str"
-  PATH=/usr/share/perl6/site/bin:$PATH
+  PATH=/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin:$PATH
   # panda
   # PATH=$HOME/.perl6/$(perl6 --version | awk '{print $5}')/bin:$PATH
 fi
