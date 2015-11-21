@@ -8,18 +8,16 @@ Plug 'talek/obvious-resize'
 " buffers
 "Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 Plug 'mihaifm/bufstop'
-Plug 'vim-scripts/clone', { 'on': [ 'CloneAs', 'SCloneAs' ] }
-Plug 'AndrewRadev/inline_edit.vim', { 'on': 'InlineEdit' }
+Plug 'vim-scripts/clone'
+Plug 'AndrewRadev/inline_edit.vim'
 Plug 'chrisbra/NrrwRgn'
 Plug 'chrisbra/Recover.vim'
 Plug 'henrik/rename.vim', { 'on': 'Rename' }
-Plug 'itchyny/thumbnail.vim', { 'on': 'Thumbnail' }
+Plug 'itchyny/thumbnail.vim'
 
 " splits
-"Plug 'mattboehm/vim-accordion', { 'on': 'Accordion' }
-"Plug 'mattboehm/vim-unstack', { 'on': [ 'UnstackFromClipboard',
-                                      "\ 'UnstackFromSelection',
-                                      "\ 'UnstackFromText' ] }
+"Plug 'mattboehm/vim-accordion'
+"Plug 'mattboehm/vim-unstack'
 Plug 'vim-scripts/VerticalHelp', { 'on': 'H' }
 
 " folds
@@ -41,7 +39,16 @@ Plug 'scrooloose/nerdtree', { 'on': [ 'Bookmark',
                                     \ 'OpenBookmark',
                                     \ 'ReadBookmarks',
                                     \ 'RevealBookmark' ] }
-Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
+Plug 'jistr/vim-nerdtree-tabs', { 'on': [ 'NERDTreeFocusToggle',
+                                        \ 'NERDTreeMirrorOpen',
+                                        \ 'NERDTreeMirrorToggle',
+                                        \ 'NERDTreeSteppedClose',
+                                        \ 'NERDTreeSteppedOpen',
+                                        \ 'NERDTreeTabsClose',
+                                        \ 'NERDTreeTabsFind',
+                                        \ 'NERDTreeTabsOpen',
+                                        \ 'NERDTreeTabsToggle',
+                                        \ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeMirrorOpen',
                                         \ '<Plug>NERDTreeMirrorToggle',
                                         \ '<Plug>NERDTreeSteppedClose',
@@ -50,7 +57,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [ '<Plug>NERDTreeFocusToggle',
                                         \ '<Plug>NERDTreeTabsFind',
                                         \ '<Plug>NERDTreeTabsOpen',
                                         \ '<Plug>NERDTreeTabsToggle' ] }
-"Plug 'buztard/vim-nomad', { 'on': 'UpdateEnv' }
+"Plug 'buztard/vim-nomad'
 Plug 'Shougo/vimfiler.vim'
 
 " keyboard
@@ -63,31 +70,19 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'osyo-manga/vim-hopping', { 'on': [ 'HoppingStart',
-                                       \ '<Plug>(hopping-start)' ] }
-Plug 'haya14busa/incsearch.vim', { 'on': [ '<Plug>(incsearch-backward)',
-                                         \ '<Plug>(incsearch-forward)',
-                                         \ '<Plug>(incsearch-stay)' ] }
+Plug 'osyo-manga/vim-hopping'
+Plug 'haya14busa/incsearch.vim'
 "Plug 'henrik/vim-indexed-search'
 "Plug 'google/vim-searchindex'
 "Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
-"Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
+"Plug 'osyo-manga/vim-over'
 Plug 't9md/vim-quickhl'
 Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
-Plug 'idanarye/vim-yankitute', { 'on': 'Yankitute' }
+Plug 'idanarye/vim-yankitute'
 
 " sort
-Plug 'vim-scripts/AdvancedSorters', { 'on': [ 'SortByCharLength',
-                                            \ 'SortByExpr',
-                                            \ 'SortByExprUnique',
-                                            \ 'SortByWidth',
-                                            \ 'SortRangesByHeader',
-                                            \ 'SortRangesByMatch',
-                                            \ 'SortRangesByRange',
-                                            \ 'SortUnfolded',
-                                            \ 'SortWORDs',
-                                            \ 'Uniq' ] }
+Plug 'vim-scripts/AdvancedSorters'
 
 " movement
 Plug 'gcmt/breeze.vim', { 'for': [ 'eelixir',
@@ -128,19 +123,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ciaranm/securemodelines'
 
 " sessions
-Plug 'tpope/vim-projectionist', { 'on': [ 'A',
-                                        \ 'AD',
-                                        \ 'AS',
-                                        \ 'AT',
-                                        \ 'AV',
-                                        \ 'Cd',
-                                        \ 'D',
-                                        \ 'E',
-                                        \ 'Lcd',
-                                        \ 'ProjectDo',
-                                        \ 'S',
-                                        \ 'T',
-                                        \ 'V' ] }
+Plug 'tpope/vim-projectionist'
 Plug 'xolox/vim-session'
 
 " align
@@ -149,28 +132,7 @@ Plug 'JLimperg/Align'
 "Plug 'atweiden/vim-dragvisuals'
 Plug 'junegunn/vim-easy-align'
 Plug 'tommcdo/vim-lion'
-" Plug 'dhruvasagar/vim-table-mode', { 'on': [ 'TableAddFormula',
-"                                            \ 'TableEvalFormulaLine',
-"                                            \ 'Tableize',
-"                                            \ 'TableModeDisable',
-"                                            \ 'TableModeEnable',
-"                                            \ 'TableModeRealign',
-"                                            \ 'TableModeToggle',
-"                                            \ '<Plug>(table-mode-add-formula)',
-"                                            \ '<Plug>(table-mode-cell-text-object-a)',
-"                                            \ '<Plug>(table-mode-cell-text-object-i)',
-"                                            \ '<Plug>(table-mode-delete-column)',
-"                                            \ '<Plug>(table-mode-delete-row)',
-"                                            \ '<Plug>(table-mode-echo-cell)',
-"                                            \ '<Plug>(table-mode-eval-formula)',
-"                                            \ '<Plug>(table-mode-motion-down)',
-"                                            \ '<Plug>(table-mode-motion-left)',
-"                                            \ '<Plug>(table-mode-motion-right)',
-"                                            \ '<Plug>(table-mode-motion-up)',
-"                                            \ '<Plug>(table-mode-realign)',
-"                                            \ '<Plug>(table-mode-sort)',
-"                                            \ '<Plug>(table-mode-tableize)',
-"                                            \ '<Plug>(table-mode-tableize-delimiter)' ] }
+" Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'atsepkov/vim-tabularity'
 Plug 't9md/vim-textmanip'
@@ -183,7 +145,7 @@ Plug 'junegunn/vim-after-object'
 "Plug 'tek/vim-fieldtrip'
 "Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-scripts/LineJuggler'
-Plug 'vim-scripts/LineJugglerCommands', { 'on': [ 'Replace', 'Swap' ] }
+Plug 'vim-scripts/LineJugglerCommands'
 Plug 'vim-scripts/ReplaceWithRegister'
 "Plug 'AndrewRadev/sideways.vim'
 "Plug 'kana/vim-submode' " is a runtime dependency for fieldtrip/sideways
@@ -192,7 +154,7 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-function'
 Plug 'thinca/vim-textobj-function-javascript', { 'for': 'javascript' }
 Plug 'thinca/vim-textobj-function-perl', { 'for': [ 'perl', 'perl6' ] }
-Plug 'kana/vim-textobj-lastpat'
+"Plug 'kana/vim-textobj-lastpat'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'coderifous/textobj-word-column.vim'
@@ -200,10 +162,7 @@ Plug 'coderifous/textobj-word-column.vim'
 " bookmarks
 Plug 'tommcdo/vim-kangaroo'
 Plug 'kshenoy/vim-signature'
-Plug 'AndrewRadev/simple_bookmarks.vim', { 'on': [ 'Bookmark',
-                                                 \ 'CopenBookmarks',
-                                                 \ 'DelBookmark',
-                                                 \ 'GotoBookmark' ] }
+Plug 'AndrewRadev/simple_bookmarks.vim'
 
 " macros
 "Plug 'dahu/VimLocalMacros'
@@ -218,30 +177,17 @@ Plug 'jiangmiao/auto-pairs'
 
 " tags
 Plug 'xolox/vim-easytags', { 'on': [ 'HighlightTags', 'UpdateTags' ] }
-Plug 'majutsushi/tagbar', { 'on': [ 'Tagbar',
-                                  \ 'TagbarClose',
-                                  \ 'TagbarCurrentTag',
-                                  \ 'TagbarDebug',
-                                  \ 'TagbarDebugEnd',
-                                  \ 'TagbarGetTypeConfig',
-                                  \ 'TagbarOpen',
-                                  \ 'TagbarOpenAutoClose',
-                                  \ 'TagbarSetFoldlevel',
-                                  \ 'TagbarShowTag',
-                                  \ 'TagbarToggle',
-                                  \ 'TagbarTogglePause' ] }
+Plug 'majutsushi/tagbar'
 Plug 'h1mesuke/unite-outline'
 
 " diffs
 Plug 'vim-scripts/diffchar.vim'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'junkblocker/patchreview-vim', { 'on': [ 'DiffReview',
-                                            \ 'PatchReview',
-                                            \ 'ReversePatchReview' ] }
+Plug 'junkblocker/patchreview-vim'
 
 " vcs
-Plug 'cohama/agit.vim', { 'on': [ 'Agit', 'AgitFile', 'AgitGit' ] }
-"Plug 'rhysd/committia.vim', { 'for': 'gitcommit' }
+Plug 'cohama/agit.vim'
+Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
 "Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 Plug 'ludovicchabant/vim-lawrencium', { 'on': [ 'Hg',
@@ -294,20 +240,18 @@ Plug 'ludovicchabant/vim-lawrencium', { 'on': [ 'Hg',
                                               \ 'Hgvdiffsumsplit',
                                               \ 'Hgvimgrep',
                                               \ 'Hgwannotate' ] }
-Plug 'idanarye/vim-merginal', { 'on': [ 'Merginal',
-                                      \ 'MerginalClose',
-                                      \ 'MerginalToggle' ] }
+Plug 'idanarye/vim-merginal'
 "Plug 'jmcantrell/vim-reporoot', { 'on': 'RepoRoot' }
 
 " writing
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
+Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-lexical', { 'for': [ 'markdown', 'mkd', 'textile' ] }
-Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
+Plug 'junegunn/limelight.vim'
 Plug 'reedes/vim-litecorrect', { 'for': [ 'markdown', 'mkd', 'textile' ] }
-Plug 'reedes/vim-wordy', { 'on': [ 'NextWordy', 'NoWordy', 'PrevWordy', 'Wordy' ] }
+Plug 'reedes/vim-wordy'
 
 " calendar
-"Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
+"Plug 'itchyny/calendar.vim'
 
 " math
 "Plug 'jmcantrell/vim-numbered', { 'on': 'Numbered' }
@@ -317,35 +261,11 @@ Plug 'jamessan/vim-gnupg'
 Plug 'vim-scripts/openssl.vim'
 
 " command runners
-Plug 'tyru/capture.vim', { 'on': 'Capture' }
-" Plug 'tpope/vim-dispatch', { 'on': [ 'Copen',
-"                                    \ 'Dispatch',
-"                                    \ 'Focus',
-"                                    \ 'FocusDispatch',
-"                                    \ 'Make',
-"                                    \ 'Start' ] }
-Plug 'idanarye/vim-erroneous', { 'on': [ 'Elmake',
-                                       \ 'Elrun',
-                                       \ 'Emake',
-                                       \ 'Erun' ] }
-Plug 'idanarye/vim-integrake', { 'on': [ 'IR',
-                                       \ 'IRgrab',
-                                       \ 'IRsedit',
-                                       \ 'IRvedit' ] }
-" Plug 'xuhdev/SingleCompile', { 'on': [ 'SCChooseCompiler',
-"                                      \ 'SCChooseInterpreter',
-"                                      \ 'SCCompile',
-"                                      \ 'SCCompileAF',
-"                                      \ 'SCCompileRun',
-"                                      \ 'SCCompileRunAF',
-"                                      \ 'SCCompileRunAsync',
-"                                      \ 'SCCompileRunAsyncAF',
-"                                      \ 'SCIsRunningAsync',
-"                                      \ 'SCTerminateAsync',
-"                                      \ 'SCViewResult',
-"                                      \ 'SCViewResultAsync',
-"                                      \ 'SingleCompile',
-"                                      \ 'SingleCompileRun' ] }
+Plug 'tyru/capture.vim'
+" Plug 'tpope/vim-dispatch'
+Plug 'idanarye/vim-erroneous'
+Plug 'idanarye/vim-integrake'
+" Plug 'xuhdev/SingleCompile'
 Plug 'epeli/slimux', { 'on': [ 'SlimuxREPLConfigure',
                              \ 'SlimuxREPLSendLine',
                              \ 'SlimuxREPLSendSelection',
@@ -379,7 +299,7 @@ Plug 'mattn/emmet-vim', { 'for': [ 'css',
                                  \ 'scss',
                                  \ 'slim',
                                  \ 'stylus' ] }
-Plug 'mattn/sonictemplate-vim', { 'on': [ 'Template', 'Unite' ] }
+Plug 'mattn/sonictemplate-vim'
 Plug 't9md/vim-transform'
 Plug 'SirVer/ultisnips', { 'on': [] }
 "Plug 'tdcdev/ycm_simple_conf'
@@ -563,9 +483,7 @@ Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
 Plug 'vim-scripts/phpfolding.vim', { 'for': 'php' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
-Plug 'jmcantrell/vim-virtualenv', { 'on': [ 'VirtualEnvActivate',
-                                          \ 'VirtualEnvDeactivate',
-                                          \ 'VirtualEnvList' ] }
+Plug 'jmcantrell/vim-virtualenv', { 'for': 'python' }
 Plug 'jgors/vimux-ipy', { 'for': 'python' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'vim-scripts/paredit.vim', { 'for': [ 'clojure',
@@ -585,52 +503,8 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'derekwyatt/vim-sbt', { 'for': 'sbt' }
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
 Plug 'saltstack/salt-vim', { 'for': 'sls' }
-Plug 'vim-scripts/SQLUtilities', { 'on': [ 'SQLUCreateColumnList',
-                                         \ 'SQLUCreateProcedure',
-                                         \ 'SQLUFormatter',
-                                         \ 'SQLUGetColumnDataType',
-                                         \ 'SQLUGetColumnDef' ] }
-Plug 'vim-scripts/dbext.vim', { 'on': [ '<Plug>DBDescribeProcedure',
-                                      \ '<Plug>DBDescribeProcedure',
-                                      \ '<Plug>DBDescribeProcedureAskName',
-                                      \ '<Plug>DBDescribeProcedureAskName',
-                                      \ '<Plug>DBDescribeTable',
-                                      \ '<Plug>DBDescribeTable',
-                                      \ '<Plug>DBDescribeTableAskName',
-                                      \ '<Plug>DBDescribeTableAskName',
-                                      \ '<Plug>DBExecSQL',
-                                      \ '<Plug>DBExecSQL',
-                                      \ '<Plug>DBExecSQLUnderCursor',
-                                      \ '<Plug>DBExecSQLUnderCursor',
-                                      \ '<Plug>DBExecSQLUnderTopXCursor',
-                                      \ '<Plug>DBExecSQLUnderTopXCursor',
-                                      \ '<Plug>DBExecVisualSQL',
-                                      \ '<Plug>DBExecVisualSQL',
-                                      \ '<Plug>DBExecVisualTopXSQL',
-                                      \ '<Plug>DBExecVisualTopXSQL',
-                                      \ '<Plug>DBHistory',
-                                      \ '<Plug>DBHistory',
-                                      \ '<Plug>DBListColumn',
-                                      \ '<Plug>DBListColumn',
-                                      \ '<Plug>DBListColumn',
-                                      \ '<Plug>DBListProcedure',
-                                      \ '<Plug>DBListProcedure',
-                                      \ '<Plug>DBListTable',
-                                      \ '<Plug>DBListTable',
-                                      \ '<Plug>DBListView',
-                                      \ '<Plug>DBListView',
-                                      \ '<Plug>DBOrientationToggle',
-                                      \ '<Plug>DBOrientationToggle',
-                                      \ '<Plug>DBPromptForBufferParameters',
-                                      \ '<Plug>DBPromptForBufferParameters',
-                                      \ '<Plug>DBSelectFromTable',
-                                      \ '<Plug>DBSelectFromTable',
-                                      \ '<Plug>DBSelectFromTableAskName',
-                                      \ '<Plug>DBSelectFromTableAskName',
-                                      \ '<Plug>DBSelectFromTableWithWhere',
-                                      \ '<Plug>DBSelectFromTableWithWhere',
-                                      \ '<Plug>DBSelectFromTopXTable',
-                                      \ '<Plug>DBSelectFromTopXTable' ] }
+Plug 'vim-scripts/SQLUtilities'
+Plug 'vim-scripts/dbext.vim'
 Plug 'vim-jp/vim-streem', { 'for': 'streem' }
 Plug 'toyamarinyon/vim-swift', { 'for': 'swift' }
 Plug 'darvelo/vim-systemd', { 'for': [ 'systemd', 'udev' ] }
@@ -713,26 +587,13 @@ Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT', 'HLTm' ] }
 Plug 'mhinz/vim-hugefile'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }
-Plug 'edkolev/promptline.vim', { 'on': 'PromptlineSnapshot' }
-Plug 'edkolev/tmuxline.vim', { 'on': 'Tmuxline' }
-Plug 'junegunn/rainbow_parentheses.vim', { 'on': [ 'RainbowParentheses' ] }
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'vim-scripts/SyntaxAttr.vim'
-Plug 'vim-scripts/SyntaxRange', { 'on': [ 'SyntaxIgnore', 'SyntaxInclude' ] }
+Plug 'vim-scripts/SyntaxRange'
 Plug 'reedes/vim-thematic'
-Plug 'KabbAmine/vCoolor.vim', { 'on': [ 'Hex2Hsl',
-                                      \ 'Hex2Lit',
-                                      \ 'Hex2Rgb',
-                                      \ 'Hex2RgbPerc',
-                                      \ 'Hsl2Hex',
-                                      \ 'Hsl2Rgb',
-                                      \ 'Rgb2Hex',
-                                      \ 'Rgb2Hsl',
-                                      \ 'Rgb2RgbPerc',
-                                      \ 'RgbPerc2Hex',
-                                      \ 'RgbPerc2Rgb',
-                                      \ 'VCase',
-                                      \ 'VCoolIns',
-                                      \ 'VCoolor' ] }
+Plug 'KabbAmine/vCoolor.vim'
 Plug 'guns/xterm-color-table.vim', { 'on': [ 'EXtermColorTable',
                                            \ 'OXtermColorTable',
                                            \ 'SXtermColorTable',
