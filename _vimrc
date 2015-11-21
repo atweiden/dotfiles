@@ -174,13 +174,14 @@ endif
 " dark background
 set background=dark
 
-if $TERM =~ "256color" || $COLORTERM == "gnome-terminal"
+if ($TERM =~ "256" || &t_Co >= 256 || $COLORTERM == "gnome-terminal")
+  \ || has('gui_running')
   " jellyx
   set t_Co=256
   "let g:seoul256_background = 233
   "colorscheme seoul256
   colorscheme jellyx
-elseif $TERM == "linux" || $TERM == "screen"
+elseif $TERM == "linux" || $TERM == "tmux" || $TERM == "screen"
   " miro8
   colorscheme miro8
   highlight clear Pmenu
@@ -210,11 +211,6 @@ if has('gui_running')
   set guifont=Monaco\ for\ Powerline\ 16
   " allow gvim window to occupy whole screen
   set guiheadroom=0
-  " jellyx
-  set t_Co=256
-  "let g:seoul256_background = 233
-  "colorscheme seoul256
-  colorscheme jellyx
   " set normal mode cursor to unblinking Cursor highlighted block
   set guicursor+=n:blinkon0-block-Cursor
   " set insert and command line mode cursor to 25% width unblinking iCursor highlighted block
