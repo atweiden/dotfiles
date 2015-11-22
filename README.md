@@ -112,6 +112,7 @@ Credits
 - [@khughitt](https://github.com/khughitt/dotfiles)
 - [@knewter](https://github.com/knewter/dotfiles)
 - [@kongo2002](https://github.com/kongo2002/dotfiles)
+- [@kurkale6ka](https://github.com/kurkale6ka/config)
 - [@leafgarland](https://github.com/leafgarland/vimfiles)
 - [@lervag](https://github.com/lervag/dotvim)
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
