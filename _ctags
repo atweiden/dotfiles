@@ -205,6 +205,19 @@
 --regex-objc=/^[[:space:]]*NS_ENUM\([[:alnum:]]+[[:space:]]*,[[:space:]]([[:alnum:]]+)\)/\1/e,enum/
 --regex-objc=/^#pragma[[:space:]]+mark[[:space:]]+-?[[:space:]]+([[:alnum:][:space:]]+)/\1/g,pragma/
 
+--regex-PHP=/^\s*(abstract|final)\s+class\s+(\w+)/\2/
+--regex-PHP=/^\s*const\s+(\w+)/\1/
+--regex-PHP=/^\s*(public|protected|private|var)\s+(static\s+)?\$(\w+)/\3/
+--regex-PHP=/^\s*(static\s+)?(public|protected|private|var)\s+\$(\w+)/\3/
+--regex-PHP=/^\s*static\s+\$(\w+)/\1/
+--regex-PHP=/^\s*(final\s+)?((public|protected|private)\s+)?(static\s+)?function\s+(\w+)/\5/
+--regex-PHP=/^\s*(final\s+)?(static\s+)?((public|protected|private)\s+)?function\s+(\w+)/\5/
+--regex-PHP=/^\s*((public|protected|private)\s+)?(static\s+)?(final\s+)?function\s+(\w+)/\5/
+--regex-PHP=/^\s*((public|protected|private)\s+)?(final\s+)?(static\s+)?function\s+(\w+)/\5/
+--regex-PHP=/^\s*(static\s+)?(final\s+)?((public|protected|private)\s+)?function\s+(\w+)/\5/
+--regex-PHP=/^\s*(static\s+)?((public|protected|private)\s+)?(final\s+)?function\s+(\w+)/\5/
+--regex-PHP=/^\s*interface\s+(\w+)/\1/
+
 --langdef=puppet
 --langmap=puppet:.pp
 --regex-puppet=/^class[ \t]*([:a-zA-Z0-9_\-]+)[ \t]*/\1/c,class/
