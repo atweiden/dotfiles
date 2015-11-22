@@ -557,7 +557,7 @@ endif
     " ------- disable some filetypes for completion {{{
     set wildignore+=*.o,*.obj,*.dll,*.pyc
     set wildignore+=*~,*.DS_Store
-    set wildignore+=.git/*,.hg/*,.svn/*
+    set wildignore+=.git/*,.subgit/*,.hg/*,.subhg/*,.svn/*
     set wildignore+=*.gif,*.jpg,*.jpeg,*.png
     set wildignore+=*.class,*.jar
     set wildignore+=*.beam
