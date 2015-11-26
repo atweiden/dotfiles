@@ -5,7 +5,6 @@ let g:NERDTreeQuitOnOpen=1             " Close NERDTree upon selecting file to o
 let g:NERDTreeHighlightCursorline=1    " Highlight the selected entry in the tree
 let g:NERDTreeMouseMode=2              " Use a single click to fold/unfold directories and a double click to open files
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrows = 1
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeWinSize = 30
 let g:NERDTreeMapJumpFirstChild = 'gK'
