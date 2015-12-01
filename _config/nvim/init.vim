@@ -63,8 +63,11 @@
 
   " --- file {{{
 
-    " ------- character encoding {{{
+    " ------- use utf-8 without BOM {{{
     set encoding=utf-8
+    set fileencoding=utf-8
+    set termencoding=utf-8
+    set nobomb
     " ------- }}}
     " ------- read unix, dos and mac file formats {{{
     set fileformats=unix,dos,mac

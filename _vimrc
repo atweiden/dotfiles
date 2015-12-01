@@ -56,8 +56,11 @@ if has('mouse')
   set mousemodel=popup_setpos
 endif
 
-" use utf-8 character encoding
+" use utf-8 without BOM
 set encoding=utf-8
+set fileencoding=utf-8
+set termencoding=utf-8
+set nobomb
 
 " flush file to disk after writing for protection against data loss
 set nofsync

@@ -116,6 +116,7 @@ Credits
 - [@leafgarland](https://github.com/leafgarland/vimfiles)
 - [@lervag](https://github.com/lervag/dotvim)
 - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+- [mattyclarkson](https://github.com/mattyclarkson/posix-scripts)
 - [@noctuid](https://github.com/noctuid/dotfiles)
 - [@nvie](https://github.com/nvie/vimrc)
 - [@orlp](https://github.com/orlp/dotfiles)
