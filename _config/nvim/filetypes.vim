@@ -48,6 +48,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.javap} set ft=java-bytecode
   autocmd BufNewFile,BufRead {pom.xml} set ft=pom
   autocmd BufNewFile,BufRead {*.js,*.jsm,*.jss,*.jsx,Jakefile} set ft=javascript
+  autocmd BufNewFile,BufRead {*.jrnl} set ft=journal
   autocmd BufNewFile,BufRead {*.json,*.jsonp,.eslintrc,.jshintrc,.jsxhintrc,META.info} set ft=json
   autocmd BufNewFile,BufRead {*.json5} set ft=json5
   autocmd BufNewFile,BufRead {*.j2,*.jinja,*.jinja2} set ft=jinja

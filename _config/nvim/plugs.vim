@@ -451,6 +451,7 @@ Plug 'unc0/vim-egs', { 'for': 'egs' }
 Plug 'nikvdp/ejs-syntax', { 'for': 'ejs' }
 Plug 'gkz/vim-ls', { 'for': 'ls' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'junegunn/vim-journal', { 'for': 'journal' }
 Plug 'mitsuhiko/vim-json', { 'for': 'json' }
 Plug 'GutenYe/json5.vim', { 'for': 'json5' }
 Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
