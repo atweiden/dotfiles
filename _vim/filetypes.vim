@@ -63,7 +63,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.ls,*Slakefile} set ft=ls
   autocmd BufNewFile,BufRead {*.lua} set ft=lua
   autocmd BufNewFile,BufRead {*.markdown,*.md,*.mkd,*.cpt,*.ronn} set ft=markdown conceallevel=0
-  autocmd BufNewFile,BufRead {*.nim} set ft=nim
+  autocmd BufNewFile,BufRead {*.nim,*.nims} set ft=nim
   autocmd BufNewFile,BufRead {*.nmml} set ft=nmml.xml
   autocmd BufNewFile,BufRead {*.ml,*.mli} set ft=ocaml
   autocmd BufNewFile,BufRead {*.php,*.phpt,*.ctp,*.hh,*.hhi} set ft=php
