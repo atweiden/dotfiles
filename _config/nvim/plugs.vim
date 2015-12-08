@@ -336,7 +336,7 @@ Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'vim-scripts/vim-clojure-sql', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
+Plug 'tpope/vim-salve', { 'for': 'clojure' }
 Plug 'guns/vim-slamhound', { 'for': 'clojure' }
 Plug 'typedclojure/vim-typedclojure', { 'for': 'clojure' }
 Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
