@@ -21,6 +21,7 @@ Plug 'itchyny/thumbnail.vim'
 Plug 'vim-scripts/VerticalHelp', { 'on': 'H' }
 
 " folds
+Plug 'Konfekt/FastFold', { 'on': [ 'FastFoldUpdate', '<Plug>(FastFoldUpdate)' ] }
 Plug 'Harenome/vim-neatfoldtext'
 
 " filesystem
