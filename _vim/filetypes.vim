@@ -53,6 +53,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.json5} set ft=json5
   autocmd BufNewFile,BufRead {*.j2,*.jinja,*.jinja2} set ft=jinja
   autocmd BufNewFile,BufRead {*.jl} set ft=julia
+  autocmd BufNewFile,BufRead {*.kt,*.kts} set ft=kotlin
   autocmd BufNewFile,BufRead {*.kv} set ft=kivy
   autocmd BufNewFile,BufRead {*.ledger} set ft=ledger
   autocmd BufNewFile,BufRead {*.less} set ft=less

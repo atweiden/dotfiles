@@ -456,6 +456,7 @@ Plug 'junegunn/vim-journal', { 'for': 'journal' }
 Plug 'mitsuhiko/vim-json', { 'for': 'json' }
 Plug 'GutenYe/json5.vim', { 'for': 'json5' }
 Plug 'dcjones/julia-minimalist-vim', { 'for': 'julia' }
+Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 Plug 'ajford/vimkivy', { 'for': 'kivy' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'ledger/vim-ledger', { 'for': 'ledger' }
