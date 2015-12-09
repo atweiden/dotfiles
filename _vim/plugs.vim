@@ -21,7 +21,7 @@ Plug 'mattboehm/vim-unstack'
 Plug 'vim-scripts/VerticalHelp', { 'on': 'H' }
 
 " folds
-Plug 'Konfekt/FastFold', { 'on': [ 'FastFoldUpdate', '<Plug>(FastFoldUpdate)' ] }
+Plug 'Konfekt/FastFold'
 Plug 'Harenome/vim-neatfoldtext'
 
 " filesystem
