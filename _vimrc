@@ -271,7 +271,7 @@ highlight oCursor guifg=black guibg=gray
 "highlight clear iCursor
 "highlight iCursor guifg=white guibg=#FFFFAF
 "highlight clear vCursor
-"highlight vCursor guifg=white guibg=#87AFAF
+"highlight vCursor guifg=white guibg=#5FAFAF
 "highlight clear rCursor
 "highlight rCursor guifg=black guibg=#DF005F
 "highlight clear oCursor
