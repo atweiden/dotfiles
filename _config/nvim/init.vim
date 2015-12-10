@@ -298,6 +298,18 @@ endif
     highlight clear oCursor
     highlight oCursor guifg=black guibg=gray
     " ------- }}}
+    " ------- cursor (seoul256) {{{
+    "highlight clear Cursor
+    "highlight Cursor guifg=black guibg=gray
+    "highlight clear iCursor
+    "highlight iCursor guifg=white guibg=#FFFFAF
+    "highlight clear vCursor
+    "highlight vCursor guifg=white guibg=#5FAFAF
+    "highlight clear rCursor
+    "highlight rCursor guifg=black guibg=#DF005F
+    "highlight clear oCursor
+    "highlight oCursor guifg=black guibg=gray
+    " ------- }}}
     " ------- cursor line and column (seoul256) {{{
     "highlight clear CursorLine
     "highlight CursorLine term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#1C1C1C
