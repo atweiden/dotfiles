@@ -249,6 +249,12 @@ highlight Search term=bold cterm=bold ctermfg=0 ctermbg=191 gui=bold guifg=black
 highlight clear IncSearch
 highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=214 gui=bold guifg=black guibg=#FFAF00
 
+" searches (seoul256)
+"highlight clear Search
+"highlight Search term=bold cterm=bold ctermfg=0 ctermbg=116 gui=bold guifg=black guibg=#97DDDF
+"highlight clear IncSearch
+"highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=217 gui=bold guifg=black guibg=#FFBFBD
+
 " matching parens
 highlight clear MatchParen
 highlight MatchParen term=bold,NONE cterm=bold,NONE ctermfg=179 gui=bold,NONE guifg=#D7AF5F
