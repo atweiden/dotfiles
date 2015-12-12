@@ -285,6 +285,7 @@ for _program in abiword \
                 libreoffice \
                 mplayer \
                 perl6 \
+                pt \
                 shotwell \
                 sift \
                 vlc \
@@ -297,6 +298,12 @@ done
 # CommaCD
 
 [[ -r "/usr/share/commacd/commacd.bash" ]] && . /usr/share/commacd/commacd.bash
+
+
+# -----------------------------------------------------------------------------
+# GPG
+
+export GPG_TTY=$(tty)
 
 
 # -----------------------------------------------------------------------------
