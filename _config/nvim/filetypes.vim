@@ -102,7 +102,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.textile} set ft=textile
   autocmd BufNewFile,BufRead {*.tmux,*tmux.conf*} set ft=tmux
   autocmd BufNewFile,BufRead {*.toml,Cargo.lock} set ft=toml
-  autocmd BufNewFile,BufRead {*.transactions} set ft=transactions
+  autocmd BufNewFile,BufRead {*.txn} set ft=txn
   autocmd BufNewFile,BufRead {*.tup,Tupfile} set ft=tup
   autocmd BufNewFile,BufRead {*.ts,*.tsx} set ft=typescript
   autocmd BufNewFile,BufRead {*.uzbl,~/.config/uzbl/*,*/uzbl/config} set ft=uzbl
