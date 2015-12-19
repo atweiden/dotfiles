@@ -8,5 +8,5 @@
 let g:ConqueGdb_Leader = '\'
 
 " answer GDB confirmations without having to go to the Conque GDB window
-nnoremap <silent> <leader>Y :ConqueGdbCommand y<CR>
-nnoremap <silent> <leader>N :ConqueGdbCommand n<CR>
+"nnoremap <silent> <leader>Y :ConqueGdbCommand y<CR>
+"nnoremap <silent> <leader>N :ConqueGdbCommand n<CR>
