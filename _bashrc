@@ -274,10 +274,8 @@ export FZF_DEFAULT_OPTS='
 [[ -e "/etc/profile.d/fzf.bash" ]] && . /etc/profile.d/fzf.bash
 [[ -e "/etc/profile.d/fzf-extras.bash" ]] && . /etc/profile.d/fzf-extras.bash
 
-# enable fuzzy completion for additional programs
+# enable fuzzy file completion for additional programs
 for _program in abiword \
-                ack \
-                ag \
                 evince \
                 feh \
                 firefox \
@@ -287,12 +285,15 @@ for _program in abiword \
                 libreoffice \
                 mplayer \
                 perl6 \
-                pt \
                 shotwell \
-                sift \
                 vlc \
                 vym; do
   complete -F _fzf_file_completion -o default -o bashdefault $_program
+done
+
+# enable fuzzy file/dir completion for additional programs
+for _program in ack ag pt sift; do
+  complete -F _fzf_path_completion -o default -o bashdefault $_program
 done
 
 
