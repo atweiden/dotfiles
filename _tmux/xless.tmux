@@ -6,7 +6,6 @@ set -g pane-active-border-bg default
 # statusbar --------------------------------------------------------------
 set -g status "on"
 set -g status-attr "none"
-set -g status-utf8 "on"
 set -g status-justify "left"
 set -g status-left-length "100"
 set -g status-left-attr "none"
