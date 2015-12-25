@@ -45,3 +45,18 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \   'tex' : ['re!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'],
   \ }
+
+" Turn off YCM for these filetypes
+let g:ycm_filetype_blacklist = {
+  \   'infolog' : 1,
+  \   'journal' : 1,
+  \   'mail' : 1,
+  \   'markdown' : 1,
+  \   'notes' : 1,
+  \   'pandoc' : 1,
+  \   'qf' : 1,
+  \   'tagbar' : 1,
+  \   'text' : 1,
+  \   'unite' : 1,
+  \   'vimwiki' : 1
+  \ }
