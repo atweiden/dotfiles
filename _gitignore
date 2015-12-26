@@ -38,3 +38,7 @@ Session.vim
 # SubGit / SubHg
 .subgit
 .subhg
+
+# Perl 6
+/.precomp/*
+*/.precomp/*

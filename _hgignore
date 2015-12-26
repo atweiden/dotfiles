@@ -40,3 +40,4 @@ dwsync.xml
 .svn
 .CVS
 node_modules
+.precomp
