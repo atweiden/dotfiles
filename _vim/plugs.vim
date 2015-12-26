@@ -1,4 +1,7 @@
 silent! if plug#begin('~/.vim/plugged')
+" start screen
+Plug 'mhinz/vim-startify'
+
 " status
 Plug 'itchyny/lightline.vim'
 
@@ -587,6 +590,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'vim-scripts/zenesque.vim'
 
 " color utilities
+Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'gerw/vim-HiLinkTrace', { 'on': [ 'HLT', 'HLTm' ] }
 Plug 'mhinz/vim-hugefile'
