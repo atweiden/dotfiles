@@ -1097,6 +1097,10 @@ endif
   if has('digraphs')
     " (฿) BTC
     digraph B\| 3647
+    " (᚛) ogham feather mark
+    digraph >\| 5787
+    " (᚜) ogham reversed feather mark
+    digraph <\| 5788
     " (‘) curly left single quote
     digraph Ql 8216
     " (’) curly right single quote
@@ -1107,6 +1111,10 @@ endif
     digraph qr 8221
     " (…) ellipsis
     digraph ., 8230
+    " (⁅) left square bracket with quill
+    digraph [- 8261
+    " (⁆) right square bracket with quill
+    digraph -] 8262
     " (∈) equivalent to `(elem)`: http://doc.perl6.org/routine/%E2%88%88
     digraph (- 8712
     " (∉) equivalent to `!(elem)`: http://doc.perl6.org/routine/%E2%88%89
@@ -1149,6 +1157,10 @@ endif
     digraph U+ 8846
     " (⊖) equivalent to `(^)`: http://doc.perl6.org/routine/%E2%8A%96
     digraph 0- 8854
+    " (⟅) left s-shaped bag delimiter
+    digraph s\ 10181
+    " (⟆) right s-shaped bag delimiter
+    digraph s/ 10182
   endif
 
   " --- }}}
