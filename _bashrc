@@ -98,10 +98,11 @@ PATH=$HOME/.opam/system/bin:$PATH
 PATH=/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:$PATH
 # perl6
 if [[ -x /usr/bin/perl6 ]]; then
-  # perl6 -e "say %*CUSTOM_LIB<site>.IO.child('bin').Str"
+  # PATH=$(perl6 -e "say ~CompUnit::RepositoryRegistry.repository-for-name('site')")/bin:$PATH
+  # PATH=$(perl6 -e "say ~CompUnit::RepositoryRegistry.repository-for-name('vendor')")/bin:$PATH
   PATH=/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin:$PATH
   # panda
-  # PATH=$HOME/.perl6/$(perl6 --version | awk '{print $5}')/bin:$PATH
+  # PATH=$(perl6 -e "say ~CompUnit::RepositoryRegistry.repository-for-name('home')")/bin:$PATH
 fi
 # python
 PATH=$HOME/.virtualenvs:$PATH
