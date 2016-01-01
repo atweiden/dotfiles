@@ -324,6 +324,7 @@ augroup END
 "Plug 'idanarye/vim-vebugger'
 
 " languages
+Plug 'jeroenbourgois/vim-actionscript', { 'for': 'actionscript' }
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
 Plug 'prurigro/vim-archversion', { 'for': 'archversion' }

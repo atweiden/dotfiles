@@ -2,6 +2,7 @@
 
 augroup languages
   autocmd!
+  autocmd BufNewFile,BufRead {*.as} set ft=actionscript
   autocmd BufNewFile,BufRead {*.apib,*.apiblueprint} set ft=apiblueprint
   autocmd BufNewFile,BufRead {*.ino,*.pde} set ft=arduino
   autocmd BufNewFile,BufRead {*.bib} set ft=bib
