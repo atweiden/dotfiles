@@ -522,6 +522,7 @@ Plug 'atweiden/vim-vala', { 'for': 'vala' }
 
 " colors
 Plug 'romainl/Apprentice'
+Plug 'gosukiwi/vim-atom-dark'
 Plug 'vim-scripts/AutumnLeaf'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-scripts/baycomb'
