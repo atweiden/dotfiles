@@ -589,6 +589,7 @@ Plug 'vyshane/vyterm-vim-color'
 Plug 'rhysd/wallaby.vim'
 Plug 'wellsjo/wellsokai.vim'
 Plug 'vim-scripts/xoria256.vim'
+Plug 'KabbAmine/yowish.vim'
 Plug 'jnurmine/Zenburn'
 Plug 'vim-scripts/zenesque.vim'
 
