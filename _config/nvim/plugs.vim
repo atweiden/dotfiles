@@ -479,10 +479,10 @@ Plug 'vim-perl/vim-perl', { 'for': [ 'perl', 'perl6' ] }
 Plug 'yuuki1/perl-local-lib-path.vim', { 'for': [ 'perl', 'perl6' ] }
 Plug 'c9s/perlomni.vim', { 'for': [ 'perl', 'perl6' ] }
 Plug 'yko/mojo.vim', { 'for': 'html.epl' }
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'hhvm/vim-hack', { 'for': 'php' }
 Plug 'mxw/vim-xhp', { 'for': 'php' }
 Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
-Plug '2072/vim-syntax-for-PHP', { 'for': 'php' }
 Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
 Plug 'vim-scripts/phpfolding.vim', { 'for': 'php' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
