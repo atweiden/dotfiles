@@ -70,6 +70,11 @@
 "     my $var = 1;
 "     my $var۰;
 "
+" æ = ae
+"
+"     my $var = 1;
+"     my $varæ;
+"
 " ь = %'
 "
 "     my $var = 1;
