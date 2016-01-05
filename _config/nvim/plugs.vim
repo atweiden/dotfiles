@@ -305,19 +305,21 @@ Plug 'mattn/emmet-vim', { 'for': [ 'css',
                                  \ 'stylus' ] }
 Plug 'mattn/sonictemplate-vim'
 Plug 't9md/vim-transform'
-Plug 'SirVer/ultisnips', { 'on': [] }
+"Plug 'SirVer/ultisnips', { 'on': [] }
 "Plug 'tdcdev/ycm_simple_conf'
 Plug 'rdnetto/YCM-Generator', { 'on': [ 'CCGenerateConfig',
                                       \ 'YcmGenerateConfig' ],
                                       \ 'branch': 'stable' }
-Plug 'Valloric/YouCompleteMe', { 'on': [] }
+Plug 'Valloric/YouCompleteMe'
 
+" https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins
 " https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
-augroup load_us_ycm
-  autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
-                     \| call youcompleteme#Enable() | autocmd! load_us_ycm
-augroup END
+"augroup load_ultisnips
+"  autocmd!
+"  autocmd InsertEnter * call plug#load('ultisnips')
+"augroup END
+autocmd! User YouCompleteMe if !has('vim_starting')
+      \| call youcompleteme#Enable() | endif
 
 " debuggers
 "Plug 'vim-scripts/Conque-GDB', { 'for': [ 'c', 'cpp' ] }
