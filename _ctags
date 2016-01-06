@@ -19,6 +19,7 @@
 --exclude=*.min.js
 --exclude=node_modules
 --exclude=out
+--exclude=.precomp
 --exclude=public/javascripts/src
 --exclude=*.pyc
 --exclude=__pycache__
@@ -204,6 +205,11 @@
 --regex-objc=/^[[:space:]]*typedef[[:space:]][^;]+[[:space:]]([[:alpha:]_][[:alnum:]]*)[[:space:]]*;/\1/t,typedef/
 --regex-objc=/^[[:space:]]*NS_ENUM\([[:alnum:]]+[[:space:]]*,[[:space:]]([[:alnum:]]+)\)/\1/e,enum/
 --regex-objc=/^#pragma[[:space:]]+mark[[:space:]]+-?[[:space:]]+([[:alnum:][:space:]]+)/\1/g,pragma/
+
+--langdef=perl6
+--langmap=perl6:.pm6,.p6,.pm,.pl
+--regex-perl6=/^[ \t]*(role|unit[ \t]+class|unit[ \t]+module|module|package|class)[ \t]*([a-zA-Z0-9_\-]+)/\2/p,package/
+--regex-perl6=/^[ \t]*(multi[ \t]+sub|multi method|submethod|sub|method)[ \t]+([a-zA-Z0-9_\-]+)/\2/s,subroutine/
 
 --regex-PHP=/^\s*(abstract|final)\s+class\s+(\w+)/\2/
 --regex-PHP=/^\s*const\s+(\w+)/\1/
