@@ -5,12 +5,6 @@
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-# constants
-
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-
-# -----------------------------------------------------------------------------
 # settings
 
 name="Andy Weidenbaum"     # Name    (GitHub)
@@ -33,128 +27,44 @@ mkdir -p "$HOME/.marks"               \
 
 
 # -----------------------------------------------------------------------------
-# backup
+# rsync
 
-for dotfile in "$HOME/.ackrc"          \
-               "$HOME/.bashrc"         \
-               "$HOME/.bash_logout"    \
-               "$HOME/.bash_profile"   \
-               "$HOME/.bin"            \
-               "$HOME/.codex"          \
-               "$HOME/.config"         \
-               "$HOME/.conkyrc"        \
-               "$HOME/.conkyrc1"       \
-               "$HOME/.ctags"          \
-               "$HOME/.curlrc"         \
-               "$HOME/.dir_colors"     \
-               "$HOME/.dunstrc"        \
-               "$HOME/.functions.d"    \
-               "$HOME/.gemrc"          \
-               "$HOME/.gitconfig"      \
-               "$HOME/.gitignore"      \
-               "$HOME/.gitattributes"  \
-               "$HOME/.gtkrc-2.0.mine" \
-               "$HOME/.gnupg"          \
-               "$HOME/.hgext"          \
-               "$HOME/.hgignore"       \
-               "$HOME/.hgmap"          \
-               "$HOME/.hgrc"           \
-               "$HOME/.iex.exs"        \
-               "$HOME/.inputrc"        \
-               "$HOME/.irbrc"          \
-               "$HOME/.jshintignore"   \
-               "$HOME/.jshintrc"       \
-               "$HOME/.keymap"         \
-               "$HOME/.mrconfig.d"     \
-               "$HOME/.npmrc"          \
-               "$HOME/.pdbrc"          \
-               "$HOME/.pfp"            \
-               "$HOME/.psqlrc"         \
-               "$HOME/.pythonrc"       \
-               "$HOME/.Renviron"       \
-               "$HOME/.screenrc"       \
-               "$HOME/.sift.conf"      \
-               "$HOME/.tmux"           \
-               "$HOME/.tmux.conf"      \
-               "$HOME/.vim"            \
-               "$HOME/.vimrc"          \
-               "$HOME/.vimrc.lite"     \
-               "$HOME/.vimencrypt"     \
-               "$HOME/.wgetrc"         \
-               "$HOME/.Xdefaults"      \
-               "$HOME/.Xmodmap"        \
-               "$HOME/.xinitrc"        \
-               "$HOME/.xsession"; do
-                                      echo "backing up ${dotfile} (if it exists)"
-                                      if [[ -f "${dotfile}" || -d "${dotfile}" ]]; then
-                                        mv "${dotfile}" "${dotfile}".bak
-                                      fi
-done
+# rsync options
+_rsync_opts=()
 
+# exclude files
+_rsync_opts+=('--exclude=etc'
+              '--exclude=.git'
+              '--exclude=.hg'
+              '--exclude=.subgit'
+              '--exclude=README.md'
+              '--exclude=TODO.md'
+              '--exclude=UNLICENSE'
+              '--exclude=bootstrap.sh')
 
-# -----------------------------------------------------------------------------
-# links
+# copy directories recursively
+_rsync_opts+=('--recursive')
 
-for dotfolder in bin         \
-                 config      \
-                 functions.d \
-                 gnupg       \
-                 hgext       \
-                 hgmap       \
-                 mrconfig.d  \
-                 ssh         \
-                 tmux        \
-                 vim; do cp -R "${DIR}/_${dotfolder}" "$HOME/.${dotfolder}"
-done
+# preserve permissions
+_rsync_opts+=('--perms')
 
-for dotfile in ackrc          \
-               bash_logout    \
-               bash_profile   \
-               bashrc         \
-               codex          \
-               conkyrc        \
-               conkyrc1       \
-               ctags          \
-               curlrc         \
-               dir_colors     \
-               dunstrc        \
-               gemrc          \
-               gitattributes  \
-               gitconfig      \
-               gitignore      \
-               gtkrc-2.0.mine \
-               hgignore       \
-               hgrc           \
-               iex.exs        \
-               inputrc        \
-               irbrc          \
-               jshintignore   \
-               jshintrc       \
-               keymap         \
-               npmrc          \
-               pdbrc          \
-               pfp            \
-               psqlrc         \
-               pythonrc       \
-               Renviron       \
-               screenrc       \
-               sift.conf      \
-               tmux.conf      \
-               vimencrypt     \
-               vimrc          \
-               vimrc.lite     \
-               wgetrc         \
-               Xdefaults      \
-               Xmodmap        \
-               xinitrc        \
-               xsession; do cp "$DIR/_${dotfile}" "$HOME/.${dotfile}"
-done
+# backup files in ~/.local/share/dotfiles
+_rsync_opts+=('--backup'
+              "--backup-dir=$HOME/.local/share/dotfiles")
+
+# output numbers in a more human-readable format
+_rsync_opts+=('--human-readable')
+
+# print information showing the progress of the transfer
+_rsync_opts+=('--progress')
+
+rsync --verbose "${_rsync_opts[@]}" "$(pwd)/" "$HOME"
 
 
 # -----------------------------------------------------------------------------
 # tmux
 [[ -x /usr/bin/git ]] \
-  && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  && git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
 
 # -----------------------------------------------------------------------------
