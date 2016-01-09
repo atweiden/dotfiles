@@ -16,13 +16,14 @@ zipcode=97210              # Zipcode (f.lux)
 # -----------------------------------------------------------------------------
 # dirs
 
-mkdir -p "$HOME/.marks"               \
-         "$HOME/.src"                 \
-         "$HOME/Desktop"              \
-         "$HOME/Documents"            \
-         "$HOME/Downloads"            \
-         "$HOME/Graphics"             \
-         "$HOME/Music"                \
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+mkdir -p "$HOME/.marks"    \
+         "$HOME/.src"      \
+         "$HOME/Desktop"   \
+         "$HOME/Documents" \
+         "$HOME/Downloads" \
+         "$HOME/Graphics"  \
+         "$HOME/Music"     \
          "$HOME/Projects"
 
 
@@ -58,7 +59,7 @@ _rsync_opts+=('--human-readable')
 # print information showing the progress of the transfer
 _rsync_opts+=('--progress')
 
-rsync --verbose "${_rsync_opts[@]}" "$(pwd)/" "$HOME"
+rsync --verbose "${_rsync_opts[@]}" "$DIR/" "$HOME"
 
 
 # -----------------------------------------------------------------------------
