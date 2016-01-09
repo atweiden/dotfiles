@@ -351,17 +351,6 @@ Plug 'mattreduce/vim-mix', { 'on': [ 'Mclean',
                                    \ 'Mdeps',
                                    \ 'Mix',
                                    \ 'Mtest' ] }
-Plug 'spiegela/vimix', { 'on': [ 'VimixClean',
-                               \ 'VimixCompile',
-                               \ 'VimixDepsCompile',
-                               \ 'VimixDepsGet',
-                               \ 'VimixDepsStatus',
-                               \ 'VimixDepsUpdate',
-                               \ 'VimixLocal',
-                               \ 'VimixPromptRun',
-                               \ 'VimixTestAll',
-                               \ 'VimixTestCurrentFile',
-                               \ 'VimuxRunLastCommand' ] }
 Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
 Plug 'edkolev/erlang-motions.vim', { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-tags', { 'for': 'erlang' }
@@ -479,7 +468,6 @@ Plug 'vim-scripts/phpfolding.vim', { 'for': 'php' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv', { 'for': 'python' }
-Plug 'jgors/vimux-ipy', { 'for': 'python' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'vim-scripts/paredit.vim', { 'for': [ 'clojure',
                                          \ 'lisp',
