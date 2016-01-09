@@ -281,17 +281,6 @@ Plug 'epeli/slimux', { 'on': [ 'SlimuxREPLConfigure',
                              \ 'SlimuxShellPrompt',
                              \ 'SlimuxShellRun' ] }
 Plug 'tpope/vim-tbone'
-Plug 'benmills/vimux', { 'on': [ 'VimuxClearRunnerHistory',
-                               \ 'VimuxCloseRunner',
-                               \ 'VimuxInspectRunner',
-                               \ 'VimuxInterruptRunner',
-                               \ 'VimuxOpenPane',
-                               \ 'VimuxPromptCommand',
-                               \ 'VimuxRunCommand',
-                               \ 'VimuxRunLastCommand',
-                               \ 'VimuxSendKeys',
-                               \ 'VimuxSendText',
-                               \ 'VimuxZoomRunner' ] }
 
 " code completion
 Plug 'zef/vim-cycle'
