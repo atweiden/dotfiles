@@ -154,6 +154,7 @@ shopt -s cdspell
 [[ -x /usr/bin/tmux ]] && alias reset='reset; tmux clear-history'
 alias ls='ls -F --color=auto --group-directories-first'
 alias l='ls -1F --color=auto --group-directories-first'
+alias l1='ls -1AF --color=auto --group-directories-first'
 alias la='ls -aF --color=auto'
 alias ll='ls -laihF --color=auto'
 alias lld='getdirs'
