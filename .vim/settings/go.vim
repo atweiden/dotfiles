@@ -7,6 +7,9 @@ let g:go_highlight_string_spellcheck = 0
 " Disable auto :GoFmt on save
 let g:go_fmt_autosave = 0
 
+" Disable auto :AsmFmt on save
+let g:go_asmfmt_autosave = 0
+
 " Disable default mapping (`gd`) for GoDef
 let g:go_def_mapping_enabled = 0
 
