@@ -91,7 +91,7 @@ PATH=$HOME/.cabal/bin:$PATH
 # nim
 PATH=$HOME/.nimble/bin:$PATH
 # node
-export N_PREFIX=$HOME/.n
+export N_PREFIX="$HOME/.n"
 # ocaml
 PATH=$HOME/.opam/system/bin:$PATH
 # perl
@@ -107,7 +107,7 @@ fi
 # python
 PATH=$HOME/.virtualenvs:$PATH
 # R
-export R_LIBS=$HOME/.R
+export R_LIBS="$HOME/.R"
 # ruby
 if [[ -x /usr/bin/gem && -x /usr/bin/ruby ]]; then
   PATH=$(gem env gempath | awk -F: '{print $2}')/bin:$PATH
@@ -144,7 +144,14 @@ shopt -s cdspell
 
 # add tab completion for SSH hostnames based on ~/.ssh/config, ignoring
 # wildcards
-[[ -e "$HOME/.ssh/config" ]] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+[[ -e "$HOME/.ssh/config" ]] \
+  && complete \
+       -o "default" \
+       -o "nospace" \
+       -W "$(grep "^Host" "$HOME/.ssh/config" \
+           | grep -v "[?*]" \
+           | cut -d " " -f2)" \
+       scp sftp ssh
 
 
 # -----------------------------------------------------------------------------
@@ -186,12 +193,12 @@ alias ps='ps --forest'
 [[ -x /usr/bin/packer ]] && alias aurupdate='packer -Syu --auronly'
 [[ "$DISPLAY" == "" ]] && alias vim='vim -X' # if not in X, tell vim not to attempt connection w/ X server
 [[ -x /usr/bin/vim ]] && alias view='vim -R'
-[[ -x /usr/bin/vim ]] && alias vime='vim -u ~/.vimencrypt -x'
-[[ -x /usr/bin/vim ]] && alias viml='vim -u ~/.vimrc.lite'
+[[ -x /usr/bin/vim ]] && alias vime='vim -u $HOME/.vimencrypt -x'
+[[ -x /usr/bin/vim ]] && alias viml='vim -u $HOME/.vimrc.lite'
 [[ -x /usr/bin/vim ]] && alias vimmin='vim -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
 [[ -x /usr/bin/gvim ]] && alias gview='gvim -R'
-[[ -x /usr/bin/gvim ]] && alias gvime='gvim -u ~/.vimencrypt -x'
-[[ -x /usr/bin/gvim ]] && alias gviml='gvim -u ~/.vimrc.lite'
+[[ -x /usr/bin/gvim ]] && alias gvime='gvim -u $HOME/.vimencrypt -x'
+[[ -x /usr/bin/gvim ]] && alias gviml='gvim -u $HOME/.vimrc.lite'
 [[ -x /usr/bin/gvim ]] && alias gvimmin='gvim -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
 [[ -x /usr/bin/zip ]] && alias zip='zip -9'
 alias gzip='gzip -9'
@@ -216,8 +223,8 @@ alias :e='"$EDITOR"'
 alias :q='exit'
 [[ -x /usr/bin/subgit ]] && alias sg='subgit'
 [[ -x /usr/bin/subhg ]] && alias shg='subhg'
-alias h?='history | grep "$@" -i --color=auto'
-alias p?='ps auxf | grep -v grep | grep "$@" -i --color=auto'
+alias h\?='history | grep -v -E "grep|h\?" | grep "$@" -i --color=auto'
+alias p\?='ps auxf | grep -v grep | grep "$@" -i --color=auto'
 alias free='free -m'
 [[ -x /usr/bin/mosh ]] && alias mosh='mosh -a'
 [[ -x /usr/bin/ptipython2 ]] && alias ptipython2='ptipython2 --vi'
@@ -235,13 +242,13 @@ alias free='free -m'
 # -----------------------------------------------------------------------------
 # Functions
 
-for _fn in `find ~/.functions.d -type f -name "*.sh"`; do . ${_fn}; done
+for _fn in $(find "$HOME/.functions.d" -type f -name "*.sh"); do . "${_fn}"; done
 
 
 # -----------------------------------------------------------------------------
 # Archinfo
 
-if [[ -x $HOME/.bin/archinfo && -x /usr/bin/python2 ]]; then
+if [[ -x "$HOME/.bin/archinfo" && -x /usr/bin/python2 ]]; then
   if ! [[ "$UID" == '0' ]]; then archinfo; else archinfo -c red; fi
 fi
 
@@ -314,4 +321,4 @@ export GPG_TTY=$(tty)
 # -----------------------------------------------------------------------------
 # Host-specific config
 
-[[ -f ~/.bashrc.$HOSTNAME ]] && . ~/.bashrc.$HOSTNAME
+[[ -f $HOME/.bashrc.$HOSTNAME ]] && . "$HOME/.bashrc.$HOSTNAME"
