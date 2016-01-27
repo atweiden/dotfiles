@@ -19,6 +19,9 @@ nnoremap <silent> <leader>o :FZFFiles<CR>
 " select buffer
 nnoremap <silent> <leader>lz :FZFBuffers<CR>
 
+" select marks
+nnoremap <silent> <leader>` :FZFMarks<CR>
+
 " search lines in current buffer
 nnoremap <silent> <M-f> :FZFBLines<CR>
 
