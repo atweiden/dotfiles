@@ -288,10 +288,12 @@ TERM screen-w
 TERM screen.rxvt
 TERM screen.linux
 TERM terminator
+TERM tmux
+TERM tmux-256color
 TERM vt100
 TERM xterm
 TERM xterm-16color
 TERM xterm-256color
 TERM xterm-88color
 TERM xterm-color
-TERM xterm-debian 
+TERM xterm-debian
