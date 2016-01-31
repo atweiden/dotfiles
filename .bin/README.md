@@ -386,13 +386,25 @@ Existing alternatives:
 ssl-expiry-date
 ----------------
 
-Report the date, and number of days, until the given SSL certificate expires.
+Report the date, and number of days, until the given SSL certificate
+expires.  Multiple domain-names may be accepted and each is tested
+in turn.
+
+The default output is "noisy", but you may add "-d" to simplify this
+to the domain-name and the number of days remaining on the certificate.
+
 
 Example:
 
-        ./ssl-expiry-date bbc.co.uk
-        Certificate presented at : bbc.co.uk
-        Expires: Jun 18 13:50:58 2013 GMT  [63 days in the future]
+      ./ssl-expiry-date  bbc.co.uk
+      bbc.co.uk
+          Expires: Sep 18 13:50:57 2016 GMT
+          Days: 266
+
+      ./ssl-expiry-date -d bbc.co.uk steve.org.uk
+      bbc.co.uk: 266
+      steve.org.uk: 82
+
 
 
 
@@ -429,6 +441,21 @@ Trivial (ba)sh alternatives:
 
 * while true ; do $cmd; done
 * watch -n 2 $cmd
+
+
+
+vinfo
+-----
+
+Runs [Vinfo](https://github.com/alx741/vinfo) on the cmdline.
+
+Example:
+
+     $ vinfo ls
+
+Alternatives:
+
+* `info ls`
 
 
 
