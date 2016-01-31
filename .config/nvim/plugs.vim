@@ -601,5 +601,6 @@ Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-scriptease'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-textobj-user'
+Plug 'alx741/vinfo'
 call plug#end()
 endif
