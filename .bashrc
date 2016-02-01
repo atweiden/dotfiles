@@ -257,13 +257,15 @@ fi
 # FZF
 
 # use ag/pt/ack as the default source for fzf
-if [[ -x /usr/bin/ag ]]; then
+if [[ -x /usr/bin/pt ]]; then
+  export FZF_DEFAULT_COMMAND='pt -l --hidden -e -g=""'
+elif [[ -x /usr/bin/ag ]]; then
   export FZF_DEFAULT_COMMAND='ag -l -g ""'
-elif [[ -x /usr/bin/pt ]]; then
-  export FZF_DEFAULT_COMMAND='pt -l -g ""'
 elif [[ -x /usr/bin/ack ]]; then
   export FZF_DEFAULT_COMMAND='ack -l -g ""'
 fi
+
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # use multi-select and seoul256 colors
 #export FZF_DEFAULT_OPTS='

@@ -1,0 +1,29 @@
+# parse pattern as regular expression
+# syntax: https://github.com/google/re2/wiki/Syntax
+e = true
+
+# match case insensitively unless pattern contains uppercase characters
+smart-case = true
+
+# search hidden files and directories
+hidden = true
+
+# print color codes in results
+color = true
+
+# don't use VCS ignore file for ignore patterns
+skip-vcs-ignores = true
+
+# ignore files/directories matching pattern
+ignore = [".git",
+          ".subgit",
+          ".hg",
+          ".subhg",
+          ".svn",
+          ".precomp",
+          "node_modules",
+          ".gitattributes",
+          ".gitignore",
+          ".gitmodules",
+          ".hgignore",
+          ".travis.yml"]
