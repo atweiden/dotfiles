@@ -206,7 +206,6 @@ alias bzip2='bzip2 -9'
 alias grep='grep --ignore-case --color=auto'
 alias fgrep='fgrep --ignore-case --color=auto'
 alias egrep='egrep --ignore-case --color=auto'
-[[ -x /usr/bin/ack ]] && alias ack='ack --ackrc=$HOME/.ackrc'
 [[ -x /usr/bin/ag ]] && alias ag='ag --hidden --smart-case --color --skip-vcs-ignores --path-to-agignore=$HOME/.agignore'
 [[ -x /usr/bin/locate ]] && alias locate='locate --ignore-case'
 if [[ -x /usr/bin/icdiff ]]; then

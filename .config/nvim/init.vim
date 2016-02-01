@@ -563,7 +563,7 @@ endif
     elseif executable('pt')
       set grepprg=pt\ --nogroup\ --nocolor\ --hidden\ --nocolor\ -e
     elseif executable('ack')
-      set grepprg=ack\ --nogroup\ --nocolor\ --nopager\ --ackrc=$HOME/.ackrc
+      set grepprg=ack\ --nogroup\ --nocolor\ --nopager
     endif
     " ------- }}}
 
