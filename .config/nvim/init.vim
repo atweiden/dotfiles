@@ -557,13 +557,13 @@ endif
       augroup END
     endif
     " ------- }}}
-    " ------- use pt/ag/ack for grepping if available {{{
-    if executable('pt')
-      set grepprg=pt\ --nogroup\ --nocolor
-    elseif executable('ag')
-      set grepprg=ag\ --nogroup\ --nocolor\ --unrestricted
+    " ------- use ag/pt/ack for grepping if available {{{
+    if executable('ag')
+      set grepprg=ag\ --nogroup\ --nocolor\ --hidden\ --smart-case\ --skip-vcs-ignores\ --path-to-agignore=$HOME/.agignore
+    elseif executable('pt')
+      set grepprg=pt\ --nogroup\ --nocolor\ --hidden\ --nocolor\ -e
     elseif executable('ack')
-      set grepprg=ack\ --nogroup\ --nocolor
+      set grepprg=ack\ --nogroup\ --nocolor\ --nopager\ --ackrc=$HOME/.ackrc
     endif
     " ------- }}}
 

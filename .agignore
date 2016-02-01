@@ -1,0 +1,12 @@
+.git
+.subgit
+.hg
+.subhg
+.svn
+.precomp
+node_modules
+.gitattributes
+.gitignore
+.gitmodules
+.hgignore
+.travis.yml

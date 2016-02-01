@@ -206,6 +206,8 @@ alias bzip2='bzip2 -9'
 alias grep='grep --ignore-case --color=auto'
 alias fgrep='fgrep --ignore-case --color=auto'
 alias egrep='egrep --ignore-case --color=auto'
+[[ -x /usr/bin/ack ]] && alias ack='ack --ackrc=$HOME/.ackrc'
+[[ -x /usr/bin/ag ]] && alias ag='ag --hidden --smart-case --color --skip-vcs-ignores --path-to-agignore=$HOME/.agignore'
 [[ -x /usr/bin/locate ]] && alias locate='locate --ignore-case'
 if [[ -x /usr/bin/icdiff ]]; then
   alias diff='icdiff'
@@ -257,15 +259,34 @@ fi
 # FZF
 
 # use ag/pt/ack as the default source for fzf
-if [[ -x /usr/bin/pt ]]; then
-  export FZF_DEFAULT_COMMAND='pt -l --hidden -e -g=""'
-elif [[ -x /usr/bin/ag ]]; then
-  export FZF_DEFAULT_COMMAND='ag -l -g ""'
+if [[ -x /usr/bin/ag ]]; then
+  export FZF_DEFAULT_COMMAND='ag --hidden --smart-case --nocolor --skip-vcs-ignores --path-to-agignore=$HOME/.agignore -g ""'
+elif [[ -x /usr/bin/pt ]]; then
+  export FZF_DEFAULT_COMMAND='pt --hidden --nocolor -e -g=""'
 elif [[ -x /usr/bin/ack ]]; then
-  export FZF_DEFAULT_COMMAND='ack -l -g ""'
+  export FZF_DEFAULT_COMMAND='ack --nocolor --nopager -g ""'
 fi
 
+# use ag/pt/ack for ctrl-t completion
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# use ag/pt/ack for ** completion
+_fzf_compgen_path() {
+  if [[ -x /usr/bin/ag ]]; then
+    ag \
+      --hidden \
+      --smart-case \
+      --nocolor \
+      --skip-vcs-ignores \
+      --path-to-agignore="$HOME/.agignore" \
+      -g "" \
+      "$1"
+  elif [[ -x /usr/bin/pt ]]; then
+    pt --hidden --nocolor -e -g="" "$1"
+  elif [[ -x /usr/bin/ack ]]; then
+    ack --nocolor --nopager -g "" "$1"
+  fi
+}
 
 # use multi-select and seoul256 colors
 #export FZF_DEFAULT_OPTS='
