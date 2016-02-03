@@ -1,3 +1,6 @@
+" Specifies the Python interpreter to use for the jedi-completion library.
+let g:ycm_python_binary_path = '/usr/bin/python2'
+
 " When this option is set to '1', YCM's identifier completer will also
 " collect identifiers from tags files.
 let g:ycm_collect_identifiers_from_tags_files = 1
