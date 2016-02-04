@@ -36,7 +36,8 @@ nnoremap <leader>] :YcmCompleter GoToDefinitionElseDeclaration<CR>:call FocusLin
 " Character-based triggers for the various semantic completion engines
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.'],
-  \   'objc' : ['->', '.'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
   \   'ocaml' : ['.', '#'],
   \   'cpp,objcpp' : ['->', '.', '::'],
   \   'perl' : ['->'],
