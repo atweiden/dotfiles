@@ -92,7 +92,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.sbt} set ft=sbt
   autocmd BufNewFile,BufRead {*.scm} set ft=scheme
   autocmd BufNewFile,BufRead {.screenrc} set ft=screen
-  autocmd BufNewFile,BufRead {*.sh,*.install,.bashrc,.bash_logout,.bash_profile,.xinitrc,.xsession,PKGBUILD} set ft=sh
+  autocmd BufNewFile,BufRead {*.sh,*.install,.bashrc,.bash_logout,.bash_profile,.xinitrc,.xsession,PKGBUILD,bash-fc-*} set ft=sh
   autocmd BufNewFile,BufRead {*.slim} set ft=slim
   autocmd BufNewFile,BufRead {*.sls} set ft=sls
   autocmd BufNewFile,BufRead {*.sql,.psqlrc} set ft=sql
