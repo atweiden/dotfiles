@@ -5,6 +5,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.as} set ft=actionscript
   autocmd BufNewFile,BufRead {*.apib,*.apiblueprint} set ft=apiblueprint
   autocmd BufNewFile,BufRead {*.ino,*.pde} set ft=arduino
+  autocmd BufNewFile,BufRead {*.avdl} set ft=avro-idl
   autocmd BufNewFile,BufRead {*.bib} set ft=bib
   autocmd BufNewFile,BufRead {*.c} set ft=c
   autocmd BufNewFile,BufRead {*.cfg,.ackrc,.ctags,.dunstrc,.hgrc,.npmrc} set ft=cfg

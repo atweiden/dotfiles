@@ -321,6 +321,7 @@ Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
 Plug 'prurigro/vim-archversion', { 'for': 'archversion' }
 Plug 'alisdair/vim-armasm', { 'for': 'armasm' }
 Plug 'Shirk/vim-gas', { 'for': 'gas' }
+Plug 'dln/avro-vim', { 'for': 'avro-idl' }
 Plug 'vim-scripts/awk-support.vim', { 'for': 'awk' }
 Plug 'vim-jp/vim-cpp', { 'for': [ 'c', 'cpp' ] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'c', 'cpp' ] }
