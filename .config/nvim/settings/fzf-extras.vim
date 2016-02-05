@@ -20,7 +20,7 @@ nnoremap <silent> <leader>o :FZFFiles<CR>
 nnoremap <silent> <leader>lz :FZFBuffers<CR>
 
 " select marks
-nnoremap <silent> <leader>` :FZFMarks<CR>
+nnoremap <silent> <M-`> :FZFMarks<CR>
 
 " search lines in current buffer
 nnoremap <silent> <M-f> :FZFBLines<CR>
