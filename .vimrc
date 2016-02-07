@@ -811,6 +811,10 @@ if has('digraphs')
   digraph s\ 10181
   " (⟆) right s-shaped bag delimiter
   digraph s/ 10182
+  " (–) en dash
+  digraph -- 8211
+  " (—) em dash
+  digraph -= 8212
 endif
 
 " }}}
