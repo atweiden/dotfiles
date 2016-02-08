@@ -5,5 +5,9 @@
 # -----------------------------------------------------------------------------
 
 gfm2html() {
-pandoc --from=markdown_github --to=html5 -o "${1}.html" "${1}"
+if [[ -x /usr/bin/cmark ]]; then
+  cmark --safe --to html "${1}" >| "${1}.html"
+elif [[ -x /usr/bin/pandoc ]]; then
+  pandoc --from=markdown_github --to=html5 -o "${1}.html" "${1}"
+fi
 }
