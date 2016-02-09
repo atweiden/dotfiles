@@ -1101,6 +1101,10 @@ endif
     digraph >\| 5787
     " (᚜) ogham reversed feather mark
     digraph <\| 5788
+    " (–) en dash
+    digraph -- 8211
+    " (—) em dash
+    digraph -= 8212
     " (‘) curly left single quote
     digraph Ql 8216
     " (’) curly right single quote
@@ -1161,10 +1165,6 @@ endif
     digraph s\ 10181
     " (⟆) right s-shaped bag delimiter
     digraph s/ 10182
-    " (–) en dash
-    digraph -- 8211
-    " (—) em dash
-    digraph -= 8212
   endif
 
   " --- }}}
