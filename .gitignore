@@ -40,5 +40,4 @@ Session.vim
 .subhg
 
 # Perl 6
-/.precomp/*
-*/.precomp/*
+.precomp
