@@ -45,7 +45,6 @@ augroup languages
   autocmd BufNewFile,BufRead {*.hxml} set ft=hxml
   autocmd BufNewFile,BufRead {*.ini,php.ini,php-fpm.conf,my.cnf} set ft=dosini
   autocmd BufNewFile,BufRead {.inputrc} set ft=readline
-  autocmd BufNewFile,BufRead {*.jade} set ft=jade
   autocmd BufNewFile,BufRead {*.java} set ft=java
   autocmd BufNewFile,BufRead {*.javap} set ft=java-bytecode
   autocmd BufNewFile,BufRead {pom.xml} set ft=pom
@@ -75,6 +74,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.p6,*.pl6,*.pm6,*.t6,*.nqp} set ft=perl6
   autocmd BufNewFile,BufRead {*.pod} set ft=pod
   autocmd BufNewFile,BufRead {*.pod6} set ft=pod6
+  autocmd BufNewFile,BufRead {*.pug,*.jade} set ft=pug
   autocmd BufNewFile,BufRead {*.pp} set ft=puppet
   autocmd BufNewFile,BufRead {*.pro} set ft=pro
   autocmd BufNewFile,BufRead {*.py,.pdbrc,.pythonrc,.python_history} set ft=python

@@ -390,7 +390,6 @@ Plug 'mustache/vim-mustache-handlebars', { 'for': [ 'html.handlebars',
                                                   \ 'html.mustache' ] }
 Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
 Plug 'vim-scripts/iptables', { 'for': 'udev' }
-Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'othree/yajs.vim', { 'for': [ 'eelixir',
                                  \ 'egs',
                                  \ 'ejs',
@@ -401,10 +400,10 @@ Plug 'othree/yajs.vim', { 'for': [ 'eelixir',
                                  \ 'html.epl',
                                  \ 'html.handlebars',
                                  \ 'html.mustache',
-                                 \ 'jade',
                                  \ 'javascript',
                                  \ 'jinja',
                                  \ 'php',
+                                 \ 'pug',
                                  \ 'slim' ] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': [ 'coffeescript',
                                                         \ 'eelixir',
@@ -417,11 +416,11 @@ Plug 'othree/javascript-libraries-syntax.vim', { 'for': [ 'coffeescript',
                                                         \ 'html.epl',
                                                         \ 'html.handlebars',
                                                         \ 'html.mustache',
-                                                        \ 'jade',
                                                         \ 'javascript',
                                                         \ 'jinja',
                                                         \ 'livescript',
                                                         \ 'php',
+                                                        \ 'pug',
                                                         \ 'slim',
                                                         \ 'typescript' ] }
 Plug 'jason0x43/vim-js-indent', { 'for': [ 'html',
@@ -467,6 +466,7 @@ Plug 'mxw/vim-xhp', { 'for': 'php' }
 Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
 Plug 'm2mdas/phpcomplete-extended', { 'for': 'php' }
 Plug 'vim-scripts/phpfolding.vim', { 'for': 'php' }
+Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv', { 'for': 'python' }
