@@ -883,8 +883,8 @@ endif
     " ------- move tab adjacent {{{
     nnoremap <silent> g( :<C-U>:execute "tabmove -" . v:count1<CR>
     nnoremap <silent> g) :<C-U>:execute "tabmove +" . v:count1<CR>
-    tnoremap <silent> g( <C-\><C-N>:<C-U>:execute "tabmove -" . v:count1<CR>
-    tnoremap <silent> g) <C-\><C-N>:<C-U>:execute "tabmove +" . v:count1<CR>
+    "tnoremap <silent> g( <C-\><C-N>:<C-U>:execute "tabmove -" . v:count1<CR>
+    "tnoremap <silent> g) <C-\><C-N>:<C-U>:execute "tabmove +" . v:count1<CR>
     " ------- }}}
     " ------- move tab {{{
     noremap <leader>tm :tabmove<space>
