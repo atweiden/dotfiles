@@ -1,1 +1,1 @@
-let g:arpeggio_timeoutlen = 17
+let g:arpeggio_timeoutlen = 21
