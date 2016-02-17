@@ -500,6 +500,7 @@ Plug 'atweiden/vim-vala', { 'for': 'vala' }
 "Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors
+Plug 'AlessandroYorba/Alduin'
 Plug 'romainl/Apprentice'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'vim-scripts/AutumnLeaf'
