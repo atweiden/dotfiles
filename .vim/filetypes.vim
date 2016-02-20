@@ -171,7 +171,7 @@ augroup END
 
 augroup gpg
   autocmd!
-  autocmd QuitPre *.gpg exec system('pkill gpg-agent')
+  autocmd QuitPre *.gpg call system('pkill gpg-agent')
 augroup END
 
 " }}}
