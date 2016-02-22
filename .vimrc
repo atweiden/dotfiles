@@ -595,6 +595,9 @@ call arpeggio#load()
 Arpeggio noremap jk <ESC>
 Arpeggio inoremap jk <ESC>
 Arpeggio cnoremap jk <C-C>
+Arpeggio noremap kj <ESC>
+Arpeggio inoremap kj <ESC>
+Arpeggio cnoremap kj <C-C>
 
 " visually select the text that was last edited/pasted
 nnoremap <expr> gV '`[' . strpart(getregtype(), 0, 1) . '`]'

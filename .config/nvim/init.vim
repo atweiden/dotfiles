@@ -700,6 +700,10 @@ endif
     Arpeggio inoremap jk <ESC>
     Arpeggio cnoremap jk <C-C>
     "Arpeggio tnoremap jk <ESC>
+    Arpeggio noremap kj <ESC>
+    Arpeggio inoremap kj <ESC>
+    Arpeggio cnoremap kj <C-C>
+    "Arpeggio tnoremap kj <ESC>
     " ------- }}}
     " ------- visually select the text that was last edited/pasted {{{
     nnoremap <expr> gV '`[' . strpart(getregtype(), 0, 1) . '`]'
