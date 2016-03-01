@@ -14,7 +14,7 @@
   br = branch
   ci = commit
   co = checkout
-  df = diff
+  p = format-patch HEAD^..HEAD --stdout
 
 [mergetool]
   keepBackup = true
