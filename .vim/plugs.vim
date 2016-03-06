@@ -6,6 +6,7 @@ Plug 'mhinz/vim-startify'
 Plug 'itchyny/lightline.vim'
 
 " windows
+"Plug 'haya14busa/vim-keeppad'
 Plug 'talek/obvious-resize'
 
 " buffers
