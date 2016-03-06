@@ -81,7 +81,7 @@ Plug 'haya14busa/incsearch.vim'
 "Plug 'google/vim-searchindex'
 "Plug 'qstrahl/vim-matchmaker', { 'on': [ 'Matchmaker', 'MatchmakerToggle' ] }
 "Plug 'osyo-manga/vim-over'
-Plug 'haya14busa/vim-operator-flashy'
+"Plug 'haya14busa/vim-operator-flashy'
 Plug 't9md/vim-quickhl'
 Plug 'dahu/SearchParty'
 Plug 'Shougo/unite.vim'
