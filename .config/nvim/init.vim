@@ -720,7 +720,7 @@ endif
   " --- pasting {{{
 
     " ------- yank to end of line {{{
-    noremap Y y$
+    "noremap Y y$ " see: .vim/settings/operator-flashy.vim
     " ------- }}}
     " ------- copy to clipboard {{{
     vnoremap <leader>y "+yy<ESC>
