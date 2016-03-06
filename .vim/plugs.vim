@@ -123,6 +123,7 @@ Plug 'tpope/vim-surround'
 
 " comments
 Plug 'tpope/vim-commentary'
+"Plug 'haya14busa/niconicomment.vim'
 
 " modelines
 Plug 'ciaranm/securemodelines'
