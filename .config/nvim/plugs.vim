@@ -117,6 +117,7 @@ Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/visualrepeat'
 
 " undo
+Plug 'haya14busa/vim-undoreplay'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
 " surround
