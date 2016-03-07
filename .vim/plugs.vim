@@ -452,7 +452,7 @@ Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
 Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
 Plug 'leafo/moonscript-vim', { 'for': 'moon' }
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
-Plug 'zah/nim.vim', { 'for': 'nim' }
+Plug 'baabelfish/nvim-nim', { 'for': 'nim' }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'atweiden/merlin.vim', { 'for': [ 'merlin', 'ocaml', 'omlet' ], 'branch': 'vim' }
 Plug 'def-lkb/vimbufsync', { 'for': [ 'merlin', 'ocaml', 'omlet' ] }
