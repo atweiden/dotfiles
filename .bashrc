@@ -161,8 +161,8 @@ shopt -s cdspell
 # -----------------------------------------------------------------------------
 # Aliases
 
-[[ -x /usr/bin/tmux ]] && alias clear='clear; tmux clear-history'
-[[ -x /usr/bin/tmux ]] && alias reset='reset; tmux clear-history'
+[[ -n $TMUX ]] && alias clear='clear; tmux clear-history'
+[[ -n $TMUX ]] && alias reset='reset; tmux clear-history'
 alias ls='ls -F --color=auto --group-directories-first'
 alias l='ls -1F --color=auto --group-directories-first'
 alias l1='ls -1AF --color=auto --group-directories-first'
