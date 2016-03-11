@@ -1,6 +1,9 @@
 " prepend FZF to commands
 let g:fzf_command_prefix = 'FZF'
 
+" jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 " cat /usr/share/dict/words
 imap <C-X><C-K> <Plug>(fzf-complete-word)
 
