@@ -24,7 +24,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.dart} set ft=dart
   autocmd BufNewFile,BufRead {*.dock,Dockerfile*} set ft=dockerfile
   autocmd BufNewFile,BufRead {*.eex} set ft=eelixir
-  autocmd BufNewFile,BufRead {*.ex,*.exs} set ft=elixir
+  autocmd BufNewFile,BufRead {*.ex,*.exs,mix.lock} set ft=elixir
   autocmd BufNewFile,BufRead {*.erl,*.es,*.hrl,*.xrl,*.yaws,rebar.config} set ft=erlang
   autocmd BufNewFile,BufRead {*.egs} set ft=egs
   autocmd BufNewFile,BufRead {*.erb,*.rhtml} set ft=eruby
