@@ -177,6 +177,7 @@ alias lk='command ls -lASr --color=auto' # sort by size
 alias lc='command ls -lAcr --color=auto' # sort by change time
 alias lu='command ls -lAur --color=auto' # sort by access time
 alias lt='command ls -lAtr --color=auto' # sort by date
+alias l\?='ls -1F | grep "$@" -i --color=auto'
 [[ -x /usr/bin/tree ]] && alias tree='tree -C --charset utf-8 --dirsfirst'
 [[ -x /usr/bin/findx ]] && alias f='findx -x -name .git,.subgit,.hg,.subhg,docs,examples,t,*LICENSE*,META.info,*.md | perl -pne "s/\.\///"'
 alias cp='cp -i'
