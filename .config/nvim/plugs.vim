@@ -320,6 +320,7 @@ autocmd! User YouCompleteMe if !has('vim_starting')
 
 " languages
 Plug 'jeroenbourgois/vim-actionscript', { 'for': 'actionscript' }
+Plug 'vim-scripts/Ada-Bundle', { 'for': 'ada' }
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
 Plug 'prurigro/vim-archversion', { 'for': 'archversion' }
