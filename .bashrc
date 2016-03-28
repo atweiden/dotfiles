@@ -23,7 +23,7 @@ fi
 if [[ "$TERM" == "screen" && "$HAS_256_COLORS" == "yes" ]]; then
   export TERM=screen-256color-it
 elif [[ "$TERM" == "tmux" && "$HAS_256_COLORS" == "yes" ]]; then
-  export TERM=tmux-256color
+  export TERM=tmux-256color-neovim
 fi
 
 
