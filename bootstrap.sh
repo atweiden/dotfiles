@@ -7,10 +7,11 @@
 # -----------------------------------------------------------------------------
 # settings
 
-name="Andy Weidenbaum"     # Name    (GitHub)
-email="archbaum@gmail.com" # Email   (GitHub)
-github="atweiden"          # Account (GitHub)
-zipcode=97210              # Zipcode (f.lux)
+name="Andy Weidenbaum"     # Name      (GitHub)
+email="archbaum@gmail.com" # Email     (GitHub)
+github="atweiden"          # Account   (GitHub)
+latitude=45.523062         # Latitude  (Redshift)
+longitude=-122.676482      # Longitude (Redshift)
 
 
 # -----------------------------------------------------------------------------
@@ -86,6 +87,9 @@ sed -i "s#youremail#$email#"       "$HOME/.hgrc"
 
 
 # -----------------------------------------------------------------------------
-# f.lux
+# redshift
 
-sed -i "s#97210#$zipcode#"         "$HOME/.config/openbox/autostart.sh"
+sed -i \
+  -e "s#LATITUDE#$latitude#" \
+  -e "s#LONGITUDE#$longitude#" \
+  "$HOME/.config/redshift/redshift.conf"
