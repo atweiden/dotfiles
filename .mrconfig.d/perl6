@@ -78,3 +78,5 @@ checkout = git clone 'https://github.com/jnthn/zavolaj' 'zavolaj'
 
 [zef]
 checkout = git clone 'https://github.com/ugexe/zef' 'zef'
+
+# vim: ft=cfg

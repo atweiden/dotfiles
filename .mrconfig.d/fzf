@@ -3,3 +3,5 @@ checkout = git clone 'https://github.com/junegunn/dotfiles' 'dotfiles'
 
 [fzf.wiki]
 checkout = git clone 'https://github.com/junegunn/fzf.wiki' 'fzf.wiki'
+
+# vim: ft=cfg
