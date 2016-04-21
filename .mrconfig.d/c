@@ -1,5 +1,20 @@
+[base]
+checkout = git clone 'https://github.com/bus1/base'
+
+[boot-efi]
+checkout = git clone 'https://github.com/bus1/boot-efi'
+
+[bus1]
+checkout = git clone 'https://github.com/bus1/bus1'
+
 [corvus]
 checkout = git clone 'https://github.com/eleme/corvus'
+
+[crbtree]
+checkout = git clone 'https://github.com/bus1/crbtree'
+
+[cvariant]
+checkout = git clone 'https://github.com/bus1/cvariant'
 
 [czmq]
 checkout = git clone 'https://github.com/zeromq/czmq'
@@ -12,6 +27,9 @@ checkout = git clone 'https://github.com/KestrelComputer/kestrel'
 
 [libarchive]
 checkout = git clone 'https://github.com/libarchive/libarchive'
+
+[libbus1]
+checkout = git clone 'https://github.com/bus1/libbus1'
 
 [libcperciva]
 checkout = git clone 'https://github.com/Tarsnap/libcperciva'
@@ -45,6 +63,9 @@ checkout = git clone 'https://github.com/Tarsnap/scrypt'
 
 [sframes]
 checkout = git clone 'https://github.com/sustrik/sframes'
+
+[smartcard]
+checkout = git clone 'https://github.com/bus1/smartcard'
 
 [spiped]
 checkout = git clone 'https://github.com/Tarsnap/spiped'
