@@ -1,51 +1,78 @@
 [corvus]
 checkout = git clone 'https://github.com/eleme/corvus'
+
 [czmq]
 checkout = git clone 'https://github.com/zeromq/czmq'
+
 [dillsocks]
 checkout = git clone 'https://github.com/sustrik/dillsocks'
+
 [kestrel]
 checkout = git clone 'https://github.com/KestrelComputer/kestrel'
+
 [libarchive]
 checkout = git clone 'https://github.com/libarchive/libarchive'
+
 [libcperciva]
 checkout = git clone 'https://github.com/Tarsnap/libcperciva'
+
 [libdill]
 checkout = git clone 'https://github.com/sustrik/libdill'
+
 [libmill]
 checkout = git clone 'https://github.com/sustrik/libmill'
+
+[libui]
+checkout = git clone 'https://github.com/andlabs/libui'
+
 [masscan]
 checkout = git clone 'https://github.com/robertdavidgraham/masscan'
+
 [micropython]
 checkout = git clone 'https://github.com/micropython/micropython'
+
 [mpv]
 checkout = git clone 'https://github.com/mpv-player/mpv'
+
 [neovim]
 checkout = git clone 'https://github.com/neovim/neovim'
+
 [redis]
 checkout = git clone 'https://github.com/antirez/redis'
+
 [scrypt]
 checkout = git clone 'https://github.com/Tarsnap/scrypt'
+
 [sframes]
 checkout = git clone 'https://github.com/sustrik/sframes'
+
 [spiped]
 checkout = git clone 'https://github.com/Tarsnap/spiped'
+
 [stb]
 checkout = git clone 'https://github.com/nothings/stb'
+
 [tarsnap]
 checkout = git clone 'https://github.com/Tarsnap/tarsnap'
+
 [the_silver_searcher]
 checkout = git clone 'https://github.com/ggreer/the_silver_searcher'
+
 [tmux]
 checkout = git clone 'https://github.com/tmux/tmux'
+
 [vim]
 checkout = git clone 'https://github.com/vim/vim'
+
 [WebStuff]
 checkout = git clone 'https://github.com/lowenware/WebStuff'
+
 [wsock]
 checkout = git clone 'https://github.com/sustrik/wsock'
+
 [yocto-gl]
 checkout = git clone 'https://github.com/xelatihy/yocto-gl'
+
 [zsh]
 checkout = git clone 'https://github.com/zsh-users/zsh'
 

@@ -1,7 +1,7 @@
 [dotfiles]
-checkout = git clone 'https://github.com/junegunn/dotfiles' 'dotfiles'
+checkout = git clone 'https://github.com/junegunn/dotfiles'
 
 [fzf.wiki]
-checkout = git clone 'https://github.com/junegunn/fzf.wiki' 'fzf.wiki'
+checkout = git clone 'https://github.com/junegunn/fzf.wiki'
 
 # vim: ft=cfg
