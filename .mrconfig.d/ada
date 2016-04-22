@@ -301,6 +301,9 @@ checkout = hg clone 'https://bitbucket.org/tkoskine/strings-edit'
 [svd2ada]
 checkout = git clone 'https://github.com/AdaCore/svd2ada'
 
+[synth]
+checkout = git clone 'https://github.com/jrmarino/synth'
+
 [tamp]
 checkout = git clone 'https://github.com/Lucretia/tamp'
 
