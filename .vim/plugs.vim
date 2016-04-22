@@ -487,7 +487,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'yaymukund/vim-rabl', { 'for': 'ruby' }
 Plug 'atweiden/vim-citrus', { 'for': 'citrus' }
 Plug 'tpope/vim-rbenv', { 'on': 'Rbenv' }
-Plug 'wting/rust.vim', { 'for': 'rust' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'derekwyatt/vim-sbt', { 'for': 'sbt' }
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
