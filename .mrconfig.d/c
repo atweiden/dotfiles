@@ -31,6 +31,9 @@ checkout = git clone 'https://github.com/zeromq/czmq'
 [dillsocks]
 checkout = git clone 'https://github.com/sustrik/dillsocks'
 
+[DragonFlyBSD]
+checkout = git clone 'https://github.com/DragonFlyBSD/DragonFlyBSD'
+
 [kestrel]
 checkout = git clone 'https://github.com/KestrelComputer/kestrel'
 

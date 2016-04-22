@@ -10,6 +10,9 @@ checkout = hg clone 'https://bitbucket.org/sparre/ada-2012-examples'
 [Ada2X]
 checkout = git clone 'https://github.com/persan/Ada2X'
 
+[AdaBase]
+checkout = git clone 'https://github.com/jrmarino/AdaBase'
+
 [ada-amp]
 checkout = hg clone 'https://bitbucket.org/tkoskine/ada-amp'
 
@@ -109,6 +112,9 @@ checkout = git clone 'https://github.com/landgraf/casendra'
 [chucktesta]
 checkout = git clone 'https://github.com/rtyler/chucktesta'
 
+[classified]
+checkout = git clone 'https://github.com/jrmarino/classified'
+
 [command-line-parser-generator]
 checkout = hg clone 'https://bitbucket.org/sparre/command-line-parser-generator'
 
@@ -126,6 +132,9 @@ checkout = git clone 'https://github.com/rtyler/dispatch-ada'
 
 [dispersion]
 checkout = git clone 'https://github.com/rtyler/dispersion'
+
+[draco]
+checkout = git clone 'https://github.com/jrmarino/draco'
 
 [drake]
 checkout = git clone 'https://github.com/ytomino/drake'
@@ -273,6 +282,9 @@ checkout = git clone 'https://github.com/Lucretia/sdlada'
 
 [sift]
 checkout = git clone 'https://github.com/pchapin/sift'
+
+[Slider]
+checkout = git clone 'https://github.com/jrmarino/Slider'
 
 [so]
 checkout = git clone 'https://github.com/Lucretia/so'
