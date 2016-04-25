@@ -455,7 +455,9 @@ Plug 'leafo/moonscript-vim', { 'for': 'moon' }
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
 Plug 'baabelfish/nvim-nim', { 'for': 'nim' }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
-Plug 'atweiden/merlin.vim', { 'for': [ 'merlin', 'ocaml', 'omlet' ], 'branch': 'vim' }
+Plug 'atweiden/merlin.vim', { 'branch': 'vim',
+                            \ 'for': [ 'merlin', 'ocaml', 'omlet' ],
+                            \ 'rtp': '~/.opam/system/share/merlin/vim' }
 Plug 'def-lkb/ocp-indent-vim', { 'for': [ 'ocaml', 'omlet' ] }
 Plug 'anyakichi/vim-ocp-index', { 'for': [ 'ocaml', 'omlet' ] }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
