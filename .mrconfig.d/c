@@ -34,6 +34,15 @@ checkout = git clone 'https://github.com/sustrik/dillsocks'
 [DragonFlyBSD]
 checkout = git clone 'https://github.com/DragonFlyBSD/DragonFlyBSD'
 
+[ed]
+checkout = git clone 'git://c9x.me/ed.git'
+
+[fnt]
+checkout = git clone 'https://github.com/mpu/fnt'
+
+[irc]
+checkout = git clone 'git://c9x.me/irc.git'
+
 [kestrel]
 checkout = git clone 'https://github.com/KestrelComputer/kestrel'
 
@@ -61,11 +70,20 @@ checkout = git clone 'https://github.com/robertdavidgraham/masscan'
 [micropython]
 checkout = git clone 'https://github.com/micropython/micropython'
 
+[miniyacc]
+checkout = git clone 'git://c9x.me/miniyacc.git'
+
+[mlannot]
+checkout = git clone 'https://github.com/mpu/mlannot'
+
 [mpv]
 checkout = git clone 'https://github.com/mpv-player/mpv'
 
 [neovim]
 checkout = git clone 'https://github.com/neovim/neovim'
+
+[qbe]
+checkout = git clone 'git://c9x.me/qbe.git'
 
 [redis]
 checkout = git clone 'https://github.com/antirez/redis'
@@ -102,6 +120,9 @@ checkout = git clone 'https://github.com/lowenware/WebStuff'
 
 [wsock]
 checkout = git clone 'https://github.com/sustrik/wsock'
+
+[xbar]
+checkout = git clone 'https://github.com/mpu/xbar'
 
 [yocto-gl]
 checkout = git clone 'https://github.com/xelatihy/yocto-gl'
