@@ -4,6 +4,9 @@ checkout = git clone 'https://github.com/persan/A-LIFX'
 [a-stream-tools]
 checkout = git clone 'https://github.com/persan/a-stream-tools'
 
+[ada]
+checkout = git clone 'https://github.com/malaise/ada'
+
 [ada-2012-examples]
 checkout = hg clone 'https://bitbucket.org/sparre/ada-2012-examples'
 
@@ -61,6 +64,12 @@ checkout = git clone 'https://github.com/Lucretia/adavulkan'
 [adbci]
 checkout = git clone 'https://github.com/landgraf/adbci'
 
+[aempire]
+checkout = git clone 'https://github.com/jimwise/aempire'
+
+[agpl]
+checkout = git clone 'https://github.com/mosteo/agpl'
+
 [ahven]
 checkout = hg clone 'https://bitbucket.org/tkoskine/ahven'
 
@@ -75,6 +84,9 @@ checkout = git clone 'https://github.com/jhumphry/aLua'
 
 [antlr-ada-runtime]
 checkout = hg clone 'https://bitbucket.org/tkoskine/antlr-ada-runtime'
+
+[aperture]
+checkout = git clone 'https://github.com/victoredwardocallaghan/aperture'
 
 [arduino-motorshield]
 checkout = hg clone 'https://bitbucket.org/tkoskine/arduino-motorshield'
@@ -103,11 +115,26 @@ checkout = git clone 'https://github.com/AdaCore/bareboard'
 [bare_bones]
 checkout = git clone 'https://github.com/Lucretia/bare_bones'
 
+[Basic]
+checkout = git clone 'https://github.com/ThomasLocke/Basic'
+
+[Black]
+checkout = git clone 'https://github.com/sparre/Black'
+
+[Black-examples]
+checkout = git clone 'https://github.com/sparre/Black-examples'
+
 [boehmgc-ada]
 checkout = git clone 'https://github.com/ytomino/boehmgc-ada'
 
+[call-flow-control]
+checkout = git clone 'https://github.com/AdaHeads/call-flow-control'
+
 [casendra]
 checkout = git clone 'https://github.com/landgraf/casendra'
+
+[cbap]
+checkout = git clone 'https://github.com/darkestkhan/cbap'
 
 [chucktesta]
 checkout = git clone 'https://github.com/rtyler/chucktesta'
@@ -115,17 +142,32 @@ checkout = git clone 'https://github.com/rtyler/chucktesta'
 [classified]
 checkout = git clone 'https://github.com/jrmarino/classified'
 
+[Collaboration]
+checkout = git clone 'https://github.com/merdmann/Collaboration'
+
 [command-line-parser-generator]
 checkout = hg clone 'https://bitbucket.org/sparre/command-line-parser-generator'
 
 [ConfigFile]
 checkout = git clone 'https://github.com/john-vinters/ConfigFile'
 
+[CopyPics]
+checkout = git clone 'https://github.com/ThomasLocke/CopyPics'
+
+[Courses]
+checkout = git clone 'https://github.com/AdaCoreU/Courses'
+
+[CPU_Temp_Governor]
+checkout = git clone 'https://github.com/darkestkhan/CPU_Temp_Governor'
+
 [crispa]
 checkout = hg clone 'https://bitbucket.org/tkoskine/crispa'
 
 [curl-ada]
 checkout = hg clone 'https://bitbucket.org/tkoskine/curl-ada'
+
+[debsecan_abbrev]
+checkout = git clone 'https://github.com/darkestkhan/debsecan_abbrev'
 
 [dispatch-ada]
 checkout = git clone 'https://github.com/rtyler/dispatch-ada'
@@ -157,6 +199,9 @@ checkout = hg clone 'https://bitbucket.org/sparre/example-combining-spark-2014-a
 [ffmpeg_ada]
 checkout = git clone 'https://github.com/landgraf/ffmpeg_ada'
 
+[file_types]
+checkout = git clone 'https://github.com/darkestkhan/file_types'
+
 [for-of-loop-performance-arrays]
 checkout = hg clone 'https://bitbucket.org/sparre/for-of-loop-performance-arrays'
 
@@ -169,17 +214,26 @@ checkout = git clone 'https://github.com/rtyler/fucked-ada'
 [gagl]
 checkout = git clone 'https://github.com/Lucretia/gagl'
 
+[generic-adt]
+checkout = git clone 'https://github.com/sarnold/generic-adt'
+
 [gmp-ada]
 checkout = git clone 'https://github.com/ytomino/gmp-ada'
 
 [gnat-arm-app-skeleton]
 checkout = hg clone 'https://bitbucket.org/tkoskine/gnat-arm-app-skeleton'
 
+[GNAT-Build-Summary]
+checkout = git clone 'https://github.com/jesselang/GNAT-Build-Summary'
+
 [gnatcoll-json]
 checkout = git clone 'https://github.com/persan/gnatcoll-json'
 
 [gopher-concurrency-exercises]
 checkout = hg clone 'https://bitbucket.org/sparre/gopher-concurrency-exercises'
+
+[gpio-ada]
+checkout = git clone 'https://github.com/jesselang/gpio-ada'
 
 [gprbuild]
 checkout = git clone 'https://github.com/AdaCore/gprbuild'
@@ -202,6 +256,9 @@ checkout = hg clone 'https://bitbucket.org/sparre/http-redirector'
 [iconv-ada]
 checkout = git clone 'https://github.com/ytomino/iconv-ada'
 
+[imago]
+checkout = git clone 'https://github.com/darkestkhan/imago'
+
 [ironsides]
 checkout = git clone 'https://github.com/rtyler/ironsides'
 
@@ -217,14 +274,23 @@ checkout = hg clone 'https://bitbucket.org/tkoskine/ladybird'
 [LALG]
 checkout = git clone 'https://github.com/jhumphry/LALG'
 
+[lazyfoo]
+checkout = git clone 'https://github.com/darkestkhan/lazyfoo'
+
 [lego-tools]
 checkout = hg clone 'https://bitbucket.org/sparre/lego-tools'
 
 [libusb-Ada]
 checkout = git clone 'https://github.com/persan/libusb-Ada'
 
+[lumen2]
+checkout = git clone 'https://github.com/darkestkhan/lumen2'
+
 [mathematics-and-statistics]
 checkout = hg clone 'https://bitbucket.org/sparre/mathematics-and-statistics'
+
+[media]
+checkout = git clone 'https://github.com/kjseefried/media'
 
 [memcache-ada]
 checkout = git clone 'https://github.com/rtyler/memcache-ada'
@@ -250,6 +316,12 @@ checkout = git clone 'https://github.com/pchapin/netweather'
 [not-claw-sockets-linux-x86]
 checkout = hg clone 'https://bitbucket.org/tkoskine/not-claw-sockets-linux-x86'
 
+[odb]
+checkout = git clone 'https://github.com/merdmann/odb'
+
+[ogldev-tutorials]
+checkout = git clone 'https://github.com/darkestkhan/ogldev-tutorials'
+
 [opencvada]
 checkout = git clone 'https://github.com/landgraf/opencvada'
 
@@ -259,14 +331,29 @@ checkout = git clone 'https://github.com/flyx/OpenGLAda'
 [openssl-ada]
 checkout = git clone 'https://github.com/ytomino/openssl-ada'
 
+[oto]
+checkout = git clone 'https://github.com/darkestkhan/oto'
+
+[oto-examples]
+checkout = git clone 'https://github.com/darkestkhan/oto-examples'
+
 [parse_args]
 checkout = git clone 'https://github.com/jhumphry/parse_args'
+
+[passgen]
+checkout = git clone 'https://github.com/darkestkhan/passgen'
 
 [persistent-objects-with-ada-2012]
 checkout = hg clone 'https://bitbucket.org/sparre/persistent-objects-with-ada-2012'
 
+[Pez_Dispenser]
+checkout = git clone 'https://github.com/ThomasLocke/Pez_Dispenser'
+
 [PRNG_Zoo]
 checkout = git clone 'https://github.com/jhumphry/PRNG_Zoo'
+
+[projecteuler]
+checkout = git clone 'https://github.com/darkestkhan/projecteuler'
 
 [reference-build-and-test-setup]
 checkout = hg clone 'https://bitbucket.org/sparre/reference-build-and-test-setup'
@@ -283,17 +370,29 @@ checkout = git clone 'https://github.com/Lucretia/sdlada'
 [sift]
 checkout = git clone 'https://github.com/pchapin/sift'
 
+[Simple_Config]
+checkout = git clone 'https://github.com/ThomasLocke/Simple_Config'
+
+[Simple_Tasking]
+checkout = git clone 'https://github.com/ThomasLocke/Simple_Tasking'
+
 [Slider]
 checkout = git clone 'https://github.com/jrmarino/Slider'
 
 [so]
 checkout = git clone 'https://github.com/Lucretia/so'
 
+[soma]
+checkout = git clone 'https://github.com/adamnyberg/soma'
+
 [SparForte]
 checkout = git clone 'https://github.com/kburtch/SparForte'
 
 [spark-2014-examples]
 checkout = hg clone 'https://bitbucket.org/sparre/spark-2014-examples'
+
+[spark_examples]
+checkout = git clone 'https://github.com/yoogx/spark_examples'
 
 [SPARK_SipHash]
 checkout = git clone 'https://github.com/jhumphry/SPARK_SipHash'
@@ -316,6 +415,12 @@ checkout = git clone 'https://github.com/AdaCore/svd2ada'
 [synth]
 checkout = git clone 'https://github.com/jrmarino/synth'
 
+[sysfs-ada]
+checkout = git clone 'https://github.com/jesselang/sysfs-ada'
+
+[tam]
+checkout = git clone 'https://github.com/merdmann/tam'
+
 [tamp]
 checkout = git clone 'https://github.com/Lucretia/tamp'
 
@@ -337,8 +442,17 @@ checkout = git clone 'https://github.com/rtyler/tinywm-ada'
 [udp-chat]
 checkout = hg clone 'https://bitbucket.org/sparre/udp-chat'
 
+[vt100]
+checkout = git clone 'https://github.com/darkestkhan/vt100'
+
 [web-ada]
 checkout = git clone 'https://github.com/ytomino/web-ada'
+
+[whitakers-words]
+checkout = git clone 'https://github.com/mk270/whitakers-words'
+
+[xdg]
+checkout = git clone 'https://github.com/darkestkhan/xdg'
 
 [xml-ada]
 checkout = git clone 'https://github.com/ytomino/xml-ada'
@@ -348,6 +462,9 @@ checkout = git clone 'https://github.com/landgraf/xzang'
 
 [yaml-ada]
 checkout = git clone 'https://github.com/ytomino/yaml-ada'
+
+[yolk]
+checkout = git clone 'https://github.com/ThomasLocke/yolk'
 
 [zeromq-Ada]
 checkout = git clone 'https://github.com/persan/zeromq-Ada'

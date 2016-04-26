@@ -7,6 +7,9 @@ checkout = git clone 'https://github.com/bus1/boot-efi'
 [bus1]
 checkout = git clone 'https://github.com/bus1/bus1'
 
+[cempire]
+checkout = git clone 'https://github.com/jimwise/cempire'
+
 [cloudabi]
 checkout = git clone 'https://github.com/NuxiNL/cloudabi'
 
