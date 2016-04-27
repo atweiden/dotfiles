@@ -1,0 +1,220 @@
+[accents-substitute]
+checkout = git clone 'https://github.com/mario-goulart/accents-substitute'
+
+[aima-chicken]
+checkout = git clone 'https://github.com/klutometis/aima-chicken'
+
+[ansi-escape-sequences]
+checkout = git clone 'https://github.com/mario-goulart/ansi-escape-sequences'
+
+[awful]
+checkout = git clone 'https://github.com/mario-goulart/awful'
+
+[awful-boilerplate]
+checkout = git clone 'https://github.com/mario-goulart/awful-boilerplate'
+
+[awful-postgresql]
+checkout = git clone 'https://github.com/mario-goulart/awful-postgresql'
+
+[awful-sql-de-lite]
+checkout = git clone 'https://github.com/mario-goulart/awful-sql-de-lite'
+
+[awful-sqlite3]
+checkout = git clone 'https://github.com/mario-goulart/awful-sqlite3'
+
+[awful-ssl]
+checkout = git clone 'https://github.com/mario-goulart/awful-ssl'
+
+[awful-static-pages]
+checkout = git clone 'https://github.com/mario-goulart/awful-static-pages'
+
+[awful-survey]
+checkout = git clone 'https://github.com/mario-goulart/awful-survey'
+
+[breadcrumbs]
+checkout = git clone 'https://github.com/mario-goulart/breadcrumbs'
+
+[chicken-bencode]
+checkout = git clone 'https://github.com/caolan/chicken-bencode'
+
+[chicken-clojure]
+checkout = git clone 'https://github.com/jondistad/chicken-clojure'
+
+[chicken-cmark]
+checkout = git clone 'https://github.com/caolan/chicken-cmark'
+
+[chicken-core]
+checkout = git clone 'git://code.call-cc.org/chicken-core'
+
+[chicken-cjson]
+checkout = git clone 'https://github.com/Adellica/chicken-cjson'
+
+[chicken-fnmatch]
+checkout = git clone 'https://github.com/caolan/chicken-fnmatch'
+
+[chicken-glm]
+checkout = git clone 'https://github.com/Adellica/chicken-glm'
+
+[chicken-gochan]
+checkout = git clone 'https://github.com/Adellica/chicken-gochan'
+
+[chicken-ldap-bind]
+checkout = git clone 'https://github.com/caolan/chicken-ldap-bind'
+
+[chicken-level]
+checkout = git clone 'https://github.com/caolan/chicken-level'
+
+[chicken-leveldb]
+checkout = git clone 'https://github.com/caolan/chicken-leveldb'
+
+[chicken-nanomsg]
+checkout = git clone 'https://github.com/Adellica/chicken-nanomsg'
+
+[chicken-nrepl]
+checkout = git clone 'https://github.com/Adellica/chicken-nrepl'
+
+[chicken-ppjson]
+checkout = git clone 'https://github.com/Adellica/chicken-ppjson'
+
+[chicken-punycode]
+checkout = git clone 'https://github.com/caolan/chicken-punycode'
+
+[chicken-scheme-amazon-s3]
+checkout = git clone 'https://github.com/ThomasHintz/chicken-scheme-amazon-s3'
+
+[chicken-scheme-hmac]
+checkout = git clone 'https://github.com/ThomasHintz/chicken-scheme-hmac'
+
+[chicken-scheme-mplayer]
+checkout = git clone 'https://github.com/ThomasHintz/chicken-scheme-mplayer'
+
+[chicken-scheme-send-grid]
+checkout = git clone 'https://github.com/ThomasHintz/chicken-scheme-send-grid'
+
+[chicken-scheme-shell]
+checkout = git clone 'https://github.com/ThomasHintz/chicken-scheme-shell'
+
+[chicken-sublevel]
+checkout = git clone 'https://github.com/caolan/chicken-sublevel'
+
+[chicken-toml]
+checkout = git clone 'https://github.com/caolan/chicken-toml'
+
+[chicken-update-eggs]
+checkout = git clone 'https://github.com/mario-goulart/chicken-update-eggs'
+
+[chicken-yaml]
+checkout = git clone 'https://github.com/tenderlove/chicken-yaml'
+
+[chickollect]
+checkout = git clone 'https://github.com/mario-goulart/chickollect'
+
+[chickollect-x11-bar]
+checkout = git clone 'https://github.com/mario-goulart/chickollect-x11-bar'
+
+[cocoscheme]
+checkout = git clone 'https://github.com/Adellica/cocoscheme'
+
+[cpuman]
+checkout = git clone 'https://github.com/mario-goulart/cpuman'
+
+[cs-termite]
+checkout = git clone 'https://github.com/mindpool/cs-termite'
+
+[egg-tarballs]
+checkout = git clone 'https://github.com/mario-goulart/egg-tarballs'
+
+[fakefile]
+checkout = git clone 'https://github.com/mario-goulart/fakefile'
+
+[fu]
+checkout = git clone 'https://github.com/mario-goulart/fu'
+
+[git-site]
+checkout = git clone 'https://github.com/Adellica/git-site'
+
+[henity]
+checkout = git clone 'https://github.com/mario-goulart/henity'
+
+[henrietta-cache-git]
+checkout = git clone 'https://github.com/mario-goulart/henrietta-cache-git'
+
+[html-utils]
+checkout = git clone 'https://github.com/mario-goulart/html-utils'
+
+[http-session]
+checkout = git clone 'https://github.com/mario-goulart/http-session'
+
+[introspect]
+checkout = git clone 'https://github.com/mario-goulart/introspect'
+
+[i-wonder]
+checkout = git clone 'https://github.com/mario-goulart/i-wonder'
+
+[jsmin]
+checkout = git clone 'https://github.com/mario-goulart/jsmin'
+
+[keep-the-records]
+checkout = git clone 'https://github.com/ThomasHintz/keep-the-records'
+
+[kill-hanging-children]
+checkout = git clone 'https://github.com/mario-goulart/kill-hanging-children'
+
+[msgpack-scheme]
+checkout = git clone 'https://github.com/hugoArregui/msgpack-scheme'
+
+[nanolog]
+checkout = git clone 'https://github.com/Adellica/nanolog'
+
+[nsfwm]
+checkout = git clone 'https://github.com/mario-goulart/nsfwm'
+
+[pastiche]
+checkout = git clone 'https://github.com/ckeen/pastiche'
+
+[preline]
+checkout = git clone 'https://github.com/Adellica/preline'
+
+[reser]
+checkout = git clone 'https://github.com/Adellica/reser'
+
+[salmonella]
+checkout = git clone 'https://github.com/mario-goulart/salmonella'
+
+[salmonella-diff]
+checkout = git clone 'https://github.com/mario-goulart/salmonella-diff'
+
+[salmonella-html-report]
+checkout = git clone 'https://github.com/mario-goulart/salmonella-html-report'
+
+[salmonella-run-publish]
+checkout = git clone 'https://github.com/mario-goulart/salmonella-run-publish'
+
+[selenium]
+checkout = git clone 'https://github.com/mario-goulart/selenium'
+
+[sicp-chicken]
+checkout = git clone 'https://github.com/klutometis/sicp-chicken'
+
+[slice]
+checkout = git clone 'https://github.com/mario-goulart/slice'
+
+[spiffy-request-vars]
+checkout = git clone 'https://github.com/mario-goulart/spiffy-request-vars'
+
+[spiffy-sexpr-log]
+checkout = git clone 'https://github.com/mario-goulart/spiffy-sexpr-log'
+
+[statvfs]
+checkout = git clone 'https://github.com/mario-goulart/statvfs'
+
+[striped-zebra]
+checkout = git clone 'https://github.com/ThomasHintz/striped-zebra'
+
+[swank-chicken]
+checkout = git clone 'https://github.com/nickg/swank-chicken'
+
+[wpm]
+checkout = git clone 'https://github.com/mario-goulart/wpm'
+
+# vim: ft=cfg
