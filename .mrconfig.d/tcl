@@ -1,0 +1,79 @@
+[2048.tcl]
+checkout = git clone 'https://github.com/dbohdan/2048.tcl'
+
+[array]
+checkout = git clone 'https://github.com/andreas-kupries/array'
+
+[atom]
+checkout = git clone 'https://github.com/andreas-kupries/atom'
+
+[blob]
+checkout = git clone 'https://github.com/andreas-kupries/blob'
+
+[bookflow]
+checkout = git clone 'https://github.com/andreas-kupries/bookflow'
+
+[change]
+checkout = git clone 'https://github.com/andreas-kupries/change'
+
+[cmdr]
+checkout = git clone 'https://github.com/andreas-kupries/cmdr'
+
+[cm]
+checkout = git clone 'https://github.com/andreas-kupries/cm'
+
+[crimp]
+checkout = git clone 'https://github.com/andreas-kupries/crimp'
+
+[critcl]
+checkout = git clone 'https://github.com/andreas-kupries/critcl'
+
+[crunch]
+checkout = git clone 'https://github.com/andreas-kupries/crunch'
+
+[dbutil]
+checkout = git clone 'https://github.com/andreas-kupries/dbutil'
+
+[famfamfam]
+checkout = git clone 'https://github.com/andreas-kupries/famfamfam'
+
+[fx]
+checkout = git clone 'https://github.com/andreas-kupries/fx'
+
+[gpgedit]
+checkout = git clone 'https://github.com/dbohdan/gpgedit'
+
+[jimhttp]
+checkout = git clone 'https://github.com/dbohdan/jimhttp'
+
+[kettle]
+checkout = git clone 'https://github.com/andreas-kupries/kettle'
+
+[kinetcl]
+checkout = git clone 'https://github.com/andreas-kupries/kinetcl'
+
+[parsetools]
+checkout = git clone 'https://github.com/andreas-kupries/parsetools'
+
+[scratch]
+checkout = git clone 'https://github.com/andreas-kupries/scratch'
+
+[sqawk]
+checkout = git clone 'https://github.com/dbohdan/sqawk'
+
+[struct]
+checkout = git clone 'https://github.com/andreas-kupries/struct'
+
+[tcl-duktape]
+checkout = git clone 'https://github.com/dbohdan/tcl-duktape'
+
+[tcl-linenoise]
+checkout = git clone 'https://github.com/andreas-kupries/tcl-linenoise'
+
+[tclssg]
+checkout = git clone 'https://github.com/tclssg/tclssg'
+
+[tclyaml]
+checkout = git clone 'https://github.com/andreas-kupries/tclyaml'
+
+# vim: ft=cfg
