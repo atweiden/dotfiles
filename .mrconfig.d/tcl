@@ -22,6 +22,9 @@ checkout = git clone 'https://github.com/andreas-kupries/cmdr'
 [cm]
 checkout = git clone 'https://github.com/andreas-kupries/cm'
 
+[concocter]
+checkout = git clone 'https://github.com/efrecon/concocter'
+
 [crimp]
 checkout = git clone 'https://github.com/andreas-kupries/crimp'
 
@@ -34,14 +37,53 @@ checkout = git clone 'https://github.com/andreas-kupries/crunch'
 [dbutil]
 checkout = git clone 'https://github.com/andreas-kupries/dbutil'
 
+[docker2stomp]
+checkout = git clone 'https://github.com/efrecon/docker2stomp'
+
+[docker-client]
+checkout = git clone 'https://github.com/efrecon/docker-client'
+
+[dockron]
+checkout = git clone 'https://github.com/efrecon/dockron'
+
+[drakon_editor]
+checkout = git clone 'https://github.com/stepan-mitkin/drakon_editor'
+
+[efr-lib]
+checkout = git clone 'https://github.com/efrecon/efr-lib'
+
+[eggdrop-scripts]
+checkout = git clone 'https://github.com/horgh/eggdrop-scripts'
+
+[etcd-ctl]
+checkout = git clone 'https://github.com/efrecon/etcd-ctl'
+
+[etcd-tcl]
+checkout = git clone 'https://github.com/efrecon/etcd-tcl'
+
 [famfamfam]
 checkout = git clone 'https://github.com/andreas-kupries/famfamfam'
 
 [fx]
 checkout = git clone 'https://github.com/andreas-kupries/fx'
 
+[gif-pure-tcl]
+checkout = git clone 'https://github.com/antirez/gif-pure-tcl'
+
+[gorilla]
+checkout = git clone 'https://github.com/zdia/gorilla'
+
 [gpgedit]
 checkout = git clone 'https://github.com/dbohdan/gpgedit'
+
+[htstomp]
+checkout = git clone 'https://github.com/efrecon/htstomp'
+
+[imunes]
+checkout = git clone 'https://github.com/imunes/imunes'
+
+[irssi-tcl-scripts]
+checkout = git clone 'https://github.com/horgh/irssi-tcl-scripts'
 
 [jimhttp]
 checkout = git clone 'https://github.com/dbohdan/jimhttp'
@@ -52,11 +94,29 @@ checkout = git clone 'https://github.com/andreas-kupries/kettle'
 [kinetcl]
 checkout = git clone 'https://github.com/andreas-kupries/kinetcl'
 
+[machinery]
+checkout = git clone 'https://github.com/efrecon/machinery'
+
 [parsetools]
 checkout = git clone 'https://github.com/andreas-kupries/parsetools'
 
+[partitions]
+checkout = git clone 'https://github.com/antirez/partitions'
+
+[piaware]
+checkout = git clone 'https://github.com/flightaware/piaware'
+
+[recidiv]
+checkout = git clone 'https://github.com/antirez/recidiv'
+
+[restdown]
+checkout = git clone 'https://github.com/trentm/restdown'
+
 [scratch]
 checkout = git clone 'https://github.com/andreas-kupries/scratch'
+
+[sguil]
+checkout = git clone 'https://github.com/bammv/sguil'
 
 [sqawk]
 checkout = git clone 'https://github.com/dbohdan/sqawk'
@@ -70,10 +130,28 @@ checkout = git clone 'https://github.com/dbohdan/tcl-duktape'
 [tcl-linenoise]
 checkout = git clone 'https://github.com/andreas-kupries/tcl-linenoise'
 
+[tcl-stomp]
+checkout = git clone 'https://github.com/efrecon/tcl-stomp'
+
 [tclssg]
 checkout = git clone 'https://github.com/tclssg/tclssg'
 
 [tclyaml]
 checkout = git clone 'https://github.com/andreas-kupries/tclyaml'
+
+[til]
+checkout = git clone 'https://github.com/efrecon/til'
+
+[tsdb]
+checkout = git clone 'https://github.com/efrecon/tsdb'
+
+[twitter-tcl]
+checkout = git clone 'https://github.com/horgh/twitter-tcl'
+
+[watchdog]
+checkout = git clone 'https://github.com/efrecon/watchdog'
+
+[webdot]
+checkout = git clone 'https://github.com/ellson/webdot'
 
 # vim: ft=cfg
