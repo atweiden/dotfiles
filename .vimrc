@@ -134,7 +134,8 @@ let g:secure_modelines_allowed_items = [
             \ "shiftwidth", "sw",
             \ "softtabstop", "sts",
             \ "tabstop", "ts",
-            \ "textwidth", "tw"
+            \ "textwidth", "tw",
+            \ "wrap", "nowrap"
             \ ]
 
 " switching buffers

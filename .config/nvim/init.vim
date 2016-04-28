@@ -98,7 +98,8 @@
                 \ "shiftwidth", "sw",
                 \ "softtabstop", "sts",
                 \ "tabstop", "ts",
-                \ "textwidth", "tw"
+                \ "textwidth", "tw",
+                \ "wrap", "nowrap"
                 \ ]
     " ------- }}}
     " ------- prefer blowfish2 encryption method {{{
