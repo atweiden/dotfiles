@@ -22,12 +22,6 @@ checkout = git clone 'https://github.com/NuxiNL/cloudlibc'
 [corvus]
 checkout = git clone 'https://github.com/eleme/corvus'
 
-[crbtree]
-checkout = git clone 'https://github.com/bus1/crbtree'
-
-[cvariant]
-checkout = git clone 'https://github.com/bus1/cvariant'
-
 [czmq]
 checkout = git clone 'https://github.com/zeromq/czmq'
 
@@ -60,6 +54,9 @@ checkout = git clone 'https://github.com/Tarsnap/libcperciva'
 
 [libdill]
 checkout = git clone 'https://github.com/sustrik/libdill'
+
+[libgit2]
+checkout = git clone 'https://github.com/libgit2/libgit2'
 
 [libmill]
 checkout = git clone 'https://github.com/sustrik/libmill'
