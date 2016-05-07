@@ -9,6 +9,10 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 " when typing inside comments.
 let g:ycm_complete_in_comments = 1
 
+" don't query the UltiSnips plugin for possible completions of snippet
+" triggers
+"let g:ycm_use_ultisnips_completer = 0
+
 " When this option is set to '1' YCM will ask once per
 " '.ycm_extra_conf.py' file if it is safe to be loaded. This is to prevent
 " execution of malicious code from a '.ycm_extra_conf.py' file you
