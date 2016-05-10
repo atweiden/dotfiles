@@ -39,5 +39,9 @@ Session.vim
 .subgit
 .subhg
 
+# Peru
+# https://github.com/buildinspace/peru
+.peru
+
 # Perl 6
 .precomp

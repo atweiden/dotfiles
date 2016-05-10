@@ -38,4 +38,5 @@ dwsync.xml
 .svn
 .CVS
 node_modules
+.peru
 .precomp

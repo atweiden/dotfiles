@@ -3,6 +3,7 @@
 .hg
 .subhg
 .svn
+.peru
 .precomp
 node_modules
 .gitattributes

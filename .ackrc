@@ -91,6 +91,10 @@
 # https://metacpan.org/release/Devel-Cover
 --ignore-directory=is:cover_db
 
+# Peru
+# https://github.com/buildinspace/peru
+--ignore-directory=is:.peru
+
 # Perl6 precompilation
 --ignore-directory=is:.precomp
 
