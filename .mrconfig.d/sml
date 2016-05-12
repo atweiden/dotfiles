@@ -1,0 +1,163 @@
+[abbot]
+checkout = git clone 'https://github.com/robsimmons/abbot'
+
+[aplcompile]
+checkout = git clone 'https://github.com/melsman/aplcompile'
+
+[aplparse]
+checkout = git clone 'https://github.com/melsman/aplparse'
+
+[apltail]
+checkout = git clone 'https://github.com/melsman/apltail'
+
+[bzip2-mlton]
+checkout = git clone 'https://github.com/standardml/bzip2-mlton'
+
+[cairo-sml]
+checkout = git clone 'https://github.com/standardml/cairo-sml'
+
+[cakeml]
+checkout = git clone 'https://github.com/CakeML/cakeml'
+
+[cmlex]
+checkout = git clone 'https://github.com/standardml/cmlex'
+
+[cmlib]
+checkout = git clone 'https://github.com/standardml/cmlib'
+
+[cmyacc]
+checkout = git clone 'https://github.com/standardml/cmyacc'
+
+[contracts]
+checkout = git clone 'https://github.com/melsman/contracts'
+
+[draw2d]
+checkout = git clone 'https://github.com/melsman/draw2d'
+
+[extended-basis]
+checkout = git clone 'https://github.com/standardml/extended-basis'
+
+[functioning]
+checkout = git clone 'https://github.com/robsimmons/functioning'
+
+[gzip-mlton]
+checkout = git clone 'https://github.com/standardml/gzip-mlton'
+
+[hm]
+checkout = git clone 'https://github.com/jozefg/hm'
+
+[HOL]
+checkout = git clone 'https://github.com/HOL-Theorem-Prover/HOL'
+
+[initool]
+checkout = git clone 'https://github.com/dbohdan/initool'
+
+[interactive-lp]
+checkout = git clone 'https://github.com/chrisamaphone/interactive-lp'
+
+[kitlib]
+checkout = git clone 'https://github.com/melsman/kitlib'
+
+[l10]
+checkout = git clone 'https://github.com/robsimmons/l10'
+
+[l1c]
+checkout = git clone 'https://github.com/j-baker/l1c'
+
+[miniprl]
+checkout = git clone 'https://github.com/jozefg/miniprl'
+
+[mlkit]
+checkout = git clone 'https://github.com/melsman/mlkit'
+
+[mlton]
+checkout = git clone 'https://github.com/MLton/mlton'
+
+[mlworks]
+checkout = git clone 'https://github.com/Ravenbrook/mlworks'
+
+[MoA]
+checkout = git clone 'https://github.com/melsman/MoA'
+
+[mosml]
+checkout = git clone 'https://github.com/kfl/mosml'
+
+[parcom]
+checkout = git clone 'https://github.com/standardml/parcom'
+
+[qcheck]
+checkout = git clone 'https://github.com/league/qcheck'
+
+[readline]
+checkout = git clone 'https://github.com/standardml/readline'
+
+[semver-sml]
+checkout = git clone 'https://github.com/robsimmons/semver-sml'
+
+[sigdoc]
+checkout = git clone 'https://github.com/melsman/sigdoc'
+
+[simple-fixity]
+checkout = git clone 'https://github.com/robsimmons/simple-fixity'
+
+[sls]
+checkout = git clone 'https://github.com/robsimmons/sls'
+
+[smackage]
+checkout = git clone 'https://github.com/standardml/smackage'
+
+[smbt]
+checkout = git clone 'https://github.com/finrod/smbt'
+
+[sml-ext]
+checkout = git clone 'https://github.com/standardml/sml-ext'
+
+[SML-JSON]
+checkout = git clone 'https://github.com/standardml/SML-JSON'
+
+[sml-lib]
+checkout = git clone 'https://github.com/robsimmons/sml-lib'
+
+[sml-llvm]
+checkout = git clone 'https://github.com/melsman/sml-llvm'
+
+[smlnanomq]
+checkout = git clone 'https://github.com/standardml/smlnanomq'
+
+[SMLPEG]
+checkout = git clone 'https://github.com/standardml/SMLPEG'
+
+[sml-redprl]
+checkout = git clone 'https://github.com/RedPRL/sml-redprl'
+
+[smlsharp]
+checkout = git clone 'https://github.com/smlsharp/smlsharp'
+
+[SMLUnit]
+checkout = git clone 'https://github.com/smlsharp/SMLUnit'
+
+[space_tab_bot]
+checkout = git clone 'https://github.com/mzp/space_tab_bot'
+
+[stilts]
+checkout = git clone 'https://github.com/j4cbo/stilts'
+
+[sxml]
+checkout = git clone 'https://github.com/finrod/sxml'
+
+[TILT-Compiler]
+checkout = git clone 'https://github.com/RobertHarper/TILT-Compiler'
+
+[tinybot]
+checkout = git clone 'https://github.com/robsimmons/tinybot'
+
+[twelf]
+checkout = git clone 'https://github.com/standardml/twelf'
+
+[uri]
+checkout = git clone 'https://github.com/finrod/uri'
+
+[urweb]
+checkout = git clone 'https://github.com/urweb/urweb'
+
+# vim: ft=cfg
