@@ -24,7 +24,7 @@ Session.vim
 # Mercurial
 /.hg/*
 */.hg/*
-.hgignore
+!.hgignore
 
 # SVN
 .svn/
