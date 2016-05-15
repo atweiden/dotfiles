@@ -3,6 +3,7 @@ username = yourname <youremail>
 editor = vim
 ssh = ssh -C
 ignore = $HOME/.hgignore
+interface = curses
 
 [web]
 cacerts = /etc/ssl/certs/ca-certificates.crt
@@ -30,10 +31,8 @@ hgext.extdiff =
 hgext.gpg =
 hgext.hbisect=
 #hgext.mq =
-hgext.record =
-hgext.crecord = $HOME/.hgext/crecord/
 hgext.remotebranches = $HOME/.hgext/hg_remotebranches.py
-rdiff = $HOME/.hgext/hg_rdiff.py
+#rdiff = $HOME/.hgext/hg_rdiff.py
 
 [alias]
 show = log --stat --color=always -vpr
@@ -46,6 +45,7 @@ lg = lga --rev 'ancestors(.)'
 dlog = log --style=$HOME/.hgmap/map-cmdline.dlog
 st = st -S
 og = outgoing -r .
+crecord = !$HG commit -i
 
 # what did I do
 today = !hg log --template '{rev} {desc|firstline|strip}\n' -r "sort(user('$(hg showconfig ui.username | sed 's/.*<\(.*\)>/\1/')') and date(-1), -date)"

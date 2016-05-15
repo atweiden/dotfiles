@@ -1,3 +1,54 @@
+'''keep track of remote branch heads
+
+With this extension installed, Mercurial gains one new feature: when
+you pull from a repository listed in .hg/hgrc's ``[paths]`` section,
+you get output similar to the following::
+
+ @  3[tip]   7c2fd3b9020c   2009-04-27 18:04 -0500   durin42
+ |    Add delta
+ |
+ o  2[default/default]   030b686bedc4   2009-04-27 18:04 -0500   durin42
+ |    Add gamma
+ |
+ o  1[stable/default]   c561b4e977df   2009-04-27 18:04 -0500   durin42
+ |    Add beta
+ |
+ o  0   d8d2fcd0e319   2009-04-27 18:04 -0500   durin42
+      Add alpha
+
+What this output is showing is that the head of the default branch in
+a repo at path ``stable`` is ``c561b4e977df``, and the head of default
+in the repo at path ``default`` is at ``030b686bedc4``. This is
+accomplished by sending a single extra request to the Mercurial server
+after the pull is complete.  The nature of this request (branchheads)
+requires that the server be Mercurial 1.3 or newer.
+
+This extension should work properly with paths from the schemes extension
+included with Mercurial 1.4 and later. Other extensions which perform varying
+kinds of manipulation on the repository path may not function as expected.
+
+When revsets are available (Mercurial 1.7 and later), remotebranches
+makes three new revsets available: ``pushed()``, ``upstream()`` and
+``remotebranches()``. The ``pushed()`` revset returns all revisions
+that are have been pushed to any repository tracked by
+remotebranches. The ``upstream()`` set is those revisions which are in
+a repository whose path is listed in the ``upstream`` field of the
+``[remotebranches]`` configuration section. If there is no
+``remotebranches.upstream`` setting, it defaults to behaving
+identically to ``pushed()``. The ``remotebranches()`` revset simply
+returns all remote branches head changesets.
+
+When template keywords can be registered (Mercurial 1.5 and later),
+remotebranches adds a ``remotebranches`` keyword returning a space
+separated list of all names of remote branches heads on a changeset.
+
+For more information:
+https://bitbucket.org/durin42/hg-remotebranches
+
+See also :hg:`help revset.upstream`, :hg:`help revset.pushed`, and
+:hg:`help revset.remotebranches`.
+'''
+
 import os
 
 from mercurial import config
@@ -23,7 +74,7 @@ try:
 except ImportError:
     templatekw = None
 
-testedwith = '1.7 1.8 1.9 2.0 2.9 3.1 3.2 3.3 3.4'
+testedwith = '1.7 1.8 1.9 2.0 2.9 3.1 3.2 3.3 3.4 3.5'
 
 from hgext import schemes
 
@@ -129,9 +180,8 @@ def reposetup(ui, repo):
             conf = config.config()
             rc = self.join('hgrc')
             if os.path.exists(rc):
-                fp = open(rc)
-                conf.parse('.hgrc', fp.read())
-                fp.close()
+                with open(rc) as fp:
+                    conf.parse('.hgrc', fp.read(), include=conf.read)
             realpath = ''
             if 'paths' in conf:
                 for path, uri in conf['paths'].items():
