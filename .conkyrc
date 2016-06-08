@@ -32,10 +32,10 @@ color2 gray
 #  Output
 ##############################################
 TEXT
-CPU: $alignr${cpu cpu0}%
-${cpubar cpu0}
-RAM: $alignr$mem/$memmax
-$membar
+${font Muli:bold:size=8}CPU: ${font Muli:normal:size=8}$alignr${cpu cpu0}%
+${font Muli:normal:size=8}${cpubar cpu0}
+${font Muli:bold:size=8}RAM: ${font Muli:normal:size=8}$alignr$mem/$memmax
+${font Muli:normal:size=8}$membar
 
 ${font Muli:bold:size=8}SYSTEM ${hr 2}
 ${font Muli:normal:size=8}$sysname $kernel $alignr $machine
