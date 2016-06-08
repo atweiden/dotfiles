@@ -1,6 +1,6 @@
 background yes
 use_xft yes
-xftfont monospace:size=9
+xftfont Monaco:size=9
 xftalpha 1
 update_interval 1.0
 total_run_times 0
@@ -35,22 +35,22 @@ TEXT
 CPU: ${cpubar cpu0}
 RAM: $membar
 
-${font sans-serif:bold:size=8}SYSTEM ${hr 2}
-${font sans-serif:normal:size=8}$sysname $kernel $alignr $machine
+${font Muli:bold:size=8}SYSTEM ${hr 2}
+${font Muli:normal:size=8}$sysname $kernel $alignr $machine
 Host:$alignr$nodename
 Uptime:$alignr$uptime
 
-${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2}
-${font sans-serif:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
-${top_mem name 2}${alignr}${top mem 2} %
-$font${top_mem name 3}${alignr}${top mem 3} %
-$font${top_mem name 4}${alignr}${top mem 4} %
+${font Muli:bold:size=8}TOP PROCESSES ${hr 2}
+${font Muli:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
+${font Muli:normal:size=8}${top_mem name 2}${alignr}${top mem 2} %
+${font Muli:normal:size=8}${top_mem name 3}${alignr}${top mem 3} %
+${font Muli:normal:size=8}${top_mem name 4}${alignr}${top mem 4} %
 
-${font sans-serif:bold:size=8}SHORTCUT KEYS ${hr 2}
-${font sans-serif:normal:size=8}Super+a$alignr Toggle Maximize
-Super+h$alignr Toggle Horizontal
-Super+v$alignr Toggle Vertical
-Super+c$alignr Move to Center
-Super+Arrow$alignr Move
-Alt+Super+Arrow$alignr Resize
-Super+x$alignr Classic Keybinds
+${font Muli:bold:size=8}SHORTCUT KEYS ${hr 2}
+${font Monaco:normal:size=8}Super+a${font Muli:normal:size=8}$alignr Toggle Maximize
+${font Monaco:normal:size=8}Super+h${font Muli:normal:size=8}$alignr Toggle Horizontal
+${font Monaco:normal:size=8}Super+v${font Muli:normal:size=8}$alignr Toggle Vertical
+${font Monaco:normal:size=8}Super+c${font Muli:normal:size=8}$alignr Move to Center
+${font Monaco:normal:size=8}Super+Arrow${font Muli:normal:size=8}$alignr Move
+${font Monaco:normal:size=8}Alt+Super+Arrow${font Muli:normal:size=8}$alignr Resize
+${font Monaco:normal:size=8}Super+x${font Muli:normal:size=8}$alignr Classic Keybinds

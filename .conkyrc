@@ -1,6 +1,6 @@
 background yes
 use_xft yes
-xftfont monospace:size=9
+xftfont Monaco:size=9
 xftalpha 1
 update_interval 1.0
 total_run_times 0
@@ -37,42 +37,42 @@ ${cpubar cpu0}
 RAM: $alignr$mem/$memmax
 $membar
 
-${font sans-serif:bold:size=8}SYSTEM ${hr 2}
-${font sans-serif:normal:size=8}$sysname $kernel $alignr $machine
+${font Muli:bold:size=8}SYSTEM ${hr 2}
+${font Muli:normal:size=8}$sysname $kernel $alignr $machine
 Uptime:$alignr$uptime
 
-${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2}
-${font sans-serif:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
-${top_mem name 2}${alignr}${top mem 2} %
-$font${top_mem name 3}${alignr}${top mem 3} %
-$font${top_mem name 4}${alignr}${top mem 4} %
+${font Muli:bold:size=8}TOP PROCESSES ${hr 2}
+${font Muli:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
+${font Muli:normal:size=8}${top_mem name 2}${alignr}${top mem 2} %
+${font Muli:normal:size=8}${top_mem name 3}${alignr}${top mem 3} %
+${font Muli:normal:size=8}${top_mem name 4}${alignr}${top mem 4} %
 
-${font sans-serif:bold:size=8}SHORTCUT KEYS ${hr 2}
-${font monospace:normal:size=8}Super+space${font sans-serif:normal:size=8}$alignr Main Menu
-${font monospace:normal:size=8}Super+t${font sans-serif:normal:size=8}$alignr Terminal
-${font monospace:normal:size=8}Super+l${font sans-serif:normal:size=8}$alignr LXTerminal
-${font monospace:normal:size=8}Super+f${font sans-serif:normal:size=8}$alignr File Manager
-${font monospace:normal:size=8}Super+w${font sans-serif:normal:size=8}$alignr Web Browser
-${font monospace:normal:size=8}Super+m${font sans-serif:normal:size=8}$alignr Media Player
-${font monospace:normal:size=8}Super+e${font sans-serif:normal:size=8}$alignr Editor
-${font monospace:normal:size=8}Super+g${font sans-serif:normal:size=8}$alignr Gvim
-${font monospace:normal:size=8}Super+r${font sans-serif:normal:size=8}$alignr Calculator
-${font monospace:normal:size=8}Super+s${font sans-serif:normal:size=8}$alignr Spreadsheet
-${font monospace:normal:size=8}Super+q${font sans-serif:normal:size=8}$alignr Force Quit
-${font monospace:normal:size=8}Super+ctrl+q${font sans-serif:normal:size=8}$alignr Quit
-${font monospace:normal:size=8}Super+ctrl+l${font sans-serif:normal:size=8}$alignr Lock
-${font monospace:normal:size=8}Alt+F2${font sans-serif:normal:size=8}$alignr Run Dialog
-${font monospace:normal:size=8}Alt+F3${font sans-serif:normal:size=8}$alignr Dmenu
-${font monospace:normal:size=8}Super+x${font sans-serif:normal:size=8}$alignr Alt Keybinds
+${font Muli:bold:size=8}SHORTCUT KEYS ${hr 2}
+${font Monaco:normal:size=8}Super+space${font Muli:normal:size=8}$alignr Main Menu
+${font Monaco:normal:size=8}Super+t${font Muli:normal:size=8}$alignr Terminal
+${font Monaco:normal:size=8}Super+l${font Muli:normal:size=8}$alignr LXTerminal
+${font Monaco:normal:size=8}Super+f${font Muli:normal:size=8}$alignr File Manager
+${font Monaco:normal:size=8}Super+w${font Muli:normal:size=8}$alignr Web Browser
+${font Monaco:normal:size=8}Super+m${font Muli:normal:size=8}$alignr Media Player
+${font Monaco:normal:size=8}Super+e${font Muli:normal:size=8}$alignr Editor
+${font Monaco:normal:size=8}Super+g${font Muli:normal:size=8}$alignr Gvim
+${font Monaco:normal:size=8}Super+r${font Muli:normal:size=8}$alignr Calculator
+${font Monaco:normal:size=8}Super+s${font Muli:normal:size=8}$alignr Spreadsheet
+${font Monaco:normal:size=8}Super+q${font Muli:normal:size=8}$alignr Force Quit
+${font Monaco:normal:size=8}Super+ctrl+q${font Muli:normal:size=8}$alignr Quit
+${font Monaco:normal:size=8}Super+ctrl+l${font Muli:normal:size=8}$alignr Lock
+${font Monaco:normal:size=8}Alt+F2${font Muli:normal:size=8}$alignr Run Dialog
+${font Monaco:normal:size=8}Alt+F3${font Muli:normal:size=8}$alignr Dmenu
+${font Monaco:normal:size=8}Super+x${font Muli:normal:size=8}$alignr Alt Keybinds
 
-${font sans-serif:bold:size=8}NETWORK ${hr 2}
-${font sans-serif:normal:size=8}Host:$alignr$nodename
-${font sans-serif:normal:size=8}MAC: ${alignr}${wireless_ap wlan0}
-${font sans-serif:normal:size=8}ESSID: ${alignr}${wireless_essid wlan0}
-${font sans-serif:normal:size=8}Local IP: ${alignr}${addr wlan0}
-${font sans-serif:normal:size=8}Public IP: ${alignr}${execi 2000 dig +short myip.opendns.com @resolver1.opendns.com}
-${font sans-serif:normal:size=8}Mode: ${alignr}${wireless_mode wlan0}
-${font sans-serif:normal:size=8}Connection quality: ${alignr}${wireless_link_qual_perc wlan0}%
+${font Muli:bold:size=8}NETWORK ${hr 2}
+${font Muli:normal:size=8}Host:$alignr$nodename
+${font Muli:normal:size=8}MAC: ${alignr}${wireless_ap wlan0}
+${font Muli:normal:size=8}ESSID: ${alignr}${wireless_essid wlan0}
+${font Muli:normal:size=8}Local IP: ${alignr}${addr wlan0}
+${font Muli:normal:size=8}Public IP: ${alignr}${execi 2000 dig +short myip.opendns.com @resolver1.opendns.com}
+${font Muli:normal:size=8}Mode: ${alignr}${wireless_mode wlan0}
+${font Muli:normal:size=8}Connection quality: ${alignr}${wireless_link_qual_perc wlan0}%
 
 Up: ${upspeed wlan0} k/s
 ${alignc}${upspeedgraph wlan0 20,170 000000 ffffff}
