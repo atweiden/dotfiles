@@ -308,6 +308,11 @@ export FZF_DEFAULT_OPTS='
   --color info:150,prompt:110,spinner:150,pointer:167,marker:174
 '
 
+# improved preview
+command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -$LINES'"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind ?:toggle-preview"
+export FZF_CTRL_T_OPTS="--preview '(cat {} || tree -C {}) 2> /dev/null | head -$LINES'"
+
 # create fzf key bindings
 [[ -e "/etc/profile.d/fzf.bash" ]] && . /etc/profile.d/fzf.bash
 [[ -e "/etc/profile.d/fzf-extras.bash" ]] && . /etc/profile.d/fzf-extras.bash
