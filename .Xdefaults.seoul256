@@ -18,19 +18,10 @@ URxvt*depth                 : 32
 URxvt*saveLines             : 65535
 URxvt*cursorBlink           : false
 URxvt*cursorUnderline       : true
-URxvt*perl-ext-common       : default,-searchable-scrollback,clipboard,url-select,keyboard-select,autocomplete-ALL-the-things
+URxvt*perl-ext-common       : clipboard
 URxvt*iso14755              : false
-URxvt*clipboard.autocopy    : true
 URxvt*keysym.C-C            : perl:clipboard:copy
 URxvt*keysym.C-V            : perl:clipboard:paste
-URxvt*keysym.C-A-V          : perl:clipboard:paste_escaped
-URxvt*keysym.M-slash        : perl:aAtt:word-complete
-URxvt*keysym.M-question     : perl:aAtt:fuzzy-complete
-URxvt*url-select.launcher   : xdg-open
-URxvt*url-select.underline  : false
-URxvt*keysym.M-u            : perl:url-select:select_next
-URxvt*keysym.M-Escape       : perl:keyboard-select:activate
-URxvt*keysym.C-s            : perl:keyboard-select:search
 
 # IO
 ! True: specify that jump scrolling should be used. When receiving lots of lines, urxvt will only scroll once a whole screen height of lines has been read, resulting in fewer updates while still displaying every received line; option -j.

@@ -26,7 +26,6 @@ elif [[ "$TERM" == "tmux" && "$HAS_256_COLORS" == "yes" ]]; then
   export TERM=tmux-256color-neovim
 fi
 
-
 # miromiro dircolors by jwr
 #[[ -f "$HOME/.dir_colors" ]] && eval $(dircolors -b "$HOME/.dir_colors")
 
@@ -70,6 +69,9 @@ PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME
 # Do not overwrite existing file by redirect `>`
 # Use `>|` to override this setting
 set -o noclobber
+
+### disable ctrl-s and ctrl-q
+[[ $- =~ i ]] && stty -ixoff -ixon
 
 # fix for terminal vim ctrl-q keybindings
 stty start undef
