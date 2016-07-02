@@ -24,6 +24,7 @@
 
 [diff]
   tool = vimdiff
+  algorithm = minimal
   compactionHeuristic = true
 
 [diff "exif"]
