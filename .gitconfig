@@ -24,6 +24,7 @@
 
 [diff]
   tool = vimdiff
+  compactionHeuristic = true
 
 [diff "exif"]
   textconv = exiftool
