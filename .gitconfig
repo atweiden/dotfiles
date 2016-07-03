@@ -15,6 +15,7 @@
   ci = commit
   co = checkout
   p = format-patch HEAD^..HEAD --stdout
+  fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 
 [mergetool]
   keepBackup = true
