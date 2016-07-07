@@ -1,0 +1,7 @@
+[monger]
+checkout = git clone 'https://github.com/michaelklishin/monger'
+
+[validateur]
+checkout = git clone 'https://github.com/michaelklishin/validateur'
+
+# vim: ft=cfg

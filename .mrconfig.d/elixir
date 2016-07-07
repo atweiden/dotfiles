@@ -1,0 +1,325 @@
+[amqp]
+checkout = git clone 'https://github.com/pma/amqp'
+
+[apex]
+checkout = git clone 'https://github.com/BjRo/apex'
+
+[awesome-elixir]
+checkout = git clone 'https://github.com/h4cc/awesome-elixir'
+
+[base62]
+checkout = git clone 'https://github.com/igas/base62'
+
+[benchfella]
+checkout = git clone 'https://github.com/alco/benchfella'
+
+[bitmap-elixir]
+checkout = git clone 'https://github.com/hashd/bitmap-elixir'
+
+[bunt]
+checkout = git clone 'https://github.com/rrrene/bunt'
+
+[cachex]
+checkout = git clone 'https://github.com/zackehh/cachex'
+
+[calecto]
+checkout = git clone 'https://github.com/lau/calecto'
+
+[calendar]
+checkout = git clone 'https://github.com/lau/calendar'
+
+[cidr-elixir]
+checkout = git clone 'https://github.com/c-rack/cidr-elixir'
+
+[combine]
+checkout = git clone 'https://github.com/bitwalker/combine'
+
+[comeonin]
+checkout = git clone 'https://github.com/riverrun/comeonin'
+
+[con_cache]
+checkout = git clone 'https://github.com/sasa1977/con_cache'
+
+[conform]
+checkout = git clone 'https://github.com/bitwalker/conform'
+
+[connection]
+checkout = git clone 'https://github.com/fishcakez/connection'
+
+[corsica]
+checkout = git clone 'https://github.com/whatyouhide/corsica'
+
+[credo]
+checkout = git clone 'https://github.com/rrrene/credo'
+
+[cryptex]
+checkout = git clone 'https://github.com/scrogson/cryptex'
+
+[db_connection]
+checkout = git clone 'https://github.com/elixir-ecto/db_connection'
+
+[db_connection]
+checkout = git clone 'https://github.com/elixir-ecto/db_connection'
+
+[dbg]
+checkout = git clone 'https://github.com/fishcakez/dbg'
+
+[decimal]
+checkout = git clone 'https://github.com/ericmj/decimal'
+
+[dialyze]
+checkout = git clone 'https://github.com/fishcakez/dialyze'
+
+[docs]
+checkout = git clone 'https://github.com/elixir-lang/docs'
+
+[earmark]
+checkout = git clone 'https://github.com/pragdave/earmark'
+
+[ecto]
+checkout = git clone 'https://github.com/elixir-ecto/ecto'
+
+[elixir]
+checkout = git clone 'https://github.com/elixir-lang/elixir'
+
+[elixir-json]
+checkout = git clone 'https://github.com/cblage/elixir-json'
+
+[elixir-lang.github.com]
+checkout = git clone 'https://github.com/elixir-lang/elixir-lang.github.com'
+
+[elixir-uuid]
+checkout = git clone 'https://github.com/zyro/elixir-uuid'
+
+[elixir_make]
+checkout = git clone 'https://github.com/elixir-lang/elixir_make'
+
+[espec]
+checkout = git clone 'https://github.com/antonmi/espec'
+
+[ex_aws]
+checkout = git clone 'https://github.com/CargoSense/ex_aws'
+
+[ex_csv]
+checkout = git clone 'https://github.com/CargoSense/ex_csv'
+
+[ex_doc]
+checkout = git clone 'https://github.com/elixir-lang/ex_doc'
+
+[ex_machina]
+checkout = git clone 'https://github.com/thoughtbot/ex_machina'
+
+[exactor]
+checkout = git clone 'https://github.com/sasa1977/exactor'
+
+[excheck]
+checkout = git clone 'https://github.com/parroty/excheck'
+
+[excoveralls]
+checkout = git clone 'https://github.com/parroty/excoveralls'
+
+[exgravatar]
+checkout = git clone 'https://github.com/scrogson/exgravatar'
+
+[exirc]
+checkout = git clone 'https://github.com/bitwalker/exirc'
+
+[exjsx]
+checkout = git clone 'https://github.com/talentdeficit/exjsx'
+
+[exlager]
+checkout = git clone 'https://github.com/khia/exlager'
+
+[exprintf]
+checkout = git clone 'https://github.com/parroty/exprintf'
+
+[exprotobuf]
+checkout = git clone 'https://github.com/bitwalker/exprotobuf'
+
+[exrm]
+checkout = git clone 'https://github.com/bitwalker/exrm'
+
+[extreme]
+checkout = git clone 'https://github.com/exponentially/extreme'
+
+[exzmq]
+checkout = git clone 'https://github.com/zeromq/exzmq'
+
+[faker]
+checkout = git clone 'https://github.com/igas/faker'
+
+[fsm]
+checkout = git clone 'https://github.com/sasa1977/fsm'
+
+[gen_stage]
+checkout = git clone 'https://github.com/elixir-lang/gen_stage'
+
+[gettext]
+checkout = git clone 'https://github.com/elixir-lang/gettext'
+
+[guardian]
+checkout = git clone 'https://github.com/ueberauth/guardian'
+
+[hashids-elixir]
+checkout = git clone 'https://github.com/alco/hashids-elixir'
+
+[hedwig]
+checkout = git clone 'https://github.com/hedwig-im/hedwig'
+
+[hex]
+checkout = git clone 'https://github.com/hexpm/hex'
+
+[hex_web]
+checkout = git clone 'https://github.com/hexpm/hex_web'
+
+[httpoison]
+checkout = git clone 'https://github.com/edgurgel/httpoison'
+
+[linguist]
+checkout = git clone 'https://github.com/chrismccord/linguist'
+
+[mailgun]
+checkout = git clone 'https://github.com/chrismccord/mailgun'
+
+[maptu]
+checkout = git clone 'https://github.com/whatyouhide/maptu'
+
+[mariaex]
+checkout = git clone 'https://github.com/xerions/mariaex'
+
+[mime]
+checkout = git clone 'https://github.com/elixir-lang/mime'
+
+[mock]
+checkout = git clone 'https://github.com/jjh42/mock'
+
+[moebius]
+checkout = git clone 'https://github.com/robconery/moebius'
+
+[monetized]
+checkout = git clone 'https://github.com/theocodes/monetized'
+
+[money]
+checkout = git clone 'https://github.com/liuggio/money'
+
+[mongodb]
+checkout = git clone 'https://github.com/ericmj/mongodb'
+
+[msgpax]
+checkout = git clone 'https://github.com/lexmag/msgpax'
+
+[mt940]
+checkout = git clone 'https://github.com/my-flow/mt940'
+
+[nerves]
+checkout = git clone 'https://github.com/nerves-project/nerves'
+
+[openmaize]
+checkout = git clone 'https://github.com/riverrun/openmaize'
+
+[parex]
+checkout = git clone 'https://github.com/StevenJL/parex'
+
+[parse_sql]
+checkout = git clone 'https://github.com/sasa1977/parse_sql'
+
+[phoenix]
+checkout = git clone 'https://github.com/phoenixframework/phoenix'
+
+[phoenix_ecto]
+checkout = git clone 'https://github.com/phoenixframework/phoenix_ecto'
+
+[phoenix_guides]
+checkout = git clone 'https://github.com/phoenixframework/phoenix_guides'
+
+[phoenix_html]
+checkout = git clone 'https://github.com/phoenixframework/phoenix_html'
+
+[phoenix_pubsub]
+checkout = git clone 'https://github.com/phoenixframework/phoenix_pubsub'
+
+[phoenix_pubsub_redis]
+checkout = git clone 'https://github.com/phoenixframework/phoenix_pubsub_redis'
+
+[phoenix_swoosh]
+checkout = git clone 'https://github.com/swoosh/phoenix_swoosh'
+
+[plug]
+checkout = git clone 'https://github.com/elixir-lang/plug'
+
+[poison]
+checkout = git clone 'https://github.com/devinus/poison'
+
+[porcelain]
+checkout = git clone 'https://github.com/alco/porcelain'
+
+[postgrex]
+checkout = git clone 'https://github.com/elixir-ecto/postgrex'
+
+[poxa]
+checkout = git clone 'https://github.com/edgurgel/poxa'
+
+[quantum-elixir]
+checkout = git clone 'https://github.com/c-rack/quantum-elixir'
+
+[redix]
+checkout = git clone 'https://github.com/whatyouhide/redix'
+
+[redix_pubsub]
+checkout = git clone 'https://github.com/whatyouhide/redix_pubsub'
+
+[riak_ecto]
+checkout = git clone 'https://github.com/pma/riak_ecto'
+
+[rollbax]
+checkout = git clone 'https://github.com/elixir-addicts/rollbax'
+
+[romeo]
+checkout = git clone 'https://github.com/scrogson/romeo'
+
+[swoosh]
+checkout = git clone 'https://github.com/swoosh/swoosh'
+
+[tentacat]
+checkout = git clone 'https://github.com/edgurgel/tentacat'
+
+[the_fuzz]
+checkout = git clone 'https://github.com/smashedtoatoms/the_fuzz'
+
+[time_seer]
+checkout = git clone 'https://github.com/lau/time_seer'
+
+[timex]
+checkout = git clone 'https://github.com/bitwalker/timex'
+
+[timex_ecto]
+checkout = git clone 'https://github.com/bitwalker/timex_ecto'
+
+[tirexs]
+checkout = git clone 'https://github.com/Zatvobor/tirexs'
+
+[tty2048]
+checkout = git clone 'https://github.com/lexmag/tty2048'
+
+[type]
+checkout = git clone 'https://github.com/jeffreybaird/type'
+
+[tzdata]
+checkout = git clone 'https://github.com/lau/tzdata'
+
+[ueberauth]
+checkout = git clone 'https://github.com/ueberauth/ueberauth'
+
+[verk]
+checkout = git clone 'https://github.com/edgurgel/verk'
+
+[vex]
+checkout = git clone 'https://github.com/CargoSense/vex'
+
+[workex]
+checkout = git clone 'https://github.com/sasa1977/workex'
+
+[xlsxir]
+checkout = git clone 'https://github.com/kennellroxco/xlsxir'
+
+# vim: ft=cfg
