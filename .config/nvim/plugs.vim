@@ -351,7 +351,7 @@ Plug 'tshirtman/vim-cython', { 'for': 'cython' }
 Plug 'idanarye/vim-dutyl', { 'for': 'd' }
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 Plug 'honza/dockerfile.vim', { 'for': 'dockerfile' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'elixir-lang/vim-elixir', { 'for': [ 'eelixir', 'elixir' ] }
 Plug 'mattreduce/vim-mix', { 'on': [ 'Mclean',
                                    \ 'Mcompile',
                                    \ 'Mdeps',
