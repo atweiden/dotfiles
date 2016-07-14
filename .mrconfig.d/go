@@ -1,0 +1,283 @@
+[atmanos]
+checkout = git clone 'https://github.com/atmanos/atmanos'
+
+[awesome-go]
+checkout = git clone 'https://github.com/avelino/awesome-go'
+
+[aws-sdk-go]
+checkout = git clone 'https://github.com/aws/aws-sdk-go'
+
+[blackfriday]
+checkout = git clone 'https://github.com/russross/blackfriday'
+
+[bolt]
+checkout = git clone 'https://github.com/boltdb/bolt'
+
+[btcd]
+checkout = git clone 'https://github.com/btcsuite/btcd'
+
+[btclog]
+checkout = git clone 'https://github.com/btcsuite/btclog'
+
+[btcrpcclient]
+checkout = git clone 'https://github.com/btcsuite/btcrpcclient'
+
+[btcutil]
+checkout = git clone 'https://github.com/btcsuite/btcutil'
+
+[btcwallet]
+checkout = git clone 'https://github.com/btcsuite/btcwallet'
+
+[camlistore]
+checkout = git clone 'https://github.com/camlistore/camlistore'
+
+[cli]
+checkout = git clone 'https://github.com/heroku/cli'
+
+[cobra]
+checkout = git clone 'https://github.com/spf13/cobra'
+
+[consul]
+checkout = git clone 'https://github.com/hashicorp/consul'
+
+[containerd]
+checkout = git clone 'https://github.com/docker/containerd'
+
+[coyim]
+checkout = git clone 'https://github.com/twstrike/coyim'
+
+[crypto]
+checkout = git clone 'https://github.com/golang/crypto'
+
+[debug]
+checkout = git clone 'https://github.com/golang/debug'
+
+[distribution]
+checkout = git clone 'https://github.com/docker/distribution'
+
+[docker]
+checkout = git clone 'https://github.com/docker/docker'
+
+[exp]
+checkout = git clone 'https://github.com/golang/exp'
+
+[freetype]
+checkout = git clone 'https://github.com/golang/freetype'
+
+[fzf]
+checkout = git clone 'https://github.com/junegunn/fzf'
+
+[geo]
+checkout = git clone 'https://github.com/golang/geo'
+
+[glide]
+checkout = git clone 'https://github.com/Masterminds/glide'
+
+[glog]
+checkout = git clone 'https://github.com/golang/glog'
+
+[go]
+checkout = git clone 'https://github.com/golang/go'
+
+[go-ethereum]
+checkout = git clone 'https://github.com/ethereum/go-ethereum'
+
+[go-spew]
+checkout = git clone 'https://github.com/davecgh/go-spew'
+
+[go-sqlite3]
+checkout = git clone 'https://github.com/mattn/go-sqlite3'
+
+[gocode]
+checkout = git clone 'https://github.com/nsf/gocode'
+
+[godef]
+checkout = git clone 'https://github.com/rogpeppe/godef'
+
+[gods]
+checkout = git clone 'https://github.com/emirpasic/gods'
+
+[gofrontend]
+checkout = git clone 'https://github.com/golang/gofrontend'
+
+[gomemcache]
+checkout = git clone 'https://github.com/bradfitz/gomemcache'
+
+[goquery]
+checkout = git clone 'https://github.com/PuerkitoBio/goquery'
+
+[gotk3]
+checkout = git clone 'https://github.com/gotk3/gotk3'
+
+[grafana]
+checkout = git clone 'https://github.com/grafana/grafana'
+
+[groupcache]
+checkout = git clone 'https://github.com/golang/groupcache'
+
+[grpc-go]
+checkout = git clone 'https://github.com/grpc/grpc-go'
+
+[hcl]
+checkout = git clone 'https://github.com/hashicorp/hcl'
+
+[helm]
+checkout = git clone 'https://github.com/kubernetes/helm'
+
+[httprouter]
+checkout = git clone 'https://github.com/julienschmidt/httprouter'
+
+[hugo]
+checkout = git clone 'https://github.com/spf13/hugo'
+
+[image]
+checkout = git clone 'https://github.com/golang/image'
+
+[iris]
+checkout = git clone 'https://github.com/kataras/iris'
+
+[kubernetes]
+checkout = git clone 'https://github.com/kubernetes/kubernetes'
+
+[lantern]
+checkout = git clone 'https://github.com/getlantern/lantern'
+
+[leveldb]
+checkout = git clone 'https://github.com/golang/leveldb'
+
+[libnetwork]
+checkout = git clone 'https://github.com/docker/libnetwork'
+
+[lint]
+checkout = git clone 'https://github.com/golang/lint'
+
+[logrus]
+checkout = git clone 'https://github.com/Sirupsen/logrus'
+
+[machine]
+checkout = git clone 'https://github.com/docker/machine'
+
+[mailgun-go]
+checkout = git clone 'https://github.com/mailgun/mailgun-go'
+
+[martini]
+checkout = git clone 'https://github.com/go-martini/martini'
+
+[maze]
+checkout = git clone 'https://github.com/itchyny/maze'
+
+[mgo]
+checkout = git clone 'https://github.com/go-mgo/mgo'
+
+[minio]
+checkout = git clone 'https://github.com/minio/minio'
+
+[mobile]
+checkout = git clone 'https://github.com/golang/mobile'
+
+[mock]
+checkout = git clone 'https://github.com/golang/mock'
+
+[mux]
+checkout = git clone 'https://github.com/gorilla/mux'
+
+[mysql]
+checkout = git clone 'https://github.com/go-sql-driver/mysql'
+
+[net]
+checkout = git clone 'https://github.com/golang/net'
+
+[notary]
+checkout = git clone 'https://github.com/docker/notary'
+
+[oauth2]
+checkout = git clone 'https://github.com/golang/oauth2'
+
+[otto]
+checkout = git clone 'https://github.com/hashicorp/otto'
+
+[pq]
+checkout = git clone 'https://github.com/lib/pq'
+
+[protobuf]
+checkout = git clone 'https://github.com/golang/protobuf'
+
+[raft]
+checkout = git clone 'https://github.com/hashicorp/raft'
+
+[rclone]
+checkout = git clone 'https://github.com/ncw/rclone'
+
+[redigo]
+checkout = git clone 'https://github.com/garyburd/redigo'
+
+[revel]
+checkout = git clone 'https://github.com/revel/revel'
+
+[review]
+checkout = git clone 'https://github.com/golang/review'
+
+[rexdep]
+checkout = git clone 'https://github.com/itchyny/rexdep'
+
+[serf]
+checkout = git clone 'https://github.com/hashicorp/serf'
+
+[snappy]
+checkout = git clone 'https://github.com/golang/snappy'
+
+[swarm]
+checkout = git clone 'https://github.com/docker/swarm'
+
+[swarmkit]
+checkout = git clone 'https://github.com/docker/swarmkit'
+
+[sync]
+checkout = git clone 'https://github.com/golang/sync'
+
+[sys]
+checkout = git clone 'https://github.com/golang/sys'
+
+[term]
+checkout = git clone 'https://github.com/golang/term'
+
+[termbox-go]
+checkout = git clone 'https://github.com/nsf/termbox-go'
+
+[terraform]
+checkout = git clone 'https://github.com/hashicorp/terraform'
+
+[text]
+checkout = git clone 'https://github.com/golang/text'
+
+[time]
+checkout = git clone 'https://github.com/golang/time'
+
+[toml]
+checkout = git clone 'https://github.com/BurntSushi/toml'
+
+[toml-test]
+checkout = git clone 'https://github.com/BurntSushi/toml-test'
+
+[tools]
+checkout = git clone 'https://github.com/golang/tools'
+
+[traefik]
+checkout = git clone 'https://github.com/containous/traefik'
+
+[vault]
+checkout = git clone 'https://github.com/hashicorp/vault'
+
+[viper]
+checkout = git clone 'https://github.com/spf13/viper'
+
+[vuvuzela]
+checkout = git clone 'https://github.com/davidlazar/vuvuzela'
+
+[websocket]
+checkout = git clone 'https://github.com/gorilla/websocket'
+
+[yaml]
+checkout = git clone 'https://github.com/go-yaml/yaml'
+
+# vim: ft=cfg
