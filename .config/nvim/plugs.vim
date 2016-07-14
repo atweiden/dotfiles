@@ -503,6 +503,7 @@ Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'cespare/vim-toml', { 'for': [ 'markdown', 'toml' ] }
 Plug 'atweiden/vim-uzbl', { 'for': 'uzbl' }
 Plug 'atweiden/vim-vala', { 'for': 'vala' }
+Plug 'vim-jp/syntax-vim-ex', { 'for': 'vim' }
 "Plug 'trapd00r/vim-after-syntax-vim', { 'for': 'vim' }
 
 " colors
