@@ -1,7 +1,109 @@
+[aero]
+checkout = git clone 'https://github.com/juxt/aero'
+
+[alda]
+checkout = git clone 'https://github.com/alda-lang/alda'
+
+[bidi]
+checkout = git clone 'https://github.com/juxt/bidi'
+
+[clearley]
+checkout = git clone 'https://github.com/mthvedt/clearley'
+
+[cljzmq]
+checkout = git clone 'https://github.com/zeromq/cljzmq'
+
+[clojure]
+checkout = git clone 'https://github.com/clojure/clojure'
+
+[clojurescript]
+checkout = git clone 'https://github.com/clojure/clojurescript'
+
+[compojure]
+checkout = git clone 'https://github.com/weavejester/compojure'
+
+[core.async]
+checkout = git clone 'https://github.com/clojure/core.async'
+
+[grouper]
+checkout = git clone 'https://github.com/junegunn/grouper'
+
+[hbase-region-inspector]
+checkout = git clone 'https://github.com/kakao/hbase-region-inspector'
+
+[instaparse]
+checkout = git clone 'https://github.com/Engelberg/instaparse'
+
+[kern]
+checkout = git clone 'https://github.com/blancas/kern'
+
+[lein-fruit]
+checkout = git clone 'https://github.com/oakes/lein-fruit'
+
+[leiningen]
+checkout = git clone 'https://github.com/technomancy/leiningen'
+
+[LightTable]
+checkout = git clone 'https://github.com/LightTable/LightTable'
+
+[metabase]
+checkout = git clone 'https://github.com/metabase/metabase'
+
+[mini-file-server]
+checkout = git clone 'https://github.com/junegunn/mini-file-server'
+
 [monger]
 checkout = git clone 'https://github.com/michaelklishin/monger'
 
+[Nightcode]
+checkout = git clone 'https://github.com/oakes/Nightcode'
+
+[Nightmod]
+checkout = git clone 'https://github.com/oakes/Nightmod'
+
+[Nightweb]
+checkout = git clone 'https://github.com/oakes/Nightweb'
+
+[om]
+checkout = git clone 'https://github.com/omcljs/om'
+
+[onyx]
+checkout = git clone 'https://github.com/onyx-platform/onyx'
+
+[parinfer]
+checkout = git clone 'https://github.com/shaunlebron/parinfer'
+
+[parsatron]
+checkout = git clone 'https://github.com/youngnh/parsatron'
+
+[pedestal]
+checkout = git clone 'https://github.com/pedestal/pedestal'
+
+[play-clj]
+checkout = git clone 'https://github.com/oakes/play-clj'
+
+[puppetdb]
+checkout = git clone 'https://github.com/puppetlabs/puppetdb'
+
+[puppetserver]
+checkout = git clone 'https://github.com/puppetlabs/puppetserver'
+
+[riemann]
+checkout = git clone 'https://github.com/riemann/riemann'
+
+[ring]
+checkout = git clone 'https://github.com/ring-clojure/ring'
+
+[tools.cli]
+checkout = git clone 'https://github.com/clojure/tools.cli'
+
+[treely]
+checkout = git clone 'https://github.com/junegunn/treely'
+
 [validateur]
 checkout = git clone 'https://github.com/michaelklishin/validateur'
+
+[zetta-parser]
+checkout = git clone 'https://github.com/van-clj/zetta-parser'
 
 # vim: ft=cfg
