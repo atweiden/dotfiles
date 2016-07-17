@@ -303,16 +303,19 @@ Plug 't9md/vim-transform'
 Plug 'rdnetto/YCM-Generator', { 'on': [ 'CCGenerateConfig',
                                       \ 'YcmGenerateConfig' ],
                                       \ 'branch': 'stable' }
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'on': [] }
 
 " https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins
 " https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
+augroup load_youcompleteme
+  autocmd!
+  autocmd InsertEnter * call plug#load('YouCompleteMe')
+                     \| autocmd! load_youcompleteme
+augroup END
 "augroup load_ultisnips
 "  autocmd!
 "  autocmd InsertEnter * call plug#load('ultisnips')
 "augroup END
-autocmd! User YouCompleteMe if !has('vim_starting')
-      \| call youcompleteme#Enable() | endif
 
 " debuggers
 "Plug 'vim-scripts/Conque-GDB', { 'for': [ 'c', 'cpp' ] }
