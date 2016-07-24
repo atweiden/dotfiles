@@ -40,11 +40,18 @@
 
 --langdef=asciidoc
 --langmap=asciidoc:.ad.adoc.asciidoc
---regex-asciidoc=/^=[ \t]+(.*)/# \1/s,Section_L0/
---regex-asciidoc=/^==[ \t]+(.*)/. \1/s,Section_L1/
---regex-asciidoc=/^===[ \t]+(.*)/. . \1/s,Section_L2/
---regex-asciidoc=/^====[ \t]+(.*)/. . . \1/s,Section_L3/
---regex-asciidoc=/^=====[ \t]+(.*)/. . . . \1/s,Section_L4/
+--regex-asciidoc=/^=[ \t]+(.*)/# \1/h/
+--regex-asciidoc=/^==[ \t]+(.*)/. \1/h/
+--regex-asciidoc=/^===[ \t]+(.*)/. . \1/h/
+--regex-asciidoc=/^====[ \t]+(.*)/. . . \1/h/
+--regex-asciidoc=/^=====[ \t]+(.*)/. . . . \1/h/
+--regex-asciidoc=/^======[ \t]+(.*)/. . . . \1/h/
+--regex-asciidoc=/^=======[ \t]+(.*)/. . . . \1/h/
+--regex-asciidoc=/\[\[([^]]+)\]\]/\1/a/
+--regex-asciidoc=/^\.([^ \t].+)/\1/t/
+--regex-asciidoc=/image::([^\[]+)/\1/i/
+--regex-asciidoc=/image:([^:][^\[]+)/\1/I/
+--regex-asciidoc=/include::([^\[]+)/\1/n/
 
 --langdef=clojure
 --langmap=clojure:.clj.cljs
@@ -63,23 +70,24 @@
 
 --langdef=coffee
 --langmap=coffee:.coffee
---regex-coffee=/(^|=[ \t])*class ([A-Za-z]+\.)*([A-Za-z]+)( extends [A-Za-z_.]+)?$/\3/c,class/
---regex-coffee=/^[ \t]*(module\.)?(exports\.)?@?([A-Za-z_.]+):.*[-=]>.*$/\3/m,method/
---regex-coffee=/^[ \t]*(module\.)?(exports\.)?([A-Za-z_.]+)[ \t]+=.*[-=]>.*$/\3/f,function/
---regex-coffee=/^[ \t]*([A-Za-z_.]+)[ \t]+=[^->\n]*$/\1/v,variable/
---regex-coffee=/^[ \t]*@([A-Za-z_.]+)[ \t]+=[^->\n]*$/\1/f,field/
---regex-coffee=/^[ \t]*@([A-Za-z_.]+):[^->\n]*$/\1/f,static field/
---regex-coffee=/^[ \t]*([A-Za-z_.]+):[^->\n]*$/\1/f,field/
---regex-coffee=/constructor:[ \t]+\([ \t]*@([A-Za-z_.]+)/\1/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){1}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){2}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){3}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){4}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){5}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){6}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){7}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){8}/\2/f,field/
---regex-coffee=/constructor:[ \t]+\(([ \t]*@[A-Za-z_.]+[^,)]*,[ \t]*@([A-Za-z_.]+)){9}/\2/f,field/
+--regex-coffee=/(^|=[ \t])*class ([A-Za-z_][A-Za-z0-9_]+\.)*([A-Za-z_][A-Za-z0-9_]+)( extends ([A-Za-z][A-Za-z0-9_.]*)+)?$/\3/c,class/
+--regex-coffee=/^[ \t]*(module\.)?(exports\.)?@?(([A-Za-z][A-Za-z0-9_.]*)+):.*[-=]>.*$/\3/m,method/
+--regex-coffee=/^[ \t]*(module\.)?(exports\.)?(([A-Za-z][A-Za-z0-9_.]*)+)[ \t]*=.*[-=]>.*$/\3/f,function/
+--regex-coffee=/^[ \t]*(([A-Za-z][A-Za-z0-9_.]*)+)[ \t]*=[^->\n]*$/\1/v,variable/
+--regex-coffee=/^[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)[ \t]*=[^->\n]*$/\1/f,field/
+--regex-coffee=/^[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+):[^->\n]*$/\1/f,static field/
+--regex-coffee=/^[ \t]*(([A-Za-z][A-Za-z0-9_.]*)+):[^->\n]*$/\1/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?/\3/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){0}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){1}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){2}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){3}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){4}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){5}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){6}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){7}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){8}/\8/f,field/
+--regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?(,[ \t]*@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?){9}/\8/f,field/'
 
 --langdef=css
 --langmap=css:.css
@@ -99,7 +107,8 @@
 --regex-Elixir=/^[ \t]*defmacro(p?)[ \t]+([a-zA-Z0-9_?!]+)?[ \t]+([^ \tA-Za-z0-9_]+)[ \t]*[a-zA-Z0-9_!?!]/\3/o,operators,operators (e.g. "defmacro a <<< b")/
 --regex-Elixir=/^[ \t]*defmodule[ \t]+([A-Z][a-zA-Z0-9_]*\.)*([A-Z][a-zA-Z0-9_?!]*)/\2/m,modules,modules (defmodule ...)/
 --regex-Elixir=/^[ \t]*defprotocol[ \t]+([A-Z][a-zA-Z0-9_]*\.)*([A-Z][a-zA-Z0-9_?!]*)/\2/p,protocols,protocols (defprotocol...)/
---regex-Elixir=/^[ \t]*defrecord(p?)[ \t]+([A-Z][a-zA-Z0-9_]*\.)*([A-Z][a-zA-Z0-9_?!]*)/\3/r,records,records (defrecord...)/
+--regex-Elixir=/^[ \t]*Record\.defrecord[ \t]+:([a-zA-Z0-9_]+)/\1/r,records,records (defrecord...)/
+--regex-Elixir=/^[ \t]*test[ \t]+\"([a-z_][a-zA-Z0-9_?! ]*)\"*/\1/t,tests,tests (test ...)/
 
 --langdef=fsharp
 --langmap=fsharp:.fs
@@ -126,22 +135,21 @@
 --langmap=Gradle:.gradle
 --regex-Gradle=/^\s*task\s+([a-zA-Z0-9]+)/\1/t,task/
 
---langdef=Groovy
---langmap=Groovy:.groovy
---regex-Groovy=/^\s*package\s+([a-zA-Z0-9.-_]+)/\1/p,package/
---regex-Groovy=/^\s*(abstract)?\s*(private|public)?\s*class\s+([A-Za-z0-9_]+)\s+/\3/c,class/
---regex-Groovy=/^\s*(abstract)?\s*public\s+(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/+\3/m,public method/
---regex-Groovy=/^\s*(abstract)?\s*protected\s+(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/#\3/m,protected method/
---regex-Groovy=/^\s*(abstract)?\s*(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/~\3/m,package method/
---regex-Groovy=/^\s*(abstract)?\s*private\s+(def|String|void)\s+([a-zA-Z0-9_]+\([A-Za-z0-9 _,]*\))\s+/-\3/m,private method/
---regex-Groovy=/^\s*public\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/+\2/f,public field/
---regex-Groovy=/^\s*protected\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/#\2/f,protected field/
---regex-Groovy=/^\s*(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/~\2/f,package field/
---regex-Groovy=/^\s*private\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)$/-\2/f,private field/
---regex-Groovy=/^\s*public\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/+\2/f,public field/
---regex-Groovy=/^\s*protected\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/#\2/f,protected field/
---regex-Groovy=/^\s*(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/~\2/f,package field/
---regex-Groovy=/^\s*private\s+(def|String|File|Logger)\s+([a-zA-Z0-9_]+)\s+=/-\2/f,private field/
+--langdef=groovy
+--langmap=groovy:.groovy
+--regex-groovy=/^[ \t]*package[ \t]+([a-zA-Z0-9.-_]+)/\1/p,package/
+--regex-groovy=/^[ \t]*(private|public)?[ \t]*(abstract|final|static)?[ \t]*class[ \t]+([A-Za-z0-9_]+)/\3/c,class/
+--regex-groovy=/^[ \t]*(private|public)?[ \t]*interface[ \t]+([A-Za-z0-9_]+)/\2/i,interface/
+--regex-groovy=/^[ \t]*(private|public)?[ \t]*trait[ \t]+([A-Za-z0-9_]+)/\2/t,trait/
+--regex-groovy=/^[ \t]*(private|public)?[ \t]*enum[ \t]+([A-Za-z0-9_]+)/\2/e,enum/
+--regex-groovy=/^[ \t]*[(abstract|final|static) \t]*((def|void|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+)?([a-zA-Z0-9_]+\(.*\))[ \t]+/~\3/m,package method/
+--regex-groovy=/^[ \t]*public[ \t]+[(abstract|final|static) \t]*((def|void|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+)?([a-zA-Z0-9_]+\(.*\))[ \t]+/+\3/m,public method/
+--regex-groovy=/^[ \t]*protected[ \t]+[(abstract|final|static) \t]*((def|void|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+)?([a-zA-Z0-9_]+\(.*\))[ \t]+/#\3/m,protected method/
+--regex-groovy=/^[ \t]*private[ \t]+[(abstract|final|static) \t]*((def|void|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+)?([a-zA-Z0-9_]+\(.*\))[ \t]+/-\3/m,private method/
+--regex-groovy=/^[ \t]*[(final|static|synchronized) \t]*(def|byte|int|short|long|float|double|boolean|char|[A-Z][A-Za-z0-9_]*)[ \t]+([a-zA-Z0-9_]+)([ \t]*[\/]+.*)?/~\2/f,property/
+--regex-groovy=/^[ \t]*public[ \t]+[(final|static|synchronized) \t]*(def|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+([a-zA-Z0-9_]+)([ \t]*[\/]+.*)?/+\2/f,public field/
+--regex-groovy=/^[ \t]*protected[ \t]+[(final|static|synchronized) \t]*(def|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+([a-zA-Z0-9_]+)([ \t]*[\/]+.*)?/#\2/f,protected field/
+--regex-groovy=/^[ \t]*private[ \t]+[(final|static|synchronized) \t]*(def|byte|int|short|long|float|double|boolean|char|[A-Z][a-zA-Z0-9_]*)[ \t]+([a-zA-Z0-9_]+)([ \t]*[\/]+.*)?/-\2/f,private field/
 
 --langdef=haxe
 --langmap=haxe:.hx
@@ -153,6 +161,12 @@
 --regex-haxe=/^[ \t]*((@:?[a-zA-Z]+)[ \t]+)*((extern|private)[ \t]+)?interface[ \t]+([A-Za-z0-9_]+)/\5/i,interface/
 --regex-haxe=/^[ \t]*((private)[ \t]+)?typedef[ \t]+([A-Za-z0-9_]+)/\3/t,typedef/
 --regex-haxe=/^[ \t]*enum[ \t]+([A-Za-z0-9_]+)/\1/e,enum/
+
+--langdef=IDL
+--langmap=IDL:.pro
+--regex-IDL=/^[ \t]*function[ \t]+([a-zA-Z0-9_:]+)/\1/f,function/i
+--regex-IDL=/^[ \t]*pro[ \t]+([a-zA-Z0-9_:]+)/\1/p,procedure/i
+--regex-IDL=/^[ \t]*common[ \t]+([a-zA-Z0-9_:]+)/\1/c,common/i
 
 --langdef=JSX
 --langmap=jsx:.jsx
@@ -257,9 +271,9 @@
 --regex-Rust=/^[ \t]*(pub[ \t]+)?enum[ \t]+([a-zA-Z0-9_]+)/\2/g,enum,enumeration names/
 --regex-Rust=/^[ \t]*(pub[ \t]+)?struct[ \t]+([a-zA-Z0-9_]+)/\2/s,structure names/
 --regex-Rust=/^[ \t]*(pub[ \t]+)?mod[ \t]+([a-zA-Z0-9_]+)/\2/m,modules,module names/
---regex-Rust=/^[ \t]*(pub[ \t]+)?static[ \t]+([a-zA-Z0-9_]+)/\2/c,consts,static constants/
---regex-Rust=/^[ \t]*(pub[ \t]+)?trait[ \t]+([a-zA-Z0-9_]+)/\2/t,traits,traits/
---regex-Rust=/^[ \t]*(pub[ \t]+)?impl([ \t\n]*<[^>]*>)?[ \t]+(([a-zA-Z0-9_:]+)[ \t]*(<[^>]*>)?[ \t]+(for)[ \t]+)?([a-zA-Z0-9_]+)/\4 \6 \7/i,impls,trait implementations/
+--regex-Rust=/^[ \t]*(pub[ \t]+)?(static|const)[ \t]+(mut[ \t]+)?([a-zA-Z0-9_]+)/\4/c,consts,static constants/
+--regex-Rust=/^[ \t]*(pub[ \t]+)?(unsafe[ \t]+)?trait[ \t]+([a-zA-Z0-9_]+)/\3/t,traits,traits/
+--regex-Rust=/^[ \t]*(pub[ \t]+)?(unsafe[ \t]+)?impl([ \t\n]*<[^>]*>)?[ \t]+(([a-zA-Z0-9_:]+)[ \t]*(<[^>]*>)?[ \t]+(for)[ \t]+)?([a-zA-Z0-9_]+)/\5 \7 \8/i,impls,trait implementations/
 --regex-Rust=/^[ \t]*macro_rules![ \t]+([a-zA-Z0-9_]+)/\1/d,macros,macro definitions/
 
 --langdef=scala

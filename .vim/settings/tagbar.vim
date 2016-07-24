@@ -10,10 +10,35 @@ let g:tagbar_singleclick = 1
 let g:tagbar_foldlevel = 99
 let g:tagbar_iconchars = ['▾', '▸']
 
+let g:tagbar_type_ada = {
+    \ 'ctagstype' : 'ada',
+    \ 'kinds'     : [
+        \ 'P:package specs',
+        \ 'p:packages',
+        \ 't:type',
+        \ 'u:subtypes',
+        \ 'c:record type components',
+        \ 'l:enum type literals',
+        \ 'v:variables',
+        \ 'f:formal parameters',
+        \ 'n:constants',
+        \ 'x:exceptions',
+        \ 'R:subprogram specs',
+        \ 'r:subprograms',
+        \ 'K:task specs',
+        \ 'k:tasks',
+        \ 'O:protected data specs',
+        \ 'o:protected data',
+        \ 'e:entries',
+        \ 'b:labels',
+        \ 'i:identifiers'
+    \ ]
+\ }
+
 let g:tagbar_type_armasm = {
     \ 'ctagsbin'  : 'ctags',
     \ 'ctagsargs' : '-f- --format=2 --excmd=pattern --fields=nksSa --extra= --sort=no --language-force=asm',
-    \ 'kinds' : [
+    \ 'kinds'     : [
         \ 'm:macros:0:1',
         \ 't:types:0:1',
         \ 'd:defines:0:1',
@@ -23,16 +48,22 @@ let g:tagbar_type_armasm = {
 
 let g:tagbar_type_asciidoc = {
     \ 'ctagstype' : 'asciidoc',
-    \ 'kinds' : [
-        \ 's:Table of Contents'
-    \ ]
+    \ 'kinds'     : [
+        \ 'h:table of contents',
+        \ 'a:anchors:1',
+        \ 't:titles:1',
+        \ 'n:includes:1',
+        \ 'i:images:1',
+        \ 'I:inline images:1'
+    \ ],
+    \ 'sort'      : 0
 \ }
 
 let g:tagbar_type_clojure = {
-    \ 'ctagstype': 'clojure',
-    \ 'ctagsbin' : 'ctags',
+    \ 'ctagstype' : 'clojure',
+    \ 'ctagsbin'  : 'ctags',
     \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
+    \ 'kinds'     : [
         \ 'n:namespaces',
         \ 'f:functions',
         \ 'p:private functions',
@@ -44,47 +75,89 @@ let g:tagbar_type_clojure = {
         \ 'v:interns',
         \ 'm:macros',
         \ 'd:definitions'
+    \ ]
+\ }
+
+let g:tagbar_type_coffee = {
+    \ 'ctagstype' : 'coffee',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 'm:methods',
+        \ 'f:functions',
+        \ 'v:variables',
+        \ 'f:fields'
+    \ ]
+\ }
+
+let g:tagbar_type_css = {
+    \ 'ctagstype' : 'Css',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 's:selectors',
+        \ 'i:identities'
+    \ ]
+\ }
+
+let g:tagbar_type_d = {
+    \ 'ctagstype'  : 'd',
+    \ 'kinds'      : [
+        \ 'c:classes:0:1',
+        \ 'f:functions',
+        \ 'g:enums',
+        \ 'u:unions',
+        \ 's:structs',
+        \ 'm:members'
     \ ],
+    \ 'sro'        : '.',
+    \ 'kind2scope' : {
+        \ 'c' : 'class',
+        \ 'g' : 'enum',
+        \ 's' : 'struct',
+        \ 'u' : 'union'
+    \ },
+    \ 'scope2kind' : {
+        \ 'enum'   : 'g',
+        \ 'class'  : 'c',
+        \ 'struct' : 's',
+        \ 'union'  : 'u'
+    \ }
 \ }
 
 let g:tagbar_type_elixir = {
-  \ 'ctagstype' : 'Elixir',
-  \ 'kinds' : [
-  \   'm:modules',
-  \   'c:callbacks',
-  \   'd:delegates',
-  \   'e:exceptions',
-  \   'i:impls',
-  \   'a:macros',
-  \   'f:functions',
-  \   'o:operators',
-  \   'p:protocols',
-  \   'r:records'
-  \ ]
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds'     : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records'
+    \ ]
 \ }
 
-"let g:tagbar_type_javascript = {
-    "\ 'ctagsbin' : '/usr/lib/jsctags'
-"\ }
-
 let g:tagbar_type_gorilla = {
-  \ 'ctagstype' : 'gorilla',
-  \ 'kinds' : [
-  \   'C:constant',
-  \   'e:module',
-  \   'f:function',
-  \   'c:class',
-  \   'a:array',
-  \   'o:object',
-  \   'r:regex',
-  \   's:string'
-  \ ],
-  \ 'sro' : ".",
+    \ 'ctagstype' : 'gorilla',
+    \ 'kinds'     : [
+        \ 'C:constant',
+        \ 'e:module',
+        \ 'f:function',
+        \ 'c:class',
+        \ 'a:array',
+        \ 'o:object',
+        \ 'r:regex',
+        \ 's:string'
+    \ ],
+    \ 'sro'       : "."
 \ }
 
 let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
+    \ 'ctagstype'  : 'go',
+    \ 'kinds'      : [
         \ 'p:package',
         \ 'i:imports:1',
         \ 'c:constants',
@@ -97,7 +170,7 @@ let g:tagbar_type_go = {
         \ 'r:constructor',
         \ 'f:functions'
     \ ],
-    \ 'sro' : '.',
+    \ 'sro'        : '.',
     \ 'kind2scope' : {
         \ 't' : 'ctype',
         \ 'n' : 'ntype'
@@ -106,8 +179,8 @@ let g:tagbar_type_go = {
         \ 'ctype' : 't',
         \ 'ntype' : 'n'
     \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
+    \ 'ctagsbin'   : 'gotags',
+    \ 'ctagsargs'  : '-sort -silent'
 \ }
 
 let g:tagbar_type_gradle = {
@@ -118,14 +191,15 @@ let g:tagbar_type_gradle = {
 \ }
 
 let g:tagbar_type_groovy = {
-    \ 'ctagstype' : 'Groovy',
+    \ 'ctagstype' : 'groovy',
     \ 'kinds'     : [
-        \ 'p:package',
-        \ 'c:class',
-        \ 'i:interface',
-        \ 'e:enum',
+        \ 'p:package:1',
+        \ 'c:classes',
+        \ 'i:interfaces',
+        \ 't:traits',
+        \ 'e:enums',
         \ 'm:methods',
-        \ 'f:fields'
+        \ 'f:fields:1'
     \ ]
 \ }
 
@@ -133,18 +207,18 @@ let g:tagbar_type_haskell = {
     \ 'ctagsbin'  : 'hasktags',
     \ 'ctagsargs' : '-x -c -o-',
     \ 'kinds'     : [
-        \  'm:modules:0:1',
-        \  'd:data: 0:1',
-        \  'd_gadt: data gadt:0:1',
-        \  't:type names:0:1',
-        \  'nt:new types:0:1',
-        \  'c:classes:0:1',
-        \  'cons:constructors:1:1',
-        \  'c_gadt:constructor gadt:1:1',
-        \  'c_a:constructor accessors:1:1',
-        \  'ft:function types:1:1',
-        \  'fi:function implementations:0:1',
-        \  'o:others:0:1'
+        \ 'm:modules:0:1',
+        \ 'd:data: 0:1',
+        \ 'd_gadt: data gadt:0:1',
+        \ 't:type names:0:1',
+        \ 'nt:new types:0:1',
+        \ 'c:classes:0:1',
+        \ 'cons:constructors:1:1',
+        \ 'c_gadt:constructor gadt:1:1',
+        \ 'c_a:constructor accessors:1:1',
+        \ 'ft:function types:1:1',
+        \ 'fi:function implementations:0:1',
+        \ 'o:others:0:1'
     \ ],
     \ 'sro'        : '.',
     \ 'kind2scope' : {
@@ -161,6 +235,15 @@ let g:tagbar_type_haskell = {
     \ }
 \ }
 
+let g:tagbar_type_idlang = {
+    \ 'ctagstype' : 'IDL',
+    \ 'kinds'     : [
+        \ 'p:Procedures',
+        \ 'f:Functions',
+        \ 'c:Common Blocks'
+    \ ]
+\ }
+
 let g:tagbar_type_tex = {
     \ 'ctagstype' : 'latex',
     \ 'kinds'     : [
@@ -170,29 +253,29 @@ let g:tagbar_type_tex = {
         \ 'r:refs:1:0',
         \ 'p:pagerefs:1:0'
     \ ],
-    \ 'sort' : 0,
+    \ 'sort' : 0
 \ }
 
 let g:tagbar_type_make = {
-            \ 'kinds':[
-                \ 'm:macros',
-                \ 't:targets'
-            \ ]
+    \ 'kinds' : [
+        \ 'm:macros',
+        \ 't:targets'
+    \ ]
 \ }
 
 let g:tagbar_type_markdown = {
-    \ 'ctagstype': 'mkd',
-    \ 'ctagsbin' : 'markdown2ctags',
-    \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
+    \ 'ctagstype'  : 'mkd',
+    \ 'ctagsbin'   : 'markdown2ctags',
+    \ 'ctagsargs'  : '-f - --sort=yes',
+    \ 'kinds'      : [
         \ 's:sections',
         \ 'i:images'
     \ ],
-    \ 'sro' : '|',
+    \ 'sro'        : '|',
     \ 'kind2scope' : {
-        \ 's' : 'section',
+        \ 's' : 'section'
     \ },
-    \ 'sort': 0,
+    \ 'sort'       : 0
 \ }
 
 let g:tagbar_type_objc = {
@@ -229,6 +312,22 @@ let g:tagbar_type_objc = {
     \ }
 \ }
 
+let g:tagbar_type_perl6 = {
+    \ 'ctagstype' : 'perl6',
+    \ 'kinds' : [
+        \ 'c:classes',
+        \ 'g:grammars',
+        \ 'm:methods',
+        \ 'o:modules',
+        \ 'p:packages',
+        \ 'r:roles',
+        \ 'u:rules',
+        \ 'b:submethods',
+        \ 's:subroutines',
+        \ 't:tokens'
+    \ ]
+\ }
+
 let g:tagbar_type_php  = {
   \ 'ctagstype' : 'php',
   \ 'kinds'     : [
@@ -241,8 +340,8 @@ let g:tagbar_type_php  = {
 \ }
 
 let g:tagbar_type_puppet = {
-    \ 'ctagstype': 'puppet',
-    \ 'kinds': [
+    \ 'ctagstype' : 'puppet',
+    \ 'kinds'     : [
         \ 'c:class',
         \ 's:site',
         \ 'n:node',
@@ -260,23 +359,23 @@ let g:tagbar_type_r = {
 \ }
 
 let g:tagbar_type_rst = {
-    \ 'ctagstype': 'rst',
-    \ 'ctagsbin' : 'rst2ctags',
-    \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
+    \ 'ctagstype'  : 'rst',
+    \ 'ctagsbin'   : 'rst2ctags',
+    \ 'ctagsargs'  : '-f - --sort=yes',
+    \ 'kinds'      : [
         \ 's:sections',
         \ 'i:images'
     \ ],
-    \ 'sro' : '|',
+    \ 'sro'        : '|',
     \ 'kind2scope' : {
-        \ 's' : 'section',
+        \ 's' : 'section'
     \ },
-    \ 'sort': 0,
+    \ 'sort'       : 0
 \ }
 
 let g:tagbar_type_rust = {
     \ 'ctagstype' : 'rust',
-    \ 'kinds' : [
+    \ 'kinds'     : [
         \ 'T:types,type definitions',
         \ 'f:functions,function definitions',
         \ 'g:enum,enumeration names',
@@ -284,7 +383,7 @@ let g:tagbar_type_rust = {
         \ 'm:modules,module names',
         \ 'c:consts,static constants',
         \ 't:traits,traits',
-        \ 'i:impls,trait implementations',
+        \ 'i:impls,trait implementations'
     \ ]
 \ }
 
@@ -306,7 +405,27 @@ let g:tagbar_type_scala = {
 
 let g:tagbar_type_snippets = {
     \ 'ctagstype' : 'snippets',
-    \ 'kinds' : [
-        \ 's:snippets',
+    \ 'kinds'     : [
+        \ 's:snippets'
+    \ ]
+\ }
+
+let g:tagbar_type_vhdl = {
+    \ 'ctagstype' : 'vhdl',
+    \ 'kinds'     : [
+        \ 'd:prototypes',
+        \ 'b:package bodies',
+        \ 'e:entities',
+        \ 'a:architectures',
+        \ 't:types',
+        \ 'p:processes',
+        \ 'f:functions',
+        \ 'r:procedures',
+        \ 'c:constants',
+        \ 'T:subtypes',
+        \ 'r:records',
+        \ 'C:components',
+        \ 'P:packages',
+        \ 'l:locals'
     \ ]
 \ }
