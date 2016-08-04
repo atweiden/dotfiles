@@ -31,6 +31,9 @@ checkout = git clone 'https://github.com/cforler/Ada-Crypto-Library'
 [AdaDoom3]
 checkout = git clone 'https://github.com/AdaDoom3/AdaDoom3'
 
+[AdaID]
+checkout = git clone 'https://github.com/anthony-arnold/AdaID'
+
 [ada-ir]
 checkout = hg clone 'https://bitbucket.org/tkoskine/ada-ir'
 
@@ -280,6 +283,9 @@ checkout = git clone 'https://github.com/darkestkhan/lazyfoo'
 [lego-tools]
 checkout = hg clone 'https://bitbucket.org/sparre/lego-tools'
 
+[libsodium-ada]
+checkout = git clone 'https://github.com/jrmarino/libsodium-ada'
+
 [libusb-Ada]
 checkout = git clone 'https://github.com/persan/libusb-Ada'
 
@@ -471,5 +477,8 @@ checkout = git clone 'https://github.com/persan/zeromq-Ada'
 
 [zlib-ada]
 checkout = git clone 'https://github.com/ytomino/zlib-ada'
+
+[zstd-ada]
+checkout = git clone 'https://github.com/jrmarino/zstd-ada'
 
 # vim: ft=cfg
