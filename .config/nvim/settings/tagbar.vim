@@ -13,25 +13,31 @@ let g:tagbar_iconchars = ['▾', '▸']
 let g:tagbar_type_ada = {
     \ 'ctagstype' : 'ada',
     \ 'kinds'     : [
-        \ 'P:package specs',
+        \ 'P:package specifications',
         \ 'p:packages',
-        \ 't:type',
+        \ 'T:type specifications',
+        \ 't:types',
+        \ 'U:subtype specifications',
         \ 'u:subtypes',
         \ 'c:record type components',
         \ 'l:enum type literals',
+        \ 'V:variable specifications',
         \ 'v:variables',
-        \ 'f:formal parameters',
+        \ 'f:generic formal parameters',
         \ 'n:constants',
-        \ 'x:exceptions',
-        \ 'R:subprogram specs',
+        \ 'x:user defined exceptions',
+        \ 'R:subprogram specifications',
         \ 'r:subprograms',
-        \ 'K:task specs',
+        \ 'K:task specifications',
         \ 'k:tasks',
-        \ 'O:protected data specs',
+        \ 'O:protected data specifications',
         \ 'o:protected data',
-        \ 'e:entries',
+        \ 'E:task/protected data entry specifications',
+        \ 'e:task/protected data entries',
         \ 'b:labels',
-        \ 'i:identifiers'
+        \ 'i:loop/declare identifiers',
+        \ 'a:automatic variables',
+        \ 'y:loops and blocks with no identifier'
     \ ]
 \ }
 
