@@ -198,6 +198,7 @@ Plug 'cohama/agit.vim'
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
 "Plug 'gregsexton/gitv', { 'on': 'Gitv' }
+"Plug 'junegunn/gv'
 Plug 'ludovicchabant/vim-lawrencium', { 'on': [ 'Hg',
                                               \ 'Hgannotate',
                                               \ 'Hgannotatediffsum',
