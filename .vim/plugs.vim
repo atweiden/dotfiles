@@ -459,11 +459,13 @@ Plug 'leafo/moonscript-vim', { 'for': 'moon' }
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
 Plug 'baabelfish/nvim-nim', { 'for': 'nim' }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
-Plug 'atweiden/merlin.vim', { 'branch': 'vim',
-                            \ 'for': [ 'merlin', 'ocaml', 'omlet' ],
-                            \ 'rtp': '~/.opam/system/share/merlin/vim' }
-Plug 'def-lkb/ocp-indent-vim', { 'for': [ 'ocaml', 'omlet' ] }
-Plug 'anyakichi/vim-ocp-index', { 'for': [ 'ocaml', 'omlet' ] }
+Plug 'rgrinberg/vim-ocaml', { 'for': [ 'merlin', 'ocaml', 'omlet' ] }
+Plug '~/.opam/system/share/merlin', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
+                                    \ 'rtp': 'vim' }
+Plug '~/.opam/system/share/ocp-indent', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
+                                        \ 'rtp': 'vim' }
+Plug '~/.opam/system/share/ocp-index', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
+                                        \ 'rtp': 'vim' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }

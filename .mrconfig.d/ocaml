@@ -1,0 +1,229 @@
+[0install]
+checkout = git clone 'https://github.com/0install/0install'
+
+[angstrom]
+checkout = git clone 'https://github.com/inhabitedtype/angstrom'
+
+[awa-ssh]
+checkout = git clone 'https://github.com/haesbaert/awa-ssh'
+
+[bap]
+checkout = git clone 'https://github.com/BinaryAnalysisPlatform/bap'
+
+[batteries-included]
+checkout = git clone 'https://github.com/ocaml-batteries-team/batteries-included'
+
+[bin_prot]
+checkout = git clone 'https://github.com/janestreet/bin_prot'
+
+[bucklescript]
+checkout = git clone 'https://github.com/bloomberg/bucklescript'
+
+[camlp4]
+checkout = git clone 'https://github.com/ocaml/camlp4'
+
+[camlpdf]
+checkout = git clone 'https://github.com/johnwhitington/camlpdf'
+
+[ccss]
+checkout = git clone 'https://github.com/darioteixeira/ccss'
+
+[cmdliner]
+checkout = git clone 'https://github.com/dbuenzli/cmdliner'
+
+[coq]
+checkout = git clone 'https://github.com/coq/coq'
+
+[core]
+checkout = git clone 'https://github.com/janestreet/core'
+
+[core_extended]
+checkout = git clone 'https://github.com/janestreet/core_extended'
+
+[core_profiler]
+checkout = git clone 'https://github.com/janestreet/core_profiler'
+
+[datakit]
+checkout = git clone 'https://github.com/docker/datakit'
+
+[dead_code_analyzer]
+checkout = git clone 'https://github.com/LexiFi/dead_code_analyzer'
+
+[dmlenu]
+checkout = git clone 'https://github.com/the-lambda-church/dmlenu'
+
+[eliom]
+checkout = git clone 'https://github.com/ocsigen/eliom'
+
+[flow]
+checkout = git clone 'https://github.com/facebook/flow'
+
+[fmt]
+checkout = git clone 'https://github.com/dbuenzli/fmt'
+
+[incremental]
+checkout = git clone 'https://github.com/janestreet/incremental'
+
+[infer]
+checkout = git clone 'https://github.com/facebook/infer'
+
+[irmin]
+checkout = git clone 'https://github.com/mirage/irmin'
+
+[iron]
+checkout = git clone 'https://github.com/janestreet/iron'
+
+[jitsu]
+checkout = git clone 'https://github.com/mirage/jitsu'
+
+[js_of_ocaml]
+checkout = git clone 'https://github.com/ocsigen/js_of_ocaml'
+
+[landmarks]
+checkout = git clone 'https://github.com/LexiFi/landmarks'
+
+[logs]
+checkout = git clone 'https://github.com/dbuenzli/logs'
+
+[lwt]
+checkout = git clone 'https://github.com/ocsigen/lwt'
+
+[lwt-zmq]
+checkout = git clone 'https://github.com/hcarty/lwt-zmq'
+
+[merlin]
+checkout = git clone 'https://github.com/the-lambda-church/merlin'
+
+[mirage]
+checkout = git clone 'https://github.com/mirage/mirage'
+
+[numcaml]
+checkout = git clone 'https://github.com/OCamlPro/numcaml'
+
+[oasis]
+checkout = git clone 'https://github.com/ocaml/oasis'
+
+[oasis2opam]
+checkout = git clone 'https://github.com/ocaml/oasis2opam'
+
+[ocaml]
+checkout = git clone 'https://github.com/ocaml/ocaml'
+
+[ocaml-base64]
+checkout = git clone 'https://github.com/mirage/ocaml-base64'
+
+[ocaml-cohttp]
+checkout = git clone 'https://github.com/mirage/ocaml-cohttp'
+
+[ocaml-cow]
+checkout = git clone 'https://github.com/mirage/ocaml-cow'
+
+[ocaml-ctypes]
+checkout = git clone 'https://github.com/ocamllabs/ocaml-ctypes'
+
+[ocaml-dockerfile]
+checkout = git clone 'https://github.com/avsm/ocaml-dockerfile'
+
+[ocaml-extlib]
+checkout = git clone 'https://github.com/ygrek/ocaml-extlib'
+
+[ocaml-multicore]
+checkout = git clone 'https://github.com/ocamllabs/ocaml-multicore'
+
+[ocaml-mustache]
+checkout = git clone 'https://github.com/rgrinberg/ocaml-mustache'
+
+[ocaml-re]
+checkout = git clone 'https://github.com/ocaml/ocaml-re'
+
+[ocaml-safepass]
+checkout = git clone 'https://github.com/darioteixeira/ocaml-safepass'
+
+[ocaml-sodium]
+checkout = git clone 'https://github.com/dsheets/ocaml-sodium'
+
+[ocaml-top]
+checkout = git clone 'https://github.com/OCamlPro/ocaml-top'
+
+[ocaml-unix-sys-stat]
+checkout = git clone 'https://github.com/dsheets/ocaml-unix-sys-stat'
+
+[ocaml-uri]
+checkout = git clone 'https://github.com/mirage/ocaml-uri'
+
+[ocamlbuild]
+checkout = git clone 'https://github.com/ocaml/ocamlbuild'
+
+[ocp-indent]
+checkout = git clone 'https://github.com/OCamlPro/ocp-indent'
+
+[ocp-index]
+checkout = git clone 'https://github.com/OCamlPro/ocp-index'
+
+[onanomsg]
+checkout = git clone 'https://github.com/rgrinberg/onanomsg'
+
+[opal]
+checkout = git clone 'https://github.com/pyrocat101/opal'
+
+[opam]
+checkout = git clone 'https://github.com/ocaml/opam'
+
+[opam-lock]
+checkout = git clone 'https://github.com/rgrinberg/opam-lock'
+
+[opam2web]
+checkout = git clone 'https://github.com/ocaml/opam2web'
+
+[ospec]
+checkout = git clone 'https://github.com/andrenth/ospec'
+
+[patience_diff]
+checkout = git clone 'https://github.com/janestreet/patience_diff'
+
+[pfff]
+checkout = git clone 'https://github.com/facebook/pfff'
+
+[pgocaml]
+checkout = git clone 'https://github.com/darioteixeira/pgocaml'
+
+[ppx_let]
+checkout = git clone 'https://github.com/janestreet/ppx_let'
+
+[ppx_pipebang]
+checkout = git clone 'https://github.com/janestreet/ppx_pipebang'
+
+[ppx_tools]
+checkout = git clone 'https://github.com/alainfrisch/ppx_tools'
+
+[profuse]
+checkout = git clone 'https://github.com/effuse/profuse'
+
+[reason]
+checkout = git clone 'https://github.com/facebook/reason'
+
+[sexplib]
+checkout = git clone 'https://github.com/janestreet/sexplib'
+
+[shexp]
+checkout = git clone 'https://github.com/janestreet/shexp'
+
+[tis-interpreter]
+checkout = git clone 'https://github.com/TrustInSoft/tis-interpreter'
+
+[topkg]
+checkout = git clone 'https://github.com/dbuenzli/topkg'
+
+[typerex-lint]
+checkout = git clone 'https://github.com/OCamlPro/typerex-lint'
+
+[utop]
+checkout = git clone 'https://github.com/diml/utop'
+
+[uuidm]
+checkout = git clone 'https://github.com/dbuenzli/uuidm'
+
+[vpnkit]
+checkout = git clone 'https://github.com/docker/vpnkit'
+
+# vim: ft=cfg

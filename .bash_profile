@@ -28,3 +28,8 @@ if [[ -x /usr/bin/perlbrew ]]; then
   if ! [[ -d "${PERLBREW_ROOT}" ]]; then perlbrew init; fi
   source "${PERLBREW_ROOT}"/etc/bashrc
 fi
+
+# OPAM configuration
+if [[ -f ~/.opam/opam-init/init.sh ]]; then
+  source ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+fi
