@@ -465,7 +465,8 @@ Plug 'atweiden/merlin.vim', { 'branch': 'vim',
 Plug 'def-lkb/ocp-indent-vim', { 'for': [ 'ocaml', 'omlet' ] }
 Plug 'anyakichi/vim-ocp-index', { 'for': [ 'ocaml', 'omlet' ] }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
-Plug 'vim-perl/vim-perl', { 'for': [ 'perl', 'perl6' ] }
+Plug 'vim-perl/vim-perl', { 'for': 'perl' }
+Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
 "Plug 'trapd00r/vim-after-syntax-perl', { 'for': [ 'perl', 'perl6' ] }
 Plug 'yuuki1/perl-local-lib-path.vim', { 'for': [ 'perl', 'perl6' ] }
 Plug 'c9s/perlomni.vim', { 'for': [ 'perl', 'perl6' ] }
