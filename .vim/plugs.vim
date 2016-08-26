@@ -464,8 +464,6 @@ Plug '~/.opam/system/share/merlin', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
                                     \ 'rtp': 'vim' }
 Plug '~/.opam/system/share/ocp-indent', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
                                         \ 'rtp': 'vim' }
-Plug '~/.opam/system/share/ocp-index', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
-                                        \ 'rtp': 'vim' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
