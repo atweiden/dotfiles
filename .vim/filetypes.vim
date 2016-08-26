@@ -83,6 +83,7 @@ augroup languages
   autocmd BufNewFile,BufRead {*.raml} set ft=raml
   autocmd BufNewFile,BufRead {*.rb,*.ruby,*.builder,*.cap,*.gemspec,*.god,*.jbuilder,*.podspec,*.rabl,*.rake,*.rant,*.rbw,*.rjs,*.ru,*.rxml,*.thor,.autotest,.caprc,.irbrc,.pryrc,.simplecov,Appraisals,[Bb]uildfile,Berksfile,Capfile,Cheffile,Guardfile,.Guardfile,Gemfile,Podfile,Puppetfile,[Rr]akefile,[Rr]antfile,[Rr]outefile,[Tt]horfile,[Vv]agrantfile,irb_tempfile*} set ft=ruby
   autocmd BufNewFile,BufRead {*.rkt} set ft=racket
+  autocmd BufNewFile,BufRead {*.re,*.rei} set ft=reason
   autocmd BufNewFile,BufRead {*.rmd,*.Rmd} set ft=rmd
   autocmd BufNewFile,BufRead {*.Rout*} set ft=rout
   autocmd BufNewFile,BufRead {*.rrst,*.Rrst} set ft=rrst

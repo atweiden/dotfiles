@@ -460,10 +460,18 @@ Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
 Plug 'baabelfish/nvim-nim', { 'for': 'nim' }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'rgrinberg/vim-ocaml', { 'for': [ 'merlin', 'ocaml', 'omlet' ] }
-Plug '~/.opam/system/share/merlin', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
+Plug '~/.opam/4.02.3/share/merlin', { 'for': [ 'merlin',
+                                             \ 'ocaml',
+                                             \ 'omlet',
+                                             \ 'reason' ],
                                     \ 'rtp': 'vim' }
-Plug '~/.opam/system/share/ocp-indent', { 'for': [ 'merlin', 'ocaml', 'omlet' ],
+Plug '~/.opam/4.02.3/share/ocp-indent', { 'for': [ 'merlin',
+                                                 \ 'ocaml',
+                                                 \ 'omlet',
+                                                 \ 'reason' ],
                                         \ 'rtp': 'vim' }
+Plug '~/.opam/4.02.3/share/reason', { 'for': 'reason',
+                                    \ 'rtp': 'editorSupport/VimReason' }
 Plug 'vim-scripts/pacmanlog.vim', { 'for': 'pacmanlog' }
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
