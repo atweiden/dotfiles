@@ -3,4 +3,4 @@ if exists('b:did_ftplugin_after')
 endif
 let b:did_ftplugin_after = 1
 
-nnoremap <buffer> <leader>tc :call OCamlType()<CR>
+nnoremap <buffer> <leader>rf :ReasonPrettyPrint<CR>
