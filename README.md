@@ -1,6 +1,8 @@
 Dotfiles
 ========
 
+**deprecated**: see [pacfiles](https://github.com/atweiden/pacfiles) / [macfiles](https://github.com/atweiden/macfiles)
+
 Screenshots
 -----------
 
