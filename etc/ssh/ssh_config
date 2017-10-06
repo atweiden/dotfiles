@@ -1,4 +1,4 @@
-#	$OpenBSD: ssh_config,v 1.30 2016/02/20 23:06:23 sobrado Exp $
+#	$OpenBSD: ssh_config,v 1.33 2017/05/07 23:12:57 djm Exp $
 
 # This is the ssh client system-wide configuration file.  See
 # ssh_config(5) for more information.  This file provides defaults for
@@ -20,8 +20,6 @@
 Host *
 #   ForwardAgent no
 #   ForwardX11 no
-#   RhostsRSAAuthentication no
-#   RSAAuthentication yes
 #   PasswordAuthentication yes
 #   HostbasedAuthentication no
     HashKnownHosts yes
@@ -40,7 +38,6 @@ Host *
 #   IdentityFile ~/.ssh/id_ed25519
 #   Port 22
     Protocol 2
-#   Cipher 3des
     Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
     MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-128-etm@openssh.com
     HostbasedKeyTypes ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa
