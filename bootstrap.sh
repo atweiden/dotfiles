@@ -35,8 +35,7 @@ mkdir -p "$HOME/.marks"    \
 _rsync_opts=()
 
 # exclude files
-_rsync_opts+=('--exclude=etc'
-              '--exclude=.git'
+_rsync_opts+=('--exclude=.git'
               '--exclude=.hg'
               '--exclude=.subgit'
               '--exclude=README.md'
